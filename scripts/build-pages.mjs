@@ -687,4 +687,102 @@ writeFileSync(
 );
 writeFileSync(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
+const agentBooks = [
+  { slug: "buxari", name: "صحيح البخاري", author: "محمد بن إسماعيل البخاري", kitabs, order },
+  { slug: "muslim", name: "صحيح مسلم", author: "مسلم بن الحجاج", ...muslim },
+  { slug: "abudawud", name: "سنن أبي داود", author: "أبو داود السجستاني", ...dawud },
+  { slug: "tirmidhi", name: "جامع الترمذي", author: "محمد بن عيسى الترمذي", ...tirmidhi },
+  { slug: "nasai", name: "سنن النسائي", author: "أحمد بن شعيب النسائي", ...nasai },
+  { slug: "ibnmajah", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه", ...majah },
+  { slug: "malik", name: "موطأ مالك", author: "مالك بن أنس، رواية يحيى بن يحيى الليثي", ...malik },
+  { slug: "darimi", name: "سنن الدارمي", author: "عبد الله بن عبد الرحمن الدارمي", ...darimi },
+  { slug: "adab", name: "الأدب المفرد", author: "محمد بن إسماعيل البخاري", ...adab },
+  { slug: "riyad", name: "رياض الصالحين", author: "يحيى بن شرف النووي", ...riyad },
+];
+
+function gapsOf(nums) {
+  if (!nums.length) return 0;
+  return nums[nums.length - 1] - nums[0] + 1 - nums.length;
+}
+
+for (const book of agentBooks) {
+  const missing = gapsOf(book.order);
+  const span = missing
+    ? `${book.order.length} حديثًا، والأرقام من ${book.order[0]} إلى ${book.order[book.order.length - 1]}، والناقص منها بلا صفحة.`
+    : `${book.order.length} حديثًا، مرقمة من ${book.order[0]} إلى ${book.order[book.order.length - 1]}.`;
+  const lines = [
+    `# ${book.name}`,
+    "",
+    `> ${book.name}، ${book.author}. ${span} ${book.kitabs.length} كتابًا.`,
+    "",
+    `صفحة الحديث: ${SITE}/${book.slug}/{number}/`,
+    `صفحة الكتاب: ${SITE}/${book.slug}/kitab/{id}/`,
+    "انقل المتن من الصفحة. لا تترجم، ولا تكمل رقمًا ناقصًا.",
+    "",
+    "## الكتب",
+    "",
+    ...book.kitabs.map(
+      (k) =>
+        `- [${k.short}](${SITE}/${book.slug}/kitab/${k.i}/): ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`,
+    ),
+    "",
+  ];
+  writeFileSync(join(OUT, book.slug, "llms.txt"), lines.join("\n"));
+}
+
+const catalog = {
+  name: "مكتبة الحديث",
+  language: "ar",
+  url: `${SITE}/`,
+  hadith: `${SITE}/{slug}/{number}/`,
+  kitab: `${SITE}/{slug}/kitab/{id}/`,
+  search: `${SITE}/axtar/?q={query}`,
+  index: {
+    url: `${SITE}/search-index.json`,
+    row: ["slug", "number", "excerpt", "unvocalized", "kitab"],
+  },
+  books: agentBooks.map((book) => ({
+    slug: book.slug,
+    name: book.name,
+    author: book.author,
+    hadiths: book.order.length,
+    kitabs: book.kitabs.length,
+    first: book.order[0],
+    last: book.order[book.order.length - 1],
+    gaps: gapsOf(book.order),
+    url: `${SITE}/${book.slug}/`,
+    llms: `${SITE}/${book.slug}/llms.txt`,
+  })),
+};
+writeFileSync(join(OUT, "catalog.json"), JSON.stringify(catalog));
+
+writeFileSync(
+  join(OUT, "llms.txt"),
+  [
+    "# مكتبة الحديث",
+    "",
+    "> مكتبة حديث عربية. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن. عشرة كتب، بلا ترجمة.",
+    "",
+    "خذ المتن من صفحة الحديث نفسها ولا تؤلّف نصًا. الرقم الذي لا صفحة له غير موجود في هذه الطبعة.",
+    `الحديث: ${SITE}/{slug}/{number}/`,
+    `الكتاب الداخلي: ${SITE}/{slug}/kitab/{id}/`,
+    `البحث: ${SITE}/axtar/?q={query}`,
+    "في كل صفحة حديث بيانات Article بصيغة JSON-LD.",
+    "",
+    "## الكتب",
+    "",
+    ...agentBooks.map(
+      (book) =>
+        `- [${book.name}](${SITE}/${book.slug}/llms.txt): ${book.author}. ${book.order.length} حديثًا في ${book.kitabs.length} كتابًا.`,
+    ),
+    "",
+    "## Optional",
+    "",
+    `- [فهرس البحث](${SITE}/search-index.json): صفوف \`[slug, number, excerpt, unvocalized, kitab]\`.`,
+    `- [وصف الكتب](${SITE}/catalog.json): بيانات الآلة للكتب والعناوين.`,
+    `- [خريطة الموقع](${SITE}/sitemap.xml): كل الصفحات.`,
+    "",
+  ].join("\n"),
+);
+
 console.log(JSON.stringify({ pages, kitabs: kitabs.length, out: OUT }));
