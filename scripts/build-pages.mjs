@@ -7,6 +7,20 @@ const BASE = "/sahih-bukhari";
 const ORIGIN = "https://muhadisonline.github.io";
 const SITE = ORIGIN + BASE;
 
+const BOOKS = [
+  ["buxari", "صحيح البخاري"],
+  ["muslim", "صحيح مسلم"],
+  ["abudawud", "سنن أبي داود"],
+  ["tirmidhi", "جامع الترمذي"],
+  ["nasai", "سنن النسائي"],
+  ["ibnmajah", "سنن ابن ماجه"],
+  ["malik", "موطأ مالك"],
+  ["darimi", "سنن الدارمي"],
+  ["adab", "الأدب المفرد"],
+  ["riyad", "رياض الصالحين"],
+];
+const bookName = Object.fromEntries(BOOKS);
+
 const kitabs = JSON.parse(read(join(ROOT, "src/data/bukhari/kitabs.json")));
 const order = JSON.parse(read(join(ROOT, "src/data/bukhari/order.json")));
 const indexOf = new Map(order.map((n, i) => [n, i]));
@@ -83,6 +97,19 @@ function quoteOf(text) {
   return clip(raw, 72);
 }
 
+function fold(s) {
+  return String(s)
+    .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, "")
+    .replace(/[أإآٱ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ؤ/g, "و")
+    .replace(/ئ/g, "ي")
+    .replace(/ة/g, "ه")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 const css = `:root{--paper:#f7f5f2;--ink:#161513;--muted:#6e675f;--line:#e6e1d8;--accent:#16382c;--card:#ffffff}
 *{box-sizing:border-box}
 html{background:var(--paper);color:var(--ink);font-size:15px}
@@ -121,6 +148,8 @@ h1{font-family:Amiri,serif;font-weight:400;line-height:1.45}
 .meta{font-size:.9rem;color:var(--muted)}
 .jump{margin-top:2rem;border:1px solid var(--line);background:transparent;padding:1rem;display:flex;gap:.75rem;align-items:end}
 .jump label{flex:1;display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
+.jump label.book{flex:0 1 16rem}
+select{height:2.75rem;width:100%;border:1px solid var(--line);background:transparent;padding-inline:.6rem;color:var(--ink);font:inherit}
 h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.4rem;margin:2.4rem 0 0}
 ol.books{list-style:none;padding:0;margin:.4rem 0 0}
 ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}
@@ -220,7 +249,7 @@ function shell({ title, desc, path, body, extra = "", wide = false }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=10">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -422,13 +451,14 @@ ${note}
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   ${prev ? `<a href="${href(`/${book.slug}/${prev}/`)}">السابق</a>` : "<span></span>"}
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="${esc(`${book.name} — الحديث ${h.ar}`)}" data-url="${esc(abs(`/${book.slug}/${h.no}/`))}">انسخ المتن</button>
   ${next ? `<a href="${href(`/${book.slug}/${next}/`)}">التالي</a>` : "<span></span>"}
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\\n" + btn.getAttribute("data-url") + "\\n\\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -449,7 +479,7 @@ let pages = 0;
 for (const shard of shards) {
   for (const h of Object.values(shard)) {
     put(`buxari/${h.no}/index.html`, hadithHtml(h, bukhariBook));
-    index.push(["buxari", h.no, clip(h.t, 140), h.q, kitabs.find((k) => k.i === h.ki)?.short || ""]);
+    index.push(["buxari", h.no, clip(h.t, 140), fold(h.q), kitabs.find((k) => k.i === h.ki)?.short || ""]);
     pages++;
   }
 }
@@ -511,7 +541,7 @@ function emitCollection(dir, book) {
     for (const h of Object.values(shard)) {
       byNo.set(h.no, h);
       put(`${book.slug}/${h.no}/index.html`, hadithHtml(h, full));
-      index.push([book.slug, h.no, clip(h.t, 140), h.q, list.find((k) => k.i === h.ki)?.short || ""]);
+      index.push([book.slug, h.no, clip(h.t, 140), fold(h.q), list.find((k) => k.i === h.ki)?.short || ""]);
       pages++;
     }
   }
@@ -578,41 +608,52 @@ function escHtml(s){return String(s).replace(/&/g,"&"+"amp;").replace(/</g,"&"+"
 function west(s){return String(s).replace(/[٠-٩]/g,function(d){return AR.indexOf(d)}).replace(/[۰-۹]/g,function(d){return "۰۱۲۳۴۵۶۷۸۹".indexOf(d)})}
 function norm(s){return String(s).replace(/[\\u0610-\\u061A\\u064B-\\u065F\\u0670\\u06D6-\\u06ED\\u0640]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ؤ/g,"و").replace(/ئ/g,"ي").replace(/ة/g,"ه").replace(/[^\\p{L}\\p{N}\\s]/gu," ").replace(/\\s+/g," ").trim()}
 var BASE=${JSON.stringify(BASE)};
-var kitabs=${JSON.stringify(kitabs.map((k) => k.short))};
+var BOOKS=${JSON.stringify(bookName)};
 var box=document.getElementById("results");
 var status=document.getElementById("status");
 var input=document.getElementById("qq");
+var bookSel=document.getElementById("book");
+function wanted(row){return !bookSel.value || row[0]===bookSel.value}
+function address(){
+  var q=input.value;
+  var slug=bookSel.value;
+  return "?q="+encodeURIComponent(q)+(slug?"&book="+encodeURIComponent(slug):"");
+}
 function render(q){
   q=west(q).trim();
   if(!q){status.textContent="";box.innerHTML="";return}
   status.textContent="…";
-  fetch(BASE+"/search-index.json").then(function(r){return r.json()}).then(function(rows){
+  fetch(BASE+"/search-index.json?v=2").then(function(r){return r.json()}).then(function(rows){
     var hits=[];
     if(/^\\d+$/.test(q)){
       var no=Number(q);
-      for(var i=0;i<rows.length && hits.length<40;i++){if(rows[i][1]===no) hits.push(rows[i])}
+      for(var i=0;i<rows.length && hits.length<40;i++){if(rows[i][1]===no && wanted(rows[i])) hits.push(rows[i])}
     }else{
       var nq=norm(q);
       if(nq.length>=2){
         for(var j=0;j<rows.length && hits.length<40;j++){
           var row=rows[j];
-          if(row[3].indexOf(nq)!==-1) hits.push(row);
+          if(wanted(row) && row[3].indexOf(nq)!==-1) hits.push(row);
         }
       }
     }
     status.textContent=hits.length?ar(hits.length)+" نتيجة"+(hits.length>=40?" — تُعرض أول أربعين":""):"لا يوجد حديث مطابق";
     box.innerHTML=hits.map(function(h){
-      return '<li><a href="'+BASE+'/'+h[0]+'/'+h[1]+'/"><span class="hit-no">الحديث '+ar(h[1])+'</span><span class="hit-k">'+escHtml(h[4]||"")+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
+      return '<li><a href="'+BASE+'/'+h[0]+'/'+h[1]+'/"><span class="hit-no">'+escHtml(BOOKS[h[0]]||"")+' · الحديث '+ar(h[1])+'</span><span class="hit-k">'+escHtml(h[4]||"")+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
     }).join("");
   });
 }
 var params=new URLSearchParams(location.search);
+if(params.get("book")) bookSel.value=params.get("book");
 if(params.get("q")){input.value=params.get("q");render(params.get("q"))}
 document.getElementById("sform").addEventListener("submit",function(e){
   e.preventDefault();
-  var q=input.value;
-  history.replaceState(null,"","?q="+encodeURIComponent(q));
-  render(q);
+  history.replaceState(null,"",address());
+  render(input.value);
+});
+bookSel.addEventListener("change",function(){
+  history.replaceState(null,"",address());
+  render(input.value);
 });
 `;
 writeFileSync(join(OUT, "assets/search.js"), searchJs);
@@ -623,11 +664,12 @@ put(
     title: "بحث — مكتبة الحديث",
     desc: "ابحث في مكتبة الحديث برقم الحديث أو بكلمة من المتن العربي.",
     path: "/axtar/",
-    extra: `<script src="${href("/assets/search.js")}" defer></script>`,
+    extra: `<script src="${href("/assets/search.js")}?v=2" defer></script>`,
     body: `<h1 class="title">البحث</h1>
 <p class="lead">رقم الحديث، مثل ١، أو كلمة من المتن.</p>
 <form class="jump" id="sform" role="search">
   <label>عبارة البحث<input id="qq" name="q" placeholder="إنما الأعمال أو ١"></label>
+  <label class="book">الكتاب<select id="book" name="book"><option value="">الكتب كلها</option>${BOOKS.map(([slug, name]) => `<option value="${slug}">${esc(name)}</option>`).join("")}</select></label>
   <button class="btn" type="submit">بحث</button>
 </form>
 <p class="meta" id="status"></p>

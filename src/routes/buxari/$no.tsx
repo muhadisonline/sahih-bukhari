@@ -132,7 +132,7 @@ function HadithView() {
           type="button"
           className="inline-flex h-11 items-center border border-line px-4 text-sm"
           onClick={() => {
-            void navigator.clipboard?.writeText(data.t).then(() => {
+            void navigator.clipboard?.writeText(`صحيح البخاري — الحديث ${data.ar}\n${window.location.href}\n\n${data.t}`).then(() => {
               setCopied(true);
               window.setTimeout(() => setCopied(false), 1600);
             });

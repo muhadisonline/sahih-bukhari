@@ -24,7 +24,10 @@ function expand(s) {
     .replace(/\uFD47/g, "عليه السلام")
     .replace(/\uFD48/g, "عليهما السلام")
     .replace(/\uFD49/g, "عليهم السلام")
-    .replace(/\uFD4A/g, "عليه الصلاة والسلام");
+    .replace(/\uFD4A/g, "عليه الصلاة والسلام")
+    .replace(/\uFD4E/g, "تبارك وتعالى")
+    .replace(/\uFDFE/g, "سبحانه وتعالى")
+    .replace(/\uFDFF/g, "عز وجل");
 }
 
 function plain(s) {

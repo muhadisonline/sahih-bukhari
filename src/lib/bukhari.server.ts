@@ -167,7 +167,7 @@ export async function findHadith(raw: string): Promise<SearchHit[]> {
     const shard = shardCache.get(id);
     if (!shard) continue;
     for (const h of Object.values(shard)) {
-      if (h.q.includes(nq) || norm(h.b).includes(nq) || norm(h.k).includes(nq)) {
+      if (norm(h.q).includes(nq) || norm(h.b).includes(nq) || norm(h.k).includes(nq)) {
         hits.push({ no: h.no, ar: h.ar, k: h.k, b: h.b, snippet: clip(h.t, 180) });
         if (hits.length >= 40) return hits;
       }

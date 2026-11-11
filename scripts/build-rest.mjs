@@ -37,7 +37,8 @@ function plain(s) {
   return String(s)
     .replace(/\uFDFA/g, "صلى الله عليه وسلم")
     .replace(/\uFDFB/g, "جل جلاله")
-    .replace(/\uFDFF/g, "صلى الله عليه وسلم")
+    .replace(/\uFDFF/g, "عز وجل")
+    .replace(/\uFDFE/g, "سبحانه وتعالى")
     .replace(/\uFD40/g, "رحمه الله")
     .replace(/\uFD41/g, "رضي الله عنه")
     .replace(/\uFD42/g, "رضي الله عنها")
@@ -49,7 +50,7 @@ function plain(s) {
     .replace(/\uFD49/g, "عليهم السلام")
     .replace(/\uFD4A/g, "عليه الصلاة والسلام")
     .replace(/\uFD4D/g, "عز وجل")
-    .replace(/\uFD4E/g, "جل جلاله");
+    .replace(/\uFD4E/g, "تبارك وتعالى");
 }
 function shortTitle(text) {
   let raw = plain(text);
