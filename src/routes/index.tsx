@@ -1,18 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/shell";
 import { arDigits } from "@/lib/digits";
-import { getKitabIndex } from "@/lib/hadith-api";
+
+const BOOKS = [
+  { to: "/buxari", name: "صحيح البخاري", author: "محمد بن إسماعيل البخاري", n: 7349 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/muslim/", name: "صحيح مسلم", author: "مسلم بن الحجاج", n: 3031 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/abudawud/", name: "سنن أبي داود", author: "أبو داود السجستاني", n: 5273 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/tirmidhi/", name: "جامع الترمذي", author: "محمد بن عيسى الترمذي", n: 4300 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/nasai/", name: "سنن النسائي", author: "أحمد بن شعيب النسائي", n: 5758 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/ibnmajah/", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه", n: 4340 },
+] as const;
 
 export const Route = createFileRoute("/")({
-  loader: () => getKitabIndex(),
   head: () => ({
     meta: [
-      { title: "صحيح البخاري" },
-      {
-        name: "description",
-        content:
-          "صحيح البخاري: ستة وتسعون كتابًا و٧٣٤٩ حديثًا. كل حديث في صفحة مستقلة. ترقيم محمد فؤاد عبد الباقي.",
-      },
+      { title: "الكتب الستة" },
+      { name: "description", content: "صحيح البخاري وصحيح مسلم وسنن أبي داود وجامع الترمذي وسنن النسائي وسنن ابن ماجه." },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -20,30 +23,29 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const kitabs = Route.useLoaderData();
-  const total = kitabs.reduce((n, k) => n + k.count, 0);
-
   return (
     <Shell>
-      <p className="text-sm text-accent">الكتب الستة</p>
-      <h1 className="mt-3 font-ar text-4xl leading-tight">صحيح البخاري</h1>
-      <p className="mt-4 text-sm text-ink">
-        {arDigits(kitabs.length)} كتابًا · {arDigits(total)} حديثًا
-      </p>
-
-      <h2 className="mt-14 font-ar text-2xl">الكتب</h2>
-      <ol className="mt-2">
-        {kitabs.map((k) => (
-          <li key={k.i} className="border-b border-line">
-            <Link
-              to="/buxari/kitab/$id"
-              params={{ id: String(k.i) }}
-              className="flex min-h-14 items-baseline gap-4 py-3"
-            >
-              <span className="w-8 shrink-0 text-sm text-muted">{arDigits(k.i)}</span>
-              <span className="font-ar text-lg leading-relaxed">{k.short}</span>
-              <span className="ms-auto shrink-0 text-sm text-muted">{arDigits(k.count)}</span>
-            </Link>
+      <p className="text-sm text-accent">مكتبة الحديث</p>
+      <h1 className="mt-3 font-ar text-4xl leading-tight">الكتب الستة</h1>
+      <ol className="mt-6">
+        {BOOKS.map((b) => (
+          <li key={b.name} className="border-b border-line">
+            {"to" in b ? (
+              <Link to={b.to} className="flex min-h-16 items-baseline gap-4 py-3">
+                <span>
+                  <span className="block font-ar text-2xl leading-relaxed">{b.name}</span>
+                  <span className="text-sm text-muted">{b.author}</span>
+                </span>
+                {b.n ? <span className="ms-auto text-sm text-muted">{arDigits(b.n)} حديثًا</span> : null}
+              </Link>
+            ) : (
+              <a href={b.href} className="flex min-h-16 items-baseline gap-4 py-3">
+                <span>
+                  <span className="block font-ar text-2xl leading-relaxed">{b.name}</span>
+                  <span className="text-sm text-muted">{b.author}</span>
+                </span>
+              </a>
+            )}
           </li>
         ))}
       </ol>

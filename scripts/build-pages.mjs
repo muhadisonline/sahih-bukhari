@@ -125,6 +125,11 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
 .section{margin-top:0}
+.six{list-style:none;padding:0;margin:1.2rem 0 0}
+.six a{display:flex;gap:1rem;align-items:baseline;padding-block:.95rem;border-bottom:1px solid var(--line)}
+.six .nm{font-family:Amiri,serif;font-size:1.45rem;line-height:1.5}
+.six .au{display:block;margin-top:.15rem;color:var(--muted);font-size:.82rem}
+.six .ct{margin-inline-start:auto;color:var(--muted);font-size:.85rem;white-space:nowrap}
 .entry{display:flex;gap:.75rem;align-items:baseline;min-height:2.85rem;padding-block:.4rem;border-bottom:1px solid var(--line)}
 .entry .n{width:2.5rem;flex:none;color:var(--accent);font-size:.85rem}
 .entry .ttl{font-family:Amiri,serif;font-size:1.05rem;line-height:1.6}
@@ -176,15 +181,15 @@ function shell({ title, desc, path, body, extra = "" }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=6">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=7">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
 <header>
   <div class="wrap bar">
     <a class="brand" href="${href("/")}">
-      <span class="mark">ب</span>
-      <span class="brand-name">صحيح البخاري</span>
+      <span class="mark">ك</span>
+      <span class="brand-name">الكتب الستة</span>
     </a>
     <form class="search" action="${href("/axtar/")}" method="get" role="search">
       <label class="sr" for="q">بحث في الأحاديث</label>
@@ -208,7 +213,7 @@ function shell({ title, desc, path, body, extra = "" }) {
 ${body}
 </main>
 <footer>
-  <p class="wrap">الطبعة السلطانية (بولاق، ١٣١١ هـ)، دار طوق النجاة. الترقيم ترقيم محمد فؤاد عبد الباقي. المتن بالعربية كما هو.</p>
+  <p class="wrap">الكتب الستة. المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
 </footer>
 <script>
 (function () {
@@ -315,7 +320,7 @@ function hadithHtml(h) {
     desc,
     path: `/buxari/${h.no}/`,
     extra: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`,
-    body: `<nav class="crumbs" aria-label="المسار"><a href="${href("/")}">صحيح البخاري</a><span aria-hidden="true">/</span><a href="${href(`/buxari/kitab/${h.ki}/`)}">${esc(h.k)}</a></nav>
+    body: `<nav class="crumbs" aria-label="المسار"><a href="${href("/buxari/")}">صحيح البخاري</a><span aria-hidden="true">/</span><a href="${href(`/buxari/kitab/${h.ki}/`)}">${esc(h.k)}</a></nav>
 <article>
 ${front}
 ${heading}
@@ -344,7 +349,7 @@ let pages = 0;
 for (const shard of shards) {
   for (const h of Object.values(shard)) {
     put(`buxari/${h.no}/index.html`, hadithHtml(h));
-    index.push([h.no, h.ki, clip(h.t, 180), h.q]);
+    index.push(["buxari", h.no, clip(h.t, 140), h.q, kitabs.find((k) => k.i === h.ki)?.short || ""]);
     pages++;
   }
 }
@@ -355,7 +360,7 @@ for (const k of kitabs) {
   const page = kitabPages.get(k.i);
   const title = `${k.title} — صحيح البخاري`;
   const desc = clip(`${k.title} من صحيح البخاري. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
-  const body = `<nav class="crumbs"><a href="${href("/")}">صحيح البخاري</a></nav>
+  const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
 <h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
 <p class="meta">${ar(page.count)} حديثًا</p>
 ${page.babs
@@ -373,6 +378,25 @@ ${page.babs
   .join("\n")}`;
   put(`buxari/kitab/${k.i}/index.html`, shell({ title, desc, path: `/buxari/kitab/${k.i}/`, body }));
 }
+put(
+  "buxari/index.html",
+  shell({
+    title: "صحيح البخاري",
+    desc: homeDesc,
+    path: "/buxari/",
+    body: `<p class="kicker">الكتب الستة</p>
+<h1 class="title">صحيح البخاري</h1>
+<p class="meta">${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
+<h2 class="books-h">الكتب</h2>
+<ol class="books">
+${kitabs
+  .map(
+    (k) => `<li><a href="${href(`/buxari/kitab/${k.i}/`)}"><span class="idx">${ar(k.i)}</span><span class="name">${esc(k.short)}</span><span class="count">${ar(k.count)}</span></a></li>`,
+  )
+  .join("\n")}
+</ol>`,
+  }),
+);
 
 const searchJs = `var AR="٠١٢٣٤٥٦٧٨٩";
 function ar(n){return String(n).replace(/\\d/g,function(d){return AR[d]})}
@@ -392,7 +416,7 @@ function render(q){
     var hits=[];
     if(/^\\d+$/.test(q)){
       var no=Number(q);
-      for(var i=0;i<rows.length;i++){if(rows[i][0]===no){hits.push(rows[i]);break}}
+      for(var i=0;i<rows.length && hits.length<40;i++){if(rows[i][1]===no) hits.push(rows[i])}
     }else{
       var nq=norm(q);
       if(nq.length>=2){
@@ -404,7 +428,7 @@ function render(q){
     }
     status.textContent=hits.length?ar(hits.length)+" نتيجة"+(hits.length>=40?" — تُعرض أول أربعين":""):"لا يوجد حديث مطابق";
     box.innerHTML=hits.map(function(h){
-      return '<li><a href="'+BASE+'/buxari/'+h[0]+'/"><span class="hit-no">الحديث '+ar(h[0])+'</span><span class="hit-k">'+kitabs[h[1]-1]+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
+      return '<li><a href="'+BASE+'/'+h[0]+'/'+h[1]+'/"><span class="hit-no">الحديث '+ar(h[1])+'</span><span class="hit-k">'+escHtml(h[4]||"")+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
     }).join("");
   });
 }
@@ -422,8 +446,8 @@ writeFileSync(join(OUT, "assets/search.js"), searchJs);
 put(
   "axtar/index.html",
   shell({
-    title: "بحث — صحيح البخاري",
-    desc: "ابحث في صحيح البخاري برقم الحديث أو بكلمة من المتن العربي.",
+    title: "بحث — الكتب الستة",
+    desc: "ابحث في الكتب الستة برقم الحديث أو بكلمة من المتن العربي.",
     path: "/axtar/",
     extra: `<script src="${href("/assets/search.js")}" defer></script>`,
     body: `<h1 class="title">البحث</h1>
@@ -440,12 +464,11 @@ put(
 put(
   "404.html",
   shell({
-    title: "الصفحة غير موجودة — صحيح البخاري",
-    desc: "هذا العنوان غير موجود في صحيح البخاري.",
+    title: "الصفحة غير موجودة",
+    desc: "هذا العنوان غير موجود.",
     path: "/404.html",
-    body: `<h1 class="title">هذا الرقم غير موجود</h1>
-<p class="lead">في ترقيم محمد فؤاد عبد الباقي تُركت بعض الأرقام فارغة.</p>
-<p><a class="btn" href="${href("/")}">العودة إلى الكتب</a></p>`,
+    body: `<h1 class="title">الصفحة غير موجودة</h1>
+<p><a class="btn" href="${href("/")}">العودة إلى الكتب الستة</a></p>`,
   }),
 );
 

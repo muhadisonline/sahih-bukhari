@@ -38,8 +38,8 @@ export function Shell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-10 border-b border-line bg-paper/95 backdrop-blur-sm">
         <div className="mx-auto flex w-full max-w-3xl items-center gap-3 px-5 py-3">
           <Link to="/" className="flex min-h-11 items-center gap-3">
-            <span className="flex size-9 items-center justify-center bg-accent font-ar text-xl text-paper">ب</span>
-            <span className="font-ar text-lg leading-none">صحيح البخاري</span>
+            <span className="flex size-9 items-center justify-center bg-accent font-ar text-xl text-paper">ك</span>
+            <span className="font-ar text-lg leading-none">الكتب الستة</span>
           </Link>
           <div className="ms-auto flex items-center gap-2">
             <form onSubmit={onSearch} className="hidden w-full max-w-sm items-center gap-2 sm:flex" role="search">
