@@ -280,7 +280,7 @@ put(
 <li><a href="${href("/muslim/")}"><span class="idx">٢</span><span class="name">صحيح مسلم</span><span class="count">${ar(3031)}</span></a></li>
 <li><a href="${href("/abudawud/")}"><span class="idx">٣</span><span class="name">سنن أبي داود</span><span class="count">${ar(5273)}</span></a></li>
 <li><a href="${href("/tirmidhi/")}"><span class="idx">٤</span><span class="name">جامع الترمذي</span><span class="count">${ar(4300)}</span></a></li>
-<li><span class="row"><span class="idx">٥</span><span class="name">سنن النسائي</span><span class="count">${ar(5758)}</span></span></li>
+<li><a href="${href("/nasai/")}"><span class="idx">٥</span><span class="name">سنن النسائي</span><span class="count">${ar(5758)}</span></a></li>
 <li><span class="row"><span class="idx">٦</span><span class="name">سنن ابن ماجه</span><span class="count">${ar(4340)}</span></span></li>
 </ol>`,
   }),
@@ -480,6 +480,7 @@ ${list
 const muslim = emitCollection("muslim", { slug: "muslim", name: "صحيح مسلم", author: "مسلم بن الحجاج" });
 const dawud = emitCollection("abudawud", { slug: "abudawud", name: "سنن أبي داود", author: "أبو داود السجستاني" });
 const tirmidhi = emitCollection("tirmidhi", { slug: "tirmidhi", name: "جامع الترمذي", author: "محمد بن عيسى الترمذي" });
+const nasai = emitCollection("nasai", { slug: "nasai", name: "سنن النسائي", author: "أحمد بن شعيب النسائي" });
 writeFileSync(join(OUT, "search-index.json"), JSON.stringify(index));
 
 const searchJs = `var AR="٠١٢٣٤٥٦٧٨٩";
@@ -562,6 +563,7 @@ const locs = [
   `${SITE}/muslim/`,
   `${SITE}/abudawud/`,
   `${SITE}/tirmidhi/`,
+  `${SITE}/nasai/`,
   ...kitabs.map((k) => `${SITE}/buxari/kitab/${k.i}/`),
   ...order.map((n) => `${SITE}/buxari/${n}/`),
   ...muslim.kitabs.map((k) => `${SITE}/muslim/kitab/${k.i}/`),
@@ -570,6 +572,8 @@ const locs = [
   ...dawud.order.map((n) => `${SITE}/abudawud/${n}/`),
   ...tirmidhi.kitabs.map((k) => `${SITE}/tirmidhi/kitab/${k.i}/`),
   ...tirmidhi.order.map((n) => `${SITE}/tirmidhi/${n}/`),
+  ...nasai.kitabs.map((k) => `${SITE}/nasai/kitab/${k.i}/`),
+  ...nasai.order.map((n) => `${SITE}/nasai/${n}/`),
 ];
 writeFileSync(
   join(OUT, "sitemap.xml"),
