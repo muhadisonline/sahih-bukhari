@@ -44,6 +44,7 @@ function Home() {
                   <span className="block font-ar text-2xl leading-relaxed">{b.name}</span>
                   <span className="text-sm text-muted">{b.author}</span>
                 </span>
+                {b.n ? <span className="ms-auto text-sm text-muted">{arDigits(b.n)} حديثًا</span> : null}
               </a>
             )}
           </li>

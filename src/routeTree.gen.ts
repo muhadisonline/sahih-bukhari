@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AxtarRouteImport } from './routes/axtar'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as BuxariIndexRouteImport } from './routes/buxari/index'
 import { Route as BuxariNoRouteImport } from './routes/buxari/$no'
 import { Route as BuxariKitabIdRouteImport } from './routes/buxari/kitab/$id'
 
@@ -36,6 +37,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BuxariIndexRoute = BuxariIndexRouteImport.update({
+  id: '/buxari/',
+  path: '/buxari/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BuxariNoRoute = BuxariNoRouteImport.update({
   id: '/buxari/$no',
   path: '/buxari/$no',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/buxari/$no': typeof BuxariNoRoute
+  '/buxari/': typeof BuxariIndexRoute
   '/buxari/kitab/$id': typeof BuxariKitabIdRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/buxari/$no': typeof BuxariNoRoute
+  '/buxari': typeof BuxariIndexRoute
   '/buxari/kitab/$id': typeof BuxariKitabIdRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/buxari/$no': typeof BuxariNoRoute
+  '/buxari/': typeof BuxariIndexRoute
   '/buxari/kitab/$id': typeof BuxariKitabIdRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/buxari/$no'
+    | '/buxari/'
     | '/buxari/kitab/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/buxari/$no'
+    | '/buxari'
     | '/buxari/kitab/$id'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/buxari/$no'
+    | '/buxari/'
     | '/buxari/kitab/$id'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BuxariNoRoute: typeof BuxariNoRoute
+  BuxariIndexRoute: typeof BuxariIndexRoute
   BuxariKitabIdRoute: typeof BuxariKitabIdRoute
 }
 
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/buxari/': {
+      id: '/buxari/'
+      path: '/buxari'
+      fullPath: '/buxari/'
+      preLoaderRoute: typeof BuxariIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/buxari/$no': {
       id: '/buxari/$no'
       path: '/buxari/$no'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BuxariNoRoute: BuxariNoRoute,
+  BuxariIndexRoute: BuxariIndexRoute,
   BuxariKitabIdRoute: BuxariKitabIdRoute,
 }
 export const routeTree = rootRouteImport

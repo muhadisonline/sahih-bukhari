@@ -52,11 +52,18 @@ function clip(s, n) {
   return t.slice(0, n - 1).replace(/\s+\S*$/, "") + "…";
 }
 function shortTitle(text) {
+  let raw = text;
   const i = text.indexOf("«");
   const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
-  let raw = i >= 0 && j > i ? text.slice(i + 1, j) : text;
+  if (i >= 0 && j > i) raw = text.slice(i + 1, j);
+  else {
+    const a = text.indexOf('"');
+    const b = a >= 0 ? text.indexOf('"', a + 1) : -1;
+    if (a >= 0 && b > a) raw = text.slice(a + 1, b);
+  }
   raw = raw
     .replace(/صلى الله عليه وسلم/g, "")
+    .replace(/صلي الله عليه وسلم/g, "")
     .replace(/رضي الله عنها/g, "")
     .replace(/رضي الله عنهما/g, "")
     .replace(/رضي الله عنهم/g, "")
@@ -69,7 +76,10 @@ function shortTitle(text) {
 function quoteOf(text) {
   const i = text.indexOf("«");
   const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
-  const raw = i >= 0 && j > i ? text.slice(i + 1, j) : text;
+  if (i >= 0 && j > i) return clip(text.slice(i + 1, j), 72);
+  const a = text.indexOf('"');
+  const b = a >= 0 ? text.indexOf('"', a + 1) : -1;
+  const raw = a >= 0 && b > a ? text.slice(a + 1, b) : text;
   return clip(raw, 72);
 }
 
@@ -110,7 +120,7 @@ h1{font-family:Amiri,serif;font-weight:400;line-height:1.45}
 .jump label{flex:1;display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
 h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.4rem;margin:2.4rem 0 0}
 ol.books{list-style:none;padding:0;margin:.4rem 0 0}
-ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}
+ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}
 .idx{width:2rem;flex:none;color:var(--muted);font-size:.875rem}
 .name{font-family:Amiri,serif;font-size:1.12rem;line-height:1.65}
 .count{margin-inline-start:auto;color:var(--muted);font-size:.875rem}
@@ -256,34 +266,33 @@ function put(rel, html) {
 }
 
 const total = kitabs.reduce((n, k) => n + k.count, 0);
-const homeDesc = "صحيح البخاري: ستة وتسعون كتابًا و٧٣٤٩ حديثًا. كل حديث في صفحة مستقلة. ترقيم محمد فؤاد عبد الباقي.";
+const homeDesc = "الكتب الستة: صحيح البخاري وصحيح مسلم، وسنن أبي داود وجامع الترمذي وسنن النسائي وسنن ابن ماجه.";
 put(
   "index.html",
   shell({
-    title: "صحيح البخاري",
+    title: "الكتب الستة",
     desc: homeDesc,
     path: "/",
-    body: `<p class="kicker">الكتب الستة</p>
-<h1 class="title">صحيح البخاري</h1>
-<p class="meta">${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
-<h2 class="books-h">الكتب</h2>
+    body: `<p class="kicker">مكتبة الحديث</p>
+<h1 class="title">الكتب الستة</h1>
 <ol class="books">
-${kitabs
-  .map(
-    (k) => `<li><a href="${href(`/buxari/kitab/${k.i}/`)}"><span class="idx">${ar(k.i)}</span><span class="name">${esc(k.short)}</span><span class="count">${ar(k.count)}</span></a></li>`,
-  )
-  .join("\n")}
+<li><a href="${href("/buxari/")}"><span class="idx">١</span><span class="name">صحيح البخاري</span><span class="count">${ar(7349)}</span></a></li>
+<li><a href="${href("/muslim/")}"><span class="idx">٢</span><span class="name">صحيح مسلم</span><span class="count">${ar(3031)}</span></a></li>
+<li><span class="row"><span class="idx">٣</span><span class="name">سنن أبي داود</span><span class="count">${ar(5273)}</span></span></li>
+<li><span class="row"><span class="idx">٤</span><span class="name">جامع الترمذي</span><span class="count">${ar(4300)}</span></span></li>
+<li><span class="row"><span class="idx">٥</span><span class="name">سنن النسائي</span><span class="count">${ar(5758)}</span></span></li>
+<li><span class="row"><span class="idx">٦</span><span class="name">سنن ابن ماجه</span><span class="count">${ar(4340)}</span></span></li>
 </ol>`,
   }),
 );
 
-function hadithHtml(h) {
-  const i = indexOf.get(h.no);
-  const prev = i > 0 ? order[i - 1] : null;
-  const next = i + 1 < order.length ? order[i + 1] : null;
+function hadithHtml(h, book) {
+  const i = book.indexOf.get(h.no);
+  const prev = i > 0 ? book.order[i - 1] : null;
+  const next = i + 1 < book.order.length ? book.order[i + 1] : null;
   const quote = quoteOf(h.t);
-  const title = `الحديث ${h.ar} — ${quote} | صحيح البخاري`;
-  const desc = clip(`الحديث ${h.ar} من صحيح البخاري، ${h.k}، ${h.b}. ${h.t}`, 240);
+  const title = `الحديث ${h.ar} — ${quote} | ${book.name}`;
+  const desc = clip(`الحديث ${h.ar} من ${book.name}، ${h.k}، ${h.b}. ${h.t}`, 240);
   const front = (h.f || [])
     .map((item) => {
       if (item.kind === "basmala") return `<p class="basmala">${esc(item.text)}</p>`;
@@ -308,9 +317,9 @@ function hadithHtml(h) {
     inLanguage: "ar",
     isPartOf: {
       "@type": "Book",
-      name: "صحيح البخاري",
+      name: book.name,
       inLanguage: "ar",
-      author: { "@type": "Person", name: "محمد بن إسماعيل البخاري" },
+      author: { "@type": "Person", name: book.author },
     },
     position: h.no,
     articleBody: h.t,
@@ -318,9 +327,9 @@ function hadithHtml(h) {
   return shell({
     title,
     desc,
-    path: `/buxari/${h.no}/`,
+    path: `/${book.slug}/${h.no}/`,
     extra: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`,
-    body: `<nav class="crumbs" aria-label="المسار"><a href="${href("/buxari/")}">صحيح البخاري</a><span aria-hidden="true">/</span><a href="${href(`/buxari/kitab/${h.ki}/`)}">${esc(h.k)}</a></nav>
+    body: `<nav class="crumbs" aria-label="المسار"><a href="${href(`/${book.slug}/`)}">${esc(book.name)}</a><span aria-hidden="true">/</span><a href="${href(`/${book.slug}/kitab/${h.ki}/`)}">${esc(h.k)}</a></nav>
 <article>
 ${front}
 ${heading}
@@ -328,9 +337,9 @@ ${heading}
 ${note}
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
-  ${prev ? `<a href="${href(`/buxari/${prev}/`)}">السابق</a>` : "<span></span>"}
+  ${prev ? `<a href="${href(`/${book.slug}/${prev}/`)}">السابق</a>` : "<span></span>"}
   <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
-  ${next ? `<a href="${href(`/buxari/${next}/`)}">التالي</a>` : "<span></span>"}
+  ${next ? `<a href="${href(`/${book.slug}/${next}/`)}">التالي</a>` : "<span></span>"}
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
@@ -344,17 +353,22 @@ document.getElementById("copy").addEventListener("click", function () {
   });
 }
 
+const bukhariBook = {
+  slug: "buxari",
+  name: "صحيح البخاري",
+  author: "محمد بن إسماعيل البخاري",
+  order,
+  indexOf,
+};
 const index = [];
 let pages = 0;
 for (const shard of shards) {
   for (const h of Object.values(shard)) {
-    put(`buxari/${h.no}/index.html`, hadithHtml(h));
+    put(`buxari/${h.no}/index.html`, hadithHtml(h, bukhariBook));
     index.push(["buxari", h.no, clip(h.t, 140), h.q, kitabs.find((k) => k.i === h.ki)?.short || ""]);
     pages++;
   }
 }
-index.sort((a, b) => a[0] - b[0]);
-writeFileSync(join(OUT, "search-index.json"), JSON.stringify(index));
 
 for (const k of kitabs) {
   const page = kitabPages.get(k.i);
@@ -397,6 +411,67 @@ ${kitabs
 </ol>`,
   }),
 );
+
+const muslimKitabs = JSON.parse(read(join(ROOT, "src/data/muslim/kitabs.json")));
+const muslimOrder = JSON.parse(read(join(ROOT, "src/data/muslim/order.json")));
+const muslimIndex = new Map(muslimOrder.map((n, i) => [n, i]));
+const muslimBook = { slug: "muslim", name: "صحيح مسلم", author: "مسلم بن الحجاج", order: muslimOrder, indexOf: muslimIndex };
+const muslimByNo = new Map();
+for (let i = 0; i < 11; i++) {
+  const shard = JSON.parse(read(join(ROOT, `src/data/muslim/shards/${i}.json`)));
+  for (const h of Object.values(shard)) {
+    muslimByNo.set(h.no, h);
+    put(`muslim/${h.no}/index.html`, hadithHtml(h, muslimBook));
+    index.push(["muslim", h.no, clip(h.t, 140), h.q, muslimKitabs.find((k) => k.i === h.ki)?.short || ""]);
+    pages++;
+  }
+}
+const muslimPages = new Map();
+for (const k of muslimKitabs) muslimPages.set(k.i, JSON.parse(read(join(ROOT, `src/data/muslim/kitab/${k.i}.json`))));
+for (const k of muslimKitabs) {
+  const page = muslimPages.get(k.i);
+  const title = `${k.title} — صحيح مسلم`;
+  const desc = clip(`${k.title} من صحيح مسلم. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
+  const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+<h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
+<p class="meta">${ar(page.count)} حديثًا</p>
+${page.babs
+  .map((bab) => {
+    const rows = bab.nums
+      .map((n) => {
+        const h = muslimByNo.get(n);
+        const label = h ? shortTitle(h.t) : "";
+        const num = h && h.ar ? h.ar : ar(n);
+        return `<a class="entry" href="${href(`/muslim/${n}/`)}"><span class="n">${esc(num)}</span><span class="ttl">${esc(label)}</span></a>`;
+      })
+      .join("");
+    const head = bab.title ? `<h2 class="bab-label">${esc(clip(bab.title, 80))}</h2>` : "";
+    return `${head}${rows}`;
+  })
+  .join("\n")}`;
+  put(`muslim/kitab/${k.i}/index.html`, shell({ title, desc, path: `/muslim/kitab/${k.i}/`, body }));
+}
+const muslimTotal = muslimKitabs.reduce((n, k) => n + k.count, 0);
+put(
+  "muslim/index.html",
+  shell({
+    title: "صحيح مسلم",
+    desc: `صحيح مسلم: ${muslimKitabs.length} كتابًا و${muslimTotal} حديثًا. ترقيم محمد فؤاد عبد الباقي.`,
+    path: "/muslim/",
+    body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+<h1 class="title">صحيح مسلم</h1>
+<p class="meta">${ar(muslimKitabs.length)} كتابًا · ${ar(muslimTotal)} حديثًا</p>
+<h2 class="books-h">الكتب</h2>
+<ol class="books">
+${muslimKitabs
+  .map(
+    (k) => `<li><a href="${href(`/muslim/kitab/${k.i}/`)}"><span class="idx">${ar(k.i)}</span><span class="name">${esc(k.short)}</span><span class="count">${ar(k.count)}</span></a></li>`,
+  )
+  .join("\n")}
+</ol>`,
+  }),
+);
+writeFileSync(join(OUT, "search-index.json"), JSON.stringify(index));
 
 const searchJs = `var AR="٠١٢٣٤٥٦٧٨٩";
 function ar(n){return String(n).replace(/\\d/g,function(d){return AR[d]})}
@@ -472,7 +547,15 @@ put(
   }),
 );
 
-const locs = [`${SITE}/`, ...kitabs.map((k) => `${SITE}/buxari/kitab/${k.i}/`), ...order.map((n) => `${SITE}/buxari/${n}/`)];
+const locs = [
+  `${SITE}/`,
+  `${SITE}/buxari/`,
+  `${SITE}/muslim/`,
+  ...kitabs.map((k) => `${SITE}/buxari/kitab/${k.i}/`),
+  ...order.map((n) => `${SITE}/buxari/${n}/`),
+  ...muslimKitabs.map((k) => `${SITE}/muslim/kitab/${k.i}/`),
+  ...muslimOrder.map((n) => `${SITE}/muslim/${n}/`),
+];
 writeFileSync(
   join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
