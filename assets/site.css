@@ -36,6 +36,8 @@ h1{font-family:Amiri,serif;font-weight:400;line-height:1.45}
 .meta{font-size:.9rem;color:var(--muted)}
 .jump{margin-top:2rem;border:1px solid var(--line);background:transparent;padding:1rem;display:flex;gap:.75rem;align-items:end}
 .jump label{flex:1;display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
+.jump label.book{flex:0 1 16rem}
+select{height:2.75rem;width:100%;border:1px solid var(--line);background:transparent;padding-inline:.6rem;color:var(--ink);font:inherit}
 h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.4rem;margin:2.4rem 0 0}
 ol.books{list-style:none;padding:0;margin:.4rem 0 0}
 ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -49,18 +49,19 @@
 <article>
 <h1 class="bab"><span class="no">الحديث ٥٧١٠</span>٥٠ - باب الحثِّ على ترك الشُّبهات</h1>
 
-<p class="matn" id="matn">أخبرنا حُميدُ بنُ مسعدةَ، عن يزيد - وهو ابن زُرَيع - عن ابن عَون، عن الشَّعبيِّ عن النُّعمان بن بشير قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: &quot;إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا مُشتَبِهات - وربَّما قال: وإنَّ بين ذلك أمورًا مُشتبهةً - وسأضرِبُ في ذلك مثلًا: إِنَّ الله ﷿ حَمى حِمًى، وإِنَّ حِمى الله ما حَرَّمَ، وإنَّه من يرعى حولَ الحِمى يُوشِكُ أن يُخالِطُ الحِمى - وربَّما قال: يُوشِكُ أَن يَرْتَعَ - وإنَّ من خالطَ الرِّيبةَ يُوشِكُ أن يَجْسُرَ&quot;.</p>
+<p class="matn" id="matn">أخبرنا حُميدُ بنُ مسعدةَ، عن يزيد - وهو ابن زُرَيع - عن ابن عَون، عن الشَّعبيِّ عن النُّعمان بن بشير قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: &quot;إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا مُشتَبِهات - وربَّما قال: وإنَّ بين ذلك أمورًا مُشتبهةً - وسأضرِبُ في ذلك مثلًا: إِنَّ الله عز وجل حَمى حِمًى، وإِنَّ حِمى الله ما حَرَّمَ، وإنَّه من يرعى حولَ الحِمى يُوشِكُ أن يُخالِطُ الحِمى - وربَّما قال: يُوشِكُ أَن يَرْتَعَ - وإنَّ من خالطَ الرِّيبةَ يُوشِكُ أن يَجْسُرَ&quot;.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/5709/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٥٧١٠" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/5710/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/5711/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -112,6 +113,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٧١٠ — إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":5710,"articleBody":"أخبرنا حُميدُ بنُ مسعدةَ، عن يزيد - وهو ابن زُرَيع - عن ابن عَون، عن الشَّعبيِّ عن النُّعمان بن بشير قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: \"إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا مُشتَبِهات - وربَّما قال: وإنَّ بين ذلك أمورًا مُشتبهةً - وسأضرِبُ في ذلك مثلًا: إِنَّ الله ﷿ حَمى حِمًى، وإِنَّ حِمى الله ما حَرَّمَ، وإنَّه من يرعى حولَ الحِمى يُوشِكُ أن يُخالِطُ الحِمى - وربَّما قال: يُوشِكُ أَن يَرْتَعَ - وإنَّ من خالطَ الرِّيبةَ يُوشِكُ أن يَجْسُرَ\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٧١٠ — إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":5710,"articleBody":"أخبرنا حُميدُ بنُ مسعدةَ، عن يزيد - وهو ابن زُرَيع - عن ابن عَون، عن الشَّعبيِّ عن النُّعمان بن بشير قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: \"إنَّ الحلالَ بَيِّنٌ، وإنَّ الحرامَ بَيِّنٌ، وإنَّ بينَ ذلك أمورًا مُشتَبِهات - وربَّما قال: وإنَّ بين ذلك أمورًا مُشتبهةً - وسأضرِبُ في ذلك مثلًا: إِنَّ الله عز وجل حَمى حِمًى، وإِنَّ حِمى الله ما حَرَّمَ، وإنَّه من يرعى حولَ الحِمى يُوشِكُ أن يُخالِطُ الحِمى - وربَّما قال: يُوشِكُ أَن يَرْتَعَ - وإنَّ من خالطَ الرِّيبةَ يُوشِكُ أن يَجْسُرَ\"."}</script>
 </body>
 </html>

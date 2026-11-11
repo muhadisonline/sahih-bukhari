@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 <h1 class="bab"><span class="no">الحديث ١٩٥٧</span>٦٤ - باب الصَّلاة على المرجوم</h1>
 
 <p class="matn" id="matn">أخبرنا إسماعيل بن مسعود قال: حدَّثنا خالدٌ قال: حدَّثنا هشام، عن يحيى بن أبي كثير، عن أبي قِلابة، عن أبي المُهَلَّب
-عن عِمران بن حُصَين، أنَّ امرأةً من جُهَينةَ أتَتْ رسولَ الله صلى الله عليه وسلم، فقالت: إِنِّي زَنَيْتُ - وهي حُبْلَى - فدفعَها إلى وليِّها، فقال: &quot;أحسِنْ إليها، فإذا وضعَتْ فأتِني بها&quot; فلما وضعَتْ جاءَ بها، فأَمرَ بها، فَشُكَّتْ عليها ثيابُها، ثُمَّ رجَمَها، ثُمَّ صلَّى عليها، فقال له: عمر: أَتُصَلِّي عليها وقد زَنَتْ؟! فقال: &quot;لقد تابَتْ توبةً لو قُسِمَتْ بينَ سبعينَ من أهل المدينة لوَسِعَتْهم، وهل وجَدْتَ توبةً أفضل من أن جادَتْ بنفسها لله ﷿&quot;.</p>
+عن عِمران بن حُصَين، أنَّ امرأةً من جُهَينةَ أتَتْ رسولَ الله صلى الله عليه وسلم، فقالت: إِنِّي زَنَيْتُ - وهي حُبْلَى - فدفعَها إلى وليِّها، فقال: &quot;أحسِنْ إليها، فإذا وضعَتْ فأتِني بها&quot; فلما وضعَتْ جاءَ بها، فأَمرَ بها، فَشُكَّتْ عليها ثيابُها، ثُمَّ رجَمَها، ثُمَّ صلَّى عليها، فقال له: عمر: أَتُصَلِّي عليها وقد زَنَتْ؟! فقال: &quot;لقد تابَتْ توبةً لو قُسِمَتْ بينَ سبعينَ من أهل المدينة لوَسِعَتْهم، وهل وجَدْتَ توبةً أفضل من أن جادَتْ بنفسها لله عز وجل&quot;.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/1956/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ١٩٥٧" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/1957/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/1958/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٥٧ — أحسِنْ إليها، فإذا وضعَتْ فأتِني بها | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1957,"articleBody":"أخبرنا إسماعيل بن مسعود قال: حدَّثنا خالدٌ قال: حدَّثنا هشام، عن يحيى بن أبي كثير، عن أبي قِلابة، عن أبي المُهَلَّب\nعن عِمران بن حُصَين، أنَّ امرأةً من جُهَينةَ أتَتْ رسولَ الله صلى الله عليه وسلم، فقالت: إِنِّي زَنَيْتُ - وهي حُبْلَى - فدفعَها إلى وليِّها، فقال: \"أحسِنْ إليها، فإذا وضعَتْ فأتِني بها\" فلما وضعَتْ جاءَ بها، فأَمرَ بها، فَشُكَّتْ عليها ثيابُها، ثُمَّ رجَمَها، ثُمَّ صلَّى عليها، فقال له: عمر: أَتُصَلِّي عليها وقد زَنَتْ؟! فقال: \"لقد تابَتْ توبةً لو قُسِمَتْ بينَ سبعينَ من أهل المدينة لوَسِعَتْهم، وهل وجَدْتَ توبةً أفضل من أن جادَتْ بنفسها لله ﷿\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٥٧ — أحسِنْ إليها، فإذا وضعَتْ فأتِني بها | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1957,"articleBody":"أخبرنا إسماعيل بن مسعود قال: حدَّثنا خالدٌ قال: حدَّثنا هشام، عن يحيى بن أبي كثير، عن أبي قِلابة، عن أبي المُهَلَّب\nعن عِمران بن حُصَين، أنَّ امرأةً من جُهَينةَ أتَتْ رسولَ الله صلى الله عليه وسلم، فقالت: إِنِّي زَنَيْتُ - وهي حُبْلَى - فدفعَها إلى وليِّها، فقال: \"أحسِنْ إليها، فإذا وضعَتْ فأتِني بها\" فلما وضعَتْ جاءَ بها، فأَمرَ بها، فَشُكَّتْ عليها ثيابُها، ثُمَّ رجَمَها، ثُمَّ صلَّى عليها، فقال له: عمر: أَتُصَلِّي عليها وقد زَنَتْ؟! فقال: \"لقد تابَتْ توبةً لو قُسِمَتْ بينَ سبعينَ من أهل المدينة لوَسِعَتْهم، وهل وجَدْتَ توبةً أفضل من أن جادَتْ بنفسها لله عز وجل\"."}</script>
 </body>
 </html>

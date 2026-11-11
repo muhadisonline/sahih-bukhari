@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٥٣٩٢</span>باب الحكم بالتشبيه والتمثيل، وذكر الاختلاف على الوليد بن مسلم في حديث ابن عباس</h1>
 <p class="matn" id="matn">أخبرنا أبو داودَ قال: حدَّثنا يعقوبُ بن إبراهيم قال: حدَّثني أبي، عن صالح بن كَيْسان عن ابن شهاب، أنَّ سليمان بنَ يسار أخبرَه
-أنَّ ابنَ عبَّاس أخبرَه، أنَّ امرأةً من خَثْعَمٍ قالت: يا رسولَ الله، إِنَّ فريضةَ الله ﷿ في الحَجِّ على عبادِه أدرَكَتْ أبي شيخًا كبيرًا، لا يستوي على الرَّاحلة، فهل يقضي عنه أنْ أحُجَّ عنه؟ قال لها رسولُ الله صلى الله عليه وسلم &quot;نعم&quot;، فأخذ الفضلُ يلتَفِتُ إليها، وكانت امرأةً حسناءَ، وأخذ رسولُ الله صلى الله عليه وسلم الفضلَ، فحوَّل وجهَه من الشِّقِّ الآخَر.</p>
+أنَّ ابنَ عبَّاس أخبرَه، أنَّ امرأةً من خَثْعَمٍ قالت: يا رسولَ الله، إِنَّ فريضةَ الله عز وجل في الحَجِّ على عبادِه أدرَكَتْ أبي شيخًا كبيرًا، لا يستوي على الرَّاحلة، فهل يقضي عنه أنْ أحُجَّ عنه؟ قال لها رسولُ الله صلى الله عليه وسلم &quot;نعم&quot;، فأخذ الفضلُ يلتَفِتُ إليها، وكانت امرأةً حسناءَ، وأخذ رسولُ الله صلى الله عليه وسلم الفضلَ، فحوَّل وجهَه من الشِّقِّ الآخَر.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/5391/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٥٣٩٢" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/5392/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/5393/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٣٩٢ — نعم | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":5392,"articleBody":"أخبرنا أبو داودَ قال: حدَّثنا يعقوبُ بن إبراهيم قال: حدَّثني أبي، عن صالح بن كَيْسان عن ابن شهاب، أنَّ سليمان بنَ يسار أخبرَه\nأنَّ ابنَ عبَّاس أخبرَه، أنَّ امرأةً من خَثْعَمٍ قالت: يا رسولَ الله، إِنَّ فريضةَ الله ﷿ في الحَجِّ على عبادِه أدرَكَتْ أبي شيخًا كبيرًا، لا يستوي على الرَّاحلة، فهل يقضي عنه أنْ أحُجَّ عنه؟ قال لها رسولُ الله صلى الله عليه وسلم \"نعم\"، فأخذ الفضلُ يلتَفِتُ إليها، وكانت امرأةً حسناءَ، وأخذ رسولُ الله صلى الله عليه وسلم الفضلَ، فحوَّل وجهَه من الشِّقِّ الآخَر."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٣٩٢ — نعم | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":5392,"articleBody":"أخبرنا أبو داودَ قال: حدَّثنا يعقوبُ بن إبراهيم قال: حدَّثني أبي، عن صالح بن كَيْسان عن ابن شهاب، أنَّ سليمان بنَ يسار أخبرَه\nأنَّ ابنَ عبَّاس أخبرَه، أنَّ امرأةً من خَثْعَمٍ قالت: يا رسولَ الله، إِنَّ فريضةَ الله عز وجل في الحَجِّ على عبادِه أدرَكَتْ أبي شيخًا كبيرًا، لا يستوي على الرَّاحلة، فهل يقضي عنه أنْ أحُجَّ عنه؟ قال لها رسولُ الله صلى الله عليه وسلم \"نعم\"، فأخذ الفضلُ يلتَفِتُ إليها، وكانت امرأةً حسناءَ، وأخذ رسولُ الله صلى الله عليه وسلم الفضلَ، فحوَّل وجهَه من الشِّقِّ الآخَر."}</script>
 </body>
 </html>

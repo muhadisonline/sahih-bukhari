@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٢٧٠</span>باب ما جاء في الذي يفسر القرآن برأيه</h1>
 <p class="matn" id="matn">حدَّثنا ابنُ أبي عمرَ، قال: حدَّثنا سفيانُ، عن ابن أبي نَجِيحٍ، عن مُجاهِدٍ
-عن أمَّ سَلَمةَ أنّها قالتْ: يَغْزو الرَّجالُ ولا تَغْزُو النَّساءُ، وإنَّما لنا نِصْفُ المِيراثِ. فأنْزَلَ الله ﵎: ﴿وَلَا تَتَمَنَّوْا مَا فَضَّلَ اللَّهُ بِهِ بَعْضَكُمْ عَلَى بَعْضٍ﴾ [النساء: ٣٢]. قال مُجاهِدٌ: وأنْزَلَ فيها: ﴿إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ﴾ [الأحزاب: ٣٥] وكانت أُمُّ سَلمَةَ أوَّلَ ظَعِينَةٍ قَدِمتِ المدينةَ مُهاجِرةً.
+عن أمَّ سَلَمةَ أنّها قالتْ: يَغْزو الرَّجالُ ولا تَغْزُو النَّساءُ، وإنَّما لنا نِصْفُ المِيراثِ. فأنْزَلَ الله تبارك وتعالى: ﴿وَلَا تَتَمَنَّوْا مَا فَضَّلَ اللَّهُ بِهِ بَعْضَكُمْ عَلَى بَعْضٍ﴾ [النساء: ٣٢]. قال مُجاهِدٌ: وأنْزَلَ فيها: ﴿إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ﴾ [الأحزاب: ٣٥] وكانت أُمُّ سَلمَةَ أوَّلَ ظَعِينَةٍ قَدِمتِ المدينةَ مُهاجِرةً.
 هذا حديثٌ مُرْسَلٌ. ورواهُ بعضُهُم عن ابنِ أبي نَجيحٍ عن مجَاهِدٍ مُرسلًا أنَّ أُمَّ سَلمَةَ قالت: كذا وكذا.</p>
 <p class="note">رجاله ثقات</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3269/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٢٧٠" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3270/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3271/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٧٠ — حدَّثنا ابنُ أبي عمرَ، قال: حدَّثنا سفيانُ، عن ابن أبي نَجِيحٍ، عن… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3270,"articleBody":"حدَّثنا ابنُ أبي عمرَ، قال: حدَّثنا سفيانُ، عن ابن أبي نَجِيحٍ، عن مُجاهِدٍ\nعن أمَّ سَلَمةَ أنّها قالتْ: يَغْزو الرَّجالُ ولا تَغْزُو النَّساءُ، وإنَّما لنا نِصْفُ المِيراثِ. فأنْزَلَ الله ﵎: ﴿وَلَا تَتَمَنَّوْا مَا فَضَّلَ اللَّهُ بِهِ بَعْضَكُمْ عَلَى بَعْضٍ﴾ [النساء: ٣٢]. قال مُجاهِدٌ: وأنْزَلَ فيها: ﴿إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ﴾ [الأحزاب: ٣٥] وكانت أُمُّ سَلمَةَ أوَّلَ ظَعِينَةٍ قَدِمتِ المدينةَ مُهاجِرةً.\nهذا حديثٌ مُرْسَلٌ. ورواهُ بعضُهُم عن ابنِ أبي نَجيحٍ عن مجَاهِدٍ مُرسلًا أنَّ أُمَّ سَلمَةَ قالت: كذا وكذا."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٧٠ — حدَّثنا ابنُ أبي عمرَ، قال: حدَّثنا سفيانُ، عن ابن أبي نَجِيحٍ، عن… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3270,"articleBody":"حدَّثنا ابنُ أبي عمرَ، قال: حدَّثنا سفيانُ، عن ابن أبي نَجِيحٍ، عن مُجاهِدٍ\nعن أمَّ سَلَمةَ أنّها قالتْ: يَغْزو الرَّجالُ ولا تَغْزُو النَّساءُ، وإنَّما لنا نِصْفُ المِيراثِ. فأنْزَلَ الله تبارك وتعالى: ﴿وَلَا تَتَمَنَّوْا مَا فَضَّلَ اللَّهُ بِهِ بَعْضَكُمْ عَلَى بَعْضٍ﴾ [النساء: ٣٢]. قال مُجاهِدٌ: وأنْزَلَ فيها: ﴿إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ﴾ [الأحزاب: ٣٥] وكانت أُمُّ سَلمَةَ أوَّلَ ظَعِينَةٍ قَدِمتِ المدينةَ مُهاجِرةً.\nهذا حديثٌ مُرْسَلٌ. ورواهُ بعضُهُم عن ابنِ أبي نَجيحٍ عن مجَاهِدٍ مُرسلًا أنَّ أُمَّ سَلمَةَ قالت: كذا وكذا."}</script>
 </body>
 </html>

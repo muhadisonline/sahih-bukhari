@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -49,18 +49,19 @@
 <article>
 <h1 class="bab"><span class="no">الحديث ١٨٤٢</span>٢٨ - بَابُ فَضْلِ الصَّدَقَةِ</h1>
 
-<p class="matn" id="matn">حَدَّثَنَا عِيسَى بْنُ حَمَّادٍ الْمِصْرِيُّ، أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ سَعِيدِ بْنِ يَسَارٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: قَالَ رَسُولُ اللهِ صلى الله عليه وسلم: &quot;مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ إِلَّا الطَّيِّبَ - إِلَّا أَخَذَهَا الرَّحْمَنُ بِيَمِينِهِ، وَإِنْ كَانَتْ تَمْرَةً، فَتَرْبُو فِي كَفِّ الرَّحْمَنِ ﵎ حَتَّى تَكُونَ أَعْظَمَ مِنَ الْجَبَلِ، وَيُرَبِّيهَا لَهُ كَمَا يُرَبِّي أَحَدُكُمْ فَلُوَّهُ أَوْ فَصِيلَهُ &quot;.</p>
+<p class="matn" id="matn">حَدَّثَنَا عِيسَى بْنُ حَمَّادٍ الْمِصْرِيُّ، أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ سَعِيدِ بْنِ يَسَارٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: قَالَ رَسُولُ اللهِ صلى الله عليه وسلم: &quot;مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ إِلَّا الطَّيِّبَ - إِلَّا أَخَذَهَا الرَّحْمَنُ بِيَمِينِهِ، وَإِنْ كَانَتْ تَمْرَةً، فَتَرْبُو فِي كَفِّ الرَّحْمَنِ تبارك وتعالى حَتَّى تَكُونَ أَعْظَمَ مِنَ الْجَبَلِ، وَيُرَبِّيهَا لَهُ كَمَا يُرَبِّي أَحَدُكُمْ فَلُوَّهُ أَوْ فَصِيلَهُ &quot;.</p>
 <p class="note">صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/ibnmajah/1841/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ١٨٤٢" data-url="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/1842/">انسخ المتن</button>
   <a href="/sahih-bukhari/ibnmajah/1843/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -112,6 +113,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٨٤٢ — مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":1842,"articleBody":"حَدَّثَنَا عِيسَى بْنُ حَمَّادٍ الْمِصْرِيُّ، أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ سَعِيدِ بْنِ يَسَارٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: قَالَ رَسُولُ اللهِ صلى الله عليه وسلم: \"مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ إِلَّا الطَّيِّبَ - إِلَّا أَخَذَهَا الرَّحْمَنُ بِيَمِينِهِ، وَإِنْ كَانَتْ تَمْرَةً، فَتَرْبُو فِي كَفِّ الرَّحْمَنِ ﵎ حَتَّى تَكُونَ أَعْظَمَ مِنَ الْجَبَلِ، وَيُرَبِّيهَا لَهُ كَمَا يُرَبِّي أَحَدُكُمْ فَلُوَّهُ أَوْ فَصِيلَهُ \"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٨٤٢ — مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":1842,"articleBody":"حَدَّثَنَا عِيسَى بْنُ حَمَّادٍ الْمِصْرِيُّ، أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ سَعِيدِ بْنِ يَسَارٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: قَالَ رَسُولُ اللهِ صلى الله عليه وسلم: \"مَا تَصَدَّقَ أَحَدٌ بِصَدَقَةٍ مِنْ طَيِّبٍ - وَلَا يَقْبَلُ اللهُ إِلَّا الطَّيِّبَ - إِلَّا أَخَذَهَا الرَّحْمَنُ بِيَمِينِهِ، وَإِنْ كَانَتْ تَمْرَةً، فَتَرْبُو فِي كَفِّ الرَّحْمَنِ تبارك وتعالى حَتَّى تَكُونَ أَعْظَمَ مِنَ الْجَبَلِ، وَيُرَبِّيهَا لَهُ كَمَا يُرَبِّي أَحَدُكُمْ فَلُوَّهُ أَوْ فَصِيلَهُ \"."}</script>
 </body>
 </html>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>الحديث ٧٠٩ — قال اللهُ ﷿: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي</title>
+<title>الحديث ٧٠٩ — قال اللهُ عز وجل: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي</title>
 <meta name="description" content="الحديث ٧٠٩ من جامع الترمذي، أبواب الصوم، باب ما جاء في تعجيل الإفطار. حَدَّثَنا إسحاقُ بنُ موسى الأنْصَارِيُّ، قال: حَدَّثَنا الولِيدُ بن مسلم، عن الأوْزَاعِيِّ، عن قُرَّة بن عبد الرَّحمن، عن الزُّهْرِيِّ، عن أبي سَلَمةَ عن أبي هُريرةَ،…">
 <link rel="canonical" href="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/709/">
-<meta property="og:title" content="الحديث ٧٠٩ — قال اللهُ ﷿: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي">
+<meta property="og:title" content="الحديث ٧٠٩ — قال اللهُ عز وجل: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي">
 <meta property="og:description" content="الحديث ٧٠٩ من جامع الترمذي، أبواب الصوم، باب ما جاء في تعجيل الإفطار. حَدَّثَنا إسحاقُ بنُ موسى الأنْصَارِيُّ، قال: حَدَّثَنا الولِيدُ بن مسلم، عن الأوْزَاعِيِّ، عن قُرَّة بن عبد الرَّحمن، عن الزُّهْرِيِّ، عن أبي سَلَمةَ عن أبي هُريرةَ،…">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ar_AR">
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٧٠٩</span>باب ما جاء في تعجيل الإفطار</h1>
 <p class="matn" id="matn">حَدَّثَنا إسحاقُ بنُ موسى الأنْصَارِيُّ، قال: حَدَّثَنا الولِيدُ بن مسلم، عن الأوْزَاعِيِّ، عن قُرَّة بن عبد الرَّحمن، عن الزُّهْرِيِّ، عن أبي سَلَمةَ
-عن أبي هُريرةَ، قال: قال رَسُولُ اللهِ صلى الله عليه وسلم: &quot;قال اللهُ ﷿: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا&quot;.</p>
+عن أبي هُريرةَ، قال: قال رَسُولُ اللهِ صلى الله عليه وسلم: &quot;قال اللهُ عز وجل: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا&quot;.</p>
 <p class="note">إسناده ضعيف لضعف قرة</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/708/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٧٠٩" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/709/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/710/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٠٩ — قال اللهُ ﷿: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":709,"articleBody":"حَدَّثَنا إسحاقُ بنُ موسى الأنْصَارِيُّ، قال: حَدَّثَنا الولِيدُ بن مسلم، عن الأوْزَاعِيِّ، عن قُرَّة بن عبد الرَّحمن، عن الزُّهْرِيِّ، عن أبي سَلَمةَ\nعن أبي هُريرةَ، قال: قال رَسُولُ اللهِ صلى الله عليه وسلم: \"قال اللهُ ﷿: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٠٩ — قال اللهُ عز وجل: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":709,"articleBody":"حَدَّثَنا إسحاقُ بنُ موسى الأنْصَارِيُّ، قال: حَدَّثَنا الولِيدُ بن مسلم، عن الأوْزَاعِيِّ، عن قُرَّة بن عبد الرَّحمن، عن الزُّهْرِيِّ، عن أبي سَلَمةَ\nعن أبي هُريرةَ، قال: قال رَسُولُ اللهِ صلى الله عليه وسلم: \"قال اللهُ عز وجل: أحَبُّ عِبَادِي إليَّ أعْجَلُهُمْ فِطْرًا\"."}</script>
 </body>
 </html>

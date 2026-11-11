@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -49,18 +49,19 @@
 <article>
 
 <h1 class="bab"><span class="no">الحديث ٣٩٧٨</span>باب العزلة</h1>
-<p class="matn" id="matn">حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ حَمْزَةَ، حَدَّثَنَا الزُّبَيْدِيُّ، حَدَّثَنِي الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّ رَجُلًا أَتَى النَّبِيَّ صلى الله عليه وسلم فقَالَ: أَيُّ النَّاسِ أَفْضَلُ؟ قَالَ: &quot;رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ&quot;. قَالَ: ثُمَّ مَنْ؟ قَالَ: &quot;ثُمَّ امْرُؤٌ فِي شِعْبٍ مِنَ الشِّعَابِ، يَعْبُدُ اللهَ ﷿، وَيَدَعُ النَّاسَ مِنْ شَرِّهِ&quot;.</p>
+<p class="matn" id="matn">حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ حَمْزَةَ، حَدَّثَنَا الزُّبَيْدِيُّ، حَدَّثَنِي الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّ رَجُلًا أَتَى النَّبِيَّ صلى الله عليه وسلم فقَالَ: أَيُّ النَّاسِ أَفْضَلُ؟ قَالَ: &quot;رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ&quot;. قَالَ: ثُمَّ مَنْ؟ قَالَ: &quot;ثُمَّ امْرُؤٌ فِي شِعْبٍ مِنَ الشِّعَابِ، يَعْبُدُ اللهَ عز وجل، وَيَدَعُ النَّاسَ مِنْ شَرِّهِ&quot;.</p>
 <p class="note">صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/ibnmajah/3977/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٣٩٧٨" data-url="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/3978/">انسخ المتن</button>
   <a href="/sahih-bukhari/ibnmajah/3979/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -112,6 +113,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٧٨ — رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":3978,"articleBody":"حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ حَمْزَةَ، حَدَّثَنَا الزُّبَيْدِيُّ، حَدَّثَنِي الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّ رَجُلًا أَتَى النَّبِيَّ صلى الله عليه وسلم فقَالَ: أَيُّ النَّاسِ أَفْضَلُ؟ قَالَ: \"رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ\". قَالَ: ثُمَّ مَنْ؟ قَالَ: \"ثُمَّ امْرُؤٌ فِي شِعْبٍ مِنَ الشِّعَابِ، يَعْبُدُ اللهَ ﷿، وَيَدَعُ النَّاسَ مِنْ شَرِّهِ\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٧٨ — رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":3978,"articleBody":"حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ حَمْزَةَ، حَدَّثَنَا الزُّبَيْدِيُّ، حَدَّثَنِي الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّ رَجُلًا أَتَى النَّبِيَّ صلى الله عليه وسلم فقَالَ: أَيُّ النَّاسِ أَفْضَلُ؟ قَالَ: \"رَجُلٌ مُجَاهِدٌ فِي سَبِيلِ اللهِ بِنَفْسِهِ وَمَالِهِ\". قَالَ: ثُمَّ مَنْ؟ قَالَ: \"ثُمَّ امْرُؤٌ فِي شِعْبٍ مِنَ الشِّعَابِ، يَعْبُدُ اللهَ عز وجل، وَيَدَعُ النَّاسَ مِنْ شَرِّهِ\"."}</script>
 </body>
 </html>

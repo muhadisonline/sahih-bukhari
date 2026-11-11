@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٤٦٠</span>باب الظهار</h1>
 <p class="matn" id="matn">أخبرنا إسحاقُ بنُ إبراهيمَ قال: أخبرنا جرير عن الأعمش، عن تَمِيم بن سَلَمة، عن عروة
-عن عائشة أنها قالت: الحمدُ للهِ الذي وَسِعَ سَمْعُهُ الأصواتَ، لقد جاءت خَوْلَةُ إلى رسول الله صلى الله عليه وسلم تَشْكُو زَوْجَها، فكان يَخْفَى عليَّ كلامُها، فأنزلَ الله ﷿: ﴿قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ تَحَاوُرَكُمَا﴾ [المجادلة: ١] الآية.</p>
+عن عائشة أنها قالت: الحمدُ للهِ الذي وَسِعَ سَمْعُهُ الأصواتَ، لقد جاءت خَوْلَةُ إلى رسول الله صلى الله عليه وسلم تَشْكُو زَوْجَها، فكان يَخْفَى عليَّ كلامُها، فأنزلَ الله عز وجل: ﴿قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ تَحَاوُرَكُمَا﴾ [المجادلة: ١] الآية.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3459/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٤٦٠" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3460/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3461/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٦٠ — أخبرنا إسحاقُ بنُ إبراهيمَ قال: أخبرنا جرير عن الأعمش، عن تَمِيم بن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3460,"articleBody":"أخبرنا إسحاقُ بنُ إبراهيمَ قال: أخبرنا جرير عن الأعمش، عن تَمِيم بن سَلَمة، عن عروة\nعن عائشة أنها قالت: الحمدُ للهِ الذي وَسِعَ سَمْعُهُ الأصواتَ، لقد جاءت خَوْلَةُ إلى رسول الله صلى الله عليه وسلم تَشْكُو زَوْجَها، فكان يَخْفَى عليَّ كلامُها، فأنزلَ الله ﷿: ﴿قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ تَحَاوُرَكُمَا﴾ [المجادلة: ١] الآية."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٦٠ — أخبرنا إسحاقُ بنُ إبراهيمَ قال: أخبرنا جرير عن الأعمش، عن تَمِيم بن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3460,"articleBody":"أخبرنا إسحاقُ بنُ إبراهيمَ قال: أخبرنا جرير عن الأعمش، عن تَمِيم بن سَلَمة، عن عروة\nعن عائشة أنها قالت: الحمدُ للهِ الذي وَسِعَ سَمْعُهُ الأصواتَ، لقد جاءت خَوْلَةُ إلى رسول الله صلى الله عليه وسلم تَشْكُو زَوْجَها، فكان يَخْفَى عليَّ كلامُها، فأنزلَ الله عز وجل: ﴿قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ تَحَاوُرَكُمَا﴾ [المجادلة: ١] الآية."}</script>
 </body>
 </html>

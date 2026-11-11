@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -49,19 +49,20 @@
 <article>
 
 <h1 class="bab"><span class="no">الحديث ٤٢٨٨</span>باب صفة أمة محمد صلى الله عليه وسلم يوم القيامة</h1>
-<p class="matn" id="matn">حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا إِسْمَاعِيلُ ابْنُ عُلَيَّةَ، عَنْ بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ قَالَ: سَمِعْتُ رَسُولَ اللهِ صلى الله عليه وسلم يَقُولُ: &quot;إِنَّكُمْ وَفَّيْتُمْ سَبْعِينَ أُمَّةً، أَنْتُمْ خَيْرُهَا وَأَكْرَمُهَا عَلَى اللهِ ﷿. انظر ما قبله، تحفة: ١١٣٨٧
+<p class="matn" id="matn">حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا إِسْمَاعِيلُ ابْنُ عُلَيَّةَ، عَنْ بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ قَالَ: سَمِعْتُ رَسُولَ اللهِ صلى الله عليه وسلم يَقُولُ: &quot;إِنَّكُمْ وَفَّيْتُمْ سَبْعِينَ أُمَّةً، أَنْتُمْ خَيْرُهَا وَأَكْرَمُهَا عَلَى اللهِ عز وجل. انظر ما قبله، تحفة: ١١٣٨٧
 * قَالَ أَبُو الْحَسَنِ: حَدَّثَنَاهُ أَبُو حَاتِمٍ، حَدَّثَنَا الْأَنْصَارِيُّ، حَدَّثَنِي بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ، فَذَكَرَ نَحْوَهُ.</p>
 <p class="note">حسن</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/ibnmajah/4287/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٤٢٨٨" data-url="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/4288/">انسخ المتن</button>
   <a href="/sahih-bukhari/ibnmajah/4289/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٢٨٨ — حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":4288,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا إِسْمَاعِيلُ ابْنُ عُلَيَّةَ، عَنْ بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ قَالَ: سَمِعْتُ رَسُولَ اللهِ صلى الله عليه وسلم يَقُولُ: \"إِنَّكُمْ وَفَّيْتُمْ سَبْعِينَ أُمَّةً، أَنْتُمْ خَيْرُهَا وَأَكْرَمُهَا عَلَى اللهِ ﷿. انظر ما قبله، تحفة: ١١٣٨٧\n* قَالَ أَبُو الْحَسَنِ: حَدَّثَنَاهُ أَبُو حَاتِمٍ، حَدَّثَنَا الْأَنْصَارِيُّ، حَدَّثَنِي بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ، فَذَكَرَ نَحْوَهُ."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٢٨٨ — حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":4288,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ خَالِدِ بْنِ خِدَاشٍ، حَدَّثَنَا إِسْمَاعِيلُ ابْنُ عُلَيَّةَ، عَنْ بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ قَالَ: سَمِعْتُ رَسُولَ اللهِ صلى الله عليه وسلم يَقُولُ: \"إِنَّكُمْ وَفَّيْتُمْ سَبْعِينَ أُمَّةً، أَنْتُمْ خَيْرُهَا وَأَكْرَمُهَا عَلَى اللهِ عز وجل. انظر ما قبله، تحفة: ١١٣٨٧\n* قَالَ أَبُو الْحَسَنِ: حَدَّثَنَاهُ أَبُو حَاتِمٍ، حَدَّثَنَا الْأَنْصَارِيُّ، حَدَّثَنِي بَهْزِ بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ، فَذَكَرَ نَحْوَهُ."}</script>
 </body>
 </html>

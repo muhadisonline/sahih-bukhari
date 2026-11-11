@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٢٠٤ — أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء… | سنن النسائي</title>
-<meta name="description" content="الحديث ٣٢٠٤ من سنن النسائي، كتاب النكاح، باب ما افترض الله ﷿ على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه. أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء قال: قالت عائشة: ما مات رسول الله…">
+<meta name="description" content="الحديث ٣٢٠٤ من سنن النسائي، كتاب النكاح، باب ما افترض الله عز وجل على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه. أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء قال: قالت عائشة: ما مات رسول…">
 <link rel="canonical" href="https://muhadisonline.github.io/sahih-bukhari/nasai/3204/">
 <meta property="og:title" content="الحديث ٣٢٠٤ — أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء… | سنن النسائي">
-<meta property="og:description" content="الحديث ٣٢٠٤ من سنن النسائي، كتاب النكاح، باب ما افترض الله ﷿ على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه. أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء قال: قالت عائشة: ما مات رسول الله…">
+<meta property="og:description" content="الحديث ٣٢٠٤ من سنن النسائي، كتاب النكاح، باب ما افترض الله عز وجل على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه. أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء قال: قالت عائشة: ما مات رسول…">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:url" content="https://muhadisonline.github.io/sahih-bukhari/nasai/3204/">
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -48,20 +48,21 @@
 <nav class="crumbs" aria-label="المسار"><a href="/sahih-bukhari/nasai/">سنن النسائي</a><span aria-hidden="true">/</span><a href="/sahih-bukhari/nasai/kitab/25/">كتاب النكاح</a></nav>
 <article>
 
-<h1 class="bab"><span class="no">الحديث ٣٢٠٤</span>باب ما افترض الله ﷿ على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه</h1>
+<h1 class="bab"><span class="no">الحديث ٣٢٠٤</span>باب ما افترض الله عز وجل على رسوله صلى الله عليه وسلم وحرمه على خلقه ليزيده إن شاء الله قربة إليه</h1>
 <p class="matn" id="matn">أخبرنا محمد بن منصور، عن سفيان قال: حَفِظْنَاهُ من عَمْرو، عن عطاء قال:
 قالت عائشة: ما مات رسول الله صلى الله عليه وسلم حتى أُحِلَّ له النِّساء.</p>
 <p class="note">رجاله ثقات</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3203/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٢٠٤" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3204/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3205/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });

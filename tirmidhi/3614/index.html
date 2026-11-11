@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٦١٤</span>ومن سورة التغابن</h1>
 <p class="matn" id="matn">حَدَّثَنا عَبدُ بنُ حُمَيدٍ، قال: أخبرنا عَبد الرَّزاق، عن مَعمرٍ، عن الزُّهريِّ، عن أبي سَلمةَ
-عن جابرِ بنُ عبدِ اللهِ، قال: سمعتُ رسولَ اللهِ صلى الله عليه وسلم وهو يُحدَّثُ عن فَترةِ الوَحي، فقال في حديثهِ: &quot;بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ الَّذِي جاءَني بحِراءٍ جَالسٌ على كُرسيٍّ بَينَ السَّماءِ والأرضِ فَجُئِثتُ مِنهُ رُعبًا، فَرجَعتُ فَقُلتُ: زَمِّلُوني زَمِّلُوني. فَدثَّرُوني، فأنزلَ اللهُ ﷿ ﴿يَاأَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ﴾ إلى قولهِ: ﴿وَالرُّجْزَ فَاهْجُرْ﴾ [المدثر: ١ - ٥] قَبلَ أنْ تُفرضَ الصَّلاةُ&quot;.
+عن جابرِ بنُ عبدِ اللهِ، قال: سمعتُ رسولَ اللهِ صلى الله عليه وسلم وهو يُحدَّثُ عن فَترةِ الوَحي، فقال في حديثهِ: &quot;بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ الَّذِي جاءَني بحِراءٍ جَالسٌ على كُرسيٍّ بَينَ السَّماءِ والأرضِ فَجُئِثتُ مِنهُ رُعبًا، فَرجَعتُ فَقُلتُ: زَمِّلُوني زَمِّلُوني. فَدثَّرُوني، فأنزلَ اللهُ عز وجل ﴿يَاأَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ﴾ إلى قولهِ: ﴿وَالرُّجْزَ فَاهْجُرْ﴾ [المدثر: ١ - ٥] قَبلَ أنْ تُفرضَ الصَّلاةُ&quot;.
 هذا حديثٌ حسنٌ صحيحٌ، وقد رَواهُ يحيى بنُ أبي كَثيرٍ، عن أبي سَلَمةَ بنُ عَبد الرحمنِ، أيضًا.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3613/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٦١٤" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3614/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3615/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٦١٤ — بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3614,"articleBody":"حَدَّثَنا عَبدُ بنُ حُمَيدٍ، قال: أخبرنا عَبد الرَّزاق، عن مَعمرٍ، عن الزُّهريِّ، عن أبي سَلمةَ\nعن جابرِ بنُ عبدِ اللهِ، قال: سمعتُ رسولَ اللهِ صلى الله عليه وسلم وهو يُحدَّثُ عن فَترةِ الوَحي، فقال في حديثهِ: \"بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ الَّذِي جاءَني بحِراءٍ جَالسٌ على كُرسيٍّ بَينَ السَّماءِ والأرضِ فَجُئِثتُ مِنهُ رُعبًا، فَرجَعتُ فَقُلتُ: زَمِّلُوني زَمِّلُوني. فَدثَّرُوني، فأنزلَ اللهُ ﷿ ﴿يَاأَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ﴾ إلى قولهِ: ﴿وَالرُّجْزَ فَاهْجُرْ﴾ [المدثر: ١ - ٥] قَبلَ أنْ تُفرضَ الصَّلاةُ\".\nهذا حديثٌ حسنٌ صحيحٌ، وقد رَواهُ يحيى بنُ أبي كَثيرٍ، عن أبي سَلَمةَ بنُ عَبد الرحمنِ، أيضًا."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٦١٤ — بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3614,"articleBody":"حَدَّثَنا عَبدُ بنُ حُمَيدٍ، قال: أخبرنا عَبد الرَّزاق، عن مَعمرٍ، عن الزُّهريِّ، عن أبي سَلمةَ\nعن جابرِ بنُ عبدِ اللهِ، قال: سمعتُ رسولَ اللهِ صلى الله عليه وسلم وهو يُحدَّثُ عن فَترةِ الوَحي، فقال في حديثهِ: \"بَينما أنا أمشي سمعتُ صَوتًا من السَّماءِ فرفَعتُ رَأْسي، فإذا المَلكُ الَّذِي جاءَني بحِراءٍ جَالسٌ على كُرسيٍّ بَينَ السَّماءِ والأرضِ فَجُئِثتُ مِنهُ رُعبًا، فَرجَعتُ فَقُلتُ: زَمِّلُوني زَمِّلُوني. فَدثَّرُوني، فأنزلَ اللهُ عز وجل ﴿يَاأَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ﴾ إلى قولهِ: ﴿وَالرُّجْزَ فَاهْجُرْ﴾ [المدثر: ١ - ٥] قَبلَ أنْ تُفرضَ الصَّلاةُ\".\nهذا حديثٌ حسنٌ صحيحٌ، وقد رَواهُ يحيى بنُ أبي كَثيرٍ، عن أبي سَلَمةَ بنُ عَبد الرحمنِ، أيضًا."}</script>
 </body>
 </html>

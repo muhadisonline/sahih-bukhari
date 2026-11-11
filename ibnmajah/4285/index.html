@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٤٢٨٥</span>باب صفة أمة محمد صلى الله عليه وسلم يوم القيامة</h1>
 <p class="matn" id="matn">حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ، حَدَّثَنَا مُحَمَّدُ بْنُ مُصْعَبٍ، عَنِ الْأَوْزَاعِيِّ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ هِلَالِ بْنِ أَبِي مَيْمُونَةَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ رِفَاعَةَ الجُهَنِيِّ قَالَ: صَدَرْنَا مَعَ رَسُولِ اللهِ صلى الله عليه وسلم فَقَالَ: &quot;وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! مَا مِنْ عَبْدٍ يُؤْمِنُ ثُمَّ يُسَدِّدُ إِلَّا سُلِكَ بِهِ فِي الْجَنَّةِ،
-وَأَرْجُو أَلَّا يَدْخُلُوهَا حَتَّى تبَوَّؤُوا أَنْتُم وَمَنْ صَلَحَ مِنْ ذَرَارِيِّكُمْ مَسَاكِنَ فِي الْجَنَّةِ، وَلَقَدْ وَعَدَنِي رَبِّي ﷿ أَنْ يُدْخِلَ الْجَنَّةَ مِنْ أُمَّتِي سَبْعِينَ أَلْفًا بِغيْرِ حِسَابٍ&quot;.</p>
+وَأَرْجُو أَلَّا يَدْخُلُوهَا حَتَّى تبَوَّؤُوا أَنْتُم وَمَنْ صَلَحَ مِنْ ذَرَارِيِّكُمْ مَسَاكِنَ فِي الْجَنَّةِ، وَلَقَدْ وَعَدَنِي رَبِّي عز وجل أَنْ يُدْخِلَ الْجَنَّةَ مِنْ أُمَّتِي سَبْعِينَ أَلْفًا بِغيْرِ حِسَابٍ&quot;.</p>
 <p class="note">صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/ibnmajah/4284/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٤٢٨٥" data-url="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/4285/">انسخ المتن</button>
   <a href="/sahih-bukhari/ibnmajah/4286/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٢٨٥ — وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! مَا مِنْ عَبْدٍ يُؤْمِنُ ثُمَّ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":4285,"articleBody":"حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ، حَدَّثَنَا مُحَمَّدُ بْنُ مُصْعَبٍ، عَنِ الْأَوْزَاعِيِّ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ هِلَالِ بْنِ أَبِي مَيْمُونَةَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ رِفَاعَةَ الجُهَنِيِّ قَالَ: صَدَرْنَا مَعَ رَسُولِ اللهِ صلى الله عليه وسلم فَقَالَ: \"وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! مَا مِنْ عَبْدٍ يُؤْمِنُ ثُمَّ يُسَدِّدُ إِلَّا سُلِكَ بِهِ فِي الْجَنَّةِ،\nوَأَرْجُو أَلَّا يَدْخُلُوهَا حَتَّى تبَوَّؤُوا أَنْتُم وَمَنْ صَلَحَ مِنْ ذَرَارِيِّكُمْ مَسَاكِنَ فِي الْجَنَّةِ، وَلَقَدْ وَعَدَنِي رَبِّي ﷿ أَنْ يُدْخِلَ الْجَنَّةَ مِنْ أُمَّتِي سَبْعِينَ أَلْفًا بِغيْرِ حِسَابٍ\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٢٨٥ — وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! مَا مِنْ عَبْدٍ يُؤْمِنُ ثُمَّ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":4285,"articleBody":"حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ، حَدَّثَنَا مُحَمَّدُ بْنُ مُصْعَبٍ، عَنِ الْأَوْزَاعِيِّ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ هِلَالِ بْنِ أَبِي مَيْمُونَةَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ رِفَاعَةَ الجُهَنِيِّ قَالَ: صَدَرْنَا مَعَ رَسُولِ اللهِ صلى الله عليه وسلم فَقَالَ: \"وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! مَا مِنْ عَبْدٍ يُؤْمِنُ ثُمَّ يُسَدِّدُ إِلَّا سُلِكَ بِهِ فِي الْجَنَّةِ،\nوَأَرْجُو أَلَّا يَدْخُلُوهَا حَتَّى تبَوَّؤُوا أَنْتُم وَمَنْ صَلَحَ مِنْ ذَرَارِيِّكُمْ مَسَاكِنَ فِي الْجَنَّةِ، وَلَقَدْ وَعَدَنِي رَبِّي عز وجل أَنْ يُدْخِلَ الْجَنَّةَ مِنْ أُمَّتِي سَبْعِينَ أَلْفًا بِغيْرِ حِسَابٍ\"."}</script>
 </body>
 </html>

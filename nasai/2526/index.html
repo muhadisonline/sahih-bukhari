@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 <h1 class="bab"><span class="no">الحديث ٢٥٢٦</span>٤٩ - باب جُهْد المُقِلِّ</h1>
 
 <p class="matn" id="matn">أخبرنا عبدُ الوَهَّاب بنُ عبدِ الحَكَم، عن حَجَّاج، قال ابن جُريج: أخبرني عثمانُ بنُ أبي سليمان، عن عَليٍّ الأزديّ، عن عُبَيْدِ بن عُمَيْر
-عن عبد الله بن حُبْشِيٍّ الخَثْعَميّ، أنَّ النبيَّ صلى الله عليه وسلم سُئل: أيُّ الأعمالِ أفْضَلُ؟ قال: &quot;إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة&quot;. قيل: فأيُّ الصَّلاةِ أفْضَلُ؟ قال: &quot;طُولُ القُنوت&quot;. قيل: فأيُّ الصَّدَقَةِ أَفْضَلُ؟ قال: &quot;جُهْدُ المُقِلِّ&quot;. قيل: فأيُّ الهجرةِ أفْضَلُ؟ قال: &quot;مَنْ هَجَرَ ما حَرَّمَ اللهُ ﷿ &quot;. قيل: فأيُّ الجِهادِ أَفْضَلُ؟ قال: &quot;مَنْ جَاهَدَ المشركين بمالِه ونفسِه&quot;. قيل: فأيُّ القَتْلِ أشرفُ؟ قال: &quot;مَنْ أُهْرِيقَ دَمُهُ، وعُقِرَ جَوادُه&quot;.</p>
+عن عبد الله بن حُبْشِيٍّ الخَثْعَميّ، أنَّ النبيَّ صلى الله عليه وسلم سُئل: أيُّ الأعمالِ أفْضَلُ؟ قال: &quot;إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة&quot;. قيل: فأيُّ الصَّلاةِ أفْضَلُ؟ قال: &quot;طُولُ القُنوت&quot;. قيل: فأيُّ الصَّدَقَةِ أَفْضَلُ؟ قال: &quot;جُهْدُ المُقِلِّ&quot;. قيل: فأيُّ الهجرةِ أفْضَلُ؟ قال: &quot;مَنْ هَجَرَ ما حَرَّمَ اللهُ عز وجل &quot;. قيل: فأيُّ الجِهادِ أَفْضَلُ؟ قال: &quot;مَنْ جَاهَدَ المشركين بمالِه ونفسِه&quot;. قيل: فأيُّ القَتْلِ أشرفُ؟ قال: &quot;مَنْ أُهْرِيقَ دَمُهُ، وعُقِرَ جَوادُه&quot;.</p>
 <p class="note">حديث صحيح بشواهده</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/2525/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٢٥٢٦" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/2526/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/2527/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٥٢٦ — إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":2526,"articleBody":"أخبرنا عبدُ الوَهَّاب بنُ عبدِ الحَكَم، عن حَجَّاج، قال ابن جُريج: أخبرني عثمانُ بنُ أبي سليمان، عن عَليٍّ الأزديّ، عن عُبَيْدِ بن عُمَيْر\nعن عبد الله بن حُبْشِيٍّ الخَثْعَميّ، أنَّ النبيَّ صلى الله عليه وسلم سُئل: أيُّ الأعمالِ أفْضَلُ؟ قال: \"إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة\". قيل: فأيُّ الصَّلاةِ أفْضَلُ؟ قال: \"طُولُ القُنوت\". قيل: فأيُّ الصَّدَقَةِ أَفْضَلُ؟ قال: \"جُهْدُ المُقِلِّ\". قيل: فأيُّ الهجرةِ أفْضَلُ؟ قال: \"مَنْ هَجَرَ ما حَرَّمَ اللهُ ﷿ \". قيل: فأيُّ الجِهادِ أَفْضَلُ؟ قال: \"مَنْ جَاهَدَ المشركين بمالِه ونفسِه\". قيل: فأيُّ القَتْلِ أشرفُ؟ قال: \"مَنْ أُهْرِيقَ دَمُهُ، وعُقِرَ جَوادُه\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٥٢٦ — إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":2526,"articleBody":"أخبرنا عبدُ الوَهَّاب بنُ عبدِ الحَكَم، عن حَجَّاج، قال ابن جُريج: أخبرني عثمانُ بنُ أبي سليمان، عن عَليٍّ الأزديّ، عن عُبَيْدِ بن عُمَيْر\nعن عبد الله بن حُبْشِيٍّ الخَثْعَميّ، أنَّ النبيَّ صلى الله عليه وسلم سُئل: أيُّ الأعمالِ أفْضَلُ؟ قال: \"إيمانٌ لا شَكَّ فيه، وجهادٌ لا غُلُولَ فيه، وحَجَّةٌ مبرورة\". قيل: فأيُّ الصَّلاةِ أفْضَلُ؟ قال: \"طُولُ القُنوت\". قيل: فأيُّ الصَّدَقَةِ أَفْضَلُ؟ قال: \"جُهْدُ المُقِلِّ\". قيل: فأيُّ الهجرةِ أفْضَلُ؟ قال: \"مَنْ هَجَرَ ما حَرَّمَ اللهُ عز وجل \". قيل: فأيُّ الجِهادِ أَفْضَلُ؟ قال: \"مَنْ جَاهَدَ المشركين بمالِه ونفسِه\". قيل: فأيُّ القَتْلِ أشرفُ؟ قال: \"مَنْ أُهْرِيقَ دَمُهُ، وعُقِرَ جَوادُه\"."}</script>
 </body>
 </html>

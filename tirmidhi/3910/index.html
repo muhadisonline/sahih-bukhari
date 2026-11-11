@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 <h1 class="bab"><span class="no">الحديث ٣٩١٠</span>١٤٣ - باب أيُّ الْكَلامِ أحَبُّ إلى اللهِ؟</h1>
 
 <p class="matn" id="matn">حَدَّثنا أحمدُ بن إبراهيمَ الدَّوْرقيُّ، قَال: حَدَّثنا إسماعيلُ بن إبراهيمَ، قال: أخْبرنا الْجُرَيْريُّ، عن أبي عَبد اللهِ الْجَسْريَّ، عن عَبد اللهِ بن الصَّامتِ
-عن أبي ذَرًّ: أنَّ رَسولَ اللهِ صلى الله عليه وسلم عَادهُ - أوْ أنَّ أبا ذَرًّ عَادَ رَسولَ اللهِ صلى الله عليه وسلم، فقال: بِأبي أنْتَ وأُمي يَا رَسولَ اللهِ، أيُّ الْكلامِ أحَبُّ إلى اللهِ ﷿؟ قال: &quot;مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ ربَّي وَبِحمْدِه&quot;.
+عن أبي ذَرًّ: أنَّ رَسولَ اللهِ صلى الله عليه وسلم عَادهُ - أوْ أنَّ أبا ذَرًّ عَادَ رَسولَ اللهِ صلى الله عليه وسلم، فقال: بِأبي أنْتَ وأُمي يَا رَسولَ اللهِ، أيُّ الْكلامِ أحَبُّ إلى اللهِ عز وجل؟ قال: &quot;مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ ربَّي وَبِحمْدِه&quot;.
 هذا حديثٌ حَسَنٌ صحيحٌ.</p>
 <p class="note">حديث صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3909/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٩١٠" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3910/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3911/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩١٠ — مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3910,"articleBody":"حَدَّثنا أحمدُ بن إبراهيمَ الدَّوْرقيُّ، قَال: حَدَّثنا إسماعيلُ بن إبراهيمَ، قال: أخْبرنا الْجُرَيْريُّ، عن أبي عَبد اللهِ الْجَسْريَّ، عن عَبد اللهِ بن الصَّامتِ\nعن أبي ذَرًّ: أنَّ رَسولَ اللهِ صلى الله عليه وسلم عَادهُ - أوْ أنَّ أبا ذَرًّ عَادَ رَسولَ اللهِ صلى الله عليه وسلم، فقال: بِأبي أنْتَ وأُمي يَا رَسولَ اللهِ، أيُّ الْكلامِ أحَبُّ إلى اللهِ ﷿؟ قال: \"مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ ربَّي وَبِحمْدِه\".\nهذا حديثٌ حَسَنٌ صحيحٌ."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩١٠ — مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3910,"articleBody":"حَدَّثنا أحمدُ بن إبراهيمَ الدَّوْرقيُّ، قَال: حَدَّثنا إسماعيلُ بن إبراهيمَ، قال: أخْبرنا الْجُرَيْريُّ، عن أبي عَبد اللهِ الْجَسْريَّ، عن عَبد اللهِ بن الصَّامتِ\nعن أبي ذَرًّ: أنَّ رَسولَ اللهِ صلى الله عليه وسلم عَادهُ - أوْ أنَّ أبا ذَرًّ عَادَ رَسولَ اللهِ صلى الله عليه وسلم، فقال: بِأبي أنْتَ وأُمي يَا رَسولَ اللهِ، أيُّ الْكلامِ أحَبُّ إلى اللهِ عز وجل؟ قال: \"مَا اصْطَفاهُ اللهُ لِمَلائكتِهِ: سُبْحانَ رَبَّي وَبحمْدهِ، سُبْحانَ ربَّي وَبِحمْدِه\".\nهذا حديثٌ حَسَنٌ صحيحٌ."}</script>
 </body>
 </html>

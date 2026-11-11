@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -51,18 +51,19 @@
 
 <p class="matn" id="matn">أخبرنا محمدُ بنُ سَلَمَةَ والحارث بن مسكين قراءةً عليه وأنا أسمع - واللفظ لمحمد - عن ابن القاسم، عن مالك، عن عبد الله بن يزيد، عن أبي سَلَمَةَ بن عبد الرحمن
 عن فاطمةَ بنتِ قيس، أنَّ أبا عَمْرِو بنَ حَفْصٍ طَلَّقَهَا البَتَّةَ وهو غائب، فأرسل إليها وكيله بشعير، فسَخِطَتْهُ، فقال: والله ما لكِ علينا من شيء، فجاءَتْ رسول الله صلى الله عليه وسلم، فذكَرَتْ ذلك له، فقال: &quot;ليس لكِ نفقة&quot;، فأمرها أنْ تَعْتَدَّ في بيتِ أمِّ شَرِيك، ثم قال: &quot;تلك امرأة يغشاها أصحابي، فاعْتَدِّي عند ابن أم مَكْتُوم، فإنَّه رجل أعمى، تضعين ثيابَكِ، فإذا حَلَلْتِ فآذنيني&quot;، قالت: فلمَّا حَلَلْتُ، ذكَرْتُ له أنَّ معاوية بن أبي سفيان وأبا جَهم خَطَبَاني، فقال رسول الله صلى الله عليه وسلم: &quot;أما أبو جَهم، فلا يَضَعُ عَصَاه عن عاتِقِهِ، وأمَّا معاوية فصُعْلُوكٌ لا مال له، ولكن انْكِحِي أسامة بن زيد&quot;، فكَرِهْتُه،
-ثم قال: &quot;اِنْكِحِي أسامة بن زيد&quot; فنَكَحْتُه، فجعل الله ﷿ فيه خيرًا، واغتبطت به.</p>
+ثم قال: &quot;اِنْكِحِي أسامة بن زيد&quot; فنَكَحْتُه، فجعل الله عز وجل فيه خيرًا، واغتبطت به.</p>
 
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3244/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٢٤٥" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3245/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3246/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٤٥ — ليس لكِ نفقة | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3245,"articleBody":"أخبرنا محمدُ بنُ سَلَمَةَ والحارث بن مسكين قراءةً عليه وأنا أسمع - واللفظ لمحمد - عن ابن القاسم، عن مالك، عن عبد الله بن يزيد، عن أبي سَلَمَةَ بن عبد الرحمن\nعن فاطمةَ بنتِ قيس، أنَّ أبا عَمْرِو بنَ حَفْصٍ طَلَّقَهَا البَتَّةَ وهو غائب، فأرسل إليها وكيله بشعير، فسَخِطَتْهُ، فقال: والله ما لكِ علينا من شيء، فجاءَتْ رسول الله صلى الله عليه وسلم، فذكَرَتْ ذلك له، فقال: \"ليس لكِ نفقة\"، فأمرها أنْ تَعْتَدَّ في بيتِ أمِّ شَرِيك، ثم قال: \"تلك امرأة يغشاها أصحابي، فاعْتَدِّي عند ابن أم مَكْتُوم، فإنَّه رجل أعمى، تضعين ثيابَكِ، فإذا حَلَلْتِ فآذنيني\"، قالت: فلمَّا حَلَلْتُ، ذكَرْتُ له أنَّ معاوية بن أبي سفيان وأبا جَهم خَطَبَاني، فقال رسول الله صلى الله عليه وسلم: \"أما أبو جَهم، فلا يَضَعُ عَصَاه عن عاتِقِهِ، وأمَّا معاوية فصُعْلُوكٌ لا مال له، ولكن انْكِحِي أسامة بن زيد\"، فكَرِهْتُه،\nثم قال: \"اِنْكِحِي أسامة بن زيد\" فنَكَحْتُه، فجعل الله ﷿ فيه خيرًا، واغتبطت به."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٤٥ — ليس لكِ نفقة | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3245,"articleBody":"أخبرنا محمدُ بنُ سَلَمَةَ والحارث بن مسكين قراءةً عليه وأنا أسمع - واللفظ لمحمد - عن ابن القاسم، عن مالك، عن عبد الله بن يزيد، عن أبي سَلَمَةَ بن عبد الرحمن\nعن فاطمةَ بنتِ قيس، أنَّ أبا عَمْرِو بنَ حَفْصٍ طَلَّقَهَا البَتَّةَ وهو غائب، فأرسل إليها وكيله بشعير، فسَخِطَتْهُ، فقال: والله ما لكِ علينا من شيء، فجاءَتْ رسول الله صلى الله عليه وسلم، فذكَرَتْ ذلك له، فقال: \"ليس لكِ نفقة\"، فأمرها أنْ تَعْتَدَّ في بيتِ أمِّ شَرِيك، ثم قال: \"تلك امرأة يغشاها أصحابي، فاعْتَدِّي عند ابن أم مَكْتُوم، فإنَّه رجل أعمى، تضعين ثيابَكِ، فإذا حَلَلْتِ فآذنيني\"، قالت: فلمَّا حَلَلْتُ، ذكَرْتُ له أنَّ معاوية بن أبي سفيان وأبا جَهم خَطَبَاني، فقال رسول الله صلى الله عليه وسلم: \"أما أبو جَهم، فلا يَضَعُ عَصَاه عن عاتِقِهِ، وأمَّا معاوية فصُعْلُوكٌ لا مال له، ولكن انْكِحِي أسامة بن زيد\"، فكَرِهْتُه،\nثم قال: \"اِنْكِحِي أسامة بن زيد\" فنَكَحْتُه، فجعل الله عز وجل فيه خيرًا، واغتبطت به."}</script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 <h1 class="bab"><span class="no">الحديث ٤١٦٤</span>١١ - باب شأن الهجرة</h1>
 
 <p class="matn" id="matn">أخبرنا الحسين بنُ حُرَيث قال: حدَّثنا الوليد بنُ مسلم قال: حدَّثنا الأوزاعيُّ، عن الزُّهريّ، عن عطاء بن يزيد اللَّيثيّ
-عن أبي سعيد أنَّ أعرابيًّا سألَ رسولَ الله صلى الله عليه وسلم عن الهجرة، فقال: &quot;ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: &quot;فهل تُؤَدِّي صدقَتَها؟ &quot; قال: نعم. قال: &quot;فاعمَلْ من وراء البحار، فإنَّ الله ﷿ لن يَتِرَكَ من عَمَلِكَ شيئًا&quot;.</p>
+عن أبي سعيد أنَّ أعرابيًّا سألَ رسولَ الله صلى الله عليه وسلم عن الهجرة، فقال: &quot;ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: &quot;فهل تُؤَدِّي صدقَتَها؟ &quot; قال: نعم. قال: &quot;فاعمَلْ من وراء البحار، فإنَّ الله عز وجل لن يَتِرَكَ من عَمَلِكَ شيئًا&quot;.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/4163/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٤١٦٤" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/4164/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/4165/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤١٦٤ — ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":4164,"articleBody":"أخبرنا الحسين بنُ حُرَيث قال: حدَّثنا الوليد بنُ مسلم قال: حدَّثنا الأوزاعيُّ، عن الزُّهريّ، عن عطاء بن يزيد اللَّيثيّ\nعن أبي سعيد أنَّ أعرابيًّا سألَ رسولَ الله صلى الله عليه وسلم عن الهجرة، فقال: \"ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: \"فهل تُؤَدِّي صدقَتَها؟ \" قال: نعم. قال: \"فاعمَلْ من وراء البحار، فإنَّ الله ﷿ لن يَتِرَكَ من عَمَلِكَ شيئًا\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤١٦٤ — ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":4164,"articleBody":"أخبرنا الحسين بنُ حُرَيث قال: حدَّثنا الوليد بنُ مسلم قال: حدَّثنا الأوزاعيُّ، عن الزُّهريّ، عن عطاء بن يزيد اللَّيثيّ\nعن أبي سعيد أنَّ أعرابيًّا سألَ رسولَ الله صلى الله عليه وسلم عن الهجرة، فقال: \"ويْحَكَ، إنَّ شأنَ الهجرة شديدٌ، فهل لكَ من إِبلٍ؟ قال: نعم. قال: \"فهل تُؤَدِّي صدقَتَها؟ \" قال: نعم. قال: \"فاعمَلْ من وراء البحار، فإنَّ الله عز وجل لن يَتِرَكَ من عَمَلِكَ شيئًا\"."}</script>
 </body>
 </html>

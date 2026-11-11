@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -48,8 +48,8 @@
 <nav class="crumbs" aria-label="المسار"><a href="/sahih-bukhari/nasai/">سنن النسائي</a><span aria-hidden="true">/</span><a href="/sahih-bukhari/nasai/kitab/2/">كتاب المياه من المجتبى</a></nav>
 <article>
 
-<p class="front">قال الله ﷿: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾</p>
-<p class="front">وقال ﷿: ﴿وَيُنَزِّلُ عَلَيْكُمْ مِنَ السَّمَاءِ مَاءً لِيُطَهِّرَكُمْ بِهِ﴾</p>
+<p class="front">قال الله عز وجل: ﴿وَأَنْزَلْنَا مِنَ السَّمَاءِ مَاءً طَهُورًا﴾</p>
+<p class="front">وقال عز وجل: ﴿وَيُنَزِّلُ عَلَيْكُمْ مِنَ السَّمَاءِ مَاءً لِيُطَهِّرَكُمْ بِهِ﴾</p>
 <p class="front">وقال تعالى: ﴿فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا﴾</p>
 <h1 class="bab"><span class="no">الحديث ٣٢٥</span></h1>
 <p class="matn" id="matn">أخبرنا سُوَيْدُ بنُ نَصْر، حدَّثنا عبدُ الله بنُ المُبارك، عن سفيان، عن سِماك، عن عكرمة
@@ -58,13 +58,14 @@
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/324/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٢٥" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/325/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/326/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });

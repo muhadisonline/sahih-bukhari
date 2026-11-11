@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٤٩٦</span>ومن سورة النحل</h1>
 <p class="matn" id="matn">حدَّثنا عمرُ بنُ إسماعِيلَ بنِ مُجَالِد بن سعيد، قال: حدَّثني أبي، عن بَيَانٍ
-عن أنسِ بنِ مالكٍ قال: بَنَى رسولُ اللهِ صلى الله عليه وسلم بامرأةٍ من نِسائِه فأرْسلَنِي، فدَعَوتُ قومًا إلى الطعامِ، فلَمَّا أكلوا وخَرَجوا قامَ رسولُ اللهِ صلى الله عليه وسلم مُنْطلِقًا قِبَلَ بيتِ عائشةَ، فرَأى رَجُلَينِ جالِسَينِ، فانصَرَفَ راجعًا، فقامَ الرَّجلانِ فخرجا، فأنْزَلَ اللهُ ﷿ ﴿يَاأَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتَ النَّبِيِّ إِلَّا أَنْ يُؤْذَنَ لَكُمْ إِلَى طَعَامٍ غَيْرَ نَاظِرِينَ إِنَاهُ﴾ [الأحزاب: ٥٣] وفي الحديثِ قِصَّةٌ.
+عن أنسِ بنِ مالكٍ قال: بَنَى رسولُ اللهِ صلى الله عليه وسلم بامرأةٍ من نِسائِه فأرْسلَنِي، فدَعَوتُ قومًا إلى الطعامِ، فلَمَّا أكلوا وخَرَجوا قامَ رسولُ اللهِ صلى الله عليه وسلم مُنْطلِقًا قِبَلَ بيتِ عائشةَ، فرَأى رَجُلَينِ جالِسَينِ، فانصَرَفَ راجعًا، فقامَ الرَّجلانِ فخرجا، فأنْزَلَ اللهُ عز وجل ﴿يَاأَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتَ النَّبِيِّ إِلَّا أَنْ يُؤْذَنَ لَكُمْ إِلَى طَعَامٍ غَيْرَ نَاظِرِينَ إِنَاهُ﴾ [الأحزاب: ٥٣] وفي الحديثِ قِصَّةٌ.
 هذا حديثٌ حسنٌ غريبٌ من حديثِ بَيان، ورَوَى ثابتٌ عن أنسٍ هذا الحديثَ بطوله.</p>
 <p class="note">حديث صحيح لغيره</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3495/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٤٩٦" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3496/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3497/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٩٦ — حدَّثنا عمرُ بنُ إسماعِيلَ بنِ مُجَالِد بن سعيد، قال: حدَّثني أبي، عن… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3496,"articleBody":"حدَّثنا عمرُ بنُ إسماعِيلَ بنِ مُجَالِد بن سعيد، قال: حدَّثني أبي، عن بَيَانٍ\nعن أنسِ بنِ مالكٍ قال: بَنَى رسولُ اللهِ صلى الله عليه وسلم بامرأةٍ من نِسائِه فأرْسلَنِي، فدَعَوتُ قومًا إلى الطعامِ، فلَمَّا أكلوا وخَرَجوا قامَ رسولُ اللهِ صلى الله عليه وسلم مُنْطلِقًا قِبَلَ بيتِ عائشةَ، فرَأى رَجُلَينِ جالِسَينِ، فانصَرَفَ راجعًا، فقامَ الرَّجلانِ فخرجا، فأنْزَلَ اللهُ ﷿ ﴿يَاأَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتَ النَّبِيِّ إِلَّا أَنْ يُؤْذَنَ لَكُمْ إِلَى طَعَامٍ غَيْرَ نَاظِرِينَ إِنَاهُ﴾ [الأحزاب: ٥٣] وفي الحديثِ قِصَّةٌ.\nهذا حديثٌ حسنٌ غريبٌ من حديثِ بَيان، ورَوَى ثابتٌ عن أنسٍ هذا الحديثَ بطوله."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٩٦ — حدَّثنا عمرُ بنُ إسماعِيلَ بنِ مُجَالِد بن سعيد، قال: حدَّثني أبي، عن… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3496,"articleBody":"حدَّثنا عمرُ بنُ إسماعِيلَ بنِ مُجَالِد بن سعيد، قال: حدَّثني أبي، عن بَيَانٍ\nعن أنسِ بنِ مالكٍ قال: بَنَى رسولُ اللهِ صلى الله عليه وسلم بامرأةٍ من نِسائِه فأرْسلَنِي، فدَعَوتُ قومًا إلى الطعامِ، فلَمَّا أكلوا وخَرَجوا قامَ رسولُ اللهِ صلى الله عليه وسلم مُنْطلِقًا قِبَلَ بيتِ عائشةَ، فرَأى رَجُلَينِ جالِسَينِ، فانصَرَفَ راجعًا، فقامَ الرَّجلانِ فخرجا، فأنْزَلَ اللهُ عز وجل ﴿يَاأَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتَ النَّبِيِّ إِلَّا أَنْ يُؤْذَنَ لَكُمْ إِلَى طَعَامٍ غَيْرَ نَاظِرِينَ إِنَاهُ﴾ [الأحزاب: ٥٣] وفي الحديثِ قِصَّةٌ.\nهذا حديثٌ حسنٌ غريبٌ من حديثِ بَيان، ورَوَى ثابتٌ عن أنسٍ هذا الحديثَ بطوله."}</script>
 </body>
 </html>

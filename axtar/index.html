@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -49,6 +49,7 @@
 <p class="lead">رقم الحديث، مثل ١، أو كلمة من المتن.</p>
 <form class="jump" id="sform" role="search">
   <label>عبارة البحث<input id="qq" name="q" placeholder="إنما الأعمال أو ١"></label>
+  <label class="book">الكتاب<select id="book" name="book"><option value="">الكتب كلها</option><option value="buxari">صحيح البخاري</option><option value="muslim">صحيح مسلم</option><option value="abudawud">سنن أبي داود</option><option value="tirmidhi">جامع الترمذي</option><option value="nasai">سنن النسائي</option><option value="ibnmajah">سنن ابن ماجه</option><option value="malik">موطأ مالك</option><option value="darimi">سنن الدارمي</option><option value="adab">الأدب المفرد</option><option value="riyad">رياض الصالحين</option></select></label>
   <button class="btn" type="submit">بحث</button>
 </form>
 <p class="meta" id="status"></p>
@@ -99,6 +100,6 @@
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script src="/sahih-bukhari/assets/search.js" defer></script>
+<script src="/sahih-bukhari/assets/search.js?v=2" defer></script>
 </body>
 </html>

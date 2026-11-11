@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٢٣٤</span>باب ما جاء في الذي يفسر القرآن برأيه</h1>
 <p class="matn" id="matn">حدَّثنا عبدُ بنُ حُمَيدٍ، قال: حدَّثنا الحسنُ بنُ موسى ورَوحُ بنُ عُبادَةَ، عن حَمَّادِ بنِ سَلمَةَ، عن عليِّ بنِ زَيدٍ، عن أُمَيّةَ أنّها
-سَألتْ عائشةَ عن قولِ اللهِ ﵎: ﴿وَإِنْ تُبْدُوا مَا فِي أَنْفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُمْ بِهِ اللَّهُ﴾ [البقرة: ٢٨٤] وعن قوله: ﴿مَنْ يَعْمَلْ سُوءًا يُجْزَ بِهِ﴾ [النساء: ١٢٣] فقالت: ما سَألَني عنها أحَدٌ منْذُ سألتُ رسولَ اللهِ صلى الله عليه وسلم، فقال: &quot;هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ، حتَّى البِضاعَةُ يَضَعُها في يد قَمِيصِه، فيفتقدها، فيَفْزَعُ لها، حتَّى إنَّ العبدَ لَيَخْرُجُ من ذُنُوبِه كما يَخْرُجُ التِّبْرُ الأحمَرُ من الكِيرِ&quot;.
+سَألتْ عائشةَ عن قولِ اللهِ تبارك وتعالى: ﴿وَإِنْ تُبْدُوا مَا فِي أَنْفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُمْ بِهِ اللَّهُ﴾ [البقرة: ٢٨٤] وعن قوله: ﴿مَنْ يَعْمَلْ سُوءًا يُجْزَ بِهِ﴾ [النساء: ١٢٣] فقالت: ما سَألَني عنها أحَدٌ منْذُ سألتُ رسولَ اللهِ صلى الله عليه وسلم، فقال: &quot;هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ، حتَّى البِضاعَةُ يَضَعُها في يد قَمِيصِه، فيفتقدها، فيَفْزَعُ لها، حتَّى إنَّ العبدَ لَيَخْرُجُ من ذُنُوبِه كما يَخْرُجُ التِّبْرُ الأحمَرُ من الكِيرِ&quot;.
 هذا حديثٌ حسنٌ غريبٌ مِن حَديثِ عائِشَةَ، لا نعرِفُه إلا من حديثِ حمَّادِ بنِ سَلمَةَ.</p>
 <p class="note">إسناده ضعيف بهذه السياقة لضعف علي بن زيد بن جدعان</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3233/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٢٣٤" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3234/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3235/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٣٤ — هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ،… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3234,"articleBody":"حدَّثنا عبدُ بنُ حُمَيدٍ، قال: حدَّثنا الحسنُ بنُ موسى ورَوحُ بنُ عُبادَةَ، عن حَمَّادِ بنِ سَلمَةَ، عن عليِّ بنِ زَيدٍ، عن أُمَيّةَ أنّها\nسَألتْ عائشةَ عن قولِ اللهِ ﵎: ﴿وَإِنْ تُبْدُوا مَا فِي أَنْفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُمْ بِهِ اللَّهُ﴾ [البقرة: ٢٨٤] وعن قوله: ﴿مَنْ يَعْمَلْ سُوءًا يُجْزَ بِهِ﴾ [النساء: ١٢٣] فقالت: ما سَألَني عنها أحَدٌ منْذُ سألتُ رسولَ اللهِ صلى الله عليه وسلم، فقال: \"هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ، حتَّى البِضاعَةُ يَضَعُها في يد قَمِيصِه، فيفتقدها، فيَفْزَعُ لها، حتَّى إنَّ العبدَ لَيَخْرُجُ من ذُنُوبِه كما يَخْرُجُ التِّبْرُ الأحمَرُ من الكِيرِ\".\nهذا حديثٌ حسنٌ غريبٌ مِن حَديثِ عائِشَةَ، لا نعرِفُه إلا من حديثِ حمَّادِ بنِ سَلمَةَ."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢٣٤ — هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ،… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3234,"articleBody":"حدَّثنا عبدُ بنُ حُمَيدٍ، قال: حدَّثنا الحسنُ بنُ موسى ورَوحُ بنُ عُبادَةَ، عن حَمَّادِ بنِ سَلمَةَ، عن عليِّ بنِ زَيدٍ، عن أُمَيّةَ أنّها\nسَألتْ عائشةَ عن قولِ اللهِ تبارك وتعالى: ﴿وَإِنْ تُبْدُوا مَا فِي أَنْفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُمْ بِهِ اللَّهُ﴾ [البقرة: ٢٨٤] وعن قوله: ﴿مَنْ يَعْمَلْ سُوءًا يُجْزَ بِهِ﴾ [النساء: ١٢٣] فقالت: ما سَألَني عنها أحَدٌ منْذُ سألتُ رسولَ اللهِ صلى الله عليه وسلم، فقال: \"هذهِ مُعاتَبَةُ اللهِ العبدَ بما يُصِيبُه من الحُمَّى والنَّكْبَةِ، حتَّى البِضاعَةُ يَضَعُها في يد قَمِيصِه، فيفتقدها، فيَفْزَعُ لها، حتَّى إنَّ العبدَ لَيَخْرُجُ من ذُنُوبِه كما يَخْرُجُ التِّبْرُ الأحمَرُ من الكِيرِ\".\nهذا حديثٌ حسنٌ غريبٌ مِن حَديثِ عائِشَةَ، لا نعرِفُه إلا من حديثِ حمَّادِ بنِ سَلمَةَ."}</script>
 </body>
 </html>

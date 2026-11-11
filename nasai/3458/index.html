@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٤٥٨</span>باب الظهار</h1>
 <p class="matn" id="matn">أخبرنا محمدُ بنُ رافعٍ قال: حدَّثنا عبدُ الرَّزَّاقِ قال: حَدَّثنا مَعْمَرٌ، عن الحَكَمِ بن أَبَانَ
-عن عكرمةَ قال: تظاهَرَ رجلٌ من امرأتِهِ، فأصابَها قبلَ أَنْ يُكَفِّرَ، فَذَكَرَ ذلك للنَّبيِّ صلى الله عليه وسلم، فقال له النبيُّ صلى الله عليه وسلم: &quot;ما حَمَلَكَ على ذلك؟ &quot; قال: رَحِمَك اللهُ يا رسولَ الله، رأيتُ خَلْخَالَها - أو ساقَيْها - في ضوءِ القمر، فقال رسولُ الله صلى الله عليه وسلم: &quot;فاعْتَزِلْها حتى تفعل ما أَمَرَكَ اللهُ ﷿&quot;.</p>
+عن عكرمةَ قال: تظاهَرَ رجلٌ من امرأتِهِ، فأصابَها قبلَ أَنْ يُكَفِّرَ، فَذَكَرَ ذلك للنَّبيِّ صلى الله عليه وسلم، فقال له النبيُّ صلى الله عليه وسلم: &quot;ما حَمَلَكَ على ذلك؟ &quot; قال: رَحِمَك اللهُ يا رسولَ الله، رأيتُ خَلْخَالَها - أو ساقَيْها - في ضوءِ القمر، فقال رسولُ الله صلى الله عليه وسلم: &quot;فاعْتَزِلْها حتى تفعل ما أَمَرَكَ اللهُ عز وجل&quot;.</p>
 <p class="note">رجاله ثقات</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3457/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٤٥٨" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3458/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3459/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٥٨ — ما حَمَلَكَ على ذلك؟ | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3458,"articleBody":"أخبرنا محمدُ بنُ رافعٍ قال: حدَّثنا عبدُ الرَّزَّاقِ قال: حَدَّثنا مَعْمَرٌ، عن الحَكَمِ بن أَبَانَ\nعن عكرمةَ قال: تظاهَرَ رجلٌ من امرأتِهِ، فأصابَها قبلَ أَنْ يُكَفِّرَ، فَذَكَرَ ذلك للنَّبيِّ صلى الله عليه وسلم، فقال له النبيُّ صلى الله عليه وسلم: \"ما حَمَلَكَ على ذلك؟ \" قال: رَحِمَك اللهُ يا رسولَ الله، رأيتُ خَلْخَالَها - أو ساقَيْها - في ضوءِ القمر، فقال رسولُ الله صلى الله عليه وسلم: \"فاعْتَزِلْها حتى تفعل ما أَمَرَكَ اللهُ ﷿\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٥٨ — ما حَمَلَكَ على ذلك؟ | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3458,"articleBody":"أخبرنا محمدُ بنُ رافعٍ قال: حدَّثنا عبدُ الرَّزَّاقِ قال: حَدَّثنا مَعْمَرٌ، عن الحَكَمِ بن أَبَانَ\nعن عكرمةَ قال: تظاهَرَ رجلٌ من امرأتِهِ، فأصابَها قبلَ أَنْ يُكَفِّرَ، فَذَكَرَ ذلك للنَّبيِّ صلى الله عليه وسلم، فقال له النبيُّ صلى الله عليه وسلم: \"ما حَمَلَكَ على ذلك؟ \" قال: رَحِمَك اللهُ يا رسولَ الله، رأيتُ خَلْخَالَها - أو ساقَيْها - في ضوءِ القمر، فقال رسولُ الله صلى الله عليه وسلم: \"فاعْتَزِلْها حتى تفعل ما أَمَرَكَ اللهُ عز وجل\"."}</script>
 </body>
 </html>

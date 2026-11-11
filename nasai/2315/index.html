@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 <h1 class="bab"><span class="no">الحديث ٢٣١٥</span>٦٢ - باب وَضْع الصِّيام عن الحُبلى والمُرْضِع</h1>
 
 <p class="matn" id="matn">أخبرنا عمرو بن منصور قال: حدَّثنا مسلم بن إبراهيم، عن وُهَيب بن خالد قال: حدَّثنا عبد الله بن سَوَادة القُشيريُّ، عن أبيه
-عن أنس بن مالك رجلٍ منهم، أنَّه أتى النبيَّ صلى الله عليه وسلم بالمدينة وهو يَتغدَّى، فقال له النبيُّ صلى الله عليه وسلم: &quot;هَلُمَّ إلى الغَداء&quot; فقال: إنِّي صائم. فقال له النبيُّ صلى الله عليه وسلم: &quot;إنَّ الله ﷿ وضَعَ عن المسافر الصَّومَ وشَطْرَ الصَّلاة، وعن الحُبلى والمُرْضِع&quot;.</p>
+عن أنس بن مالك رجلٍ منهم، أنَّه أتى النبيَّ صلى الله عليه وسلم بالمدينة وهو يَتغدَّى، فقال له النبيُّ صلى الله عليه وسلم: &quot;هَلُمَّ إلى الغَداء&quot; فقال: إنِّي صائم. فقال له النبيُّ صلى الله عليه وسلم: &quot;إنَّ الله عز وجل وضَعَ عن المسافر الصَّومَ وشَطْرَ الصَّلاة، وعن الحُبلى والمُرْضِع&quot;.</p>
 <p class="note">حديث حسن من أجل سوادة والد عبد الله روى عنه جمع</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/2314/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٢٣١٥" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/2315/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/2316/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٣١٥ — هَلُمَّ إلى الغَداء | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":2315,"articleBody":"أخبرنا عمرو بن منصور قال: حدَّثنا مسلم بن إبراهيم، عن وُهَيب بن خالد قال: حدَّثنا عبد الله بن سَوَادة القُشيريُّ، عن أبيه\nعن أنس بن مالك رجلٍ منهم، أنَّه أتى النبيَّ صلى الله عليه وسلم بالمدينة وهو يَتغدَّى، فقال له النبيُّ صلى الله عليه وسلم: \"هَلُمَّ إلى الغَداء\" فقال: إنِّي صائم. فقال له النبيُّ صلى الله عليه وسلم: \"إنَّ الله ﷿ وضَعَ عن المسافر الصَّومَ وشَطْرَ الصَّلاة، وعن الحُبلى والمُرْضِع\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٣١٥ — هَلُمَّ إلى الغَداء | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":2315,"articleBody":"أخبرنا عمرو بن منصور قال: حدَّثنا مسلم بن إبراهيم، عن وُهَيب بن خالد قال: حدَّثنا عبد الله بن سَوَادة القُشيريُّ، عن أبيه\nعن أنس بن مالك رجلٍ منهم، أنَّه أتى النبيَّ صلى الله عليه وسلم بالمدينة وهو يَتغدَّى، فقال له النبيُّ صلى الله عليه وسلم: \"هَلُمَّ إلى الغَداء\" فقال: إنِّي صائم. فقال له النبيُّ صلى الله عليه وسلم: \"إنَّ الله عز وجل وضَعَ عن المسافر الصَّومَ وشَطْرَ الصَّلاة، وعن الحُبلى والمُرْضِع\"."}</script>
 </body>
 </html>

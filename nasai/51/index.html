@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -51,18 +51,19 @@
 <h1 class="bab"><span class="no">الحديث ٥١</span>باب دلك اليد بالأرض بعد الاستنجاء</h1>
 <p class="matn" id="matn">أخبرنا أحمدُ بنُ الصَّبَّاح قال: حدَّثنا شُعيبٌ - يعني ابنَ حَرْب - حدَّثنا أبانُ ابنُ عبد الله البَجَليُّ قال: حدَّثنا إبراهيمُ بنُ جرير
 عن أبيه قال: كنتُ مع النبيِّ صلى الله عليه وسلم، فأتى الخَلاءَ فقضَى الحاجةَ، ثم قال: &quot;يا جرير هاتِ طَهُورًا&quot;. فأتيتُه بالماء، فاستنجَى بالماء، وقال بيده فدَلَكَ بها الأرضَ.
-قال أبو عبد الرَّحمن: هذا أشبهُ بالصَّواب من حديث شَريك، والله ﷾ أعلم.</p>
+قال أبو عبد الرَّحمن: هذا أشبهُ بالصَّواب من حديث شَريك، والله سبحانه وتعالى أعلم.</p>
 <p class="note">حديث حسن لغيره</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/50/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٥١" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/51/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/52/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥١ — يا جرير هاتِ طَهُورًا | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":51,"articleBody":"أخبرنا أحمدُ بنُ الصَّبَّاح قال: حدَّثنا شُعيبٌ - يعني ابنَ حَرْب - حدَّثنا أبانُ ابنُ عبد الله البَجَليُّ قال: حدَّثنا إبراهيمُ بنُ جرير\nعن أبيه قال: كنتُ مع النبيِّ صلى الله عليه وسلم، فأتى الخَلاءَ فقضَى الحاجةَ، ثم قال: \"يا جرير هاتِ طَهُورًا\". فأتيتُه بالماء، فاستنجَى بالماء، وقال بيده فدَلَكَ بها الأرضَ.\nقال أبو عبد الرَّحمن: هذا أشبهُ بالصَّواب من حديث شَريك، والله ﷾ أعلم."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥١ — يا جرير هاتِ طَهُورًا | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":51,"articleBody":"أخبرنا أحمدُ بنُ الصَّبَّاح قال: حدَّثنا شُعيبٌ - يعني ابنَ حَرْب - حدَّثنا أبانُ ابنُ عبد الله البَجَليُّ قال: حدَّثنا إبراهيمُ بنُ جرير\nعن أبيه قال: كنتُ مع النبيِّ صلى الله عليه وسلم، فأتى الخَلاءَ فقضَى الحاجةَ، ثم قال: \"يا جرير هاتِ طَهُورًا\". فأتيتُه بالماء، فاستنجَى بالماء، وقال بيده فدَلَكَ بها الأرضَ.\nقال أبو عبد الرَّحمن: هذا أشبهُ بالصَّواب من حديث شَريك، والله سبحانه وتعالى أعلم."}</script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٣٦٢</span>باب ما جاء في الذي يفسر القرآن برأيه</h1>
 <p class="matn" id="matn">حدَّثنا محمدُ بنُ بشارٍ، قال: حدَّثنا عبدُ الرحمنِ بنُ مَهدِيٍّ، قال: حدَّثنا حمَّادُ بنُ سَلمَةَ، عن ثابتٍ البُنانيِّ، عن عبد الرحمنِ بنِ أبي ليلى
-عن صُهَيبٍ، عن النبيِّ صلى الله عليه وسلم في قولِ اللهِ ﷿: ﴿لِلَّذِينَ أَحْسَنُوا الْحُسْنَى وَزِيَادَةٌ﴾ [يونس: ٢٦] قال: إذا دَخَلَ أهلُ الجنَّةِ الجنَّةَ، نَادَى مُنادٍ: إنَّ لكُم عند اللهِ مَوعِدًا يُريدُ أنْ يُنْجِزَكُمُوهُ، قالوا: ألَمْ يُبَيِّضْ وجُوهَنا ويُنَجِّنا من النَّارِ ويُدْخِلْنا الجنَّةَ؟ قال: فيُكْشَفُ الحِجَابُ، قال: فواللهِ ما أعطاهُمُ اللهُ شيئًا أحَبَّ إليهم من النَّظَرِ إليه.
+عن صُهَيبٍ، عن النبيِّ صلى الله عليه وسلم في قولِ اللهِ عز وجل: ﴿لِلَّذِينَ أَحْسَنُوا الْحُسْنَى وَزِيَادَةٌ﴾ [يونس: ٢٦] قال: إذا دَخَلَ أهلُ الجنَّةِ الجنَّةَ، نَادَى مُنادٍ: إنَّ لكُم عند اللهِ مَوعِدًا يُريدُ أنْ يُنْجِزَكُمُوهُ، قالوا: ألَمْ يُبَيِّضْ وجُوهَنا ويُنَجِّنا من النَّارِ ويُدْخِلْنا الجنَّةَ؟ قال: فيُكْشَفُ الحِجَابُ، قال: فواللهِ ما أعطاهُمُ اللهُ شيئًا أحَبَّ إليهم من النَّظَرِ إليه.
 حديثُ حمَّادِ بنِ سَلمَةَ هكذا رواه غيرُ واحدٍ عن حمَّادِ بنِ سَلمَةَ مرفوعًا. ورَوَى سليمانُ بنُ المُغِيرَةِ هذا الحديثَ عن ثابتٍ، عن عبدِ الرحمنِ بنِ أبي ليلى قوله، ولم يَذْكُر فيه: عن صُهَيْبٍ عن النبيِّ صلى الله عليه وسلم.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/tirmidhi/3361/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٣٦٢" data-url="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/3362/">انسخ المتن</button>
   <a href="/sahih-bukhari/tirmidhi/3363/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٣٦٢ — حدَّثنا محمدُ بنُ بشارٍ، قال: حدَّثنا عبدُ الرحمنِ بنُ مَهدِيٍّ، قال:… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3362,"articleBody":"حدَّثنا محمدُ بنُ بشارٍ، قال: حدَّثنا عبدُ الرحمنِ بنُ مَهدِيٍّ، قال: حدَّثنا حمَّادُ بنُ سَلمَةَ، عن ثابتٍ البُنانيِّ، عن عبد الرحمنِ بنِ أبي ليلى\nعن صُهَيبٍ، عن النبيِّ صلى الله عليه وسلم في قولِ اللهِ ﷿: ﴿لِلَّذِينَ أَحْسَنُوا الْحُسْنَى وَزِيَادَةٌ﴾ [يونس: ٢٦] قال: إذا دَخَلَ أهلُ الجنَّةِ الجنَّةَ، نَادَى مُنادٍ: إنَّ لكُم عند اللهِ مَوعِدًا يُريدُ أنْ يُنْجِزَكُمُوهُ، قالوا: ألَمْ يُبَيِّضْ وجُوهَنا ويُنَجِّنا من النَّارِ ويُدْخِلْنا الجنَّةَ؟ قال: فيُكْشَفُ الحِجَابُ، قال: فواللهِ ما أعطاهُمُ اللهُ شيئًا أحَبَّ إليهم من النَّظَرِ إليه.\nحديثُ حمَّادِ بنِ سَلمَةَ هكذا رواه غيرُ واحدٍ عن حمَّادِ بنِ سَلمَةَ مرفوعًا. ورَوَى سليمانُ بنُ المُغِيرَةِ هذا الحديثَ عن ثابتٍ، عن عبدِ الرحمنِ بنِ أبي ليلى قوله، ولم يَذْكُر فيه: عن صُهَيْبٍ عن النبيِّ صلى الله عليه وسلم."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٣٦٢ — حدَّثنا محمدُ بنُ بشارٍ، قال: حدَّثنا عبدُ الرحمنِ بنُ مَهدِيٍّ، قال:… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3362,"articleBody":"حدَّثنا محمدُ بنُ بشارٍ، قال: حدَّثنا عبدُ الرحمنِ بنُ مَهدِيٍّ، قال: حدَّثنا حمَّادُ بنُ سَلمَةَ، عن ثابتٍ البُنانيِّ، عن عبد الرحمنِ بنِ أبي ليلى\nعن صُهَيبٍ، عن النبيِّ صلى الله عليه وسلم في قولِ اللهِ عز وجل: ﴿لِلَّذِينَ أَحْسَنُوا الْحُسْنَى وَزِيَادَةٌ﴾ [يونس: ٢٦] قال: إذا دَخَلَ أهلُ الجنَّةِ الجنَّةَ، نَادَى مُنادٍ: إنَّ لكُم عند اللهِ مَوعِدًا يُريدُ أنْ يُنْجِزَكُمُوهُ، قالوا: ألَمْ يُبَيِّضْ وجُوهَنا ويُنَجِّنا من النَّارِ ويُدْخِلْنا الجنَّةَ؟ قال: فيُكْشَفُ الحِجَابُ، قال: فواللهِ ما أعطاهُمُ اللهُ شيئًا أحَبَّ إليهم من النَّظَرِ إليه.\nحديثُ حمَّادِ بنِ سَلمَةَ هكذا رواه غيرُ واحدٍ عن حمَّادِ بنِ سَلمَةَ مرفوعًا. ورَوَى سليمانُ بنُ المُغِيرَةِ هذا الحديثَ عن ثابتٍ، عن عبدِ الرحمنِ بنِ أبي ليلى قوله، ولم يَذْكُر فيه: عن صُهَيْبٍ عن النبيِّ صلى الله عليه وسلم."}</script>
 </body>
 </html>

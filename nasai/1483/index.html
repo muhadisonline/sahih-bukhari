@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -51,18 +51,19 @@
 <h1 class="bab"><span class="no">الحديث ١٤٨٣</span>باب نوع آخر</h1>
 <p class="matn" id="matn">أخبرنا محمد بن عُبيد الله بن عبد العظيم قال: حدَّثني إبراهيم سَبَلان، قال: حدَّثنا عبَّاد بن عبَّاد المُهَلَّبيُّ، عن محمد بن عمرو، عن أبي سلمة
 عن أبي هريرة قال: كَسَفتِ الشَّمسُ على عهدِ رسولِ الله صلى الله عليه وسلم، فقامَ فصلَّى للنَّاس، فأطالَ القيام، ثُمَّ ركَعَ، فأطالَ الرُّكوع، ثُمَّ قامَ، فأطالَ القيام، وهو دونَ القيام الأوَّل، ثُمَّ ركَعَ، فأطالَ الرُّكوع، وهو دونَ الرُّكوع الأوَّل، ثُمَّ سجدَ، فأطالَ السُّجود، ثُمَّ رَفَعَ، ثُمَّ سجدَ، فأطالَ السُّجودَ،
-وهو دونَ السُّجود الأوَّل، ثُمَّ قامَ، فصلَّى رَكعتين، وفَعلَ فيهما مِثْلَ ذلك، ثُمَّ سجدَ سجدتين يفعلُ فيهما مِثْلَ ذلك حتَّى فرَغَ من صلاتِهِ، ثُمَّ قال: &quot;إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ لموتِ أَحدٍ ولا لحياتِه، فإذا رأيتُم ذلك فافزعوا إلى ذِكْرِ الله ﷿ وإلى الصَّلاة&quot;.</p>
+وهو دونَ السُّجود الأوَّل، ثُمَّ قامَ، فصلَّى رَكعتين، وفَعلَ فيهما مِثْلَ ذلك، ثُمَّ سجدَ سجدتين يفعلُ فيهما مِثْلَ ذلك حتَّى فرَغَ من صلاتِهِ، ثُمَّ قال: &quot;إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ لموتِ أَحدٍ ولا لحياتِه، فإذا رأيتُم ذلك فافزعوا إلى ذِكْرِ الله عز وجل وإلى الصَّلاة&quot;.</p>
 <p class="note">صحيح لغيره</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/1482/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ١٤٨٣" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/1483/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/1484/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٨٣ — إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1483,"articleBody":"أخبرنا محمد بن عُبيد الله بن عبد العظيم قال: حدَّثني إبراهيم سَبَلان، قال: حدَّثنا عبَّاد بن عبَّاد المُهَلَّبيُّ، عن محمد بن عمرو، عن أبي سلمة\nعن أبي هريرة قال: كَسَفتِ الشَّمسُ على عهدِ رسولِ الله صلى الله عليه وسلم، فقامَ فصلَّى للنَّاس، فأطالَ القيام، ثُمَّ ركَعَ، فأطالَ الرُّكوع، ثُمَّ قامَ، فأطالَ القيام، وهو دونَ القيام الأوَّل، ثُمَّ ركَعَ، فأطالَ الرُّكوع، وهو دونَ الرُّكوع الأوَّل، ثُمَّ سجدَ، فأطالَ السُّجود، ثُمَّ رَفَعَ، ثُمَّ سجدَ، فأطالَ السُّجودَ،\nوهو دونَ السُّجود الأوَّل، ثُمَّ قامَ، فصلَّى رَكعتين، وفَعلَ فيهما مِثْلَ ذلك، ثُمَّ سجدَ سجدتين يفعلُ فيهما مِثْلَ ذلك حتَّى فرَغَ من صلاتِهِ، ثُمَّ قال: \"إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ لموتِ أَحدٍ ولا لحياتِه، فإذا رأيتُم ذلك فافزعوا إلى ذِكْرِ الله ﷿ وإلى الصَّلاة\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٨٣ — إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1483,"articleBody":"أخبرنا محمد بن عُبيد الله بن عبد العظيم قال: حدَّثني إبراهيم سَبَلان، قال: حدَّثنا عبَّاد بن عبَّاد المُهَلَّبيُّ، عن محمد بن عمرو، عن أبي سلمة\nعن أبي هريرة قال: كَسَفتِ الشَّمسُ على عهدِ رسولِ الله صلى الله عليه وسلم، فقامَ فصلَّى للنَّاس، فأطالَ القيام، ثُمَّ ركَعَ، فأطالَ الرُّكوع، ثُمَّ قامَ، فأطالَ القيام، وهو دونَ القيام الأوَّل، ثُمَّ ركَعَ، فأطالَ الرُّكوع، وهو دونَ الرُّكوع الأوَّل، ثُمَّ سجدَ، فأطالَ السُّجود، ثُمَّ رَفَعَ، ثُمَّ سجدَ، فأطالَ السُّجودَ،\nوهو دونَ السُّجود الأوَّل، ثُمَّ قامَ، فصلَّى رَكعتين، وفَعلَ فيهما مِثْلَ ذلك، ثُمَّ سجدَ سجدتين يفعلُ فيهما مِثْلَ ذلك حتَّى فرَغَ من صلاتِهِ، ثُمَّ قال: \"إِنَّ الشَّمسَ والقمرَ آيتانِ من آيات الله، وإنَّهما لا يَنكَسِفانِ لموتِ أَحدٍ ولا لحياتِه، فإذا رأيتُم ذلك فافزعوا إلى ذِكْرِ الله عز وجل وإلى الصَّلاة\"."}</script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 
 <h1 class="bab"><span class="no">الحديث ٤٥٧</span>باب كيف فرضت الصلاة</h1>
 <p class="matn" id="matn">أخبرنا يوسفُ بنُ سعيدٍ قال: حدَّثنا حجَّاجُ بنُ محمد، حدَّثنا محمدُ بنُ عبد الله الشُّعَيْثيّ، عن عبد الله بن أبي بكر بن الحارث بن هشام، عن أميَّةَ بن عبد الله بن خالد بن أَسِيد
-أنَّه قال لابن عُمر: كيف تَقْصُرُ الصَّلاة، وإنَّما قال اللهُ ﷿: ﴿لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَقْصُرُوا مِنَ الصَّلَاةِ إِنْ خِفْتُمْ﴾ فقال ابن عُمر: يا ابنَ أخي، إنَّ رسولَ الله صلى الله عليه وسلم أتانا ونحن ضُلَّالٌ فعَلَّمَنا، فكان فيما عَلَّمَنا أنَّ الله ﷿ أَمَرَنا أنْ نُصَلِّيَ ركعتَيْن في السَّفَر. قال الشُّعَيْثيّ: وكان الزُّهريُّ يُحدِّث بهذا الحديث عن عبد الله بن أبي بكر.</p>
+أنَّه قال لابن عُمر: كيف تَقْصُرُ الصَّلاة، وإنَّما قال اللهُ عز وجل: ﴿لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَقْصُرُوا مِنَ الصَّلَاةِ إِنْ خِفْتُمْ﴾ فقال ابن عُمر: يا ابنَ أخي، إنَّ رسولَ الله صلى الله عليه وسلم أتانا ونحن ضُلَّالٌ فعَلَّمَنا، فكان فيما عَلَّمَنا أنَّ الله عز وجل أَمَرَنا أنْ نُصَلِّيَ ركعتَيْن في السَّفَر. قال الشُّعَيْثيّ: وكان الزُّهريُّ يُحدِّث بهذا الحديث عن عبد الله بن أبي بكر.</p>
 <p class="note">إسناده حسن</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/456/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٤٥٧" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/457/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/458/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٥٧ — أخبرنا يوسفُ بنُ سعيدٍ قال: حدَّثنا حجَّاجُ بنُ محمد، حدَّثنا محمدُ… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":457,"articleBody":"أخبرنا يوسفُ بنُ سعيدٍ قال: حدَّثنا حجَّاجُ بنُ محمد، حدَّثنا محمدُ بنُ عبد الله الشُّعَيْثيّ، عن عبد الله بن أبي بكر بن الحارث بن هشام، عن أميَّةَ بن عبد الله بن خالد بن أَسِيد\nأنَّه قال لابن عُمر: كيف تَقْصُرُ الصَّلاة، وإنَّما قال اللهُ ﷿: ﴿لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَقْصُرُوا مِنَ الصَّلَاةِ إِنْ خِفْتُمْ﴾ فقال ابن عُمر: يا ابنَ أخي، إنَّ رسولَ الله صلى الله عليه وسلم أتانا ونحن ضُلَّالٌ فعَلَّمَنا، فكان فيما عَلَّمَنا أنَّ الله ﷿ أَمَرَنا أنْ نُصَلِّيَ ركعتَيْن في السَّفَر. قال الشُّعَيْثيّ: وكان الزُّهريُّ يُحدِّث بهذا الحديث عن عبد الله بن أبي بكر."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٥٧ — أخبرنا يوسفُ بنُ سعيدٍ قال: حدَّثنا حجَّاجُ بنُ محمد، حدَّثنا محمدُ… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":457,"articleBody":"أخبرنا يوسفُ بنُ سعيدٍ قال: حدَّثنا حجَّاجُ بنُ محمد، حدَّثنا محمدُ بنُ عبد الله الشُّعَيْثيّ، عن عبد الله بن أبي بكر بن الحارث بن هشام، عن أميَّةَ بن عبد الله بن خالد بن أَسِيد\nأنَّه قال لابن عُمر: كيف تَقْصُرُ الصَّلاة، وإنَّما قال اللهُ عز وجل: ﴿لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَقْصُرُوا مِنَ الصَّلَاةِ إِنْ خِفْتُمْ﴾ فقال ابن عُمر: يا ابنَ أخي، إنَّ رسولَ الله صلى الله عليه وسلم أتانا ونحن ضُلَّالٌ فعَلَّمَنا، فكان فيما عَلَّمَنا أنَّ الله عز وجل أَمَرَنا أنْ نُصَلِّيَ ركعتَيْن في السَّفَر. قال الشُّعَيْثيّ: وكان الزُّهريُّ يُحدِّث بهذا الحديث عن عبد الله بن أبي بكر."}</script>
 </body>
 </html>

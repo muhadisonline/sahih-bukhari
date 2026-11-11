@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,19 +50,20 @@
 
 <h1 class="bab"><span class="no">الحديث ٣٥١١</span>باب عدة الحامل المتوفى عنها زوجها</h1>
 <p class="matn" id="matn">أخبرني محمدُ بنُ عبدِ الله بن بَزِيعٍ قال: حدَّثنا يزيد - وهو ابن زُرَيْع - قال: حدَّثنا حجَّاجٌ قال: حدَّثنا يحيى بنُ أبي كثير قال: حدَّثني أبو سَلَمَةَ بنُ عبدِ الرَّحمن قال:
-قيلَ لابنِ عبَّاس في امرأةٍ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً: أيَصْلُحُ لها أن تَزَوَّجَ؟ قال: لا، إلا آخِرَ الأَجَلَيْنِ. قال: قلتُ: قال الله ﵎: ﴿وَأُولَاتُ الْأَحْمَالِ أَجَلُهُنَّ أَنْ يَضَعْنَ حَمْلَهُنَّ﴾ [الطلاق: ٤] فقال: إنَّما ذلك في الطَّلاق، فقال أبو هريرة: أنا مع ابن أخي، يعني أبا سَلَمَة.
+قيلَ لابنِ عبَّاس في امرأةٍ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً: أيَصْلُحُ لها أن تَزَوَّجَ؟ قال: لا، إلا آخِرَ الأَجَلَيْنِ. قال: قلتُ: قال الله تبارك وتعالى: ﴿وَأُولَاتُ الْأَحْمَالِ أَجَلُهُنَّ أَنْ يَضَعْنَ حَمْلَهُنَّ﴾ [الطلاق: ٤] فقال: إنَّما ذلك في الطَّلاق، فقال أبو هريرة: أنا مع ابن أخي، يعني أبا سَلَمَة.
 فأرسلَ غلامَه كُرَيبًا. فقال: ائتِ أمَّ سَلَمَةَ فسَلْها: هل كان هذا سُنَّةً من رسولِ الله صلى الله عليه وسلم؟ فجاء فقال: قالت: نعم، سُبيعةُ الأَسْلَمِيَّةُ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً فأمَرَها رسولُ الله صلى الله عليه وسلم أن تَزَوَّجَ، فكان أبو السَّنابل فيمن يَخْطُبُها.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3510/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٥١١" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3511/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3512/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -114,6 +115,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٥١١ — أخبرني محمدُ بنُ عبدِ الله بن بَزِيعٍ قال: حدَّثنا يزيد - وهو ابن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3511,"articleBody":"أخبرني محمدُ بنُ عبدِ الله بن بَزِيعٍ قال: حدَّثنا يزيد - وهو ابن زُرَيْع - قال: حدَّثنا حجَّاجٌ قال: حدَّثنا يحيى بنُ أبي كثير قال: حدَّثني أبو سَلَمَةَ بنُ عبدِ الرَّحمن قال:\nقيلَ لابنِ عبَّاس في امرأةٍ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً: أيَصْلُحُ لها أن تَزَوَّجَ؟ قال: لا، إلا آخِرَ الأَجَلَيْنِ. قال: قلتُ: قال الله ﵎: ﴿وَأُولَاتُ الْأَحْمَالِ أَجَلُهُنَّ أَنْ يَضَعْنَ حَمْلَهُنَّ﴾ [الطلاق: ٤] فقال: إنَّما ذلك في الطَّلاق، فقال أبو هريرة: أنا مع ابن أخي، يعني أبا سَلَمَة.\nفأرسلَ غلامَه كُرَيبًا. فقال: ائتِ أمَّ سَلَمَةَ فسَلْها: هل كان هذا سُنَّةً من رسولِ الله صلى الله عليه وسلم؟ فجاء فقال: قالت: نعم، سُبيعةُ الأَسْلَمِيَّةُ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً فأمَرَها رسولُ الله صلى الله عليه وسلم أن تَزَوَّجَ، فكان أبو السَّنابل فيمن يَخْطُبُها."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٥١١ — أخبرني محمدُ بنُ عبدِ الله بن بَزِيعٍ قال: حدَّثنا يزيد - وهو ابن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3511,"articleBody":"أخبرني محمدُ بنُ عبدِ الله بن بَزِيعٍ قال: حدَّثنا يزيد - وهو ابن زُرَيْع - قال: حدَّثنا حجَّاجٌ قال: حدَّثنا يحيى بنُ أبي كثير قال: حدَّثني أبو سَلَمَةَ بنُ عبدِ الرَّحمن قال:\nقيلَ لابنِ عبَّاس في امرأةٍ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً: أيَصْلُحُ لها أن تَزَوَّجَ؟ قال: لا، إلا آخِرَ الأَجَلَيْنِ. قال: قلتُ: قال الله تبارك وتعالى: ﴿وَأُولَاتُ الْأَحْمَالِ أَجَلُهُنَّ أَنْ يَضَعْنَ حَمْلَهُنَّ﴾ [الطلاق: ٤] فقال: إنَّما ذلك في الطَّلاق، فقال أبو هريرة: أنا مع ابن أخي، يعني أبا سَلَمَة.\nفأرسلَ غلامَه كُرَيبًا. فقال: ائتِ أمَّ سَلَمَةَ فسَلْها: هل كان هذا سُنَّةً من رسولِ الله صلى الله عليه وسلم؟ فجاء فقال: قالت: نعم، سُبيعةُ الأَسْلَمِيَّةُ وضَعَتْ بعد وفاةِ زوجِها بعشرينَ ليلةً فأمَرَها رسولُ الله صلى الله عليه وسلم أن تَزَوَّجَ، فكان أبو السَّنابل فيمن يَخْطُبُها."}</script>
 </body>
 </html>

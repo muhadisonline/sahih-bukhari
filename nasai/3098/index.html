@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=10">
+<link rel="stylesheet" href="/sahih-bukhari/assets/site.css?v=11">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -50,18 +50,19 @@
 <h1 class="bab"><span class="no">الحديث ٣٠٩٨</span>٣ - باب الرُّخْصَة في التَّخلُّف عن السَّريَّة</h1>
 
 <p class="matn" id="matn">أخبرنا أحمدُ بنُ يحيى بن الوزيرِ بن سليمانَ، عن ابن عُفَيْر، عن الليث، عن ابن مُسافر، عن ابن شِهاب، عن أبي سَلَمَةَ بن عبدِ الرَّحمن وسعيدِ بن المُسَيِّب
-أنَّ أبا هريرةَ قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: &quot;والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم أن يَتَخَلَّفُوا عنِّي ولا أَجِدُ ما أَحْمِلُهُم عليه؛ ما تَخَلَّفْتُ عن سَرِيَّةٍ تَغْزُو في سبيلِ الله ﷿، والذي نفسي بيدِه، لَوَدِدْتُ أَنِّي أَقْتَلُ في سبيلِ الله، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ&quot;.</p>
+أنَّ أبا هريرةَ قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: &quot;والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم أن يَتَخَلَّفُوا عنِّي ولا أَجِدُ ما أَحْمِلُهُم عليه؛ ما تَخَلَّفْتُ عن سَرِيَّةٍ تَغْزُو في سبيلِ الله عز وجل، والذي نفسي بيدِه، لَوَدِدْتُ أَنِّي أَقْتَلُ في سبيلِ الله، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ&quot;.</p>
 <p class="note">إسناده صحيح</p>
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
   <a href="/sahih-bukhari/nasai/3097/">السابق</a>
-  <button class="btn ghost" type="button" id="copy">انسخ المتن</button>
+  <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٠٩٨" data-url="https://muhadisonline.github.io/sahih-bukhari/nasai/3098/">انسخ المتن</button>
   <a href="/sahih-bukhari/nasai/3099/">التالي</a>
 </nav>
 <script>
 document.getElementById("copy").addEventListener("click", function () {
   var btn = this;
-  navigator.clipboard.writeText(document.getElementById("matn").innerText).then(function () {
+  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
+  navigator.clipboard.writeText(text).then(function () {
     btn.textContent = "تم النسخ";
     setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
   });
@@ -113,6 +114,6 @@ document.getElementById("copy").addEventListener("click", function () {
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٠٩٨ — والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3098,"articleBody":"أخبرنا أحمدُ بنُ يحيى بن الوزيرِ بن سليمانَ، عن ابن عُفَيْر، عن الليث، عن ابن مُسافر، عن ابن شِهاب، عن أبي سَلَمَةَ بن عبدِ الرَّحمن وسعيدِ بن المُسَيِّب\nأنَّ أبا هريرةَ قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: \"والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم أن يَتَخَلَّفُوا عنِّي ولا أَجِدُ ما أَحْمِلُهُم عليه؛ ما تَخَلَّفْتُ عن سَرِيَّةٍ تَغْزُو في سبيلِ الله ﷿، والذي نفسي بيدِه، لَوَدِدْتُ أَنِّي أَقْتَلُ في سبيلِ الله، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ\"."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٠٩٨ — والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3098,"articleBody":"أخبرنا أحمدُ بنُ يحيى بن الوزيرِ بن سليمانَ، عن ابن عُفَيْر، عن الليث، عن ابن مُسافر، عن ابن شِهاب، عن أبي سَلَمَةَ بن عبدِ الرَّحمن وسعيدِ بن المُسَيِّب\nأنَّ أبا هريرةَ قال: سمعتُ رسولَ الله صلى الله عليه وسلم يقول: \"والذي نفسي بِيَدِه، لولا أنَّ رِجالًا من المؤمنين لا تَطِيبُ أنفسُهُم أن يَتَخَلَّفُوا عنِّي ولا أَجِدُ ما أَحْمِلُهُم عليه؛ ما تَخَلَّفْتُ عن سَرِيَّةٍ تَغْزُو في سبيلِ الله عز وجل، والذي نفسي بيدِه، لَوَدِدْتُ أَنِّي أَقْتَلُ في سبيلِ الله، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ، ثم أَحْيَا ثم أُقْتَلُ\"."}</script>
 </body>
 </html>
