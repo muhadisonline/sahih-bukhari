@@ -9,9 +9,13 @@ const BOOKS = [
   { href: "https://muhadisonline.github.io/sahih-bukhari/tirmidhi/", name: "جامع الترمذي", author: "محمد بن عيسى الترمذي", n: 4300 },
   { href: "https://muhadisonline.github.io/sahih-bukhari/nasai/", name: "سنن النسائي", author: "أحمد بن شعيب النسائي", n: 5758 },
   { href: "https://muhadisonline.github.io/sahih-bukhari/ibnmajah/", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه", n: 4340 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/malik/", name: "موطأ مالك", author: "مالك بن أنس · رواية يحيى الليثي", n: 1854 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/darimi/", name: "سنن الدارمي", author: "عبد الله بن عبد الرحمن الدارمي", n: 3406 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/adab/", name: "الأدب المفرد", author: "محمد بن إسماعيل البخاري", n: 1326 },
+  { href: "https://muhadisonline.github.io/sahih-bukhari/riyad/", name: "رياض الصالحين", author: "يحيى بن شرف النووي", n: 1896 },
 ] as const;
 
-const NUM = ["١", "٢", "٣", "٤", "٥", "٦"];
+const NUM = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "١٠"];
 
 function Card({
   name,
@@ -26,7 +30,7 @@ function Card({
 }) {
   return (
     <>
-      <span className="pointer-events-none absolute end-3 top-0 font-ar text-7xl leading-none text-ink/10 transition group-hover:text-paper/10">
+      <span dir="ltr" className="pointer-events-none absolute end-3 top-0 font-ar text-7xl leading-none text-ink/10 transition group-hover:text-paper/10">
         {NUM[i]}
       </span>
       <span className="relative mt-auto font-ar text-3xl leading-snug">{name}</span>
@@ -39,7 +43,7 @@ function Card({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "الكتب الستة" },
+      { title: "مكتبة الحديث" },
       { name: "description", content: "صحيح البخاري وصحيح مسلم وسنن أبي داود وجامع الترمذي وسنن النسائي وسنن ابن ماجه." },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -73,8 +77,8 @@ function Home() {
     <Shell wide>
       <section className="pt-4">
         <p className="text-sm text-muted">مكتبة الحديث</p>
-        <h1 className="mt-2 font-ar text-7xl leading-none sm:text-8xl">الكتب الستة</h1>
-        <p className="mt-4 max-w-md text-muted">ثلاثون ألف حديث. كل واحد في صفحة، بالمتن العربي.</p>
+        <h1 className="mt-2 font-ar text-7xl leading-none sm:text-8xl">مكتبة الحديث</h1>
+        <p className="mt-4 max-w-md text-muted">كل حديث في صفحة، بالمتن العربي.</p>
         <form action="/axtar" className="mt-6 flex w-full max-w-lg items-center border-b border-ink" role="search">
           <label className="sr-only" htmlFor="hq">
             بحث في الأحاديث

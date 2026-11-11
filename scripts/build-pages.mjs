@@ -228,7 +228,7 @@ function shell({ title, desc, path, body, extra = "", wide = false }) {
   <div class="wrap bar">
     <a class="brand" href="${href("/")}">
       <span class="mark">ك</span>
-      <span class="brand-name">الكتب الستة</span>
+      <span class="brand-name">مكتبة الحديث</span>
     </a>
     <form class="search" action="${href("/axtar/")}" method="get" role="search">
       <label class="sr" for="q">بحث في الأحاديث</label>
@@ -260,6 +260,10 @@ ${body}
       <a href="${href("/tirmidhi/")}">الترمذي</a>
       <a href="${href("/nasai/")}">النسائي</a>
       <a href="${href("/ibnmajah/")}">ابن ماجه</a>
+      <a href="${href("/malik/")}">الموطأ</a>
+      <a href="${href("/darimi/")}">الدارمي</a>
+      <a href="${href("/adab/")}">الأدب المفرد</a>
+      <a href="${href("/riyad/")}">رياض الصالحين</a>
     </nav>
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
@@ -305,11 +309,11 @@ function put(rel, html) {
 }
 
 const total = kitabs.reduce((n, k) => n + k.count, 0);
-const homeDesc = "الكتب الستة: صحيح البخاري وصحيح مسلم، وسنن أبي داود وجامع الترمذي وسنن النسائي وسنن ابن ماجه.";
+const homeDesc = "مكتبة الحديث: الكتب الستة، وموطأ مالك، وسنن الدارمي، والأدب المفرد، ورياض الصالحين.";
 put(
   "index.html",
   shell({
-    title: "الكتب الستة",
+    title: "مكتبة الحديث",
     desc: homeDesc,
     path: "/",
     wide: true,
@@ -338,8 +342,8 @@ put(
 </script>`,
     body: `<section class="hero">
 <p class="eyebrow">مكتبة الحديث</p>
-<h1 class="hero-title">الكتب الستة</h1>
-<p class="deck">ثلاثون ألف حديث. كل واحد في صفحة، بالمتن العربي.</p>
+<h1 class="hero-title">مكتبة الحديث</h1>
+<p class="deck">كل حديث في صفحة، بالمتن العربي.</p>
 <form class="home-search" action="${href("/axtar/")}" method="get" role="search">
   <label class="sr" for="hq">بحث في الأحاديث</label>
   <input id="hq" name="q" placeholder="رقم الحديث أو كلمة من المتن">
@@ -358,6 +362,10 @@ put(
 <li><a class="volume" href="${href("/tirmidhi/")}"><span class="vol-idx" dir="ltr">٤</span><span class="vol-name">جامع الترمذي</span><span class="vol-au">محمد بن عيسى الترمذي</span><span class="vol-ct">${ar(4300)} حديثًا</span></a></li>
 <li><a class="volume" href="${href("/nasai/")}"><span class="vol-idx" dir="ltr">٥</span><span class="vol-name">سنن النسائي</span><span class="vol-au">أحمد بن شعيب النسائي</span><span class="vol-ct">${ar(5758)} حديثًا</span></a></li>
 <li><a class="volume" href="${href("/ibnmajah/")}"><span class="vol-idx" dir="ltr">٦</span><span class="vol-name">سنن ابن ماجه</span><span class="vol-au">محمد بن يزيد ابن ماجه</span><span class="vol-ct">${ar(4340)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/malik/")}"><span class="vol-idx" dir="ltr">٧</span><span class="vol-name">موطأ مالك</span><span class="vol-au">مالك بن أنس · رواية يحيى الليثي</span><span class="vol-ct">${ar(1854)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/darimi/")}"><span class="vol-idx" dir="ltr">٨</span><span class="vol-name">سنن الدارمي</span><span class="vol-au">عبد الله بن عبد الرحمن الدارمي</span><span class="vol-ct">${ar(3406)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/adab/")}"><span class="vol-idx" dir="ltr">٩</span><span class="vol-name">الأدب المفرد</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(1326)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/riyad/")}"><span class="vol-idx" dir="ltr">١٠</span><span class="vol-name">رياض الصالحين</span><span class="vol-au">يحيى بن شرف النووي</span><span class="vol-ct">${ar(1896)} حديثًا</span></a></li>
 </ol>`,
   }),
 );
@@ -450,7 +458,7 @@ for (const k of kitabs) {
   const page = kitabPages.get(k.i);
   const title = `${k.title} — صحيح البخاري`;
   const desc = clip(`${k.title} من صحيح البخاري. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
-  const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+  const body = `<nav class="crumbs"><a href="${href("/")}">مكتبة الحديث</a></nav>
 <h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
 <p class="meta">${ar(page.count)} حديثًا</p>
 ${page.babs
@@ -474,7 +482,7 @@ put(
     title: "صحيح البخاري",
     desc: homeDesc,
     path: "/buxari/",
-    body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+    body: `<nav class="crumbs"><a href="${href("/")}">مكتبة الحديث</a></nav>
 <h1 class="title">صحيح البخاري</h1>
 <p class="meta">محمد بن إسماعيل البخاري · ${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
@@ -511,7 +519,7 @@ function emitCollection(dir, book) {
     const page = JSON.parse(read(join(ROOT, `src/data/${dir}/kitab/${k.i}.json`)));
     const title = `${k.title} — ${book.name}`;
     const desc = clip(`${k.title} من ${book.name}. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
-    const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+    const body = `<nav class="crumbs"><a href="${href("/")}">مكتبة الحديث</a></nav>
 <h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
 <p class="meta">${ar(page.count)} حديثًا</p>
 ${page.babs
@@ -537,7 +545,7 @@ ${page.babs
       title: book.name,
       desc: `${book.name}: ${list.length} كتابًا و${bookTotal} حديثًا.`,
       path: `/${book.slug}/`,
-      body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+      body: `<nav class="crumbs"><a href="${href("/")}">مكتبة الحديث</a></nav>
 <h1 class="title">${esc(book.name)}</h1>
 <p class="meta">${esc(book.author)} · ${ar(list.length)} كتابًا · ${ar(bookTotal)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
@@ -558,6 +566,10 @@ const dawud = emitCollection("abudawud", { slug: "abudawud", name: "سنن أب�
 const tirmidhi = emitCollection("tirmidhi", { slug: "tirmidhi", name: "جامع الترمذي", author: "محمد بن عيسى الترمذي" });
 const nasai = emitCollection("nasai", { slug: "nasai", name: "سنن النسائي", author: "أحمد بن شعيب النسائي" });
 const majah = emitCollection("ibnmajah", { slug: "ibnmajah", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه" });
+const malik = emitCollection("malik", { slug: "malik", name: "موطأ مالك", author: "مالك بن أنس، رواية يحيى بن يحيى الليثي" });
+const darimi = emitCollection("darimi", { slug: "darimi", name: "سنن الدارمي", author: "عبد الله بن عبد الرحمن الدارمي" });
+const adab = emitCollection("adab", { slug: "adab", name: "الأدب المفرد", author: "محمد بن إسماعيل البخاري" });
+const riyad = emitCollection("riyad", { slug: "riyad", name: "رياض الصالحين", author: "يحيى بن شرف النووي" });
 writeFileSync(join(OUT, "search-index.json"), JSON.stringify(index));
 
 const searchJs = `var AR="٠١٢٣٤٥٦٧٨٩";
@@ -608,8 +620,8 @@ writeFileSync(join(OUT, "assets/search.js"), searchJs);
 put(
   "axtar/index.html",
   shell({
-    title: "بحث — الكتب الستة",
-    desc: "ابحث في الكتب الستة برقم الحديث أو بكلمة من المتن العربي.",
+    title: "بحث — مكتبة الحديث",
+    desc: "ابحث في مكتبة الحديث برقم الحديث أو بكلمة من المتن العربي.",
     path: "/axtar/",
     extra: `<script src="${href("/assets/search.js")}" defer></script>`,
     body: `<h1 class="title">البحث</h1>
@@ -630,7 +642,7 @@ put(
     desc: "هذا العنوان غير موجود.",
     path: "/404.html",
     body: `<h1 class="title">الصفحة غير موجودة</h1>
-<p><a class="btn" href="${href("/")}">العودة إلى الكتب الستة</a></p>`,
+<p><a class="btn" href="${href("/")}">العودة إلى مكتبة الحديث</a></p>`,
   }),
 );
 
@@ -642,6 +654,10 @@ const locs = [
   `${SITE}/tirmidhi/`,
   `${SITE}/nasai/`,
   `${SITE}/ibnmajah/`,
+  `${SITE}/malik/`,
+  `${SITE}/darimi/`,
+  `${SITE}/adab/`,
+  `${SITE}/riyad/`,
   ...kitabs.map((k) => `${SITE}/buxari/kitab/${k.i}/`),
   ...order.map((n) => `${SITE}/buxari/${n}/`),
   ...muslim.kitabs.map((k) => `${SITE}/muslim/kitab/${k.i}/`),
@@ -654,6 +670,14 @@ const locs = [
   ...nasai.order.map((n) => `${SITE}/nasai/${n}/`),
   ...majah.kitabs.map((k) => `${SITE}/ibnmajah/kitab/${k.i}/`),
   ...majah.order.map((n) => `${SITE}/ibnmajah/${n}/`),
+  ...malik.kitabs.map((k) => `${SITE}/malik/kitab/${k.i}/`),
+  ...malik.order.map((n) => `${SITE}/malik/${n}/`),
+  ...darimi.kitabs.map((k) => `${SITE}/darimi/kitab/${k.i}/`),
+  ...darimi.order.map((n) => `${SITE}/darimi/${n}/`),
+  ...adab.kitabs.map((k) => `${SITE}/adab/kitab/${k.i}/`),
+  ...adab.order.map((n) => `${SITE}/adab/${n}/`),
+  ...riyad.kitabs.map((k) => `${SITE}/riyad/kitab/${k.i}/`),
+  ...riyad.order.map((n) => `${SITE}/riyad/${n}/`),
 ];
 writeFileSync(
   join(OUT, "sitemap.xml"),

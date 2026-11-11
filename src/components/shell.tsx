@@ -39,7 +39,7 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
         <div className={`mx-auto flex w-full items-center gap-3 px-5 py-3 ${wide ? "max-w-6xl" : "max-w-3xl"}`}>
           <Link to="/" className="flex min-h-11 items-center gap-3">
             <span className="flex size-9 items-center justify-center bg-ink font-ar text-xl text-paper">ك</span>
-            <span className="font-ar text-lg leading-none">الكتب الستة</span>
+            <span className="font-ar text-lg leading-none">مكتبة الحديث</span>
           </Link>
           <div className="ms-auto flex items-center gap-2">
             <form onSubmit={onSearch} className="hidden w-full max-w-sm items-center gap-2 sm:flex" role="search">
@@ -97,6 +97,10 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
             <a href="https://muhadisonline.github.io/sahih-bukhari/tirmidhi/">الترمذي</a>
             <a href="https://muhadisonline.github.io/sahih-bukhari/nasai/">النسائي</a>
             <a href="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/">ابن ماجه</a>
+            <a href="https://muhadisonline.github.io/sahih-bukhari/malik/">الموطأ</a>
+            <a href="https://muhadisonline.github.io/sahih-bukhari/darimi/">الدارمي</a>
+            <a href="https://muhadisonline.github.io/sahih-bukhari/adab/">الأدب المفرد</a>
+            <a href="https://muhadisonline.github.io/sahih-bukhari/riyad/">رياض الصالحين</a>
           </nav>
           <p className="mt-1">المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
         </div>
