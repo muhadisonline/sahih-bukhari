@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Shell } from "@/components/shell";
+import { arDigits } from "@/lib/digits";
 import { getKitab } from "@/lib/hadith-api";
 
 export const Route = createFileRoute("/buxari/kitab/$id")({
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/buxari/kitab/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: loaderData?.seoTitle ?? "Kitab — Səhih əl-Buxari" },
+      { title: loaderData?.seoTitle ?? "كتاب — صحيح البخاري" },
       { name: "description", content: loaderData?.seoDesc ?? "" },
     ],
     links: loaderData ? [{ rel: "canonical", href: loaderData.path }] : [],
@@ -24,9 +25,9 @@ export const Route = createFileRoute("/buxari/kitab/$id")({
 function MissingKitab() {
   return (
     <Shell>
-      <h1 className="text-2xl font-semibold">Kitab tapılmadı</h1>
+      <h1 className="font-ar text-3xl">الكتاب غير موجود</h1>
       <Link to="/" className="mt-6 inline-flex h-11 items-center text-accent">
-        Siyahıya qayıt
+        العودة إلى الكتب
       </Link>
     </Shell>
   );
@@ -37,22 +38,18 @@ function KitabView() {
   return (
     <Shell>
       <nav className="text-sm text-muted">
-        <Link to="/" className="text-accent">
-          Səhih əl-Buxari
+        <Link to="/" className="font-ar text-lg text-accent">
+          صحيح البخاري
         </Link>
       </nav>
-      <h1 className="mt-4 font-ar text-3xl leading-relaxed" lang="ar" dir="rtl">
-        {data.title}
-      </h1>
+      <h1 className="mt-4 font-ar text-3xl leading-relaxed">{data.title}</h1>
       <p className="mt-2 text-sm text-muted">
-        {data.count} hədis · {data.first}–{data.last}
+        {arDigits(data.count)} حديثًا · {arDigits(data.first)}–{arDigits(data.last)}
       </p>
-      <div className="mt-8 flex flex-col gap-8">
+      <div className="mt-10 flex flex-col gap-10">
         {data.babs.map((bab) => (
           <section key={`${bab.first}-${bab.title}`}>
-            <h2 className="font-ar text-xl leading-relaxed" lang="ar" dir="rtl">
-              {bab.title}
-            </h2>
+            <h2 className="font-ar text-xl leading-relaxed">{bab.title}</h2>
             <ul className="mt-3 flex flex-wrap gap-1">
               {bab.nums.map((n) => (
                 <li key={n}>
@@ -61,7 +58,7 @@ function KitabView() {
                     params={{ no: String(n) }}
                     className="inline-flex h-11 min-w-11 items-center justify-center px-2 text-ink hover:text-accent"
                   >
-                    {n}
+                    {arDigits(n)}
                   </Link>
                 </li>
               ))}

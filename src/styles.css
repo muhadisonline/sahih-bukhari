@@ -7,7 +7,7 @@
   --color-line: #e4dfd6;
   --color-accent: #0f6b4c;
   --color-accent-soft: #e7f3ed;
-  --font-sans: "Literata", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans Arabic", "Noto Naskh Arabic", sans-serif;
   --font-ar: "Amiri", "Noto Naskh Arabic", serif;
 }
 
@@ -40,14 +40,14 @@
 
 .hadith-body {
   font-family: var(--font-ar);
-  font-size: 1.65rem;
-  line-height: 2.2;
-  text-align: right;
+  font-size: 1.7rem;
+  line-height: 2.25;
+  text-align: start;
 }
 
 @media (max-width: 640px) {
   .hadith-body {
-    font-size: 1.4rem;
-    line-height: 2.15;
+    font-size: 1.45rem;
+    line-height: 2.2;
   }
 }

@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Səhih əl-Buxari";
+const APP_NAME = "صحيح البخاري";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -11,7 +11,11 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Səhih əl-Buxari — صحيح البخاري. Hər hədisin ayrıca səhifəsi. Fuad Əbdülbaqi nömrələməsi." },
+      {
+        name: "description",
+        content:
+          "صحيح البخاري للإمام محمد بن إسماعيل البخاري. ستة وتسعون كتابًا وسبعة آلاف وثلاثمئة وتسعة وأربعون حديثًا، كل حديث في صفحة مستقلة. ترقيم محمد فؤاد عبد الباقي.",
+      },
       { name: "theme-color", content: "#fbfbf9" },
     ],
     links: [
@@ -21,14 +25,14 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap",
       },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
   }),
   component: () => (
-    <html lang="az" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

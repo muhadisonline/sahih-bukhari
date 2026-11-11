@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useState } from "react";
 import { Shell } from "@/components/shell";
 import { getHadith } from "@/lib/hadith-api";
 import type { HadithPage } from "@/lib/hadith-types";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/buxari/$no")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: loaderData?.seoTitle ?? "Səhih əl-Buxari" },
+      { title: loaderData?.seoTitle ?? "صحيح البخاري" },
       { name: "description", content: loaderData?.seoDesc ?? "" },
       { name: "robots", content: "index, follow" },
     ],
@@ -26,12 +27,12 @@ export const Route = createFileRoute("/buxari/$no")({
 function MissingHadith() {
   return (
     <Shell>
-      <h1 className="text-2xl font-semibold">Bu nömrə yoxdur</h1>
-      <p className="mt-3 max-w-md leading-relaxed text-muted">
-        Fuad Əbdülbaqi nömrələməsində bəzi rəqəmlər boşdur. Kitab siyahısından davam edin.
+      <h1 className="font-ar text-3xl">هذا الرقم غير موجود</h1>
+      <p className="mt-3 max-w-md leading-loose text-muted">
+        في ترقيم محمد فؤاد عبد الباقي تُركت بعض الأرقام فارغة. عُد إلى الكتب وتابع منها.
       </p>
       <Link to="/" className="mt-6 inline-flex h-11 items-center text-accent">
-        Kitablara qayıt
+        العودة إلى الكتب
       </Link>
     </Shell>
   );
@@ -39,6 +40,7 @@ function MissingHadith() {
 
 function HadithView() {
   const data = Route.useLoaderData();
+  const [copied, setCopied] = useState(false);
   const babInFront = data.f.some((item) => item.kind === "bab");
   const ld = {
     "@context": "https://schema.org",
@@ -68,9 +70,9 @@ function HadithView() {
     <Shell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs).replace(/</g, "\\u003c") }} />
-      <nav className="flex flex-wrap items-baseline gap-2 text-sm text-muted" aria-label="Yol">
-        <Link to="/" className="text-accent">
-          Səhih əl-Buxari
+      <nav className="flex flex-wrap items-baseline gap-2 text-sm text-muted" aria-label="المسار">
+        <Link to="/" className="font-ar text-lg text-accent">
+          صحيح البخاري
         </Link>
         <span aria-hidden="true">/</span>
         <Link to="/buxari/kitab/$id" params={{ id: String(data.ki) }} className="font-ar text-lg text-accent">
@@ -78,7 +80,7 @@ function HadithView() {
         </Link>
       </nav>
 
-      <article className="mt-8" lang="ar" dir="rtl">
+      <article className="mt-8">
         {data.f.map((item, i) => {
           if (item.kind === "basmala") {
             return (
@@ -91,9 +93,7 @@ function HadithView() {
           if (item.kind === "bab") {
             return (
               <h1 key={i} className="mt-6 font-ar text-2xl leading-relaxed">
-                <span className="mb-3 block font-sans text-sm text-accent" dir="rtl">
-                  الحديث {data.ar}
-                </span>
+                <span className="mb-3 block text-sm text-accent">الحديث {data.ar}</span>
                 {item.text}
               </h1>
             );
@@ -106,24 +106,24 @@ function HadithView() {
         })}
         {!babInFront && (
           <h1 className="mt-6 font-ar text-2xl leading-relaxed">
-            <span className="mb-3 block font-sans text-sm text-accent">الحديث {data.ar}</span>
+            <span className="mb-3 block text-sm text-accent">الحديث {data.ar}</span>
             {data.b}
           </h1>
         )}
         <p className="hadith-body mt-8 whitespace-pre-wrap">{data.t}</p>
-        {(data.g || data.bg) && (
-          <p className="mt-6 text-left font-sans text-sm text-muted" dir="ltr">
-            {data.g}
-            {data.bg ? ` · əl-Buğa: ${data.bg}` : ""}
-            {data.s ? ` · ${data.s}` : ""}
+        {(data.g || data.bg || data.s) && (
+          <p className="mt-8 border-t border-line pt-4 text-sm leading-loose text-muted">
+            {data.bg ? <span>ترقيم البغا {data.bg}</span> : null}
+            {data.g ? <span>{data.bg ? " · " : ""}{data.g}</span> : null}
+            {data.s ? <span className="mt-1 block">{data.s}</span> : null}
           </p>
         )}
       </article>
 
-      <nav className="mt-10 flex items-center justify-between gap-3 border-t border-line pt-6" aria-label="Qonşu hədislər">
+      <nav className="mt-10 flex items-center justify-between gap-3 border-t border-line pt-6" aria-label="الأحاديث المجاورة">
         {data.prev ? (
           <Link to="/buxari/$no" params={{ no: String(data.prev) }} className="inline-flex h-11 items-center text-accent">
-            ← {data.prev}
+            السابق
           </Link>
         ) : (
           <span />
@@ -132,14 +132,17 @@ function HadithView() {
           type="button"
           className="inline-flex h-11 items-center border border-line px-4 text-sm"
           onClick={() => {
-            void navigator.clipboard?.writeText(data.t);
+            void navigator.clipboard?.writeText(data.t).then(() => {
+              setCopied(true);
+              window.setTimeout(() => setCopied(false), 1600);
+            });
           }}
         >
-          Mətni kopyala
+          {copied ? "تم النسخ" : "انسخ المتن"}
         </button>
         {data.next ? (
           <Link to="/buxari/$no" params={{ no: String(data.next) }} className="inline-flex h-11 items-center text-accent">
-            {data.next} →
+            التالي
           </Link>
         ) : (
           <span />

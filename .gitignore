@@ -4,6 +4,7 @@ node_modules/
 .grok/
 artifacts/
 screenshots/
+site-dist/
 *.log
 .env
 .env.*

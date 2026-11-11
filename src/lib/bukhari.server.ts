@@ -65,10 +65,7 @@ async function loadShard(id: number) {
 function pageOf(h: Stored, prev: number | null, next: number | null): HadithPage {
   const quote = quoteOf(h.t);
   const seoTitle = `الحديث ${h.ar} — ${quote} | صحيح البخاري`;
-  const seoDesc = clip(
-    `الحديث ${h.ar} من صحيح البخاري، ${h.k}، ${h.b}. ${h.t} Səhih əl-Buxari, hədis ${h.no}.`,
-    240,
-  );
+  const seoDesc = clip(`الحديث ${h.ar} من صحيح البخاري، ${h.k}، ${h.b}. ${h.t}`, 240);
   return {
     no: h.no,
     ar: h.ar,
@@ -107,11 +104,8 @@ export async function loadKitab(raw: number): Promise<KitabPage | null> {
   const k = mod.default;
   return {
     ...k,
-    seoTitle: `${k.title} — صحيح البخاري | Səhih əl-Buxari`,
-    seoDesc: clip(
-      `${k.title} — Səhih əl-Buxaridə ${k.count} hədis, nömrə ${k.first}–${k.last}. Hər hədisin ayrıca səhifəsi.`,
-      220,
-    ),
+    seoTitle: `${k.title} — صحيح البخاري`,
+    seoDesc: clip(`${k.title} من صحيح البخاري. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220),
     path: `/buxari/kitab/${k.i}`,
   };
 }

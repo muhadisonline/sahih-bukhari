@@ -1,11 +1,13 @@
-# Səhih əl-Buxari
+# صحيح البخاري
 
-صحيح البخاري — hər hədisin ayrıca səhifəsi.
+متن صحيح البخاري بالعربية. كل حديث في صفحة مستقلة.
 
-Mətn ərəbcədir (Sultaniyyə çapı, Fuad Əbdülbaqi nömrələməsi). 96 kitab, 7349 hədis.
+٩٦ كتابًا، ٧٣٤٩ حديثًا. الطبعة السلطانية، ترقيم محمد فؤاد عبد الباقي.
 
-- `/` kitab siyahısı
-- `/buxari/1` hədis səhifəsi
-- `/buxari/kitab/1` kitab
-- `/axtar` nömrə və ya ərəbcə axtarış
-- `/sitemap.xml` sayt xəritəsi
+- `/` الكتب
+- `/buxari/1` الحديث
+- `/buxari/kitab/1` الكتاب
+- `/axtar` البحث
+- `/sitemap.xml` خريطة الموقع
+
+الموقع المنشور: https://muhadisonline.github.io/sahih-bukhari/
