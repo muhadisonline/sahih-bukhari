@@ -18,6 +18,14 @@ export type HadithPage = {
   path: string;
 };
 
+export type KitabBab = {
+  title: string;
+  first: number;
+  last: number;
+  nums: number[];
+  items: { no: number; ar: string; title: string }[];
+};
+
 export type KitabPage = {
   i: number;
   title: string;
@@ -25,7 +33,7 @@ export type KitabPage = {
   first: number;
   last: number;
   count: number;
-  babs: { title: string; first: number; last: number; nums: number[] }[];
+  babs: KitabBab[];
   seoTitle: string;
   seoDesc: string;
   path: string;

@@ -19,6 +19,10 @@ const kitabPages = new Map();
 for (const k of kitabs) {
   kitabPages.set(k.i, JSON.parse(read(join(ROOT, `src/data/bukhari/kitab/${k.i}.json`))));
 }
+const byNo = new Map();
+for (const shard of shards) {
+  for (const h of Object.values(shard)) byNo.set(h.no, h);
+}
 
 function read(path) {
   return readFileSync(path, "utf8");
@@ -47,6 +51,21 @@ function clip(s, n) {
   if (t.length <= n) return t;
   return t.slice(0, n - 1).replace(/\s+\S*$/, "") + "…";
 }
+function shortTitle(text) {
+  const i = text.indexOf("«");
+  const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
+  let raw = i >= 0 && j > i ? text.slice(i + 1, j) : text;
+  raw = raw
+    .replace(/صلى الله عليه وسلم/g, "")
+    .replace(/رضي الله عنها/g, "")
+    .replace(/رضي الله عنهما/g, "")
+    .replace(/رضي الله عنهم/g, "")
+    .replace(/رضي الله عنهن/g, "")
+    .replace(/رضي الله عنه/g, "")
+    .replace(/عليه السلام/g, "");
+  return clip(raw, 52);
+}
+
 function quoteOf(text) {
   const i = text.indexOf("«");
   const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
@@ -106,13 +125,10 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
 .section{margin-top:0}
-.babs{list-style:none;padding:0;margin:1.4rem 0 0}
-.babs li{border-bottom:1px solid var(--line);padding-block:.85rem}
-.babs h2{font-family:Amiri,serif;font-weight:400;font-size:1.08rem;line-height:1.65;margin:0}
-.num-block{margin-top:3.2rem;border-top:1px solid var(--line);padding-top:1.6rem}
-.num-block > h2{margin:0;font-size:.875rem;font-weight:500;color:var(--muted)}
-.num-group{margin-top:1.35rem}
-.num-group h3{margin:0 0 .2rem;font-family:Amiri,serif;font-weight:400;font-size:1rem;line-height:1.7;color:var(--muted)}
+.entry{display:flex;gap:.75rem;align-items:baseline;min-height:2.85rem;padding-block:.4rem;border-bottom:1px solid var(--line)}
+.entry .n{width:2.5rem;flex:none;color:var(--accent);font-size:.85rem}
+.entry .ttl{font-family:Amiri,serif;font-size:1.05rem;line-height:1.6}
+.bab-label{margin:1.5rem 0 .15rem;color:var(--muted);font-family:Amiri,serif;font-size:.92rem;line-height:1.6;font-weight:400}
 .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .nums a{min-height:2.75rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
 .nums a:hover{color:var(--accent)}
@@ -341,21 +357,21 @@ for (const k of kitabs) {
   const title = `${k.title} — صحيح البخاري`;
   const desc = clip(`${k.title} من صحيح البخاري. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
   const body = `<nav class="crumbs"><a href="${href("/")}">صحيح البخاري</a></nav>
-<h1 class="title" style="font-size:2rem">${esc(page.title)}</h1>
-<p class="meta">${ar(page.count)} حديثًا · ${ar(page.first)}–${ar(page.last)}</p>
-<ol class="babs">
-${page.babs.map((bab) => `<li><h2>${esc(bab.title)}</h2><p class="meta">${ar(bab.first)}–${ar(bab.last)}</p></li>`).join("\n")}
-</ol>
-<section class="num-block">
-  <h2>أرقام الأحاديث</h2>
+<h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
+<p class="meta">${ar(page.count)} حديثًا</p>
 ${page.babs
-  .map(
-    (bab) => `<div class="num-group"><h3>${esc(bab.title)}</h3><div class="nums">${bab.nums
-      .map((n) => `<a href="${href(`/buxari/${n}/`)}">${ar(n)}</a>`)
-      .join("")}</div></div>`,
-  )
-  .join("\n")}
-</section>`;
+  .map((bab) => {
+    const rows = bab.nums
+      .map((n) => {
+        const h = byNo.get(n);
+        const label = h ? shortTitle(h.t) : "";
+        const num = h && h.ar ? h.ar : ar(n);
+        return `<a class="entry" href="${href(`/buxari/${n}/`)}"><span class="n">${esc(num)}</span><span class="ttl">${esc(label)}</span></a>`;
+      })
+      .join("");
+    return `<h2 class="bab-label">${esc(clip(bab.title, 80))}</h2>${rows}`;
+  })
+  .join("\n")}`;
   put(`buxari/kitab/${k.i}/index.html`, shell({ title, desc, path: `/buxari/kitab/${k.i}/`, body }));
 }
 

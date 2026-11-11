@@ -42,43 +42,29 @@ function KitabView() {
           صحيح البخاري
         </Link>
       </nav>
-      <h1 className="mt-4 font-ar text-3xl leading-relaxed">{data.title}</h1>
-      <p className="mt-2 text-sm text-muted">
-        {arDigits(data.count)} حديثًا · {arDigits(data.first)}–{arDigits(data.last)}
-      </p>
-      <ol className="mt-8">
+      <h1 className="mt-4 font-ar text-3xl leading-snug">{data.title}</h1>
+      <p className="mt-2 text-sm text-muted">{arDigits(data.count)} حديثًا</p>
+      <div className="mt-6">
         {data.babs.map((bab) => (
-          <li key={`${bab.first}-${bab.title}`} className="border-b border-line py-3">
-            <h2 className="font-ar text-xl leading-relaxed">{bab.title}</h2>
-            <p className="text-sm text-muted">
-              {arDigits(bab.first)}–{arDigits(bab.last)}
-            </p>
-          </li>
+          <section key={`${bab.first}-${bab.title}`} className="mt-6">
+            <h2 className="font-ar text-sm leading-relaxed text-muted">{bab.title}</h2>
+            <ul className="mt-1">
+              {bab.items.map((item) => (
+                <li key={item.no} className="border-b border-line">
+                  <Link
+                    to="/buxari/$no"
+                    params={{ no: String(item.no) }}
+                    className="flex min-h-12 items-baseline gap-3 py-2"
+                  >
+                    <span className="w-10 shrink-0 text-sm text-accent">{item.ar}</span>
+                    <span className="font-ar text-base leading-relaxed">{item.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ol>
-      <section className="mt-14 border-t border-line pt-8">
-        <h2 className="text-sm text-muted">أرقام الأحاديث</h2>
-        <div className="mt-6 flex flex-col gap-6">
-          {data.babs.map((bab) => (
-            <div key={`n-${bab.first}-${bab.title}`}>
-              <h3 className="font-ar text-base leading-relaxed text-muted">{bab.title}</h3>
-              <ul className="mt-1 grid grid-cols-4 sm:grid-cols-8">
-                {bab.nums.map((n) => (
-                  <li key={n}>
-                    <Link
-                      to="/buxari/$no"
-                      params={{ no: String(n) }}
-                      className="flex h-11 items-center justify-center text-sm text-ink hover:text-accent"
-                    >
-                      {arDigits(n)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
     </Shell>
   );
 }

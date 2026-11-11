@@ -45,6 +45,21 @@ function clip(s: string, n: number) {
   return t.slice(0, n - 1).replace(/\s+\S*$/, "") + "…";
 }
 
+function shortTitle(text: string) {
+  const i = text.indexOf("«");
+  const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
+  let raw = i >= 0 && j > i ? text.slice(i + 1, j) : text;
+  raw = raw
+    .replace(/صلى الله عليه وسلم/g, "")
+    .replace(/رضي الله عنها/g, "")
+    .replace(/رضي الله عنهما/g, "")
+    .replace(/رضي الله عنهم/g, "")
+    .replace(/رضي الله عنهن/g, "")
+    .replace(/رضي الله عنه/g, "")
+    .replace(/عليه السلام/g, "");
+  return clip(raw, 52);
+}
+
 function quoteOf(text: string) {
   const i = text.indexOf("«");
   const j = i >= 0 ? text.indexOf("»", i + 1) : -1;
@@ -100,10 +115,27 @@ export async function loadKitab(raw: number): Promise<KitabPage | null> {
   const id = Number(raw);
   const loader = kitabLoaders[id];
   if (!loader) return null;
-  const mod = (await loader()) as { default: Omit<KitabPage, "seoTitle" | "seoDesc" | "path"> };
+  const mod = (await loader()) as {
+    default: Omit<KitabPage, "seoTitle" | "seoDesc" | "path" | "babs"> & {
+      babs: { title: string; first: number; last: number; nums: number[] }[];
+    };
+  };
   const k = mod.default;
+  const shardIds = new Set<number>();
+  for (const bab of k.babs) {
+    for (const no of bab.nums) shardIds.add(Math.floor((no - 1) / 300));
+  }
+  await Promise.all([...shardIds].map((id) => loadShard(id)));
+  const babs = k.babs.map((bab) => ({
+    ...bab,
+    items: bab.nums.map((no) => {
+      const h = shardCache.get(Math.floor((no - 1) / 300))?.[String(no)];
+      return { no, ar: h?.ar ?? String(no), title: h ? shortTitle(h.t) : "" };
+    }),
+  }));
   return {
     ...k,
+    babs,
     seoTitle: `${k.title} — صحيح البخاري`,
     seoDesc: clip(`${k.title} من صحيح البخاري. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220),
     path: `/buxari/kitab/${k.i}`,
