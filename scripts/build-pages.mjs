@@ -68,13 +68,7 @@ header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);back
 .brand{display:flex;align-items:center;gap:.75rem}
 .mark{width:2.25rem;height:2.25rem;display:grid;place-items:center;background:var(--accent);color:var(--paper);font-family:Amiri,serif;font-size:1.25rem}
 .brand-name{font-family:Amiri,serif;font-size:1.35rem}
-.search{display:flex;gap:.5rem;width:min(22rem,100%)}
-.tools{margin-inline-start:auto;display:flex;align-items:center;gap:.5rem}
-.icon-btn{width:2.75rem;height:2.75rem;flex:none;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.8rem}
-.icon-btn[aria-expanded="true"]{background:var(--accent);color:var(--paper);border-color:var(--accent)}
-.no-panel{display:none;border-top:1px solid var(--line)}
-.no-panel.open{display:block}
-.no-row{display:flex;gap:.5rem;align-items:center;padding-block:.75rem}
+.search{margin-inline-start:auto;display:flex;gap:.5rem;width:min(22rem,100%)}
 input{height:2.75rem;width:100%;border:1px solid var(--line);background:var(--paper);padding-inline:.75rem}
 .btn{height:2.75rem;display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--paper);border:0;padding-inline:1rem;white-space:nowrap}
 .ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
@@ -160,7 +154,7 @@ function shell({ title, desc, path, body, extra = "" }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=4">
 </head>
 <body>
 <header>
@@ -169,22 +163,12 @@ function shell({ title, desc, path, body, extra = "" }) {
       <span class="mark">ب</span>
       <span class="brand-name">صحيح البخاري</span>
     </a>
-    <div class="tools">
     <form class="search" action="${href("/axtar/")}" method="get" role="search">
       <label class="sr" for="q">بحث في الأحاديث</label>
       <input id="q" name="q" placeholder="رقم الحديث أو كلمة">
       <button class="btn" type="submit">بحث</button>
     </form>
     <a class="mobile-search" href="${href("/axtar/")}">بحث</a>
-    <button class="icon-btn" type="button" id="no-toggle" aria-expanded="false" aria-controls="no-panel" aria-label="رقم الحديث">١٢٣</button>
-    </div>
-  </div>
-  <div class="no-panel" id="no-panel">
-    <form class="wrap no-row" id="no-form">
-      <label class="sr" for="no">رقم الحديث</label>
-      <input id="no" name="no" inputmode="numeric" placeholder="رقم الحديث">
-      <button class="btn" type="submit">افتح</button>
-    </form>
   </div>
 </header>
 <main class="wrap">
@@ -193,21 +177,6 @@ ${body}
 <footer>
   <p class="wrap">الطبعة السلطانية (بولاق، ١٣١١ هـ)، دار طوق النجاة. الترقيم ترقيم محمد فؤاد عبد الباقي. المتن بالعربية كما هو.</p>
 </footer>
-<script>
-document.getElementById("no-toggle").addEventListener("click", function () {
-  var panel = document.getElementById("no-panel");
-  var open = panel.classList.toggle("open");
-  this.setAttribute("aria-expanded", open ? "true" : "false");
-  if (open) document.getElementById("no").focus();
-});
-document.getElementById("no-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var raw = new FormData(e.currentTarget).get("no") || "";
-  var map = "٠١٢٣٤٥٦٧٨٩";
-  var n = String(raw).trim().replace(/[٠-٩]/g, function (d) { return map.indexOf(d); }).replace(/[۰-۹]/g, function (d) { return "۰۱۲۳۴۵۶۷۸۹".indexOf(d); });
-  if (/^\\d+$/.test(n) && Number(n) > 0) location.href = ${JSON.stringify(href("/buxari/"))} + n + "/";
-});
-</script>
 ${extra}
 </body>
 </html>
