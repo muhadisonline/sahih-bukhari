@@ -10,6 +10,8 @@ const BOOKS = [
   { href: "https://muhadisonline.github.io/sahih-bukhari/ibnmajah/", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه", n: 4340 },
 ] as const;
 
+const NUM = ["٠١", "٠٢", "٠٣", "٠٤", "٠٥", "٠٦"];
+
 function Card({
   name,
   author,
@@ -23,10 +25,12 @@ function Card({
 }) {
   return (
     <>
-      <span className="font-ar text-lg text-gold">{arDigits(i)}</span>
-      <span className="mt-1 font-ar text-3xl leading-snug">{name}</span>
-      <span className="text-sm text-muted">{author}</span>
-      <span className="mt-auto w-full border-t border-line pt-3 text-sm text-accent">{arDigits(n)} حديثًا</span>
+      <span className="pointer-events-none absolute end-3 top-0 font-ar text-7xl leading-none text-ink/10 transition group-hover:text-paper/10">
+        {NUM[i]}
+      </span>
+      <span className="relative mt-auto font-ar text-3xl leading-snug">{name}</span>
+      <span className="relative text-sm text-muted group-hover:text-paper/70">{author}</span>
+      <span className="relative mt-4 text-sm group-hover:text-paper/70">{arDigits(n)} حديثًا</span>
     </>
   );
 }
@@ -45,44 +49,33 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <Shell wide>
-      <header className="text-center">
-        <p className="text-xs tracking-[0.22em] text-gold">مكتبة الحديث الشريف</p>
-        <p className="mt-3 font-ar text-3xl">بسم الله الرحمن الرحيم</p>
-        <h1 className="mt-1 font-ar text-6xl leading-tight">الكتب الستة</h1>
-        <div className="mx-auto mt-4 size-2 rotate-45 bg-gold" />
-        <p className="mt-4 flex justify-center gap-6 text-sm text-muted">
-          <span>٦ كتب</span>
-          <span>٣٠٬٠٥١ حديثًا</span>
-          <span>المتن العربي</span>
-        </p>
-        <form action="/axtar" className="mx-auto mt-6 flex w-full max-w-xl gap-2 border border-[#c6a15a] bg-white p-1.5 shadow-lg" role="search">
+      <section className="pt-4">
+        <p className="text-sm text-muted">مكتبة الحديث</p>
+        <h1 className="mt-2 font-ar text-7xl leading-none sm:text-8xl">الكتب الستة</h1>
+        <p className="mt-4 max-w-md text-muted">ثلاثون ألف حديث. كل واحد في صفحة، بالمتن العربي.</p>
+        <form action="/axtar" className="mt-6 flex w-full max-w-lg items-center border-b border-ink" role="search">
           <label className="sr-only" htmlFor="hq">
             بحث في الأحاديث
           </label>
-          <input
-            id="hq"
-            name="q"
-            placeholder="رقم الحديث أو كلمة من المتن"
-            className="h-11 w-full border-0 bg-transparent px-3 text-sm"
-          />
-          <button type="submit" className="h-11 shrink-0 bg-accent px-4 text-sm text-[#f6f1e7]">
+          <input id="hq" name="q" placeholder="رقم الحديث أو كلمة من المتن" className="h-12 w-full border-0 bg-transparent text-sm" />
+          <button type="submit" className="h-12 shrink-0 bg-transparent px-1 text-sm">
             بحث
           </button>
         </form>
-      </header>
-      <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      </section>
+      <ol className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {BOOKS.map((b, i) => {
           const cls =
-            "flex min-h-44 flex-col border border-[#c6a15a] bg-[#fffdf8] p-6 shadow-[inset_0_0_0_5px_#fffdf8,inset_0_0_0_6px_rgba(198,161,90,.55)] transition hover:-translate-y-0.5";
+            "group relative flex min-h-64 flex-col overflow-hidden border border-ink/10 bg-white p-5 transition hover:bg-ink hover:text-paper";
           return (
             <li key={b.name}>
               {"to" in b ? (
                 <Link to={b.to} className={cls}>
-                  <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
+                  <Card name={b.name} author={b.author} n={b.n} i={i} />
                 </Link>
               ) : (
                 <a href={b.href} className={cls}>
-                  <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
+                  <Card name={b.name} author={b.author} n={b.n} i={i} />
                 </a>
               )}
             </li>

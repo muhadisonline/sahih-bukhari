@@ -35,10 +35,10 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-10 bg-[#0e3d2e] text-[#f6f1e7] shadow-[inset_0_3px_0_#c6a15a]">
+      <header className="sticky top-0 z-10 border-b border-line bg-paper/90 backdrop-blur-md">
         <div className={`mx-auto flex w-full items-center gap-3 px-5 py-3 ${wide ? "max-w-6xl" : "max-w-3xl"}`}>
           <Link to="/" className="flex min-h-11 items-center gap-3">
-            <span className="flex size-9 items-center justify-center border border-[#c6a15a] font-ar text-xl text-[#e8d7a8]">ك</span>
+            <span className="flex size-9 items-center justify-center bg-ink font-ar text-xl text-paper">ك</span>
             <span className="font-ar text-lg leading-none">الكتب الستة</span>
           </Link>
           <div className="ms-auto flex items-center gap-2">
@@ -50,13 +50,13 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
                 id="q-head"
                 name="q"
                 placeholder="رقم الحديث أو كلمة"
-                className="h-11 w-full border-0 bg-[#f7f1e6] px-3 text-sm text-ink placeholder:text-muted"
+                className="h-11 w-full border border-line bg-transparent px-3 text-sm text-ink placeholder:text-muted"
               />
-              <button type="submit" className="h-11 shrink-0 bg-[#c6a15a] px-4 text-sm text-[#1a1612]">
+              <button type="submit" className="h-11 shrink-0 bg-ink px-4 text-sm text-paper">
                 بحث
               </button>
             </form>
-            <Link to="/axtar" search={{ q: "" }} className="flex h-11 items-center text-sm text-[#e8d7a8] sm:hidden">
+            <Link to="/axtar" search={{ q: "" }} className="flex h-11 items-center text-sm text-ink sm:hidden">
               بحث
             </Link>
             <div className="relative">
@@ -65,7 +65,7 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
                 aria-label="حجم الخط"
                 aria-expanded={open}
                 onClick={() => setOpen((v) => !v)}
-                className="flex size-11 items-center justify-center border border-[#c6a15a]/50 text-[#f6f1e7]"
+                className="flex size-11 items-center justify-center border border-line text-ink"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
                   <circle cx="12" cy="12" r="3" />
@@ -88,7 +88,7 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
         </div>
       </header>
       <main className={`mx-auto w-full flex-1 px-5 py-8 ${wide ? "max-w-6xl" : "max-w-3xl"}`}>{children}</main>
-      <footer className="border-t-[3px] border-[#c6a15a] bg-[#0e3d2e] text-[#efe7d6]">
+      <footer className="border-t border-line text-muted">
         <div className={`mx-auto px-5 py-6 text-sm leading-relaxed ${wide ? "max-w-6xl" : "max-w-3xl"}`}>
           <nav className="flex flex-wrap gap-x-5">
             <Link to="/buxari">البخاري</Link>
@@ -98,7 +98,7 @@ export function Shell({ children, wide = false }: { children: ReactNode; wide?: 
             <a href="https://muhadisonline.github.io/sahih-bukhari/nasai/">النسائي</a>
             <a href="https://muhadisonline.github.io/sahih-bukhari/ibnmajah/">ابن ماجه</a>
           </nav>
-          <p className="mt-1 text-[#cbbfa8]">المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
+          <p className="mt-1">المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
         </div>
       </footer>
     </div>
