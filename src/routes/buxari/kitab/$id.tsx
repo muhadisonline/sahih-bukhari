@@ -47,7 +47,7 @@ function KitabView() {
       <div className="mt-6">
         {data.babs.map((bab) => (
           <section key={`${bab.first}-${bab.title}`} className="mt-6">
-            <h2 className="font-ar text-sm leading-relaxed text-muted">{bab.title}</h2>
+            <h2 className="mt-8 text-center font-ar text-lg leading-relaxed text-accent">{bab.title}</h2>
             <ul className="mt-1">
               {bab.items.map((item) => (
                 <li key={item.no} className="border-b border-line">

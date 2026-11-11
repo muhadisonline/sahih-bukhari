@@ -128,7 +128,7 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
 .entry{display:flex;gap:.75rem;align-items:baseline;min-height:2.85rem;padding-block:.4rem;border-bottom:1px solid var(--line)}
 .entry .n{width:2.5rem;flex:none;color:var(--accent);font-size:.85rem}
 .entry .ttl{font-family:Amiri,serif;font-size:1.05rem;line-height:1.6}
-.bab-label{margin:1.5rem 0 .15rem;color:var(--muted);font-family:Amiri,serif;font-size:.92rem;line-height:1.6;font-weight:400}
+.bab-label{margin:1.75rem 0 .35rem;color:var(--accent);font-family:Amiri,serif;font-size:1.15rem;line-height:1.7;font-weight:400;text-align:center}
 .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .nums a{min-height:2.75rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
 .nums a:hover{color:var(--accent)}
@@ -176,7 +176,7 @@ function shell({ title, desc, path, body, extra = "" }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=5">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=6">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
