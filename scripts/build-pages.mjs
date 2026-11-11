@@ -42,7 +42,8 @@ function read(path) {
   return readFileSync(path, "utf8");
 }
 
-rmSync(OUT, { recursive: true, force: true });
+const HOME_ONLY = process.argv.includes("--home");
+if (!HOME_ONLY) rmSync(OUT, { recursive: true, force: true });
 mkdirSync(join(OUT, "assets"), { recursive: true });
 
 const AR = "٠١٢٣٤٥٦٧٨٩";
@@ -219,6 +220,63 @@ ol.books a:hover .name{color:var(--accent)}
 }
 @media(min-width:900px){
   .library{grid-template-columns:1fr 1fr 1fr}
+}
+body.home{background:#f3eee6;color:#1c3f32}
+body.home header{position:static;background:transparent;border:0;backdrop-filter:none;color:inherit}
+body.home main{padding:0}
+body.home footer{border:0;background:#143528;color:#f4efe6;padding:0}
+body.home .gear{width:2.45rem;height:2.45rem;border-color:transparent;color:#f4efe6}
+body.home .set-panel{color:#161513}
+.mh{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='%231c4536' stroke-opacity='.08' stroke-width='.7'><path d='M80 22l8 50 50 8-50 8-8 50-8-50-50-8 50-8z'/></g></svg>");background-size:180px 180px}
+.mh-nav{width:min(68rem,calc(100% - 1.25rem));margin:.85rem auto 0;min-height:3.8rem;padding:.55rem .7rem;display:flex;align-items:center;gap:.25rem;background:#1c4536;color:#f6f1e7;border-radius:999px}
+.mh-logo{font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:600;font-size:1.35rem;line-height:1;padding-inline:.75rem .3rem;color:#f6f1e7;flex:none;white-space:nowrap}
+.mh-links{display:flex;align-items:center;gap:.15rem;margin-inline-start:auto}
+.mh-links a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .55rem;color:#f6f1e7;font-size:.95rem;white-space:nowrap}
+.mh-pill{background:#f4efe6;color:#1c3f32 !important;border-radius:999px;padding:.48rem .9rem !important}
+.mh-hero{text-align:center;padding:2.6rem 1.1rem 0}
+.mh-hero h1{margin:0;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:600;font-size:clamp(3.2rem,8vw,5.2rem);line-height:1.15;color:#1a3d30;white-space:nowrap}
+.mh-sub{margin:.55rem 0 0;font-family:Amiri,serif;font-size:clamp(1.45rem,3vw,1.85rem);color:#1a3d30}
+.mh-rule{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:1rem auto 0;width:min(16rem,70%)}
+.mh-rule i{flex:1;height:1px;background:#cfc6b8}
+.mh-rule b{width:.42rem;height:.42rem;background:#1c4536;transform:rotate(45deg)}
+.mh-lead{margin:.95rem auto 0;max-width:36rem;color:#3d4a43;font-size:1.05rem;line-height:1.8}
+.mh-search{width:min(38rem,calc(100% - .5rem));margin:1.35rem auto 0;height:3.45rem;display:flex;align-items:center;gap:.55rem;padding-inline:.35rem 1.15rem;background:#fbf8f4;border:1px solid #efe8dc;border-radius:999px;box-shadow:0 10px 28px rgba(28,69,54,.06)}
+.mh-search span{display:grid;place-items:center;width:2.4rem;height:2.4rem;color:#1c4536;flex:none}
+.mh-search input{border:0;background:transparent;height:100%;width:auto;flex:1;min-width:0;padding:0;color:#1c3f32}
+.mh-search input::placeholder{color:#9a9288}
+.mh-daily{display:block;width:min(38rem,calc(100% - .5rem));margin:1rem auto 0;padding:.95rem 1.2rem 1.05rem;background:#faf6f0;border:1px solid #e7e0d4;border-radius:1.15rem;text-align:center}
+.mh-daily .k{color:#1c4536;font-size:.82rem}
+.mh-daily p{margin:.35rem 0 0;font-family:Amiri,serif;font-size:1.28rem;line-height:1.85;color:#1a3d30}
+.mh-daily .m{display:block;margin-top:.35rem;color:#6e675f;font-size:.82rem}
+.mh-sec{width:min(68rem,calc(100% - 1.5rem));margin:2.6rem auto 0}
+.mh-h{display:flex;align-items:center;justify-content:center;gap:1rem;margin:0;font-family:Amiri,serif;font-weight:400;font-size:1.65rem;color:#1a3d30}
+.mh-h:before,.mh-h:after{content:"";height:1px;width:min(7.5rem,16vw);background:#d5cdc0}
+.mh-feats,.mh-cats,.mh-books{list-style:none;padding:0;margin:1.15rem 0 0;display:grid;gap:.8rem}
+.mh-feats{grid-template-columns:1fr 1fr}
+.mh-feats a,.mh-feats li,.mh-card{background:#faf7f2;border:1px solid #e8e1d6;border-radius:1.15rem;box-shadow:0 1px 0 rgba(28,63,50,.03)}
+.mh-feat{min-height:8.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;text-align:center;padding:1rem;color:#1c3f32}
+.mh-feat svg{color:#1c4536}
+.mh-feat span{font-size:.98rem}
+.mh-cats{grid-template-columns:1fr}
+.mh-cat{display:flex;align-items:center;gap:.75rem;min-height:4.15rem;padding:.75rem 1rem;color:#1c3f32}
+.mh-cat .chev{margin-inline-start:auto;color:#8a837a}
+.mh-cat:hover{border-color:#cfc6b6}
+.mh-books{grid-template-columns:1fr 1fr}
+.mh-book{min-height:7.4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;text-align:center;padding:.9rem .5rem;color:#1c3f32;font-family:Amiri,serif;font-size:1.2rem;line-height:1.45}
+.mh-book:hover{border-color:#1c4536}
+.mh-foot{padding:2.5rem 1rem 2.7rem;text-align:center}
+.mh-foot p{margin:.85rem 0 0;font-family:Amiri,serif;font-size:1.4rem;color:#f6f1e7}
+.mh-foot .mh-rule i{background:rgba(246,241,231,.55)}
+.mh-foot .mh-rule b{background:#f6f1e7}
+@media(max-width:760px){
+  .mh-links .lbl{display:none}
+  .mh-pill .lbl{display:inline}
+  .mh-links a{padding-inline:.4rem}
+}
+@media(min-width:760px){
+  .mh-feats{grid-template-columns:repeat(4,1fr)}
+  .mh-cats{grid-template-columns:repeat(3,1fr)}
+  .mh-books{grid-template-columns:repeat(5,1fr)}
 }`;
 
 writeFileSync(join(OUT, "assets/site.css"), css);
@@ -229,8 +287,38 @@ writeFileSync(join(OUT, ".nojekyll"), "");
 const font =
   "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap";
 
-function shell({ title, desc, path, body, extra = "", wide = false }) {
+function shell({ title, desc, path, body, extra = "", wide = false, home = false }) {
   const canonical = abs(path);
+  const svg = (d) =>
+    `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">${d}</svg>`;
+  const homeHead = `<header>
+  <div class="mh-nav">
+    <a class="mh-logo" href="${href("/")}">مُحَدِّث</a>
+    <nav class="mh-links" aria-label="التنقل">
+      <a href="${href("/axtar/")}" aria-label="بحث">${svg('<circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5"/>')}</a>
+      <a href="${href("/axtar/")}"><span class="lbl">المواضيع</span>${svg('<rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/>')}</a>
+      <a href="#kutub"><span class="lbl">كتب الحديث</span>${svg('<path d="M5 5.5h6.2A2.8 2.8 0 0 1 14 8.3V19a2.2 2.2 0 0 0-2.2-2.2H5z"/><path d="M19 5.5h-6.2A2.8 2.8 0 0 0 10 8.3V19a2.2 2.2 0 0 1 2.2-2.2H19z"/>')}</a>
+      <a href="${href("/axtar/")}"><span class="lbl">الأحاديث</span>${svg('<path d="M6 4.5h9.5A2.5 2.5 0 0 1 18 7v12.5H8.2A2.2 2.2 0 0 0 6 21.7z"/><path d="M6 4.5v17"/>')}</a>
+      <a class="mh-pill" href="${href("/")}"><span class="lbl">الرئيسية</span>${svg('<path d="M4 11.5 12 5l8 6.5"/><path d="M7 10.5V19h10v-8.5"/>')}</a>
+    </nav>
+    <div class="set">
+      <button class="gear" type="button" id="gear" aria-label="حجم الخط" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
+      </button>
+      <div class="set-panel" id="set-panel" style="display:none">
+        <span>حجم الخط</span>
+        <button type="button" id="size-down" aria-label="أصغر">−</button>
+        <button type="button" id="size-up" aria-label="أكبر">+</button>
+      </div>
+    </div>
+  </div>
+</header>`;
+  const homeFoot = `<footer>
+  <div class="mh-foot">
+    <div class="mh-rule" aria-hidden="true"><i></i><b></b><i></i></div>
+    <p>السنة النبوية .. نور يهدي إلى الحق</p>
+  </div>
+</footer>`;
   return `<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -244,16 +332,16 @@ function shell({ title, desc, path, body, extra = "", wide = false }) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:url" content="${esc(canonical)}">
-<meta name="theme-color" content="#f7f5f2">
+<meta name="theme-color" content="${home ? "#1c4536" : "#f7f5f2"}">
 <link rel="icon" href="${href("/favicon.svg")}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=11">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=${home ? 12 : 11}">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
-<body>
-<header>
+<body${home ? ' class="home"' : ""}>
+${home ? homeHead : `<header>
   <div class="wrap bar">
     <a class="brand" href="${href("/")}">
       <span class="mark">ك</span>
@@ -276,11 +364,11 @@ function shell({ title, desc, path, body, extra = "", wide = false }) {
       </div>
     </div>
   </div>
-</header>
-<main class="wrap${wide ? " wide" : ""}">
+</header>`}
+<main class="${home ? "mh" : `wrap${wide ? " wide" : ""}`}">
 ${body}
 </main>
-<footer>
+${home ? homeFoot : `<footer>
   <div class="wrap foot">
     <nav>
       <a href="${href("/buxari/")}">البخاري</a>
@@ -296,7 +384,7 @@ ${body}
     </nav>
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
-</footer>
+</footer>`}
 <script>
 (function () {
   var key = "bukhari-size";
@@ -338,21 +426,35 @@ function put(rel, html) {
 }
 
 const total = kitabs.reduce((n, k) => n + k.count, 0);
-const homeDesc = "مكتبة الحديث: الكتب الستة، وموطأ مالك، وسنن الدارمي، والأدب المفرد، ورياض الصالحين.";
+const homeDesc = "مُحَدِّث: موسوعة الحديث النبوي. الكتب الستة، وموطأ مالك، والدارمي، والأدب المفرد، ورياض الصالحين.";
+const bookIco = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5h6.2A2.8 2.8 0 0 1 14 7.8V19a2.2 2.2 0 0 0-2.2-2.2H5z"/><path d="M19 5h-6.2A2.8 2.8 0 0 0 10 7.8V19a2.2 2.2 0 0 1 2.2-2.2H19z"/></svg>`;
+const shieldIco = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3.5 19 6.2v5.4c0 4.2-2.8 7.2-7 8.9-4.2-1.7-7-4.7-7-8.9V6.2z"/><path d="m8.8 12 2.1 2.1 4.3-4.4"/></svg>`;
+const boltIco = `<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>`;
+const menuIco = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>`;
+const gridIco = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="4" y="4" width="6.2" height="6.2" rx="1"/><rect x="13.8" y="4" width="6.2" height="6.2" rx="1"/><rect x="4" y="13.8" width="6.2" height="6.2" rx="1"/><rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1"/></svg>`;
+const alertIco = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="M12 7.2v6" stroke="#f6f1e7" stroke-width="1.8"/><circle cx="12" cy="16.4" r="1" fill="#f6f1e7"/></svg>`;
+const peopleIco = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="8" r="2.3"/><circle cx="16" cy="9" r="1.8"/><path d="M4.5 18.2c.4-2.6 2.4-4 4.6-4s4.2 1.4 4.6 4z"/><path d="M13.2 14.4c1.6-.2 3.4.7 4 3.4"/></svg>`;
+const chev = `<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>`;
+const homeBooks = [
+  ["/buxari/", "صحيح البخاري"],
+  ["/muslim/", "صحيح مسلم"],
+  ["/abudawud/", "سنن أبي داود"],
+  ["/tirmidhi/", "جامع الترمذي"],
+  ["/nasai/", "سنن النسائي"],
+  ["/ibnmajah/", "سنن ابن ماجه"],
+  ["/malik/", "موطأ مالك"],
+  ["/darimi/", "سنن الدارمي"],
+  ["/adab/", "الأدب المفرد"],
+  ["/riyad/", "رياض الصالحين"],
+];
 put(
   "index.html",
   shell({
-    title: "مكتبة الحديث",
+    title: "مُحَدِّث — موسوعة الحديث النبوي",
     desc: homeDesc,
     path: "/",
-    wide: true,
-    extra: `<style>
-.daily{display:block;margin-top:2.2rem;padding:1.4rem 1.5rem 1.25rem;background:#161513;color:#f7f5f2}
-.daily .eyebrow{color:rgba(247,245,242,.62)}
-.daily-text{font-family:Amiri,serif;font-size:1.5rem;line-height:1.9;margin:.7rem 0 0}
-.daily-meta{display:block;margin-top:1rem;font-size:.82rem;color:rgba(247,245,242,.62)}
-</style>
-<script>
+    home: true,
+    extra: `<script>
 (function(){
   var AR="٠١٢٣٤٥٦٧٨٩";
   function ar(n){return String(n).replace(/\\d/g,function(d){return AR[d]})}
@@ -369,35 +471,54 @@ put(
   });
 })();
 </script>`,
-    body: `<section class="hero">
-<p class="eyebrow">مكتبة الحديث</p>
-<h1 class="hero-title">مكتبة الحديث</h1>
-<p class="deck">كل حديث في صفحة، بالمتن العربي.</p>
-<form class="home-search" action="${href("/axtar/")}" method="get" role="search">
+    body: `<section class="mh-hero">
+<h1>مُحَدِّث</h1>
+<p class="mh-sub">موسوعة الحديث النبوي</p>
+<div class="mh-rule" aria-hidden="true"><i></i><b></b><i></i></div>
+<p class="mh-lead">اقرأ الأحاديث النبوية، وابحث عنها، وتعرّف على مصادرها</p>
+<form class="mh-search" action="${href("/axtar/")}" method="get" role="search">
   <label class="sr" for="hq">بحث في الأحاديث</label>
-  <input id="hq" name="q" placeholder="رقم الحديث أو كلمة من المتن">
-  <button class="btn" type="submit">بحث</button>
+  <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5"/></svg></span>
+  <input id="hq" name="q" placeholder="ابحث في الأحاديث النبوية ...">
 </form>
-</section>
-<a class="daily" id="daily" href="${href("/buxari/1/")}">
-  <span class="eyebrow">حديث اليوم</span>
-  <p class="daily-text" id="daily-text">«إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ»</p>
-  <span class="daily-meta" id="daily-meta">صحيح البخاري · الحديث ١</span>
+<a class="mh-daily" id="daily" href="${href("/buxari/1/")}">
+  <span class="k">حديث اليوم</span>
+  <p id="daily-text">«إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ»</p>
+  <span class="m" id="daily-meta">صحيح البخاري · الحديث ١</span>
 </a>
-<ol class="library">
-<li><a class="volume" href="${href("/buxari/")}"><span class="vol-idx" dir="ltr">١</span><span class="vol-name">صحيح البخاري</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(7349)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/muslim/")}"><span class="vol-idx" dir="ltr">٢</span><span class="vol-name">صحيح مسلم</span><span class="vol-au">مسلم بن الحجاج</span><span class="vol-ct">${ar(3031)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/abudawud/")}"><span class="vol-idx" dir="ltr">٣</span><span class="vol-name">سنن أبي داود</span><span class="vol-au">أبو داود السجستاني</span><span class="vol-ct">${ar(5273)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/tirmidhi/")}"><span class="vol-idx" dir="ltr">٤</span><span class="vol-name">جامع الترمذي</span><span class="vol-au">محمد بن عيسى الترمذي</span><span class="vol-ct">${ar(4300)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/nasai/")}"><span class="vol-idx" dir="ltr">٥</span><span class="vol-name">سنن النسائي</span><span class="vol-au">أحمد بن شعيب النسائي</span><span class="vol-ct">${ar(5758)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/ibnmajah/")}"><span class="vol-idx" dir="ltr">٦</span><span class="vol-name">سنن ابن ماجه</span><span class="vol-au">محمد بن يزيد ابن ماجه</span><span class="vol-ct">${ar(4340)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/malik/")}"><span class="vol-idx" dir="ltr">٧</span><span class="vol-name">موطأ مالك</span><span class="vol-au">مالك بن أنس · رواية يحيى الليثي</span><span class="vol-ct">${ar(1854)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/darimi/")}"><span class="vol-idx" dir="ltr">٨</span><span class="vol-name">سنن الدارمي</span><span class="vol-au">عبد الله بن عبد الرحمن الدارمي</span><span class="vol-ct">${ar(3406)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/adab/")}"><span class="vol-idx" dir="ltr">٩</span><span class="vol-name">الأدب المفرد</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(1326)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/riyad/")}"><span class="vol-idx" dir="ltr">١٠</span><span class="vol-name">رياض الصالحين</span><span class="vol-au">يحيى بن شرف النووي</span><span class="vol-ct">${ar(1896)} حديثًا</span></a></li>
-</ol>`,
+</section>
+<section class="mh-sec" aria-labelledby="feats">
+<h2 class="mh-h" id="feats">مميزات مُحَدِّث</h2>
+<ul class="mh-feats">
+<li class="mh-feat">${boltIco}<span>سرعة في البحث</span></li>
+<li class="mh-feat">${shieldIco}<span>محتوى موثوق</span></li>
+<li class="mh-feat">${bookIco}<span>مصادر متنوعة</span></li>
+<li class="mh-feat">${menuIco}<span>واجهة بسيطة</span></li>
+</ul>
+</section>
+<section class="mh-sec" aria-labelledby="parts">
+<h2 class="mh-h" id="parts">أقسام الموسوعة</h2>
+<ul class="mh-cats">
+<li><a class="mh-cat mh-card" href="#kutub">${bookIco}<span>كتب الحديث</span>${chev}</a></li>
+<li><a class="mh-cat mh-card" href="#kutub">${shieldIco}<span>الأحاديث الصحيحة</span>${chev}</a></li>
+<li><a class="mh-cat mh-card" href="${href("/axtar/")}">${alertIco}<span>الضعيفة</span>${chev}</a></li>
+<li><a class="mh-cat mh-card" href="${href("/axtar/")}">${gridIco}<span>الموضوعات</span>${chev}</a></li>
+<li><a class="mh-cat mh-card" href="${href("/axtar/")}">${peopleIco}<span>الصحابة والتابعين</span>${chev}</a></li>
+<li><a class="mh-cat mh-card" href="${href("/axtar/")}">${bookIco}<span>مصطلح الحديث</span>${chev}</a></li>
+</ul>
+</section>
+<section class="mh-sec" id="kutub" aria-labelledby="books">
+<h2 class="mh-h" id="books">مؤلفات الحديث</h2>
+<ul class="mh-books">
+${homeBooks.map(([path, name]) => `<li><a class="mh-book mh-card" href="${href(path)}">${bookIco}<span>${name}</span></a></li>`).join("\n")}
+</ul>
+</section>`,
   }),
 );
+if (HOME_ONLY) {
+  console.log(JSON.stringify({ home: true, out: OUT }));
+  process.exit(0);
+}
 
 function hadithHtml(h, book) {
   const i = book.indexOf.get(h.no);
