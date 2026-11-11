@@ -23,10 +23,10 @@ function Card({
 }) {
   return (
     <>
-      <span className="text-xs text-accent">{arDigits(i)}</span>
-      <span className="mt-1 font-ar text-2xl leading-snug">{name}</span>
+      <span className="font-ar text-lg text-gold">{arDigits(i)}</span>
+      <span className="mt-1 font-ar text-3xl leading-snug">{name}</span>
       <span className="text-sm text-muted">{author}</span>
-      <span className="mt-auto pt-3 text-sm">{arDigits(n)} حديثًا</span>
+      <span className="mt-auto w-full border-t border-line pt-3 text-sm text-accent">{arDigits(n)} حديثًا</span>
     </>
   );
 }
@@ -44,13 +44,18 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <Shell>
+    <Shell wide>
       <header className="text-center">
-        <p className="font-ar text-2xl">بسم الله الرحمن الرحيم</p>
-        <h1 className="mt-1 font-ar text-5xl leading-tight">الكتب الستة</h1>
-        <div className="mx-auto mt-3 h-0.5 w-12 bg-accent" />
-        <p className="mt-3 text-sm text-muted">{arDigits(6)} كتب · {arDigits(30051)} حديثًا</p>
-        <form action="/axtar" className="mx-auto mt-5 flex w-full max-w-xl gap-2" role="search">
+        <p className="text-xs tracking-[0.22em] text-gold">مكتبة الحديث الشريف</p>
+        <p className="mt-3 font-ar text-3xl">بسم الله الرحمن الرحيم</p>
+        <h1 className="mt-1 font-ar text-6xl leading-tight">الكتب الستة</h1>
+        <div className="mx-auto mt-4 size-2 rotate-45 bg-gold" />
+        <p className="mt-4 flex justify-center gap-6 text-sm text-muted">
+          <span>٦ كتب</span>
+          <span>٣٠٬٠٥١ حديثًا</span>
+          <span>المتن العربي</span>
+        </p>
+        <form action="/axtar" className="mx-auto mt-6 flex w-full max-w-xl gap-2 border border-[#c6a15a] bg-white p-1.5 shadow-lg" role="search">
           <label className="sr-only" htmlFor="hq">
             بحث في الأحاديث
           </label>
@@ -58,27 +63,31 @@ function Home() {
             id="hq"
             name="q"
             placeholder="رقم الحديث أو كلمة من المتن"
-            className="h-11 w-full border border-line bg-paper px-3 text-sm"
+            className="h-11 w-full border-0 bg-transparent px-3 text-sm"
           />
-          <button type="submit" className="h-11 shrink-0 bg-accent px-4 text-sm text-paper">
+          <button type="submit" className="h-11 shrink-0 bg-accent px-4 text-sm text-[#f6f1e7]">
             بحث
           </button>
         </form>
       </header>
-      <ol className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {BOOKS.map((b, i) => (
-          <li key={b.name}>
-            {"to" in b ? (
-              <Link to={b.to} className="flex min-h-36 flex-col border border-line bg-white p-5 hover:border-accent">
-                <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
-              </Link>
-            ) : (
-              <a href={b.href} className="flex min-h-36 flex-col border border-line bg-white p-5 hover:border-accent">
-                <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
-              </a>
-            )}
-          </li>
-        ))}
+      <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {BOOKS.map((b, i) => {
+          const cls =
+            "flex min-h-44 flex-col border border-[#c6a15a] bg-[#fffdf8] p-6 shadow-[inset_0_0_0_5px_#fffdf8,inset_0_0_0_6px_rgba(198,161,90,.55)] transition hover:-translate-y-0.5";
+          return (
+            <li key={b.name}>
+              {"to" in b ? (
+                <Link to={b.to} className={cls}>
+                  <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
+                </Link>
+              ) : (
+                <a href={b.href} className={cls}>
+                  <Card name={b.name} author={b.author} n={b.n} i={i + 1} />
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </Shell>
   );

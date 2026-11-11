@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #fbfbf9;
-  --color-ink: #1c1915;
-  --color-muted: #6f6a63;
-  --color-line: #e4dfd6;
-  --color-accent: #0f6b4c;
-  --color-accent-soft: #e7f3ed;
+  --color-paper: #f3eee4;
+  --color-ink: #1a1612;
+  --color-muted: #6d6458;
+  --color-line: #e0d4c2;
+  --color-accent: #0e3d2e;
+  --color-accent-soft: #e7f0ea;
+  --color-gold: #a68546;
   --font-sans: "IBM Plex Sans Arabic", "Noto Naskh Arabic", sans-serif;
   --font-ar: "Amiri", "Noto Naskh Arabic", serif;
 }

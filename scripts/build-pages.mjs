@@ -83,7 +83,7 @@ function quoteOf(text) {
   return clip(raw, 72);
 }
 
-const css = `:root{--paper:#fbfbf9;--ink:#1c1915;--muted:#6f6a63;--line:#e4dfd6;--accent:#0f6b4c}
+const css = `:root{--paper:#f3eee4;--ink:#1a1612;--muted:#6d6458;--line:#e0d4c2;--accent:#0e3d2e;--gold:#a68546;--card:#fffdf8}
 *{box-sizing:border-box}
 html{background:var(--paper);color:var(--ink);font-size:15px}
 html[data-size="1"]{font-size:17px}
@@ -93,43 +93,46 @@ body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:"I
 a{color:inherit;text-decoration:none}
 button,input{font:inherit;color:inherit}
 button{cursor:pointer}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .wrap{width:min(48rem,100%);margin-inline:auto;padding-inline:1.25rem}
-.wrap.wide{width:min(62rem,100%)}
-header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px)}
-.bar{display:flex;align-items:center;gap:1rem;min-height:4.25rem}
+.wrap.wide{width:min(68rem,100%)}
+header{position:sticky;top:0;z-index:10;color:#f6f1e7;background:#0e3d2e;box-shadow:inset 0 3px 0 #c6a15a}
+.bar{display:flex;align-items:center;gap:1rem;min-height:4.4rem}
 .brand{display:flex;align-items:center;gap:.75rem}
-.mark{width:2.25rem;height:2.25rem;display:grid;place-items:center;background:var(--accent);color:var(--paper);font-family:Amiri,serif;font-size:1.25rem}
-.brand-name{font-family:Amiri,serif;font-size:1.15rem}
+.mark{width:2.35rem;height:2.35rem;display:grid;place-items:center;background:transparent;color:#e8d7a8;border:1px solid #c6a15a;font-family:Amiri,serif;font-size:1.25rem}
+.brand-name{font-family:Amiri,serif;font-size:1.25rem;color:#f6f1e7}
 .set{position:relative;flex:none}
-.gear{width:2.75rem;height:2.75rem;border:1px solid var(--line);background:transparent;display:grid;place-items:center;color:var(--ink)}
-.set-panel{position:absolute;top:calc(100% + .45rem);inset-inline-end:0;z-index:20;background:var(--paper);border:1px solid var(--line);padding:.45rem .55rem;align-items:center;gap:.4rem;white-space:nowrap;font-size:.85rem}
-.set-panel button{width:2.75rem;height:2.75rem;border:1px solid var(--line);background:transparent}
+.gear{width:2.75rem;height:2.75rem;border:1px solid rgba(232,215,168,.45);background:transparent;display:grid;place-items:center;color:#f6f1e7}
+.set-panel{position:absolute;top:calc(100% + .45rem);inset-inline-end:0;z-index:20;background:var(--card);color:var(--ink);border:1px solid var(--gold);padding:.45rem .55rem;align-items:center;gap:.4rem;white-space:nowrap;font-size:.85rem}
+.set-panel button{width:2.75rem;height:2.75rem;border:1px solid var(--line);background:transparent;color:var(--ink)}
 .search{margin-inline-start:auto;display:flex;gap:.5rem;width:min(22rem,100%)}
-input{height:2.75rem;width:100%;border:1px solid var(--line);background:var(--paper);padding-inline:.75rem}
-.btn{height:2.75rem;display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--paper);border:0;padding-inline:1rem;white-space:nowrap}
+header .search input{background:#f7f1e6;color:var(--ink);border-color:transparent}
+header .btn{background:#c6a15a;color:#1a1612}
+input{height:2.75rem;width:100%;border:1px solid var(--line);background:var(--card);padding-inline:.75rem}
+.btn{height:2.75rem;display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#f6f1e7;border:0;padding-inline:1rem;white-space:nowrap}
 .ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.mobile-search{display:none;margin-inline-start:auto;color:var(--accent)}
-main{flex:1;padding-block:2.5rem}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:.875rem;line-height:2;padding-block:2rem}
-.kicker{color:var(--accent);font-size:.875rem;margin:0}
+.mobile-search{display:none;margin-inline-start:auto;color:#e8d7a8}
+main{flex:1;padding-block:2.6rem}
+footer{background:#0e3d2e;color:#efe7d6;border-top:3px solid #c6a15a;font-size:.875rem;line-height:2;padding-block:1.5rem}
+.kicker{color:var(--gold);font-size:.8rem;margin:0;letter-spacing:.08em}
 h1{font-family:Amiri,serif;font-weight:400;line-height:1.45}
 .title{font-size:2.15rem;margin:.5rem 0 0}
 .lead{color:var(--muted);line-height:1.8;max-width:38rem}
-.meta{font-size:.9rem}
-.jump{margin-top:2rem;border:1px solid var(--line);padding:1rem;display:flex;gap:.75rem;align-items:end}
+.meta{font-size:.9rem;color:var(--muted)}
+.jump{margin-top:2rem;border:1px solid #d9cdb8;background:var(--card);padding:1rem;display:flex;gap:.75rem;align-items:end;box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px rgba(198,161,90,.45)}
 .jump label{flex:1;display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
 h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.4rem;margin:2.4rem 0 0}
 ol.books{list-style:none;padding:0;margin:.4rem 0 0}
 ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}
-.idx{width:2rem;flex:none;color:var(--muted);font-size:.875rem}
+ol.books a:hover{background:var(--card)}
+.idx{width:2rem;flex:none;color:var(--gold);font-size:.875rem}
 .name{font-family:Amiri,serif;font-size:1.12rem;line-height:1.65}
 .count{margin-inline-start:auto;color:var(--muted);font-size:.875rem}
 .crumbs{display:flex;flex-wrap:wrap;gap:.45rem;align-items:baseline;color:var(--muted);font-size:.875rem}
 .crumbs a{color:var(--accent);font-family:Amiri,serif;font-size:1.15rem}
 .basmala{text-align:center;font-family:Amiri,serif;font-size:1.45rem;margin:0}
 .bab{margin:1rem 0 0;font-size:1.2rem}
-.no{display:block;margin-bottom:.45rem;color:var(--accent);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.8rem}
+.no{display:block;margin-bottom:.45rem;color:var(--gold);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.8rem}
 .front{font-family:Amiri,serif;font-size:1.02rem;line-height:1.75;color:var(--muted)}
 .matn{font-family:Amiri,serif;font-size:1.22rem;line-height:1.9;white-space:pre-wrap;margin-top:1.25rem}
 .note{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.875rem;line-height:2}
@@ -145,22 +148,25 @@ ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3
 .entry .n{width:2.5rem;flex:none;color:var(--accent);font-size:.85rem}
 .entry .ttl{font-family:Amiri,serif;font-size:1.05rem;line-height:1.6}
 .entry:hover .ttl,ol.books a:hover .name{color:var(--accent)}
-.home-head{text-align:center}
-.home-head .basmala{font-size:1.35rem;color:var(--ink)}
-.home-head .title{font-size:2.55rem;margin:.2rem 0 0}
-.home-rule{width:3.25rem;height:2px;margin:.85rem auto 0;background:var(--accent)}
-.home-stat{margin:.8rem 0 0;color:var(--muted);font-size:.85rem}
-.home-search{margin:1.35rem auto 0;display:flex;gap:.5rem;width:min(34rem,100%)}
-.library{list-style:none;padding:0;margin:1.75rem 0 0;display:grid;grid-template-columns:1fr;gap:.7rem}
-.lib a{display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;min-height:8.4rem;padding:1.15rem 1.2rem 1rem;border:1px solid var(--line);background:#fff}
-.lib a:hover{border-color:var(--accent);background:#f6faf7}
-.lib-no{color:var(--accent);font-size:.78rem}
-.lib-name{font-family:Amiri,serif;font-size:1.55rem;line-height:1.35;margin-top:.2rem}
+.home-head{text-align:center;padding-bottom:.25rem}
+.eyebrow{margin:0;color:var(--gold);font-size:.75rem;letter-spacing:.22em}
+.home-head .basmala{margin-top:.85rem;font-size:1.7rem;color:var(--ink)}
+.home-head .title{font-size:3.4rem;margin:.15rem 0 0;letter-spacing:0}
+.ornament{width:.55rem;height:.55rem;margin:1rem auto .15rem;background:var(--gold);transform:rotate(45deg)}
+.home-stat{margin:.85rem 0 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap}
+.home-search{margin:1.5rem auto 0;display:flex;gap:.45rem;width:min(36rem,100%);background:var(--card);border:1px solid #c6a15a;padding:.4rem;box-shadow:0 16px 40px rgba(14,61,46,.08)}
+.home-search input{border:0;background:transparent;height:2.6rem}
+.home-search .btn{background:#0e3d2e;color:#f6f1e7}
+.library{list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:1fr;gap:1rem}
+.lib a{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;min-height:10.5rem;padding:1.55rem 1.4rem 1.2rem;background:var(--card);border:1px solid #c6a15a;transition:transform .16s ease,box-shadow .16s ease;box-shadow:inset 0 0 0 5px var(--card),inset 0 0 0 6px rgba(198,161,90,.55),0 10px 28px rgba(26,22,18,.04)}
+.lib a:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 5px var(--card),inset 0 0 0 6px #c6a15a,0 16px 34px rgba(14,61,46,.1)}
+.lib-no{font-family:Amiri,serif;color:var(--gold);font-size:1.05rem}
+.lib-name{font-family:Amiri,serif;font-size:1.85rem;line-height:1.35;margin-top:.15rem}
 .lib-au{color:var(--muted);font-size:.8rem}
-.lib-ct{margin-top:auto;padding-top:.8rem;font-size:.82rem}
+.lib-ct{margin-top:auto;padding-top:.85rem;width:100%;border-top:1px solid var(--line);color:var(--accent);font-size:.82rem}
 .foot nav{display:flex;flex-wrap:wrap;gap:.2rem 1.1rem}
-.foot a:hover{color:var(--accent)}
-.foot p{margin:.35rem 0 0}
+.foot a:hover{color:#e8d7a8}
+.foot p{margin:.2rem 0 0;color:#cbbfa8}
 .bab-label{margin:1.75rem 0 .35rem;color:var(--accent);font-family:Amiri,serif;font-size:1.15rem;line-height:1.7;font-weight:400;text-align:center}
 .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .nums a{min-height:2.75rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
@@ -171,23 +177,20 @@ ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3
 .hit-k{display:block;margin-top:.25rem;font-family:Amiri,serif;font-size:1.15rem;line-height:1.8}
 .hit-s{display:block;margin-top:.35rem;font-family:Amiri,serif;font-size:1.05rem;line-height:1.9}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-::selection{background:#e7f3ed}
+::selection{background:#e7f0ea}
 @media(max-width:640px){
   .search{display:none}
   .mobile-search{display:inline-flex}
   .jump{flex-direction:column;align-items:stretch}
   .title{font-size:1.85rem}
-  .home-head .title{font-size:2.05rem}
+  .home-head .title{font-size:2.35rem}
   .library{grid-template-columns:1fr}
 }
 @media(min-width:640px){
   .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
 }
-@media(min-width:720px){
-  .library{grid-template-columns:1fr 1fr}
-}
-@media(min-width:640px){
-  .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
+@media(min-width:800px){
+  .library{grid-template-columns:1fr 1fr 1fr}
 }`;
 
 writeFileSync(join(OUT, "assets/site.css"), css);
@@ -212,12 +215,12 @@ function shell({ title, desc, path, body, extra = "", wide = false }) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:url" content="${esc(canonical)}">
-<meta name="theme-color" content="#fbfbf9">
+<meta name="theme-color" content="#0e3d2e">
 <link rel="icon" href="${href("/favicon.svg")}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=8">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=9">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -311,10 +314,11 @@ put(
     path: "/",
     wide: true,
     body: `<header class="home-head">
+<p class="eyebrow">مكتبة الحديث الشريف</p>
 <p class="basmala">بسم الله الرحمن الرحيم</p>
 <h1 class="title">الكتب الستة</h1>
-<div class="home-rule"></div>
-<p class="home-stat">${ar(6)} كتب · ${ar(30051)} حديثًا</p>
+<div class="ornament" aria-hidden="true"></div>
+<p class="home-stat"><span>٦ كتب</span><span>٣٠٬٠٥١ حديثًا</span><span>المتن العربي</span></p>
 <form class="home-search" action="${href("/axtar/")}" method="get" role="search">
   <label class="sr" for="hq">بحث في الأحاديث</label>
   <input id="hq" name="q" placeholder="رقم الحديث أو كلمة من المتن">
