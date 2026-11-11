@@ -1,7 +1,6 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { FormEvent } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/shell";
-import { arDigits, westernDigits } from "@/lib/digits";
+import { arDigits } from "@/lib/digits";
 import { getKitabIndex } from "@/lib/hadith-api";
 
 export const Route = createFileRoute("/")({
@@ -22,16 +21,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const kitabs = Route.useLoaderData();
-  const navigate = useNavigate();
   const total = kitabs.reduce((n, k) => n + k.count, 0);
-
-  function onJump(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const no = Number(westernDigits(String(new FormData(e.currentTarget).get("no") ?? "").trim()));
-    if (Number.isInteger(no) && no > 0) {
-      navigate({ to: "/buxari/$no", params: { no: String(no) } });
-    }
-  }
 
   return (
     <Shell>
@@ -43,21 +33,6 @@ function Home() {
       <p className="mt-4 text-sm text-ink">
         {arDigits(kitabs.length)} كتابًا · {arDigits(total)} حديثًا
       </p>
-
-      <form onSubmit={onJump} className="mt-8 flex flex-col gap-2 border border-line p-4 sm:flex-row sm:items-end">
-        <label className="flex flex-1 flex-col gap-2 text-sm">
-          رقم الحديث
-          <input
-            name="no"
-            inputMode="numeric"
-            placeholder="مثال: ١"
-            className="h-11 border border-line bg-paper px-3 text-ink placeholder:text-muted"
-          />
-        </label>
-        <button type="submit" className="h-11 bg-accent px-5 text-sm text-paper">
-          افتح
-        </button>
-      </form>
 
       <h2 className="mt-14 font-ar text-2xl">الكتب</h2>
       <ol className="mt-2">

@@ -68,7 +68,13 @@ header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);back
 .brand{display:flex;align-items:center;gap:.75rem}
 .mark{width:2.25rem;height:2.25rem;display:grid;place-items:center;background:var(--accent);color:var(--paper);font-family:Amiri,serif;font-size:1.25rem}
 .brand-name{font-family:Amiri,serif;font-size:1.35rem}
-.search{margin-inline-start:auto;display:flex;gap:.5rem;width:min(22rem,100%)}
+.search{display:flex;gap:.5rem;width:min(22rem,100%)}
+.tools{margin-inline-start:auto;display:flex;align-items:center;gap:.5rem}
+.icon-btn{width:2.75rem;height:2.75rem;flex:none;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.8rem}
+.icon-btn[aria-expanded="true"]{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.no-panel{display:none;border-top:1px solid var(--line)}
+.no-panel.open{display:block}
+.no-row{display:flex;gap:.5rem;align-items:center;padding-block:.75rem}
 input{height:2.75rem;width:100%;border:1px solid var(--line);background:var(--paper);padding-inline:.75rem}
 .btn{height:2.75rem;display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--paper);border:0;padding-inline:1rem;white-space:nowrap}
 .ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
@@ -98,10 +104,16 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
 .note{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.875rem;line-height:2}
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
-.section{margin-top:2.4rem}
-.section h2{font-family:Amiri,serif;font-weight:400;font-size:1.3rem;line-height:1.8;margin:0}
-.nums{display:flex;flex-wrap:wrap;gap:.15rem;margin-top:.4rem}
-.nums a{min-width:2.75rem;min-height:2.75rem;display:inline-flex;align-items:center;justify-content:center;padding-inline:.45rem}
+.section{margin-top:0}
+.babs{list-style:none;padding:0;margin:1.4rem 0 0}
+.babs li{border-bottom:1px solid var(--line);padding-block:.85rem}
+.babs h2{font-family:Amiri,serif;font-weight:400;font-size:1.25rem;line-height:1.8;margin:0}
+.num-block{margin-top:3.2rem;border-top:1px solid var(--line);padding-top:1.6rem}
+.num-block > h2{margin:0;font-size:.875rem;font-weight:500;color:var(--muted)}
+.num-group{margin-top:1.35rem}
+.num-group h3{margin:0 0 .2rem;font-family:Amiri,serif;font-weight:400;font-size:1rem;line-height:1.7;color:var(--muted)}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.nums a{min-height:2.75rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
 .nums a:hover{color:var(--accent)}
 .hits{list-style:none;padding:0;margin:1rem 0 0}
 .hits a{display:block;padding-block:1rem;border-bottom:1px solid var(--line)}
@@ -116,6 +128,9 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
   .jump{flex-direction:column;align-items:stretch}
   .title{font-size:2.45rem}
   .matn{font-size:1.45rem;line-height:2.2}
+}
+@media(min-width:640px){
+  .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
 }`;
 
 writeFileSync(join(OUT, "assets/site.css"), css);
@@ -154,12 +169,22 @@ function shell({ title, desc, path, body, extra = "" }) {
       <span class="mark">ب</span>
       <span class="brand-name">صحيح البخاري</span>
     </a>
+    <div class="tools">
     <form class="search" action="${href("/axtar/")}" method="get" role="search">
       <label class="sr" for="q">بحث في الأحاديث</label>
       <input id="q" name="q" placeholder="رقم الحديث أو كلمة">
       <button class="btn" type="submit">بحث</button>
     </form>
     <a class="mobile-search" href="${href("/axtar/")}">بحث</a>
+    <button class="icon-btn" type="button" id="no-toggle" aria-expanded="false" aria-controls="no-panel" aria-label="رقم الحديث">١٢٣</button>
+    </div>
+  </div>
+  <div class="no-panel" id="no-panel">
+    <form class="wrap no-row" id="no-form">
+      <label class="sr" for="no">رقم الحديث</label>
+      <input id="no" name="no" inputmode="numeric" placeholder="رقم الحديث">
+      <button class="btn" type="submit">افتح</button>
+    </form>
   </div>
 </header>
 <main class="wrap">
@@ -168,6 +193,21 @@ ${body}
 <footer>
   <p class="wrap">الطبعة السلطانية (بولاق، ١٣١١ هـ)، دار طوق النجاة. الترقيم ترقيم محمد فؤاد عبد الباقي. المتن بالعربية كما هو.</p>
 </footer>
+<script>
+document.getElementById("no-toggle").addEventListener("click", function () {
+  var panel = document.getElementById("no-panel");
+  var open = panel.classList.toggle("open");
+  this.setAttribute("aria-expanded", open ? "true" : "false");
+  if (open) document.getElementById("no").focus();
+});
+document.getElementById("no-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var raw = new FormData(e.currentTarget).get("no") || "";
+  var map = "٠١٢٣٤٥٦٧٨٩";
+  var n = String(raw).trim().replace(/[٠-٩]/g, function (d) { return map.indexOf(d); }).replace(/[۰-۹]/g, function (d) { return "۰۱۲۳۴۵۶۷۸۹".indexOf(d); });
+  if (/^\\d+$/.test(n) && Number(n) > 0) location.href = ${JSON.stringify(href("/buxari/"))} + n + "/";
+});
+</script>
 ${extra}
 </body>
 </html>
@@ -192,19 +232,6 @@ put(
 <h1 class="title">صحيح البخاري</h1>
 <p class="lead">للإمام محمد بن إسماعيل البخاري. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن.</p>
 <p class="meta">${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
-<form class="jump" action="${href("/buxari/go")}" onsubmit="return false" id="jump">
-  <label>رقم الحديث<input name="no" inputmode="numeric" placeholder="مثال: ١"></label>
-  <button class="btn" type="submit">افتح</button>
-</form>
-<script>
-document.getElementById("jump").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var raw = new FormData(e.currentTarget).get("no") || "";
-  var map = "٠١٢٣٤٥٦٧٨٩";
-  var n = String(raw).trim().replace(/[٠-٩]/g, function (d) { return map.indexOf(d); });
-  if (/^\\d+$/.test(n) && Number(n) > 0) location.href = ${JSON.stringify(href("/buxari/"))} + n + "/";
-});
-</script>
 <h2 class="books-h">الكتب</h2>
 <ol class="books">
 ${kitabs
@@ -302,13 +329,19 @@ for (const k of kitabs) {
   const body = `<nav class="crumbs"><a href="${href("/")}">صحيح البخاري</a></nav>
 <h1 class="title" style="font-size:2rem">${esc(page.title)}</h1>
 <p class="meta">${ar(page.count)} حديثًا · ${ar(page.first)}–${ar(page.last)}</p>
+<ol class="babs">
+${page.babs.map((bab) => `<li><h2>${esc(bab.title)}</h2><p class="meta">${ar(bab.first)}–${ar(bab.last)}</p></li>`).join("\n")}
+</ol>
+<section class="num-block">
+  <h2>أرقام الأحاديث</h2>
 ${page.babs
   .map(
-    (bab) => `<section class="section"><h2>${esc(bab.title)}</h2><div class="nums">${bab.nums
+    (bab) => `<div class="num-group"><h3>${esc(bab.title)}</h3><div class="nums">${bab.nums
       .map((n) => `<a href="${href(`/buxari/${n}/`)}">${ar(n)}</a>`)
-      .join("")}</div></section>`,
+      .join("")}</div></div>`,
   )
-  .join("\n")}`;
+  .join("\n")}
+</section>`;
   put(`buxari/kitab/${k.i}/index.html`, shell({ title, desc, path: `/buxari/kitab/${k.i}/`, body }));
 }
 

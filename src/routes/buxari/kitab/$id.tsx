@@ -46,26 +46,39 @@ function KitabView() {
       <p className="mt-2 text-sm text-muted">
         {arDigits(data.count)} حديثًا · {arDigits(data.first)}–{arDigits(data.last)}
       </p>
-      <div className="mt-10 flex flex-col gap-10">
+      <ol className="mt-8">
         {data.babs.map((bab) => (
-          <section key={`${bab.first}-${bab.title}`}>
+          <li key={`${bab.first}-${bab.title}`} className="border-b border-line py-3">
             <h2 className="font-ar text-xl leading-relaxed">{bab.title}</h2>
-            <ul className="mt-3 flex flex-wrap gap-1">
-              {bab.nums.map((n) => (
-                <li key={n}>
-                  <Link
-                    to="/buxari/$no"
-                    params={{ no: String(n) }}
-                    className="inline-flex h-11 min-w-11 items-center justify-center px-2 text-ink hover:text-accent"
-                  >
-                    {arDigits(n)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+            <p className="text-sm text-muted">
+              {arDigits(bab.first)}–{arDigits(bab.last)}
+            </p>
+          </li>
         ))}
-      </div>
+      </ol>
+      <section className="mt-14 border-t border-line pt-8">
+        <h2 className="text-sm text-muted">أرقام الأحاديث</h2>
+        <div className="mt-6 flex flex-col gap-6">
+          {data.babs.map((bab) => (
+            <div key={`n-${bab.first}-${bab.title}`}>
+              <h3 className="font-ar text-base leading-relaxed text-muted">{bab.title}</h3>
+              <ul className="mt-1 grid grid-cols-4 sm:grid-cols-8">
+                {bab.nums.map((n) => (
+                  <li key={n}>
+                    <Link
+                      to="/buxari/$no"
+                      params={{ no: String(n) }}
+                      className="flex h-11 items-center justify-center text-sm text-ink hover:text-accent"
+                    >
+                      {arDigits(n)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
     </Shell>
   );
 }
