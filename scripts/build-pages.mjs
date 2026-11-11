@@ -95,6 +95,7 @@ button,input{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{width:min(48rem,100%);margin-inline:auto;padding-inline:1.25rem}
+.wrap.wide{width:min(62rem,100%)}
 header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px)}
 .bar{display:flex;align-items:center;gap:1rem;min-height:4.25rem}
 .brand{display:flex;align-items:center;gap:.75rem}
@@ -143,6 +144,23 @@ ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3
 .entry{display:flex;gap:.75rem;align-items:baseline;min-height:2.85rem;padding-block:.4rem;border-bottom:1px solid var(--line)}
 .entry .n{width:2.5rem;flex:none;color:var(--accent);font-size:.85rem}
 .entry .ttl{font-family:Amiri,serif;font-size:1.05rem;line-height:1.6}
+.entry:hover .ttl,ol.books a:hover .name{color:var(--accent)}
+.home-head{text-align:center}
+.home-head .basmala{font-size:1.35rem;color:var(--ink)}
+.home-head .title{font-size:2.55rem;margin:.2rem 0 0}
+.home-rule{width:3.25rem;height:2px;margin:.85rem auto 0;background:var(--accent)}
+.home-stat{margin:.8rem 0 0;color:var(--muted);font-size:.85rem}
+.home-search{margin:1.35rem auto 0;display:flex;gap:.5rem;width:min(34rem,100%)}
+.library{list-style:none;padding:0;margin:1.75rem 0 0;display:grid;grid-template-columns:1fr;gap:.7rem}
+.lib a{display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;min-height:8.4rem;padding:1.15rem 1.2rem 1rem;border:1px solid var(--line);background:#fff}
+.lib a:hover{border-color:var(--accent);background:#f6faf7}
+.lib-no{color:var(--accent);font-size:.78rem}
+.lib-name{font-family:Amiri,serif;font-size:1.55rem;line-height:1.35;margin-top:.2rem}
+.lib-au{color:var(--muted);font-size:.8rem}
+.lib-ct{margin-top:auto;padding-top:.8rem;font-size:.82rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:.2rem 1.1rem}
+.foot a:hover{color:var(--accent)}
+.foot p{margin:.35rem 0 0}
 .bab-label{margin:1.75rem 0 .35rem;color:var(--accent);font-family:Amiri,serif;font-size:1.15rem;line-height:1.7;font-weight:400;text-align:center}
 .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .nums a{min-height:2.75rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
@@ -159,6 +177,14 @@ ol.books a,ol.books .row{display:flex;gap:1rem;align-items:baseline;min-height:3
   .mobile-search{display:inline-flex}
   .jump{flex-direction:column;align-items:stretch}
   .title{font-size:1.85rem}
+  .home-head .title{font-size:2.05rem}
+  .library{grid-template-columns:1fr}
+}
+@media(min-width:640px){
+  .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
+}
+@media(min-width:720px){
+  .library{grid-template-columns:1fr 1fr}
 }
 @media(min-width:640px){
   .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
@@ -171,7 +197,7 @@ writeFileSync(join(OUT, ".nojekyll"), "");
 const font =
   "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap";
 
-function shell({ title, desc, path, body, extra = "" }) {
+function shell({ title, desc, path, body, extra = "", wide = false }) {
   const canonical = abs(path);
   return `<!doctype html>
 <html lang="ar" dir="rtl">
@@ -191,7 +217,7 @@ function shell({ title, desc, path, body, extra = "" }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=7">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=8">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
@@ -219,11 +245,21 @@ function shell({ title, desc, path, body, extra = "" }) {
     </div>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap${wide ? " wide" : ""}">
 ${body}
 </main>
 <footer>
-  <p class="wrap">الكتب الستة. المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
+  <div class="wrap foot">
+    <nav>
+      <a href="${href("/buxari/")}">البخاري</a>
+      <a href="${href("/muslim/")}">مسلم</a>
+      <a href="${href("/abudawud/")}">أبو داود</a>
+      <a href="${href("/tirmidhi/")}">الترمذي</a>
+      <a href="${href("/nasai/")}">النسائي</a>
+      <a href="${href("/ibnmajah/")}">ابن ماجه</a>
+    </nav>
+    <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
+  </div>
 </footer>
 <script>
 (function () {
@@ -273,15 +309,25 @@ put(
     title: "الكتب الستة",
     desc: homeDesc,
     path: "/",
-    body: `<p class="kicker">مكتبة الحديث</p>
+    wide: true,
+    body: `<header class="home-head">
+<p class="basmala">بسم الله الرحمن الرحيم</p>
 <h1 class="title">الكتب الستة</h1>
-<ol class="books">
-<li><a href="${href("/buxari/")}"><span class="idx">١</span><span class="name">صحيح البخاري</span><span class="count">${ar(7349)}</span></a></li>
-<li><a href="${href("/muslim/")}"><span class="idx">٢</span><span class="name">صحيح مسلم</span><span class="count">${ar(3031)}</span></a></li>
-<li><a href="${href("/abudawud/")}"><span class="idx">٣</span><span class="name">سنن أبي داود</span><span class="count">${ar(5273)}</span></a></li>
-<li><a href="${href("/tirmidhi/")}"><span class="idx">٤</span><span class="name">جامع الترمذي</span><span class="count">${ar(4300)}</span></a></li>
-<li><a href="${href("/nasai/")}"><span class="idx">٥</span><span class="name">سنن النسائي</span><span class="count">${ar(5758)}</span></a></li>
-<li><a href="${href("/ibnmajah/")}"><span class="idx">٦</span><span class="name">سنن ابن ماجه</span><span class="count">${ar(4340)}</span></a></li>
+<div class="home-rule"></div>
+<p class="home-stat">${ar(6)} كتب · ${ar(30051)} حديثًا</p>
+<form class="home-search" action="${href("/axtar/")}" method="get" role="search">
+  <label class="sr" for="hq">بحث في الأحاديث</label>
+  <input id="hq" name="q" placeholder="رقم الحديث أو كلمة من المتن">
+  <button class="btn" type="submit">بحث</button>
+</form>
+</header>
+<ol class="library">
+<li class="lib"><a href="${href("/buxari/")}"><span class="lib-no">١</span><span class="lib-name">صحيح البخاري</span><span class="lib-au">محمد بن إسماعيل البخاري</span><span class="lib-ct">${ar(7349)} حديثًا</span></a></li>
+<li class="lib"><a href="${href("/muslim/")}"><span class="lib-no">٢</span><span class="lib-name">صحيح مسلم</span><span class="lib-au">مسلم بن الحجاج</span><span class="lib-ct">${ar(3031)} حديثًا</span></a></li>
+<li class="lib"><a href="${href("/abudawud/")}"><span class="lib-no">٣</span><span class="lib-name">سنن أبي داود</span><span class="lib-au">أبو داود السجستاني</span><span class="lib-ct">${ar(5273)} حديثًا</span></a></li>
+<li class="lib"><a href="${href("/tirmidhi/")}"><span class="lib-no">٤</span><span class="lib-name">جامع الترمذي</span><span class="lib-au">محمد بن عيسى الترمذي</span><span class="lib-ct">${ar(4300)} حديثًا</span></a></li>
+<li class="lib"><a href="${href("/nasai/")}"><span class="lib-no">٥</span><span class="lib-name">سنن النسائي</span><span class="lib-au">أحمد بن شعيب النسائي</span><span class="lib-ct">${ar(5758)} حديثًا</span></a></li>
+<li class="lib"><a href="${href("/ibnmajah/")}"><span class="lib-no">٦</span><span class="lib-name">سنن ابن ماجه</span><span class="lib-au">محمد بن يزيد ابن ماجه</span><span class="lib-ct">${ar(4340)} حديثًا</span></a></li>
 </ol>`,
   }),
 );
@@ -398,9 +444,9 @@ put(
     title: "صحيح البخاري",
     desc: homeDesc,
     path: "/buxari/",
-    body: `<p class="kicker">الكتب الستة</p>
+    body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
 <h1 class="title">صحيح البخاري</h1>
-<p class="meta">${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
+<p class="meta">محمد بن إسماعيل البخاري · ${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
 <ol class="books">
 ${kitabs
@@ -463,7 +509,7 @@ ${page.babs
       path: `/${book.slug}/`,
       body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
 <h1 class="title">${esc(book.name)}</h1>
-<p class="meta">${ar(list.length)} كتابًا · ${ar(bookTotal)} حديثًا</p>
+<p class="meta">${esc(book.author)} · ${ar(list.length)} كتابًا · ${ar(bookTotal)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
 <ol class="books">
 ${list
