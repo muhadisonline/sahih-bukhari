@@ -2,8 +2,10 @@ import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { brotliDecompressSync } from "node:zlib";
 import { join } from "node:path";
 
-const SRC = "/tmp/hd/books";
-const OUT = new URL("../src/data/muslim/", import.meta.url).pathname;
+const id = process.argv[2] || "1727";
+const slug = process.argv[3] || "muslim";
+const SRC = process.argv[4] || "/tmp/hd/books";
+const OUT = new URL(`../src/data/${slug}/`, import.meta.url).pathname;
 
 const AR = "٠١٢٣٤٥٦٧٨٩";
 const ar = (n) => String(n).replace(/\d/g, (d) => AR[Number(d)]);
@@ -31,7 +33,7 @@ function norm(s) {
 }
 
 const rows = [];
-for (const name of readdirSync(SRC).filter((f) => /^h1727_\d+\.js$/.test(f)).sort((a, b) => Number(a.slice(6, -3)) - Number(b.slice(6, -3)))) {
+for (const name of readdirSync(SRC).filter((f) => new RegExp(`^h${id}_\\d+\\.js$`).test(f)).sort((a, b) => Number(a.split("_")[1]) - Number(b.split("_")[1]))) {
   const src = readFileSync(join(SRC, name), "utf8");
   const b64 = src.match(/"([A-Za-z0-9+/=]+)"/)[1];
   rows.push(...JSON.parse(brotliDecompressSync(Buffer.from(b64, "base64")).toString("utf8")));
@@ -96,19 +98,22 @@ for (const no of nums) {
     t: texts.join("\n\n"),
     q: norm(texts.join(" ")),
     f,
+    g: String(r[4] || "").trim(),
   });
 }
 
 mkdirSync(join(OUT, "shards"), { recursive: true });
 mkdirSync(join(OUT, "kitab"), { recursive: true });
 const SHARD = 300;
-let shards = 0;
-for (let i = 0; i < records.length; i += SHARD) {
+const maxNo = nums[nums.length - 1];
+const shardCount = Math.ceil(maxNo / SHARD);
+for (let s = 0; s < shardCount; s++) {
   const part = {};
-  for (const rec of records.slice(i, i + SHARD)) part[rec.no] = rec;
-  writeFileSync(join(OUT, "shards", `${shards}.json`), JSON.stringify(part));
-  shards++;
+  for (const rec of records) if (Math.floor((rec.no - 1) / SHARD) === s) part[rec.no] = rec;
+  if (!Object.keys(part).length) continue;
+  writeFileSync(join(OUT, "shards", `${s}.json`), JSON.stringify(part));
 }
+const shards = shardCount;
 for (const k of kitabs) writeFileSync(join(OUT, "kitab", `${k.i}.json`), JSON.stringify(k));
 writeFileSync(join(OUT, "kitabs.json"), JSON.stringify(kitabs.map(({ babs, ...k }) => k)));
 writeFileSync(join(OUT, "order.json"), JSON.stringify(nums));
@@ -117,7 +122,7 @@ const shardLines = ids.map((i) => `  ${i}: () => import("./shards/${i}.json"),`)
 const kitabLines = kitabs.map((k) => `  ${k.i}: () => import("./kitab/${k.i}.json"),`).join("\n");
 writeFileSync(
   join(OUT, "loaders.ts"),
-  `// Generated from Sahih Muslim (Shamela 1727 / Fuad numbering). Do not edit.
+  `// Generated from Shamela ${id} (${slug}). Do not edit.
 export const SHARD_IDS = [${ids.join(",")}] as const;
 export const shardLoaders: Record<number, () => Promise<{ default: Record<string, unknown> }>> = {
 ${shardLines}

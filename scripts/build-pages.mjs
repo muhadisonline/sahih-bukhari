@@ -278,7 +278,7 @@ put(
 <ol class="books">
 <li><a href="${href("/buxari/")}"><span class="idx">١</span><span class="name">صحيح البخاري</span><span class="count">${ar(7349)}</span></a></li>
 <li><a href="${href("/muslim/")}"><span class="idx">٢</span><span class="name">صحيح مسلم</span><span class="count">${ar(3031)}</span></a></li>
-<li><span class="row"><span class="idx">٣</span><span class="name">سنن أبي داود</span><span class="count">${ar(5273)}</span></span></li>
+<li><a href="${href("/abudawud/")}"><span class="idx">٣</span><span class="name">سنن أبي داود</span><span class="count">${ar(5273)}</span></a></li>
 <li><span class="row"><span class="idx">٤</span><span class="name">جامع الترمذي</span><span class="count">${ar(4300)}</span></span></li>
 <li><span class="row"><span class="idx">٥</span><span class="name">سنن النسائي</span><span class="count">${ar(5758)}</span></span></li>
 <li><span class="row"><span class="idx">٦</span><span class="name">سنن ابن ماجه</span><span class="count">${ar(4340)}</span></span></li>
@@ -412,65 +412,73 @@ ${kitabs
   }),
 );
 
-const muslimKitabs = JSON.parse(read(join(ROOT, "src/data/muslim/kitabs.json")));
-const muslimOrder = JSON.parse(read(join(ROOT, "src/data/muslim/order.json")));
-const muslimIndex = new Map(muslimOrder.map((n, i) => [n, i]));
-const muslimBook = { slug: "muslim", name: "صحيح مسلم", author: "مسلم بن الحجاج", order: muslimOrder, indexOf: muslimIndex };
-const muslimByNo = new Map();
-for (let i = 0; i < 11; i++) {
-  const shard = JSON.parse(read(join(ROOT, `src/data/muslim/shards/${i}.json`)));
-  for (const h of Object.values(shard)) {
-    muslimByNo.set(h.no, h);
-    put(`muslim/${h.no}/index.html`, hadithHtml(h, muslimBook));
-    index.push(["muslim", h.no, clip(h.t, 140), h.q, muslimKitabs.find((k) => k.i === h.ki)?.short || ""]);
-    pages++;
+function emitCollection(dir, book) {
+  const list = JSON.parse(read(join(ROOT, `src/data/${dir}/kitabs.json`)));
+  const bookOrder = JSON.parse(read(join(ROOT, `src/data/${dir}/order.json`)));
+  const full = { ...book, order: bookOrder, indexOf: new Map(bookOrder.map((n, i) => [n, i])) };
+  const byNo = new Map();
+  for (let i = 0; ; i++) {
+    let shard;
+    try {
+      shard = JSON.parse(read(join(ROOT, `src/data/${dir}/shards/${i}.json`)));
+    } catch {
+      break;
+    }
+    for (const h of Object.values(shard)) {
+      byNo.set(h.no, h);
+      put(`${book.slug}/${h.no}/index.html`, hadithHtml(h, full));
+      index.push([book.slug, h.no, clip(h.t, 140), h.q, list.find((k) => k.i === h.ki)?.short || ""]);
+      pages++;
+    }
   }
-}
-const muslimPages = new Map();
-for (const k of muslimKitabs) muslimPages.set(k.i, JSON.parse(read(join(ROOT, `src/data/muslim/kitab/${k.i}.json`))));
-for (const k of muslimKitabs) {
-  const page = muslimPages.get(k.i);
-  const title = `${k.title} — صحيح مسلم`;
-  const desc = clip(`${k.title} من صحيح مسلم. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
-  const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+  for (const k of list) {
+    const page = JSON.parse(read(join(ROOT, `src/data/${dir}/kitab/${k.i}.json`)));
+    const title = `${k.title} — ${book.name}`;
+    const desc = clip(`${k.title} من ${book.name}. ${k.count} حديثًا، من ${k.first} إلى ${k.last}.`, 220);
+    const body = `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
 <h1 class="title" style="font-size:1.7rem">${esc(page.title)}</h1>
 <p class="meta">${ar(page.count)} حديثًا</p>
 ${page.babs
   .map((bab) => {
     const rows = bab.nums
       .map((n) => {
-        const h = muslimByNo.get(n);
+        const h = byNo.get(n);
         const label = h ? shortTitle(h.t) : "";
         const num = h && h.ar ? h.ar : ar(n);
-        return `<a class="entry" href="${href(`/muslim/${n}/`)}"><span class="n">${esc(num)}</span><span class="ttl">${esc(label)}</span></a>`;
+        return `<a class="entry" href="${href(`/${book.slug}/${n}/`)}"><span class="n">${esc(num)}</span><span class="ttl">${esc(label)}</span></a>`;
       })
       .join("");
     const head = bab.title ? `<h2 class="bab-label">${esc(clip(bab.title, 80))}</h2>` : "";
     return `${head}${rows}`;
   })
   .join("\n")}`;
-  put(`muslim/kitab/${k.i}/index.html`, shell({ title, desc, path: `/muslim/kitab/${k.i}/`, body }));
-}
-const muslimTotal = muslimKitabs.reduce((n, k) => n + k.count, 0);
-put(
-  "muslim/index.html",
-  shell({
-    title: "صحيح مسلم",
-    desc: `صحيح مسلم: ${muslimKitabs.length} كتابًا و${muslimTotal} حديثًا. ترقيم محمد فؤاد عبد الباقي.`,
-    path: "/muslim/",
-    body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
-<h1 class="title">صحيح مسلم</h1>
-<p class="meta">${ar(muslimKitabs.length)} كتابًا · ${ar(muslimTotal)} حديثًا</p>
+    put(`${book.slug}/kitab/${k.i}/index.html`, shell({ title, desc, path: `/${book.slug}/kitab/${k.i}/`, body }));
+  }
+  const bookTotal = list.reduce((n, k) => n + k.count, 0);
+  put(
+    `${book.slug}/index.html`,
+    shell({
+      title: book.name,
+      desc: `${book.name}: ${list.length} كتابًا و${bookTotal} حديثًا.`,
+      path: `/${book.slug}/`,
+      body: `<nav class="crumbs"><a href="${href("/")}">الكتب الستة</a></nav>
+<h1 class="title">${esc(book.name)}</h1>
+<p class="meta">${ar(list.length)} كتابًا · ${ar(bookTotal)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
 <ol class="books">
-${muslimKitabs
+${list
   .map(
-    (k) => `<li><a href="${href(`/muslim/kitab/${k.i}/`)}"><span class="idx">${ar(k.i)}</span><span class="name">${esc(k.short)}</span><span class="count">${ar(k.count)}</span></a></li>`,
+    (k) => `<li><a href="${href(`/${book.slug}/kitab/${k.i}/`)}"><span class="idx">${ar(k.i)}</span><span class="name">${esc(k.short)}</span><span class="count">${ar(k.count)}</span></a></li>`,
   )
   .join("\n")}
 </ol>`,
-  }),
-);
+    }),
+  );
+  return { kitabs: list, order: bookOrder };
+}
+
+const muslim = emitCollection("muslim", { slug: "muslim", name: "صحيح مسلم", author: "مسلم بن الحجاج" });
+const dawud = emitCollection("abudawud", { slug: "abudawud", name: "سنن أبي داود", author: "أبو داود السجستاني" });
 writeFileSync(join(OUT, "search-index.json"), JSON.stringify(index));
 
 const searchJs = `var AR="٠١٢٣٤٥٦٧٨٩";
@@ -551,10 +559,13 @@ const locs = [
   `${SITE}/`,
   `${SITE}/buxari/`,
   `${SITE}/muslim/`,
+  `${SITE}/abudawud/`,
   ...kitabs.map((k) => `${SITE}/buxari/kitab/${k.i}/`),
   ...order.map((n) => `${SITE}/buxari/${n}/`),
-  ...muslimKitabs.map((k) => `${SITE}/muslim/kitab/${k.i}/`),
-  ...muslimOrder.map((n) => `${SITE}/muslim/${n}/`),
+  ...muslim.kitabs.map((k) => `${SITE}/muslim/kitab/${k.i}/`),
+  ...muslim.order.map((n) => `${SITE}/muslim/${n}/`),
+  ...dawud.kitabs.map((k) => `${SITE}/abudawud/kitab/${k.i}/`),
+  ...dawud.order.map((n) => `${SITE}/abudawud/${n}/`),
 ];
 writeFileSync(
   join(OUT, "sitemap.xml"),
