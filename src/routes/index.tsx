@@ -27,9 +27,6 @@ function Home() {
     <Shell>
       <p className="text-sm text-accent">الكتب الستة</p>
       <h1 className="mt-3 font-ar text-4xl leading-tight">صحيح البخاري</h1>
-      <p className="mt-4 max-w-xl text-base leading-loose text-muted">
-        للإمام محمد بن إسماعيل البخاري. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن.
-      </p>
       <p className="mt-4 text-sm text-ink">
         {arDigits(kitabs.length)} كتابًا · {arDigits(total)} حديثًا
       </p>

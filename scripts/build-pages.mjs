@@ -260,7 +260,6 @@ put(
     path: "/",
     body: `<p class="kicker">الكتب الستة</p>
 <h1 class="title">صحيح البخاري</h1>
-<p class="lead">للإمام محمد بن إسماعيل البخاري. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن.</p>
 <p class="meta">${ar(kitabs.length)} كتابًا · ${ar(total)} حديثًا</p>
 <h2 class="books-h">الكتب</h2>
 <ol class="books">
