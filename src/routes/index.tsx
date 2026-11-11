@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { Shell } from "@/components/shell";
 import { arDigits } from "@/lib/digits";
 const BOOKS = [
@@ -47,6 +48,27 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const [daily, setDaily] = useState<{ slug: string; no: number; text: string; book: string } | null>(null);
+
+  useEffect(() => {
+    const now = new Date();
+    const start = Date.UTC(now.getFullYear(), 0, 1);
+    const day = Math.floor((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) - start) / 86400000);
+    fetch("/daily.json")
+      .then((r) => r.json())
+      .then((rows: [string, number, string, string][]) => {
+        const h = rows[day % rows.length];
+        if (h) setDaily({ slug: h[0], no: h[1], text: h[2], book: h[3] });
+      })
+      .catch(() => {});
+  }, []);
+
+  const dailyHref = daily
+    ? daily.slug === "buxari"
+      ? null
+      : `https://muhadisonline.github.io/sahih-bukhari/${daily.slug}/${daily.no}/`
+    : null;
+
   return (
     <Shell wide>
       <section className="pt-4">
@@ -63,6 +85,25 @@ function Home() {
           </button>
         </form>
       </section>
+      {daily ? (
+        daily.slug === "buxari" ? (
+          <Link to="/buxari/$no" params={{ no: String(daily.no) }} className="mt-8 block bg-ink p-6 text-paper">
+            <span className="text-sm text-paper/60">حديث اليوم</span>
+            <p className="mt-3 font-ar text-2xl leading-relaxed">{daily.text}</p>
+            <span className="mt-4 block text-sm text-paper/60">
+              {daily.book} · الحديث {arDigits(daily.no)}
+            </span>
+          </Link>
+        ) : (
+          <a href={dailyHref ?? "#"} className="mt-8 block bg-ink p-6 text-paper">
+            <span className="text-sm text-paper/60">حديث اليوم</span>
+            <p className="mt-3 font-ar text-2xl leading-relaxed">{daily.text}</p>
+            <span className="mt-4 block text-sm text-paper/60">
+              {daily.book} · الحديث {arDigits(daily.no)}
+            </span>
+          </a>
+        )
+      ) : null}
       <ol className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {BOOKS.map((b, i) => {
           const cls =

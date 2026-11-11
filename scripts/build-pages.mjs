@@ -193,6 +193,7 @@ ol.books a:hover .name{color:var(--accent)}
 }`;
 
 writeFileSync(join(OUT, "assets/site.css"), css);
+cpSync(join(ROOT, "src/data/daily.json"), join(OUT, "assets/daily.json"));
 cpSync(join(ROOT, "public/favicon.svg"), join(OUT, "favicon.svg"));
 writeFileSync(join(OUT, ".nojekyll"), "");
 
@@ -312,6 +313,29 @@ put(
     desc: homeDesc,
     path: "/",
     wide: true,
+    extra: `<style>
+.daily{display:block;margin-top:2.2rem;padding:1.4rem 1.5rem 1.25rem;background:#161513;color:#f7f5f2}
+.daily .eyebrow{color:rgba(247,245,242,.62)}
+.daily-text{font-family:Amiri,serif;font-size:1.5rem;line-height:1.9;margin:.7rem 0 0}
+.daily-meta{display:block;margin-top:1rem;font-size:.82rem;color:rgba(247,245,242,.62)}
+</style>
+<script>
+(function(){
+  var AR="٠١٢٣٤٥٦٧٨٩";
+  function ar(n){return String(n).replace(/\\d/g,function(d){return AR[d]})}
+  var now=new Date();
+  var start=Date.UTC(now.getFullYear(),0,1);
+  var day=Math.floor((Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())-start)/86400000);
+  fetch(${JSON.stringify(href("/assets/daily.json"))}).then(function(r){return r.json()}).then(function(rows){
+    if(!rows.length) return;
+    var h=rows[day%rows.length];
+    var a=document.getElementById("daily");
+    a.href=${JSON.stringify(BASE)}+"/"+h[0]+"/"+h[1]+"/";
+    document.getElementById("daily-text").textContent=h[2];
+    document.getElementById("daily-meta").textContent=h[3]+" · الحديث "+ar(h[1]);
+  });
+})();
+</script>`,
     body: `<section class="hero">
 <p class="eyebrow">مكتبة الحديث</p>
 <h1 class="hero-title">الكتب الستة</h1>
@@ -322,6 +346,11 @@ put(
   <button class="btn" type="submit">بحث</button>
 </form>
 </section>
+<a class="daily" id="daily" href="${href("/buxari/1/")}">
+  <span class="eyebrow">حديث اليوم</span>
+  <p class="daily-text" id="daily-text">«إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ»</p>
+  <span class="daily-meta" id="daily-meta">صحيح البخاري · الحديث ١</span>
+</a>
 <ol class="library">
 <li><a class="volume" href="${href("/buxari/")}"><span class="vol-idx" dir="ltr">١</span><span class="vol-name">صحيح البخاري</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(7349)} حديثًا</span></a></li>
 <li><a class="volume" href="${href("/muslim/")}"><span class="vol-idx" dir="ltr">٢</span><span class="vol-name">صحيح مسلم</span><span class="vol-au">مسلم بن الحجاج</span><span class="vol-ct">${ar(3031)} حديثًا</span></a></li>
