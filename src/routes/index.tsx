@@ -10,7 +10,7 @@ const BOOKS = [
   { href: "https://muhadisonline.github.io/sahih-bukhari/ibnmajah/", name: "سنن ابن ماجه", author: "محمد بن يزيد ابن ماجه", n: 4340 },
 ] as const;
 
-const NUM = ["٠١", "٠٢", "٠٣", "٠٤", "٠٥", "٠٦"];
+const NUM = ["١", "٢", "٣", "٤", "٥", "٦"];
 
 function Card({
   name,

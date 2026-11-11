@@ -323,12 +323,12 @@ put(
 </form>
 </section>
 <ol class="library">
-<li><a class="volume" href="${href("/buxari/")}"><span class="vol-idx">٠١</span><span class="vol-name">صحيح البخاري</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(7349)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/muslim/")}"><span class="vol-idx">٠٢</span><span class="vol-name">صحيح مسلم</span><span class="vol-au">مسلم بن الحجاج</span><span class="vol-ct">${ar(3031)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/abudawud/")}"><span class="vol-idx">٠٣</span><span class="vol-name">سنن أبي داود</span><span class="vol-au">أبو داود السجستاني</span><span class="vol-ct">${ar(5273)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/tirmidhi/")}"><span class="vol-idx">٠٤</span><span class="vol-name">جامع الترمذي</span><span class="vol-au">محمد بن عيسى الترمذي</span><span class="vol-ct">${ar(4300)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/nasai/")}"><span class="vol-idx">٠٥</span><span class="vol-name">سنن النسائي</span><span class="vol-au">أحمد بن شعيب النسائي</span><span class="vol-ct">${ar(5758)} حديثًا</span></a></li>
-<li><a class="volume" href="${href("/ibnmajah/")}"><span class="vol-idx">٠٦</span><span class="vol-name">سنن ابن ماجه</span><span class="vol-au">محمد بن يزيد ابن ماجه</span><span class="vol-ct">${ar(4340)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/buxari/")}"><span class="vol-idx" dir="ltr">١</span><span class="vol-name">صحيح البخاري</span><span class="vol-au">محمد بن إسماعيل البخاري</span><span class="vol-ct">${ar(7349)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/muslim/")}"><span class="vol-idx" dir="ltr">٢</span><span class="vol-name">صحيح مسلم</span><span class="vol-au">مسلم بن الحجاج</span><span class="vol-ct">${ar(3031)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/abudawud/")}"><span class="vol-idx" dir="ltr">٣</span><span class="vol-name">سنن أبي داود</span><span class="vol-au">أبو داود السجستاني</span><span class="vol-ct">${ar(5273)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/tirmidhi/")}"><span class="vol-idx" dir="ltr">٤</span><span class="vol-name">جامع الترمذي</span><span class="vol-au">محمد بن عيسى الترمذي</span><span class="vol-ct">${ar(4300)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/nasai/")}"><span class="vol-idx" dir="ltr">٥</span><span class="vol-name">سنن النسائي</span><span class="vol-au">أحمد بن شعيب النسائي</span><span class="vol-ct">${ar(5758)} حديثًا</span></a></li>
+<li><a class="volume" href="${href("/ibnmajah/")}"><span class="vol-idx" dir="ltr">٦</span><span class="vol-name">سنن ابن ماجه</span><span class="vol-au">محمد بن يزيد ابن ماجه</span><span class="vol-ct">${ar(4340)} حديثًا</span></a></li>
 </ol>`,
   }),
 );
