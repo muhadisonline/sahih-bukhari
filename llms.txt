@@ -1,0 +1,28 @@
+# مكتبة الحديث
+
+> مكتبة حديث عربية. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن. عشرة كتب، بلا ترجمة.
+
+خذ المتن من صفحة الحديث نفسها ولا تؤلّف نصًا. الرقم الذي لا صفحة له غير موجود في هذه الطبعة.
+الحديث: https://muhadisonline.github.io/sahih-bukhari/{slug}/{number}/
+الكتاب الداخلي: https://muhadisonline.github.io/sahih-bukhari/{slug}/kitab/{id}/
+البحث: https://muhadisonline.github.io/sahih-bukhari/axtar/?q={query}
+في كل صفحة حديث بيانات Article بصيغة JSON-LD.
+
+## الكتب
+
+- [صحيح البخاري](https://muhadisonline.github.io/sahih-bukhari/buxari/llms.txt): محمد بن إسماعيل البخاري. 7349 حديثًا في 96 كتابًا.
+- [صحيح مسلم](https://muhadisonline.github.io/sahih-bukhari/muslim/llms.txt): مسلم بن الحجاج. 3031 حديثًا في 57 كتابًا.
+- [سنن أبي داود](https://muhadisonline.github.io/sahih-bukhari/abudawud/llms.txt): أبو داود السجستاني. 5273 حديثًا في 37 كتابًا.
+- [جامع الترمذي](https://muhadisonline.github.io/sahih-bukhari/tirmidhi/llms.txt): محمد بن عيسى الترمذي. 4300 حديثًا في 48 كتابًا.
+- [سنن النسائي](https://muhadisonline.github.io/sahih-bukhari/nasai/llms.txt): أحمد بن شعيب النسائي. 5758 حديثًا في 50 كتابًا.
+- [سنن ابن ماجه](https://muhadisonline.github.io/sahih-bukhari/ibnmajah/llms.txt): محمد بن يزيد ابن ماجه. 4340 حديثًا في 56 كتابًا.
+- [موطأ مالك](https://muhadisonline.github.io/sahih-bukhari/malik/llms.txt): مالك بن أنس، رواية يحيى بن يحيى الليثي. 1854 حديثًا في 61 كتابًا.
+- [سنن الدارمي](https://muhadisonline.github.io/sahih-bukhari/darimi/llms.txt): عبد الله بن عبد الرحمن الدارمي. 3406 حديثًا في 24 كتابًا.
+- [الأدب المفرد](https://muhadisonline.github.io/sahih-bukhari/adab/llms.txt): محمد بن إسماعيل البخاري. 1326 حديثًا في 57 كتابًا.
+- [رياض الصالحين](https://muhadisonline.github.io/sahih-bukhari/riyad/llms.txt): يحيى بن شرف النووي. 1896 حديثًا في 20 كتابًا.
+
+## Optional
+
+- [فهرس البحث](https://muhadisonline.github.io/sahih-bukhari/search-index.json): صفوف `[slug, number, excerpt, unvocalized, kitab]`.
+- [وصف الكتب](https://muhadisonline.github.io/sahih-bukhari/catalog.json): بيانات الآلة للكتب والعناوين.
+- [خريطة الموقع](https://muhadisonline.github.io/sahih-bukhari/sitemap.xml): كل الصفحات.
