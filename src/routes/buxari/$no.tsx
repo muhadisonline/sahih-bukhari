@@ -38,6 +38,76 @@ function MissingHadith() {
   );
 }
 
+function isnadEnd(text: string) {
+  const HAR = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/;
+  let norm = "";
+  const map: number[] = [];
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (HAR.test(c)) continue;
+    let ch = c;
+    if ("أإآٱ".includes(ch)) ch = "ا";
+    else if (ch === "ى") ch = "ي";
+    norm += ch;
+    map.push(i);
+  }
+  const origAt = (ni: number) => (ni >= map.length ? text.length : map[Math.max(0, ni)]);
+  const lead = /حدثنا|حدثني|اخبرنا|اخبرني|انبانا|سمعت|(?:^|\s)عن |وعن/;
+  if (!lead.test(norm)) return -1;
+  let q = -1;
+  for (const mark of ["«", '"', "“"]) {
+    const i = text.indexOf(mark);
+    if (i > 12 && (q < 0 || i < q)) q = i;
+  }
+  if (q > 12) {
+    let pre = "";
+    for (let i = 0; i < q; i++) {
+      const c = text[i];
+      if (HAR.test(c)) continue;
+      pre += "أإآٱ".includes(c) ? "ا" : c === "ى" ? "ي" : c;
+    }
+    if (lead.test(pre) && !/فقال|فقالت|فقالوا/.test(pre)) return q;
+  }
+  let cut = norm.length;
+  for (const w of ["فقال", "فقالت", "فقالوا"]) {
+    const j = norm.indexOf(w);
+    if (j >= 0) cut = Math.min(cut, j);
+  }
+  const qal = /(?:^|[\s،.:])(قالا|قالوا|قالت|يقول|تقول|قال)(?![\u0621-\u064A])\s*[:：]?\s*/g;
+  const next = /حدثنا|حدثني|اخبرنا|اخبرني|انبانا|انباني/;
+  let m: RegExpExecArray | null;
+  while ((m = qal.exec(norm))) {
+    if (m.index >= cut) break;
+    const after = norm.slice(m.index + m[0].length, m.index + m[0].length + 40);
+    if (next.test(after) || (/^سمعت/.test(after) && !/^سمعت\s+(?:رسول|النبي|الرسول)/.test(after))) continue;
+    const end = m.index + m[0].length;
+    if (end < 8) continue;
+    if (end > Math.max(340, Math.floor(norm.length * 0.72))) return -1;
+    return origAt(end);
+  }
+  const colon = /:\s*(?:ان |كان |كانت )/g;
+  while ((m = colon.exec(norm))) {
+    if (m.index >= cut) break;
+    if (m.index >= 12 && m.index <= 420) return origAt(m.index + 1);
+  }
+  const an = /(?:،|,)?\s+ان (?:النبي|رسول|الرسول|الناس)/.exec(norm);
+  if (an && an.index >= 20 && an.index <= 400 && an.index < cut) {
+    return origAt(an.index + an[0].lastIndexOf("ان"));
+  }
+  return -1;
+}
+
+function Matn({ text }: { text: string }) {
+  const i = isnadEnd(text);
+  if (i <= 12 || i >= text.length - 8) return text;
+  return (
+    <>
+      <span className="text-[#3f5c4c]">{text.slice(0, i)}</span>
+      {text.slice(i)}
+    </>
+  );
+}
+
 function HadithView() {
   const data = Route.useLoaderData();
   const [copied, setCopied] = useState(false);
@@ -110,7 +180,9 @@ function HadithView() {
             {data.b}
           </h1>
         )}
-        <p className="hadith-body mt-5 whitespace-pre-wrap">{data.t}</p>
+        <p className="hadith-body mt-5 whitespace-pre-wrap">
+          <Matn text={data.t} />
+        </p>
         {(data.g || data.bg || data.s) && (
           <p className="mt-8 border-t border-line pt-4 text-sm leading-loose text-muted">
             {data.bg ? <span>ترقيم البغا {data.bg}</span> : null}

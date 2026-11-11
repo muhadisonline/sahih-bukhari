@@ -165,6 +165,7 @@ ol.books a:hover .name{color:var(--accent)}
 .no{display:block;margin-bottom:.45rem;color:var(--accent);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.8rem}
 .front{font-family:Amiri,serif;font-size:1.02rem;line-height:1.75;color:var(--muted)}
 .matn{font-family:Amiri,serif;font-size:1.22rem;line-height:1.9;white-space:pre-wrap;margin-top:1.25rem}
+.isnad{color:#3f5c4c}
 .note{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.875rem;line-height:2}
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
@@ -337,7 +338,7 @@ function shell({ title, desc, path, body, extra = "", wide = false, home = false
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=${home ? 12 : 11}">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=13">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body${home ? ' class="home"' : ""}>
@@ -520,6 +521,71 @@ if (HOME_ONLY) {
   process.exit(0);
 }
 
+function isnadEnd(text) {
+  const HAR = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/;
+  let norm = "";
+  const map = [];
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (HAR.test(c)) continue;
+    let ch = c;
+    if ("أإآٱ".includes(ch)) ch = "ا";
+    else if (ch === "ى") ch = "ي";
+    norm += ch;
+    map.push(i);
+  }
+  const origAt = (ni) => (ni >= map.length ? text.length : map[Math.max(0, ni)]);
+  const lead = /حدثنا|حدثني|اخبرنا|اخبرني|انبانا|سمعت|(?:^|\s)عن |وعن/;
+  if (!lead.test(norm)) return -1;
+  let q = -1;
+  for (const mark of ["«", '"', "“"]) {
+    const i = text.indexOf(mark);
+    if (i > 12 && (q < 0 || i < q)) q = i;
+  }
+  if (q > 12) {
+    let pre = "";
+    for (let i = 0; i < q; i++) {
+      const c = text[i];
+      if (HAR.test(c)) continue;
+      pre += "أإآٱ".includes(c) ? "ا" : c === "ى" ? "ي" : c;
+    }
+    if (lead.test(pre) && !/فقال|فقالت|فقالوا/.test(pre)) return q;
+  }
+  let cut = norm.length;
+  for (const w of ["فقال", "فقالت", "فقالوا"]) {
+    const j = norm.indexOf(w);
+    if (j >= 0) cut = Math.min(cut, j);
+  }
+  const qal = /(?:^|[\s،.:])(قالا|قالوا|قالت|يقول|تقول|قال)(?![\u0621-\u064A])\s*[:：]?\s*/g;
+  const next = /حدثنا|حدثني|اخبرنا|اخبرني|انبانا|انباني/;
+  let m;
+  while ((m = qal.exec(norm))) {
+    if (m.index >= cut) break;
+    const after = norm.slice(m.index + m[0].length, m.index + m[0].length + 40);
+    if (next.test(after) || (/^سمعت/.test(after) && !/^سمعت\s+(?:رسول|النبي|الرسول)/.test(after))) continue;
+    const end = m.index + m[0].length;
+    if (end < 8) continue;
+    if (end > Math.max(340, Math.floor(norm.length * 0.72))) return -1;
+    return origAt(end);
+  }
+  const colon = /:\s*(?:ان |كان |كانت )/g;
+  while ((m = colon.exec(norm))) {
+    if (m.index >= cut) break;
+    if (m.index >= 12 && m.index <= 420) return origAt(m.index + 1);
+  }
+  const an = /(?:،|,)?\s+ان (?:النبي|رسول|الرسول|الناس)/.exec(norm);
+  if (an && an.index >= 20 && an.index <= 400 && an.index < cut) {
+    return origAt(an.index + an[0].lastIndexOf("ان"));
+  }
+  return -1;
+}
+
+function matnHtml(text) {
+  const i = isnadEnd(text);
+  if (i <= 12 || i >= text.length - 8) return esc(text);
+  return `<span class="isnad">${esc(text.slice(0, i))}</span>${esc(text.slice(i))}`;
+}
+
 function hadithHtml(h, book) {
   const i = book.indexOf.get(h.no);
   const prev = i > 0 ? book.order[i - 1] : null;
@@ -567,7 +633,7 @@ function hadithHtml(h, book) {
 <article>
 ${front}
 ${heading}
-<p class="matn" id="matn">${esc(h.t)}</p>
+<p class="matn" id="matn">${matnHtml(h.t)}</p>
 ${note}
 </article>
 <nav class="pager" aria-label="الأحاديث المجاورة">
