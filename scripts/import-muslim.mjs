@@ -10,8 +10,25 @@ const OUT = new URL(`../src/data/${slug}/`, import.meta.url).pathname;
 const AR = "٠١٢٣٤٥٦٧٨٩";
 const ar = (n) => String(n).replace(/\d/g, (d) => AR[Number(d)]);
 
-function plain(s) {
+function expand(s) {
   return String(s)
+    .replace(/\uFDFA/g, "صلى الله عليه وسلم")
+    .replace(/\uFDFB/g, "جل جلاله")
+    .replace(/\uFDFD/g, "بسم الله الرحمن الرحيم")
+    .replace(/\uFD40/g, "رحمه الله")
+    .replace(/\uFD41/g, "رضي الله عنه")
+    .replace(/\uFD42/g, "رضي الله عنها")
+    .replace(/\uFD43/g, "رضي الله عنهما")
+    .replace(/\uFD44/g, "رضي الله عنهم")
+    .replace(/\uFD45/g, "رضي الله عنهن")
+    .replace(/\uFD47/g, "عليه السلام")
+    .replace(/\uFD48/g, "عليهما السلام")
+    .replace(/\uFD49/g, "عليهم السلام")
+    .replace(/\uFD4A/g, "عليه الصلاة والسلام");
+}
+
+function plain(s) {
+  return expand(s)
     .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -73,7 +90,7 @@ for (const no of nums) {
   const seen = new Set();
   const texts = [];
   for (const row of list) {
-    const t = String(row[5] || "").replace(/\s+\n/g, "\n").trim();
+    const t = expand(String(row[5] || "")).replace(/\s+\n/g, "\n").trim();
     if (!t || seen.has(t)) continue;
     seen.add(t);
     texts.push(t);
@@ -85,7 +102,7 @@ for (const no of nums) {
       if (!item || !item[1]) continue;
       const kind = item[0] === "basmala" || item[0] === "bab" || item[0] === "kitab" || item[0] === "text" ? item[0] : "text";
       if (kind === "text" && item[1].length > 4000) continue;
-      f.push({ kind, text: item[1].trim() });
+      f.push({ kind, text: expand(item[1]).trim() });
     }
   }
   records.push({
@@ -98,7 +115,7 @@ for (const no of nums) {
     t: texts.join("\n\n"),
     q: norm(texts.join(" ")),
     f,
-    g: String(r[4] || "").trim(),
+    g: expand(String(r[4] || "")).trim(),
   });
 }
 
