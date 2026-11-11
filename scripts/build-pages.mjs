@@ -56,7 +56,10 @@ function quoteOf(text) {
 
 const css = `:root{--paper:#fbfbf9;--ink:#1c1915;--muted:#6f6a63;--line:#e4dfd6;--accent:#0f6b4c}
 *{box-sizing:border-box}
-html{background:var(--paper);color:var(--ink)}
+html{background:var(--paper);color:var(--ink);font-size:15px}
+html[data-size="1"]{font-size:17px}
+html[data-size="2"]{font-size:19px}
+html[data-size="3"]{font-size:21px}
 body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:"IBM Plex Sans Arabic","Noto Naskh Arabic",sans-serif;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit;color:inherit}
@@ -67,7 +70,11 @@ header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);back
 .bar{display:flex;align-items:center;gap:1rem;min-height:4.25rem}
 .brand{display:flex;align-items:center;gap:.75rem}
 .mark{width:2.25rem;height:2.25rem;display:grid;place-items:center;background:var(--accent);color:var(--paper);font-family:Amiri,serif;font-size:1.25rem}
-.brand-name{font-family:Amiri,serif;font-size:1.35rem}
+.brand-name{font-family:Amiri,serif;font-size:1.15rem}
+.set{position:relative;flex:none}
+.gear{width:2.75rem;height:2.75rem;border:1px solid var(--line);background:transparent;display:grid;place-items:center;color:var(--ink)}
+.set-panel{position:absolute;top:calc(100% + .45rem);inset-inline-end:0;z-index:20;background:var(--paper);border:1px solid var(--line);padding:.45rem .55rem;align-items:center;gap:.4rem;white-space:nowrap;font-size:.85rem}
+.set-panel button{width:2.75rem;height:2.75rem;border:1px solid var(--line);background:transparent}
 .search{margin-inline-start:auto;display:flex;gap:.5rem;width:min(22rem,100%)}
 input{height:2.75rem;width:100%;border:1px solid var(--line);background:var(--paper);padding-inline:.75rem}
 .btn{height:2.75rem;display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--paper);border:0;padding-inline:1rem;white-space:nowrap}
@@ -77,31 +84,31 @@ main{flex:1;padding-block:2.5rem}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.875rem;line-height:2;padding-block:2rem}
 .kicker{color:var(--accent);font-size:.875rem;margin:0}
 h1{font-family:Amiri,serif;font-weight:400;line-height:1.45}
-.title{font-size:3rem;margin:.6rem 0 0}
-.lead{color:var(--muted);line-height:2;max-width:38rem}
+.title{font-size:2.15rem;margin:.5rem 0 0}
+.lead{color:var(--muted);line-height:1.8;max-width:38rem}
 .meta{font-size:.9rem}
 .jump{margin-top:2rem;border:1px solid var(--line);padding:1rem;display:flex;gap:.75rem;align-items:end}
 .jump label{flex:1;display:flex;flex-direction:column;gap:.5rem;font-size:.875rem}
-h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.7rem;margin:3.2rem 0 0}
+h2.books-h{font-family:Amiri,serif;font-weight:400;font-size:1.4rem;margin:2.4rem 0 0}
 ol.books{list-style:none;padding:0;margin:.4rem 0 0}
 ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-block:.7rem;border-bottom:1px solid var(--line)}
 .idx{width:2rem;flex:none;color:var(--muted);font-size:.875rem}
-.name{font-family:Amiri,serif;font-size:1.3rem;line-height:1.8}
+.name{font-family:Amiri,serif;font-size:1.12rem;line-height:1.65}
 .count{margin-inline-start:auto;color:var(--muted);font-size:.875rem}
 .crumbs{display:flex;flex-wrap:wrap;gap:.45rem;align-items:baseline;color:var(--muted);font-size:.875rem}
 .crumbs a{color:var(--accent);font-family:Amiri,serif;font-size:1.15rem}
-.basmala{text-align:center;font-family:Amiri,serif;font-size:1.9rem;margin:0}
-.bab{margin:1.4rem 0 0}
-.no{display:block;margin-bottom:.7rem;color:var(--accent);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.875rem}
-.front{font-family:Amiri,serif;font-size:1.25rem;line-height:1.9;color:var(--muted)}
-.matn{font-family:Amiri,serif;font-size:1.7rem;line-height:2.25;white-space:pre-wrap;margin-top:2rem}
+.basmala{text-align:center;font-family:Amiri,serif;font-size:1.45rem;margin:0}
+.bab{margin:1rem 0 0;font-size:1.2rem}
+.no{display:block;margin-bottom:.45rem;color:var(--accent);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.8rem}
+.front{font-family:Amiri,serif;font-size:1.02rem;line-height:1.75;color:var(--muted)}
+.matn{font-family:Amiri,serif;font-size:1.22rem;line-height:1.9;white-space:pre-wrap;margin-top:1.25rem}
 .note{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.875rem;line-height:2}
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
 .section{margin-top:0}
 .babs{list-style:none;padding:0;margin:1.4rem 0 0}
 .babs li{border-bottom:1px solid var(--line);padding-block:.85rem}
-.babs h2{font-family:Amiri,serif;font-weight:400;font-size:1.25rem;line-height:1.8;margin:0}
+.babs h2{font-family:Amiri,serif;font-weight:400;font-size:1.08rem;line-height:1.65;margin:0}
 .num-block{margin-top:3.2rem;border-top:1px solid var(--line);padding-top:1.6rem}
 .num-block > h2{margin:0;font-size:.875rem;font-weight:500;color:var(--muted)}
 .num-group{margin-top:1.35rem}
@@ -120,8 +127,7 @@ ol.books a{display:flex;gap:1rem;align-items:baseline;min-height:3.5rem;padding-
   .search{display:none}
   .mobile-search{display:inline-flex}
   .jump{flex-direction:column;align-items:stretch}
-  .title{font-size:2.45rem}
-  .matn{font-size:1.45rem;line-height:2.2}
+  .title{font-size:1.85rem}
 }
 @media(min-width:640px){
   .nums{grid-template-columns:repeat(8,minmax(0,1fr))}
@@ -154,7 +160,8 @@ function shell({ title, desc, path, body, extra = "" }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${font}">
-<link rel="stylesheet" href="${href("/assets/site.css")}?v=4">
+<link rel="stylesheet" href="${href("/assets/site.css")}?v=5">
+<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
 </head>
 <body>
 <header>
@@ -169,6 +176,16 @@ function shell({ title, desc, path, body, extra = "" }) {
       <button class="btn" type="submit">بحث</button>
     </form>
     <a class="mobile-search" href="${href("/axtar/")}">بحث</a>
+    <div class="set">
+      <button class="gear" type="button" id="gear" aria-label="حجم الخط" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
+      </button>
+      <div class="set-panel" id="set-panel" style="display:none">
+        <span>حجم الخط</span>
+        <button type="button" id="size-down" aria-label="أصغر">−</button>
+        <button type="button" id="size-up" aria-label="أكبر">+</button>
+      </div>
+    </div>
   </div>
 </header>
 <main class="wrap">
@@ -177,6 +194,34 @@ ${body}
 <footer>
   <p class="wrap">الطبعة السلطانية (بولاق، ١٣١١ هـ)، دار طوق النجاة. الترقيم ترقيم محمد فؤاد عبد الباقي. المتن بالعربية كما هو.</p>
 </footer>
+<script>
+(function () {
+  var key = "bukhari-size";
+  function get() {
+    var n = Number(localStorage.getItem(key) || "0");
+    return n >= 0 && n <= 3 ? n : 0;
+  }
+  function apply(n) {
+    document.documentElement.setAttribute("data-size", String(n));
+    localStorage.setItem(key, String(n));
+  }
+  var gear = document.getElementById("gear");
+  var panel = document.getElementById("set-panel");
+  gear.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var open = panel.style.display === "none";
+    panel.style.display = open ? "flex" : "none";
+    gear.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.addEventListener("click", function () {
+    panel.style.display = "none";
+    gear.setAttribute("aria-expanded", "false");
+  });
+  panel.addEventListener("click", function (e) { e.stopPropagation(); });
+  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
+  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
+})();
+</script>
 ${extra}
 </body>
 </html>

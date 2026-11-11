@@ -20,6 +20,19 @@
   html {
     background: var(--color-paper);
     color: var(--color-ink);
+    font-size: 15px;
+  }
+
+  html[data-size="1"] {
+    font-size: 17px;
+  }
+
+  html[data-size="2"] {
+    font-size: 19px;
+  }
+
+  html[data-size="3"] {
+    font-size: 21px;
   }
 
   body {
@@ -40,14 +53,7 @@
 
 .hadith-body {
   font-family: var(--font-ar);
-  font-size: 1.7rem;
-  line-height: 2.25;
+  font-size: 1.2rem;
+  line-height: 1.9;
   text-align: start;
-}
-
-@media (max-width: 640px) {
-  .hadith-body {
-    font-size: 1.45rem;
-    line-height: 2.2;
-  }
 }

@@ -92,25 +92,25 @@ function HadithView() {
           if (item.kind === "kitab") return null;
           if (item.kind === "bab") {
             return (
-              <h1 key={i} className="mt-6 font-ar text-2xl leading-relaxed">
+              <h1 key={i} className="mt-4 font-ar text-xl leading-relaxed">
                 <span className="mb-3 block text-sm text-accent">الحديث {data.ar}</span>
                 {item.text}
               </h1>
             );
           }
           return (
-            <p key={i} className="mt-4 font-ar text-xl leading-relaxed text-muted">
+            <p key={i} className="mt-3 font-ar text-base leading-relaxed text-muted">
               {item.text}
             </p>
           );
         })}
         {!babInFront && (
-          <h1 className="mt-6 font-ar text-2xl leading-relaxed">
+          <h1 className="mt-4 font-ar text-xl leading-relaxed">
             <span className="mb-3 block text-sm text-accent">الحديث {data.ar}</span>
             {data.b}
           </h1>
         )}
-        <p className="hadith-body mt-8 whitespace-pre-wrap">{data.t}</p>
+        <p className="hadith-body mt-5 whitespace-pre-wrap">{data.t}</p>
         {(data.g || data.bg || data.s) && (
           <p className="mt-8 border-t border-line pt-4 text-sm leading-loose text-muted">
             {data.bg ? <span>ترقيم البغا {data.bg}</span> : null}

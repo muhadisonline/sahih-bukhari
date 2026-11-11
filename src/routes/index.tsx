@@ -26,7 +26,7 @@ function Home() {
   return (
     <Shell>
       <p className="text-sm text-accent">الكتب الستة</p>
-      <h1 className="mt-3 font-ar text-5xl leading-tight">صحيح البخاري</h1>
+      <h1 className="mt-3 font-ar text-4xl leading-tight">صحيح البخاري</h1>
       <p className="mt-4 max-w-xl text-base leading-loose text-muted">
         للإمام محمد بن إسماعيل البخاري. كل حديث في صفحة مستقلة: الرقم، والكتاب، والباب، والمتن.
       </p>
@@ -44,7 +44,7 @@ function Home() {
               className="flex min-h-14 items-baseline gap-4 py-3"
             >
               <span className="w-8 shrink-0 text-sm text-muted">{arDigits(k.i)}</span>
-              <span className="font-ar text-xl leading-relaxed">{k.short}</span>
+              <span className="font-ar text-lg leading-relaxed">{k.short}</span>
               <span className="ms-auto shrink-0 text-sm text-muted">{arDigits(k.count)}</span>
             </Link>
           </li>

@@ -34,6 +34,11 @@ export const Route = createRootRoute({
   component: () => (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}`,
+          }}
+        />
         <HeadContent />
       </head>
       <body className="min-h-screen bg-paper text-ink antialiased">
