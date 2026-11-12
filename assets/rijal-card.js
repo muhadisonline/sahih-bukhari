@@ -57,31 +57,51 @@
     return foldMap(value).text.replace(/\s+/g, " ").trim();
   }
 
+  function abu(token) {
+    var mark = "";
+    var core = token;
+    if (core.charAt(0) === "و" && core.length > 2) {
+      mark = "و";
+      core = core.slice(1);
+    }
+    if (core === "ابي" || core === "ابا" || core === "ابو") core = "ابو";
+    return mark + core;
+  }
+
   function tokensOf(value) {
     var parts = fold(value).split(" ");
     var out = [];
-    for (var i = 0; i < parts.length; i++) if (parts[i] && !SKIP[parts[i]]) out.push(parts[i]);
+    for (var i = 0; i < parts.length; i++) {
+      var token = abu(parts[i]);
+      if (token && !SKIP[token]) out.push(token);
+    }
     return out;
   }
 
   function prepare(rows) {
     return rows.map(function (row) {
       var bag = {};
-      tokensOf([row.n, row.a, row.l].join(" ")).forEach(function (token) { bag[token] = 1; });
-      return { row: row, tokens: tokensOf(row.n), bag: bag };
+      tokensOf([row.n, row.y, row.a, row.l].join(" ")).forEach(function (token) { bag[token] = 1; });
+      return { row: row, tokens: tokensOf(row.n), kunya: tokensOf(row.y), bag: bag };
     });
+  }
+
+  function prefix(person, tokens) {
+    var lists = [person.tokens, person.kunya];
+    for (var i = 0; i < lists.length; i++) {
+      var list = lists[i];
+      if (!list || list.length < tokens.length) continue;
+      var same = true;
+      for (var k = 0; k < tokens.length; k++) if (list[k] !== tokens[k]) { same = false; break; }
+      if (same) return true;
+    }
+    return false;
   }
 
   function matchTokens(people, tokens) {
     for (var n = tokens.length; n >= 2; n--) {
       var hits = [];
-      for (var i = 0; i < people.length; i++) {
-        var person = people[i];
-        if (person.tokens.length < n) continue;
-        var same = true;
-        for (var k = 0; k < n; k++) if (person.tokens[k] !== tokens[k]) { same = false; break; }
-        if (same) hits.push(person);
-      }
+      for (var i = 0; i < people.length; i++) if (prefix(people[i], tokens.slice(0, n))) hits.push(people[i]);
       var extra = tokens.slice(n);
       if (extra.length) {
         if (!hits.length) continue;
@@ -100,14 +120,7 @@
 
   function sahabiAfterRadi(people, tokens) {
     var hits = [];
-    var n = tokens.length;
-    for (var i = 0; i < people.length; i++) {
-      var person = people[i];
-      if (person.tokens.length < n) continue;
-      var same = true;
-      for (var k = 0; k < n; k++) if (person.tokens[k] !== tokens[k]) { same = false; break; }
-      if (same) hits.push(person);
-    }
+    for (var i = 0; i < people.length; i++) if (prefix(people[i], tokens)) hits.push(people[i]);
     var sahaba = hits.filter(function (person) { return person.row.g === "s"; });
     if (sahaba.length === 1) return sahaba[0].row;
     return null;
@@ -130,11 +143,12 @@
   function isVerb(token) {
     if (token === "عن" || token === "وعن" || token === "فعن") return true;
     var core = token.replace(/^[وف]/, "");
-    return /^(حدثنا|حدثني|حدثناه|حدثتها|حدثته|حدثتنا|اخبرنا|اخبرني|اخبره|اخبرته|اخبرتها|انبانا|انباني|سمعت|سمع|يحدث|يحدثه|تحدث)$/.test(core);
+    return /^(حدثنا|حدثني|حدثناه|حدثتها|حدثته|حدثتنا|اخبرنا|اخبرني|اخبره|اخبرته|اخبرتها|انبانا|انباني|سمعنا|سمعناه|سمعته|سمعا|سمعوا|سمعت|سمع|يحدث|يحدثه|تحدث)$/.test(core);
   }
 
   function owns(people, row, token) {
     var bare = token.charAt(0) === "و" ? token.slice(1) : token;
+    if (bare === "ابو") return false;
     for (var i = 0; i < people.length; i++) {
       if (people[i].row.i !== row.i) continue;
       return !!(people[i].bag[token] || people[i].bag[bare]);
@@ -152,12 +166,13 @@
       var from = -1;
       var to = -1;
       var stopped = "";
+      var conjAt = -1;
       for (var j = i + 1; j < words.length && j < i + 14; j++) {
-        var token = words[j].token;
+        var token = abu(words[j].token);
         if (isVerb(token) || STOP[token] || token === "و") { stopped = token; break; }
         if (tokens.length >= 2 && token.charAt(0) === "و" && token.length > 2) {
           var rowNow = matchTokens(people, tokens);
-          if (rowNow && !owns(people, rowNow, token)) { stopped = "و"; break; }
+          if (rowNow && !owns(people, rowNow, token)) { stopped = "و"; conjAt = j; break; }
         }
         if (SKIP[token]) {
           to = words[j].end;
@@ -170,11 +185,34 @@
       if (tokens.length < 2 || BAD[tokens[0]] || from < 0) continue;
       var row = matchTokens(people, tokens);
       if (!row && stopped === "رضي") row = sahabiAfterRadi(people, tokens);
-      if (!row) continue;
-      var start = folded.map[from];
-      var end = folded.map[Math.min(to - 1, folded.map.length - 1)] + 1;
-      while (end < text.length && HAR.test(text.charAt(end))) end++;
-      found.push({ start: start, end: end, row: row });
+      if (row) {
+        var start = folded.map[from];
+        var end = folded.map[Math.min(to - 1, folded.map.length - 1)] + 1;
+        while (end < text.length && HAR.test(text.charAt(end))) end++;
+        found.push({ start: start, end: end, row: row });
+      }
+      if (conjAt < 0) continue;
+      var tokens2 = [];
+      var from2 = -1;
+      var to2 = -1;
+      var stopped2 = "";
+      for (var j2 = conjAt; j2 < words.length && j2 < conjAt + 12; j2++) {
+        var token2 = abu(words[j2].token);
+        if (j2 === conjAt && token2.charAt(0) === "و") token2 = token2.slice(1);
+        if (j2 > conjAt && (isVerb(token2) || STOP[token2] || token2.charAt(0) === "و")) { stopped2 = token2; break; }
+        if (SKIP[token2]) { to2 = words[j2].end; continue; }
+        if (from2 < 0) from2 = words[j2].start + 1;
+        to2 = words[j2].end;
+        tokens2.push(token2);
+      }
+      if (tokens2.length < 2 || BAD[tokens2[0]] || from2 < 0) continue;
+      var row2 = matchTokens(people, tokens2);
+      if (!row2 && stopped2 === "رضي") row2 = sahabiAfterRadi(people, tokens2);
+      if (!row2) continue;
+      var start2 = folded.map[from2];
+      var end2 = folded.map[Math.min(to2 - 1, folded.map.length - 1)] + 1;
+      while (end2 < text.length && HAR.test(text.charAt(end2))) end2++;
+      found.push({ start: start2, end: end2, row: row2 });
     }
     found.sort(function (a, b) { return b.end - b.start - (a.end - a.start) || a.start - b.start; });
     var kept = [];
