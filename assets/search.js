@@ -35,7 +35,8 @@ function render(q){
     }
     status.textContent=hits.length?ar(hits.length)+" نتيجة"+(hits.length>=40?" — تُعرض أول أربعين":""):"لا يوجد حديث مطابق";
     box.innerHTML=hits.map(function(h){
-      return '<li><a href="'+BASE+'/'+h[0]+'/'+h[1]+'/"><span class="hit-no">'+escHtml(BOOKS[h[0]]||"")+' · الحديث '+ar(h[1])+'</span><span class="hit-k">'+escHtml(h[4]||"")+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
+      var href=h[0]==="buxari"?"https://muhadisonline.github.io/buxari/"+h[1]+"/":BASE+"/"+h[0]+"/"+h[1]+"/";
+      return '<li><a href="'+href+'"><span class="hit-no">'+escHtml(BOOKS[h[0]]||"")+' · الحديث '+ar(h[1])+'</span><span class="hit-k">'+escHtml(h[4]||"")+'</span><span class="hit-s">'+escHtml(h[2])+'</span></a></li>';
     }).join("");
   });
 }
