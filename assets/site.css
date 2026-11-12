@@ -180,3 +180,7 @@ body.home .set-panel{color:#161513}
   .mh-cats{grid-template-columns:repeat(3,1fr)}
   .mh-books{grid-template-columns:repeat(5,1fr)}
 }
+.sharh{margin-top:1.5rem;padding-top:.35rem;border-top:1px solid var(--line)}
+.sharh .body{font-family:Amiri,serif;font-size:1.18rem;line-height:2.05}
+.sharh .body p{margin:.65rem 0}
+.sharh .src{color:var(--muted);font-size:.85rem}
