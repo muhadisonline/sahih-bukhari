@@ -2,29 +2,29 @@
 
 > رياض الصالحين، يحيى بن شرف النووي. 1896 حديثًا، مرقمة من 1 إلى 1896. 20 كتابًا.
 
-صفحة الحديث: https://muhadisonline.github.io/sahih-bukhari/riyad/{number}/
-صفحة الكتاب: https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/{id}/
+صفحة الحديث: https://sunan.online/riyad/{number}/
+صفحة الكتاب: https://sunan.online/riyad/kitab/{id}/
 انقل المتن من الصفحة. لا تترجم، ولا تكمل رقمًا ناقصًا.
 
 ## الكتب
 
-- [كتاب المقدمات](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/1/): 679 حديثًا، من 1 إلى 679.
-- [كتاب الأدب](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/2/): 47 حديثًا، من 680 إلى 726.
-- [كتاب أدب الطعام](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/3/): 51 حديثًا، من 727 إلى 777.
-- [كتاب اللباس](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/4/): 35 حديثًا، من 778 إلى 812.
-- [كتاب آداب النوم](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/5/): 31 حديثًا، من 813 إلى 843.
-- [كتاب السلام](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/6/): 50 حديثًا، من 844 إلى 893.
-- [كتاب عيادة المريض وتشييع الميت والصلاة عليه وحضور دفنه](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/7/): 62 حديثًا، من 894 إلى 955.
-- [كتاب آداب السفر](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/8/): 35 حديثًا، من 956 إلى 990.
-- [كتاب الفضائل](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/9/): 277 حديثًا، من 991 إلى 1267.
-- [كتاب الاعتكاف](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/10/): 3 حديثًا، من 1268 إلى 1270.
-- [كتاب الحج](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/11/): 14 حديثًا، من 1271 إلى 1284.
-- [كتاب الجهاد](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/12/): 91 حديثًا، من 1285 إلى 1375.
-- [كتاب العلم](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/13/): 17 حديثًا، من 1376 إلى 1392.
-- [كتاب حمد الله تعالى وشكره](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/14/): 4 حديثًا، من 1393 إلى 1396.
-- [كتاب الصلاة على رسول الله صلى الله عليه وسلم](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/15/): 11 حديثًا، من 1397 إلى 1407.
-- [كتاب الأذكار](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/16/): 57 حديثًا، من 1408 إلى 1464.
-- [كتاب الدعوات](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/17/): 46 حديثًا، من 1465 إلى 1510.
-- [كتاب الأمور المنهي عنها](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/18/): 297 حديثًا، من 1511 إلى 1807.
-- [كتاب المنثورات والملح](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/19/): 61 حديثًا، من 1808 إلى 1868.
-- [كتاب الاستغفار](https://muhadisonline.github.io/sahih-bukhari/riyad/kitab/20/): 28 حديثًا، من 1869 إلى 1896.
+- [كتاب المقدمات](https://sunan.online/riyad/kitab/1/): 679 حديثًا، من 1 إلى 679.
+- [كتاب الأدب](https://sunan.online/riyad/kitab/2/): 47 حديثًا، من 680 إلى 726.
+- [كتاب أدب الطعام](https://sunan.online/riyad/kitab/3/): 51 حديثًا، من 727 إلى 777.
+- [كتاب اللباس](https://sunan.online/riyad/kitab/4/): 35 حديثًا، من 778 إلى 812.
+- [كتاب آداب النوم](https://sunan.online/riyad/kitab/5/): 31 حديثًا، من 813 إلى 843.
+- [كتاب السلام](https://sunan.online/riyad/kitab/6/): 50 حديثًا، من 844 إلى 893.
+- [كتاب عيادة المريض وتشييع الميت والصلاة عليه وحضور دفنه](https://sunan.online/riyad/kitab/7/): 62 حديثًا، من 894 إلى 955.
+- [كتاب آداب السفر](https://sunan.online/riyad/kitab/8/): 35 حديثًا، من 956 إلى 990.
+- [كتاب الفضائل](https://sunan.online/riyad/kitab/9/): 277 حديثًا، من 991 إلى 1267.
+- [كتاب الاعتكاف](https://sunan.online/riyad/kitab/10/): 3 حديثًا، من 1268 إلى 1270.
+- [كتاب الحج](https://sunan.online/riyad/kitab/11/): 14 حديثًا، من 1271 إلى 1284.
+- [كتاب الجهاد](https://sunan.online/riyad/kitab/12/): 91 حديثًا، من 1285 إلى 1375.
+- [كتاب العلم](https://sunan.online/riyad/kitab/13/): 17 حديثًا، من 1376 إلى 1392.
+- [كتاب حمد الله تعالى وشكره](https://sunan.online/riyad/kitab/14/): 4 حديثًا، من 1393 إلى 1396.
+- [كتاب الصلاة على رسول الله صلى الله عليه وسلم](https://sunan.online/riyad/kitab/15/): 11 حديثًا، من 1397 إلى 1407.
+- [كتاب الأذكار](https://sunan.online/riyad/kitab/16/): 57 حديثًا، من 1408 إلى 1464.
+- [كتاب الدعوات](https://sunan.online/riyad/kitab/17/): 46 حديثًا، من 1465 إلى 1510.
+- [كتاب الأمور المنهي عنها](https://sunan.online/riyad/kitab/18/): 297 حديثًا، من 1511 إلى 1807.
+- [كتاب المنثورات والملح](https://sunan.online/riyad/kitab/19/): 61 حديثًا، من 1808 إلى 1868.
+- [كتاب الاستغفار](https://sunan.online/riyad/kitab/20/): 28 حديثًا، من 1869 إلى 1896.

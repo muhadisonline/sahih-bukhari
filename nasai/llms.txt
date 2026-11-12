@@ -2,59 +2,59 @@
 
 > سنن النسائي، أحمد بن شعيب النسائي. 5758 حديثًا، مرقمة من 1 إلى 5758. 50 كتابًا.
 
-صفحة الحديث: https://muhadisonline.github.io/sahih-bukhari/nasai/{number}/
-صفحة الكتاب: https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/{id}/
+صفحة الحديث: https://sunan.online/nasai/{number}/
+صفحة الكتاب: https://sunan.online/nasai/kitab/{id}/
 انقل المتن من الصفحة. لا تترجم، ولا تكمل رقمًا ناقصًا.
 
 ## الكتب
 
-- [كتاب الطهارة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/1/): 324 حديثًا، من 1 إلى 324.
-- [كتاب المياه من المجتبى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/2/): 23 حديثًا، من 325 إلى 347.
-- [كتاب الحيض والاستحاضة من المجتبى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/3/): 48 حديثًا، من 348 إلى 395.
-- [كتاب الغسل والتيمم من المجتبى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/4/): 52 حديثًا، من 396 إلى 447.
-- [كتاب الصلاة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/5/): 46 حديثًا، من 448 إلى 493.
-- [كتاب المواقيت](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/6/): 132 حديثًا، من 494 إلى 625.
-- [كتاب الأذان](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/7/): 62 حديثًا، من 626 إلى 687.
-- [كتاب المساجد](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/8/): 54 حديثًا، من 688 إلى 741.
-- [كتاب القبلة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/9/): 35 حديثًا، من 742 إلى 776.
-- [كتاب الإمامة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/10/): 99 حديثًا، من 777 إلى 875.
-- [كتاب الافتتاح](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/11/): 303 حديثًا، من 876 إلى 1178.
-- [كتاب السهو](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/12/): 188 حديثًا، من 1179 إلى 1366.
-- [كتاب الجمعة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/13/): 66 حديثًا، من 1367 إلى 1432.
-- [كتاب تقصير الصلاة في السفر](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/14/): 26 حديثًا، من 1433 إلى 1458.
-- [كتاب الكسوف](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/15/): 45 حديثًا، من 1459 إلى 1503.
-- [كتاب الاستسقاء](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/16/): 25 حديثًا، من 1504 إلى 1528.
-- [كتاب صلاة الخوف](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/17/): 27 حديثًا، من 1529 إلى 1555.
-- [كتاب صلاة العيدين](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/18/): 42 حديثًا، من 1556 إلى 1597.
-- [كتاب قيام الليل وتطوع النهار](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/19/): 220 حديثًا، من 1598 إلى 1817.
-- [كتاب الجنائز](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/20/): 272 حديثًا، من 1818 إلى 2089.
-- [كتاب الصيام](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/21/): 345 حديثًا، من 2090 إلى 2434.
-- [كتاب الزكاة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/22/): 184 حديثًا، من 2435 إلى 2618.
-- [كتاب مناسك الحج](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/23/): 466 حديثًا، من 2619 إلى 3084.
-- [كتاب الجهاد](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/24/): 111 حديثًا، من 3085 إلى 3195.
-- [كتاب النكاح](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/25/): 193 حديثًا، من 3196 إلى 3388.
-- [كتاب الطلاق](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/26/): 172 حديثًا، من 3389 إلى 3560.
-- [كتاب الخيل](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/27/): 33 حديثًا، من 3561 إلى 3593.
-- [كتاب الأحباس](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/28/): 17 حديثًا، من 3594 إلى 3610.
-- [كتاب الوصايا](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/29/): 61 حديثًا، من 3611 إلى 3671.
-- [كتاب النحل](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/30/): 16 حديثًا، من 3672 إلى 3687.
-- [كتاب الهبة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/31/): 18 حديثًا، من 3688 إلى 3705.
-- [كتاب الرقبى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/32/): 14 حديثًا، من 3706 إلى 3719.
-- [كتاب العمرى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/33/): 41 حديثًا، من 3720 إلى 3760.
-- [كتاب الأيمان والنذور](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/34/): 178 حديثًا، من 3761 إلى 3938.
-- [كتاب عشرة النساء](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/35/): 27 حديثًا، من 3939 إلى 3965.
-- [كتاب المحاربة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/36/): 167 حديثًا، من 3966 إلى 4132.
-- [كتاب قسم الفيء](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/37/): 16 حديثًا، من 4133 إلى 4148.
-- [كتاب البيعة من المجتبى](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/38/): 63 حديثًا، من 4149 إلى 4211.
-- [كتاب العقيقة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/39/): 10 حديثًا، من 4212 إلى 4221.
-- [كتاب الفرع والعتيرة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/40/): 41 حديثًا، من 4222 إلى 4262.
-- [كتاب الصيد والذبائح](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/41/): 98 حديثًا، من 4263 إلى 4360.
-- [كتاب الضحايا](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/42/): 88 حديثًا، من 4361 إلى 4448.
-- [كتاب البيوع](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/43/): 257 حديثًا، من 4449 إلى 4705.
-- [كتاب القسامة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/44/): 164 حديثًا، من 4706 إلى 4869.
-- [كتاب قطع السارق](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/45/): 115 حديثًا، من 4870 إلى 4984.
-- [كتاب الإيمان وشرائعه](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/46/): 55 حديثًا، من 4985 إلى 5039.
-- [كتاب الزينة من السنن](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/47/): 339 حديثًا، من 5040 إلى 5378.
-- [كتاب آداب القضاء](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/48/): 49 حديثًا، من 5379 إلى 5427.
-- [كتاب الاستعاذة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/49/): 112 حديثًا، من 5428 إلى 5539.
-- [كتاب الأشربة](https://muhadisonline.github.io/sahih-bukhari/nasai/kitab/50/): 219 حديثًا، من 5540 إلى 5758.
+- [كتاب الطهارة](https://sunan.online/nasai/kitab/1/): 324 حديثًا، من 1 إلى 324.
+- [كتاب المياه من المجتبى](https://sunan.online/nasai/kitab/2/): 23 حديثًا، من 325 إلى 347.
+- [كتاب الحيض والاستحاضة من المجتبى](https://sunan.online/nasai/kitab/3/): 48 حديثًا، من 348 إلى 395.
+- [كتاب الغسل والتيمم من المجتبى](https://sunan.online/nasai/kitab/4/): 52 حديثًا، من 396 إلى 447.
+- [كتاب الصلاة](https://sunan.online/nasai/kitab/5/): 46 حديثًا، من 448 إلى 493.
+- [كتاب المواقيت](https://sunan.online/nasai/kitab/6/): 132 حديثًا، من 494 إلى 625.
+- [كتاب الأذان](https://sunan.online/nasai/kitab/7/): 62 حديثًا، من 626 إلى 687.
+- [كتاب المساجد](https://sunan.online/nasai/kitab/8/): 54 حديثًا، من 688 إلى 741.
+- [كتاب القبلة](https://sunan.online/nasai/kitab/9/): 35 حديثًا، من 742 إلى 776.
+- [كتاب الإمامة](https://sunan.online/nasai/kitab/10/): 99 حديثًا، من 777 إلى 875.
+- [كتاب الافتتاح](https://sunan.online/nasai/kitab/11/): 303 حديثًا، من 876 إلى 1178.
+- [كتاب السهو](https://sunan.online/nasai/kitab/12/): 188 حديثًا، من 1179 إلى 1366.
+- [كتاب الجمعة](https://sunan.online/nasai/kitab/13/): 66 حديثًا، من 1367 إلى 1432.
+- [كتاب تقصير الصلاة في السفر](https://sunan.online/nasai/kitab/14/): 26 حديثًا، من 1433 إلى 1458.
+- [كتاب الكسوف](https://sunan.online/nasai/kitab/15/): 45 حديثًا، من 1459 إلى 1503.
+- [كتاب الاستسقاء](https://sunan.online/nasai/kitab/16/): 25 حديثًا، من 1504 إلى 1528.
+- [كتاب صلاة الخوف](https://sunan.online/nasai/kitab/17/): 27 حديثًا، من 1529 إلى 1555.
+- [كتاب صلاة العيدين](https://sunan.online/nasai/kitab/18/): 42 حديثًا، من 1556 إلى 1597.
+- [كتاب قيام الليل وتطوع النهار](https://sunan.online/nasai/kitab/19/): 220 حديثًا، من 1598 إلى 1817.
+- [كتاب الجنائز](https://sunan.online/nasai/kitab/20/): 272 حديثًا، من 1818 إلى 2089.
+- [كتاب الصيام](https://sunan.online/nasai/kitab/21/): 345 حديثًا، من 2090 إلى 2434.
+- [كتاب الزكاة](https://sunan.online/nasai/kitab/22/): 184 حديثًا، من 2435 إلى 2618.
+- [كتاب مناسك الحج](https://sunan.online/nasai/kitab/23/): 466 حديثًا، من 2619 إلى 3084.
+- [كتاب الجهاد](https://sunan.online/nasai/kitab/24/): 111 حديثًا، من 3085 إلى 3195.
+- [كتاب النكاح](https://sunan.online/nasai/kitab/25/): 193 حديثًا، من 3196 إلى 3388.
+- [كتاب الطلاق](https://sunan.online/nasai/kitab/26/): 172 حديثًا، من 3389 إلى 3560.
+- [كتاب الخيل](https://sunan.online/nasai/kitab/27/): 33 حديثًا، من 3561 إلى 3593.
+- [كتاب الأحباس](https://sunan.online/nasai/kitab/28/): 17 حديثًا، من 3594 إلى 3610.
+- [كتاب الوصايا](https://sunan.online/nasai/kitab/29/): 61 حديثًا، من 3611 إلى 3671.
+- [كتاب النحل](https://sunan.online/nasai/kitab/30/): 16 حديثًا، من 3672 إلى 3687.
+- [كتاب الهبة](https://sunan.online/nasai/kitab/31/): 18 حديثًا، من 3688 إلى 3705.
+- [كتاب الرقبى](https://sunan.online/nasai/kitab/32/): 14 حديثًا، من 3706 إلى 3719.
+- [كتاب العمرى](https://sunan.online/nasai/kitab/33/): 41 حديثًا، من 3720 إلى 3760.
+- [كتاب الأيمان والنذور](https://sunan.online/nasai/kitab/34/): 178 حديثًا، من 3761 إلى 3938.
+- [كتاب عشرة النساء](https://sunan.online/nasai/kitab/35/): 27 حديثًا، من 3939 إلى 3965.
+- [كتاب المحاربة](https://sunan.online/nasai/kitab/36/): 167 حديثًا، من 3966 إلى 4132.
+- [كتاب قسم الفيء](https://sunan.online/nasai/kitab/37/): 16 حديثًا، من 4133 إلى 4148.
+- [كتاب البيعة من المجتبى](https://sunan.online/nasai/kitab/38/): 63 حديثًا، من 4149 إلى 4211.
+- [كتاب العقيقة](https://sunan.online/nasai/kitab/39/): 10 حديثًا، من 4212 إلى 4221.
+- [كتاب الفرع والعتيرة](https://sunan.online/nasai/kitab/40/): 41 حديثًا، من 4222 إلى 4262.
+- [كتاب الصيد والذبائح](https://sunan.online/nasai/kitab/41/): 98 حديثًا، من 4263 إلى 4360.
+- [كتاب الضحايا](https://sunan.online/nasai/kitab/42/): 88 حديثًا، من 4361 إلى 4448.
+- [كتاب البيوع](https://sunan.online/nasai/kitab/43/): 257 حديثًا، من 4449 إلى 4705.
+- [كتاب القسامة](https://sunan.online/nasai/kitab/44/): 164 حديثًا، من 4706 إلى 4869.
+- [كتاب قطع السارق](https://sunan.online/nasai/kitab/45/): 115 حديثًا، من 4870 إلى 4984.
+- [كتاب الإيمان وشرائعه](https://sunan.online/nasai/kitab/46/): 55 حديثًا، من 4985 إلى 5039.
+- [كتاب الزينة من السنن](https://sunan.online/nasai/kitab/47/): 339 حديثًا، من 5040 إلى 5378.
+- [كتاب آداب القضاء](https://sunan.online/nasai/kitab/48/): 49 حديثًا، من 5379 إلى 5427.
+- [كتاب الاستعاذة](https://sunan.online/nasai/kitab/49/): 112 حديثًا، من 5428 إلى 5539.
+- [كتاب الأشربة](https://sunan.online/nasai/kitab/50/): 219 حديثًا، من 5540 إلى 5758.

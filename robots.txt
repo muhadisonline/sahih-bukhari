@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muhadisonline.github.io/sahih-bukhari/sitemap.xml
+Sitemap: https://sunan.online/sitemap.xml

@@ -112,7 +112,7 @@
       if (bookRows) { go(); return; }
       if (loading) return;
       loading = true;
-      fetch("/sahih-bukhari/assets/ix-" + slug + ".json").then(function (r) { return r.json(); }).then(function (data) {
+      fetch("/assets/ix-" + slug + ".json").then(function (r) { return r.json(); }).then(function (data) {
         bookRows = data;
         go();
       }).catch(function () { loading = false; });
@@ -137,7 +137,7 @@
     }
     nodes.forEach(function (h) {
       var a = document.createElement("a");
-      a.href = "/sahih-bukhari/" + bookSlug + "/" + h[0] + "/";
+      a.href = "/" + bookSlug + "/" + h[0] + "/";
       var k = document.createElement("span");
       k.className = "k";
       k.textContent = "الحديث " + ar(h[0]) + (h[3] ? " · " + h[3] : "");
@@ -178,7 +178,7 @@
     timer = setTimeout(function () {
       if (!rows) {
         show([], "…");
-        fetch("/sahih-bukhari/assets/ix-" + bookSlug + ".json").then(function (r) { return r.json(); }).then(function (data) {
+        fetch("/assets/ix-" + bookSlug + ".json").then(function (r) { return r.json(); }).then(function (data) {
           rows = data;
           paint(west(box.value).trim(), fold(box.value));
         }).catch(function () { show([], "تعذر البحث"); });

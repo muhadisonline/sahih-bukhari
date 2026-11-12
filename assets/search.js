@@ -3,7 +3,7 @@ function ar(n){return String(n).replace(/\d/g,function(d){return AR[d]})}
 function escHtml(s){return String(s).replace(/&/g,"&"+"amp;").replace(/</g,"&"+"lt;").replace(/>/g,"&"+"gt;")}
 function west(s){return String(s).replace(/[٠-٩]/g,function(d){return AR.indexOf(d)}).replace(/[۰-۹]/g,function(d){return "۰۱۲۳۴۵۶۷۸۹".indexOf(d)})}
 function norm(s){return String(s).replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ؤ/g,"و").replace(/ئ/g,"ي").replace(/ة/g,"ه").replace(/[^\p{L}\p{N}\s]/gu," ").replace(/\s+/g," ").trim()}
-var BASE="/sahih-bukhari";
+var BASE="";
 var BOOKS={"buxari":"صحيح البخاري","muslim":"صحيح مسلم","abudawud":"سنن أبي داود","tirmidhi":"جامع الترمذي","nasai":"سنن النسائي","ibnmajah":"سنن ابن ماجه","malik":"موطأ مالك","darimi":"سنن الدارمي","adab":"الأدب المفرد","riyad":"رياض الصالحين"};
 var box=document.getElementById("results");
 var status=document.getElementById("status");

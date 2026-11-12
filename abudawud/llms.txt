@@ -2,46 +2,46 @@
 
 > سنن أبي داود، أبو داود السجستاني. 5273 حديثًا، والأرقام من 1 إلى 5274، والناقص منها بلا صفحة. 37 كتابًا.
 
-صفحة الحديث: https://muhadisonline.github.io/sahih-bukhari/abudawud/{number}/
-صفحة الكتاب: https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/{id}/
+صفحة الحديث: https://sunan.online/abudawud/{number}/
+صفحة الكتاب: https://sunan.online/abudawud/kitab/{id}/
 انقل المتن من الصفحة. لا تترجم، ولا تكمل رقمًا ناقصًا.
 
 ## الكتب
 
-- [كتاب الطهارة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/1/): 390 حديثًا، من 1 إلى 390.
-- [كتاب الصلاة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/2/): 329 حديثًا، من 391 إلى 720.
-- [أبواب تفريع استفتاح الصلاة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/3/): 731 حديثًا، من 721 إلى 1451.
-- [أبواب فضائل القرآن](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/4/): 104 حديثًا، من 1452 إلى 1555.
-- [كتاب الزكاة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/5/): 145 حديثًا، من 1556 إلى 1700.
-- [كتاب اللقطة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/6/): 20 حديثًا، من 1701 إلى 1720.
-- [كتاب المناسك](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/7/): 325 حديثًا، من 1721 إلى 2045.
-- [كتاب النكاح](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/8/): 129 حديثًا، من 2046 إلى 2174.
-- [كتاب الطلاق](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/9/): 138 حديثًا، من 2175 إلى 2312.
-- [كتاب الصوم](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/10/): 164 حديثًا، من 2313 إلى 2476.
-- [كتاب الجهاد](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/11/): 311 حديثًا، من 2477 إلى 2787.
-- [كتاب الأضاحى](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/12/): 56 حديثًا، من 2788 إلى 2843.
-- [كتاب الصيد](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/13/): 18 حديثًا، من 2844 إلى 2861.
-- [كتاب الوصايا](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/14/): 23 حديثًا، من 2862 إلى 2884.
-- [كتاب الفرائض](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/15/): 43 حديثًا، من 2885 إلى 2927.
-- [كتاب الخراج والفيء والإمارة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/16/): 161 حديثًا، من 2928 إلى 3088.
-- [كتاب الجنائز](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/17/): 153 حديثًا، من 3089 إلى 3241.
-- [كتاب الأيمان والنذور](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/18/): 84 حديثًا، من 3242 إلى 3325.
-- [كتاب البيوع](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/19/): 245 حديثًا، من 3326 إلى 3570.
-- [كتاب الأقضية](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/20/): 70 حديثًا، من 3571 إلى 3640.
-- [كتاب العلم](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/21/): 28 حديثًا، من 3641 إلى 3668.
-- [كتاب الأشربة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/22/): 67 حديثًا، من 3669 إلى 3735.
-- [كتاب الأطعمة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/23/): 119 حديثًا، من 3736 إلى 3854.
-- [كتاب الطب](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/24/): 71 حديثًا، من 3855 إلى 3925.
-- [كتاب العتاق](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/25/): 43 حديثًا، من 3926 إلى 3968.
-- [كتاب الحروف](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/26/): 40 حديثًا، من 3969 إلى 4008.
-- [كتاب الحمام](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/27/): 11 حديثًا، من 4009 إلى 4019.
-- [كتاب اللباس](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/28/): 139 حديثًا، من 4020 إلى 4158.
-- [كتاب الترجل](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/29/): 55 حديثًا، من 4159 إلى 4213.
-- [كتاب الخاتم](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/30/): 26 حديثًا، من 4214 إلى 4239.
-- [كتاب الفتن](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/31/): 51 حديثًا، من 4240 إلى 4290.
-- [كتاب الملاحم](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/32/): 60 حديثًا، من 4291 إلى 4350.
-- [كتاب الحدود](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/33/): 143 حديثًا، من 4351 إلى 4493.
-- [كتاب الديات](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/34/): 102 حديثًا، من 4494 إلى 4595.
-- [كتاب السنة](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/35/): 177 حديثًا، من 4596 إلى 4772.
-- [كتاب الأدب](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/36/): 267 حديثًا، من 4773 إلى 5039.
-- [أبواب النوم](https://muhadisonline.github.io/sahih-bukhari/abudawud/kitab/37/): 235 حديثًا، من 5040 إلى 5274.
+- [كتاب الطهارة](https://sunan.online/abudawud/kitab/1/): 390 حديثًا، من 1 إلى 390.
+- [كتاب الصلاة](https://sunan.online/abudawud/kitab/2/): 329 حديثًا، من 391 إلى 720.
+- [أبواب تفريع استفتاح الصلاة](https://sunan.online/abudawud/kitab/3/): 731 حديثًا، من 721 إلى 1451.
+- [أبواب فضائل القرآن](https://sunan.online/abudawud/kitab/4/): 104 حديثًا، من 1452 إلى 1555.
+- [كتاب الزكاة](https://sunan.online/abudawud/kitab/5/): 145 حديثًا، من 1556 إلى 1700.
+- [كتاب اللقطة](https://sunan.online/abudawud/kitab/6/): 20 حديثًا، من 1701 إلى 1720.
+- [كتاب المناسك](https://sunan.online/abudawud/kitab/7/): 325 حديثًا، من 1721 إلى 2045.
+- [كتاب النكاح](https://sunan.online/abudawud/kitab/8/): 129 حديثًا، من 2046 إلى 2174.
+- [كتاب الطلاق](https://sunan.online/abudawud/kitab/9/): 138 حديثًا، من 2175 إلى 2312.
+- [كتاب الصوم](https://sunan.online/abudawud/kitab/10/): 164 حديثًا، من 2313 إلى 2476.
+- [كتاب الجهاد](https://sunan.online/abudawud/kitab/11/): 311 حديثًا، من 2477 إلى 2787.
+- [كتاب الأضاحى](https://sunan.online/abudawud/kitab/12/): 56 حديثًا، من 2788 إلى 2843.
+- [كتاب الصيد](https://sunan.online/abudawud/kitab/13/): 18 حديثًا، من 2844 إلى 2861.
+- [كتاب الوصايا](https://sunan.online/abudawud/kitab/14/): 23 حديثًا، من 2862 إلى 2884.
+- [كتاب الفرائض](https://sunan.online/abudawud/kitab/15/): 43 حديثًا، من 2885 إلى 2927.
+- [كتاب الخراج والفيء والإمارة](https://sunan.online/abudawud/kitab/16/): 161 حديثًا، من 2928 إلى 3088.
+- [كتاب الجنائز](https://sunan.online/abudawud/kitab/17/): 153 حديثًا، من 3089 إلى 3241.
+- [كتاب الأيمان والنذور](https://sunan.online/abudawud/kitab/18/): 84 حديثًا، من 3242 إلى 3325.
+- [كتاب البيوع](https://sunan.online/abudawud/kitab/19/): 245 حديثًا، من 3326 إلى 3570.
+- [كتاب الأقضية](https://sunan.online/abudawud/kitab/20/): 70 حديثًا، من 3571 إلى 3640.
+- [كتاب العلم](https://sunan.online/abudawud/kitab/21/): 28 حديثًا، من 3641 إلى 3668.
+- [كتاب الأشربة](https://sunan.online/abudawud/kitab/22/): 67 حديثًا، من 3669 إلى 3735.
+- [كتاب الأطعمة](https://sunan.online/abudawud/kitab/23/): 119 حديثًا، من 3736 إلى 3854.
+- [كتاب الطب](https://sunan.online/abudawud/kitab/24/): 71 حديثًا، من 3855 إلى 3925.
+- [كتاب العتاق](https://sunan.online/abudawud/kitab/25/): 43 حديثًا، من 3926 إلى 3968.
+- [كتاب الحروف](https://sunan.online/abudawud/kitab/26/): 40 حديثًا، من 3969 إلى 4008.
+- [كتاب الحمام](https://sunan.online/abudawud/kitab/27/): 11 حديثًا، من 4009 إلى 4019.
+- [كتاب اللباس](https://sunan.online/abudawud/kitab/28/): 139 حديثًا، من 4020 إلى 4158.
+- [كتاب الترجل](https://sunan.online/abudawud/kitab/29/): 55 حديثًا، من 4159 إلى 4213.
+- [كتاب الخاتم](https://sunan.online/abudawud/kitab/30/): 26 حديثًا، من 4214 إلى 4239.
+- [كتاب الفتن](https://sunan.online/abudawud/kitab/31/): 51 حديثًا، من 4240 إلى 4290.
+- [كتاب الملاحم](https://sunan.online/abudawud/kitab/32/): 60 حديثًا، من 4291 إلى 4350.
+- [كتاب الحدود](https://sunan.online/abudawud/kitab/33/): 143 حديثًا، من 4351 إلى 4493.
+- [كتاب الديات](https://sunan.online/abudawud/kitab/34/): 102 حديثًا، من 4494 إلى 4595.
+- [كتاب السنة](https://sunan.online/abudawud/kitab/35/): 177 حديثًا، من 4596 إلى 4772.
+- [كتاب الأدب](https://sunan.online/abudawud/kitab/36/): 267 حديثًا، من 4773 إلى 5039.
+- [أبواب النوم](https://sunan.online/abudawud/kitab/37/): 235 حديثًا، من 5040 إلى 5274.

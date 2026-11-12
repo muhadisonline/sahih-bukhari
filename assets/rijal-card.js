@@ -295,7 +295,7 @@
       foot.textContent = "من تقريب التهذيب. نُقل كما ورد، دون زيادة.";
       if (row.g === "s" || row.g === "t") {
         var link = doc.createElement("a");
-        link.href = "/sahih-bukhari/sahaba/" + row.i + "/";
+        link.href = "/sahaba/" + row.i + "/";
         link.textContent = "صفحته";
         foot.appendChild(doc.createElement("br"));
         foot.appendChild(link);
