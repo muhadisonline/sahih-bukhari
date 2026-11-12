@@ -17,8 +17,8 @@
   }
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   var HAR = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/;
-  var SKIP = { "بن": 1, "ابن": 1 };
-  var STOP = { "قال": 1, "يقول": 1, "تقول": 1, "قالا": 1, "قالوا": 1, "انه": 1, "انها": 1, "رضي": 1, "رسول": 1, "النبي": 1, "ان": 1, "ح": 1 };
+  var SKIP = { "بن": 1, "ابن": 1, "يعني": 1, "هو": 1, "وهي": 1, "وهو": 1 };
+  var STOP = { "قال": 1, "يقول": 1, "تقول": 1, "قالا": 1, "قالوا": 1, "قالت": 1, "انه": 1, "انها": 1, "انهما": 1, "انهم": 1, "كلاهما": 1, "جميعا": 1, "رضي": 1, "رسول": 1, "النبي": 1, "ان": 1, "ح": 1 };
   var BAD = { "ابيه": 1, "امه": 1, "جده": 1, "رجل": 1, "شيخ": 1 };
   var LABELS = [
     ["b", "الطبقة"],
@@ -83,13 +83,14 @@
         if (same) hits.push(person);
       }
       var extra = tokens.slice(n);
-      if (extra.length && hits.length) {
+      if (extra.length) {
+        if (!hits.length) continue;
         var narrowed = hits.filter(function (person) {
           for (var e = 0; e < extra.length; e++) if (!person.bag[extra[e]]) return false;
           return true;
         });
         if (narrowed.length === 1) return narrowed[0].row;
-        if (narrowed.length > 1) return null;
+        return null;
       }
       if (hits.length === 1) return hits[0].row;
       if (hits.length > 1) return null;
@@ -129,7 +130,16 @@
   function isVerb(token) {
     if (token === "عن" || token === "وعن" || token === "فعن") return true;
     var core = token.replace(/^[وف]/, "");
-    return /^(حدثنا|حدثني|اخبرنا|اخبرني|انبانا|انباني|سمعت|سمع)$/.test(core);
+    return /^(حدثنا|حدثني|حدثناه|حدثتها|حدثته|حدثتنا|اخبرنا|اخبرني|اخبره|اخبرته|اخبرتها|انبانا|انباني|سمعت|سمع|يحدث|يحدثه|تحدث)$/.test(core);
+  }
+
+  function owns(people, row, token) {
+    var bare = token.charAt(0) === "و" ? token.slice(1) : token;
+    for (var i = 0; i < people.length; i++) {
+      if (people[i].row.i !== row.i) continue;
+      return !!(people[i].bag[token] || people[i].bag[bare]);
+    }
+    return false;
   }
 
   function spans(text, people) {
@@ -142,9 +152,13 @@
       var from = -1;
       var to = -1;
       var stopped = "";
-      for (var j = i + 1; j < words.length && j < i + 8; j++) {
+      for (var j = i + 1; j < words.length && j < i + 14; j++) {
         var token = words[j].token;
-        if (isVerb(token) || STOP[token]) { stopped = token; break; }
+        if (isVerb(token) || STOP[token] || token === "و") { stopped = token; break; }
+        if (tokens.length >= 2 && token.charAt(0) === "و" && token.length > 2) {
+          var rowNow = matchTokens(people, tokens);
+          if (rowNow && !owns(people, rowNow, token)) { stopped = "و"; break; }
+        }
         if (SKIP[token]) {
           to = words[j].end;
           continue;
