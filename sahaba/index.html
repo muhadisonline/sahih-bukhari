@@ -3528,7 +3528,7 @@
   var status=document.getElementById("pstatus");
   var group="s";
   var shown=80;
-  function fold(s){return s.replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").replace(/[\u064B-\u0652]/g,"");}
+  function fold(s){return s.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه");}
   function paint(){
     var n=fold(q.value.trim());
     var count=0;
