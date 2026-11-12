@@ -188,3 +188,5 @@ body.home .set-panel{color:#161513}
 .hits a.entry{display:flex;gap:.75rem;align-items:baseline;padding-block:.7rem}
 .entry .ttl{flex:1;min-width:0}
 .entry .meta{flex:none;white-space:nowrap}
+
+.mh-emblem{display:block;width:min(15.5rem,72vw);height:auto;margin:0 auto .15rem}
