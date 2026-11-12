@@ -97,6 +97,21 @@
     return null;
   }
 
+  function sahabiAfterRadi(people, tokens) {
+    var hits = [];
+    var n = tokens.length;
+    for (var i = 0; i < people.length; i++) {
+      var person = people[i];
+      if (person.tokens.length < n) continue;
+      var same = true;
+      for (var k = 0; k < n; k++) if (person.tokens[k] !== tokens[k]) { same = false; break; }
+      if (same) hits.push(person);
+    }
+    var sahaba = hits.filter(function (person) { return person.row.g === "s"; });
+    if (sahaba.length === 1) return sahaba[0].row;
+    return null;
+  }
+
   function wordSpans(folded) {
     var words = [];
     var re = /\S+/g;
@@ -126,9 +141,10 @@
       var tokens = [];
       var from = -1;
       var to = -1;
+      var stopped = "";
       for (var j = i + 1; j < words.length && j < i + 8; j++) {
         var token = words[j].token;
-        if (isVerb(token) || STOP[token]) break;
+        if (isVerb(token) || STOP[token]) { stopped = token; break; }
         if (SKIP[token]) {
           to = words[j].end;
           continue;
@@ -139,6 +155,7 @@
       }
       if (tokens.length < 2 || BAD[tokens[0]] || from < 0) continue;
       var row = matchTokens(people, tokens);
+      if (!row && stopped === "رضي") row = sahabiAfterRadi(people, tokens);
       if (!row) continue;
       var start = folded.map[from];
       var end = folded.map[Math.min(to - 1, folded.map.length - 1)] + 1;
@@ -198,12 +215,17 @@
       closeBtn.setAttribute("aria-label", "إغلاق");
       closeBtn.textContent = "×";
       closeBtn.addEventListener("click", close);
-      var kind = doc.createElement("p");
-      kind.className = "kind";
-      kind.textContent = row.g === "s" ? "صحابي" : "تابعي";
+      var kind = null;
+      if (row.g === "s" || row.g === "t") {
+        kind = doc.createElement("p");
+        kind.className = "kind";
+        kind.textContent = row.g === "s" ? "صحابي" : "تابعي";
+      }
       var title = doc.createElement("h2");
       title.textContent = row.n;
-      card.append(closeBtn, kind, title);
+      card.append(closeBtn);
+      if (kind) card.appendChild(kind);
+      card.appendChild(title);
       LABELS.forEach(function (pair) {
         if (!row[pair[0]]) return;
         var line = doc.createElement("div");
@@ -218,11 +240,13 @@
       var foot = doc.createElement("p");
       foot.className = "foot";
       foot.textContent = "من تقريب التهذيب. نُقل كما ورد، دون زيادة.";
-      var link = doc.createElement("a");
-      link.href = "/sahih-bukhari/sahaba/" + row.i + "/";
-      link.textContent = "صفحته";
-      foot.appendChild(doc.createElement("br"));
-      foot.appendChild(link);
+      if (row.g === "s" || row.g === "t") {
+        var link = doc.createElement("a");
+        link.href = "/sahih-bukhari/sahaba/" + row.i + "/";
+        link.textContent = "صفحته";
+        foot.appendChild(doc.createElement("br"));
+        foot.appendChild(link);
+      }
       card.appendChild(foot);
       card.hidden = false;
       var rect = button.getBoundingClientRect();
