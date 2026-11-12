@@ -280,6 +280,7 @@
       card.appendChild(title);
       LABELS.forEach(function (pair) {
         if (!row[pair[0]]) return;
+        if (pair[0] === "r" && row.g === "s") return;
         var line = doc.createElement("div");
         line.className = "row";
         var dt = doc.createElement("dt");
