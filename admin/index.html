@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Statistika paneli</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f4f0;--card:#fff;--ink:#1f2328;--mut:#6b7280;--line:#e5e1da;--acc:#1f6f5c;--acc2:#e7f2ee;--err:#b42318}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+header.top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:16px}
+h1{font-size:20px;margin:0}h2{font-size:15px;margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.kpi .v{font-size:26px;font-weight:650}.kpi .l{color:var(--mut);font-size:13px}.kpi .s{color:var(--mut);font-size:12px}
+input,select,button{font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+button{cursor:pointer}button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}button.lnk{border:0;background:none;color:var(--acc);padding:4px;text-decoration:underline}
+.login{max-width:380px;margin:12vh auto}.login form{display:grid;gap:10px}
+.msg{font-size:13px;color:var(--mut)}.msg.err{color:var(--err)}
+table{width:100%;border-collapse:collapse}td,th{padding:5px 0;text-align:left;vertical-align:top;font-size:14px}th{color:var(--mut);font-weight:500;font-size:12px}
+td.n{text-align:right;white-space:nowrap;padding-left:10px;font-variant-numeric:tabular-nums}
+td.k{word-break:break-all}
+.bar{height:5px;background:var(--acc2);border-radius:3px;margin-top:3px}.bar i{display:block;height:100%;background:var(--acc);border-radius:3px}
+.chart{width:100%;height:190px}.chart text{font-size:10px;fill:var(--mut)}
+.hide{display:none!important}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.empty{color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div id="auth" class="login card hide">
+  <h1 id="authTitle">Statistika paneli</h1>
+  <p class="msg" id="authSub">Daxil olmaq üçün e-poçt və şifrəni yazın.</p>
+  <form id="loginForm">
+    <input id="email" type="email" placeholder="E-poçt" autocomplete="username" required>
+    <input id="pass" type="password" placeholder="Şifrə" autocomplete="current-password" required>
+    <button class="pri" type="submit">Daxil ol</button>
+    <button class="lnk" type="button" id="forgot">Şifrəni unutdum / şifrə təyin et</button>
+  </form>
+  <form id="setForm" class="hide">
+    <input id="newpass" type="password" placeholder="Yeni şifrə (ən azı 8 simvol)" autocomplete="new-password" minlength="8" required>
+    <button class="pri" type="submit">Şifrəni yadda saxla</button>
+  </form>
+  <p class="msg" id="authMsg" role="status"></p>
+</div>
+
+<div id="app" class="wrap hide">
+  <header class="top">
+    <h1>📊 Statistika</h1>
+    <div class="tools">
+      <label class="msg" for="host">Sayt:</label>
+      <select id="host"></select>
+      <button id="refresh" type="button">Yenilə</button>
+      <button id="logout" type="button">Çıxış</button>
+    </div>
+  </header>
+  <p class="msg" id="status"></p>
+  <div class="grid g4" id="kpis"></div>
+  <div class="card" style="margin-top:12px"><h2>Son 30 gün – gündəlik baxışlar</h2><div id="chart"></div></div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><h2>Ən çox baxılan səhifələr (30 gün)</h2><div id="tPages"></div></div>
+    <div class="card"><h2>Mənbələr (referrer)</h2><div id="tRefs"></div></div>
+    <div class="card"><h2>Ölkələr</h2><div id="tCountries"></div></div>
+    <div class="card"><h2>Cihazlar</h2><div id="tDevices"></div></div>
+    <div class="card"><h2>Dillər</h2><div id="tLangs"></div></div>
+    <div class="card"><h2>Son axtarışlar</h2><div id="tSearch"></div></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+var SB_URL='https://vjkyjcbefekflqpnqnen.supabase.co',SB_KEY='sb_publishable_O2Ci6QlcINYOBIAaG7_bng_NpR-AevE',DEFAULT_HOST='sunan.online';
+var $=function(i){return document.getElementById(i)};
+var recovery=/type=(recovery|invite)/.test(location.hash+location.search);
+var sb=supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+function show(which){$('auth').classList.toggle('hide',which!=='auth');$('app').classList.toggle('hide',which!=='app')}
+function amsg(t,err){var m=$('authMsg');m.textContent=t||'';m.className='msg'+(err?' err':'')}
+function showSet(){show('auth');$('loginForm').classList.add('hide');$('setForm').classList.remove('hide');$('authTitle').textContent='Yeni şifrə təyin et';$('authSub').textContent='Panelə girmək üçün şifrənizi təyin edin.'}
+
+$('loginForm').addEventListener('submit',function(e){e.preventDefault();amsg('Gözləyin…');
+  sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('pass').value}).then(function(r){
+    if(r.error)amsg('Giriş alınmadı: e-poçt və ya şifrə yanlışdır.',true);else{amsg('');start()}})});
+$('forgot').addEventListener('click',function(){var em=$('email').value.trim();if(!em){amsg('Əvvəlcə e-poçtu yazın.',true);return}
+  sb.auth.resetPasswordForEmail(em,{redirectTo:location.origin+'/admin/'}).then(function(r){
+    amsg(r.error?'Göndərmək alınmadı: '+r.error.message:'Əgər bu e-poçt qeydiyyatlıdırsa, şifrə təyin etmək üçün link göndərildi.',!!r.error)})});
+$('setForm').addEventListener('submit',function(e){e.preventDefault();
+  sb.auth.updateUser({password:$('newpass').value}).then(function(r){
+    if(r.error){amsg('Alınmadı: '+r.error.message,true);return}
+    history.replaceState(null,'',location.pathname);recovery=false;$('setForm').classList.add('hide');$('loginForm').classList.remove('hide');start()})});
+$('logout').addEventListener('click',function(){sb.auth.signOut().then(function(){location.href='/admin/'})});
+$('refresh').addEventListener('click',function(){load()});
+$('host').addEventListener('change',function(){load()});
+sb.auth.onAuthStateChange(function(ev){if(ev==='PASSWORD_RECOVERY')showSet()});
+
+function start(){sb.auth.getSession().then(function(r){
+  if(recovery&&r.data.session){showSet();return}
+  if(!r.data.session){show('auth');return}
+  show('app');loadHosts().then(load)})}
+
+function loadHosts(){
+  var since=new Date(Date.now()-90*864e5).toISOString();
+  return sb.from('pageviews').select('host').gte('ts',since).limit(1000).then(function(r){
+    var set={};set[DEFAULT_HOST]=1;(r.data||[]).forEach(function(x){if(x.host)set[x.host]=1});
+    var sel=$('host');sel.textContent='';Object.keys(set).sort().forEach(function(h){var o=document.createElement('option');o.value=o.textContent=h;if(h===DEFAULT_HOST)o.selected=true;sel.appendChild(o)})})}
+
+function fetchAll(table,cols,host,since,order){
+  var out=[],page=1000,max=50000;
+  function step(from){
+    return sb.from(table).select(cols).eq('host',host).gte('ts',since).order('ts',{ascending:false}).range(from,from+page-1).then(function(r){
+      if(r.error)throw r.error;out=out.concat(r.data);
+      if(r.data.length===page&&out.length<max)return step(from+page);return out})}
+  return step(0)}
+
+function day(d){var x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')}
+function kpi(l,v,s){var d=document.createElement('div');d.className='card kpi';
+  [['l',l],['v',v],['s',s||'']].forEach(function(a){var e=document.createElement('div');e.className=a[0];e.textContent=a[1];d.appendChild(e)});return d}
+function uniq(rows){var s={};rows.forEach(function(r){if(r.vid)s[r.vid]=1});return Object.keys(s).length}
+function fmt(n){return n.toLocaleString('az')}
+function table(id,rows,key,limit,label){
+  var box=$(id);box.textContent='';var c={};rows.forEach(function(r){var k=label?label(r):(r[key]||'—');c[k]=(c[k]||0)+1});
+  var arr=Object.keys(c).map(function(k){return[k,c[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,limit||10);
+  if(!arr.length){box.innerHTML='<div class="empty">Məlumat yoxdur</div>';return}
+  var max=arr[0][1],t=document.createElement('table');
+  arr.forEach(function(a){var tr=t.insertRow(),k=tr.insertCell(),n=tr.insertCell();k.className='k';n.className='n';
+    k.textContent=a[0];n.textContent=fmt(a[1]);var b=document.createElement('div');b.className='bar';var i=document.createElement('i');i.style.width=Math.max(2,a[1]/max*100)+'%';b.appendChild(i);k.appendChild(b)});
+  box.appendChild(t)}
+function chart(rows){
+  var days=[],m={};for(var i=29;i>=0;i--){var k=day(Date.now()-i*864e5);days.push(k);m[k]=0}
+  rows.forEach(function(r){var k=day(r.ts);if(k in m)m[k]++});
+  var W=1000,H=190,pad=24,mx=Math.max.apply(null,days.map(function(d){return m[d]}).concat([1])),bw=(W-pad)/30,NS='http://www.w3.org/2000/svg';
+  var s=document.createElementNS(NS,'svg');s.setAttribute('viewBox','0 0 '+W+' '+H);s.setAttribute('class','chart');s.setAttribute('preserveAspectRatio','none');
+  days.forEach(function(d,i){var h=m[d]/mx*(H-40),x=pad+i*bw,r=document.createElementNS(NS,'rect');
+    r.setAttribute('x',x+2);r.setAttribute('y',H-20-h);r.setAttribute('width',bw-4);r.setAttribute('height',Math.max(h,m[d]?1:0));r.setAttribute('rx',2);r.setAttribute('fill','#1f6f5c');
+    var t=document.createElementNS(NS,'title');t.textContent=d+': '+m[d];r.appendChild(t);s.appendChild(r);
+    if(i%5===0||i===29){var tx=document.createElementNS(NS,'text');tx.setAttribute('x',x);tx.setAttribute('y',H-5);tx.textContent=d.slice(5);s.appendChild(tx)}});
+  var tm=document.createElementNS(NS,'text');tm.setAttribute('x',0);tm.setAttribute('y',10);tm.textContent=mx;s.appendChild(tm);
+  $('chart').textContent='';$('chart').appendChild(s)}
+
+function load(){
+  var host=$('host').value||DEFAULT_HOST,st=$('status');st.textContent='Yüklənir…';st.className='msg';
+  var since=new Date(Date.now()-30*864e5);since.setHours(0,0,0,0);var iso=since.toISOString();
+  Promise.all([fetchAll('pageviews','ts,path,ref_host,vid,lang,device,country',host,iso),
+    sb.from('events').select('ts,kind,q,results,path').eq('host',host).eq('kind','search').gte('ts',iso).order('ts',{ascending:false}).limit(25)])
+  .then(function(res){
+    var pv=res[0],ev=res[1];if(ev.error)throw ev.error;
+    var t0=new Date();t0.setHours(0,0,0,0);var d7=new Date(Date.now()-6*864e5);d7.setHours(0,0,0,0);
+    var today=pv.filter(function(r){return new Date(r.ts)>=t0}),w=pv.filter(function(r){return new Date(r.ts)>=d7});
+    var k=$('kpis');k.textContent='';
+    k.appendChild(kpi('Bu gün',fmt(today.length),'unikal: '+fmt(uniq(today))));
+    k.appendChild(kpi('Son 7 gün',fmt(w.length),'unikal: '+fmt(uniq(w))));
+    k.appendChild(kpi('Son 30 gün',fmt(pv.length),'unikal: '+fmt(uniq(pv))));
+    k.appendChild(kpi('Axtarışlar (30 gün)',fmt(ev.data.length>=25?25:ev.data.length)+(ev.data.length>=25?'+':''),'son qeydlər'));
+    chart(pv);table('tPages',pv,'path',10);table('tRefs',pv,'ref_host',10,function(r){return r.ref_host||'(birbaşa)'});
+    table('tCountries',pv,'country',10);table('tDevices',pv,'device',5);table('tLangs',pv,'lang',8);
+    var b=$('tSearch');b.textContent='';
+    if(!ev.data.length)b.innerHTML='<div class="empty">Axtarış yoxdur</div>';else{var t=document.createElement('table');
+      ev.data.forEach(function(e){var tr=t.insertRow(),a=tr.insertCell(),c=tr.insertCell();a.className='k';a.textContent=e.q||'—';c.className='n';c.textContent=new Date(e.ts).toLocaleString('az',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})});b.appendChild(t)}
+    st.textContent=pv.length>=50000?'Qeyd: yalnız son 50 000 baxış nəzərə alındı.':'';
+  }).catch(function(e){st.textContent='Xəta: '+(e.message||e)+' (bu hesabın oxuma icazəsi yoxdur?)';st.className='msg err'})}
+
+start();
+})();
+</script>
+</body>
+</html>
