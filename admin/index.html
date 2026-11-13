@@ -232,15 +232,18 @@ var SITES=[
  {h:'t.mushafuk.online',n:'Tərcümələr',r:'mushafuk-translations',d:'Quran tərcümələri'},
  {h:'t1.mushafuk.online',n:'Tərcümələr 2',r:'mushafuk-translations-extra',d:'Əlavə tərcümələr'},
  {h:'quran.mushafuk.online',n:'Quran (təcvid)',r:'tecvidtest',d:'Təcvid tətbiqi',track:false},
- {h:'sunan.online',n:'Sunan (hədis)',r:'sahih-bukhari',d:'Hədis kitabxanası',o:'muhadisonline'}
+ {h:'sunan.online',n:'Sunan · Əsas sayt',r:'sahih-bukhari',d:'Hədis kitabxanası',o:'muhadisonline',g:'s'},
+ {h:'buxari.sunan.online',n:'Sunan · Buxari',r:'buxari',d:'Səhih əl-Buxari',o:'muhadisonline',g:'s'},
+ {h:'ruwat.sunan.online',n:'Sunan · Rəvilər',r:'ruwat',d:'Hədis rəviləri',o:'muhadisonline',g:'s'}
 ];
-var NAME={};SITES.forEach(function(s){NAME[s.h]=s.n});
+var NAME={};SITES.forEach(function(s){NAME[s.h]=s.n});NAME['*sunan']='Sunan · ümumi';
 var $=function(i){return document.getElementById(i)};
 var AO={auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}};
 var CM=supabase.createClient(PM.url,PM.key,AO),CS=supabase.createClient(PS.url,PS.key,AO);
 var sb=HOME==='s'?CS:CM,sb2=HOME==='s'?CM:CS; /* sb = bu saytın layihəsi (giriş qapısı), sb2 = digər sayt */
-function cl(h){return h==='sunan.online'?CS:CM}
-var st={p:'week',h:HOME==='s'?'sunan.online':null,chart:null,busy:false,timer:null};
+function cl(h){return (h==='*sunan'||/(^|\.)sunan\.online$/.test(h||''))?CS:CM}
+function ph(h){return h==='*sunan'?null:h}
+var st={p:'week',h:HOME==='s'?'*sunan':null,chart:null,busy:false,timer:null};
 var AZM=['Yan','Fev','Mar','Apr','May','İyn','İyl','Avq','Sen','Okt','Noy','Dek'];
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function fmt(n){n=Number(n)||0;return n.toLocaleString('az')}
@@ -287,7 +290,7 @@ sb.auth.onAuthStateChange(function(ev,s){if(ev==='SIGNED_OUT'){show(true)}else i
 /* ---------- controls ---------- */
 $('seg').onclick=function(e){var b=e.target.closest('button');if(!b)return;st.p=b.dataset.p;[].forEach.call($('seg').children,function(x){x.classList.toggle('on',x===b)});load()};
 function buildChips(extra){
-  var list=[{h:null,n:'Mushafuk · ümumi'}].concat(SITES.filter(function(x){return x.track!==false}));
+  var list=[{h:null,n:'Mushafuk · ümumi'}].concat(SITES.filter(function(x){return x.track!==false&&x.g!=='s'}),[{h:'*sunan',n:'Sunan · ümumi'}],SITES.filter(function(x){return x.g==='s'}));
   (extra||[]).forEach(function(h){if(!NAME[h])list.push({h:h,n:h})});
   $('chips').innerHTML=list.map(function(s){return '<button class="chip'+(s.h===st.h?' on':'')+'" data-h="'+esc(s.h||'')+'">'+esc(s.n)+'</button>'}).join('');
 }
@@ -312,7 +315,7 @@ function barList(rows){
 async function load(quiet){
   if(st.busy)return;st.busy=true;$('refresh').classList.add('spin');
   if(!quiet)skeleton();
-  var a={p_period:st.p,p_host:st.h};
+  var a={p_period:st.p,p_host:ph(st.h)};
   var c=cl(st.h),oc=c===CM?CS:CM;
   var r=await Promise.all([c.rpc('admin_dashboard',a),c.rpc('admin_content',a),c.rpc('admin_events',a),oc.rpc('admin_dashboard',{p_period:st.p,p_host:null})]);
   st.busy=false;$('refresh').classList.remove('spin');
@@ -333,7 +336,7 @@ function skeleton(){
 function render(d){
   var K=d.kpis,names=[['today','Bu gün'],['week','Bu həftə'],['month','Bu ay'],['year','Bu il'],['total','Ümumi']];
   $('kt').textContent=st.h?(NAME[st.h]||st.h):'Mushafuk · ümumi';
-  var q=$('quranSec');if(q)q.style.display=st.h==='sunan.online'?'none':'';
+  var q=$('quranSec');if(q)q.style.display=cl(st.h)===CS?'none':'';
   $('kpis').innerHTML=names.map(function(n,i){var x=K[n[0]],t=n[0]==='total';
     return '<div class="kpi'+(t?' tot':'')+'"'+(t?'':' title="Əvvəlki müqayisə dövrü: '+fmt(x.pviews)+' baxış, '+fmt(x.pvisitors)+' ziyarətçi"')+'><label>'+n[1]+(t?'':' '+delta(x.views,x.pviews))+'</label><div class="v">'+fmt(x.views)+' <small style="font:500 .8rem system-ui;color:var(--mut)">baxış</small></div><div class="s"><b>'+fmt(x.visitors)+'</b> ziyarətçi'+(t?'':' · '+delta(x.visitors,x.pvisitors))+'</div></div>'}).join('');
   $('upd').textContent='yeniləndi '+new Date().toLocaleTimeString('az',{hour:'2-digit',minute:'2-digit'});
@@ -480,7 +483,7 @@ $('csv').onclick=function(){
     sec('Nəticəsiz sorğular',['Sorğu','Say']);e.zero.forEach(function(x){add([x.q,x.n])});
   }
   var blob=new Blob(['\uFEFF'+R.join('\r\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);a.download='stats-'+(st.h?st.h.replace(/\./g,'-'):'mushafuk-umumi')+'-'+st.p+'-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.href=URL.createObjectURL(blob);a.download='stats-'+(st.h?st.h.replace(/[^a-z0-9]+/gi,'-'):'mushafuk-umumi')+'-'+st.p+'-'+new Date().toISOString().slice(0,10)+'.csv';
   document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);
 };
 
