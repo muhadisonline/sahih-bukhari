@@ -191,12 +191,10 @@ body.home .set-panel{color:#161513}
 
 .mh-emblem{display:block;width:min(15.5rem,72vw);height:auto;margin:0 auto .15rem}
 
-.mh-about > summary.mh-h{cursor:pointer;list-style:none}
-.mh-about > summary.mh-h::-webkit-details-marker{display:none}
-.mh-about > summary.mh-h::marker{content:"";display:none}
-.mh-about > summary .mh-sum-ico{width:1.05rem;height:1.05rem;flex:none;stroke:currentColor}
-.mh-about[open] > summary .mh-sum-ico{transform:rotate(180deg)}
-.mh-about .mh-lead{margin-top:1.15rem}
+body.home main .mh-sec:last-child{margin-bottom:2.6rem}
+.mh-foot .mh-foot-links{margin-top:1rem;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.95rem}
+.mh-foot .mh-foot-links a{color:#f6f1e7}
+.mh-foot .mh-foot-links a:hover{text-decoration:underline}
 .mh-table-wrap{margin-top:1.15rem;overflow-x:auto;background:#faf7f2;border:1px solid #e8e1d6;border-radius:1.15rem;box-shadow:0 1px 0 rgba(28,63,50,.03)}
 .mh-table{width:100%;border-collapse:collapse;font-size:.95rem}
 .mh-table th,.mh-table td{padding:.7rem .85rem;border-bottom:1px solid #e8e1d6;text-align:start;vertical-align:top}
