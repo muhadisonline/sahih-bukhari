@@ -51,8 +51,13 @@ ol.books a:hover .name{color:var(--accent)}
 .bab{margin:1rem 0 0;font-size:1.2rem}
 .no{display:block;margin-bottom:.45rem;color:var(--accent);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.8rem}
 .front{font-family:Amiri,serif;font-size:1.02rem;line-height:1.75;color:var(--muted)}
-.matn{font-family:Amiri,serif;font-size:1.22rem;line-height:1.9;white-space:pre-wrap;margin-top:1.25rem}
-.isnad{color:#3f5c4c}
+.matn{font-family:Amiri,serif;font-size:1.26rem;line-height:2;white-space:pre-wrap;margin-top:1.25rem;padding:.95rem 1.1rem;background:#fffdf8;border:1px solid #eee6d6;border-inline-start:3px solid #c4a35a;border-start-start-radius:2px;border-end-start-radius:2px;border-start-end-radius:12px;border-end-end-radius:12px;box-shadow:0 1px 0 rgba(28,63,50,.03);min-width:0;max-width:100%;overflow-wrap:break-word;color:var(--ink)}
+.isnad{display:block;font-size:1rem;line-height:1.8;color:#6b736e;margin-inline:-1.1rem;background:var(--paper);box-shadow:-12px 0 0 var(--paper),12px 0 0 var(--paper);position:relative;z-index:1}
+.matn:has(>.isnad){padding-top:0;border-top-width:0;border-start-start-radius:0;border-start-end-radius:0}
+.matn:has(>.isnad)::before,.isnad::after,.matn:not(:has(>.isnad))::before{font-family:"IBM Plex Sans Arabic",sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;color:#8a837a;line-height:1.4}
+.matn:has(>.isnad)::before{content:"الإسناد";display:block;margin:0;margin-inline:-1.1rem;padding-bottom:.35rem;background:var(--paper);box-shadow:-12px 0 0 var(--paper),12px 0 0 var(--paper),0 -6px 0 var(--paper);position:relative;z-index:1}
+.isnad::after{content:"المتن";display:block;margin:1.2rem 0 0;padding-bottom:.55rem;border-bottom:1px solid #eee6d6}
+.matn:not(:has(>.isnad))::before{content:"المتن";display:block;margin:0 0 .35rem}
 .note{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.875rem;line-height:2}
 .pager{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
 .pager a{color:var(--accent);min-height:2.75rem;display:inline-flex;align-items:center}
