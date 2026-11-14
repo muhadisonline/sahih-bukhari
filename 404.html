@@ -23,5 +23,12 @@ a{color:#1c4536}
 <p>هذا القسم لم يُفتح بعد.</p>
 <p><a href="/">العودة إلى الرئيسية</a></p>
 </main>
+<script>
+var m = location.pathname.match(/^\/muslim\/(\d+)\/?$/);
+if (m) {
+  var n = +m[1];
+  location.replace("/muslim/" + (Math.floor(n / 500) * 500) + "/" + n + "/");
+}
+</script>
 </body>
 </html>
