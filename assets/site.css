@@ -196,3 +196,10 @@ body.home .set-panel{color:#161513}
 .soon{display:block;margin-top:.2rem;font-family:"IBM Plex Sans Arabic",sans-serif;font-style:normal;font-weight:500;font-size:.72rem;line-height:1.4;color:#8a5a2b}
 .mh-links .soon{font-size:.62rem;margin-top:.05rem}
 @media(max-width:760px){.mh-links .soon{display:none}}
+
+/* preview-muslim hawashi */
+.print-meta{margin:.4rem 0 0;color:var(--muted);font-size:.875rem}
+.hawashi{margin-top:1.35rem;padding-top:.85rem;border-top:1px solid var(--line)}
+.hawashi .meta{margin:0 0 .35rem}
+.hawashi ol.note{margin:.2rem 0 0;padding-inline-start:1.4rem;color:var(--muted);font-size:.9rem;line-height:1.9}
+.hawashi ol.note li{margin:.35rem 0}

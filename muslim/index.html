@@ -3,24 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>صحيح مسلم — طبعة فؤاد عبد الباقي</title>
-<meta name="description" content="متن صحيح مسلم بترقيم محمد فؤاد عبد الباقي، منقولا من الطبعة.">
+<title>صحيح مسلم</title>
+<meta name="description" content="صحيح مسلم: 57 كتابًا و3031 حديثًا.">
 <link rel="canonical" href="https://sunan.online/muslim/">
+<meta property="og:title" content="صحيح مسلم">
+<meta property="og:description" content="صحيح مسلم: 57 كتابًا و3031 حديثًا.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://sunan.online/muslim/">
+<meta name="theme-color" content="#f7f5f2">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=21">
+<link rel="stylesheet" href="/assets/site.css?v=22">
 <script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
-</head>
+<script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
-  <div class="mh-nav">
-    <a class="mh-logo" href="/">سُنَن</a>
-    <nav class="mh-links" aria-label="التنقل">
-      <a href="/muslim/"><span class="lbl">صحيح مسلم</span></a>
-      <a class="mh-pill" href="/"><span class="lbl">الرئيسية</span></a>
-    </nav>
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <span class="mark">س</span>
+      <span class="brand-name">سُنَن</span>
+    </a>
+    <form class="search" action="/muslim/" method="get" role="search">
+      <label class="sr" for="q">بحث في الأحاديث</label>
+      <input id="q" name="q" placeholder="رقم الحديث أو كلمة">
+      <button class="btn" type="submit">بحث</button>
+    </form>
+    <a class="mobile-search" href="/muslim/">بحث</a>
     <div class="set">
       <button class="gear" type="button" id="gear" aria-label="حجم الخط" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
@@ -33,76 +44,120 @@
     </div>
   </div>
 </header>
-<main>
-  <div class="wrap">
-    <p class="kicker">دار إحياء الكتب العربية · ١٣٧٤ هـ</p>
-    <h1 class="title">صحيح مسلم</h1>
-    <p class="lead">تحقيق محمد فؤاد عبد الباقي. الرقم بين قوسين في الطبعة هو رقم الحديث في هذه الصفحات.</p>
-    <p class="meta">نُقل حتى الآن ٤٤٧ حديثًا، من ٨ إلى ٧٠٨. ما سقط رقمه لم تكتمل صفحاته بعد.</p>
-    <form class="jump" action="/muslim/" method="get" role="search">
-      <label>رقم فؤاد أو كلمة من المتن
-        <input name="q" placeholder="مثال: جبريل">
-      </label>
-      <button class="btn" type="submit">بحث</button>
-    </form>
-    <div id="hits"></div>
-    <h2 class="books-h">الكتب</h2>
-    <ol class="books">
-      <li><a href="/muslim/kitab/1/"><span class="name">كتاب الإيمان</span><span class="count">٢٢٣ · ٨–٢٩٢</span></a></li><li><a href="/muslim/kitab/2/"><span class="name">كتاب الطهارة</span><span class="count">١٩ · ٢٧٠–٢٨٨</span></a></li><li><a href="/muslim/kitab/3/"><span class="name">كتاب الحيض</span><span class="count">٣٤ · ٢٩٣–٣٢٦</span></a></li><li><a href="/muslim/kitab/4/"><span class="name">كتاب الصلاة</span><span class="count">٥٨ · ٤٥٨–٥١٦</span></a></li><li><a href="/muslim/kitab/5/"><span class="name">كتاب المساجد ومواضع الصلاة</span><span class="count">٨٩ · ٥٩٦–٦٨٤</span></a></li><li><a href="/muslim/kitab/6/"><span class="name">كتاب صلاة المسافرين وقصرها</span><span class="count">٢٤ · ٦٨٥–٧٠٨</span></a></li>
-    </ol>
-  </div>
+<main class="wrap">
+<nav class="crumbs"><a href="/">سُنَن</a></nav>
+<h1 class="title">صحيح مسلم</h1>
+<p class="meta">مسلم بن الحجاج · ٥٧ كتابًا · ٣٠٣١ حديثًا</p>
+<p class="meta">نُقل حتى الآن جزء من الأحاديث عن طبعة محمد فؤاد عبد الباقي. ما لم يُنقل بعد يبقى بنص الموقع السابق حتى يكتمل النقل.</p>
+<form class="book-find" data-book="muslim" role="search" onsubmit="return false"><input placeholder="ابحث في هذا الكتاب" autocomplete="off" enterkeyhint="search"></form>
+<div class="book-hits" hidden></div>
+<h2 class="books-h">الكتب</h2>
+<ol class="books">
+<li><a href="/muslim/kitab/1/"><span class="idx">١</span><span class="name">مقدمة الإمام مسلم</span><span class="count">٧</span></a></li>
+<li><a href="/muslim/kitab/2/"><span class="idx">٢</span><span class="name">كتاب الإيمان</span><span class="count">٢١٥</span></a></li>
+<li><a href="/muslim/kitab/3/"><span class="idx">٣</span><span class="name">كتاب الطهارة</span><span class="count">٧٠</span></a></li>
+<li><a href="/muslim/kitab/4/"><span class="idx">٤</span><span class="name">كتاب الحيض</span><span class="count">٨٤</span></a></li>
+<li><a href="/muslim/kitab/5/"><span class="idx">٥</span><span class="name">كتاب الصلاة</span><span class="count">١٤٣</span></a></li>
+<li><a href="/muslim/kitab/6/"><span class="idx">٦</span><span class="name">كتاب المساجد ومواضع الصلاة</span><span class="count">١٦٥</span></a></li>
+<li><a href="/muslim/kitab/7/"><span class="idx">٧</span><span class="name">كتاب صلاة المسافرين وقصرها</span><span class="count">١٥٩</span></a></li>
+<li><a href="/muslim/kitab/8/"><span class="idx">٨</span><span class="name">كتاب الجمعة</span><span class="count">٤٠</span></a></li>
+<li><a href="/muslim/kitab/9/"><span class="idx">٩</span><span class="name">كتاب صلاة العيدين</span><span class="count">١٠</span></a></li>
+<li><a href="/muslim/kitab/10/"><span class="idx">١٠</span><span class="name">كتاب صلاة الاستسقاء</span><span class="count">٧</span></a></li>
+<li><a href="/muslim/kitab/11/"><span class="idx">١١</span><span class="name">كتاب الكسوف</span><span class="count">١٥</span></a></li>
+<li><a href="/muslim/kitab/12/"><span class="idx">١٢</span><span class="name">كتاب الجنائز</span><span class="count">٦٣</span></a></li>
+<li><a href="/muslim/kitab/13/"><span class="idx">١٣</span><span class="name">كتاب الزكاة</span><span class="count">١٠٠</span></a></li>
+<li><a href="/muslim/kitab/14/"><span class="idx">١٤</span><span class="name">كتاب الصيام</span><span class="count">٩٢</span></a></li>
+<li><a href="/muslim/kitab/15/"><span class="idx">١٥</span><span class="name">كتاب الاعتكاف</span><span class="count">٦</span></a></li>
+<li><a href="/muslim/kitab/16/"><span class="idx">١٦</span><span class="name">كتاب الحج</span><span class="count">٢٢٣</span></a></li>
+<li><a href="/muslim/kitab/17/"><span class="idx">١٧</span><span class="name">كتاب النكاح</span><span class="count">٤٤</span></a></li>
+<li><a href="/muslim/kitab/18/"><span class="idx">١٨</span><span class="name">كتاب الرضاع</span><span class="count">٢٧</span></a></li>
+<li><a href="/muslim/kitab/19/"><span class="idx">١٩</span><span class="name">كتاب الطلاق</span><span class="count">٢١</span></a></li>
+<li><a href="/muslim/kitab/20/"><span class="idx">٢٠</span><span class="name">كتاب اللعان</span><span class="count">٩</span></a></li>
+<li><a href="/muslim/kitab/21/"><span class="idx">٢١</span><span class="name">كتاب العتق</span><span class="count">١٠</span></a></li>
+<li><a href="/muslim/kitab/22/"><span class="idx">٢٢</span><span class="name">كتاب البيوع</span><span class="count">٤٠</span></a></li>
+<li><a href="/muslim/kitab/23/"><span class="idx">٢٣</span><span class="name">كتاب المساقاة</span><span class="count">٦٣</span></a></li>
+<li><a href="/muslim/kitab/24/"><span class="idx">٢٤</span><span class="name">كتاب الفرائض</span><span class="count">٦</span></a></li>
+<li><a href="/muslim/kitab/25/"><span class="idx">٢٥</span><span class="name">كتاب الهبات</span><span class="count">٧</span></a></li>
+<li><a href="/muslim/kitab/26/"><span class="idx">٢٦</span><span class="name">كتاب الوصية</span><span class="count">١١</span></a></li>
+<li><a href="/muslim/kitab/27/"><span class="idx">٢٧</span><span class="name">كتاب النذر</span><span class="count">٨</span></a></li>
+<li><a href="/muslim/kitab/28/"><span class="idx">٢٨</span><span class="name">كتاب الأيمان</span><span class="count">٢٣</span></a></li>
+<li><a href="/muslim/kitab/29/"><span class="idx">٢٩</span><span class="name">كتاب القسامة والمحاربين والقصاص والديات</span><span class="count">١٥</span></a></li>
+<li><a href="/muslim/kitab/30/"><span class="idx">٣٠</span><span class="name">كتاب الحدود</span><span class="count">٢٦</span></a></li>
+<li><a href="/muslim/kitab/31/"><span class="idx">٣١</span><span class="name">كتاب الأقضية</span><span class="count">١١</span></a></li>
+<li><a href="/muslim/kitab/32/"><span class="idx">٣٢</span><span class="name">كتاب اللقطة</span><span class="count">٨</span></a></li>
+<li><a href="/muslim/kitab/33/"><span class="idx">٣٣</span><span class="name">كتاب الجهاد والسير</span><span class="count">٨٨</span></a></li>
+<li><a href="/muslim/kitab/34/"><span class="idx">٣٤</span><span class="name">كتاب الإمارة</span><span class="count">١١٠</span></a></li>
+<li><a href="/muslim/kitab/35/"><span class="idx">٣٥</span><span class="name">كتاب الصيد والذبائح وما يؤكل من الحيوان</span><span class="count">٣١</span></a></li>
+<li><a href="/muslim/kitab/36/"><span class="idx">٣٦</span><span class="name">كتاب الأضاحي</span><span class="count">١٩</span></a></li>
+<li><a href="/muslim/kitab/37/"><span class="idx">٣٧</span><span class="name">كتاب الأشربة</span><span class="count">٨٦</span></a></li>
+<li><a href="/muslim/kitab/38/"><span class="idx">٣٨</span><span class="name">كتاب اللباس والزينة</span><span class="count">٦٦</span></a></li>
+<li><a href="/muslim/kitab/39/"><span class="idx">٣٩</span><span class="name">كتاب الآداب</span><span class="count">٢٩</span></a></li>
+<li><a href="/muslim/kitab/40/"><span class="idx">٤٠</span><span class="name">كتاب السلام</span><span class="count">٨٦</span></a></li>
+<li><a href="/muslim/kitab/41/"><span class="idx">٤١</span><span class="name">كتاب الألفاظ من الأدب وغيرها</span><span class="count">٩</span></a></li>
+<li><a href="/muslim/kitab/42/"><span class="idx">٤٢</span><span class="name">كتاب الشعر</span><span class="count">٦</span></a></li>
+<li><a href="/muslim/kitab/43/"><span class="idx">٤٣</span><span class="name">كتاب الرؤيا</span><span class="count">١٥</span></a></li>
+<li><a href="/muslim/kitab/44/"><span class="idx">٤٤</span><span class="name">كتاب الفضائل</span><span class="count">١٠٥</span></a></li>
+<li><a href="/muslim/kitab/45/"><span class="idx">٤٥</span><span class="name">كتاب فضائل الصحابة رضي الله تعالى عنهم</span><span class="count">١٦٧</span></a></li>
+<li><a href="/muslim/kitab/46/"><span class="idx">٤٦</span><span class="name">كتاب البر والصلة والآداب</span><span class="count">٩٥</span></a></li>
+<li><a href="/muslim/kitab/47/"><span class="idx">٤٧</span><span class="name">كتاب القدر</span><span class="count">٢٢</span></a></li>
+<li><a href="/muslim/kitab/48/"><span class="idx">٤٨</span><span class="name">كتاب العلم</span><span class="count">١٠</span></a></li>
+<li><a href="/muslim/kitab/49/"><span class="idx">٤٩</span><span class="name">كتاب الذكر والدعاء والتوبة والاستغفار</span><span class="count">٦١</span></a></li>
+<li><a href="/muslim/kitab/50/"><span class="idx">٥٠</span><span class="name">كتاب الرقاق</span><span class="count">٨</span></a></li>
+<li><a href="/muslim/kitab/51/"><span class="idx">٥١</span><span class="name">كتاب التوبة</span><span class="count">٢٨</span></a></li>
+<li><a href="/muslim/kitab/52/"><span class="idx">٥٢</span><span class="name">كتاب صفات المنافقين وأحكامهم</span><span class="count">١٣</span></a></li>
+<li><a href="/muslim/kitab/53/"><span class="idx">٥٣</span><span class="name">كتاب صفة القيامة والجنة والنار</span><span class="count">٣٧</span></a></li>
+<li><a href="/muslim/kitab/54/"><span class="idx">٥٤</span><span class="name">كتاب الجنة، وصفة نعيمها وأهلها</span><span class="count">٥٨</span></a></li>
+<li><a href="/muslim/kitab/55/"><span class="idx">٥٥</span><span class="name">كتاب الفتن وأشراط الساعة</span><span class="count">٧٦</span></a></li>
+<li><a href="/muslim/kitab/56/"><span class="idx">٥٦</span><span class="name">كتاب الزهد والرقائق</span><span class="count">٥٩</span></a></li>
+<li><a href="/muslim/kitab/57/"><span class="idx">٥٧</span><span class="name">كتاب التفسير</span><span class="count">١٩</span></a></li>
+</ol>
 </main>
-
 <footer>
-  <div class="wrap">
-    <p>صحيح مسلم. طبعة محمد فؤاد عبد الباقي. دار إحياء الكتب العربية، القاهرة، ١٣٧٤ هـ.</p>
-    <p>المتن منقول من صفحات الطبعة نفسها، لا من المكتبة الشاملة. الحواشي حاشية هذه الطبعة.</p>
+  <div class="wrap foot">
+    <nav>
+      <a href="/buxari/">البخاري</a>
+      <a href="/muslim/">مسلم</a>
+      <a href="/abudawud/">أبو داود</a>
+      <a href="/tirmidhi/">الترمذي</a>
+      <a href="/nasai/">النسائي</a>
+      <a href="/ibnmajah/">ابن ماجه</a>
+      <a href="/malik/">الموطأ</a>
+      <a href="/darimi/">الدارمي</a>
+      <a href="/adab/">الأدب المفرد</a>
+      <a href="/riyad/">رياض الصالحين</a>
+    </nav>
+    <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
 <script>
 (function () {
   var key = "bukhari-size";
-  function get() { var n = Number(localStorage.getItem(key) || "0"); return n >= 0 && n <= 3 ? n : 0; }
-  function apply(n) { document.documentElement.setAttribute("data-size", String(n)); localStorage.setItem(key, String(n)); }
+  function get() {
+    var n = Number(localStorage.getItem(key) || "0");
+    return n >= 0 && n <= 3 ? n : 0;
+  }
+  function apply(n) {
+    document.documentElement.setAttribute("data-size", String(n));
+    localStorage.setItem(key, String(n));
+  }
   var gear = document.getElementById("gear");
   var panel = document.getElementById("set-panel");
-  if (!gear || !panel) return;
   gear.addEventListener("click", function (e) {
     e.stopPropagation();
     var open = panel.style.display === "none";
     panel.style.display = open ? "flex" : "none";
     gear.setAttribute("aria-expanded", open ? "true" : "false");
   });
-  document.addEventListener("click", function () { panel.style.display = "none"; gear.setAttribute("aria-expanded", "false"); });
+  document.addEventListener("click", function () {
+    panel.style.display = "none";
+    gear.setAttribute("aria-expanded", "false");
+  });
   panel.addEventListener("click", function (e) { e.stopPropagation(); });
   document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
   document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
 })();
 </script>
-<script>
-(function () {
-  var box = document.getElementById("hits");
-  var input = document.querySelector('input[name=q]');
-  var q = (new URLSearchParams(location.search).get("q") || "").trim();
-  if (q && input) input.value = q;
-  if (!q) return;
-  fetch("/muslim/ix.json").then(function (r) { return r.json(); }).then(function (data) {
-    var AR = "٠١٢٣٤٥٦٧٨٩";
-    function ar(n){ return String(n).replace(/\d/g, function (d) { return AR[Number(d)] || d; }); }
-    function fromAr(s){ return String(s).replace(/[٠-٩]/g, function (d) { return String(AR.indexOf(d)); }); }
-    function esc(s){ var map = {"&": "&" + "amp;", "<": "&" + "lt;", ">": "&" + "gt;"}; return String(s).replace(/[&<>]/g, function (c) { return map[c]; }); }
-    function href(n){ var b = Math.floor(n / 500) * 500; return "/muslim/" + b + "/" + n + "/"; }
-    var asNum = Number(fromAr(q));
-    var rows = Number.isInteger(asNum) && asNum > 0
-      ? data.filter(function (h) { return h.no === asNum; })
-      : data.filter(function (h) { return h.matn.indexOf(q) >= 0 || (h.bab || "").indexOf(q) >= 0 || h.kitab.indexOf(q) >= 0; });
-    if (!rows.length) { box.innerHTML = '<p class="meta">لا شيء بهذا الرقم أو بهذه الكلمة في المنقول.</p>'; return; }
-    box.innerHTML = '<ul class="hits">' + rows.map(function (h) {
-      var bit = h.matn.replace(/\s+/g, " ").slice(0, 180);
-      return '<li><a href="' + href(h.no) + '"><span class="hit-no">' + esc(h.kitab) + " · " + ar(h.no) + '</span><span class="hit-k">' + esc(bit) + "</span></a></li>";
-    }).join("") + "</ul>";
-  });
-})();
-</script>
+
+<script src="/assets/local-find.js?v=2" defer></script>
 </body>
 </html>
