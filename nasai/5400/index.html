@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-dSEZJeFohAgq6Ounf1CV1iF+JIewWZadqUli3Plp2Xc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٥٤٠٠ — أخبرنا الحسين بنُ حُرَيث قال: أخبرنا الفضل بنُ موسى، عن سفيانَ بن… | سنن النسائي</title>
 <meta name="description" content="الحديث ٥٤٠٠ من سنن النسائي، كتاب آداب القضاء، باب تأويل قول الله عز وجل: ﴿ومن لم يحكم بما أنزل الله فأولئك هم الكافرون﴾. أخبرنا الحسين بنُ حُرَيث قال: أخبرنا الفضل بنُ موسى، عن سفيانَ بن سعيد، عن عطاء بن السَّائب، عن سعيد بن جُبَير. عن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -65,16 +67,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٥٤٠٠" data-url="https://sunan.online/nasai/5400/">انسخ المتن</button>
   <a href="/nasai/5401/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -93,35 +86,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٤٠٠ — أخبرنا الحسين بنُ حُرَيث قال: أخبرنا الفضل بنُ موسى، عن سفيانَ بن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":5400,"articleBody":"أخبرنا الحسين بنُ حُرَيث قال: أخبرنا الفضل بنُ موسى، عن سفيانَ بن سعيد، عن عطاء بن السَّائب، عن سعيد بن جُبَير.\nعن ابن عبَّاس قال: كانت ملوكٌ بعدَ عيسى ابن مريم عليه الصلاة والسلام بدَّلوا التَّوراةَ والإنجيل، وكان فيهم مؤمنونَ يقرؤون التَّوراةَ، قيل لملوكهم: ما نجِدُ شَتْمًا أشدَّ من شَتْمٍ يَشْتِمونا هؤلاء، ﴿وَمَنْ لَمْ يَحْكُمْ بِمَا أَنْزَلَ اللَّهُ فَأُولَئِكَ هُمُ الْكَافِرُونَ﴾ [المائدة: ٤٤]، وهؤلاء الآيات مع ما يَعيبونا به في أعمالنا في قراءتهم، فادْعُهم فليقرؤوا كما نقرأ، وليؤمنوا كما، آمنَّا، فدعاهم، فجمعَهم، وعرَضَ عليهم القَتْلَ، أو يَترُكوا قراءة التَّوراة والإنجيل، إلَّا ما بدَّلوا منها، فقالوا: ما تُريدونَ إلى ذلك، دَعُونا، فقالت طائفةٌ منهم: ابْنُوا لنا أسطوانةً، ثُمَّ ارفَعونا إليها، ثُمَّ أعطُونا شيئًا نرفَعُ به طعامَنا وشرابَنا، فلا نَرِدُ عليكم. وقالت طائفةٌ منهم: دَعُونا نَسِيحُ في الأرض، ونَهِيمُ، ونَشربُ كما يَشربُ الوحشُ، فإِنْ قَدَرْتُم علينا في أرضِكم فاقتُلونا. وقالت طائفةٌ منهم: ابْنُوا لنا دُورًا في الفَيافي، ونحتَفِرُ الآبار، ونَحتَرِثُ البقولَ، فلا نَرِدُ عليكم، ولا نَمُرُّ بكم، وليس أحدٌ من القبائل إلَّا وله حميمٌ فيهم. قال: ففعلوا ذلك، فأنزل الله عز وجل: ﴿وَرَهْبَانِيَّةً ابْتَدَعُوهَا مَا كَتَبْنَاهَا عَلَيْهِمْ إِلَّا ابْتِغَاءَ رِضْوَانِ اللَّهِ فَمَا رَعَوْهَا حَقَّ رِعَايَتِهَا﴾ [الحديد: ٢٧] والآخرون قالوا: نتعبَّدُ كما تعبَّدَ فلانٌ،\nونَسِيحُ كما ساحَ فلانٌ، ونَتَّخِذُ دُورًا كما اتَّخذَ فلانٌ، وهم على شِرْكِهم، لا عِلْمَ لهم بإيمانِ الَّذين اقتدَوا به، فلمّا بعثَ اللهُ النبيَّ صلى الله عليه وسلم، ولم يَبقَ منهم إلَّا قليلٌ، انحطَّ رجلٌ من صَومَعَتِه، وجاء سائحٌ من سياحَتِه، وصاحبُ الدَّيرِ من دَيرِه، فآمَنوا به، وصدَّقوه، فقال الله تبارك وتعالى: ﴿يَاأَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَآمِنُوا بِرَسُولِهِ يُؤْتِكُمْ كِفْلَيْنِ مِنْ رَحْمَتِهِ﴾ [الحديد: ٢٨]: أجْرَين بإيمانِهم بعيسى وبالتَّوراة والإنجيل، وبإيمانهم بمحمدٍ صلى الله عليه وسلم وتصديقهم. قال: ﴿وَيَجْعَلْ لَكُمْ نُورًا تَمْشُونَ بِهِ﴾ القرآنَ، واتَّباعَهم النبيَّ صلى الله عليه وسلم قال: ﴿لِئَلَّا يَعْلَمَ أَهْلُ الْكِتَابِ﴾ [الحديد: ٢٩] يتشبَّهون بكم ﴿أَلَّا يَقْدِرُونَ عَلَى شَيْءٍ مِنْ فَضْلِ اللَّهِ﴾ الآية."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

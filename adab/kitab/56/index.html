@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب الفضول والجفاء — الأدب المفرد</title>
 <meta name="description" content="كتاب الفضول والجفاء من الأدب المفرد. 12 حديثًا، من 1308 إلى 1319.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب الفضول والجفاء</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">١٢ حديثًا</p>
 <a class="entry" href="/adab/1308/"><span class="n">١٣٠٨</span><span class="ttl">حَدَّثَنَا قُتَيْبَةُ، قَالَ: حَدَّثَنَا أَبُو…</span></a><a class="entry" href="/adab/1309/"><span class="n">١٣٠٩</span><span class="ttl">حَدَّثَنَا خَلاَّدٌ، قَالَ: حَدَّثَنَا عَبْدُ…</span></a><a class="entry" href="/adab/1310/"><span class="n">١٣١٠</span><span class="ttl">حَدَّثَنَا مُسَدَّدٌ، قَالَ: حَدَّثَنَا…</span></a><a class="entry" href="/adab/1311/"><span class="n">١٣١١</span><span class="ttl">حَدَّثَنَا مَطَرٌ، قَالَ: حَدَّثَنَا يَزِيدُ،…</span></a><a class="entry" href="/adab/1312/"><span class="n">١٣١٢</span><span class="ttl">حَدَّثَنَا إِسْمَاعِيلُ قَالَ: حَدَّثَنِي مَالِكٌ،…</span></a><a class="entry" href="/adab/1313/"><span class="n">١٣١٣</span><span class="ttl">حَدَّثَنَا مُحَمَّدُ بْنُ سَعِيدٍ…</span></a><a class="entry" href="/adab/1314/"><span class="n">١٣١٤</span><span class="ttl">حَدَّثَنَا صَدَقَةُ، قَالَ: حَدَّثَنَا ابْنُ…</span></a><a class="entry" href="/adab/1315/"><span class="n">١٣١٥</span><span class="ttl">حَدَّثَنَا آدَمُ، قَالَ: حَدَّثَنَا شُعْبَةُ، عَنْ…</span></a><a class="entry" href="/adab/1316/"><span class="n">١٣١٦</span><span class="ttl">حَدَّثَنَا بِشْرُ بْنُ مُحَمَّدٍ، قَالَ:…</span></a><a class="entry" href="/adab/1317/"><span class="n">١٣١٧</span><span class="ttl">حَدَّثَنَا سَعِيدُ بْنُ سُلَيْمَانَ، قَالَ:…</span></a><a class="entry" href="/adab/1318/"><span class="n">١٣١٨</span><span class="ttl">حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ:…</span></a><a class="entry" href="/adab/1319/"><span class="n">١٣١٩</span><span class="ttl">حَدَّثَنَا آدَمُ، قَالَ: حَدَّثَنَا شُعْبَةُ، عَنْ…</span></a>
@@ -69,35 +71,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-+Y29eUue8/BeFH7sjPIucFf5OI0B43/QtS9QYJOfxW4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٤٣٨ — أنا نبي | رياض الصالحين</title>
 <meta name="description" content="الحديث ٤٣٨ من رياض الصالحين، كتاب المقدمات، . وعن أبي نجيح عمرو بن عبسة -بفتح العين والباء- السلمي، رضي الله عنه، قال: كنت وأنا في الجاهلية أظن أن الناس على ضلالة، وأنهم ليسوا على شئ، وهم يعبدون الأوثان، فسمعت برجل بمكة يخبر أخباراً،…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٤٣٨" data-url="https://sunan.online/riyad/438/">انسخ المتن</button>
   <a href="/riyad/439/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٣٨ — أنا نبي | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":438,"articleBody":"وعن أبي نجيح عمرو بن عبسة -بفتح العين والباء- السلمي، رضي الله عنه، قال: كنت وأنا في الجاهلية أظن أن الناس على ضلالة، وأنهم ليسوا على شئ، وهم يعبدون الأوثان، فسمعت برجل بمكة يخبر أخباراً، فقعدت على راحلتى، فقدمت عليه، فإذا رسول الله، صلى الله عليه وسلم مستخفياً، جرءاء عليه قومه، فتلطف حتى دخلت عليه بمكة، فقلت له: ما أنت؟ قال: \"أنا نبي\" قلت: وما نبي؟ قال: \"أرسلني الله\" قلت: وبأي شئ أرسك؟ قال \"أرسلني بصلة الأرحام، وكسر الأوثان وأن يوحد الله لا يشرك به شئ: قلت: فمن معك على هذا؟ قال: \"حر وعبد\" ومعه يومئذ أبو بكر وبلال، رضي الله عنهما، قلت: إني متبعك، قال: \"إنك لن تستطيع ذلك يومك هذا، ألا ترى حالي وحال الناس؟ ولكن ارجع إلى أهلك فإذا سمعت بي قد ظهرت فأتني\" قال: فذهبت إلى أهلي وقدم رسول الله صلى الله عليه وسلم، المدينة، وكنت في أهلي، فجعلت أتخبر الأخبار، واسأل الناس حين قدم المدينة حتى قدم نفر من أهلي المدينة، فقلت: ما فعل هذا الرجل الذي قدم المدينة؟ فقالوا: الناس إليه سراع، وقد أراد قومه قتله، فلم يستطيعوا ذلك، فقدمت المدينة، فدخلت عليه، فقلت: يا رسول الله أتعرفني؟ قال: \"نعم أنتالذي لقيتني بمكة\" قال: فقلت يا رسول الله أخبرني عما علمك الله وأجهله، أخبرنى عن الصلاة؟ قال:” صل صلاة الصبح، ثم أقصر عن الصلاة حتى ترتفع الشمس قيد رمح، فإنه تطلع حين تطلع بين قرني شيطان، وحينئذ يسجد لها الكفار، ثم صل فإن الصلاة مشهودة محضورة حتى يستقل الظل بالرمح، ثم أقصر عن الصلاة، فإنه حينئذ تسجر جهنم؛ فإذا أقبل الفيء فصل؛ فإن الصلاة مشهودة محضورة حتى تصلي العصر، ثم اقصر عن الصلاة حتى تغرب الشمس، فإنها تغرب بين قرني شيطان، وحينئذ يسجد لها الكفار\" قال: فقلت: يا نبى الله؛ فالوضوء حدثنى عنه؟ فقال: \"ما منكم رجل يقرب وضوءه، فيتمضمض ويستنشق فينتثر، إلا خرت خطايا وجهه وفيه وخياشيمه، ثم إذا غسل وجهه كما أمره الله، إلا خرت خطايا وجهه من أطراف لحيته مع الماء، ثم يغسل يديه إلى المرفقين، إلا خرت خطايا يديه من أنامله مع الماء ثم يمسح رأسه، إلا خرت خطايا يديه من أنامله مع الماء، ثم يغسل يديه إلى المرفقين، إلاخرت خطايا يديه من أنامله مع الماء، ثم يمسح رأسه، إلا خرت خطايا رأسه من أطراف شعره مع الماء، ثم يغسل قديمه إلى الكعبين إلا خرت خطايا رجليه من أنامله مع الماء، فإن هو قام فصلى، فحمد الله تعالى، وأثنى عليه ومجده بالذي هو له أهل، وفرغ قلبه لله تعالى، إلا انصرف من خطيئته كهيئته يوم ولدته أمه\". \nفحدث عمرو بن عبسة بهذا الحديث أبا أمامة صاحب رسول الله، فقال له أبو أمامة: يا عمرو بن عبسة، انظر ما تقول! في مقام واحد يعطى هذا الرجل؟ فقال عمرو: يا أبا أمامة لقد كبرت سني، ورق عظمي، واقترب أجلي، وما بي حاجة أن أكذب على الله تعالى، ولا على رسول الله، صلى الله عليه وسلم، لو لم اسمعه من رسول الله، صلى الله عليه وسلم إلا مرة أو مرتين أو ثلاثاً، حتى عد سبع مرات، ماحدثت أبداً به، ولكني سمعته أكثر من ذلك ((رواه مسلم))."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

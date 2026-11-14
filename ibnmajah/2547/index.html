@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-YucIpm22Es1QDVVkVsbGKWTalCW8El/X3ohhKXa6JzY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٥٤٧ — أَتَشْفَعُ فِي حَدٍّ مِنْ حُدُودِ اللهِ؟ | سنن ابن ماجه</title>
 <meta name="description" content="الحديث ٢٥٤٧ من سنن ابن ماجه، أول أبواب الحدود، باب الشفاعة في الحدود. حَدَّثَنَا مُحَمَّدُ بْنُ رُمْحِ الْمِصْرِيُّ، قَالَ: أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنِ ابْنِ شِهَاب، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ: أَنَّ قُرَيْشًا أَهَمَّهُمْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -60,16 +62,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٢٥٤٧" data-url="https://sunan.online/ibnmajah/2547/">انسخ المتن</button>
   <a href="/ibnmajah/2548/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -88,35 +81,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٥٤٧ — أَتَشْفَعُ فِي حَدٍّ مِنْ حُدُودِ اللهِ؟ | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":2547,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ رُمْحِ الْمِصْرِيُّ، قَالَ: أَنْبَأَنَا اللَّيْثُ بْنُ سَعْدٍ، عَنِ ابْنِ شِهَاب، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ: أَنَّ قُرَيْشًا أَهَمَّهُمْ شَأْنُ الْمَرْأَةِ الْمَخْزُومِيَّةِ الَّتِي سَرَقَتْ، فَقَالُوا: مَنْ يُكَلِّمُ فِيهَا رَسُولَ اللهِ صلى الله عليه وسلم؟ فَقَالُوا: وَمَنْ يَجْتَرِئُ عَلَيْهِ إِلَّا أُسَامَةُ بْنُ زَيْدٍ حِبُّ رَسُولِ اللهِ؟ فَكَلَّمَهُ أُسَامَةُ، فَقَالَ رَسُولُ اللهِ صلى الله عليه وسلم: \"أَتَشْفَعُ فِي حَدٍّ مِنْ حُدُودِ اللهِ؟ \" ثُمَّ قَامَ فَاخْتَطَبَ فَقَالَ: \"يَا أَيُّهَا النَّاسُ! إِنَّمَا هَلَكَ الَّذِينَ مِنْ قَبْلِكُمْ أَنَّهُمْ كَانُوا إِذَا سَرَقَ فِيهِمُ الشَّرِيفُ تَرَكُوهُ، وَإِذَا سَرَقَ فِيهِمُ الضَّعِيفُ أَقَامُوا عَلَيْهِ الْحَدَّ، وَايْمُ اللهِ لَوْ أَنَّ فَاطِمَةَ بِنْتَ مُحَمَّدٍ سَرَقَتْ، لَقَطَعْتُ يَدَهَا\".\nقَالَ مُحَمَّدُ بْنُ رُمْحٍ: سَمِعْتُ اللَّيْثَ بْنَ سَعْدٍ يَقُولُ: قَدْ أَعَاذَهَا اللهُ عز وجل، قَدْ أَعَاذَهَا اللهُ أَنْ تَسْرِقَ، وَكُلُّ مُسْلِمٍ يَنْبَغِي لَهُ أَنْ يَقُولَ هَذَا."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

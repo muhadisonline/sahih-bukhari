@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-+Vt9SDNpzU+0X1dny9yV+Qf1XB2CNZEJBF8SIC6l0Ts='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٨٣٤ — إِنَّ أول زمرة تدخل الجنة على صورة القمر ليلة البدر. والتي تليها على… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٨٣٤ من صحيح مسلم، كتاب الجنة، وصفة نعيمها وأهلها، . حدثني عمرو الناقد ويعقوب بن إبراهيم الدَّوْرَقِيُّ. جميعا عَنْ ابْنِ عُلَيَّةَ (وَاللَّفْظُ لِيَعْقُوبَ). قالا: حدثنا إسماعيل بن علية. أخبرنا أيوب عن محمد قال: إما تفاخروا وإما…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -76,16 +78,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٨٣٤" data-url="https://sunan.online/muslim/2834/">انسخ المتن</button>
   <a href="/muslim/2835/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -104,35 +97,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٨٣٤ — إِنَّ أول زمرة تدخل الجنة على صورة القمر ليلة البدر. والتي تليها على… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2834,"articleBody":"حدثني عمرو الناقد ويعقوب بن إبراهيم الدَّوْرَقِيُّ. جميعا عَنْ ابْنِ عُلَيَّةَ (وَاللَّفْظُ لِيَعْقُوبَ). قالا: حدثنا إسماعيل بن علية. أخبرنا أيوب عن محمد قال:\nإما تفاخروا وإما تذاكروا: الرجال في الجنة أكثر أم النساء؟ فقال أبو هريرة: أو لم يقل أَبُو الْقَاسِمِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"إِنَّ أول زمرة\nتدخل الجنة على صورة القمر ليلة البدر. والتي تليها على أضوإ كوكب دري في السماء. لكل امرئ منهم زوجتان اثنتان. يرى مخ سوقهما من وراء اللحم. وما في الجنة أعزب؟ \"\n\nحدثنا ابن أبي عمر. حدثنا سفيان عن أيوب، عن ابن سيرين. قال:\nاختصم الرجال والنساء: أيهم في الجنة أكثر؟ فسألوا أبا هريرة فقال: قَالَ أَبُو الْقَاسِمِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بمثل حديث ابن علية.\n\nوحدثنا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا عَبْدُ الْوَاحِدِ (يَعْنِي ابن زياد) عن عُمَارَةُ بْنُ الْقَعْقَاعِ. حَدَّثَنَا أَبُو زُرْعَةَ قَالَ: سَمِعْتُ أَبَا هُرَيْرَةَ يَقُولُ:\nقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم \"أول من يدخل الجنة\". (ح) وحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ وَزُهَيْرُ بْنُ حَرْبٍ (واللفظ لقتيبة) قالا: حَدَّثَنَا جَرِيرٌ عَنْ عُمَارَةَ، عَنْ أَبِي زُرْعَةَ، عن أبي هريرة قال: قال رسول الله صلى الله عليه وسلم \"إن أول زمرة يدخلون الجنة على صورة القمر ليلة البدر. والذين يلونهم على أشد كوكب دري، في السماء، إضاءة. لا يبولون ولا يتغوطون ولا يمتخطون ولا يتفلون. أمشاطهم الذهب. ورشحهم المسك. ومجامرهم الألوة. وأزواجهم الحور العين. أخلاقهم على خلق رجل واحد. على صورة أبيهم آدم. ستون ذراعا، في السماء\".\n\nحدثنا أبو بكر بن أبي شيبة وأبو كريب. قالا: حدثنا أبو معاوية عن الأعمش، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ قَالَ:\nقال رسول الله صلى الله عليه وسلم \"أول زمرة تدخل الجنة من أمتي، على صورة القمر ليلة البدر. ثم الذين يلونهم على أشد نجم، في السماء، إضاءة. ثم هم بعد ذلك منازل. لا يتغوطون\nولا يبولون ولا يتمخطون ولا يبزقون. أمشاطهم الذهب. ومجامرهم الألوة. ورشحهم المسك. أخلاقهم على خلق رجل واحد. على طول أبيهم آدم، ستون ذراعا\".\nقال ابن أبي شيبة: على خلق رجل. وقال أبو كريب: على خلق رجل. وقال ابن أبي شيبة: على صورة أبيهم.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. حدثنا معمر عن همام بم مُنَبِّهٍ. قَالَ: هَذَا مَا حَدَّثَنَا أَبُو هُرَيْرَةَ عن رسول الله صلى الله عليه وسلم. فَذَكَرَ أَحَادِيثَ مِنْهَا:\nوَقَالَ رَسُولُ اللَّهِ صَلَّى الله عليه وسلم \"أول زمرة تلج الجنة، صورهم على صورة القمر ليلة البدر. لا يبصقون فيها ولا يتمخطون ولا يتغوطون فيها. آنيتهم وأمشاطهم من الذهب والفضة. ومجامرهم من الألوة. ورشحهم المسك. ولكل واحد منهم زوجتان. يرى مخ ساقهما من وراء اللحم، من الحسن. لا اختلاف بينهم ولا تباغض. قلوبهم قلب واحد. يسبحون الله بكرة وعشيا\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

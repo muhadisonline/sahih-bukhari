@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cddxCAfjvXpvq1rJsbxFED4A2FQaZ9Lej/0q/w+d5JE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٥٦٩ — حَدَّثنا محمدُ بنُ عبد الملك بن أبي الشَّوَاربِ، قال: حَدَّثَنا يزيدُ… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٥٦٩ من جامع الترمذي، أبواب السفر، باب ما جاء في صلاة الكسوف. حَدَّثنا محمدُ بنُ عبد الملك بن أبي الشَّوَاربِ، قال: حَدَّثَنا يزيدُ بن زُرَيْعٍ، قال: حَدَّثَنا مَعْمَرٌ، عن الزُّهْريِّ، عن عُرْوةَ عن عائشةَ أنها قالت: خَسَفَت…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٥٦٩" data-url="https://sunan.online/tirmidhi/569/">انسخ المتن</button>
   <a href="/tirmidhi/570/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٦٩ — حَدَّثنا محمدُ بنُ عبد الملك بن أبي الشَّوَاربِ، قال: حَدَّثَنا يزيدُ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":569,"articleBody":"حَدَّثنا محمدُ بنُ عبد الملك بن أبي الشَّوَاربِ، قال: حَدَّثَنا يزيدُ بن زُرَيْعٍ، قال: حَدَّثَنا مَعْمَرٌ، عن الزُّهْريِّ، عن عُرْوةَ\nعن عائشةَ أنها قالت: خَسَفَت الشَّمسُ على عَهْدِ رسول الله صلى الله عليه وسلم، فصلَّى رسولُ الله صلى الله عليه وسلم بالناسِ، فأطالَ القراءةَ، ثُمَّ ركع فأطال الركوعَ، ثم رَفعَ رأسَه فأطال القراءةَ، وهي دُونَ الأُولى، ثم ركع فأطال الركوعَ، وهو دونَ الأول، ثم رفع رأسَه فسجدَ، ثم فعل ذلك في الركعة الثانية.\nهذا حديثٌ حسنٌ صحيحٌ.\nوبهذا الحديث يقول الشافعيُّ، وأحمدُ، وإسحاقُ: يَرَوْنَ صلاةَ الكسوف أربعَ ركعاتٍ في أربع سَجَدَاتٍ.\nقال الشافعيُّ: يَقْرَأُ في الركعةِ الأولى بأُمِّ القُرآن ونحوًا من سورة البقرةِ سِرًّا إن كان بالنهارِ، ثم ركعَ ركوعًا طويلًا نحوًا من\nقِراءته، ثم رَفَعَ رأسَه بتكبيرٍ وثَبَتَ قائمًا كما هو، وقرأ أيضًا بأم القُرآن ونحوًا من آل عِمْرانَ، ثم رَكَع ركوعًا طويلًا نحوًا من قِراءتهِ، ثم رَفع رأسَه، ثم قال: سَمعَ اللهُ لِمَنْ حَمِدَهُ، ثم سجدَ سجدتين تامَّتَيْن، ويُقيمُ في كُلِّ سَجْدةٍ نحوًا مِمَّا أقامَ في ركوعه، ثم قامَ فقرأ بأُمِّ القُرآن ونحوًا من سورة النِّساء، ثم ركع ركوعًا طويلًا نحوًا من قراءته، ثُمَّ رفع رأسَه بتكبيرٍ ويثبت قائمًا، ثم قَرأ نحوًا مِن سورة المائدةِ، ثم ركع ركوعًا طويلًا نحوًا من قِراءته، ثم رَفَع فقال: سمعَ اللهُ لمَنْ حَمِدَهُ، ثم سَجَدَ سجدتين، ثم تَشَهَّدَ وسَلَّمَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

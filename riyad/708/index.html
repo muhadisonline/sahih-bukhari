@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cuPEo5yDTA84uF0pn3D1WD5xt0X/wip8saFj7uIRSAA='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٧٠٨ — ائذن له وبشره بالجنة | رياض الصالحين</title>
 <meta name="description" content="الحديث ٧٠٨ من رياض الصالحين، كتاب الأدب، . وعن أبي موسى الأشعري رضي الله عنه، أنه توضأ في بيته، ثم خرج فقال: لألزمن رسول الله صلى الله عليه وسلم، ولأكونن معه يومي هذا، فجاء المسجد، فسأل عن النبي صلى الله عليه وسلم، فقالوا: وجه ههنا، قال:…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٧٠٨" data-url="https://sunan.online/riyad/708/">انسخ المتن</button>
   <a href="/riyad/709/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,34 +79,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٠٨ — ائذن له وبشره بالجنة | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":708,"articleBody":"وعن أبي موسى الأشعري رضي الله عنه، أنه توضأ في بيته، ثم خرج فقال: لألزمن رسول الله صلى الله عليه وسلم، ولأكونن معه يومي هذا، فجاء المسجد، فسأل عن النبي صلى الله عليه وسلم، فقالوا: وجه ههنا، قال: فخرجت على أثره أسأل عنه، حتى دخل بئر أريس، فجلست عند الباب حتى قضى رسول الله صلى الله عليه وسلم حاجته وتوضأ، فقمت إليه، فإذا هو قد جلس على بئر أريس وتوسط قفها، وكشف عن ساقيه ودلاهما في البئر، فسلمت عليه ثم انصرفت، فجلست عند الباب فقلت: لأكونن بواب رسول الله صلى الله عليه وسلم اليوم، فجاء أبو بكر رضي الله عنه فدفع الباب فقلت: من هذا؟ فقال: أبو بكر، فقلت على رسلك، ثم ذهبت فقلت: يا رسول الله هذا أبو بكر يستأذن، فقال: \"ائذن له وبشره بالجنة\" فأقلبت حتى قلت لأبي بكر: ادخل ورسول الله يبشرك بالجنة، فدخل أبو بكر حتى جلس عن يمين النبي صلى الله عليه وسلم معه في القف، ودلى رجليه في البئر كما صنع رسول الله صلى الله عليه وسلم، وكشف عن ساقيه، ثم رجعت وجلست، وقد تركت أخي يتوضأ ويلحقني، فقلت: إن يرد الله بفلان -يرد أخاه- خيراً يأت به، فإذا إنسان يحرك الباب، فقلت: من هذا؟ فقال: عمر بن الخطاب: فقلت: على رسلك، ثم جئت إلى رسول الله صلى الله عليه وسلم، فسلمت عليه وقلت: هذا عمر يستأذن؟ فقال:”ائذن له وبشره بالجنة\" فجئت عمر، فقلت: أذن ويبشرك رسول الله صلى الله عليه وسلم بالجنة، فدخل فجلس مع رسول الله صلى الله عليه وسلم في القف عن يساره، ودلى رجليه في البئر، ثم رجعت فجلست فقلت: إن يرد الله بفلان خيراً -يعني أخاه- يأت به، فجاء إنسان فحرك الباب. فقلت: من هذا؟ فقال: عثمان بن عفان فقلت: على رسلك، وجئت النبي صلى الله عليه وسلم، فأخبرته فقال: \"ائذن له وبشره بالجنة مع بلوى تصيبه\" فجئت فقلت له: ادخل ويبشرك رسول الله صلى الله عليه وسلم بالجنة مع بلوى تصيبك، فدخل فوجد القف قد ملئ، فجلس وجاههم من الشق الآخر. قال سعيد بن المسيب: فأولتها قبورهم. ((متفق عليه)). \nوزاد في رواية: “وأمرني رسول الله صلى الله عليه وسلم بحفظ الباب. وفيها أن عثمان حين بشره حمد الله تعالى، ثم قال: الله المستعان."}</script>
 </body>
 </html>

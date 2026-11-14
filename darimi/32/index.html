@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fkNQ37Y/pJwzb1BNZcW/YRKDlZNh+rjsU1nMDgiE3Es='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٢ — ائْتُونِي بِهِ | سنن الدارمي</title>
 <meta name="description" content="الحديث ٣٢ من سنن الدارمي، المقدمة، . أَخْبَرَنَا مُحَمَّدُ بْنُ حُمَيْدٍ، حَدَّثَنَا تَمِيمُ بْنُ عَبْدِ الْمُؤْمِنِ، حَدَّثَنَا صَالِحُ بْنُ حَيَّانَ، حَدَّثَنِي ابْنُ بُرَيْدَةَ، عَنْ أَبِيهِ، قَالَ: كَانَ النَّبِيُّ صَلَّى اللَّهُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -57,16 +59,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن الدارمي — الحديث ٣٢" data-url="https://sunan.online/darimi/32/">انسخ المتن</button>
   <a href="/darimi/33/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -85,35 +78,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٢ — ائْتُونِي بِهِ | سنن الدارمي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن الدارمي","inLanguage":"ar","author":{"@type":"Person","name":"عبد الله بن عبد الرحمن الدارمي"}},"position":32,"articleBody":"أَخْبَرَنَا مُحَمَّدُ بْنُ حُمَيْدٍ، حَدَّثَنَا تَمِيمُ بْنُ عَبْدِ الْمُؤْمِنِ، حَدَّثَنَا صَالِحُ بْنُ حَيَّانَ، حَدَّثَنِي ابْنُ بُرَيْدَةَ، عَنْ أَبِيهِ، قَالَ: كَانَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا خَطَبَ قَامَ فَأَطَالَ الْقِيامَ، فَكَانَ يَشُقُّ عَلَيْهِ قِيَامُهُ، فَأُتِيَ بِجِذْعِ نَخْلَةٍ فَحُفِرَ لَهُ وَأُقِيمَ إِلَى جَنْبِهِ قَائِمًا لِلنَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فَكَانَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا خَطَبَ فَطَالَ الْقِيَامُ عَلَيْهِ، اسْتَنَدَ إِلَيْهِ فَاتَّكَأَ عَلَيْهِ فَبَصُرَ بِهِ رَجُلٌ كَانَ وَرَدَ الْمَدِينَةَ، فَرَآهُ قَائِمًا إِلَى جَنْبِ ذَلِكَ الْجِذْعِ، فَقَالَ: لِمَنْ يَلِيهِ مِنْ النَّاسِ: لَوْ أَعْلَمُ أَنَّ مُحَمَّدًا يَحْمَدُنِي فِي شَيْءٍ يَرْفُقُ بِهِ، لَصَنَعْتُ لَهُ مَجْلِسًا يَقُومُ عَلَيْهِ، فَإِنْ شَاءَ، جَلَسَ مَا شَاءَ، وَإِنْ شَاءَ، قَامَ، فَبَلَغَ ذَلِكَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالَ:\" ائْتُونِي بِهِ \"، فَأَتَوْهُ بِهِ، فَأُمِرَهُ أَنْ يَصْنَعَ لَهُ هَذِهِ الْمَرَاقِيَ الثَّلَاثَ، أَوْ الْأَرْبَعَ هِيَ الْآنَ فِي مِنْبَرِ الْمَدِينَةِ، فَوَجَدَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي ذَلِكَ رَاحَةً، فَلَمَّا فَارَقَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ الْجِذْعَ وَعَمَدَ إِلَى هَذِهِ الَّتِي صُنِعَتْ لَهُ، جَزِعَ الْجِذْعُ فَحَنَّ كَمَا تَحِنُّ النَّاقَةُ حِينَ فَارَقَهُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فَزَعَمَ ابْنُ بُرَيْدَةَ، عَنْ أَبِيهِ أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ حِينَ سَمِعَ حَنِينَ الْجِذْعِ، رَجَعَ إِلَيْهِ فَوَضَعَ يَدَهُ عَلَيْهِ وَقَالَ: \" اخْتَرْ أَنْ أَغْرِسَكَ فِي الْمَكَانِ الَّذِي كُنْتَ فِيهِ، فَتَكُونَ كَمَا كُنْتَ، وَإِنْ شِئْتَ أَنْ أَغْرِسَكَ فِي الْجَنَّةِ فَتَشْرَبَ مِنْ أَنْهَارِهَا وَعُيُونِهَا فَيَحْسُنُ نَبْتُكَ، وَتُثْمِرُ فَيَأْكُلَ أَوْلِيَاءُ اللَّهِ مِنْ ثَمَرَتِكَ وَنَخْلِكَ فَعَلْتُ \" فَزَعَمَ أَنَّهُ سَمِعَ مِنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَهُوَ يَقُولُ لَهُ: \" نَعَمْ قَدْ فَعَلْتُ مَرَّتَيْنِ \"، فَسُأَلَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالَ: \" اخْتَارَ أَنْ أَغْرِسَهُ فِي الْجَنَّةِ \""}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

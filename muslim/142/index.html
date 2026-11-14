@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-J3JnXA2Gz8eX69GY/4OI/nW3FVsueWxsCdEdUX0Ntlc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٢ — مَا مِنْ عَبْدٍ يَسْتَرْعِيهِ اللَّهُ رَعِيَّةً، يَمُوتُ يَوْمَ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٤٢ من صحيح مسلم، كتاب الإيمان، باب استحقاق الوالي، الغاش لرعيته، النار. حَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا أَبُو الْأَشْهَبِ، عَنْ الْحَسَنِ قَالَ: عَادَ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ مَعْقِلَ بْنَ يَسَارٍ الْمُزنِيَّ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -80,16 +82,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٤٢" data-url="https://sunan.online/muslim/142/">انسخ المتن</button>
   <a href="/muslim/143/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -108,35 +101,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٢ — مَا مِنْ عَبْدٍ يَسْتَرْعِيهِ اللَّهُ رَعِيَّةً، يَمُوتُ يَوْمَ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":142,"articleBody":"حَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا أَبُو الْأَشْهَبِ، عَنْ الْحَسَنِ قَالَ: عَادَ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ مَعْقِلَ بْنَ يَسَارٍ الْمُزنِيَّ فِي مَرَضِهِ الَّذِي مَاتَ فِيهِ. قَالَ مَعْقِلٌ: إِنِّي مُحَدِّثُكَ حَدِيثًا سَمِعْتُهُ مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. لَوْ عَلِمْتُ أَنَّ لِي حَيَاةً مَا حَدَّثْتُكَ. إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ:\n\"مَا مِنْ عَبْدٍ يَسْتَرْعِيهِ اللَّهُ رَعِيَّةً، يَمُوتُ يَوْمَ يَمُوتُ وَهُوَ غَاشٌّ لِرَعِيَّتِهِ، إِلَّا حَرَّمَ الله عليه الجنة\".\n\nحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا يَزِيدُ بْنُ زُرَيْعٍ، عَنْ يُونُسَ، عَنِ الْحَسَنِ؛ قَالَ:\nدَخَلَ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ عَلَى مَعْقَلِ بْنِ يَسَارٍ وَهُوَ وَجِعٌ. فَسَأَلَهُ فَقَالَ: إِنِّي مُحَدِّثُكَ حَدِيثًا لَمْ أَكُنْ حَدَّثْتُكَهُ. إِنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: لَا يَسْتَرْعِي اللَّهُ عَبْدًا رَعِيَّةً، يَمُوتُ حِينَ يَمُوتُ وَهُوَ غَاشٌّ لَهَا، إِلَّا حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ\" قَالَ: أَلَّا كُنْتَ حَدَّثْتَنِي هَذَا قَبْلَ الْيَوْمِ؟ قَالَ: مَا حَدَّثْتُكَ، أَوْ لَمْ أَكُنْ لَأُحَدِّثَكَ.\n\nوحَدَّثَنِي الْقَاسِمُ بْنُ زَكَرِيَّاءَ. حَدَّثَنَا حُسَيْنٌ، يَعْنِي الْجُعْفِيَّ، عَنْ زَائِدَةَ، عَنْ هِشَامٍ؛ قَالَ: قَالَ الْحَسَنُ:\nكُنَّا عِنْدَ مَعْقِلِ بْنِ يَسَارٍ نَعُودُهُ. فَجَاءَ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ. فَقَالَ لَهُ مَعْقِلٌ: إِنِّي سَأُحَدِّثُكَ حَدِيثًا سَمِعْتُهُ مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. ثُمَّ ذَكَرَ بمعنى حديثهما.\n\nوحَدَّثَنَا أَبُو غَسَّانَ الْمِسْمَعِيُّ، وَمُحَمَّدُ بْنُ الْمُثَنَّى، وإسحاق بن إبراهيم (قال إسحاق: أخبرنا، وقال الآخَرَانِ: حَدَّثَنَا) مُعَاذُ بْنُ هِشَامٍ. قَالَ: حَدَّثَنِي أَبِي عَنْ قَتَادَةَ، عَنْ أَبِي الْمَلِيحِ؛ أَنَّ عُبَيْدَ اللَّهِ بْنَ زِيَادٍ عَادَ مَعْقِلَ بْنَ يَسَارٍ فِي مَرَضِهِ. فَقَالَ لَهُ مَعْقِلٌ: إِنِّي مُحَدِّثُكَ بِحَدِيثٍ لَوْلَا أَنِّي فِي الْمَوْتِ لَمْ أُحَدِّثْكَ بِهِ. سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ:\n\"مَا مِنْ أَمِيرٍ يَلِي أَمْرَ الْمُسْلِمِينَ، ثُمَّ لَا يَجْهَدُ لَهُمْ وَيَنْصَحُ إِلَّا لَمْ يَدْخُلْ مَعَهُمُ الْجَنَّةَ\".\n\nوحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا أَبُو الْأَشْهَبِ عَنِ الْحَسَنِ. قَالَ:\nعَادَ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ، مَعْقِلَ بْنَ يَسَارٍ الْمُزنِيَّ. فِي مَرَضِهِ الَّذِي مَاتَ فِيهِ. فَقَالَ مَعْقِلٌ: إِنِّي مُحَدِّثُكَ حَدِيثًا سَمِعْتُهُ مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. لَوْ عَلِمْتُ أَنَّ لِي حَيَاةً مَا حَدَّثْتُكَ. إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (مَا مِنْ عَبْدٍ يَسْتَرْعِيهِ اللَّهُ رَعِيَّةً، يَمُوتُ يَوْمَ يَمُوتُ وَهُوَ غَاشٌّ لِرَعِيَّتِهِ، إِلَّا حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ).\n\nوحَدَّثَنَاه يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا يَزِيدُ بْنُ زُرَيْعٍ عَنْ يُونُسَ، عَنْ الْحَسَنِ. قَالَ: دَخَلَ ابْنُ زِيَادٍ عَلَى مَعْقَلِ بْنِ يَسَارٍ وَهُوَ وَجِعٌ. بِمِثْلِ حَدِيثِ أَبِي الْأَشْهَبِ. وَزَادَ: قَالَ: أَلَّا كُنْتَ حَدَّثْتَنِي هَذَا قَبْلَ الْيَوْمِ؟ قَالَ: مَا حَدَّثْتُكَ. أَوْ لَمْ أَكُنْ لَأُحَدِّثَكَ.\n\nوحَدَّثَنَا أَبُو غَسَّانَ الْمِسْمَعِيُّ وَإِسْحَاقُ بْنُ إِبْرَاهِيمَ وَمُحَمَّدُ بْنُ الْمُثَنَّى (قَالَ إِسْحَاق: أَخْبَرَنَا. وَقَالَ الآخَرَانِ: حَدَّثَنَا مُعَاذُ بْنُ هِشَامٍ). حَدَّثَنِي أَبِي عَنْ قَتَادَةَ، عَنْ أَبِي الْمَلِيحِ؛\nأَنَّ عُبَيْدَ اللَّهِ بْنَ زِيَادٍ دَخَلَ عَلَى مَعْقِلَ بْنَ يَسَارٍ فِي مَرَضِهِ. فَقَالَ لَهُ مَعْقِلٌ: إِنِّي مُحَدِّثُكَ بِحَدِيثٍ لَوْلَا أَنِّي فِي الْمَوْتِ لَمْ أُحَدِّثْكَ بِهِ. سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (مَا مِنْ أَمِيرٍ يَلِي أَمْرَ الْمُسْلِمِينَ، ثُمَّ لَا يَجْهَدُ لَهُمْ وَيَنْصَحُ، إِلَّا لَمْ يَدْخُلْ مَعَهُمُ الْجَنَّةَ).\n\nوحَدَّثَنَا عُقْبَةُ بْنُ مُكْرَمٍ الْعَمِّيُّ. حَدَّثَنَا يَعْقُوبُ بْنُ إِسْحَاقَ. أَخْبَرَنِي سَوَادَةُ بْنُ أَبِي الْأَسْوَدِ. حَدَّثَنِي أَبِي؛ أَنَّ مَعْقِلَ بْنَ يَسَارٍ مَرِضَ. فَأَتَاهُ عُبَيْدُ اللَّهِ بْنُ زِيَادٍ يَعُودُهُ. نَحْوَ حَدِيثِ الْحَسَنِ عَنْ مَعْقِلٍ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

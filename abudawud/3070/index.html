@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-WndWVavCcBZj5VzJeeEisS0aWe9ZPbE/2pKRPKg9wEc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٠٧٠ — اكتب له يا غلام بالدّهناء | سنن أبي داود</title>
 <meta name="description" content="الحديث ٣٠٧٠ من سنن أبي داود، كتاب الخراج والفيء والإمارة، باب ما جاء في إقطاع الأرضين. حدَّثنا حفصُ بن عُمر وموسى بن إسماعيلَ -المعنى واحد- قالا: حدَّثنا عبدُ الله بن حسان العَنبريُّ حدثتْني جدتاي صفيّهُ وُدَحيْبَةُ ابنتا عُلَيْبَةَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٣٠٧٠" data-url="https://sunan.online/abudawud/3070/">انسخ المتن</button>
   <a href="/abudawud/3071/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٠٧٠ — اكتب له يا غلام بالدّهناء | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":3070,"articleBody":"حدَّثنا حفصُ بن عُمر وموسى بن إسماعيلَ -المعنى واحد- قالا: حدَّثنا عبدُ الله بن حسان العَنبريُّ\nحدثتْني جدتاي صفيّهُ وُدَحيْبَةُ ابنتا عُلَيْبَةَ -وكانتا ربيبتَيْ قَيلَةَ بنتِ مَخْرَمةَ، وكانت جدةَ أبيهما- أنها أخبرتْهما، قالت: قدمنا على رسولِ الله - صلَّى الله عليه وسلم -، قالت: تقدَّم صاحبي -تعني حُرَيْثَ بن حسان، وافدَ بكرِ ابن وائلٍ- فبايعَه على الإسلامِ عليه وعلى قومه، ثم قال: يا رسول الله، اكتُب بيننا وبين بني تميم بالدَّهناء: أن لا يجاوزَها إلينا منهم أحدٌ إلا مسافرٌ أو مُجاوِرٌ، فقال: \"اكتب له يا غلام بالدّهناء\" فلما رأيتُه قد أمر له بها شُخِصَ بي وهي وطني وداري، فقلت: يا رسولَ الله، إنه لم يسألْك السَّويَّةَ من الأرضِ إذ سألك، إنما هذه الدهناءُ عندك مُقَيَّدُ الجَمَلِ، ومَرْعَى الغنم، ونساءُ تميم وأبناؤها وراءَ ذلك، فقال:\n\"أمسِك يا غلامُ، صدَقتِ المسكينةُ، المسلمُ أخو المسلم، يَسعُهُما الماءُ والشجرُ، ويتعاونان على الفَتَّانِ\".\nسُئل أبو دَاود عن الفتّان؟ فقال: الشيطان."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

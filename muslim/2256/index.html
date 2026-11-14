@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-oWrgl0aHLDj/DuL01Xe2RnDKqJzhC2OofxaSguv3MRo='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٢٥٦ — أَشْعَرُ كَلِمَةٍ تَكَلَّمَتْ بِهَا الْعَرَبُ كَلِمَةُ لَبِيدٍ: أَلَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٢٥٦ من صحيح مسلم، كتاب الشعر، . حَدَّثَنِي أَبُو جَعْفَرٍ، مُحَمَّدُ بْنُ الصَّبَّاحِ وَعَلِيُّ بْنُ حُجْرٍ السَّعْدِيُّ. جميعا عَنْ شَرِيكٍ. قَالَ ابْنُ حُجْرٍ: أَخْبَرَنَا شَرِيكٌ عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ أَبِي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -75,16 +77,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٢٥٦" data-url="https://sunan.online/muslim/2256/">انسخ المتن</button>
   <a href="/muslim/2257/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -103,35 +96,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٢٥٦ — أَشْعَرُ كَلِمَةٍ تَكَلَّمَتْ بِهَا الْعَرَبُ كَلِمَةُ لَبِيدٍ: أَلَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2256,"articleBody":"حَدَّثَنِي أَبُو جَعْفَرٍ، مُحَمَّدُ بْنُ الصَّبَّاحِ وَعَلِيُّ بْنُ حُجْرٍ السَّعْدِيُّ. جميعا عَنْ شَرِيكٍ. قَالَ ابْنُ حُجْرٍ: أَخْبَرَنَا شَرِيكٌ عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ،\nعَنِ النَّبِيِّ صَلَّى الله عليه وسلم. قَالَ \"أَشْعَرُ كَلِمَةٍ تَكَلَّمَتْ بِهَا الْعَرَبُ كَلِمَةُ لَبِيدٍ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ باطل\"\n\nوَحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمِ بْنِ مَيْمُونٍ. حَدَّثَنَا ابْنُ مَهْدِيٍّ عَنْ سُفْيَانَ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ. حَدَّثَنَا أَبُو سَلَمَةَ عَنْ أَبِي هُرَيْرَةَ. قَالَ:\nقال رسول الله صلى الله عَلَيْهِ وَسَلَّمَ \"أَصْدَقُ كَلِمَةٍ قَالَهَا شَاعِرٌ، كَلِمَةُ لَبِيدٍ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلٌ. وَكَادَ أُمَيَّةُ بْنُ أَبِي الصَّلْتِ أَنْ يسلم\".\n\nوحَدَّثَنِي ابْنُ أَبِي عُمَرَ. حَدَّثَنَا سُفْيَانُ عَنْ زَائِدَةَ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هريرة؛\nأن رسول الله صلى الله عليه وَسَلَّمَ قَالَ \"أَصْدَقُ بَيْتٍ قَالَهُ الشَّاعِرُ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلٌ. وَكَادَ ابْنُ أَبِي الصَّلْتِ أَنْ يُسْلِمَ\"\n\nوحدثنا محمد بن المثنى. حدثنا محمد بن جعفر. حدثنا شُعْبَةُ عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ\nعَنِ النَّبِيِّ صلى الله عليه وسلم. قال \"أَصْدَقُ بَيْتٍ قَالَتْهُ الشُّعَرَاءُ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلٌ\"\n\nوحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا يَحْيَى بْنُ زَكَرِيَّاءَ عَنْ إِسْرَائِيلَ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ. قالت: سَمِعْتُ أَبَا هُرَيْرَةَ يَقُولُ:\nسَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ\n\"إِنَّ أَصْدَقَ كَلِمَةٍ قَالَهَا شَاعِرٌ كَلِمَةُ لَبِيدٍ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلٌ\"\nمَا زَادَ على ذلك."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

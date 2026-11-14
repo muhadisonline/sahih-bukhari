@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-SacPtexSjL5NGw4S/XiMxzARaHLApn/+0d86y4eTdzQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٢٧ — اللهم إني أعوذُ برضاكَ من سخطك، وبمعافاتك مِن عُقوبتك، وأعوذُ بكَ… | سنن أبي داود</title>
 <meta name="description" content="الحديث ١٤٢٧ من سنن أبي داود، أبواب تفريع استفتاح الصلاة، باب القنوت في الوتر. حدَّثنا موسى بن إسماعيل، حدَّثنا حمَّاد، عن هشام بن عمرو الفزاري، عن عبد الرحمن بن الحارث بن هشام عن علي بن أبي طالب، أن رسولَ الله - صلَّى الله عليه وسلم - كان…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -72,16 +74,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ١٤٢٧" data-url="https://sunan.online/abudawud/1427/">انسخ المتن</button>
   <a href="/abudawud/1428/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -100,35 +93,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٢٧ — اللهم إني أعوذُ برضاكَ من سخطك، وبمعافاتك مِن عُقوبتك، وأعوذُ بكَ… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":1427,"articleBody":"حدَّثنا موسى بن إسماعيل، حدَّثنا حمَّاد، عن هشام بن عمرو الفزاري، عن عبد الرحمن بن الحارث بن هشام\nعن علي بن أبي طالب، أن رسولَ الله - صلَّى الله عليه وسلم - كان يقول في آخر وتره:\n\"اللهم إني أعوذُ برضاكَ من سخطك، وبمعافاتك مِن عُقوبتك، وأعوذُ بكَ منكَ، لا أُحصِي ثَنَاءَ عليكَ، أنتَ كما أثنيتَ على نفسِكَ\".\nقال أبو داود: هشامٌ أقدم شيخٍ لحماد، وبلغني عن يحيى بن معين أنه قال: لم يرو عنه غيرُ حماد بن سلمة.\nقال أبو داود: روى عيسى بن يونس عن سعيد بن أبي عَروبةَ، عن قتادة، عن سعيد بن عبد الرحمن بن أبزى عن أبيه عن أبيٍّ بن كعب: أن رسولَ الله - صلَّى الله عليه وسلم - قنَت - يعني في الوتر - قبلَ الركوع.\nقال أبو داود: وروى عيسى بنُ يونس هذا الحديثَ أيضاً عن فطرِ ابن خليفةَ، عن زُبيدٍ، عن سعيد بن عبد الرحمن بن أبزى، عن أبيه، عن أبي بن كعب، عن النبي - صلَّى الله عليه وسلم -، مثله.\nورُوي عن حفص بن غياثِ عن مِسْعَرٍ، عن زُبَيدِ، عن سعيد بن عبد الرحمن بن أبزى، عن أبيه، عن أبيٍّ بن كعب: أن رسولَ الله - صلَّى الله عليه وسلم - قنَت في الوتر قبلَ الركوع.\nقال أبو داود: وحديثُ سعيدِ عن قتادة رواه يزيدُ بن زُريع، عن سعيد، عن قتادة، عن عَزرة، عن سعيد بن عبد الرحمن بن أبزى، عن أبيه، عن النبيِّ علم يذكُر القنوت، ولا ذكر أبيّاً.\nوكذلك رواه عبدُ الأعلى ومحمد بنُ بشرٍ العَبدِيُ، وسماعُه بالكوفة مع عيسى بن يونس، ولم يذكروا القنوتَ.\nوقد رواه أيضاً هشامٌ الدَّستوائي وشعبةُ عن قتادة، لم يذكرا القنوتَ.\nوحديث زُبيد رواه سليمانُ الأعمشُ وشعبةُ وعبدُ الملك بنُ أبي سليمان وجريرُ بن حازم كلهم عن زُبيد لم يذكر أحدٌ منهم القنوتَ، إلا ما رُوِيَ عن حفص بن غياث عن مسعرٍ، عن زُبيد، فإنه قال في حديثه: إنه قنت قبلَ الركوع.\nقال أبو داود: وليس هو بالمشهور من حديث حفص، نخافُ أن يكون عن حفص، عن غير مسعر.\nقال أبو داود: ويروى أن أُبيّاً كان يقنت في النصف من رمضان."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

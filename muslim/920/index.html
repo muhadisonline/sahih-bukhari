@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-XXo09AbaT4kmOz/tJkRwqiSHF1s0gK+Olhwln/hnHAQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٢٠ — إِنَّ الرُّوحَ إِذَا قُبِضَ تَبِعَهُ الْبَصَرُ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٩٢٠ من صحيح مسلم، كتاب الجنائز، باب في إغماض الميت والدعاء له، إذا حضر. حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا مُعَاوِيَةُ بْنُ عَمْرٍو. حَدَّثَنَا أَبُو إسحاق الْفَزَارِيُّ عَنْ خَالِدٍ الْحَذَّاءِ، عَنْ أَبِي قِلَابَةَ، عَنْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٩٢٠" data-url="https://sunan.online/muslim/920/">انسخ المتن</button>
   <a href="/muslim/921/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٢٠ — إِنَّ الرُّوحَ إِذَا قُبِضَ تَبِعَهُ الْبَصَرُ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":920,"articleBody":"حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا مُعَاوِيَةُ بْنُ عَمْرٍو. حَدَّثَنَا أَبُو إسحاق الْفَزَارِيُّ عَنْ خَالِدٍ الْحَذَّاءِ، عَنْ أَبِي قِلَابَةَ، عَنْ قَبِيصَةَ بْنِ ذُؤَيْبٍ، عَنْ أُمِّ سَلَمَةَ. قَالَتْ:\nدَخَلَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ على أَبِي سَلَمَةَ وَقَدْ شَقَّ بَصَرُهُ. فَأَغْمَضَهُ. ثُمَّ قَالَ \"إِنَّ الرُّوحَ إِذَا قُبِضَ تَبِعَهُ الْبَصَرُ\". فضج ناس من أهله. فقال \"لاتدعوا عَلَى أَنْفُسِكُمْ إِلَّا بِخَيْرٍ. فَإِنَّ الْمَلَائِكَةَ يُؤَمِّنُونَ على ما يقولون\". ثُمَّ قَالَ: \"اللَّهُمَّ اغْفِرْ لِأَبِي سَلَمَةَ وَارْفَعْ دَرَجَتَهُ فِي الْمَهْدِيِّينَ وَاخْلُفْهُ فِي عَقِبِهِ فِي الْغَابِرِينَ. وَاغْفِرْ لَنَا وَلَهُ يَا رَبَّ الْعَالَمِينَ. وَافْسَحْ لَهُ فِي قَبْرِهِ. وَنَوِّرْ لَهُ فِيهِ\".\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ مُوسَى الْقَطَّانُ الْوَاسِطِيُّ. حَدَّثَنَا الْمُثَنَّى بْنُ مُعَاذِ بْنِ مُعَاذٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ الْحَسَنِ. حَدَّثَنَا خَالِدٌ الْحَذَّاءُ، بِهَذَا الْإِسْنَادِ، نَحْوَهُ. غَيْرَ أَنَّهُ قَالَ:\n\"وَاخْلُفْهُ فِي تَرِكَتِهِ\" وَقَالَ: \"اللَّهُمَّ! أَوْسِعْ لَهُ فِي قَبْرِهِ\" وَلَمْ يَقُلِ: \"افْسَحْ لَهُ\".\nوَزَادَ: قَالَ خَالِدٌ الْحَذَّاءُ: وَدَعْوَةٌ أُخْرَى سَابِعَةٌ نَسِيتُهَا."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

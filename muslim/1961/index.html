@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-VNRC3Ei8W11Me6qw8YTwps4t3XsZuWCpwvX0mByVyU4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٩٦١ — وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٩٦١ من صحيح مسلم، كتاب الأضاحي، باب وقتها. وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ اللَّهِ عَنْ مُطَرِّفٍ، عَنْ عَامِرٍ، عَنْ الْبَرَاءِ. قَالَ: ضَحَّى خَالِي، أَبُو بُرْدَةَ قَبْلَ الصَّلَاةِ. فَقَالَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -85,16 +87,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٩٦١" data-url="https://sunan.online/muslim/1961/">انسخ المتن</button>
   <a href="/muslim/1962/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -113,35 +106,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٦١ — وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1961,"articleBody":"وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ اللَّهِ عَنْ مُطَرِّفٍ، عَنْ عَامِرٍ، عَنْ الْبَرَاءِ. قَالَ:\nضَحَّى خَالِي، أَبُو بُرْدَةَ قَبْلَ الصَّلَاةِ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (تِلْكَ شَاةُ لَحْمٍ) فَقَالَ: يَا رَسُولَ اللَّهِ! إِنَّ عِنْدِي جَذَعَةً مِنَ الْمَعْزِ. فَقَالَ (ضَحِّ بِهَا. وَلَا تَصْلُحُ لِغَيْرِكَ). ثُمَّ قَالَ (مَنْ ضَحَّى قَبْلَ الصَّلَاةِ، فَإِنَّمَا ذَبَحَ لِنَفْسِهِ. وَمَنْ ذَبَحَ بَعْدَ الصَّلَاةِ، فَقَدْ تَمَّ نُسُكُهُ وأصاب سنة المسلمين).\n\nحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا هُشَيْمٌ عَنْ دَاوُدَ، عَنْ الشَّعْبِيِّ، عَنْ الْبَرَاءِ بْنِ عَازِبٍ؛\nأَنَّ خَالَهُ، أَبَا بُرْدَةَ بْنَ نِيَارٍ ذَبَحَ قَبْلَ أَنْ يَذْبَحَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقَالَ: يَا رَسُولَ اللَّهِ! إِنَّ هَذَا يَوْمٌ، اللَّحْمُ فِيهِ مَكْرُوهٌ. وَإِنِّي عَجَّلْتُ نَسِيكَتِي لِأُطْعِمَ أَهْلِي وَجِيرَانِي وَأَهْلَ دَارِي. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَعِدْ نُسُكًا) فَقَالَ: يَا رَسُولَ اللَّهِ! إِنَّ عِنْدِي عَنَاقَ لَبَنٍ. هِيَ خَيْرٌ مِنْ شَاتَيْ لَحْمٍ. فَقَالَ (هِيَ خَيْرُ\nنَسِيكَتَيْكَ. وَلَا تَجْزِي جَذَعَةٌ عَنْ أحد بعدك).\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ عَنْ دَاوُدَ، عَنْ الشَّعْبِيِّ، عَنْ الْبَرَاءِ بن عازب. قَالَ:\nخَطَبَنَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَوْمَ النَّحْرِ فَقَالَ: (لَا يَذْبَحَنَّ أَحَدٌ حَتَّى يُصَلِّيَ) قَالَ فَقَالَ خَالِي: (يَا رَسُولَ اللَّهِ! إِنَّ هَذَا يَوْمٌ، اللَّحْمُ فِيهِ مَكْرُوهٌ. ثُمَّ ذَكَرَ بِمَعْنَى حَدِيثِ هُشَيْمٍ.\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا عبد الله بن نمير. (ح) وحدثنا ابن نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا زَكَرِيَّاءُ عَنْ فِرَاسٍ، عَنْ عَامِرٍ، عَنِ الْبَرَاءِ. قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (مَنْ صَلَّى صَلَاتَنَا، وَوَجَّهَ قِبْلَتَنَا، وَنَسَكَ نُسُكَنَا، فَلَا يَذْبَحْ حَتَّى يُصَلِّيَ) فَقَالَ خَالِي: يَا رَسُولَ اللَّهِ! قَدْ نَسَكْتُ عَنِ ابْنٍ لِي. فَقَالَ (ذَاكَ شَيْءٌ عَجَّلْتَهُ لِأَهْلِكَ) فَقَالَ: إِنَّ عِنْدِي شَاةً خَيْرٌ مِنْ شَاتَيْنِ. قَالَ (ضَحِّ بِهَا، فَإِنَّهَا خير نسيكة).\n\nوحدثنا محمد بن المثنى وابن بشار (واللفظ لابن المثنى). قالا: حدثنا محمد بن جعفر. حَدَّثَنَا شُعْبَةُ عَنْ زُبَيْدٍ الْإِيَامِيِّ، عَنْ الشَّعْبِيِّ، عَنْ الْبَرَاءِ بْنِ عَازِبٍ. قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (إِنَّ أَوَّلَ مَا نَبْدَأُ بِهِ فِي يَوْمِنَا هَذَا، نُصَلِّي ثُمَّ نَرْجِعُ فَنَنْحَرُ. فَمَنْ فَعَلَ ذَلِكَ، فَقَدْ أَصَابَ سُنَّتَنَا. وَمَنْ ذَبَحَ، فَإِنَّمَا هُوَ لَحْمٌ قَدَّمَهُ لِأَهْلِهِ. لَيْسَ مِنَ النُّسُكِ فِي شَيْءٍ) وَكَانَ أَبُو بُرْدَةَ بْنُ نِيَارٍ قَدْ ذَبَحَ. فَقَالَ: عِنْدِي جَذَعَةٌ خَيْرٌ مِنْ مُسِنَّةٍ.\nفَقَالَ: (اذبحها ولن تجزى عن أحد بعدك).\n\nحَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا شُعْبَةُ عَنْ زُبَيْدٍ. سَمِعَ الشَّعْبِيَّ عَنْ الْبَرَاءِ بْنِ عَازِبٍ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، مِثْلَهُ.\n\nوحدثنا قتيبة بن سعيد وَهَنَّادُ بْنُ السَّرِيِّ. قَالَا: حَدَّثَنَا أَبُو الأَحْوَصِ. (ح) وحَدَّثَنَا عُثْمَانُ بْنُ أَبِي شَيْبَةَ وَإِسْحَاق بْنُ إبراهيم. جميعا عَنْ جَرِيرٍ. كِلَاهُمَا عَنْ مَنْصُورٍ، عَنْ الشَّعْبِيِّ، عَنْ الْبَرَاءِ بْنِ عَازِبٍ. قَالَ: خَطَبَنَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَوْمَ النَّحْرِ بَعْدَ الصَّلَاةِ. ثُمَّ ذَكَرَ نَحْوَ حَدِيثِهِمْ.\n\nوحَدَّثَنِي أَحْمَدُ بْنُ سَعِيدِ بْنِ صَخْرٍ الدَّارِمِيُّ. حَدَّثَنَا أَبُو النُّعْمَانِ، عَارِمُ بْنُ الْفَضْلِ. حَدَّثَنَا عَبْدُ الْوَاحِدِ (يَعْنِي ابْنَ زِيَادٍ). حَدَّثَنَا عَاصِمٌ الْأَحْوَلُ عَنْ الشَّعْبِيِّ. حَدَّثَنِي الْبَرَاءُ بْنُ عَازِبٍ قَالَ:\nخَطَبَنَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي يَوْمِ نَحْرٍ. فَقَالَ (لَا يُضَحِّيَنَّ أَحَدٌ حَتَّى يُصَلِّيَ) قَالَ رَجُلٌ: عِنْدِي عَنَاقُ لبن وهي خَيْرٌ مِنْ شَاتَيْ لَحْمٍ. قَالَ (فَضَحِّ بِهَا. وَلَا تَجْزِي جَذَعَةٌ عَنْ أَحَدٍ بَعْدَكَ).\n\nحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدٌ (يَعْنِي ابْنُ جَعْفَرٍ). حَدَّثَنَا شُعْبَةُ عَنْ سَلَمَةَ، عَنْ أَبِي جُحَيْفَةَ، عَنْ الْبَرَاءِ بْنِ عَازِبٍ. قَالَ:\nذَبَحَ أَبُو بُرْدَةَ قَبْلَ الصَّلَاةِ. فَقَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَبْدِلْهَا) فَقَالَ: يَا رَسُولَ اللَّهِ! لَيْسَ عِنْدِي إِلَّا جَذَعَةٌ (قَالَ شُعْبَةُ: وَأَظُنُّهُ قَالَ) وَهِيَ خَيْرٌ مِنْ مُسِنَّةٍ. فقال رسول الله صلى الله عليه وسلم (اجْعَلْهَا مَكَانَهَا. وَلَنْ تَجْزِيَ عَنْ أَحَدٍ بَعْدَكَ).\n\nوحَدَّثَنَاه ابْنُ الْمُثَنَّى. حَدَّثَنِي وَهْبُ بْنُ جَرِيرٍ. (ح) وحدثنا إسحاق ابن إِبْرَاهِيمَ. أَخْبَرَنَا أَبُو عَامِرٍ الْعَقَدِيُّ. حَدَّثَنَا شُعْبَةُ بِهَذَا الْإِسْنَادِ. وَلَمْ يَذْكُرِ الشَّكَّ فِي قَوْلِهِ: هِيَ خَيْرٌ مِنْ مُسِنَّةٍ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

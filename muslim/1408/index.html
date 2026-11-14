@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-r22ZEDloFMTQTnACGwsT8Dcsp3ibHSKhWaqGAZJ3riY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٠٨ — لا يُجْمَعُ بَيْنَ الْمَرْأَةِ وَعَمَّتِهَا، وَلَا بَيْنَ الْمَرْأَةِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٤٠٨ من صحيح مسلم، كتاب النكاح، باب تحريم الجمع بين المرأة وعمتها أو خالتها في النكاح. حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ الْقَعْنَبِيُّ. حَدَّثَنَا مَالِكٌ عَنْ أَبِي الزِّنَادِ، عن الأعرج، عن أبي هريرة قال: قال رسول الله…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -90,16 +92,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٤٠٨" data-url="https://sunan.online/muslim/1408/">انسخ المتن</button>
   <a href="/muslim/1409/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -118,35 +111,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٠٨ — لا يُجْمَعُ بَيْنَ الْمَرْأَةِ وَعَمَّتِهَا، وَلَا بَيْنَ الْمَرْأَةِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1408,"articleBody":"حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ الْقَعْنَبِيُّ. حَدَّثَنَا مَالِكٌ عَنْ أَبِي الزِّنَادِ، عن الأعرج، عن أبي هريرة قال: قال رسول الله صلى الله عليه وسلم:\n\"لا يُجْمَعُ بَيْنَ الْمَرْأَةِ وَعَمَّتِهَا، وَلَا بَيْنَ الْمَرْأَةِ وخالتها\".\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ رُمْحِ بْنِ الْمُهَاجِرِ. أَخْبَرَنَا اللَّيْثُ عَنْ يَزِيدَ بْنِ أَبِي حَبِيبٍ، عَنْ عِرَاكِ بْنِ مَالِكٍ، عَنْ أَبِي هُرَيْرَةَ؛ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَهَى عَنْ أَرْبَعِ نِسْوَةٍ، أَنْ يُجْمَعَ بَيْنَهُنَّ: الْمَرْأَةِ وَعَمَّتِهَا، وَالْمَرْأَةِ وَخَالَتِهَا.\n\nوحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ.\nأَخْبَرَنِي قَبِيصَةُ بْنُ ذُؤَيْبٍ الْكَعْبِيُّ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنْ يَجْمَعَ الرَّجُلُ بَيْنَ الْمَرْأَةِ وَعَمَّتِهَا، وَبَيْنَ الْمَرْأَةِ وَخَالَتِهَا. قَالَ ابْنُ شِهَابٍ: فَنُرَى خَالَةَ أَبِيهَا وَعَمَّةَ أَبِيهَا بِتِلْكَ الْمَنْزِلَةِ.\n\nوحَدَّثَنِي أَبُو مَعْنٍ الرَّقَاشِيُّ. حدثنا خَالِدُ بْنُ الْحَارِثِ. حدثنا هِشَامٌ عَنْ يَحْيَى؛ أَنَّهُ كَتَبَ إِلَيْهِ عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ، قَالَ: قال رسول الله صلى الله عليه وَسَلَّمَ:\n\"لَا تُنْكَحُ الْمَرْأَةُ عَلَى عَمَّتِهَا وَلَا على خالتها\".\n\nوحَدَّثَنِي إِسْحَاقَ بْنُ مَنْصُورٍ. حدثنا عُبَيْدُ اللَّهِ بْنُ مُوسَى عَنْ شَيْبَانَ، عَنْ يَحْيَى. حَدَّثَنِي أَبُو سَلَمَةَ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: قَالَ رسول الله صلى الله عليه وسلم. بمثله.\n\nحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ. حَدَّثَنَا أَبُو أُسَامَةَ عَنْ هِشَامٍ، عَنْ مُحَمَّدٍ بْنِ سِيرِينَ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّم قَالَ:\n\"لَا يَخْطُبُ الرَّجُلُ عَلَى خِطْبَةِ أَخِيهِ. وَلَا يَسُومُ عَلَى سَوْمِ أَخِيهِ. وَلَا تُنْكَحُ الْمَرْأَةُ عَلَى عَمَّتِهَا وَلَا عَلَى خَالَتِهَا. وَلَا تَسْأَلُ الْمَرْأَةُ طَلَاقَ أُخْتِهَا لِتَكْتَفِئَ صَحْفَتَهَا.\nوَلْتَنْكِحْ. فَإِنَّمَا لَهَا مَا كَتَبَ الله لها\".\n\nوحَدَّثَنِي مُحْرِزُ بْنُ عَوْنِ بْنِ أَبِي عَوْنٍ. حَدَّثَنَا عَلِيُّ بْنُ مُسْهِرٍ عَنْ دَاوُدَ بْنِ أَبِي هِنْدٍ، عَنِ ابْنِ سِيرِينَ، عَنْ أَبِي هُرَيْرَةَ قَالَ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنْ تُنْكَحَ الْمَرْأَةُ عَلَى عَمَّتِهَا أَوْ خَالَتِهَا. أَوْ أَنْ تَسْأَلَ الْمَرْأَةُ طَلَاقَ أختها لتكتفيء مَا فِي صَحْفَتِهَا فَإِنَّ اللَّهَ عَزَّ وَجَلَّ رازقها.\n\nحدثنا مُحَمَّدُ بْنُ الْمُثَنَّى وَابْنُ بَشَّارٍ وَأَبُو بَكْرِ بْنُ نَافِعٍ. (وَاللَّفْظُ لِابْنِ الْمُثَنَّى وَابْنِ نَافِعٍ) قَالُوا: أَخْبَرَنا ابْنُ أَبِي عَدِيٍّ عَنْ شُعْبَةَ، عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ؛ قَالَ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أن يجمع بَيْنَ الْمَرْأَةِ وَعَمَّتِهَا، وَبَيْنَ الْمَرْأَةِ وَخَالَتِهَا.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حدثنا شَبَابَةُ. حدثنا وَرْقَاءُ عَنْ عَمْرِو بْنِ دِينَارٍ، بِهَذَا الْإِسْنَادِ، مثله.\n[(٥) باب تحريم نكاح المحرم، وكراهة خطبه]\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ أَبِي بَكْرٍ الْمُقَدَّمِيُّ. حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ عَنْ أَيُّوبَ، عَنْ نَافِعٍ. حَدَّثَنِي نُبَيْهُ بْنُ وَهْبٍ. قَالَ: بَعَثَنِي عُمَرُ بْنُ عُبَيْدِ اللَّهِ بْنِ مَعْمَرٍ. وَكَانَ يَخْطُبُ بِنْتَ شَيْبَةَ بْنِ عُثْمَانَ\nعَلَى ابْنِهِ. فَأَرْسَلَنِي إِلَى أَبَانَ بْنِ عُثْمَانَ وَهُوَ عَلَى الْمَوْسِمِ. فقَالَ:\nأَلَا أُرَاهُ أَعْرَابِيًّا \"إِنَّ الْمُحْرِمَ لَا يَنْكِح ولَا يُنْكَح\". أَخْبَرَنا بِذَلِكَ عُثْمَانُ عَنْ رسول الله صلى الله عليه وسلم."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

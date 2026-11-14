@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-JB+bBjU/LipifwPhL5kX1KISXhAB8Pt9RrKvWPOGGgU='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٣٠٦ — اذْبَحْ وَلَا حَرَجَ | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٣٠٦ من صحيح مسلم، كتاب الحج، باب من حلق قبل النحر، أو نحر قبل الرمي. حَدَّثَنَا يَحْيَى بْنُ يَحْيَى. قَالَ: قرأت على مالك عن ابن شهاب، عن عِيسَى بْنِ طَلْحَةَ بْنِ عُبَيْدِ اللَّهِ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرِو بْنِ الْعَاصِ.…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -83,16 +85,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٣٠٦" data-url="https://sunan.online/muslim/1306/">انسخ المتن</button>
   <a href="/muslim/1307/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -111,35 +104,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٣٠٦ — اذْبَحْ وَلَا حَرَجَ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1306,"articleBody":"حَدَّثَنَا يَحْيَى بْنُ يَحْيَى. قَالَ: قرأت على مالك عن ابن شهاب، عن عِيسَى بْنِ طَلْحَةَ بْنِ عُبَيْدِ اللَّهِ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرِو بْنِ الْعَاصِ. قال:\nوَقَفَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فِي حَجَّةِ الْوَدَاعِ، بِمِنًى، لِلنَّاسِ يَسْأَلُونَهُ. فَجَاءَ رَجُلٌ فَقَالَ: يَا رَسُولَ اللَّهِ! لَمْ أَشْعُرْ، فَحَلَقْتُ قَبْلَ أَنْ أَنْحَرَ. فَقَالَ \"اذْبَحْ وَلَا حَرَجَ\" ثُمَّ جَاءَهُ رَجُلٌ آخَرُ فَقَالَ: يَا رَسُولَ اللَّهِ! لَمْ أَشْعُرْ فَنَحَرْتُ قَبْلَ أَنْ أَرْمِيَ. فَقَالَ \"ارْمِ وَلَا حَرَجَ\". قَالَ: فَمَا سُئِلَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنْ شَيْءٍ قُدِّمَ وَلَا أُخِّرَ، إِلَّا قَالَ \"افْعَلْ وَلَا حَرَجَ\".\n\nوحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ. حَدَّثَنِي عِيسَى بْنُ طَلْحَةَ التَّيْمِيُّ؛ أَنَّهُ سَمِعَ عَبْدَ اللَّهِ بْنَ عَمْرِو بْنِ الْعَاصِ يَقُولُ:\nوَقَفَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى رَاحِلَتِهِ. فَطَفِقَ نَاسٌ يَسْأَلُونَهُ. فَيَقُولُ الْقَائِلُ مِنْهُمْ: يَا رَسُولَ اللَّهِ! إِنِّي لَمْ أَكُنْ أَشْعُرُ أَنَّ الرَّمْيَ قَبْلَ النَّحْرِ، فَنَحَرْتُ قَبْلَ الرَّمْيِ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"فَارْمِ وَلَا حَرَجَ\" قَالَ: وَطَفِقَ آخَرُ يَقُولُ: إِنِّي لَمْ أَشْعُرْ أَنَّ النَّحْرَ قَبْلَ الْحَلْقِ، فَحَلَقْتُ قَبْلَ أَنْ أَنْحَرَ. فَيَقُولُ \"انْحَرْ وَلَا حَرَجَ\" قَالَ: فَمَا سَمِعْتُهُ يُسْأَلُ يَوْمَئِذٍ عَنْ أَمْرٍ، مِمَّا يَنْسَى الْمَرْءُ وَيَجْهَلُ، مِنْ تَقْدِيمِ بَعْضِ الأُمُورِ قَبْلَ بَعْضٍ، وَأَشْبَاهِهَا، إِلَّا قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"افْعَلُوا ذَلِكَ ولا حرج\".\n\nحَدَّثَنَا حَسَنٌ الْحُلْوَانِيُّ. حَدَّثَنَا يَعْقُوبُ. حَدَّثَنَا أَبِي عَنْ صَالِح، عَنِ ابْنِ شِهَابٍ. بِمِثْلِ حَدِيثِ يُونُسَ عَنِ الزُّهْرِيِّ إِلَى آخِرِهِ.\n\nوحَدَّثَنَا عَلِيُّ بْنُ خَشْرَمٍ. أَخْبَرَنَا عِيسَى عَنِ ابْنِ جُرَيْجٍ. قَالَ: سَمِعْتُ ابْنَ شِهَابٍ يَقُولُ: حَدَّثَنِي عِيسَى بْنُ طَلْحَةَ. حَدَّثَنِي عَبْدُ اللَّهِ بْنُ عَمْرِو بْنِ الْعَاصِ؛ أن النبي صلى اللَّهُ عَلَيْهِ وَسَلَّمَ؛ بَيْنَا هُوَ يَخْطُبُ يَوْمَ النَّحْرِ، فَقَامَ إِلَيْهِ رَجُلٌ فَقَالَ:\nمَا كُنْتُ أَحْسِبُ، يَا رَسُولَ اللَّهِ! أَنَّ كَذَا وَكَذَا، قبل كذا وكذا. ثم جاء لآخر فَقَالَ: يَا رَسُولَ اللَّهِ! كُنْتُ أَحْسِبُ أَنَّ كَذَا، قَبْلَ كَذَا وَكَذَا. لِهَؤُلَاءِ الثَّلَاثِ. قَالَ \"افْعَلْ وَلَا حَرَجَ\".\n\nوحَدَّثَنَاه عَبْدُ بْنُ حُمَيْدٍ. حَدَّثَنَا مُحَمَّدُ بْنُ بَكْرٍ. (ح) وحَدَّثَنِي سَعِيدُ بْنُ يَحْيَى الْأُمَوِيُّ. حَدَّثَنِي أَبِي. جَمِيعًا عَنِ ابْنِ جُرَيْجٍ، بِهَذَا الإسناد. أما رواية ابن أبي بَكْرٍ فَكَرِوَايَةِ عِيسَى. إِلَّا قَوْلَهُ: لِهَؤُلَاءِ الثَّلَاثِ. فَإِنَّهُ لَمْ يَذْكُرْ ذَلِكَ. وَأَمَّا يَحْيَى الأُمَوِيُّ فَفِي رِوَايَتِهِ: حَلَقْتُ قَبْلَ أَنْ أَنْحَرَ. نَحَرْتُ قَبْلَ أَنْ أَرْمِيَ. وَأَشْبَاهُ ذَلِكَ.\n\nوحَدَّثَنَاه أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَزُهَيْرُ بْنُ حَرْبٍ. قَالَ أَبُو بَكْرٍ: حَدَّثَنَا ابْنُ عُيَيْنَةَ عَنِ الزُّهْرِيِّ، عَنْ عِيسَى بْنِ طَلْحَةَ عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو. قَالَ:\nأَتَى النبي صلى الله عليه وسلم رَجُلٌ فقَالَ: حَلَقْتُ قَبْلَ أَنْ أَذْبَح. قَالَ \"فَاذْبَحْ وَلَا حَرَجَ\" قَالَ: ذَبَحْتُ قَبْلَ أَنْ أَرْمِيَ. قَالَ \"ارْمِ وَلَا حَرَجَ\".\n\nوحدثنا ابن أبي عمر وعبد بن حميد عَنْ عَبْدِ الرَّزَّاقِ، عَنْ مَعْمَرٍ، عَنِ الزُّهْرِيِّ، بِهَذَا الْإِسْنَادِ:\nرَأَيْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى نَاقَةٍ بِمِنًى. فَجَاءَهُ رَجُلٌ. بِمَعْنَى حَدِيثِ ابْنِ عُيَيْنَةَ.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ قُهْزَاذَ. حَدَّثَنَا عَلِيُّ بْنُ الْحَسَنِ عَنْ عَبْدِ اللَّهِ بْنِ الْمُبَارَكِ. أَخْبَرَنَا مُحَمَّدُ بْنُ أَبِي حَفْصَةَ عَنِ الزُّهْرِيِّ، عَنْ عِيسَى بْنِ طَلْحَةَ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرِو بْنِ الْعَاصِ قَالَ:\nسَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم، وَأَتَاهُ رَجُلٌ يَوْمَ النَّحْرِ، وَهُوَ وَاقِفٌ عَنْدَ الْجَمْرَةِ. فقَالَ: يَا رَسُولَ اللَّهِ! إِنِّي\nحَلَقْتُ قبل الرمي. فقَالَ \"ارْمِ وَلَا حَرَجَ\" وَأَتَاهُ آخَرُ فقَالَ: إِنِّي ذَبَحْتُ قَبْلَ أَنْ أَرْمِيَ. قَالَ \"ارْمِ وَلَا حَرَجَ\" وَأَتَاهُ آخَرُ فقَالَ: إِنِّي أَفَضْتُ إِلَى الْبَيْتِ قَبْلَ أَنْ أَرْمِيَ. قَالَ \"ارْمِ وَلَا حَرَجَ\". قَالَ: فَمَا رَأَيْتُهُ سُئِلَ يَوْمَئِذٍ عَنْ شَيْءٍ، إِلَّا قَالَ \"افْعَلُوا وَلَا حَرَجَ\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

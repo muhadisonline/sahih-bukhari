@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fcuHxaJMgjmA9t83dGjlBOAdhclg11xLO3+t7peNzAw='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٤١٤٧ — أخبرنا عَمرو بنُ يحيى بن الحارث قال: أخبرنا محبوبٌ قال: أخبرنا أبو… | سنن النسائي</title>
 <meta name="description" content="الحديث ٤١٤٧ من سنن النسائي، كتاب قسم الفيء، . أخبرنا عَمرو بنُ يحيى بن الحارث قال: أخبرنا محبوبٌ قال: أخبرنا أبو إسحاق، عن شَريك، عن خُصَيفٍ عن مجاهد قال: الخُمُس الِّذي لله وللرّسول كان للنَّبِيِّ صلى الله عليه وسلم وقَرابتِه، لا يأكلون…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٤١٤٧" data-url="https://sunan.online/nasai/4147/">انسخ المتن</button>
   <a href="/nasai/4148/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,35 +85,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤١٤٧ — أخبرنا عَمرو بنُ يحيى بن الحارث قال: أخبرنا محبوبٌ قال: أخبرنا أبو… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":4147,"articleBody":"أخبرنا عَمرو بنُ يحيى بن الحارث قال: أخبرنا محبوبٌ قال: أخبرنا أبو إسحاق، عن شَريك، عن خُصَيفٍ\nعن مجاهد قال: الخُمُس الِّذي لله وللرّسول كان للنَّبِيِّ صلى الله عليه وسلم وقَرابتِه، لا\nيأكلون من الصَّدقة شيئًا، فكان للنَّبيِّ صلى الله عليه وسلم خُمُسُ الخُمُس، ولذي قَرابتِه خُمُسُ الخُمُسِ، ولليتامى مِثْلُ ذلك، وللمساكين مِثْلُ ذلك، ولابن السَّبيل مِثْلُ ذلك.\nقال أبو عبد الرَّحمن: قال الله جَلَّ ثناؤه: ﴿وَاعْلَمُوا أَنَّمَا غَنِمْتُمْ مِنْ شَيْءٍ فَأَنَّ لِلَّهِ خُمُسَهُ وَلِلرَّسُولِ وَلِذِي الْقُرْبَى وَالْيَتَامَى وَالْمَسَاكِينِ وَابْنِ السَّبِيلِ﴾ [الأنفال: ٤١] وقولُه عز وجل: ﴿لِلَّهِ﴾ ابتداءُ كلامٍ؛ لأنَّ الأشياءَ كُلَّها لله عز وجل، ولعلَّه إنَّما استفتَحَ الكلامَ في الفيء والخُمُس بذِكْرِ نَفْسِه، لأنَّها أشرَفُ الكَسْبِ، ولم يَنْسُبِ الصَّدقَةَ إلى نفسه عز وجل؛ لأنَّها أوساخ النَّاس، والله تعالى أعلم.\nوقد قيل: يُؤخَذُ من الغنيمة شيءٌ، فيُجعَلُ في الكعبة، وهو السَّهم الَّذي لله عز وجل، وسَهمُ النبيِّ صلى الله عليه وسلم إلى الإمام، يشتري الكُراعَ منه والسِّلاحَ، ويُعطي منه مَنْ رأى ممَّن فيه غَناءً ومنفعةً لأهل الإسلام،\nومِن أهل الحديث والعلم والفقه والقرآن.\nوسهمٌ لذي القُربى وهم بنو هاشم وبنو المطّلب بينَهم الغنيُّ منهم والفقيرُ - وقد قيل: إنَّه للفقيرِ منهم دونَ الغنيِّ، كاليتامى وابنِ السَّبيل، وهو أشبَهُ القولين بالصَّواب عندي، والله تعالى أعلم - والصَّغيرُ والكبيرُ والذَّكرُ والأنثى سواءٌ؛ لأنَّ الله عز وجل جعلَ ذلك لهم، وقسَّمَه رسولُ الله صلى الله عليه وسلم فيهم، وليس في الحديث أنَّه فضَّلَ بعضَهم على بعض، ولا خلاف نعلَمه العلماء بين في رجلٍ لو أوصى بثُلُثِه لبني فلانٍ أنَّه بينَهم، وأنَّ الذَّكرَ والأنثى فيه سواءٌ إذا كانوا يُحْصَون، فهكذا كلُّ شيء صُيِّر لبني فلانٍ أنَّه بينَهم بالسَّويَّة، إلَّا أن يُبَيَّن ذلك الأمِرُ به، والله وليُّ التَّوفيق.\nوسهمٌ لليتامى من المسلمين، وسهمٌ للمساكين من المسلمين، وسهمٌ لابن السَّبيل من المسلمين، ولا يُعطى أحدٌ منهم سهمَ مسكين وسهمَ ابن السَّبيل، وقيل له: خُذْ أيَّهما شِئْتَ، والأربعةُ الأخماس يَقْسِمُها الإمام بينَ مَنْ حضر القتالَ من المسلمين البالِغين."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

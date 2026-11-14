@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-7Mrh4FkII3EF/+7w6ORkhKkPI7H/zby7R0IOS38JX4U='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٩٧ — أَلَكَ مَالٌ غَيْرُهُ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٩٩٧ من صحيح مسلم، كتاب الزكاة، باب الابتداء في النفقة بالنفس ثم أهله ثم القرابة. حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا ليث. (ح) وحدثنا محمد من رُمْحٍ. أَخْبَرَنَا اللَّيْثُ عَنْ أَبِي الزُّبَيْرِ، عَنْ جابر. قال: أعتق رجل…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -78,16 +80,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٩٩٧" data-url="https://sunan.online/muslim/997/">انسخ المتن</button>
   <a href="/muslim/998/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -106,35 +99,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٩٧ — أَلَكَ مَالٌ غَيْرُهُ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":997,"articleBody":"حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا ليث. (ح) وحدثنا محمد من رُمْحٍ. أَخْبَرَنَا اللَّيْثُ عَنْ أَبِي الزُّبَيْرِ، عَنْ جابر. قال:\nأعتق رجل من بني عزرة عَبْدًا لَهُ عَنْ دُبُرٍ. فَبَلَغَ ذَلِكَ رَسُولَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ\nفَقَالَ: \"أَلَكَ مَالٌ غَيْرُهُ\" فَقَالَ: لَا. فَقَالَ: \"مَنْ يَشْتَرِيهِ مِنِّي؟ \" فَاشْتَرَاهُ نُعَيْمُ بْنُ عبد الله العدوي بثمانمائة دِرْهَمٍ. فَجَاءَ بِهَا رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَدَفَعَهَا إِلَيْهِ. ثُمَّ قَالَ: \"ابْدَأْ بِنَفْسِكَ فَتَصَدَّقْ عَلَيْهَا. فَإِنْ فَضَلَ شَيْءٌ فَلِأَهْلِكَ. فَإِنْ فَضَلَ عَنْ أَهْلِكَ شَيْءٌ فَلِذِي قَرَابَتِكَ. فَإِنْ فَضَلَ عَنْ ذِي قَرَابَتِكَ شَيْءٌ فَهَكَذَا وَهَكَذَا\" يَقُولُ: فَبَيْنَ يَدَيْكَ وَعَنْ يَمِينِكَ وَعَنْ شمالك.\n\nوحَدَّثَنِي يَعْقُوبُ بْنُ إِبْرَاهِيمَ الدَّوْرَقِيُّ. حَدَّثَنَا إِسْمَاعِيلُ (يَعْنِي ابْنَ عُلَيَّةَ) عَنْ أَيُّوبَ، عَنْ أَبِي الزُّبَيْرِ، عَنْ جَابِرٍ؛ أَنَّ رَجُلًا مِنْ الْأَنْصَارِ (يُقَالُ لَهُ أَبُو مَذْكُورٍ) أَعْتَقَ غُلَامًا لَهُ عَنْ دُبُرٍ. يُقَالُ لَهُ يَعْقُوبُ. وَسَاقَ الْحَدِيثَ بِمَعْنَى حَدِيثِ اللَّيْثِ.\n\nحَدَّثَنَا أَبُو الرَّبِيعِ سُلَيْمَانُ بْنُ دَاوُدَ الْعَتَكِيُّ. حَدَّثَنَا حَمَّادٌ (يَعْنِي ابْنُ زَيْدٍ) عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ؛\nأَنَّ رَجُلًا مِنْ الْأَنْصَارِ أَعْتَقَ غُلَامًا لَهُ عَنْ دُبُرٍ. لَمْ يَكُنْ لَهُ مَالٌ غَيْرُهُ. فَبَلَغَ ذَلِكَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقَالَ (مَنْ يَشْتَرِيهِ مِنِّي؟) فَاشْتَرَاهُ نُعَيْمُ بْنُ عبد الله بثمانمائة دِرْهَمٍ. فَدَفَعَهَا إِلَيْهِ.\nقَالَ عَمْرٌو: سَمِعْتُ جَابِرَ بْنَ عَبْدِ اللَّهِ يَقُولُ: عَبْدًا قِبْطِيًّا مَاتَ عام أول.\n\nوحَدَّثَنَاه أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَإِسْحَاق بْنُ إِبْرَاهِيمَ عَنْ ابْنِ عُيَيْنَةَ. قَالَ أَبُو بَكْرٍ: حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ. قَالَ: سَمِعَ عَمْرٌو جَابِرًا يَقُولُ:\nدَبَّرَ رَجُلٌ مِنْ الْأَنْصَارِ غُلَامًا لَهُ لَمْ يَكُنْ لَهُ مَالٌ غَيْرُهُ. فَبَاعَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\nقَالَ جَابِرٌ: فَاشْتَرَاهُ ابْنُ النَّحَّامِ. عَبْدًا قِبْطِيًّا مات عام أول، في إمارة الزبير.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ وَابْنُ رُمْحٍ عَنِ اللَّيْثِ بْنِ سَعْدٍ، عَنْ أَبِي الزُّبَيْرِ، عَنْ جَابِرٍ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي الْمُدَبَّرِ. نَحْوَ حَدِيثِ حَمَّادٍ عَنْ عَمْرِو بن دينار.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، حَدَّثَنَا الْمُغِيرَةُ (يَعْنِي الْحِزَامِيَّ) عَنْ عَبْدِ الْمَجِيدِ بْنِ سُهَيْلٍ، عَنْ عَطَاءِ بْنِ أَبِي رَبَاحٍ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ. (ح) وحَدَّثَنِي عَبْدُ اللَّهِ بْنُ هَاشِمٍ. حَدَّثَنَا يَحْيَى (يَعْنِي ابْنَ سَعِيدٍ) عَنْ الْحُسَيْنِ بْنِ ذَكْوَانَ الْمُعَلِّمِ. حَدَّثَنِي عَطَاءٌ عَنْ جَابِرٍ. (ح) وحَدَّثَنِي أَبُو غَسَّانَ الْمِسْمَعِيُّ. حَدَّثَنَا مُعَاذٌ. حَدَّثَنِي أَبِي عَنْ مَطَرٍ، عَنْ عَطَاءِ بن أبي رباح، وأبي الزبير، وعمرو بن دينار؛ أن جابر بن عبد الله حدثهم في بيع المدبر. كل هؤلاء قَالَ: عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمَعْنَى حَدِيثِ حَمَّادٍ وَابْنِ عُيَيْنَةَ عَنْ عَمْرٍو، عن جابر.\nبسم الله الرحمن الرحيم."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

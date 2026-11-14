@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-828fDPowyebtfSZd5Lot2PYUfCfzbmZ4aec2Z+a1exE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٥٩ — فكأني أنظر إلى رسول الله صلى الله عليه وسلم وهو يحكي ارتضاعه بأصبعه… | رياض الصالحين</title>
 <meta name="description" content="الحديث ٢٥٩ من رياض الصالحين، كتاب المقدمات، . وعن أبي هريرة رضي الله عنه عن النبي صلى الله عليه وسلم قال: “ لم يتكلم في المهد إلا ثلاثة: عيسى ابن مريم، وصاحب جريج، وكان جريج رجلا عابدًا، فاتخذ صومعة فكان فيها، فأتته أمه وهو يصلي فقالت: يا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -57,16 +59,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٢٥٩" data-url="https://sunan.online/riyad/259/">انسخ المتن</button>
   <a href="/riyad/260/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -85,35 +78,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٥٩ — فكأني أنظر إلى رسول الله صلى الله عليه وسلم وهو يحكي ارتضاعه بأصبعه… | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":259,"articleBody":"وعن أبي هريرة رضي الله عنه عن النبي صلى الله عليه وسلم قال: “ لم يتكلم في المهد إلا ثلاثة: عيسى ابن مريم، وصاحب جريج، وكان جريج رجلا عابدًا، فاتخذ صومعة فكان فيها، فأتته أمه وهو يصلي فقالت: يا جريج، فأتته أمه وهو يصلي فقالت: يا جريج، فقال: يا رب أمي وصلاتي فأقبل على صلاته فانصرفت. فلما كان من الغد أتته وهو يصلي، فقالت: يا جريج، فقال: أي رب أمي وصلاتي، فأقبل على صلاته، فقالت: اللهم لاتمته حتى ينظر إلى وجوه المومسات. فتذاكر بنو إسرائيل جريجًا وعبادته، وكانت امرأة بغي يتمثل بحسنها، فقالت: إن شئتم لأفتننه، فتعرضت له، فلم يلتفت إليها، فأتت راعيًا كان يأوي إلى صومعته، فأمكنته من نفسها فوقع عليها. فحملت، وجعلوا يضربونه، فقال: ما شأنكم؟ قالوا: زنيت بهذه البغي فولدت منك. قال: أين الصبي؟ فجاءوا به فقال: دعوني حتى أصلي، فصلى، فلما انصرف أتى الصبي فطعن في بطنه وقال: ياغلام من أبوك؟ قال: فلان الراعي، فأقبلوا على جريج يقبلونه ويتمسحون به وقالوا: نبني لك صومعتك من ذهب، قال: لا، أعيدوها من طين كما كانت، ففعلوا. وبينا صبي يرضع من أمه، فمر رجل راكب على دابة فارهة وشارة حسنة، فقالت: “ اللهم اجعل ابني مثل هذا، فترك الثدي وأقبل إليه فنظر إليه فقال: اللهم لا تجعلني مثله، ثم أقبل على ثديه فجعل يرتضع\" فكأني أنظر إلى رسول الله صلى الله عليه وسلم وهو يحكي ارتضاعه بأصبعه السبابة في فيه، فجعل يمصها، قال: \"ومروا بجارية وهم يضربونها، ويقولون: زنيت سرقت، وهي تقول: حسبي الله ونعم الوكيل. فقالت أمه: اللهم لا تجعل ابني مثلها، فترك الرضاع ونظر إليها فقال: اللهم اجعلني مثلها، فهناك تراجعا الحديث فقالت: مر رجل حسن الهيئة فقلت: اللهم اجعل ابني مثله فقلت: اللهم لا تجعلني مثله، ومروا بهذه الأمة وهم يضربونها ويقولون: زنيت سرقت، فقلت: اللهم لا تجعل ابني مثلها فقلت: اللهم اجعلني مثلها؟! قال: إن ذلك الرجل كان جبارًا فقلت: اللهم لا تجعلني مثله، وإن هذه يقولون لها زنيت، ولم تزن وسرقت، ولم تسرق، فقلت: اللهم اجعلني مثلها\" ((متفق عليه)). (25)"}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

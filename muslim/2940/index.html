@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-tp78PPN3vQpivG2x96QLijkYH6VRgfCqVBbsoNRDrCI='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٩٤٠ — يخرج الدجال في أمتي فيمكث أربعين (لا أدري: أربعين يوما، أو أربعين… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٩٤٠ من صحيح مسلم، كتاب الفتن وأشراط الساعة، . حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ الْعَنْبَرِيُّ. حَدَّثَنَا أبي. حدثنا شعبة عن النعمان بن سالم، قال: سمعت يعقوب بن عاصم بن عروة بن مسعود الثقفي يقول: سمعت عبد الله بن عمرو،…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -73,16 +75,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٩٤٠" data-url="https://sunan.online/muslim/2940/">انسخ المتن</button>
   <a href="/muslim/2941/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -101,34 +94,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٩٤٠ — يخرج الدجال في أمتي فيمكث أربعين (لا أدري: أربعين يوما، أو أربعين… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2940,"articleBody":"حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ الْعَنْبَرِيُّ. حَدَّثَنَا أبي. حدثنا شعبة عن النعمان بن سالم، قال: سمعت يعقوب بن عاصم بن عروة بن مسعود الثقفي يقول:\nسمعت عبد الله بن عمرو، وجاءه رجل، فقال: ما هذا الحديث الذي تحدث به؟ تقول: إن الساعة تقوم إلى كذا وكذا. فقال: سبحان الله! أو لا إله إلا الله. أو كلمة نحوهما. لقد هممت أن لا أحدث أحدا شيئا أبدا. إنما قلت: إنكم سترون بعد قليل أمرا عظيما. يحرق البيت، ويكون، ويكون. ثُمَّ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عليه وسلم \"يخرج الدجال في أمتي فيمكث أربعين (لا أدري: أربعين يوما، أو أربعين شهرا، أو أربعين عاما).\nفيبعث الله عيسى بن مريم كأنه عروة بن مسعود. فيطلبه فيهلكه. ثم يمكث الناس سبع سنين. ليس بين اثنين عداوة. ثم يرسل الله ريحا باردة من قبل الشأم. فلا يبقى على وجه الأرض أحد في قلبه مثقال ذرة من خير أو إيمان إلا قبضته. حتى لو أن أحدكم دخل في كبد جبل لدخلته عليه، حتى تقبضه\". قال: سَمِعْتُهَا مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم. قال \"فيبقى شرار الناس في خفة الطير وأحلام السباع. لا يعرفون معروفا ولا ينكرون منكرا. فيتمثل لهم الشيطان فيقول: ألا تستجيبون؟ فيقولون: فما تأمرنا؟ فيأمرهم بعبادة الأوثان. وهم في ذلك دار رزقهم، حسن عيشهم. ثم ينفخ في الصور. فلا يسمعه أحد إلا أصغى ليتا ورفع ليتا. قال وأول من يسمعه رجل يلوط حوض إبله. قال فيصعق، ويصعق الناس. ثم يرسل الله - أو قال ينزل الله - مطرا كأنه الطل أو الظل (نعمان الشاك) فتنبت منه أجساد الناس. ثم ينفخ فيه أخرى فإذا هم قيام ينظرون. ثم يقال: يا أيها الناس! هلم إلى ربكم. وقفوهم إنهم مسؤلون. قال ثم يقال: أخرجوا بعث النار. فيقال: من كم؟ فيقال: من كل ألف، تسعمائة وتسعة وتسعين. قال فذاك يوم يجعل الولدان شيبا. وذلك يوم يكشف عن ساق\".\n\nوحدثني مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. حدثنا شعبة عن النعمان بن سالم قال: سمعت يعقوب بن عاصم بن عروة بن مسعود قال:\nسمعت رجلا قال لعبد الله بن عمرو: إنك تقول: إن الساعة تقوم إلى كذا وكذا. فقال: لقد هممت أن لا أحدثكم بشئ. إنما قلت: إنكم ترون بعد قليل أمرا عظيما. فكان حريق البيت (قال شعبة: هذا أو نحوه) قال عبد الله بن عمرو: قال رسول الله صلى الله عليه وسلم \"يخرج الدجال في أمتي\" وساق الحديث بمثل حديث معاذ. وقال في حديثه \"فلا يبقى أحد في قلبه مثقال ذرة من إيمان إلا قبضته\". قال محمد بن جعفر: حدثني شعبة بهذا الحديث مرات. وعرضته عليه."}</script>
 </body>
 </html>

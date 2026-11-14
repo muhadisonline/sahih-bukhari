@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-NgwKUCGU+6lMy0o8IJtZFG7GRY7+WCI9fDfNOCQ11tE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٩٠ — وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى وَسَعِيدُ بْنُ مَنْصُورٍ وَأَبُو… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١١٩٠ من صحيح مسلم، كتاب الحج، باب الطيب للمحرم عند الإحرام. وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى وَسَعِيدُ بْنُ مَنْصُورٍ وَأَبُو الرَّبِيعِ وَخَلَفُ بْنُ هِشَامٍ وَقُتَيْبَةُ بْنُ سَعِيدٍ (قَالَ يَحْيَى: أَخْبَرَنَا. وَقَالَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -80,16 +82,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١١٩٠" data-url="https://sunan.online/muslim/1190/">انسخ المتن</button>
   <a href="/muslim/1191/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -108,35 +101,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٩٠ — وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى وَسَعِيدُ بْنُ مَنْصُورٍ وَأَبُو… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1190,"articleBody":"وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى وَسَعِيدُ بْنُ مَنْصُورٍ وَأَبُو الرَّبِيعِ وَخَلَفُ بْنُ هِشَامٍ وَقُتَيْبَةُ بْنُ سَعِيدٍ (قَالَ يَحْيَى: أَخْبَرَنَا. وَقَالَ الآخَرُونَ: حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ) عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنِ الْأَسْوَدِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: كَأَنِّي أَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفْرِقِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَهُوَ مُحْرِمٌ. وَلَمْ يَقُلْ خَلَفٌ: وَهُوَ مُحْرِمٌ. ولكنه قال: وذاك طيب إحرامه.\n\nوحَدَّثَنَا يَحْيَى بْنُ يَحْيَى وَأَبُو بَكْرِ بْنُ أبي شيبة وأبو كريب (قال يحيى: أخبرنا. وقال الآخران: حدثنا أبو معاوية) عن الأعمش، عَنْ إِبْرَاهِيمَ عَنِ الْأَسْوَدِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ: لَكَأَنِّي أَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفَارِقِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عليه وسلم، وهو يهل.\n\nوحدثنا أبو بكر بن أبي شيبة وزهير بْنُ حَرْبٍ وَأَبُو سَعِيدٍ الْأَشَجُّ. قَالُوا: حَدَّثَنَا وَكِيعٌ. حَدَّثَنَا الْأَعْمَشُ عَنْ أَبِي الضُّحَى، عَنْ مَسْرُوقٍ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ:\nكَأَنِّي أَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفَارِقِ رسول الله صلى الله عليه وسلم، و وهو يلبي.\n\nحَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ. حَدَّثَنَا زُهَيْرٌ. حَدَّثَنَا الْأَعْمَشُ عَنْ إِبْرَاهِيمَ، عَنِ الْأَسْوَدِ. وَعَنْ مُسْلِمٍ عَنْ مَسْرُوقٍ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: لَكَأَنِّي أَنْظُرُ. بِمِثْلِ حَدِيثِ وَكِيعٍ.\n\nوحدثنا محمد بن المثنى وابن بشار. قالا: حدثنا محمد بن جعفر. حدثنا شعبة عن الْحَكَمِ. قَالَ: سَمِعْتُ إِبْرَاهِيمَ يُحَدِّثُ عَنِ الْأَسْوَدِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا؛ أَنَّهَا قَالَتْ:\nكَأَنَّمَا أَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفَارِقِ رسول الله صلى الله عليه وسلم، وهو محرم.\n\nوحَدَّثَنَا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا مَالِكُ بْنُ مِغْوَلٍ عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْأَسْوَدِ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ:\nإِنْ كُنْتُ لَأَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفَارِقِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَهُوَ مُحْرِمٌ.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حَدَّثَنِي إِسْحَاق بْنُ مَنْصُورٍ (وَهُوَ السَّلُولِيُّ) حَدَّثَنَا إِبْرَاهِيمُ بْنُ يُوسُفَ (وَهُوَ ابْنُ إِسْحَاق بْنِ أَبِي إِسْحَاق السَّبِيعِيُّ) عَنْ أَبِيهِ، عَنْ أَبِي إِسْحَاق. سَمِعَ ابْنَ الْأَسْوَدِ يَذْكُرُ عَنْ أَبِيهِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ:\nكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، إِذَا أَرَادَ أَنْ يُحْرِمَ، يَتَطَيَّبُ بِأَطْيَبِ مَا يَجِدُ. ثُمَّ أَرَى وَبِيصَ الدُّهْنِ فِي رَأْسِهِ وَلِحْيَتِهِ، بَعْدَ ذَلِكَ.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا عَبْدُ الْوَاحِدِ عَنِ الْحَسَنِ بْنِ عُبَيْدِ اللَّهِ. حَدَّثَنَا إِبْرَاهِيمُ عَنِ الْأَسْوَدِ. قَالَ: قَالَتْ عَائِشَةُ رَضِيَ اللَّهُ عَنْهَا:\nكَأَنِّي أَنْظُرُ إِلَى وَبِيصِ الْمِسْكِ فِي مَفْرِقِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وهو محرم.\n\nوحَدَّثَنَاه إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا الضَّحَّاكُ بْنُ مَخْلَدٍ أَبُو عَاصِمٍ. حَدَّثَنَا سُفْيَانُ عَنِ الْحَسَنِ بْنِ عُبَيْدِ اللَّهِ، بِهَذَا الْإِسْنَادِ، مِثْلَهُ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

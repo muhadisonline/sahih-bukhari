@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-LODFDIxcEb3c2FSEF8YSaj1uDLFMxvHal36bFIYhFnE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٤ — نزلَ جبريلُ عليه السلام فأخبَرَني بوقتِ الصَّلاةِ، فصَلَّيتُ معه، ثمَّ… | سنن أبي داود</title>
 <meta name="description" content="الحديث ٣٩٤ من سنن أبي داود، كتاب الصلاة، باب المواقيت. حدَّثنا محمَّد بن سلمة المُراديُّ، حدَّثنا ابن وهب، عن أسامةَ بن زيد اللّيثيّ، أنّ ابنَ شهاب أخبره أنَّ عمر بن عبد العزيز كان قاعداً على المِنبَرِ فأخَّرَ العصرَ شيئاً، فقال له عُروةُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٣٩٤" data-url="https://sunan.online/abudawud/394/">انسخ المتن</button>
   <a href="/abudawud/395/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,34 +85,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٤ — نزلَ جبريلُ عليه السلام فأخبَرَني بوقتِ الصَّلاةِ، فصَلَّيتُ معه، ثمَّ… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":394,"articleBody":"حدَّثنا محمَّد بن سلمة المُراديُّ، حدَّثنا ابن وهب، عن أسامةَ بن زيد اللّيثيّ، أنّ ابنَ شهاب أخبره\nأنَّ عمر بن عبد العزيز كان قاعداً على المِنبَرِ فأخَّرَ العصرَ شيئاً، فقال له عُروةُ بنُ الزُّبير: أما إنَّ جِبريلَ عليه السلام قد أخبَرَ محمَّداً - صلى الله عليه وسلم - بوقتِ الصّلاةِ، فقال له عمر: ما تقول؟ فقال عُروةُ: سمعتُ بشيرَ بنَ أبي مسعود يقول: سمعتُ أبا مَسعودٍ الأنصاريَّ يقولُ: سمعتُ رسولَ الله - صلى الله عليه وسلم - يقول: \"نزلَ جبريلُ عليه السلام فأخبَرَني بوقتِ الصَّلاةِ، فصَلَّيتُ معه، ثمَّ صَلَّيتُ معه، ثمَّ صَلَّيتُ معه، ثمَّ صَلَّيتُ\nمعه، ثمَّ صَلَّيتُ معه\" يَحسُبُ بأصابِعِه خمسَ صَلَواتٍ، فرأيتُ رسولَ الله - صلى الله عليه وسلم - صلَّى الظُّهرَ حينَ تزولُ الشمسُ، وربّما أخّرَها حينَ يَشتَدُّ الحَرُّ، ورأيتُه يُصلّي العَصرَ والشَّمسُ مُرتفعة بيضاءُ قبلَ أن تَدخُلَها الصُّفرةُ، فَينصَرفُ الرجلُ من الصَّلاةِ فيأتي ذا الحليفةِ قبلَ غروبِ الشَّمسِ، ويُصلّي المَغرِبَ حينَ تَسقُطُ الشَّمسُ، ويُصلّي العِشاءَ حينَ يَسوَدُّ الأفُقُ، وربَّما أخَّرَها حتَّى يَجتَمعَ النَّاسُ، وصلَّى الصّبحَ مَرّة بغَلَسٍ، ثمَّ صلّى مرّة أُخرى فأسفرَ بها، ثمَّ كانت صلاتُه بعدَ ذلك التَّغليسَ حتَّى مات، لم يَعُد إلى أن يُسفِرَ.\nقال أبو داود: روى هذا الحديثَ عن الزُّهري مَعمَر ومالكٌ وابنُ عُيينة وشعيبُ بن أبي حمزة والليثُ بن سعد وغيرُهم، لم يذكروا الوقتَ الذي صلَّى فيه ولم يُفَسِّروه. وكذلك أيضاً روى هشامُ بنُ\nعُروة وحبيبُ بنُ أبي مرزوق عن عُروة نحوَ روايةَ مَعمَر وأصحابِه، إلا أن حبيباً لم يذكر بشيراً.\nوروى وهبُ بنُ كَيسانَ، عن جابر، عن النبيِّ - صلى الله عليه وسلم - وقتَ المَغرِب قال: ثمَّ جاءَه للمَغرِبِ حينَ غابت الشمسُ -يعني من الغَدِ- وقتاً واحداً.\nقال أبو داود: وكذلك رُوي، عن أبي هريرة، عن النبيِّ - صلى الله عليه وسلم - قال: \"ثمَّ صلَّى بي المَغرِبَ -يعني من الغَدِ- وقتاً واحداً\".\nوكذلك رُوي، عن عبد الله بن عمرو بن العاص من حديث حسَّان ابن عطيَّة، عن عمرو بن شُعيب، عن أبيه، عن جدّه، عن النبيِّ - صلى الله عليه وسلم -."}</script>
 </body>
 </html>

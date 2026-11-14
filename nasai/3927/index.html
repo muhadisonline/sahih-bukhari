@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-rXhQidsA6Itzyqc1elk/RtvTWbhQnc8ZrGegSGuoMHo='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٢٧ — إن كان هذا شأنكم، فلا تُكْروا المَزارع | سنن النسائي</title>
 <meta name="description" content="الحديث ٣٩٢٧ من سنن النسائي، كتاب الأيمان والنذور، باب ذكر الأحاديث المختلفة في النهي عن كراء الأرض بالثلث والربع، واختلاف ألفاظ الناقلين للخبر. أخبرنا الحسين بنُ محمد قال: حدَّثنا إسماعيل بنُ إبراهيم قال: حدَّثنا عبد الرَّحمن بنُ إسحاق،…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -61,16 +63,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٩٢٧" data-url="https://sunan.online/nasai/3927/">انسخ المتن</button>
   <a href="/nasai/3928/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -89,35 +82,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٢٧ — إن كان هذا شأنكم، فلا تُكْروا المَزارع | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3927,"articleBody":"أخبرنا الحسين بنُ محمد قال: حدَّثنا إسماعيل بنُ إبراهيم قال: حدَّثنا عبد الرَّحمن بنُ إسحاق، عن أبي عُبيدةَ بن محمد، عن الوليد بن أبي الوليد، عن عُروة بن الزُّبير قال:\nقال زيد بنُ ثابت: يَغْفِرُ اللهُ لرافع بن خَديجٍ، أنا - واللهِ - أَعلَمُ بالحديث منه، إنَّما كانا رجُلين اقتتلا، فقال رسول الله صلى الله عليه وسلم: \"إن كان هذا شأنكم، فلا تُكْروا المَزارع\" فسمع قولَه: \"لا تُكْروا المَزارع\".\nقال أبو عبد الرَّحمن: كتابة مُزارعةٍ على أنَّ البَذرَ والنَّفقة على صاحب الأرض، وللمُزارع رُبعُ ما يُخرِجُ اللهُ عز وجل منها: هذا كتابٌ كتبه فلانُ ابن فلانِ بن فُلانٍ في صِحَّةٍ منه وجواز أمرٍ لفُلان بن فُلان: إِنَّكَ دفعت إليَّ جميع أرضِكَ التي بموضع كذا، في مدينة كذا، مُزارعةً، وهي الأرضُ الَّتي تُعرَف بكذا، وتَجمَعُها حدودٌ أربعة، تُحيط بها كلِّها، وأحدُ تلك الحدودِ بأَسْرِه لَزِيقُ كذا، والثَّاني، والثَّالث، والرَّابع، دفعتَ إليَّ جميع أرضِكَ هذه المحدُودة في هذا الكتاب بحدودها المُحيطة بها، وجميع حقوقها وشربها، وأنهارها وسواقيها، أرضًا بيضاء، فارغةً لا شيء فيها من غَرس ولا زَرعٍ، سنةً تامَّةً، أَوَّلُها مُستَهَلَّ شهرٍ كذا، من سَنةِ\nكذا، وآخِرُها انسلاخُ شهرِ كذا، من سنة كذا، على أنْ أزْرَعَ جميع هذه الأرضِ المحدودة في هذا الكتابِ المَوصوفِ مَوضِعُها فيه هذه السَّنةَ المُؤقَّتة فيها، من أوَّلها إلى آخرها، كُلَّ ما أرَدْتُ وبدا لي أن أزرع فيها من حنطةٍ، وشعيرٍ وسماسِمَ، وأُرز، وأقطانٍ، ورطابٍ، وباقلَّا، وحِمَّصٍ، ولُوبيا، وعدَسٍ، ومقاثي، ومباطِخَ، وجَزَر، وشَلْجَمِ، وفُجْلٍ، وبَصَلٍ، وثُوم، وبقول، ورياحينَ، وغير ذلك من جميع الغُلَّاتِ شتاءً وصيفًا، بيُزورك، وبَذرِكَ، وجميعُه عليكَ دُوني، على أن أتولَّى ذلك بيدي، وبِمَنْ أَرَدْتُ من أعواني، وأُجرائي، وبَقَري، وأداتي، وَأَلِيَ زراعة ذلك، وعِمارَتَه، والعمل بما فيه نَماؤُه، ومصلحتُه، وكِرَابَ أرضِه، وتَنقِيَةَ حَشيشها، وسَفْيَ ما يُحتاجُ إلى سَقْيِهِ مِمَّا زُرعَ، وتَسْميدَ ما يُحتاج إلى تسميدِه، وحَفْرَ سَواقيه وأنهاره، واجْتِناءَ ما يُجْتَنى منه، والقيام بحصادِ ما يُحصَدُ منه، وجَمْعِه، ودِياسةِ ما يُداسُ منه، وتَذْرِيَتِه، بنفَقَتِكَ على ذلك\nكُلِّه دوني، وأعمَلَ فيه كُلِّه بيدي وأعواني دونَكَ، على أنَّ لكَ من جميع ما يُخرجُ اللهُ عز وجل من جميع ذلك كلِّه، في هذه المُدَّةِ الموصوفة في هذا الكتاب، من أوَّلها إلى آخِرِها، فلَكَ ثلاثةُ أرباعه؛ بحَظِّ أرضِكَ، وشِرْبِكَ، وبَذرِكَ، ونفقاتِكَ، ولي الرُّبعُ الباقي من جميع ذلك؛ بزراعتي وعَملي، وقيامي على ذلك بيدي وأعواني دونَكَ، ودفَعْتَ إليَّ جميعَ أرضِكَ هذه المحدودة في هذا الكتاب، بجميع حُقوقها ومرافقها، وقبَضْتُ ذلِكَ كُلَّه منكَ يومَ كذا، من شهر كذا، من سَنَةِ كذا، فصار جميعُ ذلِكَ في يَدي لَكَ، لا مِلْكَ لي في شيءٍ منه، ولا دَعوى، ولا طَلِبَةَ، إِلَّا هذه المُزارَعَةَ الموصوفة في هذا الكتاب، في هذه السَّنةِ المُسمَّاةِ فيه، فإذا انقضَتْ فذلِكَ كلَّه مردودٌ إليكَ وإلى يَدِك، ولكَ أن تُخرِجَني بعد انقضائها منها، وتُخرِجَها من يدي ويَدِ كُلِّ مَنْ صارَتْ له فيها يَدٌ بِسَبَبِي، أَقرَّ فلانٌ وفلانٌ، وكتب هذا الكتاب نُسخَتين."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

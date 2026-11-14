@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-DpeV8J/d9ooY2drfW/Le2RPd4c6ZEom1sumPwkVgAxo='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٢٧٣ — يا ابنةَ أبي أميَّهَ، سألت عن الرَّكعتين بعدَ العصرِ، إنه أتاني ناسٌ… | سنن أبي داود</title>
 <meta name="description" content="الحديث ١٢٧٣ من سنن أبي داود، أبواب تفريع استفتاح الصلاة، باب الصلاة بعد العصر. حدثنا أحمدُ بنُ صالح، حدثنا عبد الله بن وهب، أخبرني عمرو ابنُ الحارث، عن بُكير بن الأشج، عن كُريب مولى ابن عباس: أن عبدَ الله بن عباس وعبدَ الرحمن بن أزْهر…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -61,16 +63,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ١٢٧٣" data-url="https://sunan.online/abudawud/1273/">انسخ المتن</button>
   <a href="/abudawud/1274/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -89,35 +82,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٢٧٣ — يا ابنةَ أبي أميَّهَ، سألت عن الرَّكعتين بعدَ العصرِ، إنه أتاني ناسٌ… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":1273,"articleBody":"حدثنا أحمدُ بنُ صالح، حدثنا عبد الله بن وهب، أخبرني عمرو ابنُ الحارث، عن بُكير بن الأشج، عن كُريب مولى ابن عباس:\nأن عبدَ الله بن عباس وعبدَ الرحمن بن أزْهر والمسور بن مَخرمة\nأرسلوه إلى عائشةَ زوجِ النبي - صلَّى الله عليه وسلم - فقالوا: اقرأ عليها السلامَ منا جميعاً، وسَلْها عن الرَّكعتين بعدَ العصرِ، وقل: إنا أُخبرنا أنكِ تُصلينَهما، وقد\nبلغنا أن رسولَ الله - صلَّى الله عليه وسلم - نهى عنهما، فدخلتُ عليها فبلَّغتُها ما أرسلوني به، فقالت: سَلْ أمَّ سلمة، فخرجتُ إليهم فأخبرتُهم بقولها، فردُّوني\nإلى أمِّ سلمة بمثل ما أرسلوني به إلى عائشة، فقالت أمُّ سلمةَ: سمعتُ رسولَ الله - صلَّى الله عليه وسلم - ينهى عنهما، ثم رأيتُه يُصليهما، أما حين صلاهما، فإنه صلَّى العصر، ثم دخل وعندي نسوة من بني حَرامٍ من الأنصار، فصلاّهما، فأرسلتُ إليه الجاريةَ، فقلتُ: قومي بجنبه فقولي له: تقولُ أمُّ سلمة: يا رسول الله، أسمعُكَ تنهى عن هاتين الركعتين، وأراك تصلّيهما! فإن أشار بيده، فاستأخري عنه، قالت: ففعلتِ الجاريةُ، فأشار بيده، فاستأخرَتْ عنه، فلمَّا انصرف قال: \"يا ابنةَ أبي أميَّهَ، سألت عن الرَّكعتين بعدَ العصرِ، إنه أتاني ناسٌ من عبد القيس بالإسلام مِنْ قومهم، فشغلوني عن الرَّكعتين اللَّتين بعد الظهر، فهما هاتان\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

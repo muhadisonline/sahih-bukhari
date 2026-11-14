@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-dv7zwlYdc6wpwdB+9OqitmxYWQ8CT+NhssPdqCBrgeA='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٣٤٢ — حدَّثنا حفصُ بن عمر، حدَّثنا همَّامٌ، حدَّثنا قتادةُ، عن زُرارة بن… | سنن أبي داود</title>
 <meta name="description" content="الحديث ١٣٤٢ من سنن أبي داود، أبواب تفريع استفتاح الصلاة، باب في صلاة الليل. حدَّثنا حفصُ بن عمر، حدَّثنا همَّامٌ، حدَّثنا قتادةُ، عن زُرارة بن أوفى عن سَعْد بن هشام، قال: طلقتُ امرأتي، فأتيت المدينةَ لأبيع عقاراً كان لي بها، فأشتريَ به…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ١٣٤٢" data-url="https://sunan.online/abudawud/1342/">انسخ المتن</button>
   <a href="/abudawud/1343/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٣٤٢ — حدَّثنا حفصُ بن عمر، حدَّثنا همَّامٌ، حدَّثنا قتادةُ، عن زُرارة بن… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":1342,"articleBody":"حدَّثنا حفصُ بن عمر، حدَّثنا همَّامٌ، حدَّثنا قتادةُ، عن زُرارة بن أوفى\nعن سَعْد بن هشام، قال: طلقتُ امرأتي، فأتيت المدينةَ لأبيع عقاراً كان لي بها، فأشتريَ به السلاحَ فأغزوَ، فلقيتُ نفراً من أصحاب\nالنبيَّ - صلَّى الله عليه وسلم -، فقالوا: قد أراد نَفَرٌ مِنا ستَّةٌ أن يفعلوا ذلك، فنهاهم النبي - صلَّى الله عليه وسلم - وقال: {لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ} فأتيتُ ابن عباس فسألتُه عن وترِ النبيِّ - صلَّى الله عليه وسلم -، فقال: أدُلُّكَ على أعلمِ الناس بوتر رسولِ الله - صلَّى الله عليه وسلم -، فأتِ عائشةَ، فأتيتُها، فاستتبعت حكيمَ بن أفلح، فأبى، فناشدتُه، فانطلقَ معي، فاستأذنَّا على عائشة، فقالت: من هذا؟ قال: حكيم بن أفلح، قالت: ومن معك؟ قال: سعد بن هشام، قالت: هشام بن عامر الذي قتل يوم أحد؟ قال: قلتُ: نعم، قالت: نِعْمَ المرءُ كان عامرٌ، قال: قلتُ: يا أمَّ المؤمنين حدثيني عن خُلِق رسول الله - صلَّى الله عليه وسلم -، قالت: ألستَ تقرأ القرآن؟ فإن خُلُقَ رسولِ الله - صلَّى الله عليه وسلم - كان القرآنُ.\nقال: قلت: حدِّثيني عن قيام الليل، قالت: ألست تقرأ: {يَا أَيُّهَا الْمُزَّمِّلُ}؟ قال: قلت: بلى، قالت: فإن أوَّل هذه السورة نزلت، فقام أصحابُ رسول الله - صلَّى الله عليه وسلم - حتى انتفخت أقدامُهم، وحُبِسَ خاتمتُها في السَّماء اثني عَشَر شهراً، ثم نزل آخِرُها، فصار قيامُ الليل تطوعاً بعد فريضة.\nقال: قلت: حدِّثيني عن وتر النبي - صلَّى الله عليه وسلم -. قالت: كان يؤتِرُ بثمانِ ركعاتٍ، لا يجلسُ إلا في الثامنة، ثم يقومُ فيُصلي ركعةً أخرى، لا يجلس إلا في الثامنة والتاسعة، ولا يُسلّم إلا في التاسعة، ثم يصلِّي ركعتين وهو جالس، فتلك إحدى عشرة ركعةً يا بني، فلما أسنَّ وأخذَ اللحمَ أوتر بسبع ركعاتٍ، لم يجلس إلا في السادسة والسابعة، ولم يُسَلِّم إلا في السابعة، ثم يصلّي ركعتين وهو جالس، فتلك تسعُ رَكَعاتٍ يا بنيَّ. ولم يَقُم رسولُ الله - صلَّى الله عليه وسلم - ليلةً يُتمُّها إلى الصباح، ولم\nيقرأ القراَن في ليلة قَطُّ، ولم يصم شهراً يُتمُّه غيرَ رمضان، وكان إذا صَلّى صلاةً داومَ عليها، وكان إذا غَلَبَتْهُ عيناه من الليل بنومِ صلّى من النَهار ثنتي عشرةَ ركعةً، قال: فأتيتُ ابنَ عباس. فحدَّثتُه، فقال: هذا والله هو الحديث، ولو كنت أكَلِّمُها لأتيتُها حتى أشافهَها به مشافهةً، قال: قلت: لو علمتُ أنك لا تكلِّمها ما حدَّثتُك."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

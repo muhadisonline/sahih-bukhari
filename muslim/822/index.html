@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-s2i33ezhqRs9HtQNUqerMUrF23tLyd+cthWzpGHmiBc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٨٢٢ — حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَابْنُ نُمَيْرٍ. جميعا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٨٢٢ من صحيح مسلم، كتاب صلاة المسافرين وقصرها، باب ترتيل القراءة واجتناب الهذ، وهو الإفراط في السرعة. وإباحة سورتين فأكثر في ركعة. حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَابْنُ نُمَيْرٍ. جميعا عَنْ وَكِيعٍ. قَالَ أَبُو بَكْرٍ:…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -79,16 +81,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٨٢٢" data-url="https://sunan.online/muslim/822/">انسخ المتن</button>
   <a href="/muslim/823/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -107,35 +100,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٨٢٢ — حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَابْنُ نُمَيْرٍ. جميعا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":822,"articleBody":"حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَابْنُ نُمَيْرٍ. جميعا عَنْ وَكِيعٍ. قَالَ أَبُو بَكْرٍ: حَدَّثَنَا وَكِيعٌ عَنِ الأَعْمَشِ، عَنْ أَبِي وَائِلٍ. قَالَ:\nجَاءَ رَجُلٌ يُقَالُ لَهُ نَهِيكُ بْنُ سِنَانٍ إِلَى عَبْدِ اللَّهِ. فَقَالَ: يَا أَبَا عَبْدِ الرَّحْمَنِ! كَيْفَ تَقْرَأُ هَذَا الْحَرْفَ. أَلِفًا تَجِدُهُ أَمْ يَاءً: مِنْ مَاءٍ غَيْرِ آسِنٍ أو من ماء غير يا سن؟ قَالَ فَقَالَ عَبْدُ اللَّهِ: وَكُلَّ الْقُرْآنِ قَدْ أَحْصَيْتَ غَيْرَ هَذَا؟ قَالَ: إِنِّي لَأَقْرَأُ الْمُفَصَّلَ فِي رَكْعَةٍ. فَقَالَ عَبْدُ اللَّهِ: هَذًّا كَهَذِّا الشعر؟ إن أقواما يقرؤون الْقُرْآنَ لَا يُجَاوِزُ تَرَاقِيَهُمْ. وَلَكِنْ إِذَا وَقَعَ فِي الْقَلْبِ فَرَسَخَ فِيهِ، نَفَعَ. إِنَّ أَفْضَلَ الصَّلَاةِ الرُّكُوعُ وَالسُّجُودُ. إِنِّي لَأَعْلَمُ النَّظَائِرَ الَّتِي كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم يَقْرُنُ بَيْنَهُنَّ. سُورَتَيْنِ فِي كُلِّ رَكْعَةٍ. ثُمَّ قَامَ عَبْدُ اللَّهِ فَدَخَلَ عَلْقَمَةُ فِي إِثْرِهِ. ثُمَّ خَرَجَ فَقَالَ: قَدْ أَخْبَرَنِي بِهَا.\nقَالَ ابْنُ نُمَيْرٍ فِي رِوَايَتِهِ: جَاءَ رَجُلٌ مِنْ بَنِي بَجِيلَةَ إِلَى عَبْدِ اللَّهِ. وَلَمْ يَقُلْ: نهيك بن سنان.\n\nوحَدَّثَنَا أَبُو كُرَيْبٍ. حَدَّثَنَا أَبُو مُعَاوِيَةَ عَنِ الأَعْمَشِ، عَنْ أَبِي وَائِلٍ. قَالَ: جَاءَ رَجُلٌ إلى عبد الله، يقال له نهيك ابن سِنَانٍ. بِمِثْلِ حَدِيثِ وَكِيعٍ. غَيْرَ أَنَّهُ قَالَ:\nفَجَاءَ عَلْقَمَةُ لِيَدْخُلَ عَلَيْهِ. فَقُلْنَا لَهُ: سَلْهُ عَنِ النَّظَائِرِ الَّتِي كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقْرَأُ بِهَا فِي رَكْعَةٍ. فَدَخَلَ عَلَيْهِ فَسَأَلَهُ. ثُمَّ خَرَجَ عَلَيْنَا فَقَالَ: عِشْرُونَ سُورَةً مِنَ الْمُفَصَّلِ. فِي تَأْلِيفِ عَبْدِ الله.\n\nوحَدَّثَنَاه إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا عِيسَى بْنُ يُونُسَ. حَدَّثَنَا الأَعْمَشُ فِي هَذَا الإِسْنَادِ، بِنَحْوِ حديثهما. وقال:\nإني لأعرف النظائر التي يَقْرَأُ بِهِنَّ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. اثْنَتَيْنِ فِي رَكْعَةٍ. عِشْرِينَ سُورَةً فِي عشر ركعات.\n\nحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا مَهْدِيُّ بْنُ مَيْمُونٍ. حَدَّثَنَا وَاصِلٌ الأَحْدَبُ عَنْ أَبِي وَائِلٍ. قَالَ:\nغَدَوْنَا عَلَى عَبْدِ اللَّهِ بْنِ مَسْعُودٍ يَوْمًا بَعْدَ مَا صَلَّيْنَا الْغَدَاة. فَسَلَّمْنَا بِالْبَابِ. فأذن لنا. قال فمكنا بِالْبَابِ هُنَيَّةً. قَالَ فَخَرَجَتِ الْجَارِيَةُ فَقَالَتْ: أَلَا تَدْخُلُونَ؟ فَدَخَلْنَا. فَإِذَا هُوَ جَالِسٌ يُسَبِّحُ. فَقَالَ: مَا مَنَعَكُمْ أَنْ تَدْخُلُوا وَقَدْ أُذِنَ لَكُمْ؟ فَقُلْنَا: لَا. إِلَّا أَنَّا ظَنَنَّا أَنَّ بَعْضَ أَهْلِ الْبَيْتِ نَائِمٌ. قَالَ ظَنَنْتُمْ بِآلِ ابْنِ أُمِّ عَبْدٍ غَفْلَةً؟ قَالَ: ثُمَّ أَقْبَلَ يُسَبِّحُ حَتَّى ظَنَّ أَنَّ الشَّمْسَ قَدْ طَلَعَتْ. فَقَالَ: يَا جَارِيَةُ! انْظُرِي. هَلْ طَلَعَتْ؟ قَالَ فَنَظَرَتْ فَإِذَا هِيَ لَمْ تَطْلُعْ. فَأَقْبَلَ يُسَبِّحُ. حَتَّى إِذَا ظَنَّ أَنَّ الشَّمْسَ قَدْ طَلَعَتْ قَالَ: يَا جَارِيَةُ! انْظُرِي. هَلْ طَلَعَتْ؟ فَنَظَرَتْ فَإِذَا هِيَ قَدْ طَلَعَتْ. فَقَالَ: الْحَمْدُ لِلَّهِ الَّذِي أَقَالَنَا يَوْمَنَا هَذَا. (فَقَالَ مَهْدِيٌّ وَأَحْسِبُهُ قَالَ) وَلَمْ يُهْلِكْنَا بِذُنُوبِنَا. قَالَ فَقَالَ رَجُلٌ مِنَ الْقَوْمِ: قَرَأْتُ الْمُفَصَّلَ الْبَارِحَةَ كُلَّهُ. قَالَ فَقَالَ عَبْدُ اللَّهِ: هَذًّا كَهَذِّ الشِّعْرِ؟ إِنَّا لَقَدْ سَمِعْنَا الْقَرَائِنَ. وَإِنِّي لَأَحْفَظُ الْقَرَائِنَ الَّتِي كَانَ يَقْرَؤُهُنَّ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. ثَمَانِيَةَ عَشَرَ مِنَ الْمُفَصَّلِ. وَسُورَتَيْنِ مِنْ آلِ حم.\n\nحَدَّثَنَا عَبْدُ بْنُ حُمَيْدٍ. حَدَّثَنَا حُسَيْنُ بْنُ عَلِيٍّ الْجُعْفِيُّ عَنْ زَائِدَةَ، عَنْ مَنْصُورٍ، عَنْ شَقِيقٍ. قَالَ:\nجَاءَ رَجُلٌ مِنْ بَنِي بَجِيلَةَ، يُقَالُ لَهُ نَهِيكُ بْنُ سِنَانٍ، إِلَى عَبْدِ اللَّهِ. فَقَالَ: إِنِّي أَقْرَأُ الْمُفَصَّلَ فِي رَكْعَةٍ. فَقَالَ عَبْدُ اللَّهِ: هَذًّا كَهَذِّ الشِّعْرِ؟ لَقَدْ عَلِمْتُ النَّظَائِرَ الَّتِي كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقْرَأُ بِهِنَّ. سُورَتَيْنِ فِي ركعة.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى وَابْنُ بَشَّارٍ. قَالَ ابْنُ الْمُثَنَّى: حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ عَمْرِو بْنِ مُرَّةَ؛ أَنَّهُ سَمِعَ أَبَا وَائِلٍ يُحَدِّثُ؛ أَنَّ رَجُلًا جَاءَ إِلَى ابْنِ مَسْعُودٍ فَقَالَ:\nإِنِّي قَرَأْتُ الْمُفَصَّلَ اللَّيْلَةَ كُلَّهُ فِي رَكْعَةٍ. فَقَالَ عَبْدُ اللَّهِ: هَذًّا كَهَذّ الشِّعْرِ؟ فَقَالَ عَبْدُ اللَّهِ: لَقَدْ عَرَفْتُ النَّظَائِرَ الَّتِي كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقْرُنُ بَيْنَهُنَّ. قَالَ فَذَكَرَ عِشْرِينَ سُورَةً مِنَ الْمُفَصَّلِ. سُورَتَيْنِ سُورَتَيْنِ فِي كُلِّ رَكْعَةٍ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

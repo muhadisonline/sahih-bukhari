@@ -2,6 +2,8 @@
 (function () {
   var input = document.getElementById("gq");
   var out = document.getElementById("out");
+  var form = document.getElementById("gform") || (input && input.form);
+  if (form) form.addEventListener("submit", function (e) { e.preventDefault(); });
   function fold(value) {
     var s = String(value || "");
     s = s.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, "");
@@ -10,11 +12,8 @@
     return s;
   }
   function esc(value) {
-    return String(value).replace(/[&<>"]/g, function (ch) {
-      if (ch === "&") return "&" + "amp;";
-      if (ch === "<") return "&" + "lt;";
-      if (ch === ">") return "&" + "gt;";
-      return "&" + "quot;";
+    return String(value).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
     });
   }
   function show(rows) {

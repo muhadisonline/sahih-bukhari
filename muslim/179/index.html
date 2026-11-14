@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-VkS5FN4Zb4qY/A799bNKihGlk5C7Q84u83AXd/jE+XU='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٧٩ — إِنَّ اللَّهَ عَزَّ وَجَلَّ لَا يَنَامُ وَلَا يَنْبَغِي لَهُ أَنْ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٧٩ من صحيح مسلم، كتاب الإيمان، باب في قوله عليه السلام: إن الله لا ينام، وفي قوله: حجابه النور لو كشفه لأحرق سبحات وجهه ما انتهى إليه بصره من خلقه. حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَأَبُو كُرَيْبٍ. قَالَا: حَدَّثَنَا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -70,16 +72,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٧٩" data-url="https://sunan.online/muslim/179/">انسخ المتن</button>
   <a href="/muslim/180/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -98,35 +91,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٧٩ — إِنَّ اللَّهَ عَزَّ وَجَلَّ لَا يَنَامُ وَلَا يَنْبَغِي لَهُ أَنْ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":179,"articleBody":"حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَأَبُو كُرَيْبٍ. قَالَا: حَدَّثَنَا أَبُو مُعَاوِيَةَ. حَدَّثَنَا الأَعْمَشُ عَنْ عَمْرِو بْنِ مُرَّةَ، عَنْ أَبِي عُبَيْدَةَ، عَنْ أَبِي مُوسَى، قَالَ:\nقَامَ فِينَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِخَمْسِ كَلِمَاتٍ.\nفَقَالَ: \"إِنَّ اللَّهَ عَزَّ وَجَلَّ لَا يَنَامُ وَلَا يَنْبَغِي لَهُ أَنْ يَنَامَ. يَخْفِضُ الْقِسْطَ وَيَرْفَعُهُ. يُرْفَعُ إِلَيْهِ عَمَلُ اللَّيْلِ قَبْلَ عَمَلِ النَّهَارِ. وَعَمَلُ النَّهَارِ قَبْلَ عَمَلِ اللَّيْلِ. حِجَابُهُ النُّورُ. (وَفِي رِوَايَةِ أَبِي بَكْرٍ: النَّارُ) لَوْ كَشَفَهُ لَأَحْرَقَتْ سُبُحَاتُ وَجْهِهِ مَا انْتَهَى إِلَيْهِ بَصَرُهُ مِنْ خَلْقِهِ\". (وَفِي رِوَايَةِ أَبِي بَكْرٍ عَنِ الأَعْمَشِ وَلَمْ يَقُلْ حدثنا).\n\nحدثنا إسحاق بن إبراهيم. أخبرنا جرير عن الأَعْمَشِ، بِهَذَا الإِسْنَادِ. قَالَ:\nقَامَ فِينَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِأَرْبَعِ كَلِمَاتٍ. ثُمَّ ذَكَرَ بِمِثْلِ حَدِيثِ أَبِي مُعَاوِيَةَ. وَلَمْ يَذْكُرْ \"مِنْ خَلْقِهِ\" وَقَالَ: حِجَابُهُ النُّورُ.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى وَابْنُ بَشَّارٍ. قَالَا: حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. قَالَ: حَدَّثَنِي شُعْبَةُ عَنْ عَمْرِو بْنِ مُرَّةَ، عَنْ أَبِي عُبَيْدَةَ، عَنْ أَبِي مُوسَى؛ قَالَ:\nقَامَ فِينَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِأَرْبَعٍ \"إِنَّ اللَّهَ لَا يَنَامُ وَلَا يَنْبَغِي لَهُ أَنْ يَنَامَ. يَرْفَعُ الْقِسْطَ وَيَخْفِضُهُ. وَيُرْفَعُ إِلَيْهِ عَمَلُ النَّهَارِ بِاللَّيْلِ. وَعَمَلُ اللَّيْلِ بِالنَّهَارِ\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

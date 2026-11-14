@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-TPr8b63CBHlxIMw8yn4eOEHhGn9ovA9/nAAp9EUMwDQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٠٥٠ — يا ابن عَوْفٍ اركَبْ فرَسَك ثم نَادِ: ألا أن الجنة لا تحِلُّ إلا… | سنن أبي داود</title>
 <meta name="description" content="الحديث ٣٠٥٠ من سنن أبي داود، كتاب الخراج والفيء والإمارة، باب تعشير أهل الذمة إذا اختلفوا بالتجارات. حدَّثنا محمدُ بن عِيسى، حدَّثنا أشعثُ بن شُعبةَ، حدَّثنا أرطاةُ بن المُنذِر، سمعتُ حكيم بن عُمير أبا الأَخوَصِ يحدَّث عن العِرْباض بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٣٠٥٠" data-url="https://sunan.online/abudawud/3050/">انسخ المتن</button>
   <a href="/abudawud/3051/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٠٥٠ — يا ابن عَوْفٍ اركَبْ فرَسَك ثم نَادِ: ألا أن الجنة لا تحِلُّ إلا… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":3050,"articleBody":"حدَّثنا محمدُ بن عِيسى، حدَّثنا أشعثُ بن شُعبةَ، حدَّثنا أرطاةُ بن المُنذِر، سمعتُ حكيم بن عُمير أبا الأَخوَصِ يحدَّث\nعن العِرْباض بن ساريةَ السُّلَميِّ، قال: نزلْنا مع رسول -صلَّى الله عليه وسلم- خيبرَ ومعه مَنْ معه من أصحابه، وكان صاحبُ خيبرَ رجلاً مارِداً منكَراً، فأقبلَ إلى النبيِّ -صلَّى الله عليه وسلم- فقال: يا محمدُ، ألكم أن تذبَحوا حُمُرَنا، وتأكلُوا ثمرَنا، وتضربُوا نساءنا؟! فغضِب - يعني رسول الله -صلَّى الله عليه وسلم- وقال: \"يا ابن عَوْفٍ اركَبْ فرَسَك ثم نَادِ: ألا أن الجنة لا تحِلُّ إلا لمؤمنٍ، وأنِ اجتمِعُوا للصلاة\" قال: فاجتمَعُوا ثم صلَّى بهم النبي -صلَّى الله عليه وسلم- ثم قام فقال: \"أيحسبُ أحدُكم مُتكئاً على أريكته قد يَظنُّ يقولُ: إنَّ الله لم يُحرِّم شيئاً إلا ما في هذا القرآنِ، ألا وإنّي - والله - قد أمَرْتُ وَوعَظْتُ ونَهيتُ عن أشياء، إنّها لِمثلُ القُرآن أو أكثر، وإنَّ الله عزَّ وجلَّ لم يُحِل لكم أن تَدخُلوا بُيوتَ أهلِ الكتابِ إلاَّ بإذنٍ، ولا ضرْبَ نِسائِهم، ولا أكلَ ثِمارِهم، إذا أعطَوكُمُ الذى عليهم\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

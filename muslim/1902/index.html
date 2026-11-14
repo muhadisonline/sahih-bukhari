@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-GaK3JriWZEbYPro3uANpfICGjsHcwHn/ibejGPf3IXM='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٩٠٢ — حدثنا يَحْيَى بْنُ يَحْيَى التَّمِيمِيُّ وَقُتَيْبَةُ بْنُ سَعِيدٍ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٩٠٢ من صحيح مسلم، كتاب الإمارة، باب ثبوت الجنة للشهيد. حدثنا يَحْيَى بْنُ يَحْيَى التَّمِيمِيُّ وَقُتَيْبَةُ بْنُ سَعِيدٍ (وَاللَّفْظُ لِيَحْيَى) (قَالَ قُتَيْبَةُ: حَدَّثَنَا. وقَالَ يَحْيَى: أَخْبَرَنَا جَعْفَرُ بْنُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٩٠٢" data-url="https://sunan.online/muslim/1902/">انسخ المتن</button>
   <a href="/muslim/1903/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,35 +85,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٠٢ — حدثنا يَحْيَى بْنُ يَحْيَى التَّمِيمِيُّ وَقُتَيْبَةُ بْنُ سَعِيدٍ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1902,"articleBody":"حدثنا يَحْيَى بْنُ يَحْيَى التَّمِيمِيُّ وَقُتَيْبَةُ بْنُ سَعِيدٍ (وَاللَّفْظُ لِيَحْيَى) (قَالَ قُتَيْبَةُ: حَدَّثَنَا. وقَالَ يَحْيَى: أَخْبَرَنَا جَعْفَرُ بْنُ سُلَيْمَانَ) عَنْ أَبِي عِمْرَانَ الْجَوْنِيُّ، عَنْ أَبِي بَكْرِ بْنِ عَبْدِ اللَّهِ بْنِ قَيْسٍ، عَنْ أَبِيهِ، قَالَ: سَمِعْتُ أَبِي وَهُوَ بِحَضْرَةِ الْعَدُوِّ يَقُولُ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (إِنَّ أَبْوَابَ الْجَنَّةِ تَحْتَ ظِلَالِ السُّيُوفِ) فَقَامَ رَجُلٌ رَثُّ الْهَيْئَةِ. فَقَالَ: يَا أَبَا مُوسَى! آنْتَ سَمِعْتَ رسول الله صلى الله عليه وسلم يقول هَذَا؟ قَالَ: نَعَمْ. قَالَ: فَرَجَعَ إِلَى أَصْحَابِهِ فَقَالَ: أَقْرَأُ عَلَيْكُمُ السَّلَامَ. ثُمَّ كَسَرَ جَفْنَ سَيْفِهِ فَأَلْقَاهُ. ثُمَّ مَشَى بِسَيْفِهِ إِلَى الْعَدُوِّ. فضرب به حتى قتل.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ حَاتِمٍ. حَدَّثَنَا عَفَّانُ. حَدَّثَنَا حَمَّادٌ. أَخْبَرَنَا ثَابِتٌ عَنْ أَنَسِ بْنِ مَالِكٍ قَالَ:\nجَاءَ نَاسٌ إِلَى النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالُوا: إِنَّ ابْعَثْ مَعَنَا رِجَالًا يُعَلِّمُونَا الْقُرْآنَ وَالسُّنَّةَ. فَبَعَثَ إِلَيْهِمْ سَبْعِينَ رَجُلًا مِنْ الْأَنْصَارِ. يُقَالُ لَهُمُ الْقُرَّاءُ. فِيهِمْ خَالِي حرام. يقرؤن الْقُرْآنَ. وَيَتَدَارَسُونَ بِاللَّيْلِ يَتَعَلَّمُونَ. وَكَانُوا بِالنَّهَارِ يَجِيئُونَ بِالْمَاءِ فَيَضَعُونَهُ فِي الْمَسْجِدِ. وَيَحْتَطِبُونَ فَيَبِيعُونَهُ. وَيَشْتَرُونَ بِهِ الطَّعَامَ لِأَهْلِ الصُّفَّةِ، وَلِلْفُقَرَاءِ. فَبَعَثَهُمُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِلَيْهِمْ. فَعَرَضُوا لَهُمْ فَقَتَلُوهُمْ. قَبْلَ أَنْ يَبْلُغُوا الْمَكَانَ. فَقَالُوا: اللَّهُمَّ! بَلِّغْ عَنَّا نَبِيَّنَا؛ أَنَّا قَدْ لَقِينَاكَ فَرَضِينَا عَنْكَ. وَرَضِيتَ عَنَّا. قَالَ وَأَتَى رَجُلٌ حَرَامًا، خَالَ أَنَسٍ، مِنْ خَلْفِهِ فَطَعَنَهُ بِرُمْحٍ حَتَّى أَنْفَذَهُ. فَقَالَ حَرَامٌ: فُزْتُ، وَرَبِّ الْكَعْبَةِ! فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِأَصْحَابِهِ (إِنَّ إِخْوَانَكُمْ قَدْ قُتِلُوا. وَإِنَّهُمْ قَالُوا: اللَّهُمَّ! بَلِّغْ عَنَّا نَبِيَّنَا؛ أَنَّا قَدْ لَقِينَاكَ فَرَضِينَا عنك. ورضيت عنا)."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

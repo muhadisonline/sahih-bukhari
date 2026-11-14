@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pyEFfXsM6rHE020YSZgPTYDY3JJEw8LFkakD/wRBfL4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٠٧٩ — إنَّ الله أمرَ يحيى بنَ زَكَريَّا بِخَمْسِ كَلِماتٍ أن يَعْملَ بها،… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٣٠٧٩ من جامع الترمذي، أبواب الأمثال عن رسول الله صلى الله عليه وسلم، باب ما جاء مثل الصلاة والصيام والصدقة. حدَّثنا محمدُ بنُ إسماعيلَ، قال: حدَّثنا موسى بن إسماعيلَ، قال: حدَّثنا أبانُ بنُ يَزِيدَ، قال: حدَّثنا يحيى بن أبي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=20">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -69,16 +71,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٠٧٩" data-url="https://sunan.online/tirmidhi/3079/">انسخ المتن</button>
   <a href="/tirmidhi/3080/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -97,35 +90,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٠٧٩ — إنَّ الله أمرَ يحيى بنَ زَكَريَّا بِخَمْسِ كَلِماتٍ أن يَعْملَ بها،… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3079,"articleBody":"حدَّثنا محمدُ بنُ إسماعيلَ، قال: حدَّثنا موسى بن إسماعيلَ،\nقال: حدَّثنا أبانُ بنُ يَزِيدَ، قال: حدَّثنا يحيى بن أبي كَثِيرٍ، عن زيدِ بن سَلَّامٍ، أنَّ أبا سَلّامٍ حَدَّثهُ\nأنَّ الحارثَ الأشْعَريَّ حَدّثهُ، أنَّ النّبيَّ صلى الله عليه وسلم قال: \"إنَّ الله أمرَ يحيى بنَ زَكَريَّا بِخَمْسِ كَلِماتٍ أن يَعْملَ بها، ويَأْمُرَ بني إسرائيلَ أنْ يَعْملُوا بِها، وإنَّهُ كادَ أنْ يُبْطئَ بِها، قال عيسى: إنَّ اللهَ أمركَ بِخَمْسِ كَلِماتٍ لِتَعْملَ بِها، وتَأمُرَ بَني إسرائيلَ أنْ يَعْملُوا بِها، فإمَّا أن تأمُرَهُم، وإمَّا أن آمُرَهم.\nفقال يحيى: أخْشى إنْ سَبقْتَني بِها أن يُخْسفَ بي أو أُعَذَّبَ، فجمعَ النَّاسَ في بيتِ المَقْدِسِ، فامْتلأَ وقَعدُوا على الشُّرَفِ، فقال: إنَّ اللهَ أمَرني بِخَمْسِ كَلِماتٍ أن أعْملَ بِهنَّ، وآمُرَكُم أن تَعْملُوا بِهنَّ:\nأوَّلُهُنَّ: أنْ تَعْبُدوا اللهَ ولا تُشْرِكوا به شيئًا، وإنَّ مَثلَ مَن أشْرَكَ بالله كَمَثلِ رجلٍ اشْتَرى عَبْدًا من خالِصِ مالِه بِذَهبٍ أو وَرِقٍ، فقال: هذه دَارِي وهذا عَملي، فاعملْ وأدِّ إليَّ، فكان يَعْملُ ويُؤدِّي إلى غيرِ سَيِّدهِ، فأيُّكُمْ يَرْضَى أنْ يكونَ عَبْدُهُ كذلكَ؟\nوإنَّ الله أمَركُم بالصَّلاةِ، فإذا صَلّيْتُمْ، فلا تَلْتَفتُوا، فإنَّ الله يَنْصِبُ وجههُ لِوَجهِ عَبْدِه في صلاتِه ما لم يَلْتفِتْ.\nوأمَرَكُم بالصِّيامِ، فإنَّ مَثلَ ذلكَ، كَمَثلِ رجلٍ في عِصابةٍ معه صُرَّةٌ فيها مِسْكٌ، فكلُّهُم يَعْجَبُ أو يُعْجبه رِيحُها، فإنَّ رِيحَ الصَّائمِ أطْيبُ عِنْدَ اللهِ مِن رِيح المِسْكِ.\nوأمرَكُم بالصَّدقةِ، فإنَّ مَثلَ ذلكَ كَمَثلِ رَجُلٍ أسَرهُ العَدُوُّ، فأوْثقُوا يَدهُ إلى عُنقِه، وقَدَّمُوه لِيَضْربُوا عُنقهُ، فقال: أنا أفْدِيهِ مِنْكُم بالقليلِ والكَثيرِ، ففَدى نَفْسَهُ منهم.\nوأمَركُم أنْ تَذْكُرُوا الله، فإنَّ مَثلَ ذلكَ كمَثلِ رجلٍ خَرجَ العَدُوُّ في أثَرِه سِراعًا، حتَّى إذا أتَى على حِصْنٍ حَصِينٍ، فأحْرزَ نَفْسَه منهم، كذلك العبدُ لا يُحْرِزُ نَفْسَه من الشَّيطانِ إلَّا بذِكْرِ اللهِ.\nقال النّبيُّ صلى الله عليه وسلم: \"وأنا آمُرُكُم بِخَمْسٍ، اللهُ أمَرني بِهِنَّ: السَّمْعُ والطَّاعةُ والجِهادُ والهِجْرةُ والجَماعةُ، فإنَّهُ من فارقَ الجماعةَ قِيدَ شِبْرٍ، فقد خَلعَ رِبْقةَ الإِسلام من عُنقِه إلّا أنْ يُراجع، ومن ادَّعَى دَعوَى الجاهِليَّةِ، فإنَّهُ من جُثَى جَهنَّمَ\"، فقال رجلٌ: يا رسولَ اللهِ وإنْ صَلّى وصامَ؟ فقال: \"وإنْ صَلّى وصامَ، فادْعوا بِدَعْوى اللهِ التي سَماكُمُ المُسْلمينَ المُؤْمِنينَ، عِبادَ اللهِ\".\nهذا حديثٌ حسنٌ صحيحٌ غريبٌ.\nقال محمدُ بن إسماعيلَ: الحارثُ الأشْعَرِيُّ له صُحبةٌ، وله غيرُ هذا الحديثِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-mcj7RcFMSG19ZJGUcrVLjUQpxCqDuxFm1l+h7frTTWQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٧٦٧ — إذا كان يوم القيامة، دفع الله عز وجل إلى كل مسلم يهوديا أو نصرانيا.… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٧٦٧ من صحيح مسلم، كتاب التوبة، . حدثنا أبو بكر بن أبي شيبة. حدثنا أبو أسامة عن طَلْحَةُ بْنُ يَحْيَي، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى الله عليه وسلم &quot;إذا كان يوم القيامة، دفع الله عز وجل…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -70,16 +72,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٧٦٧" data-url="https://sunan.online/muslim/2767/">انسخ المتن</button>
   <a href="/muslim/2768/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -98,35 +91,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٧٦٧ — إذا كان يوم القيامة، دفع الله عز وجل إلى كل مسلم يهوديا أو نصرانيا.… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2767,"articleBody":"حدثنا أبو بكر بن أبي شيبة. حدثنا أبو أسامة عن طَلْحَةُ بْنُ يَحْيَي، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى الله عليه وسلم \"إذا كان يوم القيامة، دفع الله عز وجل إلى كل مسلم يهوديا أو نصرانيا. فيقول هذا فكاكك من النار\".\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا عفان بن مسلم. حدثنا همام. حدثنا قتادة؛ أن عونا وسعيد بن أبي بردة حدثاه؛ أنهما شهدا أبا بردة يحدث عمر بن عبد العزيز عَنْ أَبِيهِ،\nعَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وسلم قال \"لا يموت رجل مسلم إلا أدخل الله مكانه، النار، يهوديا أو نصرانيا\" قال فاستحلفه عمر بن عبد العزيز بالله الذي لا إله إلا هو! ثلاث مرات أن أباه حدثه عن رسول الله صلى الله عليه وسلم. قال فحلف له. قال فلم يحدثني سعيد أنه استحلفه. ولم ينكر على عون قوله.\n\nحَدَّثَنَا إِسْحَاق بْنُ إِبْرَاهِيمَ وَمُحَمَّدُ بْنُ الْمُثَنَّى. جميعا عن عبد الصمد بن عبد الوارث. أخبرنا همام.\nحدثنا قتادة، بهذا الإسناد، نحو حديث عفان. وقال: عون بن عتبة.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ عَمْرِو بْنِ عَبَّادِ بْنِ جَبَلَةَ بْنِ أَبِي رَوَّادٍ. حَدَّثَنَا حَرَمِيُّ بْنُ عمارة. حدثنا شداد، أبو طلحة الراسبي عَنْ غَيْلَانَ بْنِ جَرِيرٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِيهِ،\nعَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وسلم قال \"يجيء الناس يوم القيامة، ناس من المسلمين، بذنوب أمثال الجبال. فيغفرها الله لهم. ويضعها على اليهود والنصارى\" فيما أحسب أنا. قال أبو روح: لا أدري ممن الشك.\nقال أبو بردة: فحدثت به عمر بن عبد العزيز فقال: أبوك حدثك هذا عن النبي صلى الله عليه وسلم؟ قلت نعم."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-jTyZYYkiMZIIrRxf8egOmO45RVoNWM2n+SeX5ofUtpE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٤٦١٢ — حدَّثنا ابنُ كثيرِ، قال: أخبرنا سفيانُ، قال: كَتَب رجل إلى عُمَر بن… | سنن أبي داود</title>
 <meta name="description" content="الحديث ٤٦١٢ من سنن أبي داود، كتاب السنة، باب لزوم السنة. حدَّثنا ابنُ كثيرِ، قال: أخبرنا سفيانُ، قال: كَتَب رجل إلى عُمَر بن عبد العزيز يسالُه عن القَدَر. وحدَّثنا الربيِعُ بن سليمانَ المؤذنُ، قال: حدَّثنا أسدُ بن موسى، قال: حدَّثنا حمادُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٤٦١٢" data-url="https://sunan.online/abudawud/4612/">انسخ المتن</button>
   <a href="/abudawud/4613/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٦١٢ — حدَّثنا ابنُ كثيرِ، قال: أخبرنا سفيانُ، قال: كَتَب رجل إلى عُمَر بن… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":4612,"articleBody":"حدَّثنا ابنُ كثيرِ، قال: أخبرنا سفيانُ، قال: كَتَب رجل إلى عُمَر بن عبد العزيز يسالُه عن القَدَر.\nوحدَّثنا الربيِعُ بن سليمانَ المؤذنُ، قال: حدَّثنا أسدُ بن موسى، قال: حدَّثنا حمادُ بنُ دُليلٍ، قال: سمعتُ سفيانَ الثوريَّ يُحدَّثنا عن النضْر.\nوحدَّثنا هَنَّادُ بنُ السَّريِّ، عن قَبيصةَ، قالا: حدَّثنا أبو رجاء، عن أبي الصَّلْت -وهذا لفظ حديث ابن كثير ومعناهم- قال:\nكَتَبَ رجلٌ إلى عمر بن عبد العزيز يسأله عن القدَر، فكَتَب: أما بعدُ، أوصيكَ بتقوى الله، والاقتصادِ في أمره، واتباعِ سنَةِ رسوله - صلى الله عليه وسلم -، وتركِ ما أحدَثَ المُحْدِثون بعد ما جَرَت به سُنته، وكفُوا مُؤْنته، فعليكَ بلزوم السنة، فإنها لك -بإذن الله- عصمة.\nثم اعلَمْ أنه لم يبتدع الناسُ بدعةً إلا قد مضى قبلها ما هو دَليلٌ عليها أو عِبرةٌ فيها، فإن السنَّةَ إنما سنَّها مَن قد علم ما في خلافه -ولم يقل ابن كثير: من قد علم- من الخطا والزَّلَل والحُمقِ والتَعَمُّقِ، فارضَ لنفسك ما رَضي به القومُ لأنفسهم، فنهم على علمٍ وقَفُوا، وببصرٍ نافذٍ كفُوا، وهم على كشفِ الأمور كانوا أقوى، وبفضل ما كانوا فيه أولى، فإن كان الهدى ما أنتم عليه لقد سَبقْتُموهم إليه، ولَئنْ قلتم: إنما حدث بعدهم ما أحدثه إلا من اتبعَ غيرَ سبيلِهم، ورَغِبَ بنفسه عنهم، فإنهم هم السَّابقون، فقد تكلَّموا فيه بما يكفي، ووصفوا منه ما يشفي، فما دونهم مِن مَقْصَرٍ، وما فوقهم مِن مَحْسَرٍ، وقد قَصَّرَ قوم دونهم فجَفَوْا، وطَمَحَ عنهم أقوام فغَلَوْا، وإنّهم بين ذلك لعلى هدًى مستقيم، كتبتَ تسالُ عن الإقرارِ بالقَدَرِ، فعلى الخبير -بإذن الله- وقَعْتَ، ما أعلَمُ ما أحْدَثَ الناسُ من مُحْدَثةٍ، ولا ابتدعوا من بدعةٍ هي أبينُ أثراً ولا أثبتُ أمراً من الإقرار بالقَدَر، لقد كان ذكرُه في الجاهليةِ الجهلاء، يتكلمون به في كلامهم وفي شعرهم، يُعَزُّون به أنفسَهم على ما فاتهم، ثم لم يَزِدْهُ الإسلام بعدُ إلا شِدَّةً، ولقد ذكرَهُ رسولُ الله-صلى الله عليه وسلم -\nفي غير حديثٍ ولا حديثين، وقد سَمعَهُ منه المسلمون، فتكلَّموا به في حياته وبعد وفاته، يقيناً وتسليماً لربهم، وتضعيفاً لأنفسهم، أن يكون شيءٌ لم يُحِطْ به علمُه، ولم يحصِه كتابُه، ولم يمْضِ فيه قَدَرُه، وإنَّه لمعَ ذلك في مُحكَم كتابه: لَمِنه اقتبسُوه، ومنه تَعَلَّموه، ولئن قلتم: لِمَ أنزل الله آية كذا؟ ولِمَ قال كذا؟ لقد قرؤوا منه ما قرأتم، وعلموا مِن تأويله ما جهلتم، وقالوا بعد ذلك: كُلُّه بكتابٍ وقَدَرٍ، وكُتبتِ الشقاوةُ، وما يُقدَّرْ يكن، وما شاء الله كان، وما لم يشأ لم يكن، ولا نَملِكُ لأنفسنا ضَرَّاً ولا نَفْعاً، ثم رغبوا بعد ذلك ورَهِبُوا."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-SKjPY2M1jOwMzLuN6kRyB6bDzK7JqDgxWDUfH9PKZm4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٥٨١ — حدَّثنا الحسنُ بنُ علي، حدَّثنا وكيع، عن زكريا بن إسحاق المَكِّي، عن… | سنن أبي داود</title>
 <meta name="description" content="الحديث ١٥٨١ من سنن أبي داود، كتاب الزكاة، باب في زكاة السائمة. حدَّثنا الحسنُ بنُ علي، حدَّثنا وكيع، عن زكريا بن إسحاق المَكِّي، عن عمرو بن أبي سُفيان الجُمَحِيِّ، عن مسلم بن ثَفِنةَ اليَشكُري - قال الحسن: روح يقول: مُسلم بن شُعبة - قال:…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ١٥٨١" data-url="https://sunan.online/abudawud/1581/">انسخ المتن</button>
   <a href="/abudawud/1582/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,35 +85,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٥٨١ — حدَّثنا الحسنُ بنُ علي، حدَّثنا وكيع، عن زكريا بن إسحاق المَكِّي، عن… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":1581,"articleBody":"حدَّثنا الحسنُ بنُ علي، حدَّثنا وكيع، عن زكريا بن إسحاق المَكِّي، عن عمرو بن أبي سُفيان الجُمَحِيِّ، عن مسلم بن ثَفِنةَ اليَشكُري - قال الحسن:\nروح يقول: مُسلم بن شُعبة - قال:\nاستعمل نافعُ بنُ علقمةَ أبي على عِرافَةِ قَومِه، فأمَرَهُ أن يُصدِّقهم، قال: فبعثني أبي في طائفةٍ منهم، فأتيتُ شيخاً كبيراً يقال له: سعر بن دَيسَم فقلت: إن أبي بعثني إليك - يعني لأصدِّقَك - قال: ابنَ أخي، وأيَّ نحو تأخذون؟ قلت: نختار حتَّى إنا نتبين ضُرُوعَ الغَنم، قال: ابن أخي، فإني أحَدِّثُكَ أني كنتُ في شعب من هذه الشعاب على عهدِ رسولِ الله - صلَّى الله عليه وسلم - في غنم لي، فجاءني رجُلان على بعيرٍ، فقالا لي: إنا رسولا رسولِ الله - صلَّى الله عليه وسلم - إليك لتؤدِّي صدقةَ غنمك، فقلت: ما عليَّ فيها، فقالا: شاة، فأعمِد إلى شاةٍ قد عرفتُ مكانَها ممتلئةِ محْضاً وشحْماً، فأخرجتُها إليهما، فقالا: هذه شاةُ الشَافع، وقد نهانا رسولُ الله - صلَّى الله عليه وسلم - أن نأخذ\nشافعاً، قلت: فأي شيء تأخذان؟ قالا: عَنَاقاً: جَذَعةً أو ثنيَّةً، قال: فأعمدُ إلى عَناق مُعْتاطٍ، والمعتاط: التي لم تَلِدْ ولداً، وقد حانَ ولادُها، فأخرجتُها إليهما، فقالا: ناوِلْناها فجعلاها معهما على بعيرهما، ثم انطلقا.\nقال أبو داود: رواه أبو عاصمٍ، عن زكريا، قال أيضاً: مسلم بن شعبة، كما قال روح.\n١٥٨١م - حدَّثنا محمدُ بنُ يونس النسائي، حدَّثنا روحٌ، حدَّثنا زكريا بنُ إسحاق، بإسناده بهذا الحديث، قال: مسلم بن شعبة. قال فيه:\nوالشافع: التي في بطنها الولد."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

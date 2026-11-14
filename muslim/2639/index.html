@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-4RfPiqPToFeGxM1xfkaDJKB0WBt5bC3nRC8GoqucKD4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٦٣٩ — ما أعددت لها؟ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٦٣٩ من صحيح مسلم، كتاب البر والصلة والآداب، باب فضل إزالة الأذى عن الطريق. حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ بْنِ قَعْنَبٍ. حدثنا مَالِكٍ عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ؛…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -82,16 +84,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٦٣٩" data-url="https://sunan.online/muslim/2639/">انسخ المتن</button>
   <a href="/muslim/2640/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -110,35 +103,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٦٣٩ — ما أعددت لها؟ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2639,"articleBody":"حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ بْنِ قَعْنَبٍ. حدثنا مَالِكٍ عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ؛\nأَنَّ أعرابيا قَالَ لِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: متى الساعة؟ قَالَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم \"ما أعددت لها؟ \" قال: حب الله ورسوله. قال \"أنت مع من أحببت\".\n\nحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَعَمْرٌو النَّاقِدُ وَزُهَيْرُ بْنُ حَرْبٍ وَمُحَمَّدُ بْنُ عَبْدِ الله ابن نمير وابن أبي عمر (واللفظ لزهير). قالوا: حدثنا سفيان عن الزهري، عن أنس، قال:\nقال رجل: يا رسول الله! متى الساعة؟ قال \"وما أعددت لها؟ \" فلم يذكر كبيرا. قال: ولكني أحب الله ورسوله. قال \"فأنت مع من أحببت\".\n\nحدثنيه مُحَمَّدُ بْنُ رَافِعٍ وَعَبْدُ بْنُ حميد (قَالَ عبد: أخبرنا. وقال ابن رافع: حدثنا) عبد الرزاق. أخبرنا معمر عن الزهري. حدثني أنس بن مالك؛\nإِنَّ رَجُلًا مِنَ الْأَعْرَابِ أَتَى رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمِثْلِهِ. غَيْرَ أَنَّهُ قال: ما أعددت لها من كثير أحمد عليه نفسي.\n\nحَدَّثَنِي أَبُو الرَّبِيعِ الْعَتَكِيُّ. حَدَّثَنَا حَمَّاد (يَعْنِي ابن زيد). حَدَّثَنَا ثَابِتٌ الْبُنَانِيُّ عَنْ أَنَسِ بْنِ مَالِكٍ. قَالَ:\nجَاءَ رَجُلٌ إِلَى رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالَ: يَا رَسُولَ اللَّهِ! متى الساعة؟ قال \"وما أعددت للساعة؟ \" قال: حب الله ورسوله. قال \"فإنك مع من أحببت\".\nقال أنس: فما فرحنا بعد الإسلام، فرحا أشد مِنْ قَوْلِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"فإنك مع من أحببت\".\nقال أنس: فأنا أحب الله ورسوله. وأبا بكر وعمر. فأرجو أن أكون معهم. وإن لم أعمل بأعمالهم.\n\nحدثناه محمد بن عبيد الغبري. حدثنا جعفر بن سليمان. حَدَّثَنَا ثَابِتٌ الْبُنَانِيُّ عَنْ أَنَسِ بْنِ مَالِكٍ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. وَلَمْ يذكر قول أنس: فأنا أحب. وما بعده.\n\nحدثنا عثمان بن أبي شيبة وإسحاق بن إِبْرَاهِيمَ (قَالَ إِسْحَاقُ: أَخْبَرَنَا. وَقَالَ عُثْمَانُ: حَدَّثَنَا) جَرِيرٌ عَنْ مَنْصُورٍ، عَنْ سَالِمِ بْنِ أَبِي الجعد. حدثنا أنس بن مالك قال:\nبينما أَنَا وَرَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ خارجين من المسجد. فلقينا رجلا عند سدة المسجد. فقال: يا رسول الله! متى الساعة؟ قال رسول الله صلى الله عليه وسلم \"ما أعددت لها؟ \" قال فكأن الرجل استكان. ثم قال: يا رسول الله! ما أعددت لها كبير صلاة ولا صيام ولا صدقة. ولكني أحب الله ورسوله. قال \"فأنت مع من أحببت\".\n\nحدثني محمد بن يحيى بن عبد العزيز اليشكري. حدثنا عبد الله بن عثمان بن جبلة. أخبرني أبي عَنْ شُعْبَةَ، عَنْ عَمْرِو بْنِ مُرَّةَ، عَنْ سَالِمِ بن أبي الجعد، عن أنس، عن النبي صلى الله عليه وسلم. بنحوه.\n\nحدثنا قُتَيْبَةُ. حَدَّثَنَا أَبُو عَوَانَةَ عَنْ قَتَادَةَ، عَنْ أنس. (ح) وحدثنا ابن المثنى وابن بشار. قالا: حدثنا محمد بن جعفر. حدثنا شعبة عن قتادة. سمعت أنسا. (ح) وحَدَّثَنَا أَبُو غَسَّانَ الْمِسْمَعِيُّ وَمُحَمَّدُ بْنُ الْمُثَنَّى. قالا: حَدَّثَنَا مُعَاذٌ (يَعْنِي ابْنَ هِشَامٍ). حَدَّثَنِي أَبِي عَنْ قَتَادَةَ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ صَلَّى الله عليه وسلم، بهذا الحديث."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

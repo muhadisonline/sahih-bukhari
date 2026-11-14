@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب الاستعاذة — سنن النسائي</title>
 <meta name="description" content="كتاب الاستعاذة من سنن النسائي. 112 حديثًا، من 5428 إلى 5539.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب الاستعاذة</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">١١٢ حديثًا</p>
 <h2 class="bab-label">ذكر أفضل ما تعوذ به المتعوذون، وذكر اختلاف الناقلين لإسناد الخبر فيه</h2><a class="entry" href="/nasai/5428/"><span class="n">٥٤٢٨</span><span class="ttl">قل</span></a><a class="entry" href="/nasai/5429/"><span class="n">٥٤٢٩</span><span class="ttl">قُلْ</span></a><a class="entry" href="/nasai/5430/"><span class="n">٥٤٣٠</span><span class="ttl">يا عُقبة، قُلْ</span></a><a class="entry" href="/nasai/5431/"><span class="n">٥٤٣١</span><span class="ttl">قُلْ - قلتُ: وما أقول؟ قال -: ﴿قُلْ هُوَ اللَّهُ…</span></a><a class="entry" href="/nasai/5432/"><span class="n">٥٤٣٢</span><span class="ttl">يا ابنَ عابِسٍ، ألا أدُلُّك - أو قال: ألا أخبِرُكَ…</span></a><a class="entry" href="/nasai/5433/"><span class="n">٥٤٣٣</span><span class="ttl">اقرأ</span></a><a class="entry" href="/nasai/5434/"><span class="n">٥٤٣٤</span><span class="ttl">أخبرنا موسى بنُ حِزام التَّرمذيُّ قال: أخبرنا أبو…</span></a><a class="entry" href="/nasai/5435/"><span class="n">٥٤٣٥</span><span class="ttl">أخبرنا محمد بنُ بشَّار قال: حدَّثنا عبد الرَّحمن…</span></a><a class="entry" href="/nasai/5436/"><span class="n">٥٤٣٦</span><span class="ttl">يا عُقبة، ألا أُعلِّمُكَ خيرَ سُورَتَين قُرِئتا؟</span></a><a class="entry" href="/nasai/5437/"><span class="n">٥٤٣٧</span><span class="ttl">ألا تركَبُ يا عُقبة؟</span></a><a class="entry" href="/nasai/5438/"><span class="n">٥٤٣٨</span><span class="ttl">يا عُقبة، قُلْ</span></a><a class="entry" href="/nasai/5439/"><span class="n">٥٤٣٩</span><span class="ttl">لَنْ تقرأ شيئًا أبْلَغَ عندَ الله من: ﴿قُلْ…</span></a><a class="entry" href="/nasai/5440/"><span class="n">٥٤٤٠</span><span class="ttl">أُنزِلَ عليَّ آيَاتٌ لم يُرَ مِثْلُهنَّ: ﴿قُلْ…</span></a><a class="entry" href="/nasai/5441/"><span class="n">٥٤٤١</span><span class="ttl">اقرَأْ يا جابر</span></a>
@@ -134,35 +136,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

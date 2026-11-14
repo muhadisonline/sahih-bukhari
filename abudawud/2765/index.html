@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-yrmQu9JssKtWqzppLRplGKY9OiFECfjBE4eKO/LlFn0='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٧٦٥ — ما خَلأتْ وما ذلكَ لها بخُلُقٍ، ولكن حَبَسها حابِسُ الفِيل | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢٧٦٥ من سنن أبي داود، كتاب الجهاد، باب في صلح العدو. حدَّثنا محمدُ بن عُبيدِ، أن محمدَ بن ثور حدَّثهم، عن مَعمرٍ، عن الزُّهريِّ، عن عُروةَ بن الزبير عن المِسوَر بن مَخْرَمةَ، قال: خرجَ النبيُّ -صلَّى الله عليه وسلم- زمنَ الحديبيةِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -60,16 +62,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢٧٦٥" data-url="https://sunan.online/abudawud/2765/">انسخ المتن</button>
   <a href="/abudawud/2766/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -88,35 +81,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٧٦٥ — ما خَلأتْ وما ذلكَ لها بخُلُقٍ، ولكن حَبَسها حابِسُ الفِيل | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2765,"articleBody":"حدَّثنا محمدُ بن عُبيدِ، أن محمدَ بن ثور حدَّثهم، عن مَعمرٍ، عن الزُّهريِّ، عن عُروةَ بن الزبير\nعن المِسوَر بن مَخْرَمةَ، قال: خرجَ النبيُّ -صلَّى الله عليه وسلم- زمنَ الحديبيةِ في بِضْعَ عَشرةَ مئةٍ من أصحابِه، حتى إذا كانوا بذِي الحُلَيفةِ قَلَّدَ الهديَ وأشعَرَهُ وأحرمَ بالعمرةِ، وساقَ الحديثَ، قال: وسارَ النبيُّ -صلَّى الله عليه وسلم- حتى إذا كان بالثَّنِيّة التي يُهبَطُ عليهم منها بَرَكَتْ به راحلتُه، فقال الناسُ: حَلْ حَلْ خَلأتِ القَصْواءُ, مرتين، فقال النبي -صلَّى الله عليه وسلم-: \"ما خَلأتْ وما ذلكَ لها بخُلُقٍ، ولكن حَبَسها حابِسُ الفِيل\" ثم قال: \"والذي نفسي بيدِه لا يَسألوني اليومَ خُطَّةً يُعظِّمون بها حُرُماتِ اللهِ إلا أعطيتُهم إياها\" ثم زَجَرها فوثَبتْ، فعَدلَ عنهم حتى نَزل بأقصى الحديبيةِ على ثَمَدٍ قليلِ الماء فجاءَه بُديلُ بن وَرقاءَ الخُزاعيُّ، ثم أتاه -يعني عروةُ بن مَسعودٍ- فجعل يكلم النبي -صلَّى الله عليه وسلم- فكلما كلَّمه أخذ بلحيتِه، والمغيرةُ بن شُعبةَ قائمٌ على النبي -صلَّى الله عليه وسلم- ومعه السيفُ وعليه المِغفَرُ، فضربَ يدَه بنعلِ السيف، وقال أخِّر يدَك عن لحيتِه، فرفَع عروةُ رأسَه، فقال: مَن هذا؟ قالوا: المُغيرة بن شعبةَ، فقال: أي غُدَرُ، أوَلستُ أسعى في غَدرتك؟ -وكان المغيرةُ صحبَ قوماً في الجاهلية فقتلهم وأخذ أموالَهم، ثم جاءَ فأسلمَ، فقال النبي -صلَّى الله عليه وسلم-: \" أما الإسلامُ فقد قبِلْنا، وأما المالُ فإنه مالُ غَدْرٍ لا حاجةَ لنا فيه\"- فذكر الحديثَ، فقالَ النبي -صلَّى الله عليه وسلم-: \"اكتُبْ: هذا ما قاضَى عليه محمدٌ رسولُ الله\" وقصَّ الخبَر، فقال سهيلٌ: وعلى أنه لا يأتيكَ منا رجلٌ وإن كان على دينك إلا رَدَدتَهُ إلينا، فلمّا فرَغَ من قضيةِ الكتابِ، قال النبي -صلَّى الله عليه وسلم- لأصحابِه: \"قومُوا فانْحَروا، ثم احلِقُوا\" ثم جاء نِسوةٌ مؤمناتٌ مهاجراتٌ، الآية، فنهاهُم اللهُ أن\nيَردُّوهُنَّ، وأمرهم أن يردُّوا الصَّدَاق، ثم رجع إلى المدينةِ، فجاءه أبو بَصيرٍ رجلٌ من قريشٍ -يعني فأرسلوا في طلبه- فدفَعه إلى الرجلين، فخَرجا به حتى إذا بلغَا ذا الحليفةِ نزَلُوا يأكلون من تمرٍ لهم، فقال أبو بَصيرٍ لأحدِ الرجلين: واللهِ إني لأرى سيفَكَ هذا يا فلانُ جيداً، فاستلَّه الآخَر، فقال: أجل قد جرَّبْتُ به، فقال أبو بَصيرٍ: أرِني أنظرْ إليه، فأمكَنَه منه، فضربه به حتى بَرَدَ، وفَرَّ الآخَرُ حتى أتى المدينةَ، فدخل المسجدَ يعْدُو، فقالَ النبيُّ -صلَّى الله عليه وسلم- \"لقد رأى هذا ذُعْراً\" فقال: قُتِلَ واللهِ صاحبي وإني لَمَقتُولٌ، فجاء أبو بَصيرٍ فقال: قد أوفى اللهُ ذِمَتَك، فقد رددتَني إليهم ثم نَجَّاني اللهُ منهم، فقال النبي -صلَّى الله عليه وسلم-: \"وَيْلُ أمِّهِ مِسْعَرُ حَرْبٍ لو كان له أحدٌ\" فلما سمع ذلك عرف أنه سيردُّه إليهم، فخرج حتىً أتى سِيفَ البحرِ، ويَنفَلِتُ أبو جَنْدَلٍ، فلحق بأبي بَصيرٍ حتى اجتمعتْ منهم عِصابة.\n........................."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

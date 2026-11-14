@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-xBTadFKXiBIjY8z0KvDUfB2PK98chtzo/iWfpAaeuHc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٩٣٧ — ما شأنكم؟ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٩٣٧ من صحيح مسلم، كتاب الفتن وأشراط الساعة، . حدثنا أبو خيثمة، زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ. حدثني عَبْدُ الرَّحْمَنِ بْنُ يَزِيدَ بْنِ جَابِرٍ. حَدَّثَنِي يحيى بن جابر الطائي، قاضي حمص. حدثني عبد…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -73,16 +75,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٩٣٧" data-url="https://sunan.online/muslim/2937/">انسخ المتن</button>
   <a href="/muslim/2938/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -101,35 +94,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٩٣٧ — ما شأنكم؟ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2937,"articleBody":"حدثنا أبو خيثمة، زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ. حدثني عَبْدُ الرَّحْمَنِ بْنُ يَزِيدَ بْنِ جَابِرٍ. حَدَّثَنِي يحيى بن جابر الطائي، قاضي حمص. حدثني عبد الرحمن بن جبير عن أبيه، جبير بن نفير الحضرمي؛ أنه سمع النواس بن سمعان الكلابي. (ح) وحدثني محمد بن مهران الرازي (واللفظ له). حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ. حَدَّثَنَا عَبْدُ الرَّحْمَنِ بن يزيد بن جابر عن يحيى بن جابر الطائي، عَنْ عَبْدِ الرَّحْمَنِ بْنِ جُبَيْرِ بْنِ نُفَيْرٍ، عن أبيه، جبير بن نفير، عن النواس بن سمعان، قَالَ:\nذَكَرَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم الدجال ذات غداة. فخفض فيه ورفع. حتى ظنناه في طائفة النخل. فلما رحنا إليه عرف ذلك فينا. فقال \"ما شأنكم؟ \" قلنا: يا رسول الله! ذكرت الدجال غداة. فخفضت فيه ورفعت. حتى ظنناه في طائفة النخل. فقال \"غير الدجال أخوفني عليكم. إن يخرج، وأنا فيكم، فأنا حجيجه دونكم. وإن يخرج، ولست فيكم، فامرؤ حجيج نفسه. والله خليفتي على كل مسلم.\nإنه شاب قطط. عينه طافئة. كأني أشبهه بعبد العُزَّى بن قطن. فمن أدركه منكم فليقرأ عليه فواتح سورة الكهف. إنه خارج خلة بين الشام والعراق. فعاث يمينا وعاث شمالا. يا عباد الله! فاثبتوا\" قلنا: يا رسول الله! وما لبثه في الأرض؟ قال \"أربعون يوما. يوم كسنة. ويوم كشهر. ويوم كجمعة. وسائر أيامه كأيامكم\" قلنا: يا رسول الله! فذلك اليوم الذي كسنة، أتكفينا فيه صلاة يوم؟ قال \"لا. اقدروا له قدره\" قلنا: يا رسول الله! وما إسراعه في الأرض؟ قال \"كالغيث استدبرته الريح. فيأتي على القوم فيدعوهم، فيؤمنون به ويستجيبون له. فيأمر السماء فتمطر. والأرض فتنبت. فتروح عليهم سارحتهم، أطول ما كانت ذرا، وأسبغه ضروعا، وأمده خواصر. ثم يأتي القوم. فيدعوهم فيردون عليه قوله. فينصرف عنهم. فيصبحون ممحلين\nليس بأيديهم شيء من أموالهم. ويمر بالخربة فيقول لها: أخرجي كنوزك. فتتبعه كنوزها كيعاسيب النحل. ثم يدعو رجلا ممتلئا شبابا. فيضربه بالسيف فيقطعه جزلتين رمية الغرض ثم يدعوه فيقبل ويتهلل وجهه. يضحك. فبينما هو كذلك إذ بعث الله المسيح ابن مريم. فينزل عند المنارة البيضاء شرقي دمشق. بين مهرودتين. واضعا كفيه على أجنحة ملكين. إذا طأطأ رأسه قطر. وإذا رفعه تحدر منه جمان كاللؤلؤ. فلا يحل لكافر يجد ريح نفسه إلا مات. ونفسه ينتهي حيث ينتهي طرفه. فيطلبه حتى يدركه بباب لد. فيقتله. ثم يأتي عيسى ابن مريم قوم قد عصمهم الله منه. فيمسح عن وجوههم ويحدثهم بدرجاتهم في الجنة. فبينما هو كذلك إذ أوحى الله إلى عيسى: إني قد أخرجت عبادا لي، لا يدان لأحد بقتالهم. فحرز عبادي إلى الطور.\nويبعث الله يأجوج ومأجوج. وهم من كل حدب ينسلون. فيمر أوائلهم على بحيرة طبرية. فيشربون ما فيها. ويمر آخرهم فيقولون: لقد كان بهذه، مرة، ماء. ويحصر نبي الله عيسى وأصحابه. حتى يكون رأس الثور لأحدهم خيرا من مائة دينار لأحدكم اليوم. فيرغب نبي الله عيسى وأصحابه. فيرسل الله عليهم النغف في رقابهم. فيصبحون فرسى كموت نفس واحدة. ثم يهبط نبي الله عيسى وأصحابه إلى الأرض. فلا يجدون في الأرض موضع شبر إلا ملأه زهمهم ونتنهم. فيرغب نبي الله عيسى وأصحابه إلى الله. فيرسل الله طيرا كأعناق البخت. فتحملهم فتطرحهم حيث شاء الله. ثم يرسل الله مطرا لا يكن منه بيت مدر ولا وبر. فيغسل الأرض حتى يتركها كالزلفة. ثم يقال للأرض: أنبتي ثمرك، وردي بركتك. فيومئذ تأكل العصابة من الرمانة.\nويستظلون بقحفها. ويبارك في الرسل. حتى أن اللقحة من الإبل لتكفي الفئام من الناس. واللقحة من البقر لتكفي القبيلة من الناس. واللقحة من الغنم لتكفي الفخذ من الناس. فبينما هم كذلك إذ بعث الله ريحا طيبة. فتأخذهم تحت آباطهم. فتقبض روح كل مؤمن وكل مسلم. ويبقى شرار الناس، يتهارجون فيها تهارج الحمر، فعليهم تقوم الساعة\".\n\nحدثنا علي بن حجر السعدي. حَدَّثَنَا عَبْدُ اللَّهِ بْنُ عَبْدِ الرَّحْمَنِ بْنِ يزيد بن جابر والوليد بن مسلم. قال ابن حجر: دخل حديث أحدهما في حديث الآخر عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ بْنِ جَابِرٍ، بهذا الإسناد. نحو ما ذكرنا. وزاد بعد قوله \" - لقد كان بهذه، مرة، ماء - ثم يسيرون حتى ينتهوا إلى جبل الخمر. وهو جبل بيت المقدس. فيقولون: لقد قتلنا من في الأرض. هلم فلنقتل من في السماء. فيرمون بنشابهم إلى السماء. فيرد الله عليهم نشابهم مخضوبة دما\". وفي رواية ابن حجر \"فإني قد أنزلت عبادا لي، لا يدي لأحد بقتالهم\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

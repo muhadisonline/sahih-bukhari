@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-QudN0Rb+RCvjrnTxXZJxKZgA+b3j3i76s1EPKVyyZwQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٤٠٤ — أَنْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى. إِلَّا أَنَّهُ لَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٤٠٤ من صحيح مسلم، كتاب فضائل الصحابة رضي الله تعالى عنهم، باب من فضائل علي بن أبي طالب، رضي الله عنه. حَدَّثَنَا يَحْيَي بْنُ يَحْيَي التَّمِيمِيُّ وَأَبُو جَعْفَرٍ، مُحَمَّدُ بْنُ الصَّبَّاحِ وَعُبَيْدُ اللَّهِ الْقَوَارِيرِيُّ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -76,16 +78,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٤٠٤" data-url="https://sunan.online/muslim/2404/">انسخ المتن</button>
   <a href="/muslim/2405/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -104,35 +97,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٤٠٤ — أَنْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى. إِلَّا أَنَّهُ لَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2404,"articleBody":"حَدَّثَنَا يَحْيَي بْنُ يَحْيَي التَّمِيمِيُّ وَأَبُو جَعْفَرٍ، مُحَمَّدُ بْنُ الصَّبَّاحِ وَعُبَيْدُ اللَّهِ الْقَوَارِيرِيُّ وَسُرَيْجُ بْنُ يُونُسَ. كُلُّهُمْ عَنْ يُوسُفَ بْنِ الْمَاجِشُونِ (وَاللَّفْظُ لِابْنِ الصَّبَّاحِ). حَدَّثَنَا يُوسُفُ، أَبُو سَلَمَةَ الْمَاجِشُونُ. حَدَّثَنَا مُحَمَّدُ بْنُ الْمُنْكَدِرِ عَنْ سَعِيدِ بْنِ الْمُسَيِّبِ، عَنْ عَامِرِ بن سعد ابن أَبِي وَقَّاصٍ، عَنْ أَبِيهِ، قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِعَلِيٍّ \"أَنْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى. إِلَّا أَنَّهُ لَا نَبِيَّ بَعْدِي\".\nقَالَ سَعِيدٌ: فَأَحْبَبْتُ أَنْ أُشَافِهَ بِهَا سَعْدًا. فَلَقِيتُ سَعْدًا. فَحَدَّثْتُهُ بِمَا حَدَّثَنِي عَامِرٌ. فَقَالَ: أَنَا سَمِعْتُهُ. فَقُلْتُ: آنْتَ سَمِعْتَهُ؟ فَوَضَعَ إِصْبَعَيْهِ عَلَى أُذُنَيْهِ فَقَالَ: نَعَمْ. وإلا فاستكتا.\n\nوحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ. حَدَّثَنَا غُنْدَرٌ عَنْ شُعْبَةَ. (ح) وحَدَّثَنَا مُحَمَّدُ بن المثنى وابن بشار. قالا: حدثنا محمد بْنُ جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ الْحَكَمِ، عَنْ مُصْعَبِ بْنِ سَعْدِ بْنِ أَبِي وَقَّاصٍ، عَنْ سَعْدِ بْنِ أَبِي وَقَّاصٍ. قَالَ:\nخَلْفَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلِيَّ بْنَ أَبِي طَالِبٍ، فِي غَزْوَةِ تَبُوكَ. فَقَالَ: يَا رَسُولَ اللَّهِ! تُخَلِّفُنِي فِي النِّسَاءِ وَالصِّبْيَانِ؟ فَقَالَ \"أَمَا تَرْضَى أَنْ تَكُونَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى؟ غَيْرَ أَنَّهُ لَا نَبِيَّ بَعْدِي\".\n\nحَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ. حَدَّثَنَا أَبِي. وحدثنا شُعْبَةُ، فِي هَذَا الْإِسْنَادِ.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ وَمُحَمَّدُ بْنُ عَبَّادٍ (وَتَقَارَبَا فِي اللَّفْظِ) قَالَا: حَدَّثَنَا حَاتِمٌ (وَهُوَ ابن إسماعيل) عن بكير بن مسمار، عَنْ عَامِرِ بْنِ سَعْدِ بْنِ أَبِي وَقَّاصٍ، عن أَبِيهِ، قَالَ:\nأَمَرَ مُعَاوِيَةُ بْنُ أَبِي سُفْيَانَ سَعْدًا فَقَالَ: مَا مَنَعَكَ أَنْ تَسُبَّ أَبَا التراب؟ فقال: أما ذَكَرْتُ ثَلَاثًا قَالَهُنَّ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فَلَنْ أَسُبَّهُ. لَأَنْ تَكُونَ لِي وَاحِدَةٌ مِنْهُنَّ أَحَبُّ إِلَيَّ مِنْ حُمْرِ النَّعَمِ. سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ لَهُ، خَلَّفَهُ فِي بَعْضِ مَغَازِيهِ، فَقَالَ لَهُ عَلِيٌّ: يَا رَسُولَ اللَّهِ! خَلَّفْتَنِي مَعَ النِّسَاءِ وَالصِّبْيَانِ؟ فَقَالَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"أَمَا تَرْضَى أَنْ تَكُونَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى. إِلَّا أَنَّهُ لَا نُبُوَّةَ بَعْدِي\". وَسَمِعْتُهُ يَقُولُ يَوْمَ خَيْبَرَ \"لَأُعْطِيَنَّ الرَّايَةَ رَجُلًا يُحِبُّ اللَّهَ وَرَسُولَهُ، وَيُحِبُّهُ اللَّهُ وَرَسُولُهُ\" قَالَ فَتَطَاوَلْنَا لَهَا فَقَالَ \"ادْعُوا لِي عَلِيًّا\" فَأُتِيَ بِهِ أَرْمَدَ. فَبَصَقَ فِي عَيْنِهِ وَدَفَعَ الرَّايَةَ إِلَيْهِ. فَفَتَحَ اللَّهُ عَلَيْهِ. وَلَمَّا نَزَلَتْ هَذِهِ الْآيَةُ: فَقُلْ تَعَالَوْا ندع أبناءنا وأبنائكم [٣/ آل عمران/٦١] دَعَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلِيًّا وَفَاطِمَةَ وَحَسَنًا وَحُسَيْنًا فَقَالَ \"اللهم! هؤلاء أهلي\".\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا غُنْدَرٌ عَنْ شُعْبَةَ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ المثنى وابن بشار. قالا: حدثنا محمد بن جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ. سَمِعْتُ إِبْرَاهِيمَ بْنَ سَعْدٍ عَنْ سَعْدٍ،\nعَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ؛ أَنَّهُ قال لِعَلِيٍّ \"أَمَا تَرْضَى أَنْ تَكُونَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-VcEUTcrNI7eHUpCX1RwCg7iId3FZXv6NGoZNuF0CzXs='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٢٩٦ — حدثنا أبو بكر بن أبي شيبة وأبو كريب. قالا: حدثنا أبو معاوية عن الأعمش،… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٢٩٦ من صحيح مسلم، كتاب الحج، باب رمي جمرة العقبة من بطن الوادي، تكون مكة عن يساره، ويكبر مع كل حصاة. حدثنا أبو بكر بن أبي شيبة وأبو كريب. قالا: حدثنا أبو معاوية عن الأعمش، عَنْ إِبْرَاهِيمَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ.…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -75,16 +77,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٢٩٦" data-url="https://sunan.online/muslim/1296/">انسخ المتن</button>
   <a href="/muslim/1297/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -103,35 +96,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٢٩٦ — حدثنا أبو بكر بن أبي شيبة وأبو كريب. قالا: حدثنا أبو معاوية عن الأعمش،… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1296,"articleBody":"حدثنا أبو بكر بن أبي شيبة وأبو كريب. قالا: حدثنا أبو معاوية عن الأعمش، عَنْ إِبْرَاهِيمَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ. قَالَ:\nرَمَى عَبْدُ اللَّهِ بْنُ مَسْعُودٍ جَمْرَةَ الْعَقَبَةِ، مِنْ بَطْنِ الْوَادِي، بِسَبْعِ حَصَيَاتٍ. يُكَبِّرُ مَعَ كُلِّ حَصَاةٍ. قَالَ فَقِيلَ لَهُ: إِنَّ أُنَاسًا يَرْمُونَهَا مِنْ فَوْقِهَا. فَقَالَ عَبْدُ اللَّهِ بْنُ مَسْعُودٍ: هَذَا، وَالَّذِي لَا إِلَهَ غَيْرُهُ! مَقَامُ الَّذِي أُنْزِلَتْ عَلَيْهِ سُورَةُ الْبَقَرَةِ.\n\nوحدثنا منجاب بن الحارث التيمي. أَخْبَرَنَا ابْنُ مُسْهِرٍ عَنِ الْأَعْمَشِ. قَالَ: سَمِعْتُ الْحَجَّاجَ بْنَ يُوسُفَ يَقُولُ، وَهُوَ يَخْطُبُ عَلَى الْمِنْبَرِ: أَلِّفُوا الْقُرْآنَ كَمَا أَلَّفَهُ جِبْرِيلُ. السُّورَةُ الَّتِي يُذْكَرُ فِيهَا الْبَقَرَةُ. وَالسُّورَةُ الَّتِي يُذْكَرُ فِيهَا النِّسَاءُ. وَالسُّورَةُ الَّتِي يُذْكَرُ فِيهَا آلُ عِمْرَانَ.\nقَالَ: فَلَقِيتُ إِبْرَاهِيمَ فَأَخْبَرْتُهُ بِقَوْلِهِ. فَسَبَّهُ وَقَالَ: حَدَّثَنِي عَبْدُ الرَّحْمَنِ بْنُ يَزِيدَ؛ أَنَّهُ كَانَ مَعَ عَبْدِ اللَّهِ بْنِ مَسْعُودٍ. فَأَتَى جَمْرَةَ الْعَقَبَةِ. فَاسْتَبْطَنَ الْوَادِي. فَاسْتَعْرَضَهَا. فَرَمَاهَا مِنْ بَطْنِ الْوَادِي بِسَبْعِ حَصَيَاتٍ. يُكَبِّرُ مَعَ كُلِّ حَصَاةٍ. قَالَ فَقُلْتُ: يَا أَبَا عَبْدِ الرَّحْمَنِ! إِنَّ النَّاسَ يَرْمُونَهَا مِنْ فَوْقِهَا. فَقَالَ: هَذَا، وَالَّذِي لَا إِلَهَ غَيْرُهُ! مَقَامُ الَّذِي أُنْزِلَتْ عليه سورة البقرة.\n\nوَحَدَّثَنِي يَعْقُوبُ الدَّوْرَقِيُّ. حَدَّثَنَا ابْنُ أَبِي زَائِدَةَ. (ح) وحَدَّثَنَا ابْنُ أَبِي عُمَرَ. حَدَّثَنَا سُفْيَانُ.\nكِلَاهُمَا عَنِ الْأَعْمَشِ. قَالَ: سَمِعْتُ الْحَجَّاجَ يَقُولُ: لَا تَقُولُوا سُورَةُ الْبَقَرَةِ. وَاقْتَصَّا الْحَدِيثَ بِمِثْلِ حَدِيثِ ابْنِ مُسْهِرٍ.\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا غُنْدَرٌ عَنْ شُعْبَةَ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ المثنى وابن بشار. قالا: حدثنا محمد بن جعفر. حدثنا شُعْبَةُ عَنِ الْحَكَمِ، عَنْ إِبْرَاهِيمَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ؛ أَنَّهُ حَجَّ مَعَ عَبْدِ اللَّهِ. قَالَ:\nفَرَمَى الْجَمْرَةَ بِسَبْعِ حَصَيَاتٍ. وَجَعَلَ الْبَيْتَ عَنْ يَسَارِهِ. وَمِنًى عَنْ يمبينه. وَقَالَ: هَذَا مَقَامُ الَّذِي أُنْزِلَتْ عَلَيْهِ سُورَةُ البقرة.\n\nوحدثنا عبيد بْنُ مُعَاذٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا شُعْبَةُ، بِهَذَا الْإِسْنَادِ. غَيْرَ أَنَّهُ قَالَ: فَلَمَّا أَتَى جَمْرَةَ العقبة.\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا أَبُو الْمُحَيَّاةِ. (ح) وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى (وَاللَّفْظُ لَهُ) أَخْبَرَنَا يَحْيَى بْنُ يَعْلَى أَبُو الْمُحَيَّاةِ عَنْ سَلَمَةَ بْنِ كُهَيْلٍ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ. قَالَ:\nقِيلَ لِعَبْدِ اللَّهِ: إن أناسا يَرْمُونَ الْجَمْرَةَ مِنْ فَوْقِ الْعَقَبَةِ. قَالَ: فَرَمَاهَا عَبْدُ اللَّهِ مِنْ بَطْنِ الْوَادِي. ثُمَّ قَالَ: من ههنا، وَالَّذِي لَا إِلَهَ غَيْرُهُ! رَمَاهَا الَّذِي أُنْزِلَتْ عَلَيْهِ سُورَةُ الْبَقَرَةِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

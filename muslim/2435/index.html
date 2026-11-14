@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-utH9ZPDzhLg8/xF+6FsXAW8/QKJLnqDz1Br1dRf7i4c='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٤٣٥ — أَرْسِلُوا بِهَا إِلَى أَصْدِقَاءِ خَدِيجَةَ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٤٣٥ من صحيح مسلم، كتاب فضائل الصحابة رضي الله تعالى عنهم، باب فضائل خديجة أم المؤمنين، رضي الله تعالى عنها. حَدَّثَنَا أَبُو كُرَيْبٍ، مُحَمَّدُ بْنُ الْعَلَاءِ. حَدَّثَنَا أَبُو أُسَامَةَ. حَدَّثَنَا هِشَامٌ، عَنْ أَبِيهِ، عَنْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -69,16 +71,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٤٣٥" data-url="https://sunan.online/muslim/2435/">انسخ المتن</button>
   <a href="/muslim/2436/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -97,35 +90,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٤٣٥ — أَرْسِلُوا بِهَا إِلَى أَصْدِقَاءِ خَدِيجَةَ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2435,"articleBody":"حَدَّثَنَا أَبُو كُرَيْبٍ، مُحَمَّدُ بْنُ الْعَلَاءِ. حَدَّثَنَا أَبُو أُسَامَةَ. حَدَّثَنَا هِشَامٌ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ قَالَتْ:\nمَا غِرْتُ عَلَى امْرَأَةٍ مَا غِرْتُ عَلَى خَدِيجَةَ. وَلَقَدْ هَلَكَتْ قَبْلَ أَنْ يَتَزَوَّجَنِي بِثَلَاثِ سِنِينَ. لِمَا كُنْتُ أَسْمَعُهُ يَذْكُرُهَا. وَلَقَدْ أَمَرَهُ رَبُّهُ عَزَّ وَجَلَّ أَنْ يُبَشِّرَهَا بِبَيْتٍ مِنْ قَصَبٍ فِي الْجَنَّةِ. وَإِنْ كَانَ ليذبح الشاة ثم يهديها إلى خلائلها.\n\nحَدَّثَنَا سَهْلُ بْنُ عُثْمَانَ. حَدَّثَنَا حَفْصُ بْنُ غِيَاثٍ عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ. قَالَتْ:\nمَا غِرْتُ عَلَى نِسَاءِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِلَّا عَلَى خَدِيجَةَ. وَإِنِّي لَمْ أُدْرِكْهَا.\nقَالَتْ: وَكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا ذَبَحَ الشَّاةَ فَيَقُولُ \"أَرْسِلُوا بِهَا إِلَى أَصْدِقَاءِ خَدِيجَةَ\" قَالَتْ، فَأَغْضَبْتُهُ يَوْمًا فَقُلْتُ: خَدِيجَةَ؟ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"إِنِّي قَدْ رزقت حبها\".\n\nحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ وَأَبُو كُرَيْبٍ. جَمِيعًا عَنْ أَبِي مُعَاوِيَةَ. حَدَّثَنَا هِشَامٌ، بِهَذَا الْإِسْنَادِ، نَحْوَ حَدِيثِ أَبِي أُسَامَةَ. إِلَى قِصَّةِ الشَّاةِ. وَلَمْ يَذْكُرِ الزِّيَادَةَ بَعْدَهَا.\n\nحَدَّثَنَا عَبْدُ بْنُ حُمَيْدٍ. أَخْبَرَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ. قَالَتْ:\nمَا غِرْتُ لِلنَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى امْرَأَةٍ مِنْ نِسَائِهِ، مَا غِرْتُ عَلَى خَدِيجَةَ. لِكَثْرَةِ ذِكْرِهِ إِيَّاهَا. وَمَا رأيتها قط."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-54eYxTW8aELg3dYQ6nKbrZt4JbSmIQk2DzHWaxJYf+Q='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٢ — انطلق ثلاثة نفر ممن كان قبلكم حتى آواهم المبيت إلى غار فدخلوه، فانحدرت… | رياض الصالحين</title>
 <meta name="description" content="الحديث ١٢ من رياض الصالحين، كتاب المقدمات، . وعن أبي عبد الرحمن عبد الله بن عمر بن الخطاب، رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقول: &quot; انطلق ثلاثة نفر ممن كان قبلكم حتى آواهم المبيت إلى غار فدخلوه، فانحدرت صخرة من الجبل…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -57,16 +59,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ١٢" data-url="https://sunan.online/riyad/12/">انسخ المتن</button>
   <a href="/riyad/13/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -85,35 +78,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٢ — انطلق ثلاثة نفر ممن كان قبلكم حتى آواهم المبيت إلى غار فدخلوه، فانحدرت… | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":12,"articleBody":"وعن أبي عبد الرحمن عبد الله بن عمر بن الخطاب، رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقول: \" انطلق ثلاثة نفر ممن كان قبلكم حتى آواهم المبيت إلى غار فدخلوه، فانحدرت صخرة من الجبل فسدت عليهم الغار، فقالوا: إنه لا ينجيكم من هذه الصخرة إلا أن تدعوا الله بصالح أعمالكم. قال رجل منهم: اللهم كان لي أبوان شيخان كبيران، وكنت لا أغبق قبلهما أهلاً ولا مالاً. فنأى بى طلب الشجر يوماً فلم أرح عليهما حتى ناما فحلبت لهما غبوقهما فوجدتهما نائمين فكرهت أن أوقظهما وأن أغبق قبلهما أهلاً أو مالاً، فلبثت- والقدح على يدى- أنتظر استيقاظهما حتى برق الفجر والصبية يتضاغون عند قدمى- فاستيقظا فشربا غبوقهما. اللهم إن كنت فعلت ذلك ابتغاء وجهك ففرج عنا ما نحن فيه من هذه الصخرة، فانفرجت شيئاً لا يستطيعون الخروج منه. قال الآخر: اللهم إنه كانت لي ابنة عم كانت أحب الناس إلىّ \" وفى رواية: \"كنت أحبها كأشد ما يحب الرجال النساء، فأردتها على نفسها فامتنعت منى حتى ألمّت بها سنة من السنين فجاءتنى فأعطيتها عشرين ومائة دينار على أن تخلى بينى وبين نفسها ففعلت، حتى إذا قدرت عليها\" وفى رواية: \"فلما قعدت بين رجليها، قالت: اتق الله ولا تفض الخاتم إلا بحقه، فانصرفت عنها وهى أحب الناس إلى وتركت الذهب الذى أعطيتها، اللهم إن كنت فعلت ذلك ابتغاء وجهك فافرج عنا ما نحن فيه، فانفرجت الصخرة غير أنهم لا يستطيعون الخروج منها. وقال الثالث: اللهم استأجرت أجراء وأعطيتهم أجرهم غير رجل واحد ترك الذى له وذهب، فثمرت أجره حتى كثرت منه الأموال، فجاءنى بعد حين فقال: يا عبد الله أدّ إلى أجرى، فقلت: كل ما ترى من أجرك: من الإبل والبقر والغنم والرقيق. فقال: يا عبد الله لا تستهزئ بى! فقلت: لا أستهزئ بك، فأخذه كله فاستاقه فلم يترك منه شيئاً، اللهم إن كنتُ فعلت ذلك ابتغاء وجهك فافرج عنا ما نحن فيه، فانفرجت الصخرة فخرجوا يمشون\" ((متفق عليه))."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

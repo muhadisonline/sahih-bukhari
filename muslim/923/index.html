@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Qt6plq9Ojbf0H5LBNAoarL3iEjYzp5sycSphJ8xpSsg='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٢٣ — ارْجِعْ إِلَيْهَا. فَأَخْبِرْهَا: أَنَّ لِلَّهِ مَا أَخَذَ وَلَهُ مَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٩٢٣ من صحيح مسلم، كتاب الجنائز، باب البكاء على الميت. حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا حَمَّادٌ (يَعْنِي ابْنَ زَيْدٍ) عَنْ عَاصِمٍ الْأَحْوَلِ، عَنْ أَبِي عُثْمَانَ النَّهْدِيِّ، عَنْ أُسَامَةَ بْنِ زَيْدٍ.…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -65,16 +67,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٩٢٣" data-url="https://sunan.online/muslim/923/">انسخ المتن</button>
   <a href="/muslim/924/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -93,35 +86,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٢٣ — ارْجِعْ إِلَيْهَا. فَأَخْبِرْهَا: أَنَّ لِلَّهِ مَا أَخَذَ وَلَهُ مَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":923,"articleBody":"حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا حَمَّادٌ (يَعْنِي ابْنَ زَيْدٍ) عَنْ عَاصِمٍ الْأَحْوَلِ، عَنْ أَبِي عُثْمَانَ النَّهْدِيِّ، عَنْ أُسَامَةَ بْنِ زَيْدٍ. قَالَ:\nكنا عند النبي صلى الله عله وَسَلَّمَ. فَأَرْسَلَتْ إِلَيْهِ إِحْدَى بَنَاتِهِ تَدْعُوهُ. وَتُخْبِرُهُ أَنَّ صَبِيًّا لَهَا، أَوِ ابْنًا لَهَا، فِي الْمَوْتِ. فَقَالَ لِلرَّسُولِ: \"ارْجِعْ إِلَيْهَا. فَأَخْبِرْهَا:\nأَنَّ لِلَّهِ مَا أَخَذَ وَلَهُ مَا أَعْطَى. وَكُلُّ شَيْءٍ عِنْدَهُ بِأَجَلٍ مُسَمًّى. فَمُرْهَا فَلْتَصْبِرْ وَلْتَحْتَسِبْ\" فَعَادَ الرَّسُولُ فَقَالَ \"إِنَّهَا قَدْ أَقْسَمَتْ لَتَأْتِيَنَّهَا\".\nقَالَ فَقَامَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. وَقَامَ مَعَهُ سَعْدُ بْنُ عُبَادَةَ وَمُعَاذُ بْنُ جَبَلٍ. وَانْطَلَقْتُ مَعَهُمْ. فَرُفِعَ إِلَيْهِ الصَّبِيُّ وَنَفْسُهُ تَقَعْقَعُ كَأَنَّهَا فِي شَنَّةٍ. فَفَاضَتْ عَيْنَاهُ. فَقَالَ لَهُ سَعْدٌ: مَا هَذَا؟ يَا رَسُولَ اللَّهِ! قَالَ \"هَذِهِ رَحْمَةٌ. جَعَلَهَا اللَّهُ فِي قُلُوبِ عِبَادِهِ. وَإِنَّمَا يَرْحَمُ اللَّهُ مِنْ عِبَادِهِ الرُّحَمَاءَ\".\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ، حَدَّثَنَا ابْنُ فُضَيْلٍ. (ح) وحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ. حَدَّثَنَا أَبُو مُعَاوِيَةَ. جَمِيعًا عَنْ عَاصِمٍ الْأَحْوَلِ، بِهَذَا الْإِسْنَادِ. غَيْرَ أَنَّ حَدِيثَ حَمَّادٍ أَتَمُّ وَأَطْوَلُ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

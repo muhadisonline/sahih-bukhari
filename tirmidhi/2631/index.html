@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qvPTC98vhrQnTaZAfwuXZY2wslKHGVi3/7tBXZooKNs='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٦٣١ — يا حَكِيمُ، إنَّ هذا المالَ خَضِرَةُ حُلْوةٌ، فمن أخَذهُ بسَخاوةِ… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٢٦٣١ من جامع الترمذي، أبواب صفة القيامة والرقائق والورع عن رسول الله صلى الله عليه وسلم، باب. حدَّثنا سُوَيْدٌ، أخبرنا عبد اللهِ، عن يونسَ، عن الزُّهْرِيِّ، عن عُروةَ بن الزبير وابن المُسَيّبِ أنَّ حَكِيمَ بن حِزَامٍ، قال: سَألْتُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -60,16 +62,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٢٦٣١" data-url="https://sunan.online/tirmidhi/2631/">انسخ المتن</button>
   <a href="/tirmidhi/2632/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -88,35 +81,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٦٣١ — يا حَكِيمُ، إنَّ هذا المالَ خَضِرَةُ حُلْوةٌ، فمن أخَذهُ بسَخاوةِ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":2631,"articleBody":"حدَّثنا سُوَيْدٌ، أخبرنا عبد اللهِ، عن يونسَ، عن الزُّهْرِيِّ، عن عُروةَ بن الزبير وابن المُسَيّبِ\nأنَّ حَكِيمَ بن حِزَامٍ، قال: سَألْتُ رسولَ اللهِ صلى الله عليه وسلم فَأعْطاني، ثُمَّ سَألْتُه فَأعْطاني، ثُمَّ سألْتُه فَأعْطاني، ثُمَّ قال: \"يا حَكِيمُ، إنَّ هذا المالَ خَضِرَةُ حُلْوةٌ، فمن أخَذهُ بسَخاوةِ نَفْسٍ بُوركَ لهُ فيهِ، ومن أخَذهُ بإشْرافِ نَفْسٍ، لم يُبارَكْ لهُ فيهِ، كالّذِي يأكُلُ وَلا يَشْبعُ، واليدُ العُلْيا خيرٌ من اليَدِ السُّفْلى\". فقال حَكِيمٌ: فَقُلْتُ: يا رَسولَ اللهِ، والّذِي بَعثكَ بالحَقَّ لا أرْزَأُ أحدًا بَعْدَكَ شَيْئًا حتَّى أُفارِقَ الدُّنْيا. فَكانَ أبو بكْرٍ يَدْعُو حَكيمًا إلى العطاءِ فَيأبَى أنْ يَقْبَلَهُ، ثُمَّ إنَّ عُمرَ دَعَاهُ لِيُعطيَهُ، فَأبى أنْ يَقْبَلَ مِنْهُ شَيْئًا، فقال عُمرُ: إنَّي أُشْهِدُكُمْ يا مَعْشرَ المُسْلمينَ على حَكِيمٍ أنَّي أعْرِضُ عَليْهِ حَقّهُ من هذا الفَيْءِ، فَيأبَى أن يأخُذَهُ. فلم يَرْزأ حَكيمٌ أحدًا من النَّاسِ شيئًا\nبَعْدَ رَسولِ اللهِ صلى الله عليه وسلم حتَّى تُوُفَّي.\nهذا حديثٌ صحيحٌ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

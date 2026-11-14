@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-NHSoQfFI7R8wahi8PFjK8uM9VZ8cbZXfGS0gkmQ7HdY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٢٨٨ — وحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٢٨٨ من صحيح مسلم، كتاب الحج، باب الإفاضة من عرفات إلى المزدلفة، واستحباب صلاتي المغرب والعشاء جميعا بالمزدلفة في هذه الليلة. وحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ؛ أَنَّ عُبَيْدَ اللَّهِ بْنَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٢٨٨" data-url="https://sunan.online/muslim/1288/">انسخ المتن</button>
   <a href="/muslim/1289/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٢٨٨ — وحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1288,"articleBody":"وحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ؛ أَنَّ عُبَيْدَ اللَّهِ بْنَ عَبْدِ اللَّهِ بْنِ عُمَرَ أَخْبَرَهُ أَنَّ أَبَاهُ قَالَ:\nجَمَعَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بين المغرب والعشاء؛ لَيْسَ بَيْنَهُمَا سَجْدَةٌ. وَصَلَّى الْمَغْرِبَ ثَلَاثَ رَكَعَاتٍ. وَصَلَّى الْعِشَاءَ رَكْعَتَيْنِ.\nفَكَانَ عَبْدُ اللَّهِ يُصَلِّي بجمع كذلك. حتى لحق بالله تعالى.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ مَهْدِيٍّ. حَدَّثَنَا شُعْبَةُ عَنِ الْحَكَمِ وَسَلَمَةَ بْنِ كُهَيْلٍ، عَنْ سَعِيدِ بْنِ جُبَيْرٍ أَنَّهُ صَلَّى الْمَغْرِبَ بِجَمْعٍ، وَالْعِشَاءَ بِإِقَامَةٍ. ثُمَّ حَدَّثَ عَنِ ابْنِ عُمَرَ؛ أَنَّهُ صَلَّى مِثْلَ ذَلِكَ. وَحَدَّثَ ابْنُ عُمَرَ؛ أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ صَنَعَ مِثْلَ ذَلِكَ.\n\nوحَدَّثَنِيهِ زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا وَكِيعٌ. حَدَّثَنَا شُعْبَةُ، بِهَذَا الْإِسْنَادِ. وَقَالَ: صَلَّاهُمَا بِإِقَامَةٍ وَاحِدَةٍ.\n\nوحَدَّثَنَا عَبْدُ بْنُ حُمَيْدٍ. أَخْبَرَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا الثَّوْرِيُّ عَنْ سَلَمَةَ بْنِ كُهَيْلٍ، عَنْ سَعِيدِ بْنِ جُبَيْرٍ، عَنْ ابْنِ عُمَرَ. قال:\nجَمَعَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بَيْنَ الْمَغْرِبِ وَالْعِشَاءِ بِجَمْعٍ. صَلَّى الْمَغْرِبَ ثَلَاثًا. وَالْعِشَاءَ رَكْعَتَيْنِ. بِإِقَامَةٍ وَاحِدَةٍ.\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا عَبْدُ اللَّهِ بْنُ نُمَيْرٍ. حَدَّثَنَا إِسْمَاعِيل بْنُ أَبِي خَالِدٍ عَنْ أَبِي إِسْحَاق. قَالَ: قَالَ سعيد ابن جُبَيْرٍ:\nأَفَضْنَا مَعَ ابْنِ عُمَرَ حَتَّى أَتَيْنَا جَمْعًا. فَصَلَّى بِنَا الْمَغْرِبَ وَالْعِشَاءَ بِإِقَامَةٍ وَاحِدَةٍ. ثُمَّ انْصَرَفَ. فَقَالَ: هَكَذَا صَلَّى بِنَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي هَذَا المكان."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

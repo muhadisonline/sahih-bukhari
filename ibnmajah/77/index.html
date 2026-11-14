@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ZsZlXRvV8EE0QgdE0NkNnm43bCStIYC+Xkn+GJ+dYT8='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٧٧ — لَوْ أَنَّ اللهَ عز وجل عَذَّبَ أَهْلَ سَمَاوَاتِهِ وَأَهْلَ أَرْضِهِ… | سنن ابن ماجه</title>
 <meta name="description" content="الحديث ٧٧ من سنن ابن ماجه، أبواب السنة، باب في القدر. حَدَّثَنَا عَلِيُّ بْنُ مُحَمَّدٍ، قَالَ: حَدَّثَنَا إِسْحَاقُ بْنُ سُلَيْمَانَ، قَالَ: سَمِعْتُ أَبَا سِنَانٍ، عَنْ وَهْبِ بْنِ خَالِدٍ الْحِمْصِيِّ، عَنِ ابْنِ الدَّيْلَمِيِّ، قَالَ:…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -61,16 +63,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٧٧" data-url="https://sunan.online/ibnmajah/77/">انسخ المتن</button>
   <a href="/ibnmajah/78/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -89,35 +82,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٧ — لَوْ أَنَّ اللهَ عز وجل عَذَّبَ أَهْلَ سَمَاوَاتِهِ وَأَهْلَ أَرْضِهِ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":77,"articleBody":"حَدَّثَنَا عَلِيُّ بْنُ مُحَمَّدٍ، قَالَ: حَدَّثَنَا إِسْحَاقُ بْنُ سُلَيْمَانَ، قَالَ: سَمِعْتُ أَبَا سِنَانٍ، عَنْ وَهْبِ بْنِ خَالِدٍ الْحِمْصِيِّ، عَنِ ابْنِ الدَّيْلَمِيِّ، قَالَ: وَقَعَ فِي نَفْسِي شَيْءٌ مِنْ هَذَا الْقَدَرِ، فَخَشِيتُ أَنْ يُفْسِدَ عَلَيَّ دِينِي وَأَمْرِي، فَأَتَيْتُ أُبَيَّ بْنَ كَعْبٍ، فَقُلْتُ: أَبَا الْمُنْذِرِ! إِنَّهُ قَدْ وَقَعَ فِي نَفْسِي شَيْءٌ مِنْ هَذَا الْقَدَرِ؛ خَشِيتُ أَنْ يُفْسِدَ عَلَيَّ دِينِي وَأَمْرِي، فَحَدِّثْنِي مِنْ ذَلِكَ بِشَيْءٍ لَعَلَّ اللهَ عز وجل أَنْ يَنْفَعَنِي بِهِ، فَقَالَ: لَوْ أَنَّ اللهَ عَذَّبَ أَهْلَ سَمَاوَاتِهِ وَأَهْلَ أَرْضِهِ لَعَذَّبَهُمْ وَهُوَ غَيْرُ ظَالِمٍ لَهُمْ، وَلَوْ رَحِمَهُمْ لَكَانَتْ رَحْمَتُهُ خَيْرًا لَهُمْ مِنْ أَعْمَالِهِمْ، وَلَوْ كَانَ لَكَ جَبَلُ أُحُدٍ ذَهَبًا - أَوْ مِثْلُ جَبَلِ أُحُدٍ ذَهَبًا - تُنْفِقُهُ فِي سَبِيلِ اللهِ مَا قُبِلَ مِنْكَ حَتَّى تُؤْمِنَ بِالْقَدَرِ، فَتَعْلَمَ أَنَّ مَا أَصَابَكَ لَمْ يَكُنْ لِيُخْطِئَكَ، وَأَنَّ مَا أَخْطَأَكَ لَمْ يَكُنْ لِيُصِيبَكَ، وَأَنَّكَ إِنْ مُتَّ عَلَى غَيْرِ هَذَا دَخَلْتَ النَّارَ، وَلَا عَلَيْكَ أَنْ تَأْتِيَ أَخِي عَبْدَ اللهِ بْنَ مَسْعُودٍ فَتَسَلْهُ، فَأَتَيْتُ عَبْدَ اللهِ فَسَأَلْتُهُ فَذَكَرَ مِثْلَ مَا قَالَ أُبَيٌّ، وَقَالَ لِي: وَلَا عَلَيْكَ أَنْ تَأْتِيَ حُذَيْفَةَ، فَأَتَيْتُ حُذَيْفَةَ فَسَأَلْتُهُ، فَقَالَ مِثْلَ مَا قَالَا، فَقَالَ: ائْتِ زَيْدَ بْنَ ثَابِتٍ فَاسْأَلْهُ، فَأَتَيْتُ زَيْدَ بْنَ ثَابِتٍ فَسَأَلْتُهُ، فَقَالَ: سَمِعْتُ رَسُولَ اللهِ صلى الله عليه وسلم يَقُولُ: \"لَوْ أَنَّ اللهَ عز وجل عَذَّبَ أَهْلَ سَمَاوَاتِهِ وَأَهْلَ أَرْضِهِ لَعَذَّبَهُمْ وَهُوَ غَيْرُ ظَالِمٍ لَهُمْ، ولوْ رَحِمَهُمْ لَكَانَتْ رَحْمَتُهُ خَيْرًا لَهُمْ مِنْ أَعْمَالِهِمْ، وَلَوْ كَانَ لَكَ مِثْلُ أُحُدٍ ذَهَبًا - أَوْ مِثْلُ جَبَلِ أُحُدٍ ذَهَبًا - تُنْفِقُهُ فِي سَبِيلِ اللهِ مَا قَبلَهُ مِنْكَ حَتَّى تُؤْمِنَ بِالْقَدَرِ كُلِّهِ، فتَعْلَمَ أَنَّ مَا أَصَابَكَ لَمْ يَكُنْ لِيُخْطِئَكَ، وَمَا أَخْطَأَكَ لَمْ يَكُنْ لِيُصِيبَكَ، وَأَنَّكَ إِنْ مُتَّ عَلَى غَيْرِ هَذَا دَخَلْتَ النَّارَ\". د: ٤٦٩٩، تحفة: ٥٢، ٩٣٤٨، ٣٧٢٦\n* قَالَ أَبُو الْحَسَنِ: حَدَّثَنَا إِسْحَاقُ بْنُ أَحْمَدَ الْقَزَّازُ، حَدَّثَنَا إِسْحَاقُ بْنُ سُلَيْمَانَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

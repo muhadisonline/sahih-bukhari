@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-nYYItTbRMHaYI1Au3o1PrS6hwb6qfxLVR9ZibZtr4Nw='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٥٠١ — من أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ، فَكَانَ لَهُ مَالٌ يَبْلُغُ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٥٠١ من صحيح مسلم، كتاب العتق، . حدثنا يَحْيَى بْنُ يَحْيَى. قَالَ: قُلْتُ لِمَالِكٍ: حَدَّثَكَ نَافِعٌ عَنْ ابْنِ عُمَرَ قَالَ: قَالَ رسول الله صلى الله عليه وسلم: &quot;من أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ، فَكَانَ لَهُ مَالٌ يَبْلُغُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -84,16 +86,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٥٠١" data-url="https://sunan.online/muslim/1501/">انسخ المتن</button>
   <a href="/muslim/1502/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -112,35 +105,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٥٠١ — من أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ، فَكَانَ لَهُ مَالٌ يَبْلُغُ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1501,"articleBody":"حدثنا يَحْيَى بْنُ يَحْيَى. قَالَ: قُلْتُ لِمَالِكٍ: حَدَّثَكَ نَافِعٌ عَنْ ابْنِ عُمَرَ قَالَ: قَالَ رسول الله صلى الله عليه وسلم:\n\"من أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ، فَكَانَ لَهُ مَالٌ يَبْلُغُ ثَمَنَ الْعَبْدِ، قُوِّمَ عَلَيْهِ قِيمَةَ الْعَدْلِ، فَأَعْطَى شُرَكَاءَهُ حِصَصَهُمْ، وَعَتَقَ عَلَيْهِ الْعَبْدُ، وإلا فقد عتق منه ما عتق\".\n\nوحَدَّثَنَاه قُتَيْبَةُ بْنُ سَعِيدٍ وَمُحَمَّدُ بْنُ رُمْحٍ. جميعا عَنِ اللَّيْثِ بْنِ سَعْدٍ. (ح) وحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا جَرِيرُ بْنُ حَازِمٍ. (ح) وحدثنا أبو الربيع وأبو كامل. قالا: حَدَّثَنَا حَمَّادٌ. حَدَّثَنَا أَيُّوبُ. (ح) وحَدَّثَنَا ابْنُ نمير. حدثنا أبي. حدثنا عبيد الله. (ح) وحدثنا محمد ابْنُ الْمُثَنَّى. حَدَّثَنَا عَبْدُ الْوَهَّابِ. قَالَ: سَمِعْتُ يحيى بْنَ سَعِيدٍ. (ح) وحَدَّثَنِي إِسْحَاقُ بْنُ مَنْصُورٍ. أَخْبَرَنَا عَبْدُ الرَّزَّاقِ عَنْ ابْنِ جُرَيْجٍ. أَخْبَرَنِي إِسْمَاعِيلُ بْنُ أُمَيَّةَ. (ح) وحَدَّثَنَا هَارُونُ بْنُ سَعِيدٍ الْأَيْلِيُّ. حَدَّثَنَا ابْنُ وَهْبٍ. أَخْبَرَنِي أُسَامَةُ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا ابْنُ أَبِي فُدَيْكٍ عَنْ ابْنِ أَبِي ذِئْبٍ. كُلُّ هَؤُلَاءِ عَنْ نَافِعٍ عَنِ ابْنِ عُمَرَ. بِمَعْنَى حَدِيثِ مَالِكٍ عَنْ نَافِعٍ.\n\nحدثنا يَحْيَى بْنُ يَحْيَى. قَالَ: قُلْتُ لِمَالِكٍ: حَدَّثَكَ نَافِعٌ عَنْ ابْنِ عُمَرَ قَالَ:\nقَالَ رسول الله صلى الله عليه وسلم (من أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ، فَكَانَ لَهُ مَالٌ يَبْلُغُ ثَمَنَ الْعَبْدِ، قُوِّمَ عَلَيْهِ قِيمَةَ الْعَدْلِ، فَأَعْطَى شُرَكَاءَهُ حِصَصَهُمْ، وَعَتَقَ عَلَيْهِ الْعَبْدُ، وإلا فقد عتق منه ما عتق).\n\nحَدَّثَنَا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا عُبَيْدُ الله عن نافع، عن ابن عمر. قال:\nقال رسول الله صلى الله عليه وسلم (مَنْ أَعْتَقَ شِرْكًا لَهُ مِنْ مَمْلُوكٍ فَعَلَيْهِ عِتْقُهُ كُلُّهُ. إِنْ كَانَ لَهُ مَالٌ يَبْلُغُ ثَمَنَهُ. فَإِنْ لَمْ يَكُنْ لَهُ مَالٌ عَتَقَ مِنْهُ مَا عَتَقَ).\n\nوحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا جَرِيرُ بْنُ حَازِمٍ عَنْ نَافِعٍ مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ. قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى الله عليه وسلم (مَنْ أَعْتَقَ نَصِيبًا لَهُ فِي عَبْدٍ. فَكَانَ لَهُ مِنَ الْمَالِ قَدْرُ مَا يَبْلُغُ قِيمَتَهُ. قُوِّمَ عَلَيْهِ قِيمَةَ عَدْلٍ. وَإِلَّا فَقَدْ عَتَقَ مِنْهُ مَا عَتَقَ).\n\nوحدثنا قتيبة بن سعيد ومحمد بن رمح عَنْ اللَّيْثِ بْنِ سَعْدٍ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا عَبْدُ الوهاب. قال: سمعت يَحْيَى بْنَ سَعِيدٍ. (ح) وحَدَّثَنِي أَبُو الرَّبِيعِ وَأَبُو كَامِلٍ. قَالَا: حَدَّثَنَا حَمَّادٌ (وَهُوَ ابْنُ زَيْدٍ). (ح) وحَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا إِسْمَاعِيل (يَعْنِي ابْنَ عُلَيَّةَ). كِلَاهُمَا عَنْ أَيُّوبَ. (ح) وحَدَّثَنَا إِسْحَاق بْنُ مَنْصُورٍ. أَخْبَرَنَا عَبْدُ الرزاق عن ابن جريج. أخبرني إسماعيل بن أُمَيَّةَ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا ابْنُ أَبِي فُدَيْكٍ عَنْ ابْنِ أَبِي ذِئْبٍ. (ح) وحَدَّثَنَا هَارُونُ بْنُ سَعِيدٍ الْأَيْلِيُّ. أَخْبَرَنَا ابْنُ وَهْبٍ. قَالَ: أَخْبَرَنِي أُسَامَةُ (يَعْنِي ابْنَ زَيْدٍ). كُلُّ هَؤُلَاءِ عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، عن النبي صلى الله عليه وسلم، بِهَذَا الْحَدِيثِ. وَلَيْسَ فِي حَدِيثِهِمْ (وَإِنْ لَمْ يكن له مال فقد أعتق منه ما أعتق) إِلَّا فِي حَدِيثِ أَيُّوبَ وَيَحْيَى بْنِ سَعِيدٍ. فَإِنَّهُمَا ذَكَرَا هَذَا الْحَرْفَ فِي الْحَدِيثِ. وَقَالَا: لَا نَدْرِي. أَهُوَ شَيْءٌ فِي الْحَدِيثِ\nأَوْ قَالَهُ نَافِعٌ مِنْ قِبَلِهِ. وَلَيْسَ فِي رِوَايَةِ أَحَدٍ مِنْهُمْ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عليه وسلم. إلا في حديث الليث ابن سعد.\n\nوحَدَّثَنَا عَمْرٌو النَّاقِدُ وَابْنُ أَبِي عُمَرَ. كِلَاهُمَا عَنِ ابْنِ عُيَيْنَةَ. قَالَ ابْنُ أَبِي عُمَرَ: حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ عن عمرو، عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِيهِ؛\nأَنّ رسول الله صلى الله عليه وسلم قال (مَنْ أَعْتَقَ عَبْدًا بَيْنَهُ وَبَيْنَ آخَرَ. قُوِّمَ عليه في ماله قيمة عدل. ولا وَكْسَ وَلَا شَطَطَ. ثُمَّ عَتَقَ عَلَيْهِ فِي ماله إن كان موسرا).\n\nوحَدَّثَنَا عَبْدُ بْنُ حُمَيْدٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا مَعْمَرٌ عَنْ الزُّهْرِيِّ، عَنْ سَالِمٍ، عَنْ ابن عمر؛\nأن النبي صلى الله عليه وَسَلَّمَ قَالَ (مَنْ أَعْتَقَ شِرْكًا لَهُ فِي عَبْدٍ. عَتَقَ مَا بَقِيَ فِي مَالِهِ، إِذَا كَانَ لَهُ مَالٌ يَبْلُغُ ثَمَنَ الْعَبْدِ)."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

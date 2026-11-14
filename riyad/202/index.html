@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-oC6XRhTtJWvV9CQtAy5szZXkNHNULlWGLx1/yJSNJ4U='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٠٢ — وعن أبي خُبيب -بضم الخاء المعجمة- عبد الله بن الزبير، رضي الله عنهما،… | رياض الصالحين</title>
 <meta name="description" content="الحديث ٢٠٢ من رياض الصالحين، كتاب المقدمات، . وعن أبي خُبيب -بضم الخاء المعجمة- عبد الله بن الزبير، رضي الله عنهما، قال: لما وقف الزبير يوم الجمل دعاني فقمت إلى جنبه، فقال: يا بني إنه لا يقتل اليوم إلا ظالم أو مظلوم،وإني لا أرانى إلا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -57,16 +59,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٢٠٢" data-url="https://sunan.online/riyad/202/">انسخ المتن</button>
   <a href="/riyad/203/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -85,35 +78,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٠٢ — وعن أبي خُبيب -بضم الخاء المعجمة- عبد الله بن الزبير، رضي الله عنهما،… | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":202,"articleBody":"وعن أبي خُبيب -بضم الخاء المعجمة- عبد الله بن الزبير، رضي الله عنهما، قال: لما وقف الزبير يوم الجمل دعاني فقمت إلى جنبه، فقال: يا بني إنه لا يقتل اليوم إلا ظالم أو مظلوم،وإني لا أرانى إلا سأقتل اليوم مظلوما، وإن من أكبر همي لديني، أفترى ديننا يبقي من مالنا شيئًا؟ ثم قال: يا بني بع مالنا واقض ديني، وأوصى بالثلث وثلثه لبنيه، يعني لبني عبد الله بن الزبير ثلث الثلث. قال فإن فضل من مالنا بعد قضاء الدين شيء فثلثه لبنيك، قال هشام: وكان بعض ولد عبد الله قد وازى بعض بني الزبير خبيب وعباد، وله يومئذ تسعة بنين وتسع بنات. قال عبد الله: فجعل يوصيني بدينه ويقول: يا بنى إن عجزت عن شيء منه فاستعن عليه بمولاي. قال فوالله ما دريت ما أراد حتى قلت: يا أبت من مولاك؟ قال: الله. قال: فوالله ما وقعت في كربةٍ من دينه إلا قلت: يا مولى الزبير اقض عنه دينه، فيقضيه. قال: فقتل الزبير ولم يدع دينارًا ولا درهمًا إلا أرضين، منهما الغابة وإحدى عشرة دارًا بالمدينة، ودارين بالبصرة، ودارًا بالكوفة ودارًا بمصر. قال: وإنما كان دينه الذي كان عليه أن الرجل كان يأتيه بالمال، فيستودعه إياه، فيقول الزبير: لا ولكن هو سلف إني أخشى عليه الضيعة. وما ولي إمارة قط ولا جباية ولا خراجًا ولا شيئًا إلا أن يكون في غزو مع رسول الله صلى الله عليه وسلم، أو مع أبي بكر وعمر وعثمان رضي الله عنهم، قال عبد الله: فحسبت ما كان عليه من الدين فوجدته ألفي ألف ومائتي ألف! فلقى حكيم بن حزام عبد الله بن الزبير فقال: يا ابن أخي كم على أخي من الدين؟ فكتمته وقلت: مائة ألف. فقال حكيم: والله ما أرى أموالكم تسع هذه! فقال عبد الله: أرأيتك إن كانت ألف ألف؟ ومائتي ألف؟ قال: ما أراكم تطيقون هذا، فإن عجزتم عن شيء منه فاستعينوا بي. قال: وكان الزبير قد اشترى الغابة بسبعين ومائة ألف، فباعها عبد الله بألف ألف وستمائة ألف، ثم قام فقال: من كان له على الزبير شيء فليوافنا بالغابة، فأتاه عبد الله بن جعفر، وكان له على الزبير أربعمائة ألف، فقال لعبد الله: إن شئتم تركتها لكم؟ قال عبد الله: لا، قال: فإن شئتم جعلتموها فيما تؤخرون إن أخرتم، فقال عبد الله: لا قال: فاقطعوا لي قطعة، قال عبد الله: لك من ههنا إلى ههنا. فباع عبد الله منها، فقضى عنه دينه، وأوفاه وبقي منها أربعة أسهم ونصف، فقدم على معاوية وعنده عمرو بن عثمان، والمنذر بن الزبير، وابن زمعة فقال له معاوية: كم قومت الغابة؟ قال: كل سهم بمائة ألف قال: كم بقي منها؟ قال: أربعة أسهم ونصف، فقال المنذر ابن الزبير: قد أخذت منها سهمًا بمائة ألف، قال عمرو بن عثمان: قد أخذت منها سهمًا بمائة ألف. وقال ابن زمعة: قد أخذت سهمًا بمائة ألف، فقال معاوية: كم بقي منها؟ قال: سهم ونصف سهم، قال: قد أخذته بخمسين ومائة ألف. قال: وباع عبد الله بن جعفر نصيبه من معاوية بستمائة ألف. فلما فرغ ابن الزبير من قضاء دينه قال بنو الزبير: اقسم بيننا ميراثنا. قال:: والله لا أقسم بينكم حتى أنادي بالموسم أربع سنين: ألا من كان له على الزبير دين فليأتنا فلنقضه. فجعل كل سنة ينادي في الموسم، فلما مضى أربع سنين قسم بينهم ودفع الثلث. وكان للزبير أربع نسوة، فأصاب كل امراةٍ ألف ألف ومائتا ألف، فجميع ماله خمسون ألف ألف ومائتا ألف، رواه البخاري."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

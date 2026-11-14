@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب موت الأولاد — الأدب المفرد</title>
 <meta name="description" content="كتاب موت الأولاد من الأدب المفرد. 13 حديثًا، من 143 إلى 155.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب موت الأولاد</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">١٣ حديثًا</p>
 <a class="entry" href="/adab/143/"><span class="n">١٤٣</span><span class="ttl">حَدَّثَنَا إِسْمَاعِيلُ قَالَ: حَدَّثَنِي مَالِكٌ،…</span></a><a class="entry" href="/adab/144/"><span class="n">١٤٤</span><span class="ttl">حَدَّثَنَا عُمَرُ بْنُ حَفْصِ بْنِ غِيَاثٍ، قَالَ:…</span></a><a class="entry" href="/adab/145/"><span class="n">١٤٥</span><span class="ttl">حَدَّثَنَا عَيَّاشٌ، قَالَ: حَدَّثَنَا عَبْدُ…</span></a><a class="entry" href="/adab/146/"><span class="n">١٤٦</span><span class="ttl">حَدَّثَنَا عَيَّاشٌ، قَالَ: حَدَّثَنَا عَبْدُ…</span></a><a class="entry" href="/adab/147/"><span class="n">١٤٧</span><span class="ttl">حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللهِ، قَالَ:…</span></a><a class="entry" href="/adab/148/"><span class="n">١٤٨</span><span class="ttl">حَدَّثَنَا عَلِيٌّ، قَالَ: حَدَّثَنَا سُفْيَانُ،…</span></a><a class="entry" href="/adab/149/"><span class="n">١٤٩</span><span class="ttl">حَدَّثَنَا حَرَمِيُّ بْنُ حَفْصٍ، وَمُوسَى بْنُ…</span></a><a class="entry" href="/adab/150/"><span class="n">١٥٠</span><span class="ttl">حَدَّثَنَا عَلِيٌّ، قَالَ: حَدَّثَنَا مُعْتَمِرٌ…</span></a><a class="entry" href="/adab/151/"><span class="n">١٥١</span><span class="ttl">حَدَّثَنَا عَبْدُ اللهِ بْنُ أَبِي الأَسْوَدِ،…</span></a><a class="entry" href="/adab/152/"><span class="n">١٥٢</span><span class="ttl">حَدَّثَنَا إِسْحَاقُ بْنُ يَزِيدَ، قَالَ:…</span></a><a class="entry" href="/adab/153/"><span class="n">١٥٣</span><span class="ttl">حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ:…</span></a><a class="entry" href="/adab/154/"><span class="n">١٥٤</span><span class="ttl">قَالَ: وَقَالَ رَسُولُ اللهِ : مَا تَعُدُّونَ…</span></a><a class="entry" href="/adab/155/"><span class="n">١٥٥</span><span class="ttl">قَالَ: وَقَالَ رَسُولُ اللهِ : مَا تَعُدُّونَ…</span></a>
@@ -69,35 +71,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

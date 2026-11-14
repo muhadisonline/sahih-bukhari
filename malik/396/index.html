@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-o5gji+4dFhnmzTdnyuL51SA1RwWJtXk0ZtwJRyHKrKY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٦ — يَا أَبَا بَكْرٍ مَا مَنَعَكَ أَنْ تَثْبُتَ إِذْ أَمَرْتُكَ | موطأ مالك</title>
 <meta name="description" content="الحديث ٣٩٦ من موطأ مالك، كتاب قصر الصلاة فى السفر، . حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ أَبِي حَازِمٍ، سَلَمَةَ بْنِ دِينَارٍ عَنْ سَهْلِ بْنِ سَعْدٍ السَّاعِدِيِّ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ذَهَبَ إِلَى بَنِي عَمْرِو…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -61,16 +63,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="موطأ مالك — الحديث ٣٩٦" data-url="https://sunan.online/malik/396/">انسخ المتن</button>
   <a href="/malik/397/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -89,35 +82,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٦ — يَا أَبَا بَكْرٍ مَا مَنَعَكَ أَنْ تَثْبُتَ إِذْ أَمَرْتُكَ | موطأ مالك","inLanguage":"ar","isPartOf":{"@type":"Book","name":"موطأ مالك","inLanguage":"ar","author":{"@type":"Person","name":"مالك بن أنس، رواية يحيى بن يحيى الليثي"}},"position":396,"articleBody":"حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ أَبِي حَازِمٍ، سَلَمَةَ بْنِ دِينَارٍ عَنْ سَهْلِ بْنِ سَعْدٍ السَّاعِدِيِّ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ذَهَبَ إِلَى بَنِي عَمْرِو بْنِ عَوْفٍ لِيُصْلِحَ بَيْنَهُمْ وَحَانَتِ الصَّلاَةُ فَجَاءَ الْمُؤَذِّنُ إِلَى أَبِي بَكْرٍ الصِّدِّيقِ فَقَالَ أَتُصَلِّي لِلنَّاسِ فَأُقِيمَ قَالَ نَعَمْ . فَصَلَّى أَبُو بَكْرٍ فَجَاءَ رَسُولُ اللَّهِ صلى الله عليه وسلم وَالنَّاسُ فِي الصَّلاَةِ فَتَخَلَّصَ حَتَّى وَقَفَ فِي الصَّفِّ فَصَفَّقَ النَّاسُ وَكَانَ أَبُو بَكْرٍ لاَ يَلْتَفِتُ فِي صَلاَتِهِ فَلَمَّا أَكْثَرَ النَّاسُ مِنَ التَّصْفِيقِ الْتَفَتَ أَبُو بَكْرٍ فَرَأَى رَسُولَ اللَّهِ صلى الله عليه وسلم فَأَشَارَ إِلَيْهِ رَسُولُ اللَّهِ صلى الله عليه وسلم أَنِ امْكُثْ مَكَانَكَ فَرَفَعَ أَبُو بَكْرٍ يَدَيْهِ فَحَمِدَ اللَّهَ عَلَى مَا أَمَرَهُ بِهِ رَسُولُ اللَّهِ صلى الله عليه وسلم مِنْ ذَلِكَ ثُمَّ اسْتَأْخَرَ حَتَّى اسْتَوَى فِي الصَّفِّ وَتَقَدَّمَ رَسُولُ اللَّهِ صلى الله عليه وسلم فَصَلَّى ثُمَّ انْصَرَفَ فَقَالَ \" يَا أَبَا بَكْرٍ مَا مَنَعَكَ أَنْ تَثْبُتَ إِذْ أَمَرْتُكَ \" . فَقَالَ أَبُو بَكْرٍ مَا كَانَ لاِبْنِ أَبِي قُحَافَةَ أَنْ يُصَلِّيَ بَيْنَ يَدَىْ رَسُولِ اللَّهِ صلى الله عليه وسلم . فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم \" مَا لِي رَأَيْتُكُمْ أَكْثَرْتُمْ مِنَ التَّصْفِيحِ مَنْ نَابَهُ شَىْءٌ فِي صَلاَتِهِ فَلْيُسَبِّحْ فَإِنَّهُ إِذَا سَبَّحَ الْتُفِتَ إِلَيْهِ وَإِنَّمَا التَّصْفِيحُ لِلنِّسَاءِ \" ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

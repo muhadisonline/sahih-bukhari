@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-9nss5/jlyaUQbLtDFt5FnolJwu0bp2azTEYiIvam+wY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٦ — جاءنى رسول الله صلى الله عليه وسلم يعودنى عام حجة الوداع من وجع اشتد… | رياض الصالحين</title>
 <meta name="description" content="الحديث ٦ من رياض الصالحين، كتاب المقدمات، . وعن أبي إسحاق سعد بن أبي وقاص مالك بن أهيب بن عبد مناف بن زهرة بن كلاب بن مرة بن كعب بن لؤى القرش الزهرى رضي الله عنه، أحد العشرة المشهود لهم بالجنة، رضي الله عنهم، قال: &quot; جاءنى رسول الله صلى…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٦" data-url="https://sunan.online/riyad/6/">انسخ المتن</button>
   <a href="/riyad/7/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٦ — جاءنى رسول الله صلى الله عليه وسلم يعودنى عام حجة الوداع من وجع اشتد… | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":6,"articleBody":"وعن أبي إسحاق سعد بن أبي وقاص مالك بن أهيب بن عبد مناف بن زهرة بن كلاب بن مرة بن كعب بن لؤى القرش الزهرى رضي الله عنه، أحد العشرة المشهود لهم بالجنة، رضي الله عنهم، قال: \n\" جاءنى رسول الله صلى الله عليه وسلم يعودنى عام حجة الوداع من وجع اشتد بى فقلت: يارسول الله إني قد بلغ بى من الوجع ما ترى، وأنا ذو مال ولا يرثنى إلا ابنة لي، أفاتصدق بثلثى ما لي؟ قال: لا، قلت: فالشطر يارسول الله؟ فقال: لا، قلت: فالثلث يا رسول الله؟ قال الثلث والثلث كثير- أو كبير- إنك أن تذر ورثتك أغنياء خير من أن تذرهم عالة يتكففون الناس، وإنك لن تنفق نفقة تبتغى بها وجه الله إلا أجرت عليها حتى ما تجعل في فيّ امرأتك قال: فقلت: يارسول الله أخلف بعد أصحابي؟ قال: إنك لن تخلف فتعمل عملا تبتغي بهوجه الله إلا ازددت به درجة ورفعةً، ولعلك أن تخلف حتى ينتفع بك أقوام ويضرّ بك آخرون. اللهم امض لآصحابى هجرتهم، ولا تردهم على أعقابهم، لكن البائس سعد بن خولة\" يرثى له رسول الله صلى الله عليه وسلم أن مات بمكة.((متفق عليه))."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

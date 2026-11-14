@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-I/GqcIGQp7zC2b2821aK8n5Rq+epGEdagn6dY3vG5fo='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٦٢٢ — حَدَّثَنِي إِبْرَاهِيمُ بْنُ مُوسَى الرَّازِيُّ وَإِسْحَاق بْنُ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٦٢٢ من صحيح مسلم، كتاب الهبات، باب تحريم الرجوع في الصدقة والهبة بعد القبض إلا ما وهبه لولده وإن سفل. حَدَّثَنِي إِبْرَاهِيمُ بْنُ مُوسَى الرَّازِيُّ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. قَالَا: أَخْبَرَنَا عِيسَى بْنُ يُونُسَ.…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -75,16 +77,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٦٢٢" data-url="https://sunan.online/muslim/1622/">انسخ المتن</button>
   <a href="/muslim/1623/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -103,35 +96,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٦٢٢ — حَدَّثَنِي إِبْرَاهِيمُ بْنُ مُوسَى الرَّازِيُّ وَإِسْحَاق بْنُ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1622,"articleBody":"حَدَّثَنِي إِبْرَاهِيمُ بْنُ مُوسَى الرَّازِيُّ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. قَالَا: أَخْبَرَنَا عِيسَى بْنُ يُونُسَ. حَدَّثَنَا الأَوْزَاعِيُّ عَنْ أَبِي جَعْفَرٍ مُحَمَّدِ بْنِ عَلِيٍّ، عَنْ ابْنِ الْمُسَيَّبِ، عَنْ ابْنِ عَبَّاسٍ:\nإن النبي صلى الله عليه وسلم قال (مَثَلُ الَّذِي يَرْجِعُ فِي صَدَقَتِهِ، كَمَثَلِ الْكَلْبِ يقئ ثم يعود في قيئه، فيأكله).\n\nوحَدَّثَنَاه أَبُو كُرَيْبٍ مُحَمَّدُ بْنُ الْعَلَاءِ. أَخْبَرَنَا ابْنُ الْمُبَارَكِ عَنْ الْأَوْزَاعِيِّ. قَالَ: سَمِعْتُ مُحَمَّدَ ابن عَلِيِّ بْنِ الْحُسَيْنِ يَذْكُرُ بِهَذَا الْإِسْنَادِ، نَحْوَهُ.\n\nوحَدَّثَنِيهِ حَجَّاجُ بْنُ الشَّاعِرِ. حَدَّثَنَا عَبْدُ الصَّمَدِ. حَدَّثَنَا حَرْبٌ. حَدَّثَنَا يَحْيَى (وَهُوَ ابْنُ أَبِي كَثِيرٍ). حَدَّثَنِي عَبْدُ الرَّحْمَنِ بْنُ عَمْرٍو؛ أَنَّ محمد بن فاطمة بنت رسول الله صلى الله عليه وسلم حدثه، بهذا الإسناد، نحوه.\n\nوحَدَّثَنِي هَارُونُ بْنُ سَعِيدٍ الْأَيْلِيُّ وَأَحْمَدُ بْنُ عِيسَى. قَالَا: حَدَّثَنَا ابْنُ وَهْبٍ. أَخْبَرَنِي عَمْرٌو (وَهُوَ ابْنُ الْحَارِثِ) عَنْ بُكَيْرٍ؛ أَنَّهُ سَمِعَ سَعِيدَ بْنَ الْمُسَيِّبِ يَقُولُ: سَمِعْتُ ابْنَ عَبَّاسٍ يَقُولُ:\nسَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (إِنَّمَا مَثَلُ الَّذِي يَتَصَدَّقُ بِصَدَقَةٍ ثم يعود في صدقته، كمثل الكلب يقئ ثم يأكل قيأه).\n\nوحدثناه محمد بن المثنى ومحمد بن بشار. قالا: حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ. سَمِعْتُ قَتَادَةَ يُحَدِّثُ عَنْ سَعِيدِ بْنِ الْمُسَيِّبِ، عَنْ ابن عباس،\nعن النبي؛ أَنَّهُ قَالَ (الْعَائِدُ فِي هِبَتِهِ كَالْعَائِدِ فِي قيئه).\n\nوحَدَّثَنَاه مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ، عَنْ سَعِيدٍ، عَنْ قَتَادَةَ، بِهَذَا الإِسْنَادِ، مثله.\n\nوحَدَّثَنَا إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا الْمَخْزُومِيُّ. حَدَّثَنَا وُهَيْبٌ. حَدَّثَنَا عَبْدُ اللَّهِ بْنُ طَاوُسٍ عَنْ أَبِيهِ، عَنِ ابْنِ عَبَّاسٍ،\nعَنِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ (الْعَائِدُ فِي هبته كالكلب، يقئ ثُمَّ يَعُودُ فِي قَيْئِهِ)."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

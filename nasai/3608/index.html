@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-hvr/McwxTV4mTqJHHNFojotuYVSL59a/l2ZYSTpGSKk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٦٠٨ — مَنْ يَشتري بِئْرَ رُوْمَةَ فيجعل فيها دَلْوَهُ مع دِلاء المسلمين… | سنن النسائي</title>
 <meta name="description" content="الحديث ٣٦٠٨ من سنن النسائي، كتاب الأحباس، باب وقف المساجد. أخبرني زيادُ بنُ أيوب قال: حدَّثنا سعيدُ بنُ عامر، عن يحيى بن أبي الحَجَّاج، عن سعيد الجُرَيْرِيّ، عن ثُمامةَ بن حَزْن القُشَيريِّ قال: شَهِدْتُ الدَّارَ حين أشرف عليهم، عثمان،…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٦٠٨" data-url="https://sunan.online/nasai/3608/">انسخ المتن</button>
   <a href="/nasai/3609/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٦٠٨ — مَنْ يَشتري بِئْرَ رُوْمَةَ فيجعل فيها دَلْوَهُ مع دِلاء المسلمين… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3608,"articleBody":"أخبرني زيادُ بنُ أيوب قال: حدَّثنا سعيدُ بنُ عامر، عن يحيى بن أبي الحَجَّاج، عن سعيد الجُرَيْرِيّ، عن ثُمامةَ بن حَزْن القُشَيريِّ قال:\nشَهِدْتُ الدَّارَ حين أشرف عليهم، عثمان، فقال: أَنْشُدُكُمْ باللهِ وبالإسلام، هل تعلمون أنَّ رسول الله صلى الله عليه وسلم قَدِمَ المدينة وليس بها ماءٌ يُستعذَبُ غيرَ بئر رُومَة، فقال: \"مَنْ يَشتري بِئْرَ رُوْمَةَ فيجعل فيها دَلْوَهُ مع دِلاء المسلمين بخيرٍ له منها في الجَنَّة، فاشْتَرَيْتُها من صُلْبِ مالي، فجعلتُ دَلْوِي فيها مع دِلاءِ المسلمين، وأنتم اليومَ تمنعوني من الشُّرْبِ منها حتى أشربَ من ماء البحر؟ قالوا: اللَّهمَّ نعم، قال: فَأَنْشُدُكُمْ بالله والإسلام، هل تعلمون أنِّي جَهَّزْتُ جيشَ العُسْرَةِ من مالي؟ قالوا: اللَّهمَّ نعم، قال: فأَنْشُدُكُم بالله، والإسلام هل تعلمون أن المسجدَ ضاق بأهله، فقال رسولُ الله صلى الله عليه وسلم: \"مَنْ يشتري بُقعةَ آلِ فلان فيزيدَها في المسجدِ بخيرٍ له منها في الجنَّة\" فاشْتَرَيْتُها من صُلْبِ مالي، فزِدْتُها في المسجد، وأنتم تمنعوني أنْ أُصَلِّي فيه ركعتَيْن؟ قالوا: اللَّهمَّ نعم، قال: أَنْشُدكم بالله والإسلام، هل تعلمون أنَّ رسول الله صلى الله عليه وسلم كان على ثَبِيرٍ؛ ثَبِيرِ مكَّة، ومعه أبو بكر وعُمر وأنا، فتحرَّكَ الجبلُ، فركَضَهُ رسولُ الله صلى الله عليه وسلم برِجْلِهِ وقال: \"اسْكُنْ ثَبِيرُ، فإنَّما عليك نَبِيٌّ وصِدَّيقٌ وشهيدان\"؟ قالوا: اللَّهمَّ\nنعم، قال: الله أكبر، شَهِدُوا لي ورَبَّ الكعبة. يعني أنّي شهيد."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

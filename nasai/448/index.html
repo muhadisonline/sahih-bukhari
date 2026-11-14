@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-75R+K2RJWAjHz8i2dLeUwCMh/OBgMuYtaAlpIG3/hug='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٤٤٨ — أخبرنا يعقوبُ بنُ إبراهيم، حدَّثنا يحيى بنُ سعيد، حدَّثنا هشام… | سنن النسائي</title>
 <meta name="description" content="الحديث ٤٤٨ من سنن النسائي، كتاب الصلاة، فرض الصلاة وذكر اختلاف الناقلين في إسناد حديث أنس بن مالك واختلاف ألفاظهم فيه. أخبرنا يعقوبُ بنُ إبراهيم، حدَّثنا يحيى بنُ سعيد، حدَّثنا هشام الدَّسْتُوائيُّ، حدَّثنا قتادة عن أنس بن مالك عن مالكِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -69,16 +71,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٤٤٨" data-url="https://sunan.online/nasai/448/">انسخ المتن</button>
   <a href="/nasai/449/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -97,35 +90,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤٤٨ — أخبرنا يعقوبُ بنُ إبراهيم، حدَّثنا يحيى بنُ سعيد، حدَّثنا هشام… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":448,"articleBody":"أخبرنا يعقوبُ بنُ إبراهيم، حدَّثنا يحيى بنُ سعيد، حدَّثنا هشام الدَّسْتُوائيُّ، حدَّثنا قتادة عن أنس بن مالك\nعن مالكِ بن صَعْصَعة، أنَّ النبيَّ صلى الله عليه وسلم قال: \"بينا أنا عندَ البيت بين النَّائم واليقظان؛ إذ أقبلَ أحدُ الثلاثةِ بين الرَّجُلَين، فأُتِيتُ بِطَسْتٍ من ذَهَبٍ مَلْآنَ حِكْمَةً وإيمانًا، فشَقَّ من النَّحْر إلى مَرَاقِّ البَطْن، فَغَسَلَ القلبَ بماء زَمْزَم، ثم - يعني - مُلِئ حِكْمَةً وإيمانًا، ثم أُتِيتُ بدَابَّةٍ دُونَ البَغْل وفوق الحِمار، ثم انطلقتُ مع جبريلَ عليه السلام، فأَتَيْنا السَّماءَ الدُّنيا، فقيل: مَنْ هذا؟ قال جبريل، قيل: ومَنْ مَعَك؟ قال: محمد، قيل: وقد أُرْسِلَ إليه؟ مَرْحَبًا به ونِعْمَ المَجِيءُ جاء، فأَتَيْتُ على آدَمَ عليه السلام، فَسَلَّمْتُ عليه؛ قال: مَرْحَبًا بكَ مِن ابنٍ ونبيّ، ثم أَتَينا السماءَ الثانية؛ قيل: مَنْ هذا؟ قال: جبريل، قيل: ومَنْ مَعَك؟ قال: محمد، فمِثْلَ ذلك، فأَتيتُ على يحيى وعيسى، فَسَلَّمْتُ عليهما، فقالا: مَرْحَبًا بكَ من أخ ونبيٍّ، ثم أَتَينا السماءَ الثالثة، قيل: مَنْ هذا؟ قال جبريل، قيل: ومَنْ معك؟ قال: محمد؛ فمِثْلَ ذلك، فأَتيتُ على يوسُفَ عليه السلام، فَسَلَّمْتُ عليه، قال: مَرْحَبًا\nبكَ من أخٍ ونبيٍّ، ثم أَتَينا السماءَ الرابعة، فمِثْلَ ذلك، فأتيتُ على إدريسَ عليه السلام، فَسَلَّمْتُ عليه، فقال: مَرْحَبًا بكَ من أخٍ ونبيٍّ، ثم أَتَينا السماءَ الخامسة، فمِثْلَ ذلك، فأتيتُ على هارونَ عليه السلام، فَسَلَّمْتُ عليه؛ قال: مَرْحَبًا بك من أخٍ ونبيٍّ. ثم أَتَينا السماءَ السادسة، فمِثْلَ ذلك، ثم أَتيتُ على موسى عليه السلام، فَسَلَّمْتُ عليه، فقال: مَرْحَبًا بكَ من أخٍ ونبيٍّ، فلمَّا جاوَزْتُهُ بكي، قيل: ما يُبْكِيك؟ قال يا ربِّ، هذا الغُلامُ الذي بَعَثْتَه بعدي، يَدخلُ من أمَّته الجنَّةَ أكثرُ و أفضلُ ممَّا يَدخلُ من أمَّتي، ثم أتينا السماءَ السابعة، فمثلَ ذلك، فأَتيتُ على إبراهيمَ عليه السلام، فسلّمتُ عليه، فقال: مَرْحَبًا بك من ابنٍ ونبيٍّ، ثم رُفِعَ لي البيتُ المَعْمُور، فسألتُ جبريل، فقال: هذا البيتُ المَعْمُور؛ يُصلِّي فيه كلَّ يوم سبعون ألفَ مَلَك، فإذا خرجُوا منه لم يعودُوا فيه آخِرَ ما عليهم، ثم رُفِعَتْ لي سِدْرَةُ المُنتهى، فإذا نَبْقُها مثلُ قِلال هَجَر، وإذا وَرَقُها مثلُ آذان الفِيَلَة، وإذا في أصلها أربعةُ أنهار: نَهْرانِ باطنان ونَهْرانِ، ظاهران فسألتُ جبريلَ فقال: أمَّا الباطنانِ ففي الجنَّة، وأمَّا الظَّاهرانِ فالفُراتُ والنَّيل، ثم فُرضَتْ عَلَيَّ خمسون صلاة، فأَتيتُ على موسى فقال: ما صنعتَ؟ قلتُ: فُرضَتْ عَلَيَّ خمسون صلاة، قال: إنِّي أعلمُ بالنَّاس منك؛ إنِّي عالَجْتُ بني إسرائيل أشدَّ المُعالجة، وإنَّ\nأمَّتَك لن يُطيقُوا ذلك، فارجع إلى ربِّك، فاسأله أَنْ يُخفِّف عنك، فَرَجَعْتُ إلى ربِّي، فسألتُه أنْ يُخفِّف عنِّي، فجعلَها أربعين، ثم رَجَعْتُ إلى موسى عليه السلام، فقال: ما صنعتَ؟ قلتُ: جعلَها أربعين فقال لي مثلَ مَقالتِه الأولى، فَرَجَعْتُ إلى ربِّي فجعلَها ثلاثين، فأتيتُ على موسى عليه السلام فأخبرتُه، فقالَ لي مثلَ مَقالتِه الأولى، فرَجَعْتُ إلى ربِّي، فجعلَها عشرين، ثم عَشْرَةً، ثم خمسةً، فأتيتُ على موسى عليه السلام، فقالَ لي مثلَ مَقالته الأولى، فقلتُ: إِنِّي أَسْتَحْيِي من ربِّي عز وجل أَنْ أرْجِعَ إليه، فنُودِيَ أنْ قد أمْضَيْتُ فريضَتي، وخَفَّفْتُ عن عبادي، وأَجْزي بالحسنةِ عَشْرَ أَمثالِها."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

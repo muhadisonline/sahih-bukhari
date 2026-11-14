@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-mmUd5w3C7nXDghHAFy439b6nDnXYTB8GCa2tupIv0xc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٥٢٠ — أرسلك أبو طلحة؟ | رياض الصالحين</title>
 <meta name="description" content="الحديث ٥٢٠ من رياض الصالحين، كتاب المقدمات، . وعن أنس رضي الله عنه قال: قال أبو طلحة لأم سليم: قد سمعت صوت رسول الله صلى الله عليه وسلم ضعيفاً أعرف فيه الجوع، فهل عندك من شيء؟ فقالت: نعم، فأخرجت أقراصاً من شعير، ثم أخذت خماراً لها، فلفت…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -65,16 +67,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ٥٢٠" data-url="https://sunan.online/riyad/520/">انسخ المتن</button>
   <a href="/riyad/521/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -93,35 +86,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٢٠ — أرسلك أبو طلحة؟ | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":520,"articleBody":"وعن أنس رضي الله عنه قال: قال أبو طلحة لأم سليم: قد سمعت صوت رسول الله صلى الله عليه وسلم ضعيفاً أعرف فيه الجوع، فهل عندك من شيء؟ فقالت: نعم، فأخرجت أقراصاً من شعير، ثم أخذت خماراً لها، فلفت الخبز ببعضه، ثم دسته تحت ثوبي وردتني ببعضه، ثم أرسلتني إلى رسول الله صلى الله عليه وسلم فذهبت به، فوجدت رسول الله صلى الله عليه وسلم جالساً في المسجد، ومعه الناس، فقمت عليهم، فقال لي رسول الله صلى الله عليه وسلم \"أرسلك أبو طلحة؟\" فقلت: نعم، فقال: \"ألطعام\" فقلت: نعم، فقال رسول الله صلى الله عليه وسلم: \"قوموا\" فانطلقوا بين أيديهم حتى جئت أبا طلحة فأخبرته، فقال أبو طلحة: يا أم سليم: قد جاء رسول الله بالناس وليس عندنا ما نطعمهم؟ فقالت: الله ورسوله أعلم. فانطلق أبو طلحة حتى لقي رسول الله صلى الله عليه وسلم فأقبل رسول الله صلى الله عليه وسلم معه حتى دخلا، فقال رسول الله صلى الله عليه وسلم: “هلمى ما عندك يا أم سليم\" فأتت بذلك الخبز، فأمر به رسول الله صلى الله عليه وسلم ففت وعصرت عليه أم سليم عكة فآدمته، ثم قال فيه رسول الله صلى الله عليه وسلم ما شاء الله أن يقول، ثم قال: \"ائذن لعشرة\" فأذن لهم، فأكلوا حتى شبعوا ثم خرجوا، ثم قال: \"ائذن لعشرة\" فأذن لهم، فأكلوا حتى شبعوا، ثم خرجوا، ثم قال: \"ائذن لعشرة\" فأذن لهم حتى أكل القوم كلهم وشبعوا، والقوم سبعون رجلاً أو ثمانون. ((متفق عليه)).\n\n وفي رواية: فما زال يدخل عشرة ويخرج عشرة، حتى لم يبق منهم أحد إلا دخل، فأكل حتى شبع، ثم هيأها فإذا هي مثلها حين اكلوا منها.\n\nوفي رواية: فأكلوا عشرة عشرة، حتى فعل ذلك بثمانين رجلا، ثم أكل النبي صلى الله عليه وسلم بعد ذلك وأهل البيت، وتركوا سؤراً.\n\nوفي رواية: ثم أفضلوا ما بلغوا جيرانهم.\n\nوفي رواية عن أنس قال: جئت رسول الله صلى الله عليه وسلم يوماً، فوجدته جالساً مع أصحابه، وقد عصب بطنه بعصابة، فقلت لبعض أصحابه: لم عصب رسول الله صلى الله عليه وسلم بطنه؟ فقالوا: من الجوع، فذهبت إلى أبي طلحة، وهو زوج أم سليم بنت ملحان، فقلت: يا أبتاه، قد رأيت رسول الله صلى الله عليه وسلم عصب بطنه بعصابة، فسألت بعض أصحابه، فقالوا: من الجوع. فدخل أبو طلحة على أمي فقال: هل من شيء؟ قالت: نعم عندي كسر من خبز وتمرات، فإن جاءنا رسول الله صلى الله عليه وسلم وحده أشبعناه وإن جاء آخر معه قل عنهم، وذكر تمام الحديث."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

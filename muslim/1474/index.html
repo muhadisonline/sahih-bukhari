@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-NBdif/aGluBFkfS/yJ0vnX3rXXR/zGAdlgF5ayz1u00='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٧٤ — بَلْ شَرِبْتُ عَسَلًا عَنْدَ زَيْنَبَ بِنْتِ جَحْشٍ وَلَنْ أَعُودَ لَهُ | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٤٧٤ من صحيح مسلم، كتاب الطلاق، باب وجوب الكفارة على من حرم امرأته ولم ينو الطلاق. وحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حدثنا حَجَّاجُ بْنُ مُحَمَّدٍ. أَخْبَرَنا ابْنُ جُرَيْجٍ. أَخْبَرَنِي عَطَاءٌ؛ أَنَّهُ سَمِعَ عُبَيْدَ بْنَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -70,16 +72,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٤٧٤" data-url="https://sunan.online/muslim/1474/">انسخ المتن</button>
   <a href="/muslim/1475/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -98,35 +91,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٧٤ — بَلْ شَرِبْتُ عَسَلًا عَنْدَ زَيْنَبَ بِنْتِ جَحْشٍ وَلَنْ أَعُودَ لَهُ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1474,"articleBody":"وحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حدثنا حَجَّاجُ بْنُ مُحَمَّدٍ. أَخْبَرَنا ابْنُ جُرَيْجٍ. أَخْبَرَنِي عَطَاءٌ؛ أَنَّهُ سَمِعَ عُبَيْدَ بْنَ عُمَيْرٍ يُخْبِرُ؛ أَنَّهُ سَمِعَ عائشة تخبر النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَانَ يَمْكُثُ عَنْدَ زَيْنَبَ بِنْتِ جَحْشٍ فَيَشْرَبُ عَنْدَهَا عَسَلًا. قالت؛ فتواطيت أنا وحفصة؛ أن أيتنا مادخل عَلَيْهَا النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَلْتَقُلْ؛ إِنِّي أَجِدُ مِنْكَ رِيحَ مَغَافِيرَ. أَكَلْتَ مَغَافِيرَ؟ فَدَخَلَ عَلَى إِحْدَاهُمَا فقَالَت ذَلِكَ لَهُ. فقَالَ:\n\"بَلْ شَرِبْتُ عَسَلًا عَنْدَ زَيْنَبَ بِنْتِ جَحْشٍ وَلَنْ أَعُودَ لَهُ\" فَنَزَلَ: {لِمَ تُحَرِّمُ مَا أحل الله لك} [٦٦ /التحريم/ ١]\nإلى قوله: إن تتوبا (لعائشة وحفصة) [٦٦ / التحريم / ٤] وَإِذْ أَسَرَّ النَّبِيُّ إِلَى بَعْضِ أَزْوَاجِهِ حَدِيثًا (لقوله: بل شربت عسلا) [٦٦/التحريم/ ٣].\n\nحدثنا أَبُو كُرَيْبٍ مُحَمَّدُ بْنُ الْعَلَاءِ وَهَارُونُ بْنُ عَبْدِ اللَّهِ. قَالَا: حَدَّثَنَا أَبُو أُسَامَةَ عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ. قَالَتْ:\nكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم يُحِبُّ الْحَلْوَاءَ وَالْعَسَلَ. فَكَانَ، إِذَا صَلَّى الْعَصْرَ، دَارَ عَلَى نِسَائِهِ. فَيَدْنُو مِنْهُنَّ. فَدَخَلَ عَلَى حَفْصَةَ فَاحْتَبَسَ عَنْدَهَا أَكْثَرَ مِمَّا كَانَ يَحْتَبِسُ. فَسَأَلْتُ عَنْ ذَلِكَ، فَقِيلَ لِي: أَهْدَتْ لَهَا امْرَأَةٌ مِنْ قَوْمِهَا عُكَّةً مِنْ عَسَلٍ. فَسَقَتْ رسول الله صلى الله عليه وسلم\nمنه شَرْبَةً. فَقُلْتُ: أَمَا وَاللَّهِ! لَنَحْتَالَنَّ لَهُ. فَذَكَرْتُ ذَلِكَ لِسَوْدَةَ. وَقُلْتُ: إِذَا دَخَلَ عَلَيْكِ فَإِنَّهُ سَيَدْنُو مِنْكِ. فَقُولِي لَهُ: يَا رَسُولَ اللَّهِ! أكلت مغافير؟ فإنه سقول لَكِ: لَا. فَقُولِي لَهُ: مَا هَذِهِ الرِّيح. (وَكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَشْتَدُّ عَلَيْهِ أَنْ يُوجَدَ مِنْهُ الرِّيحُ) فَإِنَّهُ سَيَقُولُ لَكِ: سَقَتْنِي حَفْصَةُ شَرْبَةَ عَسَلٍ. فَقُولِي لَهُ: جَرَسَتْ نَحْلُهُ الْعُرْفُطَ. وَسَأَقُولُ ذَلِكِ لَهُ. وَقُولِيهِ أَنْتِ يَا صَفِيَّةُ. فَلَمَّا دَخَلَ عَلَى سَوْدَةَ. قَالَت تَقُولُ سَوْدَةُ: وَالَّذِي لَا إِلَهَ إلا هو! لقد كدت أنا أُبَادِئَهُ بِالَّذِي قُلْتِ لِي. وَإِنَّهُ لَعَلَى الْبَابِ، فَرَقًا مِنْكِ. فَلَمَّا دَنَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَت: يَا رَسُولَ اللَّهِ! أَكَلْتَ مَغَافِيرَ؟ قَالَ: \"لَا\" قَالَت: فَمَا هَذِهِ الرِّيح؟ قَالَ: \"سَقَتْنِي حَفْصَةُ شَرْبَةَ عَسَلٍ\" قَالَت: جَرَسَتْ نَحْلُهُ الْعُرْفُطَ. فَلَمَّا دَخَلَ عَلَيَّ قُلْتُ لَهُ مِثْلَ ذَلِكَ. ثُمَّ دَخَلَ عَلَى صَفِيَّةَ فقَالَت بِمِثْلِ ذَلِكَ فَلَمَّا دَخَلَ عَلَى حَفْصَةَ قَالَت: يَا رَسُولَ اللَّهِ! أَلَا أَسْقِيكَ مِنْهُ؟ قَالَ: \"لَا حَاجَةَ لِي بِهِ\". قَالَت تَقُولُ سَوْدَةُ: سُبْحَانَ اللَّهِ! وَاللَّهِ! لَقَدْ حَرَمْنَاهُ. قَالَت قلت لها: اسكتي.\n\nقال أبو إسحاق إبراهيم. حدثنا الحسن بن بشر بن القاسم. ححدثنا أَبُو أُسَامَةَ، بِهَذَا، سَوَاءً. وحَدَّثَنِيهِ سُوَيْدُ بْنُ سَعِيدٍ. حَدَّثَنَا عَلِيُّ بْنُ مسهر عن هشام بن عروة، بهذا الإسناد، ونحوه."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

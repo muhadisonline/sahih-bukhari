@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>أبواب ما جاء في الجنائز — سنن ابن ماجه</title>
 <meta name="description" content="أبواب ما جاء في الجنائز من سنن ابن ماجه. 205 حديثًا، من 1433 إلى 1637.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">أبواب ما جاء في الجنائز</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">٢٠٥ حديثًا</p>
 <h2 class="bab-label">باب ما جاء في عيادة المريض</h2><a class="entry" href="/ibnmajah/1433/"><span class="n">١٤٣٣</span><span class="ttl">لِلْمُسْلِمِ عَلَى الْمُسْلِمِ سِتَّةٌ…</span></a><a class="entry" href="/ibnmajah/1434/"><span class="n">١٤٣٤</span><span class="ttl">لِلْمُسْلِمِ عَلَى الْمُسْلِمِ أَرْبَعُ خِلَالٍ:…</span></a><a class="entry" href="/ibnmajah/1435/"><span class="n">١٤٣٥</span><span class="ttl">خَمْسٌ مِنْ حَقِّ الْمُسْلِمِ عَلَى الْمُسْلِمِ:…</span></a><a class="entry" href="/ibnmajah/1436/"><span class="n">١٤٣٦</span><span class="ttl">حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللهِ…</span></a><a class="entry" href="/ibnmajah/1437/"><span class="n">١٤٣٧</span><span class="ttl">حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، حَدَّثَنَا…</span></a><a class="entry" href="/ibnmajah/1438/"><span class="n">١٤٣٨</span><span class="ttl">إِذَا دَخَلْتُمْ عَلَى الْمَرِيضِ فَنَفِّسُوا لَهُ…</span></a><a class="entry" href="/ibnmajah/1439/"><span class="n">١٤٣٩</span><span class="ttl">مَا تَشْتَهِي؟</span></a><a class="entry" href="/ibnmajah/1440/"><span class="n">١٤٤٠</span><span class="ttl">أَتَشْتَهِي شيْئًا، أَتَشْتَهِي كَعْكًا؟</span></a><a class="entry" href="/ibnmajah/1441/"><span class="n">١٤٤١</span><span class="ttl">إِذَا دَخَلْتَ عَلَى مَرِيضٍ فَمُرْهُ أَنْ…</span></a>
@@ -133,35 +135,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

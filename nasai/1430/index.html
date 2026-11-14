@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-m/oBF5FxFiq9ReO6Q11tw3TmSs2zrOTbuyDFZ55yzX8='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٣٠ — خيرُ يومٍ طلعَتْ فيه الشَّمسُ يومُ الجمعة؛ فيه خُلِقَ آدم، وفيه… | سنن النسائي</title>
 <meta name="description" content="الحديث ١٤٣٠ من سنن النسائي، كتاب الجمعة، باب ذكر الساعة التي يستجاب فيها الدعاء يوم الجمعة. أخبرنا قُتيبة بن سعيد قال: حدَّثنا بَكر - يعني ابن مُضَر - عن ابن الهاد، عن محمد بن إبراهيم، عن أبي سلمة بن عبد الرَّحمن عن أبي هريرة قال: أَتَيتُ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -59,16 +61,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ١٤٣٠" data-url="https://sunan.online/nasai/1430/">انسخ المتن</button>
   <a href="/nasai/1431/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -87,35 +80,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٣٠ — خيرُ يومٍ طلعَتْ فيه الشَّمسُ يومُ الجمعة؛ فيه خُلِقَ آدم، وفيه… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1430,"articleBody":"أخبرنا قُتيبة بن سعيد قال: حدَّثنا بَكر - يعني ابن مُضَر - عن ابن الهاد، عن محمد بن إبراهيم، عن أبي سلمة بن عبد الرَّحمن\nعن أبي هريرة قال: أَتَيتُ الطُّورَ، فوجَدْتُ ثَمَّ كَعبًا، فمكثتُ أنا وهو يومًا أُحدِّثه عن رسول الله صلى الله عليه وسلم، ويُحدِّثُني عن التَّوراة، فقلت له: قال رسول الله صلى الله عليه وسلم: \"خيرُ يومٍ طلعَتْ فيه الشَّمسُ يومُ الجمعة؛ فيه خُلِقَ آدم، وفيه أُهبِطَ، وفيه تِيبَ عليه، وفيه قُبِضَ، وفيه تقومُ السَّاعة، ما على الأرض من دابَّةٍ إِلَّا وهي تُصبحُ يومَ الجمعة مُصيخةً حتَّى تَطلُعَ الشَّمسُ شَفَقًا من السَّاعة، إِلَّا ابنَ آدم، وفيه ساعةٌ لا يُصادِفُها مؤمنٌ وهو في الصَّلاة يسألُ الله فيها شيئًا إِلَّا أعطاه إِيَّاه\" فقال كعب: ذلك يومٌ في كُلِّ سَنة. فقلت: بل هي في كُلِّ جمعة. فقرأ كعبٌ التَّوراة، ثُمَّ قال: صدقَ رسولُ الله صلى الله عليه وسلم، هو في كُلِّ جمعة. فخرجتُ فلقِيتُ بَصْرةَ بنَ أبي بَصْرةَ الغِفاريّ، فقال: من أينَ جِئتَ؟ قلت: من الطُّور. قال: لو لقيتُكَ من قَبْلِ أن تأتِيَه لم تأتِه. قلتُ له: ولِمَ؟ قال: إنِّي\nسمعت رسول الله صلى الله عليه وسلم يقول: \"لا تُعمَلُ المَطِيُّ إِلَّا إلى ثلاثة مساجد: المسجدِ الحرام، ومسجدي، ومسجد بيت المقدس\" فلقيتُ عبدَ الله بن سَلام، فقلتُ: لو رأيتَني خرجتُ إلى الطُّور، فلقِيتُ كعبًا، فمكثتُ أنا وهو يومًا أُحدِّثه عن رسول الله صلى الله عليه وسلم، ويُحدِّثني عن التَّوراة، فقلت له: قال رسول الله صلى الله عليه وسلم: \"خيرُ يوم طلعَتْ فيه الشَّمسُ يومُ الجمعة؛ فيه خُلِقَ آدم، وفيه أُهبِطَ، وفيه تِيبَ عليه، وفيه قُبِضَ، وفيه تقومُ السَّاعة، ما على الأرض من دابَّةٍ إِلَّا وهي تُصبِحُ يومَ الجمعة مُصيخةً حتَّى تَطلُعَ الشَّمسُ شَفَقًا من السَّاعة إِلَّا ابنَ آدم، وفيه ساعةٌ لا يُصادِفُها عبدٌ مؤمنٌ وهو في الصَّلاة يَسأَلُ الله شيئًا إلَّا أعطاه إيَّاه\" قال كعب: ذلك يومٌ في كُلِّ سنة، فقال عبد الله بن سلام: كذَبَ كعب، قلتُ: ثُمَّ قرأ كعب، فقال: صدق رسولُ الله صلى الله عليه وسلم، هو في كُلِّ جمعة، فقال عبد الله بن سلام: صدق كعبٌ، إنِّي لأَعلَمُ تلكَ السَّاعة، فقلتُ: يا أخي، حدِّثني بها، قال: هي آخِرُ ساعةٍ من يومِ الجمعة قبلَ أن تغيبَ الشَّمس، فقلتُ: أليسَ قد سمعتَ رسولَ الله صلى الله عليه وسلم يقول: \"لا يُصادِفُها مؤمنٌ وهو في الصَّلاة\"، وليسَتْ تلكَ السَّاعَةَ صلاة. قال: أليسَ قد سمعتَ رسولَ الله صلى الله عليه وسلم يقول: \"مَنْ صَلَّى وجلسَ ينتظِرُ الصَّلاة لم يزَل في صلاة حتَّى تأتيَه الصَّلاةُ الَّتي تَليها \" قلتُ: بلى. قال: فهو كذلك."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

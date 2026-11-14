@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-QGzWatOnvE3HFZd4m6D5aVLzO61x0b0/P7elYfFRszk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٣٧٤ — مَا هَذَا الَّذِي بَلَغَنِي مِنْ حَدِيثِكُمْ؟ (مَا أَدْرِي كَيْفَ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٣٧٤ من صحيح مسلم، كتاب الحج، باب الترغيب في سكن المدينة، والصبر على لأوائها. حدثنا حَمَّادُ بْنُ إسماعيل بن علية. حدثنا أبي عن وهب، عَنْ يَحْيَى بْنِ أَبِي إِسْحَاقَ؛ أَنَّهُ حَدَّثَ عَنْ أَبِي سَعِيدٍ مَوْلَى الْمَهْرِيِّ؛…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -76,16 +78,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٣٧٤" data-url="https://sunan.online/muslim/1374/">انسخ المتن</button>
   <a href="/muslim/1375/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -104,34 +97,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٣٧٤ — مَا هَذَا الَّذِي بَلَغَنِي مِنْ حَدِيثِكُمْ؟ (مَا أَدْرِي كَيْفَ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1374,"articleBody":"حدثنا حَمَّادُ بْنُ إسماعيل بن علية. حدثنا أبي عن وهب، عَنْ يَحْيَى بْنِ أَبِي إِسْحَاقَ؛ أَنَّهُ حَدَّثَ عَنْ أَبِي سَعِيدٍ مَوْلَى الْمَهْرِيِّ؛ أَنَّهُ أَصَابَهُمْ بِالْمَدِينَةِ جَهْدٌ وَشِدَّةٌ. وَأَنَّهُ أَتَى أَبَا سَعِيدٍ الْخُدْرِيَّ. فقَالَ لَهُ:\nإِنِّي كَثِيرُ الْعِيَالِ. وَقَدْ أَصَابَتْنَا شِدَّةٌ. فَأَرَدْتُ أَنْ أَنْقُلَ عِيَالِي إِلَى بَعْضِ الرِّيفِ. فقَالَ أَبُو سَعِيدٍ: لَا تَفْعَلِ. الْزَمِ الْمَدِينَةَ. فَإِنَّا خَرَجْنَا مَعَ نَبِيِّ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَظُنُّ أَنَّهُ قَالَ) حَتَّى قَدِمْنَا عُسْفَانَ. فَأَقَامَ بِهَا لَيَالِيَ. فقَالَ الناس: والله! ما نحن ههنا فِي شَيْءٍ. وَإِنَّ عِيَالَنَا لَخُلُوفٌ. مَا نَأْمَنُ عَلَيْهِمْ. فَبَلَغَ ذَلِكَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فقَالَ: \"مَا هَذَا الَّذِي بَلَغَنِي مِنْ حَدِيثِكُمْ؟ (مَا أَدْرِي كَيْفَ قَالَ) وَالَّذِي أَحْلِفُ بِهِ، أَوْ وَالَّذِي نَفْسِي بِيَدِهِ! لَقَدْ هَمَمْتُ أَوْ إِنْ شِئْتُمْ (لَا أَدْرِي أَيَّتَهُمَا قَالَ) لَآمُرَنَّ بِنَاقَتِي تُرْحَلُ. ثُمَّ لَا أَحُلُّ لَهَا عُقْدَةً حَتَّى أَقْدَمَ الْمَدِينَةَ\". وَقَالَ: \"اللَّهُمَّ! إِنَّ إِبْرَاهِيمَ حَرَّمَ مَكَّةَ فَجَعَلَهَا حَرَمًا. وَإِنِّي حَرَّمْتُ الْمَدِينَةَ حَرَامًا مَا بَيْنَ مَأْزِمَيْهَا. أَنْ لَا يُهْرَاقَ فِيهَا دَمٌ. وَلَا يُحْمَلَ فِيهَا سِلَاحٌ لقتال، ولا يخبط فِيهَا شَجَرَةٌ إِلَّا لِعَلْفٍ. اللَّهُمَّ! بَارِكْ لَنَا فِي مَدِينَتِنَا. اللَّهُمَّ! بَارِكْ لَنَا فِي صَاعَنْا. اللهم! اجعل لَنَا فِي مُدِّنَا. اللَّهُمَّ! بَارِكْ لَنَا فِي صَاعَنْا. اللَّهُمَّ! بَارِكْ لَنَا فِي مُدِّنَا. اللَّهُمَّ! بَارِكْ لَنَا فِي مَدِينَتِنَا. اللَّهُمَّ! اجْعَلْ\nمَعَ الْبَرَكَةِ بَرَكَتَيْنِ وَالَّذِي نَفْسِي بِيَدِهِ! مَا مِنَ الْمَدِينَةِ شِعْبٌ وَلَا نَقْبٌ إِلَّا عَلَيْهِ مَلَكَانِ يَحْرُسَانِهَا حَتَّى تَقْدَمُوا إِلَيْهَا\". (ثُمَّ قَالَ لِلنَّاسِ) \"ارتحلوا\" فارتحلنا. فأقبلنا إلى المدينة. فو الذي نَحْلِفُ بِهِ أَوْ يُحْلَفُ بِهِ! (الشَّكُّ مِنْ حَمَّادٍ) مَا وَضَعَنْا رِحَالَنَا حِينَ دَخَلْنَا الْمَدِينَةَ حَتَّى أَغَارَ عَلَيْنَا بَنُو عَبْدِ اللَّهِ بْنِ غطفان. وما يهيجهم قبل ذلك شيء.\n\nوحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا إِسْمَاعِيل بْنُ علية عن علي بن المبارك. حدثنا يحيى بْنُ أَبِي كَثِيرٍ. حدثنا أَبُو سَعِيدٍ مَوْلَى الْمَهْرِيِّ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ؛ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ:\n\"اللَّهُمَّ! بَارِكْ لَنَا فِي صَاعَنْا وَمُدِّنَا. وَاجْعَلْ مَعَ البركة بركتين\".\n\nوحدثناه أبو بكر بن أبي شيبة. حدثنا عُبَيْدُ اللَّهِ بْنُ مُوسَى. أَخْبَرَنا شَيْبَانُ. (ح) وحدثني إسحاق بن منصور. أخبرنا عبد الصمد. حدثنا حرب (يعني ابن شداد) كِلَاهُمَا عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، بِهَذَا الإسناد، مثله.\n\nوحدثنا قتيبة بن سعيد. حدثنا ليث عن سَعِيدِ بْنِ أَبِي سَعِيدٍ، عَنْ أَبِي سَعِيدٍ مَوْلَى الْمَهْرِيِّ؛ أَنَّهُ جَاءَ أَبَا سَعِيدٍ الْخُدْرِيَّ، لَيَالِي الْحَرَّةِ، فَاسْتَشَارَهُ فِي الْجَلَاءِ مِنَ الْمَدِينَةِ. وَشَكَا إِلَيْهِ أَسْعَارَهَا وَكَثْرَةَ عِيَالِهِ. وَأَخْبَرَهُ أَنْ لَا صَبْرَ لَهُ عَلَى جَهْدِ الْمَدِينَةِ وَلَأْوَائِهَا فقَالَ لَهُ: وَيْحَكَ؛\nلَا آمُرُكَ بِذَلِكَ. إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم يقول:\n\"لا يصبر أحدا عَلَى لَأْوَائِهَا فَيَمُوتَ، إِلَّا كُنْتُ لَهُ شَفِيعًا أَوْ شَهِيدًا يَوْمَ الْقِيَامَةِ، إِذَا كَانَ مُسْلِمًا\".\n\nحدثنا أبو بكر بن أبي شيبة ومحمد بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ وَأَبُو كُرَيْبٍ. جَمِيعًا عَنْ أَبِي أُسَامَةَ (وَاللَّفْظُ لِأَبِي بَكْرٍ وَابْنُ نُمَيْرٍ) قَالَا: حَدَّثَنَا أَبُو أُسَامَةَ عَنْ الوليد بن سعيد. حَدَّثَنِي سَعِيدُ بْنُ عَبْدِ الرَّحْمَنِ بْنِ أَبِي سَعِيدٍ الْخُدْرِيِّ؛ أَنَّ عَبْدَ الرَّحْمَنِ حَدَّثَهُ عَنْ أَبِيهِ أَبِي سَعِيدٍ؛ أَنَّهُ سَمِعَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ:\n\"إِنِّي حَرَّمْتُ مَا بَيْنَ لَابَتَيِ الْمَدِينَةِ. كَمَا حَرَّمَ إِبْرَاهِيمُ مَكَّةَ\" قَالَ: ثُمَّ كَانَ أَبُو سَعِيدٍ يَأْخُذُ (وقَالَ أَبُو بَكْرٍ: يَجِدُ) أَحَدَنَا فِي يَدِهِ الطير، فيفكه من يده، ثم يرسله."}</script>
 </body>
 </html>

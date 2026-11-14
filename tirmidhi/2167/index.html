@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-L82dP84Tu1iZkf1Uzu0wG5oURfdU4L4WEj1iWEcLIEU='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢١٦٧ — مَنْ قَتَلَ نَفْسَهُ بسُمّ عُذِّبَ في نارِ جَهَنَّمَ | جامع الترمذي</title>
 <meta name="description" content="الحديث ٢١٦٧ من جامع الترمذي، أبواب الطب عن رسول الله صلى الله عليه وسلم، باب من قتل نفسه بسم أو غيره. حَدَّثَنا مُحمَّدُ بن العَلاءِ، قال: حَدَّثَنا وَكيعٌ وأبو مُعاوِيةَ، عن الأعْمَشِ، عن أبي صَالحٍ عن أبي هُرَيرَةَ، عن النبيِّ صلى الله…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٢١٦٧" data-url="https://sunan.online/tirmidhi/2167/">انسخ المتن</button>
   <a href="/tirmidhi/2168/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢١٦٧ — مَنْ قَتَلَ نَفْسَهُ بسُمّ عُذِّبَ في نارِ جَهَنَّمَ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":2167,"articleBody":"حَدَّثَنا مُحمَّدُ بن العَلاءِ، قال: حَدَّثَنا وَكيعٌ وأبو مُعاوِيةَ، عن الأعْمَشِ، عن أبي صَالحٍ\nعن أبي هُرَيرَةَ، عن النبيِّ صلى الله عليه وسلم نَحْوَ حَديثِ شُعْبَةَ، عن الأعْمَشِ.\nهذا حَديثٌ صَحيحٌ، وهو أصَحُّ من الحَديثِ الأوَّلِ.\nهكذا رُويَ هذا الحَديثُ عن الأعْمَشِ، عن أبي صالحٍ، عن أبي هُرَيرَةَ، عن النبيِّ صلى الله عليه وسلم.\nورَوَى مُحَمَّدُ بن عَجْلانَ، عن سَعيدٍ المَقْبُريِّ، عن أبي هُرَيرَةَ، عن النبيِّ صلى الله عليه وسلم قال: \"مَنْ قَتَلَ نَفْسَهُ بسُمّ عُذِّبَ في نارِ جَهَنَّمَ\". ولم يذكُر فيه: \"خالِدًا مُخَلَّدًا فيها أبَدًا\". وهكذا رواهُ أبو\nالزِّنادِ، عن الأعْرَجِ، عن أبي هُرَيرَةَ، عن النبيِّ صلى الله عليه وسلم.\nوهذا أصَحُّ، لأنَّ الرواياتِ إنَّما تَجيءُ بأنَّ أهْلِ التَّوْحيدِ يُعذَّبونَ في النارِ ثُمَّ يُخْرَجونَ مِنها ولا يُذكَر أَنَّهُمْ يُخَلَّدون فيها."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

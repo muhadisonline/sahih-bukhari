@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-c9uSMZzhSfl1puAgMBYv54TlUbJOFoIQoTtf1I+G1YA='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٥٨ — أرْسَلكَ أبو طَلْحةَ؟ | جامع الترمذي</title>
 <meta name="description" content="الحديث ٣٩٥٨ من جامع الترمذي، أبواب المناقب عن رسول الله صلى الله عليه وسلم، باب. حَدَّثنا إسحاقُ بن موسى الأنْصَاريُّ، قَال: حَدَّثنا مَعْنٌ، قال: عَرضْتُ على مَالكِ بن أنَسٍ، عن إسحاقَ بن عَبد اللهِ بن أبي طَلْحةَ أنَّهُ سَمعَ أنسَ بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٩٥٨" data-url="https://sunan.online/tirmidhi/3958/">انسخ المتن</button>
   <a href="/tirmidhi/3959/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٥٨ — أرْسَلكَ أبو طَلْحةَ؟ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3958,"articleBody":"حَدَّثنا إسحاقُ بن موسى الأنْصَاريُّ، قَال: حَدَّثنا مَعْنٌ، قال: عَرضْتُ على مَالكِ بن أنَسٍ، عن إسحاقَ بن عَبد اللهِ بن أبي طَلْحةَ\nأنَّهُ سَمعَ أنسَ بن مَالكٍ يَقولُ: قال أبو طَلْحةَ لأُمِّ سُلَيْمٍ: لقد سَمِعتُ صوْتَ رَسولِ اللهِ صلى الله عليه وسلم ضَعيفًا أعْرفُ فيهِ الْجُوعَ، فَهلْ عِنْدكِ\nمن شَيْءٍ؟ فقالت: نَعَمْ، فَأخْرجَتْ أقْراصًا من شَعِيرٍ، ثُمَّ أخْرجَتْ خِمارًا لَها، فَلفَّتِ الْخُبْزَ بِبعْضهِ، ثُمَّ دَسَّتْهُ في يَدِي، وَرَدَّتْني بِبَعْضهِ، ثُمَّ أرْسَلتْني إلى رَسولِ اللهِ صلى الله عليه وسلم، قال: فَذَهَبْتُ بهِ إلَيْهِ، فَوجَدْتُ رَسولَ اللهِ صلى الله عليه وسلم جَالسًا في المَسْجدِ وَمَعهُ النَّاسُ، قال: فَقُمتُ عَليْهمْ، فقال رَسولُ اللهِ صلى الله عليه وسلم: \"أرْسَلكَ أبو طَلْحةَ؟ \" فَقلْتُ: نَعَمْ. قال: \"بِطَعامٍ؟ \" فَقُلْتُ: نَعَمْ.\nفقال رَسولُ اللهِ صلى الله عليه وسلم لمن مَعهُ: \"قُومُوا\". قال: فَانْطلقُوا، فَانْطَلقْتُ بَيْنَ أيْدِيهمْ حتَّى جِئْتُ أبا طَلْحةَ فَأخْبرتُهُ، فقال أبو طَلْحةَ: يَا أُمَّ سُليْمٍ قد جاء رسولُ الله صلى الله عليه وسلم بالناس وليس عندنا ما نُطعِمُهم. قالت أُمُّ سلَيْم: اللهُ وَرَسولهُ أعْلمُ. قال: فَانْطَلقَ أبو طَلْحةَ حتَّى لَقِيَ رَسولَ اللهِ صلى الله عليه وسلم، فَأقْبلَ رَسولُ اللهِ صلى الله عليه وسلم وأبو طَلْحةَ مَعهُ حتَّى دَخلا، فقال رَسولُ اللهِ صلى الله عليه وسلم: \"هَلُمِّي يَا أُمَّ سُليْم مَا عِنْدَكِ\" فَأتَتْهُ بذلكَ الْخُبْزِ، فَامرَ بهِ رَسولُ اللهِ صلى الله عليه وسلم فَفُتَّ، وَعَصَرَتْ أُمُّ سُلَيْمٍ عُكَّةً لَها فَأدَمَتْهُ، ثُمَّ قال فيهِ رَسولُ اللهِ صلى الله عليه وسلم مَا شَاءَ اللهُ أنْ يَقولَ، ثُمَّ قال: \"ائْذَنْ لِعَشَرةٍ\". فأذِنَ لَهُمْ، فأكَلُوا حتى شَبِعُوا، ثُمَّ خَرجُوا، ثُمَّ قال: \"ائْذَنْ لِعَشَرةٍ\"، فَأذِنَ لَهُمْ، فَأكَلُوا حتَّى شَبعُوا، ثُمَّ خَرجُوا، ثم قال: \"ائْذَنْ لعَشَرةٍ\". فأذِنَ لهم، فأكلوا حتى شَبِعُوا، ثم خرجوا، فأكلَ الْقَوْمُ كُلُّهُمْ وَشَبعُوا، وَالْقَوْمُ سَبْعُونَ -\nأوْ ثَمانُونَ - رَجُلًا.\nهذا حديثٌ حَسَنٌ صحيحٌ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

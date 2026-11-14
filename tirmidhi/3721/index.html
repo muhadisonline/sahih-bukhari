@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-vd0hlLSbhDWOZ9Ol38/RHwrCtA//kAQvKaFYvskEI7M='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٧٢١ — وَجَّهْتُ وَجْهِي لِلَّذي فَطرَ السَّماواتِ والأرْضَ حَنِيفًا وَما أنا… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٣٧٢١ من جامع الترمذي، أبواب الدعوات عن رسول الله صلى الله عليه وسلم، باب منه. حَدَّثَنا الحَسنُ بن عَليٍّ الخَلَّالُ، قَال: حَدَّثَنا سُليْمانُ بن دَاودَ الهاشِميُّ، قَال: حَدَّثَنا عَبد الرحمنِ بن أبي الزِّنادِ، عن موسى بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -68,16 +70,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٧٢١" data-url="https://sunan.online/tirmidhi/3721/">انسخ المتن</button>
   <a href="/tirmidhi/3722/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -96,35 +89,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٧٢١ — وَجَّهْتُ وَجْهِي لِلَّذي فَطرَ السَّماواتِ والأرْضَ حَنِيفًا وَما أنا… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3721,"articleBody":"حَدَّثَنا الحَسنُ بن عَليٍّ الخَلَّالُ، قَال: حَدَّثَنا سُليْمانُ بن دَاودَ\nالهاشِميُّ، قَال: حَدَّثَنا عَبد الرحمنِ بن أبي الزِّنادِ، عن موسى بن عُقْبةَ، عن عَبد اللهِ بن الفَضْلِ، عن عَبد الرحمنِ الأعْرجِ، عن عُبَيْدِ اللهِ بن أبي رافعٍ\nعن عَليِّ بن أبي طالبٍ، عن رَسولِ الله صلى الله عليه وسلم: أنَّهُ كَانَ إذا قامَ إلى الصَّلاةِ المَكْتُوبةِ، رَفعَ يَديْهِ حَذْوَ مَنْكِبيْهِ، وَيَصْنعُ ذلكَ إذا قَضى قِراءتَهُ وأرادَ أنْ يَرْكعَ، وَيَصْنعهُ إذا رَفعَ رَأْسهُ من الرُّكُوعِ، ولا يَرْفع يَديْهِ في شَيءٍ من صَلاتهِ وهو قَاعدٌ، فإذا قَامَ من سَجْدتَيْنِ، رَفعَ يَديْهِ كذلك فكبَّر، وَيقول حِينَ يَفْتتحُ الصَّلاةَ بَعْدَ التَّكبيرِ: \"وَجَّهْتُ وَجْهِي لِلَّذي فَطرَ السَّماواتِ والأرْضَ حَنِيفًا وَما أنا من المُشْرِكِينَ، إنَّ صَلاتِي وَنُسُكي وَمَحْياي وَمَماتي للهِ رَبِّ العَالمِينَ، لا شَريكَ لهُ وبذلك أُمِرْتُ وأنا من المُسْلمينَ، اللهُمَّ أنْتَ المَلكُ لا إلهَ إلا أنْتَ، سُبْحانكَ أنْتَ رَبِّي وأنا عَبْدُكَ، ظَلمْتُ نَفْسي، وَاعْترَفْتُ بِذَنْبي، فاغْفرْ لِي ذَنْبي جَمِيعًا، إنَّهُ لا يَغْفرُ الذُّنُوبَ إلا أنْتَ، واهْدني لأحْسنِ الأخْلاقِ، لا يَهْدِي لأحْسنِها إلا أنْتَ، وَاصْرفْ عَنَّي سَيِّئها، لا يَصْرفُ عَنِّي سَيِّئها إلَّا أنْتَ، لَبَّيْكَ وَسَعْديكَ، وأنا بِكَ وَإلَيْكَ، لا مَنْجى منك وَلا مَلْجأَ إلا إليكَ، أسْتَغْفِرُكَ وأتوبُ إلَيْكَ\"، ثُمَّ يَقْرأُ.\nفإذا رَكع كَانَ كلامُهُ في رُكُوعهِ أن يَقولَ: \"اللهُمَّ لكَ رَكَعْتُ، وَبكَ آمَنْتُ، وَلكَ أسْلمْتُ وَأنْتَ رَبِّي، خَشعَ سَمْعي وَبَصرِي وَمُخِّي وَعَظْمي للهِ رَبِّ العَالمينَ\".\nفإذا رَفعَ رَأْسهُ من الرُّكُّوعِ قال: \"سَمعَ اللهُ لمن حَمدهُ\"، ثُمَّ يُتْبِعُها: \"اللَّهُمَّ رَبَّنا لكَ الحَمدُ مِلْءَ السَّماواتِ والأرْضِ، وَمِلْءَ ما\nشِئْتَ من شَيْءٍ بَعْدُ\".\nفإذا سَجدَ قال في سُجُودِهِ: \"اللَّهُمَّ لكَ سَجدْتُ، وَبِكَ آمَنْتُ، وَلكَ أسْلمت، وَأنْتَ رَبِّي، سَجدَ وَجْهي لِلَّذِي خَلَقَهُ، وَشَقَّ سَمْعهُ وَبَصرهُ، تَباركَ اللهُ أحْسنُ الخَالِقينَ\".\nويَقولُ عِنْدَ انْصِرافهِ من الصَّلاةِ: \"اللَّهُمَّ اغْفِرْ لي ما قَدَّمْتُ وَما أخَّرْتُ، وَما أسْرَرْتُ وَما أعْلنْتُ، وَأنْتَ إلهِي لا إله إلا أنْتَ\".\nهذا حديثٌ حَسَنٌ صحيحٌ.\nوَالعملُ على هذا الحديثِ عِندَ الشَّافِعيِّ وَبَعْض أصْحابِنا.\nوقال بَعْضُ أهْلِ العلمِ من أهْلِ الكُوفةِ وَغَيْرِهمْ: يَقولُ هذا في صلاةِ التَّطوعِ، ولا يَقولهُ في المكتوبةِ.\nسَمِعتُ أبا إسماعيلَ التِّرْمِذيَّ يَقولُ: سَمِعتُ سُليْمانَ بن دَاودَ الهاشِميِّ يَقولُ، وذكرَ هذا الحديث، فقال: هذا عِنْدنا مِثْلُ حديثِ الزُّهْرِيِّ، عن سَالمٍ، عن أبيهِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

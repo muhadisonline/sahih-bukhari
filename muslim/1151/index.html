@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-b/0jTcuVI+7T/jCsyCUs4AeS8XhT+ayDxdY4Zcjq9xc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٥١ — إِذَا أَصْبَحَ أَحَدُكُمْ يَوْمًا صَائِمًا، فَلَا يَرْفُثْ وَلَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١١٥١ من صحيح مسلم، كتاب الصيام، باب حفظ اللسان للصائم. حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ عَنْ أَبِي الزناد، عن الأعرج، عن أبي هريرة رضي اللَّهُ عَنْهُ. رِوَايَةً. قَالَ: &quot;إِذَا أَصْبَحَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -81,16 +83,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١١٥١" data-url="https://sunan.online/muslim/1151/">انسخ المتن</button>
   <a href="/muslim/1152/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -109,35 +102,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٥١ — إِذَا أَصْبَحَ أَحَدُكُمْ يَوْمًا صَائِمًا، فَلَا يَرْفُثْ وَلَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1151,"articleBody":"حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ عَنْ أَبِي الزناد، عن الأعرج، عن أبي هريرة رضي اللَّهُ عَنْهُ. رِوَايَةً. قَالَ:\n\"إِذَا أَصْبَحَ أَحَدُكُمْ يَوْمًا صَائِمًا، فَلَا يَرْفُثْ وَلَا يَجْهَلْ. فَإِنِ امْرُؤٌ شَاتَمَهُ أَوْ قَاتَلَهُ، فَلْيَقُلْ: إِنِّي صَائِمٌ. إني صائم\".\n\nوحَدَّثَنِي حَرْمَلَةُ بْنُ يَحْيَى التُّجِيبِيُّ. أَخْبَرَنَا ابْنُ وَهْبٍ. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ. أَخْبَرَنِي سَعِيدُ بْنُ الْمُسَيِّبِ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ؛ سمعت رسول الله صلى الله عليه وسلم يَقُولُ:\n\"قَالَ اللَّهُ عَزَّ وَجَلَّ: كُلُّ عَمَلِ ابْنِ آدَمَ لَهُ إِلَّا الصِّيَامَ. هُوَ لِي وَأَنَا أَجْزِي بِهِ. فَوَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ لَخُلْفَةُ فَمِ الصَّائِمِ أَطْيَبُ عِنْدَ اللَّهِ، مِنْ ريح المسك\".\n\nحَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ بْنِ قَعْنَبٍ وقتيبة بن سعيد. قال: حَدَّثَنَا الْمُغِيرَةُ (وَهُوَ الْحِزَامِيُّ) عَنْ أَبِي الزِّنَادِ، عن الأعرج، عن أبي هريرة رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم:\n\"الصيام جنة\".\n\nوحدثني محمد بن رافع. حدثنا عبد الرزاق. أَخْبَرَنَا ابْنُ جُرَيْجٍ. أَخْبَرَنِي عَطَاءٌ عَنْ أَبِي صَالِحٍ الزَّيَّاتِ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ يَقُولُ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:\n\"قَالَ اللَّهُ عَزَّ وَجَلَّ: كُلُّ عَمَلِ ابْنِ آدَمَ لَهُ إِلَّا الصِّيَامَ. فَإِنَّهُ لِي وَأَنَا أَجْزِي بِهِ. وَالصِّيَامُ جُنَّةٌ. فإذا كان يوم صوم أحدكم فلا يرقث يومئذا ولا يسخب. فإن سابه أحدا أَوْ قَاتَلَهُ، فَلْيَقُلْ: إِنِّي امْرُؤٌ صَائِمٌ. وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ. لَخُلُوفُ فَمِ الصَّائِمِ أَطْيَبُ عِنْدَ اللَّهِ، يَوْمَ الْقِيَامَةِ، مِنْ رِيحِ الْمِسْكِ. وَلِلصَّائِمِ فَرْحَتَانِ يَفْرَحُهُمَا: إِذَا أَفْطَرَ فَرِحَ بِفِطْرِهِ. وإذا لقي ربه فرح بصومه\".\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا أبو معاوية ووكيع عَنِ الْأَعْمَشِ. (ح) وحدثنا زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا جَرِيرٌ عَنْ الْأَعْمَشِ. (ح) وحَدَّثَنَا أَبُو سَعِيدٍ الْأَشَجُّ (وَاللَّفْظُ لَهُ) حَدَّثَنَا وَكِيعٌ. حَدَّثَنَا الْأَعْمَشُ عَنْ أَبِي صَالِحٍ، عن أبي هريرة رضي الله عنه. قال:\nقال رسول الله صلى الله عليه وسلم كل عمل ابن آدم يضاعف الحسنة عشرة أمثالها إلا سَبْعمِائَة ضِعْفٍ. قَالَ اللَّهُ عَزَّ وَجَلَّ: إِلَّا الصَّوْمَ. فَإِنَّهُ لِي وَأَنَا أَجْزِي بِهِ. يَدَعُ شَهْوَتَهُ وَطَعَامَهُ مِنْ أَجْلِي. لِلصَّائِمِ فَرْحَتَانِ: فَرْحَةٌ عِنْدَ فِطْرِهِ، وَفَرْحَةٌ عِنْدَ لِقَاءِ رَبِّهِ. وَلَخُلُوفُ فِيهِ أَطْيَبُ عِنْدَ اللَّهِ مِنْ رِيحِ الْمِسْكِ\".\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا مُحَمَّدُ بْنُ فُضَيْلٍ عَنْ أَبِي سِنَانٍ، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ وَأَبِي سَعِيدٍ رَضِيَ اللَّهُ عَنْهُمَا. قَالَا: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:\n\"إِنَّ اللَّهَ عَزَّ وَجَلَّ يَقُولُ: إِنَّ الصَّوْمَ لِي وَأَنَا أَجْزِي بِهِ. إِنَّ لِلصَّائِمِ فَرْحَتَيْنِ: إِذَا أَفْطَرَ فَرِحَ. وَإِذَا لَقِيَ اللَّهَ فَرِحَ. وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ! لَخُلُوفُ فَمِ الصَّائِمِ أَطْيَبُ عِنْدَ اللَّهِ مِنْ رِيحِ الْمِسْكِ\".\n\nوَحَدَّثَنِيهِ إِسْحَاق بْنُ عُمَرَ بْنِ سَلِيطٍ الْهُذَلِيُّ. حَدَّثَنَا عَبْدُ الْعَزِيزِ (يَعْنِي ابْنَ مُسْلِمٍ) حَدَّثَنَا ضرار بن مرة (وهو ابن سِنَانٍ) بِهَذَا الْإِسْنَادِ. قَالَ: وَقَالَ \"إِذَا لَقِيَ اللَّهَ فَجَزَاهُ، فَرِحَ\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

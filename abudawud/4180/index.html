@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ryBJKUW72EC1JfWsNRnxxvvUcwqmgCbxt6tTuvmZ4Dc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٤١٨٠ — ثلاثَةٌ لا تَقْربُهُم الملائِكةُ: جيفةُ الكافرِ، والمتضمِّخُ… | سنن أبي داود</title>
 <meta name="description" content="الحديث ٤١٨٠ من سنن أبي داود، كتاب الترجل، باب في الخلوق للرجال. حدَّثنا هارونُ بنُ عبدِ الله، حدَّثنا عبدُ العزيز بنُ عبدِ الله الأويسيُّ، حدَّثنا سليمانُ بنُ بلالٍ، عن ثَور بنِ زيدٍ، عن الحسنِ بنِ أبي الحَسَن عن عمارِ بنِ ياسرٍ، أن رسولَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٤١٨٠" data-url="https://sunan.online/abudawud/4180/">انسخ المتن</button>
   <a href="/abudawud/4181/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٤١٨٠ — ثلاثَةٌ لا تَقْربُهُم الملائِكةُ: جيفةُ الكافرِ، والمتضمِّخُ… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":4180,"articleBody":"حدَّثنا هارونُ بنُ عبدِ الله، حدَّثنا عبدُ العزيز بنُ عبدِ الله الأويسيُّ، حدَّثنا سليمانُ بنُ بلالٍ، عن ثَور بنِ زيدٍ، عن الحسنِ بنِ أبي الحَسَن\nعن عمارِ بنِ ياسرٍ، أن رسولَ الله - صلَّى الله عليه وسلم -  قال: \"ثلاثَةٌ لا تَقْربُهُم الملائِكةُ: جيفةُ الكافرِ، والمتضمِّخُ بالخَلُوقِ، والجُنبُ إلا أن يتوضَّأ\".\nوأخرجه أحمد (١٩٦١٣)، وابن عبد البر في \"التمهيد\" ٢/ ١٨٢ - ١٨٣ من طريق محمد بن عبد الله بن الزبير الأسدي، بهذا الإسناد. إسناده صحيح.\nوأخرجه البخاري (٥٨٤٦)، ومسلم (٢١٠١)، والترمذي (٣٠٢٤) و (٣٠٢٥)، والنسائي في \"الكبرى\" (٣٦٧٢ - ٣٦٧٤) و (٩٣٥٤/ ١) و (٩٣٥٤/ ٢) من طرق عن عبد العزيز بن صهيب، به. وجاء عند بعضهم إطلاق النهي عن التزعفر دون ذكر الرجال، لكن قيدته الروايات الأخرى بالرجال.\nوهو في \"مسند أحمد\" (١١٩٧٨)، و \"صحيح ابن حبان\"، (٥٤٦٤) و (٥٤٦٥).\nوالنهي عن التزعفر إنما يختص بالجسد دون الثوب كما يشير إليه كلام ابن عبد البر الآتي عند الحديث (٤١٨٢) فراجعه هناك. إسناده ضعيف لانقطاعه، لأن الحسن بن أبي الحسن -وهو البصري- لم يسمع من عمار بن ياسر فيما قاله ابن عبد البر في \"التمهيد\" ٢/ ١٨٣، والمنذري في \"مختصر سنن أبي داود\" وغيرهما. ="}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

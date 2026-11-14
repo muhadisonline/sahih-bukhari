@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-z6iUG3V++L05KqvFfmBdRTqWBFGGyBtqbd3iNv1gL5M='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٧٧١ — وحَدَّثَنِي أبو الطاهر وحرملة. قالا: أخبرنا ابن وهب. أَخْبَرَنِي… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٧٧١ من صحيح مسلم، كتاب الجهاد والسير، باب رد المهاجرين إلى الأنصار منائحهم من الشجر والثمر حين استغنوا عنها بالفتوح. وحَدَّثَنِي أبو الطاهر وحرملة. قالا: أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنْ ابْنِ شِهَابٍ، عَنْ أَنَسِ بْنِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٧٧١" data-url="https://sunan.online/muslim/1771/">انسخ المتن</button>
   <a href="/muslim/1772/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٧٧١ — وحَدَّثَنِي أبو الطاهر وحرملة. قالا: أخبرنا ابن وهب. أَخْبَرَنِي… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1771,"articleBody":"وحَدَّثَنِي أبو الطاهر وحرملة. قالا: أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنْ ابْنِ شِهَابٍ، عَنْ أَنَسِ بْنِ مَالِكٍ. قَالَ:\nلَمَّا قَدِمَ الْمُهَاجِرُونَ، مِنْ مَكَّةَ، الْمَدِينَةَ قَدِمُوا وَلَيْسَ بِأَيْدِيهِمْ شَيْءٌ. وَكَانَ الْأَنْصَارُ أَهْلَ الْأَرْضِ وَالْعَقَارِ. فَقَاسَمَهُمْ الْأَنْصَارُ عَلَى أَنْ أَعْطَوْهُمْ أَنْصَافَ ثِمَارِ أَمْوَالِهِمْ، كُلَّ عَامٍ.\nويكفونهم العمل والمؤونة. وكانت أم أنس ابن مَالِكٍ، وَهِيَ تُدْعَى أُمَّ سُلَيْمٍ، وَكَانَتْ أُمُّ عبد الله بن أبي طلحة، وكان أَخًا لِأَنَسٍ لِأُمِّهِ، وَكَانَتْ أَعْطَتْ أُمُّ أَنَسٍ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عِذَاقًا لَهَا. فَأَعْطَاهَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أُمَّ أَيْمَنَ، مَوْلَاتَهُ، أُمَّ أُسَامَةَ بْنِ زَيْدٍ.\nقَالَ ابْنُ شِهَابٍ: فَأَخْبَرَنِي أَنَسُ بْنُ مالك؛ أن رسول الله صلى الله عليه وَسَلَّمَ لَمَّا فَرَغَ مِنْ قِتَالِ أَهْلِ خَيْبَرَ. وَانْصَرَفَ إِلَى الْمَدِينَةِ. رَدَّ الْمُهَاجِرُونَ إِلَى الْأَنْصَارِ مَنَائِحَهُمُ الَّتِي كَانُوا مَنَحُوهُمْ مِنْ ثِمَارِهِمْ. قَالَ: فَرَدَّ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِلَى أُمِّي عِذَاقَهَا. وَأَعْطَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أُمَّ أَيْمَنَ مَكَانَهُنَّ مِنْ حَائِطِهِ.\nقَالَ ابْنُ شِهَابٍ: وَكَانَ مِنْ شَأْنِ أُمِّ أَيْمَنَ، أُمِّ أُسَامَةَ بْنِ زَيْدٍ؛ أَنَّهَا كَانَتْ وَصِيفَةً لِعَبْدِ اللَّهِ بْنِ عَبْدِ الْمُطَّلِبِ. وَكَانَتْ مِنْ الْحَبَشَةِ. فَلَمَّا وَلَدَتْ آمِنَةُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، بَعْدَ مَا تُوُفِّيَ أَبُوهُ، فَكَانَتْ أُمُّ أَيْمَنَ تَحْضُنُهُ، حَتَّى كَبَّرَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَأَعْتَقَهَا. ثُمَّ أَنْكَحَهَا زَيْدَ بْنَ حَارِثَةَ. ثُمَّ تُوُفِّيَتْ بَعْدَ مَا تُوُفِّيَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بخمسة أشهر.\n\nحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَحَامِدُ بْنُ عُمَرَ الْبَكْرَاوِيُّ وَمُحَمَّدُ بْنُ عَبْدِ الْأَعْلَى الْقَيْسِيُّ. كُلُّهُمْ عَنْ الْمُعْتَمِرِ (وَاللَّفْظُ لِابْنِ أَبِي شَيْبَةَ). حَدَّثَنَا مُعْتَمِرُ بْنُ سُلَيْمَانَ التَّيْمِيُّ عَنْ أَبِيهِ، عَنْ أَنَسٍ؛\nأَنَّ رَجُلًا (وَقَالَ حَامِدٌ وَابْنُ عَبْدِ الْأَعْلَى: أَنَّ الرَّجُلَ) كَانَ يَجْعَلُ لِلنَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ النَّخْلاتِ مِنْ أَرْضِهِ. حَتَّى فُتِحَتْ عَلَيْهِ قُرَيْظَةُ وَالنَّضِيرِ، فَجَعَلَ، بَعْدَ ذَلِكَ، يَرُدُّ عَلَيِهِ مَا كَانَ أُعْطَاهُ.\nقَالَ أَنَسٌ: وَإِنَّ أَهْلِي أَمَرُونِي أَنْ آتِيَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَأَسْأَلَهُ مَا كَانَ أَهْلُهُ أَعْطَوْهُ أَوْ بَعْضَهُ. وَكَانَ نَبِيُّ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَدْ أَعْطَاهُ أُمَّ أَيْمَنَ. فَأَتَيْتُ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَأَعْطَانِيهِنَّ. فَجَاءَتْ أُمُّ أَيْمَنَ فَجَعَلَتِ الثَّوْبَ فِي عُنُقِي وَقَالَتْ: وَاللَّهِ! لَا نُعْطِيكَاهُنَّ وَقَدْ أَعْطَانِيهِنَّ. فَقَالَ نَبِيُّ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (يَا أُمَّ أَيْمَنَ! اتْرُكِيهِ وَلَكِ\nكَذَا وَكَذَا) وَتَقُولُ: كَلَّا. وَالَّذِي لَا إِلَهَ إِلَّا هُوَ! فَجَعَلَ يَقُولُ كَذَا حَتَّى أَعْطَاهَا عَشْرَةَ أمثاله، أو قريبا من عشرة أمثاله."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-aILNQhydOomh/vTHnrleYl7xxpc87lm8wPS9Pnd9tSw='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٨٢ — لم تَعِدْني هذا وأنا فيهم، لم تعدني هذا ونحن نستغفرُك | سنن النسائي</title>
 <meta name="description" content="الحديث ١٤٨٢ من سنن النسائي، كتاب الكسوف، باب نوع آخر. أخبرنا هلال بن بشر قال: حدَّثنا عبد العزيز بن عبد الصَّمد، عن عطاء بن السَّائب، قال: حدَّثني أبي السَّائب أنَّ عبد الله بن عمرو حدَّثه قال: انكسَفَتِ الشَّمسُ على عهدِ رسول الله صلى…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -68,16 +70,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ١٤٨٢" data-url="https://sunan.online/nasai/1482/">انسخ المتن</button>
   <a href="/nasai/1483/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -96,35 +89,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٨٢ — لم تَعِدْني هذا وأنا فيهم، لم تعدني هذا ونحن نستغفرُك | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1482,"articleBody":"أخبرنا هلال بن بشر قال: حدَّثنا عبد العزيز بن عبد الصَّمد، عن عطاء بن السَّائب، قال: حدَّثني أبي السَّائب\nأنَّ عبد الله بن عمرو حدَّثه قال: انكسَفَتِ الشَّمسُ على عهدِ رسول الله صلى الله عليه وسلم فقام رسولُ الله صلى الله عليه وسلم إلى الصَّلاة وقام الَّذين معَه، فقامَ قيامًا فأطالَ القيام، ثُمَّ ركَعَ، فأطالَ الرُّكوع، ثُمَّ رفَعَ رأسَه، وسجدَ، فأطالَ السُّجود، ثُمَّ رفَعَ رأسَه، وجلسَ، فأطالَ الجلوس، ثُمَّ سَجَدَ، فأطالَ السُّجود، ثُمَّ رفَعَ رأسَه، وقامَ، فصنَعَ في الرَّكعة الثَّانية مِثْلَ ما صنَعَ في الرَّكعة الأولى من القيام والرُّكوع والسُّجود والجلوس، فجعلَ ينفخُ في آخرِ سجودِه من الرَّكعة الثَّانية، ويبكي ويقول: \"لم تَعِدْني هذا وأنا فيهم، لم تعدني هذا ونحن نستغفرُك\" ثُمَّ رفَعَ رأسَه، وانجَلَتِ الشَّمسُ، فقام رسولُ الله صلى الله عليه وسلم، فخطب النَّاس، فحمِدَ الله وأثنى عليه، ثُمَّ قال: \"إِنَّ الشَّمسَ والقمرَ\nآيتانِ من آياتِ الله عز وجل، فإذا رأيتُم كُسوفَ أحَدِهما فاسْعَوا إلى ذِكْرِ الله عز وجل، والَّذي نفسُ محمدٍ بيدِه، لقد أُدنِيَتِ الجنَّةُ منِّي، حتَّى لو بسَطْتُ يدي لَتعاطَيتُ مِنْ قُطوفِها، ولقد أُدنِيَتِ النَّارُ منِّي، حَتَّى لقد جعلتُ أتَّقيها خشيةَ أن تغشاكُم، حتَّى رأيتُ فيها امرأةً من حِمْيَر تُعذَّبُ في هِرَّةٍ ربطَتْها، فلم تدَعْها تأكلُ من خَشاش الأرض، فلا هي أطعَمَتْها ولا هي سَقَتْها حتَّى ماتَتْ، فلقد رأيتُها تنهَشُها إذا أقبلَتْ، وإذا ولَّتْ تنهشُ أليتَها، وحتَّى رأيتُ فيها صاحبَ السِّبتيَّتين أخا بني الدَّعدع يُدفعُ بعصًا ذاتِ شُعبَتين في النَّار، وحتَّى رأيتُ فيها صاحبَ المِحْجَن الَّذي كان يسرِقُ الحاجَّ بمِحْجَنِه متَّكئًا على مِحْجَنِه في النَّار، يقول: إِنَّما سَرَقَ المِحْجَنُ\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب النحل — سنن النسائي</title>
 <meta name="description" content="كتاب النحل من سنن النسائي. 16 حديثًا، من 3672 إلى 3687.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب النحل</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">١٦ حديثًا</p>
 <h2 class="bab-label">ذكر اختلاف ألفاظ الناقلين لخبر النعمان بن بشير في النحل</h2><a class="entry" href="/nasai/3672/"><span class="n">٣٦٧٢</span><span class="ttl">أَكُلَّ وَلَدِكَ نَحَلْتَ؟</span></a><a class="entry" href="/nasai/3673/"><span class="n">٣٦٧٣</span><span class="ttl">أكُلَّ وَلَدِكَ نَحَلْتَهُ؟</span></a><a class="entry" href="/nasai/3674/"><span class="n">٣٦٧٤</span><span class="ttl">أَكُلَّ بَنِيكَ نَحَلْتَ؟</span></a><a class="entry" href="/nasai/3675/"><span class="n">٣٦٧٥</span><span class="ttl">أكُلَّ بَنِيكَ نَحَلْتَهُ؟</span></a><a class="entry" href="/nasai/3676/"><span class="n">٣٦٧٦</span><span class="ttl">أخبرنا أحمدُ بنُ حَرْب قال: حدَّثنا أبو معاوية، عن…</span></a><a class="entry" href="/nasai/3677/"><span class="n">٣٦٧٧</span><span class="ttl">أَكُلَّ وَلَدِكَ نَحَلْتَهُ مثلَ ذا؟</span></a><a class="entry" href="/nasai/3678/"><span class="n">٣٦٧٨</span><span class="ttl">أعطَيْتَ لإخوتِه؟</span></a><a class="entry" href="/nasai/3679/"><span class="n">٣٦٧٩</span><span class="ttl">كلَّ بَنِيكَ نَحَلْتَ مِثْلَ الذي نَحَلْتَ…</span></a><a class="entry" href="/nasai/3680/"><span class="n">٣٦٨٠</span><span class="ttl">أكُلَّ وَلَدِكَ نَحَلْتَ مثلَ ما نَحَلْتَهُ؟</span></a><a class="entry" href="/nasai/3681/"><span class="n">٣٦٨١</span><span class="ttl">يا بشير، ألك ولدٌ سوى هذا؟</span></a><a class="entry" href="/nasai/3682/"><span class="n">٣٦٨٢</span><span class="ttl">يا بَشِير، ألكَ ابنٌ غيرُ هذا؟</span></a><a class="entry" href="/nasai/3683/"><span class="n">٣٦٨٣</span><span class="ttl">هل لك بَنُونَ سِوَاه؟</span></a><a class="entry" href="/nasai/3684/"><span class="n">٣٦٨٤</span><span class="ttl">هل لك ولدٌ غيرُه؟</span></a><a class="entry" href="/nasai/3685/"><span class="n">٣٦٨٥</span><span class="ttl">لكَ ولدٌ غيره؟</span></a><a class="entry" href="/nasai/3686/"><span class="n">٣٦٨٦</span><span class="ttl">هل لكَ بَنُونَ سِواه؟</span></a><a class="entry" href="/nasai/3687/"><span class="n">٣٦٨٧</span><span class="ttl">اِعْدِلُوا بينَ أبنائِكُم، اِعْدِلُوا بين أبنائِكُم</span></a>
@@ -69,35 +71,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

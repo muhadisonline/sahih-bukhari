@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-zPz5WNBafTNhWmOeGFWxMQCsKasOBnjlKFmzgszwztE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٩٩٥ — وحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. كلاهما… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٩٩٥ من صحيح مسلم، كتاب الأشربة، باب النهي عن الانتباذ في المزفت والدباء والحنتم والنقير، و بيان أنه منسوخ، وأنه اليوم حلال، ما لم يصر مسكرا. وحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. كلاهما عَنْ جَرِيرٍ. قَالَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -84,16 +86,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٩٩٥" data-url="https://sunan.online/muslim/1995/">انسخ المتن</button>
   <a href="/muslim/1996/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -112,35 +105,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٩٥ — وحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. كلاهما… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1995,"articleBody":"وحَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ وَإِسْحَاق بْنُ إِبْرَاهِيمَ. كلاهما عَنْ جَرِيرٍ. قَالَ زُهَيْرٌ: حَدَّثَنَا جَرِيرٌ عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ. قَالَ:\nقُلْتُ لِلْأَسْوَدِ: هَلْ سَأَلْتَ أُمَّ الْمُؤْمِنِينَ عَمَّا يُكْرَهُ أَنْ يُنْتَبَذَ فِيهِ؟ قَالَ: نَعَمْ. قُلْتُ: يَا أُمَّ الْمُؤْمِنِينَ! أَخْبِرِينِي عَمَّا نَهَى عَنْهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنْ يُنْتَبَذَ فِيهِ. قَالَتْ: نَهَانَا، أَهْلَ الْبَيْتِ، أَنْ نَنْتَبِذَ فِي الدباء والمزفت.\nقال قلت له: أما ذكرتم الْحَنْتَمَ وَالْجَرَّ؟ قَالَ: إِنَّمَا أُحَدِّثُكَ بِمَا سَمِعْتُ. أَأُحَدِّثُكَ مَا لَمْ أَسْمَعْ؟\n\nوحَدَّثَنَا سَعِيدُ بْنُ عَمْرٍو الأَشْعَثِيُّ. أَخْبَرَنَا عَبْثَرٌ عن الأعمش، عن إبراهيم، عن الأسود، عن عائشة؛\nأن النبي صلى الله عليه وسلم نَهَى عَنِ الدُّبَّاءِ وَالْمُزَفَّتِ.\n\nوحدثني محمد بن حاتم. حدثنا يحيى (وهو الْقَطَّانُ). حَدَّثَنَا سُفْيَانُ وَشُعْبَةُ. قَالَا: حَدَّثَنَا مَنْصُورٌ وَسُلَيْمَانُ وَحَمَّادٌ عَنْ إِبْرَاهِيمَ، عَنْ الْأَسْوَدِ، عَنْ عائشة، عن النبي صلى الله عليه وسلم، بمثله.\n\nحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا الْقَاسِمُ (يَعْنِي ابْنَ الْفَضْلِ). حَدَّثَنَا ثُمَامَةُ بْنُ حَزْنٍ الْقُشَيْرِيُّ. قَالَ:\nلَقِيتُ عَائِشَةَ فَسَأَلْتُهَا عَنِ النَّبِيذِ؟ فَحَدَّثَتْنِي؛ أَنَّ وَفْدَ عَبْدِ الْقَيْسِ قَدِمُوا عَلَى النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَسَأَلُوا النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ النَّبِيذِ؟ فَنَهَاهُمْ أَنْ يَنْتَبِذُوا فِي الدُّبَّاءِ وَالنَّقِيرِ وَالْمُزَفَّتِ وَالْحَنْتَمِ.\n\nوحَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ. حَدَّثَنَا ابْنُ عُلَيَّةَ. حَدَّثَنَا إِسْحَاقُ بْنُ سُوَيْدٍ عَنْ مُعَاذَةَ، عَنْ عَائِشَةَ. قَالَتْ: نَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالنَّقِيرِ وَالْمُزَفَّتِ.\n\nوحَدَّثَنَاه إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا عَبْدُ الْوَهَّابِ الثَّقَفِيُّ. حَدَّثَنَا إِسْحَاقُ بْنُ سُوَيْدٍ، بِهَذَا الْإِسْنَادِ. إِلَّا أَنَّهُ جَعَلَ - مَكَانَ الْمُزَفَّتِ - الْمُقَيَّرَ.\n\nحدثنا يحيى بن يحيى. أخبرنا عبدا بْنُ عَبَّادٍ عَنْ أَبِي جَمْرَةَ، عَنِ ابْنِ عَبَّاسٍ. (ح) وحَدَّثَنَا خَلَفُ بْنُ هِشَامٍ. حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ عَنْ أَبِي جَمْرَةَ. قَالَ: سَمِعْتُ ابْنَ عَبَّاسٍ يَقُولُ:\nقَدِمَ وَفْدُ عَبْدِ الْقَيْسِ عَلَى رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَنْهَاكُمْ عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالنَّقِيرِ وَالْمُقَيَّرِ).\nوَفِي حديث حماد، جَعَلَ - مَكَانَ الْمُقَيَّرِ - الْمُزَفَّتِ.\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا عَلِيُّ بْنُ مُسْهِرٍ عَنْ الشَّيْبَانِيِّ، عَنْ حَبِيبٍ، عَنْ سَعِيدِ بْنِ جُبَيْرٍ، عَنِ ابن عباس. قَالَ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالْمُزَفَّتِ وَالنَّقِيرِ.\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا مُحَمَّدُ بْنُ فُضَيْلٍ عَنْ حَبِيبِ بْنِ أَبِي عَمْرَةَ، عَنْ سَعِيدِ بْنِ جُبَيْرٍ، عَنْ ابْنِ عَبَّاسٍ، قَالَ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالْمُزَفَّتِ وَالنَّقِيرِ. وَأَنْ يُخْلَطَ الْبَلَحُ بِالزَّهْوِ.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ مَهْدِيٍّ عَنْ شُعْبَةَ، عَنْ يَحْيَى الْبَهْرَانِيِّ. قَالَ: سَمِعْتُ ابْنَ عَبَّاسٍ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ جعفر. حدثنا شُعْبَةُ عَنْ يَحْيَى بْنِ أَبِي عُمَرَ، عَنْ ابْنِ عَبَّاسٍ. قَالَ:\nنَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ الدُّبَّاءِ وَالنَّقِيرِ وَالْمُزَفَّتِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

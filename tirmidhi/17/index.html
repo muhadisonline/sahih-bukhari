@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-p4iryqMmXgYrE4MhnwdKBvXVJyzhGs53vkEOZR6ERf8='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٧ — الْتَمِسْ لي ثَلاثةَ أَحْجارٍ | جامع الترمذي</title>
 <meta name="description" content="الحديث ١٧ من جامع الترمذي، أبواب الطهارة، باب في الاستنجاء بالحجرين. حدثنا هَنَّادٌ وقُتَيبةُ، قالا: حدّثنا وَكيعٌ، عن إسرائيلَ، عن أبي إسحاقَ، عن أبي عُبَيدةَ عن عبد الله قال: خَرَجَ النَّبيُّ صلى الله عليه وسلم لِحاجَتِه، فقال:…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -83,16 +85,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ١٧" data-url="https://sunan.online/tirmidhi/17/">انسخ المتن</button>
   <a href="/tirmidhi/18/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -111,35 +104,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٧ — الْتَمِسْ لي ثَلاثةَ أَحْجارٍ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":17,"articleBody":"حدثنا هَنَّادٌ وقُتَيبةُ، قالا: حدّثنا وَكيعٌ، عن إسرائيلَ، عن أبي\nإسحاقَ، عن أبي عُبَيدةَ\nعن عبد الله قال: خَرَجَ النَّبيُّ صلى الله عليه وسلم لِحاجَتِه، فقال: \"الْتَمِسْ لي ثَلاثةَ أَحْجارٍ\" قال: فأَتَيْتُه بِحَجَرينِ وَرَوْثَةٍ، فَأَخَذَ الحَجَرَيْنِ، وَأَلْقَى الرَّوْثَةَ، وقال: \"إنَّهَا رِكْسٌ\".\nوهكذا رَوَى قيسُ بن الرَّبِيع هذا الحديث عن أبي إسحاقَ، عن أبي عُبيدةَ، عن عبد الله، نحوَ حدِيثِ إسرائِيلَ.\nورَوَى مَعْمَرٌ وعَمَّارُ بنُ رُزَيْق، عن أَبي إسحاقَ، عن عَلْقمة، عن عبدِ الله.\nورَوَى زُهَير، عن أبي إسحاقَ، عن عبد الرحمن بن الأَسْوَدِ، عن أبيه، عن عبد الله.\nورَوَى زكريا بن أبي زائِدَةَ، عن أَبي إسحاقَ، عن عبد الرحمن بن يزيدَ، عن الأَسْود بن يزيد، عن عبدِ الله.\nوهذا حديثٌ فيه اضطِرابٌ.\n..................................\n..................................\nسَأَلْتُ عبدَ الله بنَ عبد الرحمن: أَيُّ الرِّوايَاتِ في هذا عن أبي إِسحاق أَصَحُّ؟ فلم يَقْض فيه بشيءٍ.\nوسأَلتُ محمدًا عن هذا، فلَمْ يَقْضِ فيه بشيءٍ، وكأَنَّه رَأَى حديثَ زهيرٍ، عن أبي إسحاق، عن عبد الرحمن بن الأَسود، عن أبيه، عن عبد الله أَشبَهَ، ووَضَعَه في كتاب \"الجامع\".\nوأَصَحُّ شيءٍ في هذا عندي حديثُ إسرائيلَ وقيسٍ، عن أبي إسحاقَ، عن أبي عُبيدةَ، عن عبد الله، لأنَّ إسرائيلَ أثبتُ وأحفظُ لحديث أبي إسحاق من هؤلاءِ، وتابَعَه على ذلك قيسُ بن الرَّبيعِ.\nوسمعتُ أبا موسى محمدَ بنَ المُثنَّى يقول: سمعت عبدَ الرحمنِ بن مَهْدي يقول: ما فاتَنِي الذي فاتني من حديث سفيان الثَّوْريِّ عن أبي إسحاقَ إلَّا لِمَا اتَّكَلْتُ به على إسرائيل، لأنه كان يَأْتي به أَتمَّ.\nوزهير في أبي إسحاقَ ليس بذاكَ، لأن سماعه منه بأَخَرَةٍ، سمعتُ أحمدَ بن الحسنِ يقول: سمعتُ أحمدَ بنَ حَنبلٍ يقول: إذا سمعتَ الحديث عن زائدةَ وزهير، فلا تُبَالي أَنْ لا تَسمَعَه مِن غيرهما، إِلَّا حديثَ أبي إسحاقَ.\nوأبو إسحاق اسمه: عَمْرو بن عبد الله السَّبِيعيُّ الهَمْدانيُّ.\nوأبو عُبَيدة بن عبد الله بن مسعودٍ لم يَسمَعْ من أبيه، ولا نَعرفُ اسمَه.\nحدثنا محمدُ بن بشَّار، قال: حدثنا محمد بن جعفرٍ، عن شعبةَ، عن عَمْرو بن مُرَّة قال: سألتُ أبا عُبيدةَ بن عبد الله: هل تذكرُ مِن عبد الله شيئًا؟ قال: لا."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

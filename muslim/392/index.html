@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eNZ7/GnzMeH++WNUPslciiPmrYbYDTNTu52kYlFT1wc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٢ — سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ | صحيح مسلم</title>
 <meta name="description" content="الحديث ٣٩٢ من صحيح مسلم، كتاب الصلاة، باب إثبات التكبير في كل خفض ورفع في الصلاة، إلا رفعه من الركوع فيقول فيه: سمع الله لمن حمده. وحَدَّثَنَا يَحْيَى بن يحيى. قال: قرأت على مَالِكٍ عَنْ ابْنِ شِهَابٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٣٩٢" data-url="https://sunan.online/muslim/392/">انسخ المتن</button>
   <a href="/muslim/393/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٢ — سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":392,"articleBody":"وحَدَّثَنَا يَحْيَى بن يحيى. قال: قرأت على مَالِكٍ عَنْ ابْنِ شِهَابٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ؛ أَنَّ أَبَا هُرَيْرَةَ كَانَ يُصَلِّي لَهُمْ فَيُكَبِّرُ كُلَّمَا خَفَضَ وَرَفَعَ. فَلَمَّا انْصَرَفَ قَالَ:\nوَاللَّهِ! إِنِّي لَأَشْبَهُكُمْ صَلَاةً بِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا ابْنُ جُرَيْجٍ. أَخْبَرَنِي ابْنُ شِهَابٍ عَنْ أَبِي بَكْرِ بْنِ عَبْدِ الرَّحْمَنِ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ:\nكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا قَامَ إِلَى الصَّلَاةِ\nيُكَبِّرُ حِينَ يَقُومُ. ثُمَّ يُكَبِّرُ حِينَ يَرْكَعُ. ثُمَّ يَقُولُ \"سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ\" حِينَ يَرْفَعُ صُلْبَهُ مِنَ الرُّكُوعِ. ثُمَّ يَقُولُ وَهُوَ قَائِمٌ \"رَبَّنَا وَلَكَ الْحَمْدُ\" ثُمَّ يُكَبِّرُ حِينَ يَهْوِي سَاجِدًا. ثُمَّ يُكَبِّرُ حِينَ يَرْفَعُ رَأْسَهُ. ويكبر حِينَ يَسْجُدُ. ثُمَّ يُكَبِّرُ حِينَ يَرْفَعُ رَأْسَهُ. ثُمَّ يَفْعَلُ مِثْلَ ذَلِكَ فِي الصَّلَاةِ كُلِّهَا حَتَّى يَقْضِيَهَا. وَيُكَبِّرُ حِينَ يَقُومُ مِنَ الْمَثْنَى بَعْدَ الْجُلُوسِ.\nثُمَّ يَقُولُ أَبُو هُرَيْرَةَ: إِنِّي لَأَشْبَهُكُمْ صَلَاةً بِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\n\nحَدَّثَنِي مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا حُجَيْنٌ. حَدَّثَنَا الليث عَنْ عُقَيْلٍ، عَنْ ابْنِ شِهَابٍ. أَخْبَرَنِي أَبُو بكر بن عبد الرحمن ابن الْحَارِثِ؛ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُ: كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم إذا قَامَ إِلَى الصَّلَاةِ يُكَبِّرُ حِينَ يَقُومُ. بِمِثْلِ حَدِيثِ ابْنِ جُرَيْجٍ. وَلَمْ يَذْكُرْ قَوْلَ أَبِي هُرَيْرَةَ: إِنِّي أَشْبَهُكُمْ صَلَاةً. بِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\n\nوحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنْ ابْنِ شِهَابٍ. أَخْبَرَنِي أَبُو سلمة بن عبد الرحمن؛ أن أبا هريرة كَانَ، حِينَ يَسْتَخْلِفُهُ مَرْوَانُ عَلَى الْمَدِينَةِ، إِذَا قَامَ لِلصَّلَاةِ الْمَكْتُوبَةِ كَبَّرَ. فَذَكَرَ نَحْوَ حَدِيثِ ابْنِ جُرَيْجٍ. وَفِي حَدِيثِهِ؛ فَإِذَا قَضَاهَا وَسَلَّمَ أَقْبَلَ عَلَى أَهْلِ الْمَسْجِدِ قَالَ: وَالَّذِي نَفْسِي بِيَدِهِ إِنِّي لَأَشْبَهُكُمْ صَلَاةً بِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ مِهْرَانَ الرَّازِيُّ. حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ. حَدَّثَنَا الأَوْزَاعِيُّ عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ أَبِي سَلَمَةَ؛ أَنَّ أَبَا هُرَيْرَةَ كَانَ يُكَبِّرُ فِي الصَّلَاةِ كُلَّمَا رَفَعَ وَوَضَعَ. فَقُلْنَا: يَا أَبَا هُرَيْرَةَ! مَا هَذَا التَّكْبِيرُ! قَالَ: إِنَّهَا لَصَلَاةُ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا يَعْقُوبُ (يَعْنِي ابْنَ عَبْدِ الرَّحْمَنِ) عَنْ سُهَيْلٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ؛ أَنَّهُ كَانَ يُكَبِّرُ كُلَّمَا خَفَضَ وَرَفَعَ. وَيُحَدِّثُ؛ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَانَ يَفْعَلُ ذَلِكَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

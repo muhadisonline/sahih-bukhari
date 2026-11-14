@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-QkmzsCVTeJ4KZjBpMq9NPJKba2l+T4vGAYHoT0yTK60='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٧٣٩ — مُرِي غُلامَكِ النَّجَّارَ أنْ يعملَ لي أعْوادًا أجْلِسُ عليهنَّ إذا… | سنن النسائي</title>
 <meta name="description" content="الحديث ٧٣٩ من سنن النسائي، كتاب المساجد، باب الصلاة على المنبر. أخبرنا قُتيبةُ قال: حدَّثنا يعقوبُ بنُ عبد الرَّحمن قال: حدَّثني أبو حازم بنُ دينار أنَّ رجالًا أَتَوْا سَهْلَ بنَ سَعْدٍ السَّاعِديَّ، وقد امْتَرَوْا في المِنْبَر؛ مِمَّ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٧٣٩" data-url="https://sunan.online/nasai/739/">انسخ المتن</button>
   <a href="/nasai/740/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,34 +84,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٣٩ — مُرِي غُلامَكِ النَّجَّارَ أنْ يعملَ لي أعْوادًا أجْلِسُ عليهنَّ إذا… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":739,"articleBody":"أخبرنا قُتيبةُ قال: حدَّثنا يعقوبُ بنُ عبد الرَّحمن قال: حدَّثني أبو حازم بنُ دينار\nأنَّ رجالًا أَتَوْا سَهْلَ بنَ سَعْدٍ السَّاعِديَّ، وقد امْتَرَوْا في المِنْبَر؛ مِمَّ عُودُهُ، فسألُوه عن ذلك، فقال: واللهِ إِنِّي لَأَعْرِفُ مِمَّ هو، ولقد رأيتُه أوَّلَ يومٍ وُضِعَ، وأوَّلَ يومٍ جَلَسَ عليه رسولُ الله صلى الله عليه وسلم، أَرْسَلَ رسولُ الله صلى الله عليه وسلم إلى فلانة - امرأةٍ قد سمَّاها سهل - أنْ \"مُرِي غُلامَكِ النَّجَّارَ أنْ يعملَ لي أعْوادًا أجْلِسُ عليهنَّ إذا كلَّمْتُ النَّاس\". فأمَرَتْهُ، فعَمِلَهَا من طَرْفَاء الغابة، ثم جاء بها، فأرسَلَتْ بها إلى رسولِ الله صلى الله عليه وسلم، فأمَرَ بها، فوُضِعَتْ ها هنا، ثم رأيتُ رسولَ الله صلى الله عليه وسلم رَقِيَ، فصَلَّى عليها، وكَبَّرَ وهو عليها، ثم رَكَعَ وهو عليها، ثم نَزَلَ القَهْقَرَى، فَسَجَدَ في أصلِ المِنْبَر، ثم عادَ، فلمَّا فَرَغَ أقبلَ\nعلى النَّاس، فقال: \"يا أيُّها النَّاسُ، إنَّما صَنَعْتُ هذا لِتَأْتَمُّوا بي، ولِتَعَلَّمُوا صلاتي\"."}</script>
 </body>
 </html>

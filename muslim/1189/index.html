@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-oRpfTK0nYz2211W/fOSQ6h5VIv8v6x51Z5KyAqqqgeE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٨٩ — حَدَّثَنَا مُحَمَّدُ بْنُ عَبَّادٍ. أَخْبَرَنَا سُفْيَانُ عَنِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١١٨٩ من صحيح مسلم، كتاب الحج، باب الطيب للمحرم عند الإحرام. حَدَّثَنَا مُحَمَّدُ بْنُ عَبَّادٍ. أَخْبَرَنَا سُفْيَانُ عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ رضي الله عنها. قالت: طيبت رسول الله صلى الله عليه وسلم…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -79,16 +81,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١١٨٩" data-url="https://sunan.online/muslim/1189/">انسخ المتن</button>
   <a href="/muslim/1190/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -107,35 +100,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٨٩ — حَدَّثَنَا مُحَمَّدُ بْنُ عَبَّادٍ. أَخْبَرَنَا سُفْيَانُ عَنِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1189,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ عَبَّادٍ. أَخْبَرَنَا سُفْيَانُ عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ رضي الله عنها. قالت: طيبت رسول الله صلى الله عليه وسلم لِحُرْمِهِ حِينَ أَحْرَمَ. وَلِحِلِّهِ قَبْلَ أَنْ يَطُوفَ بالبيت.\n\nوحَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ بْنِ قَعْنَبٍ. حَدَّثَنَا أَفْلَحُ بْنُ حُمَيْدٍ عَنِ الْقَاسِمِ بْنِ مُحَمَّدٍ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا، زَوْج النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَتْ:\nطَيَّبْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِيَدِي لِحُرْمِهِ حِينَ أَحْرَمَ. وَلِحِلِّهِ حِينَ أَحَلَّ. قَبْلَ أَنْ يَطُوفَ بِالْبَيْتِ.\n\nوحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. قَالَ: قَرَأْتُ عَلَى مَالِكٍ عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا؛ أَنَّهَا قَالَتْ:\nكُنْتُ أُطَيِّبُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِإِحْرَامِهِ قَبْلَ أَنْ يُحْرِمَ. وَلِحِلِّهِ قَبْلَ أَنْ يَطُوفَ بِالْبَيْتِ.\n\nوحَدَّثَنَا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ عُمَرَ. قَالَ: سَمِعْتُ الْقَاسِمَ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ: طَيَّبْتُ رَسُولَ الله صلى الله عليه وسلم لحله ولحرمه.\n\nوَحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ وَعَبْدُ بْنُ حميد (قال عبد: أَخْبَرَنَا. وَقَالَ ابْنُ حَاتِمٍ: حَدَّثَنَا مُحَمَّدُ بْنُ بَكْرٍ) أَخْبَرَنَا ابْنُ جُرَيْجٍ. أَخْبَرَنِي عُمَرُ بْنُ عَبْدِ اللَّهِ بْنِ عُرْوَةَ؛ أَنَّهُ سَمِعَ عُرْوَةَ وَالْقَاسِمَ يُخْبِرَانِ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ:\nطَيَّبْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِيَدِي بِذَرِيرَةٍ. فِي حَجَّةِ الْوَدَاعِ. لِلْحِلِّ والإحرام.\n\nوحدثنا أبو بكر بن أبي شيبة وزهير بْنُ حَرْبٍ. جَمِيعًا عَنِ ابْنِ عُيَيْنَةَ. قَالَ زُهَيْرٌ: حَدَّثَنَا سُفْيَانُ. حَدَّثَنَا عُثْمَانُ بْنُ عُرْوَةَ عَنْ أَبِيهِ، قَالَ:\nسَأَلْتُ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا: بِأَيِّ شَيْءٍ طَيَّبْتِ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عِنْدَ حُرْمِهِ؟ قَالَتْ: بِأَطْيَبِ الطيب.\n\nوحَدَّثَنَا أَبُو كُرَيْبٍ. حَدَّثَنَا أَبُو أُسَامَةَ عَنْ هِشَامٍ، عَنْ عُثْمَانَ بْنِ عُرْوَةَ. قَالَ: سَمِعْتُ عُرْوَةَ يُحَدِّثُ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا. قَالَتْ:\nكُنْتُ أُطَيِّبُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِأَطْيَبِ مَا أَقْدِرُ عَلَيْهِ. قَبْلَ أَنْ يُحْرِمَ. ثُمَّ يُحْرِمُ.\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا ابْنُ أَبِي فديك. أخبرنا الضحاك عن ابن أَبِي الرِّجَالِ، عَنْ أُمِّهِ، عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا؛ أَنَّهَا قَالَتْ:\nطَيَّبْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِحُرْمِهِ حِينَ أَحْرَمَ، وَلِحِلِّهِ قَبْلَ أَنْ يُفِيضَ، بِأَطْيَبِ مَا وَجَدْتُ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

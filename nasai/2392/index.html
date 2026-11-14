@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-oqcsd+xkKsDu9pDqwSxLWxeg7Uz/982do8Vkyfz9T7U='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٣٩٢ — أنتَ الَّذي تقولُ ذلك؟ | سنن النسائي</title>
 <meta name="description" content="الحديث ٢٣٩٢ من سنن النسائي، كتاب الصيام، باب صوم يوم وإفطار يوم، وذكر اختلاف ألفاظ الناقلين في ذلك لخبر عبد الله بن عمرو فيه. أخبرنا الرَّبيع بن سليمان قال: حدَّثنا ابن وَهْبٍ قال: أخبرني يونس، عن ابن شهابٍ قال: أخبرني سعيد بن المُسيب…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٢٣٩٢" data-url="https://sunan.online/nasai/2392/">انسخ المتن</button>
   <a href="/nasai/2393/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٣٩٢ — أنتَ الَّذي تقولُ ذلك؟ | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":2392,"articleBody":"أخبرنا الرَّبيع بن سليمان قال: حدَّثنا ابن وَهْبٍ قال: أخبرني يونس، عن ابن شهابٍ قال: أخبرني سعيد بن المُسيب وأبو سلمةَ بن عبد الرَّحمن\nأنَّ عبد الله بن عمرو بن العاص قال: ذُكِرَ لرسول الله صلى الله عليه وسلم أَنَّه يقول: لأقومَنَّ اللَّيلَ، ولأصومَنَّ النَّهارَ ما عِشْتُ. فقال رسولُ الله صلى الله عليه وسلم: \"أنتَ الَّذي تقولُ ذلك؟ \" فقلتُ له: قد قُلْتُه يا رسول الله. فقال رسول الله صلى الله عليه وسلم: \"فإِنَّكَ لا تستطيعُ ذلك، فصُمْ وأفطِرُ، ونَمْ وقُمْ، وصُمْ من الشَّهرِ ثلاثةَ أيَّام، فإنَّ الحسنةَ بِعَشْرِ أمثالِها، وذلك مِثْلُ صيام الدَّهر\" قلتُ: فإِنِّي أُطيقُ أفضَلَ من ذلك. قال: \"صُمْ يومًا، وأفطِرْ يومين\" قلتُ: فإِنِّي أُطيقُ أَفضَلَ من ذلكَ يا رسولَ الله. قال: \"فصُمْ يومًا، وأفطِرْ يومًا، وذلك صيامُ داود، وهو أعْدَلُ الصِّيام\" قلت: فإِنِّي أُطيقُ أفضَلَ من ذلك. قال رسول الله صلى الله عليه وسلم: \"لا أفضَلَ من ذلك\" قال عبد الله بن عمرو: لأَنْ أكونَ قَبِلْتُ الثَّلاثةَ الأَيَّامَ الَّتي قال رسولُ الله صلى الله عليه وسلم أحبُّ إليَّ من أهلي ومالي."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

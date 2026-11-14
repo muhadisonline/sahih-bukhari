@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-mz729I9BIbJRNJrB57eV/xbXLa1pDLHtflw29sPdjRM='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٣٩٠ — ما شَأْنُكُمْ | جامع الترمذي</title>
 <meta name="description" content="الحديث ٢٣٩٠ من جامع الترمذي، أبواب الفتن عن رسول الله صلى الله عليه وسلم، باب ما جاء في فتنة الدجال. حَدَّثَنا عَليُّ بن حُجْرٍ، أخْبرنا الوَليدُ بن مُسْلمٍ وعَبدُ الله بن عَبد الرحمنِ بن يَزِيدَ بن جَابرٍ - دَخلَ حديثُ أحَدِهما في حديثِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -67,16 +69,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٢٣٩٠" data-url="https://sunan.online/tirmidhi/2390/">انسخ المتن</button>
   <a href="/tirmidhi/2391/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -95,35 +88,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٣٩٠ — ما شَأْنُكُمْ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":2390,"articleBody":"حَدَّثَنا عَليُّ بن حُجْرٍ، أخْبرنا الوَليدُ بن مُسْلمٍ وعَبدُ الله بن عَبد الرحمنِ بن يَزِيدَ بن جَابرٍ - دَخلَ حديثُ أحَدِهما في حديثِ الآخَرِ - عن عَبد الرحمنِ بن يَزِيدَ بن جَابرٍ، عن يحيى بن جَابرٍ الطَّائيِّ، عن عَبد الرحمنِ بن جُبَيْرٍ، عن أبيهِ جُبَيْرِ بن نُفيرٍ\nعن النَّوَّاسِ بن سَمْعانَ الكِلابيِّ، قال: ذَكَرَ رَسولُ اللهِ صلى الله عليه وسلم الدَّجَّالَ ذَاتَ غَداةٍ، فَخفَّضَ فيهِ ورَفَّعَ حتَّى ظَننَّاهُ في طَائفةِ النَّخْلِ، قال: فَانْصرَفْنا من عِنْدِ رَسولِ اللهِ صلى الله عليه وسلم ثُمَّ رُحنا إلَيْهِ فَعرَفَ ذلك فِينا، فقال: \"ما شَأْنُكُمْ\"؟ قال: قُلْنا: يا رَسولَ اللهِ، ذَكَرْتَ\nالدَّجَّالَ الغَدَاةَ فَخفّضْتَ ورَفّعْتَ حتَّى ظَنَنَّاهُ في طائِفةِ النَّخْلِ. قال: \"غَيْرُ الدَّجَّالِ أخْوفُ لِي عَليكُمْ، إنْ يَخْرُجْ وأنا فِيكُمْ، فأنا حَجِيجُهُ دُونَكُمْ، وإنْ يَخْرُجْ ولَسْتُ فِيكُمْ، فامْرُؤٌ حَجِيجُ نَفْسِه، واللهُ خَلِيفَتي على كُلِّ مُسْلمٍ، إنَّهُ شابٌّ قَطَطٌ عَيْنُه قائمة شَبِيهٌ بِعَبْدِ العُزَّى بن قَطَنٍ، فَمَنْ رَآهُ مِنْكُمْ، فَلْيقرَأْ فَواتِحَ سُورةِ أصْحابِ الكَهْفِ\".\nقال: \"يَخْرُجُ ما بَيْنَ الشَّامِ والعِراقِ، فَعاثَ يَمِينًا وشِمالًا، يا عِبادَ اللهِ البَثوا. قُلْنا: يا رَسولَ اللهِ وما لَبْثُه في الأرْضِ؟ قال: \"أرْبَعِينَ يَوْمًا، يَوْمٌ كَسَنةٍ، ويَوْمٌ كَشْهرٍ، ويَوْمٌ كَجُمُعةٍ، وسَائرُ أيَّامِه كأيَّامِكُمْ\". قال: قُلْنا: يا رَسولَ اللهِ، أرَأيْتَ اليَوْمَ الَّذِي كالسَّنةِ أتكْفِينا فيهِ صَلاةُ يَوْمٍ؟ قال: \"لا، وَلكنِ اقْدُرُوا لهُ\".\nقلْنا: يا رَسولَ الله، فَما سُرْعَتُه في الأرْضِ؟ قال: \"كالغَيْثِ اسْتَدْبَرتْهُ الرِّيحُ، فَيأْتِي القَوْمَ فَيدْعُوهُمْ فَيُكذِّبُونَهُ، ويَرُدُّونَ عَليْهِ قَوْلَهُ، فَينْصرِفُ عَنهُمْ، فَتَتبعُه أمْوالُهُمْ، فَيُصْبحُونَ لَيْسَ بأيْدِيهِمْ\nشَيْءٌ، ثُمَّ يَأْتِي القَوْمَ فَيدْعُوهُم، فَيسْتَجِيبُونَ لهُ ويُصدِّقُونَهُ، فَيأْمُرُ السَّماءَ أن تُمْطرَ فَتُمْطرُ، ويَأمُرُ الأرْضَ أنْ تُنْبِتَ فَتُنْبتُ، فَترُوحُ عَليْهِم سَارِحَتُهمْ كأطْوَلِ ما كَانَتْ ذُرًا، وأمَدِّهِ خَواصِر، وأدَرِّهِ ضُرُوعًا\".\nقال: \"ثُمَّ يأتِي الخَرِبةَ فَيقُولُ لَها: أخْرِجِي كُنُوزَكِ، فَينْصرِفُ مِنْها، فَيتْبَعُهُ كَيَعاسِيبِ النَّحْلِ، ثُمَّ يَدْعُو رَجُلًا شابًّا مُمْتَلِئًا شَبابًا، فَيضْرِبُهُ بالسَّيْفِ، فَيقْطَعُهُ جِزْلَتينِ ثُمَّ يَدْعُوهُ فيُقْبِلَ يَتهلّلُ وَجْهُهُ يَضْحكُ، فَبيْنما هو كذلكَ إذْ هَبَطَ عيسى ابنُ مَرْيمَ بِشَرْقِيِّ دِمَشْقَ عِنْدَ المنارةِ البَيْضاءِ بَيْنَ مَهْرُودَتَيْنِ وَاضِعًا يَديْهِ على أجْنحَةِ مَلَكيْنِ إذا طَأْطَأ رَأْسَهُ قَطَرَ، وإذا رَفَعهُ، تحدَّرَ مِنْهُ جُمَّانٌ كاللُّؤْلُؤِ\". قال: \"وَلا يَجدُ رِيحَ نَفَسهِ - يَعْني - أحدٌ إلا مَاتَ، وَرِيحُ نَفَسَهِ مُنْتهى بَصرِهِ\". قال: \"فَيطْلُبهُ حتَّى يُدْرِكَهُ بِبابِ لُدٍّ فيَقْتُلَهُ\". قال: \"فَيلْبَثُ كذلكَ ما شَاءَ اللهُ\". \"ثُمَّ يُوحِي اللهُ إلَيْهِ أنْ\nحرِّز عِبادِيَ إلى الطُّورِ، فَإنِّي قد أنْزَلْتُ عِبادًا لِي لا يَدَ لأحدٍ بقِتالِهِمْ\".\nقال: \"ويَبْعثُ اللهُ يَأْجُوجَ ومَأجُوجَ وَهُمْ كَما قال اللهُ: ﴿وَهُمْ مِنْ كُلِّ حَدَبٍ يَنْسِلُونَ﴾ [الأنبياء: ٩٦] قال: \"فيمُرُّ أوَّلُهمْ ببُحَيْرةِ الطَّبَريّةِ، فَيشْربُ ما فِيها، ثُمَّ يَمُرُّ بِها آخِرُهُمْ فَيقُولُونَ: لقد كَانَ بهذه مَرّةً مَاءٌ، ثُمَّ يَسِيرُونَ حتَّى يَنْتَهُوا إلى جَبلِ بَيْتِ المقدسِ، فَيقُولُونَ: لقد قَتلْنا مَنْ في الأرْضِ، فَهَلُمَّ فَلْنَقْتُلْ مَنْ في السَّماءِ، فَيرْمُونَ بِنُشّابِهِمْ إلى السَّماءِ فَيرُدُّ اللهُ عَليْهمْ نُشّابَهُمْ مُحْمرًّا دَمًا، ويُحاصَرُ عيسى ابن مَرْيمَ وَأصْحابهُ حتَّى يكُونَ رَأْسُ الثَّوْرِ يَوْمئذٍ خَيْرًا لأحَدِهِمْ من مئةِ دِينارٍ لأحَدِكُمُ اليَوْمَ، قال فَيرْغَبُ عيسى ابنُ مَرْيمَ إلى اللهِ وأصْحابُه\"، قال: فَيُرْسِلُ اللهُ عَليْهم النَّغَفَ في رِقابِهم، فَيُصْبِحُونَ فَرْسى مَوْتى كَموْتِ نَفْسٍ وَاحدَةٍ، قال: ويَهْبِطُ عيسى وأصْحابُهُ، فَلا يَجدُ مَوْضِعَ شِبْرٍ إلَّا وقد مَلأتْهُ\nزَهْمتُهمْ ونَتنُهمْ ودِماؤُهُمْ، قال: فَيرْغَبُ عيسى إلى اللهِ وأصْحابُهُ، قال: فيُرْسِلُ اللهُ عَليْهِمْ طَيْرًا كَأعْناقِ البُخْتِ، فَتحْمِلُهُمْ فَتطْرحُهمْ بالمَهْبِلِ، ويَسْتوْقِدُ المُسْلِمُونَ من قِسِيِّهمْ وَنُشَّابِهمْ وَجِعابِهمْ سَبْعَ سِنينَ، ويُرْسلُ اللهُ عَليْهمْ مَطرًا لا يكُنُّ مِنْهُ بَيْتُ وَبَرٍ ولا مَدَرٍ، فَيَغْسلُ الأرْضَ فَيتْرُكُها كالزَّلَفةِ\". قال: \"ثُمَّ يُقالُ لِلأرْضِ: أخْرِجي ثَمرَتَكِ وَرُدِّي بَركَتَكِ، فَيوْمئذٍ تأكُلُ العِصابةُ الرُّمَّانةَ\"، ويَسْتظِلُّونَ بقحْفها، وَيُباركُ في الرِّسْلِ حتَّى إنَّ الفِئامَ من النَّاسِ ليكْتَفُونَ باللِّقْحةِ من الإبلِ، وَإنَّ القَبيلةَ لَيكْتفُونَ باللِّقْحةِ من البَقَرِ، وإنَّ الفَخِذَ ليكْتفُونَ باللِّقْحةِ من الغَنمِ، فَبيْنَما هُمْ كذلكَ إذْ بَعثَ اللهُ ريحًا، فَقبضَتْ رُوحَ كُلَّ مُؤْمنٍ، ويَبْقى سَائرُ النَّاسِ يَتهارَجُونَ كما يَتهارجُ الحُمُرُ، فَعلَيْهمْ تَقُومُ السَّاعةُ\".\nهذا حديثٌ غريبٌ حَسَنٌ صحيحٌ، لا نَعْرِفُه إلَّا من حديثِ عَبد الرحمنِ بن يَزِيدَ بن جَابرٍ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

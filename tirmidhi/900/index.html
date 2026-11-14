@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-m2/S7r6QGUQbyWVp2EM0ScJ/4CHTuqv55nFEHXRzwxk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٠٠ — هذِهِ عَرفةُ، وهو المَوْقِفُ، وعرفةُ كُلُّها مَوْقفٌ | جامع الترمذي</title>
 <meta name="description" content="الحديث ٩٠٠ من جامع الترمذي، أبواب الحج عن رسول الله صلى الله عليه وسلم، باب ما جاء أن عرفة كلها موقف. حدَّثنا محمدُ بن بشَّارٍ، قال: حدَّثنا أبو أحمدَ الزُّبَيْرِيُّ، قال: حدَّثنا سفيانُ، عن عبد الرحمنِ بن الحارثِ بن عَيَّاشِ بن أبي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٩٠٠" data-url="https://sunan.online/tirmidhi/900/">انسخ المتن</button>
   <a href="/tirmidhi/901/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,35 +85,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٠٠ — هذِهِ عَرفةُ، وهو المَوْقِفُ، وعرفةُ كُلُّها مَوْقفٌ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":900,"articleBody":"حدَّثنا محمدُ بن بشَّارٍ، قال: حدَّثنا أبو أحمدَ الزُّبَيْرِيُّ، قال: حدَّثنا سفيانُ، عن عبد الرحمنِ بن الحارثِ بن عَيَّاشِ بن أبي رَبيعةَ، عن زَيْدِ بن عَليٍّ، عن أبيهِ، عن عُبَيْدِ اللهِ بن أبي رافعٍ\nعن عليِّ بن أبي طالبٍ، قال: وَقَفَ رسولُ اللهِ صلى الله عليه وسلم بعَرَفةَ، فقال: \"هذِهِ عَرفةُ، وهو المَوْقِفُ، وعرفةُ كُلُّها مَوْقفٌ\"، ثمَّ أفاضَ حينَ غَرَبَتِ الشَّمْسُ، وَأرْدَفَ أُسامةَ بن زَيْدٍ، وجَعلَ يُشِيرُ بِيَدِهِ على هِينَتِه، والناسُ يَضرِبون يمينًا وشمالًا، يَلتفِتُ إليهم ويقولُ: \"أيُّها الناسُ عليكُمُ السَّكِينةِ\"، ثم أَتى جَمْعًا، فصلَّى بهمُ الصلاتَيْنِ\nجميعًا، فلمَّا أصْبَحَ أتَى قُزَحَ، ووقف عليه، وقال: \"هذا قُزَحُ، وهو المَوْقِفُ، وَجَمْعٌ كُلُّها مَوْقفٌ\"، ثُمَّ أفاضَ حتَّى انتَهى إلى وادي مُحَسِّرٍ، فَقَرعَ ناقتَهُ، فَخَبَّتْ حتَّى جَاوزَ الوادِي فَوقَفَ، وَأرْدَفَ الفَضْلَ، ثُمَّ أتى الجَمْرةَ فَرماها، ثُمَّ أتى المَنحَرَ، فقال: \"هذا المَنحرُ، ومِنىً كُلُّها مَنحرٌ\"، واسْتَفتَتْهُ جاريةٌ شابّةٌ من خَثْعَمٍ. فقالت: إنَّ أبي شَيْخٌ كبيرٌ قد أدْرَكَتْهُ فرِيضةُ اللهِ في الحَجِّ، أفَيُجْزِئُ أن أحُجَّ عَنْهُ؟ قال: \"حُجِّي عن أبيكِ\"، قال: وَلوَى عُنُقَ الفضلِ. فقال العَبَّاسُ: يا رسولَ اللهِ لمَ لَويْتَ عُنُقَ ابن عَمِّكَ؟ قال: \"رَأيْتُ شَابًا وشابّةً، فلم آمَنِ الشَّيْطانَ عليهما\". ثُمَّ أتاهُ رجلٌ، فقال: يا رسولَ اللهِ إنِّي أفَضْتُ قَبْلَ أنْ أحْلِقَ. قال: \"احْلِقْ - أو قَصِّرْ - وَلا حَرجَ\". قال: وجاء آخَرُ فقال: يا رسول اللهِ، إنِّي ذَبَحْتُ قَبْلَ أن أرْمِيَ، قال: \"ارْمِ وَلا حَرجَ\". قال: ثُمَّ أتَى البيتَ فطافَ بهِ، ثُمَّ أتَى زَمْزَمَ، فقال: \"يا بَنِي عبدِ المُطَّلبِ لَوْلا أنْ يَغلبَكُمْ عليه الناسُ، لَنزَعْتُ\".\nوفي البابِ عن جابرٍ.\nحديثُ عَليٍّ حديثٌ حسنٌ صحيحٌ، لا نَعْرِفهُ من حديثِ عَليٍّ إلا من هذا الوَجْهِ من حديثِ عَبد الرحمنِ بن الحارثِ بن عَيَّاشٍ، وقد رَوَاهُ غَيْرُ واحِدٍ عن الثَّوْرِيِّ، مِثْلَ هذا.\nوالعمل على هذا عِنْدَ أهْلِ العلمِ؛ قد رَأوْا أنْ يُجْمَعَ بَيْنَ الظُّهْرِ والعَصْرِ بعَرَفةَ في وَقْتِ الظُّهْرِ.\nوقال بَعضُ أهْلِ العلمِ: إذا صَلَّى الرَّجُلُ في رَحْلِهِ، ولم يَشْهَدِ الصَّلاةَ مع الإمامِ، إنْ شاءَ جَمعَ هو بين الصَّلاتَيْنِ مِثْلَ ما صَنعَ الإمامُ.\nوزيدُ بن عَليٍّ: هو ابن حُسَيْنِ بن عَليِّ بن أبي طَالِبٍ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

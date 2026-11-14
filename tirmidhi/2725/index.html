@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-q2G9F2EaWqBJR7OGdWM5iYB9E7ohJPeE+b5g9Ane/Jk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٧٢٥ — أنَّ أهْلَ الجنَّةِ إذا دَخلُوها، نَزلُوا فيها بِفَضْلِ أعْمالِهمْ،… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٢٧٢٥ من جامع الترمذي، أبواب صفة الجنة عن رسول الله صلى الله عليه وسلم، باب ما جاء في سوق الجنة. حدَّثنا محمدُ بن إسماعيلَ، قال: حدَّثنا هِشامُ بن عَمَّارٍ، قال: حدَّثنا عبدُ الحميدِ بن حَبِيبِ بن أبي العِشْرينَ، قال: حدَّثنا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٢٧٢٥" data-url="https://sunan.online/tirmidhi/2725/">انسخ المتن</button>
   <a href="/tirmidhi/2726/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,34 +84,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٧٢٥ — أنَّ أهْلَ الجنَّةِ إذا دَخلُوها، نَزلُوا فيها بِفَضْلِ أعْمالِهمْ،… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":2725,"articleBody":"حدَّثنا محمدُ بن إسماعيلَ، قال: حدَّثنا هِشامُ بن عَمَّارٍ، قال: حدَّثنا عبدُ الحميدِ بن حَبِيبِ بن أبي العِشْرينَ، قال: حدَّثنا الأوْزاعيُّ، قال: حدَّثنا حَسَّانُ بن عَطيَّةَ، عن سَعيدِ بن المُسَيّبِ أنَّهُ لَقِيَ أبا هُريرةَ\nفقال أبو هُريرةَ: أسْألُ اللهَ أنْ يَجْمعَ بَيْني وَبَيْنكَ في سُوقِ الجنَّةِ، فقال سعيدٌ: أفيها سُوقٌ؟ قال: نَعمْ، أخْبرني رَسولُ اللهِ صلى الله عليه وسلم: \"أنَّ أهْلَ الجنَّةِ إذا دَخلُوها، نَزلُوا فيها بِفَضْلِ أعْمالِهمْ، ثُمَّ يُؤْذنُ في مِقْدارِ يَوْمِ الجُمُعةِ من أيَّامِ الدُّنْيا، فَيزُورُونَ رَبَّهُمْ، ويَبْرُزُ لَهُمْ عَرْشُه، ويَتبدَّى لهُمْ في رَوْضةٍ من رِياضِ الجنَّةِ، فيُوضَع لهُمْ مَنابرُ مِن نُورٍ ومَنابرُ من لؤلؤٍ، ومَنابرُ من ياقُوْتٍ، ومَنابرُ من زَبَرْجدٍ، ومَنابرُ من ذَهبٍ، ومَنابرُ من فِضّةٍ، ويَجْلسُ أدْناهُمْ، وَما فِيهمْ من دَنيٍّ - على كُثْبانِ المِسْكِ والكافُورِ، ما يُروْنَ أنَّ أصْحابَ الكَراسيِّ بأفْضلَ مِنْهُمْ مَجْلسًا\".\nقال أبو هُريرةَ: قُلْتُ: يا رَسولَ اللهِ، وَهَلْ نَرى رَبَّنا؟ قال: \"نَعمْ، هَلْ تَتمارَوْنَ في رُؤْيةِ الشَّمْسِ والقمرِ لَيْلةَ البَدْرِ\"؟ قُلْنا: لا. قال: \"كذلكَ لا تمارَوْن في رُؤْيةِ رَبِّكُمْ، ولا يَبْقى في ذلكَ\nالمَجْلسِ رَجُلٌ إلَّا حَاضَرهُ اللهُ مُحاضَرةً، حتَّى يَقولَ لِلرَّجُلِ مِنْهُمْ: يا فُلانُ بن فُلانٍ، أتذْكُرُ يَوْمَ قلت: كَذا وكَذا؟ فَيذكِّرُه بِبَعْضِ غَدَراتِه في الدُّنْيا، فَيقولُ: يا رَبِّ أفلم تَغْفِرْ لِي؟ فَيقولُ: بَلى، فَبِسَعةِ مَغْفرَتي بَلغْتَ مَنْزلَتَك هذه، فَبيْنما هُمْ على ذلك غَشِيتهُمْ سَحابةٌ من فَوْقِهمْ، فَأمْطرَتْ عَليْهمْ طِيبًا لم يَجدُوا مِثْلَ رِيحِه شَيْئًا قَطُّ.\nويَقولُ رَبُّنا: قُومُوا إلى ما أعْددْتُ لكُمْ من الكَرامةِ، فَخُذُوا ما اشْتَهَيتُمْ، فَنأتي سُوقًا قد حَفّتْ بهِ المَلائِكةُ، ما لم تَنْظُرِ العُيُونُ إلى مِثْلِه، ولم تَسْمعِ الآذانُ، ولم يَخْطُرْ على القُلُوبِ، فَيُحْمل لنا ما اشتَهيْنا، لَيْسَ يُباعُ فِيها ولا يُشْتَرى، وفي ذلك السُّوقِ يَلْقَى أهْلُ الجنَّةِ بَعْضُهمْ بَعْضًا، قال: فيُقْبِلُ الرَّجُلُ ذُو المَنْزِلةِ المُرْتَفعةِ فَيلْقى من هو دُونَهُ - وَما فِيهمْ دَنيٌّ - فَيرُوعُه ما يَرى عَليْهِ من اللِّباسِ، فَما يَنْقضي آخرُ حديثِه حتَّى يَتخيَّلَ عَليْهِ ما هو أحسنُ مِنْهُ، وذلكَ أنَّهُ لا يَنْبغي لأحدٍ أنْ يَحْزَنَ فيها، ثُمَّ نَنْصرِفُ إلى\nمنازِلنا، فيتلقَّانا أزْواجُنا فَيقُلْنَ: مَرْحبًا وأهْلًا، لقد جِئْتَ وإنَّ لك من الجَمالِ أفْضلَ مِمَّا فَارقْتَنا عَليْهِ، فَيقولُ: إنَّا جَالَسْنا اليَوْمَ رَبَّنا الجَبَّارَ، وَيَحِقُّنا أن نَنْقلبَ بِمِثْل ما انْقَلبْنا\".\nهذا حديثٌ غريبٌ، لا نَعْرِفُه إلَّا من هذا الوَجْهِ. وقد رَوَى سُوَيْدُ بن عَمْرٍو، عن الأوْزاعيِّ شَيْئًا من هذا."}</script>
 </body>
 </html>

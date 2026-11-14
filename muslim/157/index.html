@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fXKpXsaLW5wYF7JEiTCHs+EPZaNA/JoFS3sE52d0K1o='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٥٧ — لَا تَقُومُ السَّاعَةُ حَتَّى تَطْلُعَ الشَّمْسُ مِنْ مَغْرِبِهَا.… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٥٧ من صحيح مسلم، كتاب الإيمان، باب بيان الزمن الذي لا يقبل فيه الإيمان. حَدَّثَنَا يَحْيَى بْنُ أَيُّوبَ، وَقُتَيْبَةُ بْنُ سَعِيدٍ، وَعَلِيُّ بْنُ حُجْرٍ. قَالُوا: حَدَّثَنَا إِسْمَاعِيل (يَعْنُونَ ابْنَ جَعْفَرٍ)، عَنِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -96,16 +98,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٥٧" data-url="https://sunan.online/muslim/157/">انسخ المتن</button>
   <a href="/muslim/158/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -124,35 +117,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٥٧ — لَا تَقُومُ السَّاعَةُ حَتَّى تَطْلُعَ الشَّمْسُ مِنْ مَغْرِبِهَا.… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":157,"articleBody":"حَدَّثَنَا يَحْيَى بْنُ أَيُّوبَ، وَقُتَيْبَةُ بْنُ سَعِيدٍ، وَعَلِيُّ بْنُ حُجْرٍ. قَالُوا: حَدَّثَنَا إِسْمَاعِيل (يَعْنُونَ ابْنَ جَعْفَرٍ)، عَنِ الْعَلَاءِ (وَهُوَ ابْنُ عَبْدِ الرَّحْمَنِ)، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ؛ إن رسول الله صلى الله عليه وسلم قَالَ:\n\"لَا تَقُومُ السَّاعَةُ حَتَّى تَطْلُعَ الشَّمْسُ مِنْ مَغْرِبِهَا. فَإِذَا طَلَعَتْ مِنْ مَغْرِبِهَا آمَنَ النَّاسُ كُلُّهُمْ أَجْمَعُونَ. {فَيَوْمَئِذٍ لَا يَنْفَعُ نَفْسًا إِيمَانُهَا لَمْ تَكُنْ آمَنَتْ مِنْ قَبْلُ أَوْ كسبت في إيمانها خيرا} \". [٦/الأنعام/ الآية ١٥٨].\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا يَعْقُوبُ (وَهُوَ ابْنُ عبد الرحمن القارئ) عَنْ سُهَيْلٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ؛ إن رسول الله صلى الله عليه وسلم قَالَ:\n\"لَا تَقُومُ السَّاعَةُ حَتَّى يَكْثُرَ الْمَالُ وَيَفِيضَ. حَتَّى يَخْرُجَ الرَّجُلُ بِزَكَاةِ مَالِهِ فَلَا يَجِدُ أَحَدًا يَقْبَلُهَا مِنْهُ. وَحَتَّى تَعُودَ أَرْضُ العرب مروجا وأنهارا\".\n\nوحدثنا أبو الطاهر. حدثنا أبو وَهْبٍ عَنْ عَمْرِو بْنِ الْحَارِثِ، عَنْ أَبِي يُونُسَ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صَلَّى الله عليه وسلم؛ قال:\n\"لا تقوم الساعة حَتَّى يَكْثُرَ فِيكُمُ الْمَالُ. فَيَفِيضَ حَتَّى يُهِمَّ رب المال من يقبله من صَدَقَةً. وَيُدْعَى إِلَيْهِ الرَّجُلُ فَيَقُولُ: لَا أَرَبَ لي فيه\".\n\nحَدَّثَنِي حَرْمَلَةُ بْنُ يَحْيَى. أَخْبَرَنَا ابْنُ وَهْبٍ. أخبرني يونس عن ابن شهاب. حَدَّثَنِي حُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ بْنِ عَوْفٍ؛ أَنَّ أبا هريرة قال:\nقال رسول الله صلى الله عليه وسلم \"يتقارب الزمان، ويقبض العلم، وتظهر الفتن، ويلقى الشح، ويكثر الهرج\" قالوا: وما الهرج؟ قال \"القتل\".\n\nحدثنا عبد الله بن عبد الرحمن، الدرامي. أَخْبَرَنَا أَبُو الْيَمَانِ. أَخْبَرَنَا شُعَيْبٌ عَنْ الزُّهْرِيِّ. حدثني حميد بن عبد الرحمن. الزهري؛ أن أبا هريرة قال:\nقال رسول الله صلى الله عليه وسلم \"يتقارب الزمان ويقبض العلم\" ثم ذكر مثله.\n\nحَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ. حَدَّثَنَا عَبْدُ الأَعْلَى عَنْ مَعْمَرٍ، عَنِ الزُّهْرِيِّ، عَنْ سَعِيدٍ، عَنْ أَبِي هُرَيْرَةَ،\nعَنِ النَّبِيِّ صلى الله عليه وسلم قال \"يتقارب الزمان، وينقص العلم\" ثم ذكر مثل حديثهما.\n\nحَدَّثَنَا يَحْيَى بْنُ أَيُّوبَ وَقُتَيْبَةُ وَابْنُ حُجْرٍ. قَالُوا حَدَّثَنَا إِسْمَاعِيل (يَعْنُونَ ابْنَ جَعْفَرٍ) عَنِ الْعَلَاءِ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ. (ح) وحدثنا ابن نمير وأبو كريب وعمرو الناقد. قالوا: حدثنا إسحاق\nبن سليمان، عن حنظلة، عن سالم، عَنْ أَبِي هُرَيْرَةَ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. حَدَّثَنَا مَعْمَرٌ عَنْ هَمَّامِ بْنِ مُنَبِّهٍ، عَنْ أَبِي هُرَيْرَةَ. (ح) وحَدَّثَنِي أَبُو الطَّاهِرِ. أَخْبَرَنَا ابْنُ وَهْبٍ عَنْ عَمْرِو بْنِ الْحَارِثِ، عَنْ أَبِي يُونُسَ، عَنْ أَبِي هُرَيْرَةَ. كُلُّهُمْ قَالَ: عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمِثْلِ حديث الزهري عن حميد، عن أبي هريرة. غير أنهم لم يذكروا \"ويلقى الشح\".\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. حَدَّثَنَا مَعْمَرٌ عَنْ هَمَّامِ بْنِ مُنَبِّهٍ. قَالَ: هذا ما حدثنا أبو هريرة عن رسول اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَذَكَرَ أَحَادِيثَ مِنْهَا:\nوَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم \"لا تقوم الساعة حتى تقتتل فئتان عظيمتان. وتكون بينهما مقتلة عظيمة. ودعواهما واحدة\".\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا يَعْقُوبُ (يَعْنِي ابْنَ عَبْدِ الرَّحْمَنِ) عَنْ سُهَيْلٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ؛\nإن رسول الله صلى الله عليه وسلم قال \"لا تقوم الساعة حتى يكثر الهرج\" قالوا: وما الهرج؟ يا رسول الله! قال \"القتل. القتل\".\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ عَنْ مَالِكِ بْنِ أنس، فيما قرئ عليه، عن أبي الزناد، عن الأعرج، عن أبي هريرة؛\nأن رسول الله صلى الله عليه وسلم قال \"لا تقوم الساعة حتى يمر الرجل بقبر الرجل فيقول: يا ليتني مكانه\".\n\nحدثنا عَبْدُ اللَّهِ بْنُ عُمَرَ بْنِ مُحَمَّدِ بْنِ أبان بن صالح ومحمد بن يزيد الرفاعي (واللفظ لابن أبان). قالا: حدثنا ابن فضيل عن أَبِي إِسْمَاعِيل، عَنْ أَبِي حَازِمٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ:\nقال رسول الله صلى الله عليه وسلم \"والذي نفسي بيده! لا تذهب الدنيا حتى يمر الرجل على القبر فيتمرغ عليه، ويقول: يا ليتني كنت مكان صاحب هذا القبر. وليس به الدين إلا البلاء\".\n\nحدثني زهير بن حرب وإسحاق بن منصور (قال إسحاق: أخبرنا. وقال زهير:\nحدثنا) عبد الرحمن - وهو ابن مهدي - عن مالك، عن أبي الزناد، عن الأعرج، عن أبي هريرة،\nعن النبي صلى الله عليه وسلم قال \"لا تقوم الساعة حتى يبعث دجالون كذابون قريب من ثلاثين. كلهم يزعم أنه رسول الله\".\n\nحَدَّثَنَا مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا مَعْمَرٌ عَنْ هَمَّامِ بْنِ مُنَبِّهٍ، عَنْ أبي هريرة، عن النبي صلى الله عليه وسلم، بمثله. غير أنه قال: ينبعث."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

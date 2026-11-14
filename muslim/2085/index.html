@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-lyhzVbq7n80MRJ5yEDevLH5NegXZpyj5m317XRZq56Q='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٠٨٥ — حَدَّثَنَا يحيى بن يحيى. قال: قرأت على مَالِكٍ عَنْ نَافِعٍ وَعَبْدِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٠٨٥ من صحيح مسلم، كتاب اللباس والزينة، باب تحريم جر الثوب خيلاء، وبيان حد ما يجوز إرخاؤه إليه، وما يستحب. حَدَّثَنَا يحيى بن يحيى. قال: قرأت على مَالِكٍ عَنْ نَافِعٍ وَعَبْدِ اللَّهِ بْنِ دِينَارٍ وَزَيْدِ ابن أَسْلَمَ. كلهم يخبره…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -79,16 +81,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٠٨٥" data-url="https://sunan.online/muslim/2085/">انسخ المتن</button>
   <a href="/muslim/2086/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -107,35 +100,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٠٨٥ — حَدَّثَنَا يحيى بن يحيى. قال: قرأت على مَالِكٍ عَنْ نَافِعٍ وَعَبْدِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2085,"articleBody":"حَدَّثَنَا يحيى بن يحيى. قال: قرأت على مَالِكٍ عَنْ نَافِعٍ وَعَبْدِ اللَّهِ بْنِ دِينَارٍ وَزَيْدِ ابن أَسْلَمَ. كلهم يخبره عَنْ ابْنِ عُمَرَ؛\nأَنّ رسول الله صلى الله عليه وسلم قال (لَا يَنْظُرُ اللَّهُ إِلَى مَنْ جَرَّ ثَوْبَهُ خيلاء).\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا عَبْدُ اللَّهِ بْنُ نُمَيْرٍ وَأَبُو أُسَامَةَ. (ح) وحَدَّثَنَا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى وَعُبَيْدُ اللَّهِ بْنُ سَعِيدٍ. قَالَا: حَدَّثَنَا يحيى (وهو القطان). كلهم عن عُبَيْدِ اللَّهِ. (ح) وحدثنا أَبُو الرَّبِيعِ وَأَبُو كَامِلٍ. قَالَا: حَدَّثَنَا حَمَّادٌ. (ح) وحَدَّثَنِي زهير بْنُ حَرْبٍ. حَدَّثَنَا إِسْمَاعِيلُ. كِلَاهُمَا عَنْ أَيُّوبَ. (ح) وحدثنا قُتَيْبَةُ وَابْنُ رُمْحٍ عَنِ اللَّيْثِ بْنِ سَعْدٍ. (ح) وحدثنا هَارُونُ الْأَيْلِيُّ. حَدَّثَنَا ابْنُ وَهْبٍ. حَدَّثَنِي أُسَامَةُ. كُلُّ هَؤُلَاءِ عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمِثْلِ حديث مَالِكٍ. وَزَادُوا فِيهِ (يَوْمَ الْقِيَامَةِ).\n\nوحدثني أبو الطاهر. أخبرنا عبد الله بن وَهْبٍ. أَخْبَرَنِي عُمَرُ بْنُ مُحَمَّدٍ عَنْ أَبِيهِ وَسَالِمِ بْنِ عَبْدِ اللَّهِ وَنَافِعٍ، عَنْ عَبْدِ الله بن عمر؛\nأن رسول اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ (إِنَّ الَّذِي يَجُرُّ ثِيَابَةُ مِنَ الْخُيَلَاءِ، لَا يَنْظُرُ اللَّهُ إِلَيْهِ يوم القيامة).\n\nوحدثنا أبو بكر بن أبي شيبة. حدثنا عَلِيُّ بْنُ مُسْهِرٍ عَنْ الشَّيْبَانِيِّ. (ح) وحَدَّثَنَا ابْنُ الْمُثَنَّى. حَدَّثَنَا مُحَمَّدُ بْنُ جعفر. حدثنا شُعْبَةُ. كِلَاهُمَا عَنْ مُحَارِبِ بْنِ دِثَارٍ وَجَبَلَةَ بْنِ سُحَيْمٍ، عَنْ ابْنِ عُمَرَ، عن النبي صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمِثْلِ حَدِيثِهِمْ.\n\nوحَدَّثَنَا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا حَنْظَلَةُ. قَالَ: سَمِعْتُ سَالِمًا عَنْ ابْنِ عُمَرَ. قال:\nقال رسول الله صلى الله عليه وسلم (مَنْ جَرَّ ثَوْبَهُ مِنَ الْخُيَلَاءِ لَمْ يَنْظُرِ اللَّهُ إِلَيْهِ يَوْمَ الْقِيَامَةِ).\n\nوحدثنا ابْنُ نُمَيْرٍ. حَدَّثَنَا إِسْحَاقُ بْنُ سُلَيْمَانَ. حَدَّثَنَا حَنْظَلَةُ بْنُ أَبِي سُفْيَانَ. قال: سَمِعْتُ ابْنَ عُمَرَ يَقُولُ: سَمِعْتُ رَسُولَ اللَّهِ صلى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ، مِثْلَهُ. غَيْرَ أَنَّهُ قال: ثيابه.\n\nوحدثنا محمد بن المثنى. حدثنا محمد بن جعفر. حدثنا شعبة. قال: سمعت مسلم ابن يَنَّاقَ يُحَدِّثُ عَنْ ابْنِ عُمَرَ؛\nأَنَّهُ رَأَى رَجُلًا يَجُرُّ إِزَارَهُ. فَقَالَ: مِمَّنْ أَنْتَ؟ فَانْتَسَبَ لَهُ. فَإِذَا رَجُلٌ مِنْ بَنِي لَيْثٍ. فَعَرَفَهُ ابن عُمَرَ. قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، بِأُذُنَيَّ هَاتَيْنِ، يَقُولُ (مَنْ جَرَّ إِزَارَهُ، لَا يُرِيدُ بِذَلِكَ إِلَّا الْمَخِيلَةَ، فَإِنَّ اللَّهَ لَا يَنْظُرُ إِلَيْهِ يَوْمَ الْقِيَامَةِ).\n\nوحدثنا ابْنُ نُمَيْرٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا عَبْدُ الْمَلِكِ (يَعْنِي ابْنَ أَبِي سُلَيْمَانَ). (ح) وحَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ. حَدَّثَنَا أبي. حدثنا أَبُو يُونُسَ. (ح) وحَدَّثَنَا ابْنُ أَبِي خَلَفٍ. حَدَّثَنَا يَحْيَي بْنُ أَبِي بُكَيْرٍ. حَدَّثَنِي إِبْرَاهِيمُ (يَعْنِي ابْنَ نَافِعٍ). كُلُّهُمْ عَنْ مُسْلِمِ بْنِ يَنَّاقَ، عَنْ ابْنِ عُمَرَ، عن النبي صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. بِمِثْلِهِ. غَيْرَ أَنَّ فِي حَدِيثِ أَبِي يُونُسَ: عَنْ مُسْلِمٍ، أَبِي الْحَسَنِ. وَفِي رِوَايَتِهِمْ جَمِيعًا (مَنْ جَرَّ إِزَارَهُ) وَلَمْ يقولوا: ثوبه.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ وَهَارُونُ بْنُ عَبْدِ اللَّهِ وَابْنُ أَبِي خَلَفٍ. وألفاظهم متقاربة. قَالُوا: حَدَّثَنَا رَوْحُ بْنُ عُبَادَةَ. حَدَّثَنَا ابْنُ جُرَيْجٍ. قَالَ: سَمِعْتُ مُحَمَّدَ بْنَ عَبَّادِ بْنِ جَعْفَرٍ يقول: أَمَرْتُ مُسْلِمَ بْنَ يَسَارٍ، مَوْلَى نَافِعِ بْنِ عَبْدِ الْحَارِثِ أَنْ يَسْأَلَ ابْنَ عُمَرَ. قَالَ وَأَنَا جَالِسٌ بَيْنَهُمَا:\nأَسَمِعْتَ، مِنَ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي الَّذِي يَجُرُّ إِزَارَهُ مِنَ الْخُيَلَاءِ، شَيْئًا؟ قَالَ: سَمِعْتُهُ يَقُولُ (لَا يَنْظُرُ اللَّهُ إِلَيْهِ يَوْمَ الْقِيَامَةِ)."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

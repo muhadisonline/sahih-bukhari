@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-/+wZtzEQqaDJkV2GHeapl29LaeOxcQSmgQRqk/GL1PI='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٤٦ — حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ رَبِيعَةَ بْنِ أَبِي عَبْدِ… | موطأ مالك</title>
 <meta name="description" content="الحديث ١١٤٦ من موطأ مالك، كتاب الفرائض، . حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ رَبِيعَةَ بْنِ أَبِي عَبْدِ الرَّحْمَنِ، عَنْ غَيْرِ، وَاحِدٍ، مِنْ عُلَمَائِهِمْ . أَنَّهُ لَمْ يَتَوَارَثْ مَنْ قُتِلَ يَوْمَ الْجَمَلِ وَيَوْمَ صِفِّينَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -66,16 +68,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="موطأ مالك — الحديث ١١٤٦" data-url="https://sunan.online/malik/1146/">انسخ المتن</button>
   <a href="/malik/1147/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -94,35 +87,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٤٦ — حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ رَبِيعَةَ بْنِ أَبِي عَبْدِ… | موطأ مالك","inLanguage":"ar","isPartOf":{"@type":"Book","name":"موطأ مالك","inLanguage":"ar","author":{"@type":"Person","name":"مالك بن أنس، رواية يحيى بن يحيى الليثي"}},"position":1146,"articleBody":"حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنْ رَبِيعَةَ بْنِ أَبِي عَبْدِ الرَّحْمَنِ، عَنْ غَيْرِ، وَاحِدٍ، مِنْ عُلَمَائِهِمْ . أَنَّهُ لَمْ يَتَوَارَثْ مَنْ قُتِلَ يَوْمَ الْجَمَلِ وَيَوْمَ صِفِّينَ وَيَوْمَ الْحَرَّةِ ثُمَّ كَانَ يَوْمَ قُدَيْدٍ فَلَمْ يُوَرَّثْ أَحَدٌ مِنْهُمْ مِنْ صَاحِبِهِ شَيْئًا إِلاَّ مَنْ عُلِمَ أَنَّهُ قُتِلَ قَبْلَ صَاحِبِهِ . قَالَ مَالِكٌ وَذَلِكَ الأَمْرُ الَّذِي لاَ اخْتِلاَفَ فِيهِ وَلاَ شَكَّ عِنْدَ أَحَدٍ مِنْ أَهْلِ الْعِلْمِ بِبَلَدِنَا وَكَذَلِكَ الْعَمَلُ فِي كُلِّ مُتَوَارِثَيْنِ هَلَكَا بِغَرَقٍ أَوْ قَتْلٍ أَوْ غَيْرِ ذَلِكَ مِنَ الْمَوْتِ إِذَا لَمْ يُعْلَمْ أَيُّهُمَا مَاتَ قَبْلَ صَاحِبِهِ لَمْ يَرِثْ أَحَدٌ مِنْهُمَا مِنْ صَاحِبِهِ شَيْئًا وَكَانَ مِيرَاثُهُمَا لِمَنْ بَقِيَ مِنْ وَرَثَتِهِمَا يَرِثُ كُلَّ وَاحِدٍ مِنْهُمَا وَرَثَتُهُ مِنَ الأَحْيَاءِ . وَقَالَ مَالِكٌ لاَ يَنْبَغِي أَنْ يَرِثَ أَحَدٌ أَحَدًا بِالشَّكِّ وَلاَ يَرِثُ أَحَدٌ أَحَدًا إِلاَّ بِالْيَقِينِ مِنَ الْعِلْمِ وَالشُّهَدَاءِ وَذَلِكَ أَنَّ الرَّجُلَ يَهْلِكُ هُوَ وَمَوْلاَهُ الَّذِي أَعْتَقَهُ أَبُوهُ فَيَقُولُ بَنُو الرَّجُلِ الْعَرَبِيِّ قَدْ وَرِثَهُ أَبُونَا فَلَيْسَ ذَلِكَ لَهُمْ أَنْ يَرِثُوهُ بِغَيْرِ عِلْمٍ وَلاَ شَهَادَةٍ إِنَّهُ مَاتَ قَبْلَهُ وَإِنَّمَا يَرِثُهُ أَوْلَى النَّاسِ بِهِ مِنَ الأَحْيَاءِ . قَالَ مَالِكٌ وَمِنْ ذَلِكَ أَيْضًا الأَخَوَانِ لِلأَبِ وَالأُمِّ يَمُوتَانِ وَلأَحَدِهِمَا وَلَدٌ وَالآخَرُ لاَ وَلَدَ لَهُ وَلَهُمَا أَخٌ لأَبِيهِمَا فَلاَ يُعْلَمُ أَيُّهُمَا مَاتَ قَبْلَ صَاحِبِهِ فَمِيرَاثُ الَّذِي لاَ وَلَدَ لَهُ لأَخِيهِ لأَبِيهِ وَلَيْسَ لِبَنِي أَخِيهِ لأَبِيهِ وَأُمِّهِ شَىْءٌ . قَالَ مَالِكٌ وَمِنْ ذَلِكَ أَيْضًا أَنْ تَهْلَكَ الْعَمَّةُ وَابْنُ أَخِيهَا أَوِ ابْنَةُ الأَخِ وَعَمُّهَا فَلاَ يُعْلَمُ أَيُّهُمَا مَاتَ قَبْلُ فَإِنْ لَمْ يُعْلَمْ أَيُّهُمَا مَاتَ قَبْلُ لَمْ يَرِثِ الْعَمُّ مِنِ ابْنَةِ أَخِيهِ شَيْئًا وَلاَ يَرِثُ ابْنُ الأَخِ مِنْ عَمَّتِهِ شَيْئًا ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

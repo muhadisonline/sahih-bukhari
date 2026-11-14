@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RlIbtiTLoRWa/40L6HFvh72A6Wwv25gc1hhRbW77IC8='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢١٩٧ — أنتِ طَالِقٌ ثلاثاً | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢١٩٧ من سنن أبي داود، كتاب الطلاق، باب نسخ المراجعة بعد التطليقات الثلاث. حدَّثنا حميدُ بنُ مسعدة، حدَّثنا إسماعيلُ، أخبرنا أيوبُ، عن عبدِ الله ابنِ كثير عن مُجاهِدِ، قال: كُنتُ عندَ ابنِ عباس، فجاءه رجلٌ فقال: إنه طلَّقَ امرأتَه…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -66,16 +68,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢١٩٧" data-url="https://sunan.online/abudawud/2197/">انسخ المتن</button>
   <a href="/abudawud/2198/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -94,35 +87,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢١٩٧ — أنتِ طَالِقٌ ثلاثاً | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2197,"articleBody":"حدَّثنا حميدُ بنُ مسعدة، حدَّثنا إسماعيلُ، أخبرنا أيوبُ، عن عبدِ الله ابنِ كثير\nعن مُجاهِدِ، قال: كُنتُ عندَ ابنِ عباس، فجاءه رجلٌ فقال: إنه طلَّقَ امرأتَه ثلاثاً، قال: فَسَكَتَ حتى ظننتُ أنه رادُّها إليه، ثم قال: يَنطَلِقُ أحَدُكُم فيركبُ الحَمُوقَةَ ثم يقولُ: يا ابنَ عباس، يا ابنَ عباس، وإن الله قال: {وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مَخْرَجًا} [الطلاق: ٢] وإنك لم تَتَّقِ الله فلا أجِد لك مخرجاً، عَصَيتَ ربَّكَ، وبانَتْ مِنكَ امرأتُكَ، وإنَّ\nالله قال: {يَا أَيُّهَا النَّبِيُّ إِذَا طَلَّقْتُمُ النِّسَاءَ فَطَلِّقُوهُنَّ} [الطلاق: ١] في قبل عدَّتهنَّ.\nقال أبو داود: روى هذا الحديثَ حُميْدٌ الأعرجُ وغيرُه عن مجاهد عن ابنِ عباس.\nورواه شعبةُ، عن عمرِو بنِ مُرَّة، عن سعيد بنِ جُبير، عن ابن عباس.\nوأيوبُ وابنُ جريج جميعاً، عن عكرمة بنِ خالد، عن سعيد بن جُبير، عن ابنِ عباس.\nوابنُ جريج، عن عبدِ الحميد بن رافع، عن عطاء، عن ابنِ عباس.\nورواه الأعمشُ، عن مالك بنِ الحارثِ عن ابنِ عباس.\nوابنِ جُريج، عن عمرو بنِ دينارٍ عن ابنِ عباس، كلُّهُم قالوا في الطلاقِ الثلاثِ: إنه أجَازَهَا، قال: وبانتْ منك، نحو حديث إسماعيل، عن أيوب، عن عبد الله بنِ كثير.\nقال أبو داود: وروى حمادُ بنُ زيدٍ، عن أيوبَ، عن عِكرمَة، عن ابن عباسٍ، إذا قال: \"أنتِ طَالِقٌ ثلاثاً \" بفم واحد، فهي واحدة، ورواه إسماعيل بنُ إبراهيم، عن أيوب، عن عكرمة، هذا قوله، لم يذكر ابنَ عباس، وجَعَلَه قولَ عكرمة."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AH1/vcq9H57CJQQIkwxxL+llo907ZuCw6DAiJNZkrKw='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٠٠ — حدثنا القَاسِمُ بنُ دينارٍ الكُوفِيُّ، قال: حَدَّثَنَا إسماعِيل بنُ… | جامع الترمذي</title>
 <meta name="description" content="الحديث ١١٠٠ من جامع الترمذي، أبواب الجنائز عن رسول الله صلى الله عليه وسلم، باب ما جاء في رفع اليدين على الجنازة. حدثنا القَاسِمُ بنُ دينارٍ الكُوفِيُّ، قال: حَدَّثَنَا إسماعِيل بنُ أبانَ الورَّاقُ، عن يحيى بنِ يعلى الأسلمي، عن أبي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ١١٠٠" data-url="https://sunan.online/tirmidhi/1100/">انسخ المتن</button>
   <a href="/tirmidhi/1101/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,34 +85,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٠٠ — حدثنا القَاسِمُ بنُ دينارٍ الكُوفِيُّ، قال: حَدَّثَنَا إسماعِيل بنُ… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":1100,"articleBody":"حدثنا القَاسِمُ بنُ دينارٍ الكُوفِيُّ، قال: حَدَّثَنَا إسماعِيل بنُ أبانَ الورَّاقُ، عن يحيى بنِ يعلى الأسلمي، عن أبي فَرْوَةَ يزيدَ بنُ سِنَانٍ، عن زيدِ بنِ أبي أُنَيْسَةَ، عن الزُّهْرِيِّ، عن سعيدِ بنِ المُسَيَّبِ\nعن أبي هريرةَ: أنَّ رَسولَ اللهِ صلى الله عليه وسلم كَبَّر على جَنازةٍ، فَرفعَ يَديهِ في أوّلِ تكْبِيرَةٍ، ووضعَ اليُمْنَى على اليُسرى.\nهذا حديثٌ غريبٌ، لا نعرفُهُ إلَّا من هذا الوجهِ.\nواختلفَ أهلُ العِلمِ في هذا، فَرَأى أكثرُ أهلِ العِلمِ من أصحابِ النبيِّ صلى الله عليه وسلم وغيرهم: أنْ يرفعَ الرَّجُلُ يَدَيْهِ في كُلِّ تكْبيرَةٍ على الجَنازَةِ، وهو قَولُ ابنِ المُبَارَكِ، والشَّافِعِيَّ، وأحمدَ، وإسحاقَ.\nوقال بعضُ أهلِ العِلمِ: لا يرفعُ يديهِ إلَّا في أوَّلِ مَرَّةٍ، وهو قَولُ الثَّورِيِّ، وأهْلِ الكُوفَةِ.\nوذُكِرَ عن ابنِ المُبَارَكِ أنَّهُ قال في الصَّلاةِ على الجَنازَةِ: لا يَقْبِضُ بيَمِينِه على شِمالهِ.\nورأى بعضُ أهْلِ العِلمِ أنَّ يَقْبِضَ بِيَمِينِهِ على شِمَالِهِ كما يَفْعَلُ في الصَّلاةِ.\nيقبض أحَبُّ إليَّ."}</script>
 </body>
 </html>

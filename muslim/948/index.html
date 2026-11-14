@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-SnRD4EM/RdFPLYMbqOGSu07KtsLBsCe44qEB4JrOrJg='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٤٨ — مَا مِنْ رَجُلٍ مُسْلِمٍ يَمُوتُ فَيَقُومُ عَلَى جَنَازَتِهِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٩٤٨ من صحيح مسلم، كتاب الجنائز، باب من صلى عليه أربعون شفعوا فيه. حَدَّثَنَا هَارُونُ بْنُ مَعْرُوفٍ وَهَارُونُ بْنُ سَعِيدٍ الْأَيْلِيُّ والوليد بن شجاع السكوني (قال الْوَلِيدُ: حدثني. قال الْآخَرَانِ: حَدَّثَنَا ابْنُ وَهْبٍ).…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=18">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -60,16 +62,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٩٤٨" data-url="https://sunan.online/muslim/948/">انسخ المتن</button>
   <a href="/muslim/949/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -88,34 +81,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٤٨ — مَا مِنْ رَجُلٍ مُسْلِمٍ يَمُوتُ فَيَقُومُ عَلَى جَنَازَتِهِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":948,"articleBody":"حَدَّثَنَا هَارُونُ بْنُ مَعْرُوفٍ وَهَارُونُ بْنُ سَعِيدٍ الْأَيْلِيُّ والوليد بن شجاع السكوني (قال الْوَلِيدُ: حدثني. قال الْآخَرَانِ: حَدَّثَنَا ابْنُ وَهْبٍ). أَخْبَرَنِي أَبُو صَخْرٍ عَنْ شَرِيكِ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي نَمِرٍ، عَنْ كُرَيْبٍ مَوْلَى ابْنِ عَبَّاسٍ، عَنْ عَبْدِ اللَّهِ بْنِ عَبَّاسٍ؛\nأَنَّهُ مَاتَ ابْنٌ لَهُ بِقُدَيْدٍ أَوْ بِعُسْفَانَ. فَقَالَ: يَا كُرَيْبُ! انْظُرْ مَا اجْتَمَعَ لَهُ مِنَ النَّاسِ. قَالَ: فَخَرَجْتُ فَإِذَا نَاسٌ قَدِ اجْتَمَعُوا لَهُ. فَأَخْبَرْتُهُ. فَقَالَ: تَقُولُ هُمْ أَرْبَعُونَ؟ قَالَ: نَعَمْ. قَالَ: أخرجوه. فإني سمعت رسول اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ \"مَا مِنْ رَجُلٍ مُسْلِمٍ يَمُوتُ فَيَقُومُ عَلَى جَنَازَتِهِ أَرْبَعُونَ رَجُلًا، لَا يُشْرِكُونَ بِاللَّهِ شَيْئًا إِلَّا شَفَّعَهُمُ اللَّهُ فِيهِ\".\nوَفِي رِوَايَةِ ابْنِ مَعْرُوفٍ: عَنْ شَرِيكِ ابن أبي نمر، عن كريب، عن ابن عباس."}</script>
 </body>
 </html>

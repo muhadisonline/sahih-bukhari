@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-JZ4VoZbnemUPq5LWT8fFVX13LzZxd6GmQwhdyygXJ2I='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٣٤١ — أَرْضِعِيهِ خَمْسَ رَضَعَاتٍ فَيَحْرُمُ بِلَبَنِهَا | موطأ مالك</title>
 <meta name="description" content="الحديث ١٣٤١ من موطأ مالك، كتاب الرضاع، . حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنِ ابْنِ شِهَابٍ، أَنَّهُ سُئِلَ عَنْ رَضَاعَةِ الْكَبِيرِ، فَقَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ أَبَا حُذَيْفَةَ بْنَ عُتْبَةَ بْنِ رَبِيعَةَ،…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="موطأ مالك — الحديث ١٣٤١" data-url="https://sunan.online/malik/1341/">انسخ المتن</button>
   <a href="/malik/1342/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,34 +84,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٣٤١ — أَرْضِعِيهِ خَمْسَ رَضَعَاتٍ فَيَحْرُمُ بِلَبَنِهَا | موطأ مالك","inLanguage":"ar","isPartOf":{"@type":"Book","name":"موطأ مالك","inLanguage":"ar","author":{"@type":"Person","name":"مالك بن أنس، رواية يحيى بن يحيى الليثي"}},"position":1341,"articleBody":"حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، عَنِ ابْنِ شِهَابٍ، أَنَّهُ سُئِلَ عَنْ رَضَاعَةِ الْكَبِيرِ، فَقَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ أَبَا حُذَيْفَةَ بْنَ عُتْبَةَ بْنِ رَبِيعَةَ، وَكَانَ، مِنْ أَصْحَابِ رَسُولِ اللَّهِ صلى الله عليه وسلم وَكَانَ قَدْ شَهِدَ بَدْرًا وَكَانَ تَبَنَّى سَالِمًا الَّذِي يُقَالُ لَهُ سَالِمٌ مَوْلَى أَبِي حُذَيْفَةَ كَمَا تَبَنَّى رَسُولُ اللَّهِ صلى الله عليه وسلم زَيْدَ بْنَ حَارِثَةَ وَأَنْكَحَ أَبُو حُذَيْفَةَ سَالِمًا وَهُوَ يَرَى أَنَّهُ ابْنُهُ أَنْكَحَهُ بِنْتَ أَخِيهِ فَاطِمَةَ بِنْتَ الْوَلِيدِ بْنِ عُتْبَةَ بْنِ رَبِيعَةَ وَهِيَ يَوْمَئِذٍ مِنَ الْمُهَاجِرَاتِ الأُوَلِ وَهِيَ مِنْ أَفْضَلِ أَيَامَى قُرَيْشٍ فَلَمَّا أَنْزَلَ اللَّهُ تَعَالَى فِي كِتَابِهِ فِي زَيْدِ بْنِ حَارِثَةَ مَا أَنْزَلَ فَقَالَ {ادْعُوهُمْ لآبَائِهِمْ هُوَ أَقْسَطُ عِنْدَ اللَّهِ فَإِنْ لَمْ تَعْلَمُوا آبَاءَهُمْ فَإِخْوَانُكُمْ فِي الدِّينِ وَمَوَالِيكُمْ} رُدَّ كُلُّ وَاحِدٍ مِنْ أُولَئِكَ إِلَى أَبِيهِ فَإِنْ لَمْ يُعْلَمْ أَبُوهُ رُدَّ إِلَى مَوْلاَهُ فَجَاءَتْ سَهْلَةُ بِنْتُ سُهَيْلٍ وَهِيَ امْرَأَةُ أَبِي حُذَيْفَةَ وَهِيَ مِنْ بَنِي عَامِرِ بْنِ لُؤَىٍّ إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَقَالَتْ يَا رَسُولَ اللَّهِ كُنَّا نَرَى سَالِمًا وَلَدًا وَكَانَ يَدْخُلُ عَلَىَّ وَأَنَا فُضُلٌ وَلَيْسَ لَنَا إِلاَّ بَيْتٌ وَاحِدٌ فَمَاذَا تَرَى فِي شَأْنِهِ فَقَالَ لَهَا رَسُولُ اللَّهِ صلى الله عليه وسلم \" أَرْضِعِيهِ خَمْسَ رَضَعَاتٍ فَيَحْرُمُ بِلَبَنِهَا \" . وَكَانَتْ تَرَاهُ ابْنًا مِنَ الرَّضَاعَةِ فَأَخَذَتْ بِذَلِكَ عَائِشَةُ أُمُّ الْمُؤْمِنِينَ فِيمَنْ كَانَتْ تُحِبُّ أَنْ يَدْخُلَ عَلَيْهَا مِنَ الرِّجَالِ فَكَانَتْ تَأْمُرُ أُخْتَهَا أُمَّ كُلْثُومٍ بِنْتَ أَبِي بَكْرٍ الصِّدِّيقِ وَبَنَاتِ أَخِيهَا أَنْ يُرْضِعْنَ مَنْ أَحَبَّتْ أَنْ يَدْخُلَ عَلَيْهَا مِنَ الرِّجَالِ وَأَبَى سَائِرُ أَزْوَاجِ النَّبِيِّ صلى الله عليه وسلم أَنْ يَدْخُلَ عَلَيْهِنَّ بِتِلْكَ الرَّضَاعَةِ أَحَدٌ مِنَ النَّاسِ وَقُلْنَ لاَ وَاللَّهِ مَا نَرَى الَّذِي أَمَرَ بِهِ رَسُولُ اللَّهِ صلى الله عليه وسلم سَهْلَةَ بِنْتَ سُهَيْلٍ إِلاَّ رُخْصَةً مِنْ رَسُولِ اللَّهِ صلى الله عليه وسلم فِي رَضَاعَةِ سَالِمٍ وَحْدَهُ لاَ وَاللَّهِ لاَ يَدْخُلُ عَلَيْنَا بِهَذِهِ الرَّضَاعَةِ أَحَدٌ فَعَلَى هَذَا كَانَ أَزْوَاجُ النَّبِيِّ صلى الله عليه وسلم فِي رَضَاعَةِ الْكَبِيرِ ."}</script>
 </body>
 </html>

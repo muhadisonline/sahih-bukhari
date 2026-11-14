@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-xc5NClwgeUb7kPjPb3HoQouHBH7E/ySuF5TGeks5yTU='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣١٣٧ — أوَّلُ النَّاسِ يُقْضَى لهم يومَ القيامةِ ثلاثة: رجلٌ استُشْهِدَ،… | سنن النسائي</title>
 <meta name="description" content="الحديث ٣١٣٧ من سنن النسائي، كتاب الجهاد، باب من قاتل ليقال: فلان جريء. أخبرنا محمدُ بنُ عبدِ الأعلى قال: حدَّثنا خالدٌ قال: حدَّثنا ابن جُريج قال: حدَّثنا يونُس بنُ يوسف، عن سليمانَ بن يسار قال: تفرَّقَ النَّاسُ عن أبي هريرة، فقال له…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -59,16 +61,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣١٣٧" data-url="https://sunan.online/nasai/3137/">انسخ المتن</button>
   <a href="/nasai/3138/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -87,35 +80,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣١٣٧ — أوَّلُ النَّاسِ يُقْضَى لهم يومَ القيامةِ ثلاثة: رجلٌ استُشْهِدَ،… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3137,"articleBody":"أخبرنا محمدُ بنُ عبدِ الأعلى قال: حدَّثنا خالدٌ قال: حدَّثنا ابن جُريج قال: حدَّثنا يونُس بنُ يوسف، عن سليمانَ بن يسار قال:\nتفرَّقَ النَّاسُ عن أبي هريرة، فقال له ناتل؛ من أهل الشَّام: أيُّها الشيخ، حدِّثنِي حديثًا سمعتَهُ من رسولِ الله صلى الله عليه وسلم قال: نعم، سمعتُ رسولَ الله صلى الله عليه وسلم يقول: \"أوَّلُ النَّاسِ يُقْضَى لهم يومَ القيامةِ ثلاثة: رجلٌ استُشْهِدَ، فأُتِيَ به فعَرَّفَهُ نِعَمَهُ، فعَرَفَها، قال: فما عَمِلْتَ فيها؟ قال: قاتلتُ فيك حتى استُشْهِدْتُ، قال: كَذَبْتَ، ولكنَّك قاتَلْتَ ليُقال: فلانٌ جَرِيء، فقد قيل، ثم أُمِرَ به، فسُحِبَ على وجهه حتى أُلْقِيَ في النَّار، ورجلٌ تَعلَّمَ العِلْمَ وعَلَّمَهُ وقرأَ القرآنَ، فأُتِيَ بِه فَعَرَّفَهُ نِعَمَهُ، فَعَرَفَها، قال: فما عَمِلْتَ فيها؟ قال: تَعَلَّمْتُ العِلْمَ وعَلَّمْتُه، وقرأتُ فيك القرآن، قال: كَذَبْتَ، ولكنَّك تعلَّمتَ العِلْمَ لِيُقال: عالم، وقرأتَ القرآنَ ليقال: قارئ، فقد قيل، ثم أُمِرَ به، فسُحِبَ على وجهه حتى أُلْقِيَ في النَّار، ورجلٌ وَسَّعَ اللهُ عليه وأعطاه من أصنافِ المالِ كلَّه، فأُتِيَ به فعرَّفَهُ نِعَمَهُ، فَعَرَفَهَا، فقال: ما عَمِلْتَ فيها؟ قال: ما تركتُ من سبيلٍ تُحِبُّ - قال أبو\nعبد الرَّحمن: ولم أفهم \"تُحِبُّ\" كما أردتُ - أن يُنْفَقَ فيها إلا أنفَقْتُ فيها لك، قال: كَذَبْتَ، ولكن ليقال: إنَّه جَوَاد، فقد قيل، ثم أُمِرَ به، فسُحِبَ على وجهِه، فأُلْقِيَ فِي النَّار\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

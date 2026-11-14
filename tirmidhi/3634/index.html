@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-h9GWl4hVMNa4u1pj5y5FA3wFcWHgXvpNin6lpiKaPAE='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٦٣٤ — قال: &quot;كانَ مَلِكٌ من المُلُوكِ وكانَ لذلكَ المَلكِ كاهنٌ يَكْهُنُ لهُ،… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٣٦٣٤ من جامع الترمذي، أبواب تفسير القرآن عن رسول الله صلى الله عليه وسلم، ومن سورة ويل للمطففين. قال: &quot;كانَ مَلِكٌ من المُلُوكِ وكانَ لذلكَ المَلكِ كاهنٌ يَكْهُنُ لهُ، فقال الكاهنُ: انظُرُوا لي غُلامًا فَهِمًا أوْ قال: فَطِنًا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -66,16 +68,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣٦٣٤" data-url="https://sunan.online/tirmidhi/3634/">انسخ المتن</button>
   <a href="/tirmidhi/3635/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -94,34 +87,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٦٣٤ — قال: \"كانَ مَلِكٌ من المُلُوكِ وكانَ لذلكَ المَلكِ كاهنٌ يَكْهُنُ لهُ،… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3634,"articleBody":"قال: \"كانَ مَلِكٌ من المُلُوكِ وكانَ لذلكَ المَلكِ كاهنٌ يَكْهُنُ لهُ، فقال الكاهنُ: انظُرُوا لي غُلامًا فَهِمًا أوْ قال: فَطِنًا لَقِنًا فأُعَلِّمهُ عِلْمي هذا، فإني أخَافُ أنْ أمُوتَ، فَينْقطعَ مِنْكُمْ هذا العلمُ ولا يكُون فيكُمْ من يَعْلَمُهُ. قال: فَنظَرُوا لهُ على مَا وَصَفَ، فأمروهُ أنْ يَحْضُرَ ذلك الكاهنَ، وأنْ يَخْتلِفَ إلَيْهِ، فَجعلَ يَخْتلفُ إلَيْهِ.\nوَكَانَ على طَرِيقِ الغُلامِ رَاهبٌ في صَوْمَعةٍ - قال مَعْمرٌ: أحْسبُ أن أصْحابَ الصَّوَامع كانُوا يَوْمئذٍ مُسْلمينَ - قال: فَجعلَ الغُلامُ يَسْألُ ذلكَ الرَّاهبَ كُلَّما مَرَّ بهِ، فلم يَزلْ بهِ حتَّى أخْبرهُ، فقال: إنَّما أعْبدُ اللهَ. قال: فَجعلَ الغُلامُ يَمْكُثُ عِنْدَ الرَّاهبِ ويُبْطئُ عن الكاهنِ، فأرْسلَ الكاهنُ إلى أهْلِ الغُلامِ أنَّهُ لا يكادُ يَحْضُرُني، فَأخْبرَ الغُلامُ الرَّاهبَ بذلكَ، فقال لهُ الرَّاهبُ: إذا قال لَكَ الكاهنُ: أيْنَ كُنْتَ؟ فَقُلْ: عِنْدَ أهْلي، وإذا قال لَكَ أهْلُكَ: أيْنَ كُنْتَ؟ فأخْبرهُمْ أنّك كُنْتَ عِنْدَ الكاهنِ.\nقال: فَبيْنما الغُلامُ على ذلكَ إذْ مَرَّ بجماعةٍ من النَّاسِ كَثيرٍ قد حَبَستْهُمْ دابّةٌ، فقال بَعْضُهمْ: إنَّ تلْكَ الدَّابَّةَ كانَتْ أسَدًا. قال: فأخذَ الغُلامُ حَجرًا، فقال: اللهُمَّ إنْ كانَ ما يقولُ الرَّاهبُ حَقًّا فأسْألُكَ أنْ أقْتُلَهُ. قال: ثُمَّ رَمَى فَقتلَ الدَّابَّةَ. فقال النَّاسُ: من\nقَتَلها؟ قالوا: الغُلامُ، ففَزعَ النَّاسُ، وقالوا: قد عَلمَ هذا الغُلامُ عِلْمًا لم يَعلمْهُ أحدٌ. قال: فَسمعَ بهِ أعمى، فقال لهُ: إنْ أنتَ رَدَدْتَ بَصَري، فَلكَ كذا وكَذا. قال: لا أُريدُ مِنكَ هذا، ولكن أرَأيتَ إنْ رَجَعَ إلَيكَ بَصرُكَ أتُؤْمنُ بالَّذِي رَدّهُ عَليكَ؟ قال: نَعم. قال: فدعَا اللهَ فرَدَّ عليهِ بَصرَهُ، فآمنَ الأعمَى.\nفَبلغَ المَلكَ أمرُهُم، فَبعثَ إلَيهم، فأُتي بِهم، فقال: لأقتُلنَّ كُلَّ واحدٍ منكُم قِتْلةً لا أقتُلُ بها صَاحِبهُ، فأمرَ بالرَّاهبِ والرَّجُلِ الَّذِي كان أعمَى، فوضَعَ المِنْشَارَ على مَفْرِقِ أحَدهما فقتلهُ، وقَتلَ الآخَرَ بقِتلةٍ أُخرى.\nثُمَّ أمَرَ بالغُلامِ، فقال: انطَلقُوا بهِ إلى جَبلِ كَذا وكَذا، فألقُوهُ من رَأْسهِ، فانطلقُوا بهِ إلى ذلكَ الجَبلِ، فلمَّا انتَهوا إلى ذلك المكانِ الَّذي أرَادُوا أنْ يُلْقُوهُ مِنْهُ، جَعلُوا يتهافَتُون من ذلكَ الجَبلِ ويَتردَّوْنَ، حتَّى لم يَبْقَ منهُم إلَّا الغُلامُ.\nقال: ثُمَّ رَجعَ، فأمرَ بهِ المَلكُ أنْ ينطلقُوا بهِ إلى البَحرِ، فيُلقُوه فيهِ، فانطُلِقَ بهِ إلى البَحرِ، فَغرَّقَ اللهُ الَّذين كانُوا معهُ وأنجاهُ، فقال الغُلامُ لِلمَلكِ: إنّكَ لا تَقتُلُني حتَّى تَصْلِبَني وتَرْمِيني، وتَقولَ إذا رَمَيْتَني: بسمِ اللهِ ربِّ هذا الغُلامِ. قال: فأمرَ بهِ فَصُلبَ ثُمَّ رَماهُ، فقال: بسمِ اللهِ ربِّ هذا الغُلام. قال: فوضَعَ الغُلامُ يَدهُ على صُدْغهِ حِينَ رُمِي ثُمَّ ماتَ، فقال الناسُ: لقد عَلِمَ هذا الغُلامُ عِلمًا ما عَلمهُ أحدٌ، فإنَّا نُؤمنُ بربِّ الغُلامِ. قال: فقيلَ\nللمَلكِ أجَزِعتَ أن خالفكَ ثلاثةٌ، فهذا العَالمُ كُلُّهم قد خالفُوكَ. قال: فخدَّ أُخدُودًا ثمَّ ألقى فيها الحَطبَ والنَّارَ، ثُمَّ جَمعَ النَّاسَ. فقال: من رجعَ عن دينهِ تَركناهُ، ومن لم يَرجع ألقَيناهُ في هذه النَّارِ، فَجعلَ يُلقِيهم في تلكَ الأخدُودِ. قال: يقولُ الله تبارك وتعالى فيهِ: ﴿قُتِلَ أَصْحَابُ الْأُخْدُودِ النَّارِ ذَاتِ الْوَقُودِ﴾ [البروج: ٤، ٥] حتَّى بَلغَ ﴿الْعَزِيزِ الْحَمِيدِ﴾ [البروج: ٨] قال: فأمَّا الغُلامُ فإنَّهُ دُفنَ، قال: فيُذكَرُ أنَّهُ أُخرجَ في زَمنِ عُمرَ بنُ الخَطّابِ وإصبعهُ على صُدْغهِ كما وضَعها حينَ قُتلَ.\nهذا حديثٌ حسنٌ غريبٌ.\n[٧٧ - ومن سورة الغاشية]"}</script>
 </body>
 </html>

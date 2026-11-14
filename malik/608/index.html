@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-x9oK0wpelD4Lr5dGaIndRwG5EhHcRslcFQDWMLejujM='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٦٠٨ — وَحَدَّثَنِي عَنْ مَالِكٍ، عَنْ يَزِيدَ بْنِ خُصَيْفَةَ، أَنَّهُ… | موطأ مالك</title>
 <meta name="description" content="الحديث ٦٠٨ من موطأ مالك، كتاب الزكاة، . وَحَدَّثَنِي عَنْ مَالِكٍ، عَنْ يَزِيدَ بْنِ خُصَيْفَةَ، أَنَّهُ سَأَلَ سُلَيْمَانَ بْنَ يَسَارٍ عَنْ رَجُلٍ، لَهُ مَالٌ وَعَلَيْهِ دَيْنٌ مِثْلُهُ أَعَلَيْهِ زَكَاةٌ فَقَالَ لاَ . قَالَ مَالِكٌ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -57,16 +59,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="موطأ مالك — الحديث ٦٠٨" data-url="https://sunan.online/malik/608/">انسخ المتن</button>
   <a href="/malik/609/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -85,34 +78,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٦٠٨ — وَحَدَّثَنِي عَنْ مَالِكٍ، عَنْ يَزِيدَ بْنِ خُصَيْفَةَ، أَنَّهُ… | موطأ مالك","inLanguage":"ar","isPartOf":{"@type":"Book","name":"موطأ مالك","inLanguage":"ar","author":{"@type":"Person","name":"مالك بن أنس، رواية يحيى بن يحيى الليثي"}},"position":608,"articleBody":"وَحَدَّثَنِي عَنْ مَالِكٍ، عَنْ يَزِيدَ بْنِ خُصَيْفَةَ، أَنَّهُ سَأَلَ سُلَيْمَانَ بْنَ يَسَارٍ عَنْ رَجُلٍ، لَهُ مَالٌ وَعَلَيْهِ دَيْنٌ مِثْلُهُ أَعَلَيْهِ زَكَاةٌ فَقَالَ لاَ . قَالَ مَالِكٌ الأَمْرُ الَّذِي لاَ اخْتِلاَفَ فِيهِ عِنْدَنَا فِي الدَّيْنِ أَنَّ صَاحِبَهُ لاَ يُزَكِّيهِ حَتَّى يَقْبِضَهُ وَإِنْ أَقَامَ عِنْدَ الَّذِي هُوَ عَلَيْهِ سِنِينَ ذَوَاتِ عَدَدٍ ثُمَّ قَبَضَهُ صَاحِبُهُ لَمْ تَجِبْ عَلَيْهِ إِلاَّ زَكَاةٌ وَاحِدَةٌ فَإِنْ قَبَضَ مِنْهُ شَيْئًا لاَ تَجِبُ فِيهِ الزَّكَاةُ فَإِنَّهُ إِنْ كَانَ لَهُ مَالٌ سِوَى الَّذِي قُبِضَ تَجِبُ فِيهِ الزَّكَاةُ فَإِنَّهُ يُزَكَّى مَعَ مَا قَبَضَ مِنْ دَيْنِهِ ذَلِكَ . قَالَ وَإِنْ لَمْ يَكُنْ لَهُ نَاضٌّ غَيْرُ الَّذِي اقْتَضَى مِنْ دَيْنِهِ وَكَانَ الَّذِي اقْتَضَى مِنْ دَيْنِهِ لاَ تَجِبُ فِيهِ الزَّكَاةُ فَلاَ زَكَاةَ عَلَيْهِ فِيهِ وَلَكِنْ لِيَحْفَظْ عَدَدَ مَا اقْتَضَى فَإِنِ اقْتَضَى بَعْدَ ذَلِكَ عَدَدَ مَا تَتِمُّ بِهِ الزَّكَاةُ مَعَ مَا قَبَضَ قَبْلَ ذَلِكَ فَعَلَيْهِ فِيهِ الزَّكَاةُ . قَالَ فَإِنْ كَانَ قَدِ اسْتَهْلَكَ مَا اقْتَضَى أَوَّلاً أَوْ لَمْ يَسْتَهْلِكْهُ فَالزَّكَاةُ وَاجِبَةٌ عَلَيْهِ مَعَ مَا اقْتَضَى مِنْ دَيْنِهِ فَإِذَا بَلَغَ مَا اقْتَضَى عِشْرِينَ دِينَارًا عَيْنًا أَوْ مِائَتَىْ دِرْهَمٍ فَعَلَيْهِ فِيهِ الزَّكَاةُ ثُمَّ مَا اقْتَضَى بَعْدَ ذَلِكَ مِنْ قَلِيلٍ أَوْ كَثِيرٍ فَعَلَيْهِ الزَّكَاةُ بِحَسَبِ ذَلِكَ . قَالَ مَالِكٌ وَالدَّلِيلُ عَلَى الدَّيْنِ يَغِيبُ أَعْوَامًا ثُمَّ يُقْتَضَى فَلاَ يَكُونُ فِيهِ إِلاَّ زَكَاةٌ وَاحِدَةٌ أَنَّ الْعُرُوضَ تَكُونُ عِنْدَ الرَّجُلِ لِلتِّجَارَةِ أَعْوَامًا ثُمَّ يَبِيعُهَا فَلَيْسَ عَلَيْهِ فِي أَثْمَانِهَا إِلاَّ زَكَاةٌ وَاحِدَةٌ وَذَلِكَ أَنَّهُ لَيْسَ عَلَى صَاحِبِ الدَّيْنِ أَوِ الْعُرُوضِ أَنْ يُخْرِجَ زَكَاةَ ذَلِكَ الدَّيْنِ أَوِ الْعُرُوضِ مِنْ مَالٍ سِوَاهُ وَإِنَّمَا يُخْرِجُ زَكَاةَ كُلِّ شَىْءٍ مِنْهُ وَلاَ يُخْرِجُ الزَّكَاةَ مِنْ شَىْءٍ عَنْ شَىْءٍ غَيْرِهِ . قَالَ مَالِكٌ الأَمْرُ عِنْدَنَا فِي الرَّجُلِ يَكُونُ عَلَيْهِ دَيْنٌ وَعِنْدَهُ مِنَ الْعُرُوضِ مَا فِيهِ وَفَاءٌ لِمَا عَلَيْهِ مِنَ الدَّيْنِ وَيَكُونُ عِنْدَهُ مِنَ النَّاضِّ سِوَى ذَلِكَ مَا تَجِبُ فِيهِ الزَّكَاةُ فَإِنَّهُ يُزَكِّي مَا بِيَدِهِ مِنْ نَاضٍّ تَجِبُ فِيهِ الزَّكَاةُ وَإِنْ لَمْ يَكُنْ عِنْدَهُ مِنَ الْعُرُوضِ وَالنَّقْدِ إِلاَّ وَفَاءُ دَيْنِهِ فَلاَ زَكَاةَ عَلَيْهِ حَتَّى يَكُونَ عِنْدَهُ مِنَ النَّاضِّ فَضْلٌ عَنْ دَيْنِهِ مَا تَجِبُ فِيهِ الزَّكَاةُ فَعَلَيْهِ أَنْ يُزَكِّيَهُ ."}</script>
 </body>
 </html>

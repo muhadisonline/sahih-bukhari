@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-iNFa2G8T6F4mmaNQHhLnh7lhwOOs8LBlyaW1CY8wYNc='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٦٥٩ — حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا عَبْدُ الْوَاحِدِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٦٥٩ من صحيح مسلم، كتاب الأيمان، باب صحبة المماليك، وكفارة من لطم عبده. حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا عَبْدُ الْوَاحِدِ (يَعْنِي ابْنَ زِيَادٍ). حَدَّثَنَا الأَعْمَشُ عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٦٥٩" data-url="https://sunan.online/muslim/1659/">انسخ المتن</button>
   <a href="/muslim/1660/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٦٥٩ — حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا عَبْدُ الْوَاحِدِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1659,"articleBody":"حَدَّثَنَا أَبُو كَامِلٍ الْجَحْدَرِيُّ. حَدَّثَنَا عَبْدُ الْوَاحِدِ (يَعْنِي ابْنَ زِيَادٍ). حَدَّثَنَا الأَعْمَشُ عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ أَبِيهِ. قَالَ:\nقَالَ أَبُو مَسْعُودٍ الْبَدْرِيُّ: كُنْتُ أَضْرِبُ غُلَامًا لِي بِالسَّوْطِ. فَسَمِعْتُ صَوْتًا مِنْ خَلْفِي (اعْلَمْ، أَبَا مَسْعُودٍ!) فَلَمْ أَفْهَمْ الصَّوْتَ مِنَ الْغَضَبِ. قَالَ: فَلَمَّا دَنَا مني، إذ هُوَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَإِذَا هُوَ يَقُولُ (اعْلَمْ، أَبَا مَسْعُودٍ! اعْلَمْ، أَبَا مَسْعُودٍ!) قَالَ: فَأَلْقَيْتُ السَّوْطَ\nمِنْ يَدِي. فَقَالَ (اعْلَمْ، أَبَا مَسْعُودٍ! أَنَّ اللَّهَ أَقْدَرُ عليك منك على هذا الغلام) قال فَقُلْتُ: لَا أَضْرِبُ مَمْلُوكًا بَعْدَهُ أَبَدًا.\n\nوحَدَّثَنَاه إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا جَرِيرٌ. (ح) وحدثني زهير ابن حَرْبٍ. حَدَّثَنَا مُحَمَّدُ بْنُ حُمَيْدٍ (وَهُوَ الْمَعْمَرِيُّ) عَنْ سُفْيَانَ. (ح) وحَدَّثَنِي مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا سُفْيَانُ. (ح) وحَدَّثَنَا أبو بكر بن أبي شيبة. حدثنا عفان. حَدَّثَنَا أَبُو عَوَانَةَ. كُلُّهُمْ عَنْ الْأَعْمَشِ، بِإِسْنَادِ عَبْدِ الْوَاحِدِ، نَحْوَ حَدِيثِهِ. غَيْرَ أَنَّ فِي حَدِيثِ جَرِيرٍ: فَسَقَطَ مِنْ يَدِي السَّوْطُ، مِنْ هيبته.\n\nوحَدَّثَنَا أَبُو كُرَيْبٍ مُحَمَّدُ بْنُ الْعَلَاءِ. حَدَّثَنَا أَبُو مُعَاوِيَةَ. حَدَّثَنَا الأَعْمَشُ عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ أَبِيهِ، عَنْ أَبِي مَسْعُودٍ الْأَنْصَارِيِّ. قَالَ:\nكُنْتُ أَضْرِبُ غُلَامًا لِي. فَسَمِعْتُ مِنْ خَلْفِي صَوْتًا (اعْلَمْ، أَبَا مَسْعُودٍ! لَلَّهُ أَقْدَرُ عَلَيْكَ مِنْكَ عَلَيْهِ) فَالْتَفَتُّ فَإِذَا هُوَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقُلْتُ: يَا رَسُولَ اللَّهِ! هُوَ حُرٌّ لِوَجْهِ اللَّهِ. فَقَالَ (أَمَا لَوْ لَمْ تَفْعَلْ، لَلَفَحَتْكَ النَّارُ، أَوْ لَمَسَّتْكَ النار).\n\nوحدثنا محمد بن المثنى وابن بشار (واللفظ لِابْنِ الْمُثَنَّى). قَالَا: حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ عَنْ شُعْبَةَ، عَنْ سليمان، عن إبراهيم، عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ أَبِيهِ، عَنْ أَبِي مَسْعُودٍ؛\nأَنَّهُ كَانَ يَضْرِبُ غُلَامَهُ. فَجَعَلَ يَقُولُ: أعوذ بالله. فَجَعَلَ يَضْرِبُهُ. فَقَالَ: أَعُوذُ بِرَسُولِ اللَّهِ. فَتَرَكَهُ. فقال رسول الله صلى الله عليه وسلم (وَاللَّهِ! لَلَّهُ أَقْدَرُ عَلَيْكَ مِنْكَ عَلَيْهِ) قَالَ: فأعتقه.\n\nوحَدَّثَنِيهِ بِشْرُ بْنُ خَالِدٍ. أَخْبَرَنَا مُحَمَّدٌ (يَعْنِي ابْنَ جَعْفَرٍ) عَنْ شُعْبَةَ، بِهَذَا الْإِسْنَادِ. وَلَمْ يَذْكُرْ قَوْلَهُ: أَعُوذُ بِاللَّهِ. أَعُوذُ بِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

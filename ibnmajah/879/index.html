@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-rVz3+fPtZD0Z7N22s//XhHcekVIgQ8qn5vUnOrR4bxs='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٨٧٩ — اللَّهُمَّ! رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَاءِ، وَمِلْءَ… | سنن ابن ماجه</title>
 <meta name="description" content="الحديث ٨٧٩ من سنن ابن ماجه، أبواب إقامة الصلوات والسنة فيها، باب ما يقول إذا رفع رأسه من الركوع. حَدَّثَنَا إِسْمَاعِيلُ بْنُ مُوسَى السُّدِّيُّ، حَدَّثَنَا شَرِيكٌ، عَنْ أَبِي عُمَرَ قَالَ: سَمِعْتُ أَبَا جُحَيْفَةَ يَقُولُ: ذُكِرَتِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -61,16 +63,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن ابن ماجه — الحديث ٨٧٩" data-url="https://sunan.online/ibnmajah/879/">انسخ المتن</button>
   <a href="/ibnmajah/880/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -89,35 +82,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٨٧٩ — اللَّهُمَّ! رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَاءِ، وَمِلْءَ… | سنن ابن ماجه","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن ابن ماجه","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن يزيد ابن ماجه"}},"position":879,"articleBody":"حَدَّثَنَا إِسْمَاعِيلُ بْنُ مُوسَى السُّدِّيُّ، حَدَّثَنَا شَرِيكٌ، عَنْ أَبِي عُمَرَ قَالَ: سَمِعْتُ أَبَا جُحَيْفَةَ يَقُولُ: ذُكِرَتِ الْجُدُودُ عِنْدَ رَسُولِ اللهِ صلى الله عليه وسلم وَهُوَ فِي الصَّلَاةِ، فَقَالَ رَجُلٌ: جَدُّ فُلَانٍ فِي الْخَيْلِ،\nوَقَالَ آخَرُ: جَدُّ فُلَانٍ فِي الْإِبِلِ، وَقَالَ آخَرُ: جَدُّ فُلَانٍ فِي الْغَنَمِ، وَقَالَ آخَرُ: جَدُّ فُلَانٍ فِي الرَّقِيقِ، فَلَمَّا قَضَى رَسُولُ اللهِ صلى الله عليه وسلم صلَاتَهُ وَرَفَعَ رَأْسَهُ مِنْ آخِرِ الرَّكْعَةِ، قَالَ: \"اللَّهُمَّ! رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَاءِ، وَمِلْءَ الأرْضِ، وَمِلْءَ مَا شِئْتَ مِنْ شَيْءٍ بَعْدُ، اللَّهُمَّ! لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ\"، وَطَوَّلَ رَسُولُ اللهِ صلى الله عليه وسلم صَوْتَهُ بِالْجَدِّ، أَي: لِيَعْلَمُوا أَنَّهُ لَيْسَ كَمَا يَقُولُونَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

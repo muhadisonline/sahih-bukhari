@@ -1,7 +1,9 @@
 (function () {
-  var css = document.createElement("style");
-  css.textContent = ".book-find,.page-find{margin:.9rem 0 1.1rem}.book-find input,.page-find input{width:100%;border:1px solid #e6e1d8;background:#fff;padding:.7rem .85rem;font:inherit}.book-hits a{display:block;padding:.75rem 0;border-bottom:1px solid #e6e1d8;color:inherit;text-decoration:none}.book-hits .k{display:block;color:#6e675f;font-size:.85rem}.book-hits .t{display:block;font-family:Amiri,serif;font-size:1.2rem;line-height:1.5}";
-  document.head.appendChild(css);
+  document.addEventListener("submit", function (e) {
+    var f = e.target;
+    if (f && f.classList && (f.classList.contains("page-find") || f.classList.contains("book-find"))) e.preventDefault();
+  }, true);
+  var ALLOWED_BOOKS = { buxari: 1, muslim: 1, abudawud: 1, tirmidhi: 1, nasai: 1, ibnmajah: 1, malik: 1, darimi: 1, adab: 1, riyad: 1 };
   var AR = "٠١٢٣٤٥٦٧٨٩";
   var FA = "۰۱۲۳۴۵۶۷۸۹";
   var STOP = { "بن": 1, "ابن": 1, "بنت": 1, "في": 1, "من": 1, "على": 1, "الي": 1, "عن": 1, "ان": 1, "قال": 1 };
@@ -112,6 +114,7 @@
       if (bookRows) { go(); return; }
       if (loading) return;
       loading = true;
+      if (!ALLOWED_BOOKS[slug]) return;
       fetch("/assets/ix-" + slug + ".json").then(function (r) { return r.json(); }).then(function (data) {
         bookRows = data;
         go();
@@ -123,6 +126,7 @@
   var box = book.querySelector("input");
   var out = document.querySelector(".book-hits");
   var bookSlug = book.getAttribute("data-book");
+  if (!ALLOWED_BOOKS[bookSlug]) return;
   var rows = null;
   var timer = 0;
   function show(nodes, note) {

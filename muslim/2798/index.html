@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-8bHIfWG7wHK+eGBzA1Bj2MLC8YNP0dkq4Xxez9qanwU='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٧٩٨ — اللهم! سبع كسبع يوسف | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٧٩٨ من صحيح مسلم، كتاب صفة القيامة والجنة والنار، باب في البعث والنشور، وصفة الأرض يوم القيامة. حدثنا إسحاق بن إبراهيم. أخبرنا جرير عن منصور، عن أبي الضحى، عَنْ مَسْرُوقٍ. قَالَ: كُنَّا عِنْدَ عَبْدِ اللَّهِ جلوسا. وهو مضطجع…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -75,16 +77,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٧٩٨" data-url="https://sunan.online/muslim/2798/">انسخ المتن</button>
   <a href="/muslim/2799/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -103,35 +96,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٧٩٨ — اللهم! سبع كسبع يوسف | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2798,"articleBody":"حدثنا إسحاق بن إبراهيم. أخبرنا جرير عن منصور، عن أبي الضحى، عَنْ مَسْرُوقٍ. قَالَ:\nكُنَّا عِنْدَ عَبْدِ اللَّهِ جلوسا. وهو مضطجع بيننا. فأتاه رجل فقال: يا أبا عبد الرحمن! إن قاصا عند أبواب كندة يقص ويزعم؛ أن آية الدخان تجئ فتأخذ بأنفاس الكفار. ويأخذ\nالمؤمنين منه كهيئة الزكام. فقال عبد الله، وجلس وهو غضبان: يا أيها الناس! اتقوا الله. من علم منكم شيئا، فليقل بما يعلم. ومن لم يعلم، فليقل: الله أعلم. فإنه أعلم لأحدكم أن يقول، لما لا يعلم: الله أعلم. فإن الله عز وجل قال لنبيه صلى الله عليه وسلم: {قل ما أسئلكم عليه من أجر وما أنا من المتكلفين} [٣٨ /ص/٨٦]. إن رسول الله صلى الله عليه وسلم لما رأى من الناس إدبارا. فقال \"اللهم! سبع كسبع يوسف\" قال فأخذتهم سنة حصت كل شئ. حتى أكلوا الجلود والميتة من الجوع. وينظر إلى السماء أحدهم فيرى كهيئة الدخان. فأتاه أبو سفيان فقال: يا محمد! إنك جئت تأمر بطاعة الله وبصلة الرحم. وإن قومك قد هلكوا. فادع الله لهم. قال الله عز وجل: {فارتقب يوم تأتي السماء بدخان مبين* يغشى الناس هذا عذاب أليم} [٤٤ /الدخان /١٠ و-١١] إلى قوله: {إنكم عائدون}. قال: أفيكشف عذاب الآخرة؟ {يوم نبطش البطشة الكبرى إنا منتقمون} [٤٤ /الدخان /١٦]. فالبطشة يوم بدر. وقد مضت آية الدخان، والبطشة، واللزام، وآية الروم.\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا أبو معاوية ووكيع. (ح) وحدثني أبو سعيد الأشج. أخبرنا وكيع. (ح) وحَدَّثَنَا عُثْمَانُ بْنُ أَبِي شَيْبَةَ. حَدَّثَنَا جَرِيرٌ. كلهم عَنِ الأَعْمَشِ. (ح) وحَدَّثَنَا يَحْيَى بْنُ يَحْيَي وأبو كريب (واللفظ ليحيى). قالا: حدثنا أبو معاوية عن الأعمش، عن مسلم بن صبيح، عن مسروق. قال:\nجاء إلى عبد الله رجل فقال: تركت في المسجد رجلا يفسر القرآن برأيه.\nيفسر هذه الآية: {يوم تأتي السماء بدخان مبين}. قال: يأتي الناس يوم القيامة دخان فيأخذ بأنفاسهم. حتى يأخذهم منه كهيئة الزكام. فقال عبد الله: من علم علما فليقل به. ومن لم يعلم فليقل: الله أعلم. فإن من فقه الرجل أن يقول، لما لا علم له به: الله أعلم. إنما كان هذا؛ أن قريشا لما استعصت على النبي صلى الله عليه وسلم، دعا عليهم بسنين كسني يوسف. فأصابهم قحط وجهد. حتى جعل الرجل ينظر إلى السماء فيرى بينه وبينها كهيئة الدخان من الجهد. وحتى أكلوا العظام. فأتى النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ رَجُلٌ فَقَالَ: يا رسول الله! استغفر الله لمضر فإنهم قد هلكوا. فقال \"لمضر؟ إنك لجرئ\" قال فدعا الله لهم. فأنزل الله عز وجل: {إنا كاشفوا العذاب قليلا إنكم عائدون} [٤٤ /الدخان /١٥] قال فمطروا. فلما أصابتهم الرفاهية، قال، عادوا إلى ما كانوا عليه. قال فأنزل الله عز وجل: {فارتقب يوم تأتي السماء بدخان مبين* يغشى الناس هذا عذاب أليم} [٤٤ /الدخان /١٠ و-١٢] {يوم نبطش البطشة الكبرى إنا منتقمون} [٤٤ /الدخان /١٦] قال: يعني يوم بدر.\n\nحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا جَرِيرٌ عَنْ الْأَعْمَشُ، عَنْ أَبِي الضُّحَى، عَنْ مَسْرُوقٍ، عَنْ عبد الله قال:\nخمس قد مضين: الدخان، واللزام، والروم، والبطشة، والقمر.\n\nحدثنا أَبُو سَعِيدٍ الأَشَجُّ. حَدَّثَنَا وَكِيعٌ. حَدَّثَنَا الأَعْمَشُ، بِهَذَا الْإِسْنَادِ، مِثْلَهُ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

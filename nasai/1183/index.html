@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-7c9u3hfRkYny8kmgruD2uyBDf+Y+6UTm68bOUl9S+Xs='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١١٨٣ — ما منعكَ إذ أومأتُ إليكَ أن تُصلِّي؟ | سنن النسائي</title>
 <meta name="description" content="الحديث ١١٨٣ من سنن النسائي، كتاب السهو، باب رفع اليدين وحمد الله والثناء عليه في الصلاة. أخبرنا محمد بن عبد الله بن بَزيع قال: حدَّثنا عبد الأعلى بن عبد الأعلى قال: حدَّثنا عُبيد الله - وهو ابن عمر - عن أبي حازم عن سهل بن سعد قال: انطلقَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ١١٨٣" data-url="https://sunan.online/nasai/1183/">انسخ المتن</button>
   <a href="/nasai/1184/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١١٨٣ — ما منعكَ إذ أومأتُ إليكَ أن تُصلِّي؟ | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":1183,"articleBody":"أخبرنا محمد بن عبد الله بن بَزيع قال: حدَّثنا عبد الأعلى بن عبد الأعلى قال: حدَّثنا عُبيد الله - وهو ابن عمر - عن أبي حازم\nعن سهل بن سعد قال: انطلقَ رسولُ الله صلى الله عليه وسلم يُصلح بين بني عمرو بن عوف، فحضرتِ الصَّلاة، فجاء المؤذِّنُ إلى أبي بكرٍ، فَأَمَرَه أن يجمَعَ النَّاسَ ويؤُمَّهم، فجاء رسولُ الله، فخرَقَ الصفوف حتَّى قامَ في الصَّفِّ المُقدَّم،\nوصفَّحَ النَّاسُ بأبي بكرٍ ليُؤْذِنوه برسولِ الله صلى الله عليه وسلم، وكان أبو بكرٍ لا يلتفِتُ في الصَّلاة، فلمَّا أكثروا علِمَ أنَّه قد نابَهم شيءٌ في صلاتِهم، فالتفَتَ، فإذا هو برسولِ الله صلى الله عليه وسلم، فأومَأَ إليه رسولُ الله صلى الله عليه وسلم - أي: كما أنْتَ - فرفَعَ أبو بكر يدَيه، فحَمِدَ الله وأثنى عليه لِقولِ رسولِ الله صلى الله عليه وسلم، ثُمَّ رَجَعَ القَهْقَرى، وتقدَّمَ رسولُ الله صلى الله عليه وسلم فصلَّى، فلمَّا انصرفَ قال لأبي بكر: \"ما منعكَ إذ أومأتُ إليكَ أن تُصلِّي؟ \" فقال أبو بكر رضي الله عنه: ما كان ينبغي لابن أبي قُحافة أن يَؤُمَّ رسول الله صلى الله عليه وسلم. ثُمَّ قال للنَّاس: \"ما بالُكم صفَّحتُم؟ إِنَّما التَّصفيحُ للنِّساء\"، ثُمَّ قال: \"إذا نابَكُم شيءٌ في صلاتكم فسبِّحوا\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

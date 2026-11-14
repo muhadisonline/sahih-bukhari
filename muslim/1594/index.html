@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-UJCzDSazMV/siKy347xQgH7C4OsILGnMlUJCAIN6r6Q='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٥٩٤ — حدثنا إسحاق بن منصور. أخبرنا يحيى بن صالح الحواظي. حَدَّثَنَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٥٩٤ من صحيح مسلم، كتاب المساقاة، باب بيع الطعام مثلا بمثل. حدثنا إسحاق بن منصور. أخبرنا يحيى بن صالح الحواظي. حَدَّثَنَا مُعَاوِيَةُ. (ح) وحَدَّثَنِي مُحَمَّدُ بْنُ سَهْلٍ التميمي، وعبد الله بن عبد الرحمن الدرامي (واللفظ لهما).…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٥٩٤" data-url="https://sunan.online/muslim/1594/">انسخ المتن</button>
   <a href="/muslim/1595/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٥٩٤ — حدثنا إسحاق بن منصور. أخبرنا يحيى بن صالح الحواظي. حَدَّثَنَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1594,"articleBody":"حدثنا إسحاق بن منصور. أخبرنا يحيى بن صالح الحواظي. حَدَّثَنَا مُعَاوِيَةُ. (ح) وحَدَّثَنِي مُحَمَّدُ بْنُ سَهْلٍ التميمي، وعبد الله بن عبد الرحمن الدرامي (واللفظ لهما). جميعا عن يحيى ابْنَ حَسَّانَ. حَدَّثَنَا مُعَاوِيَةُ (وَهُوَ ابْنُ سَلَّامٍ). أَخْبَرَنِي يَحْيَى (وَهُوَ ابْنُ أَبِي كَثِيرٍ). قَالَ: سَمِعْتُ عقبة ابن عَبْدِ الْغَافِرِ يَقُولُ: سَمِعْتُ أَبَا سَعِيدٍ يَقُولُ:\nجَاءَ بِلَالٌ بِتَمْرٍ بَرْنِيٍّ. فَقَالَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (مِنْ أَيْنَ هذا؟) فقال بلال: تمر، كان عندنا ردئ. فَبِعْتُ مِنْهُ صَاعَيْنِ بِصَاعٍ. لِمَطْعَمِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقَالَ رَسُولُ اللَّهِ، عِنْدَ ذَلِكَ (أَوَّهْ. عَيْنُ الرِّبَا. لَا تَفْعَلْ. وَلَكِنْ إِذَا أَرَدْتَ أَنْ تَشْتَرِيَ التَّمْرَ فَبِعْهُ\nبِبَيْعٍ آخر ثم اشتري بِهِ).\nلَمْ يَذْكُرْ ابْنُ سَهْلٍ فِي حَدِيثِهِ عند ذلك.\n\nوحَدَّثَنَا سَلَمَةُ بْنُ شَبِيبٍ. حَدَّثَنَا الْحَسَنُ بْنُ أَعْيَنَ. حَدَّثَنَا مَعْقِلٌ عَنْ أَبِي قَزَعَةَ الْبَاهِلِيِّ، عَنْ أَبِي نَضْرَةَ، عَنْ أَبِي سَعِيدٍ. قَالَ:\nأتى رسول الله صلى الله عليه وسلم بِتَمْرٍ. فَقَالَ (مَا هَذَا التَّمْرُ مِنْ تَمْرِنَا). فَقَالَ الرَّجُلُ: يَا رَسُولَ اللَّهِ! بِعْنَا تَمْرَنَا صَاعَيْنِ بِصَاعٍ مِنْ هَذَا. فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم (هَذَا الرِّبَا. فَرُدُّوهُ. ثُمَّ بِيعُوا تَمْرَنَا وَاشْتَرُوا لَنَا مِنْ هَذَا).\n\nحَدَّثَنِي عَمْرٌو النَّاقِدُ حَدَّثَنَا إِسْمَاعِيل بْنُ إِبْرَاهِيمَ عَنْ سَعِيدٍ الْجُرَيْرِيِّ، عَنْ أَبِي نَضْرَةَ. قَالَ: سَأَلْتُ ابْنَ عَبَّاسٍ عَنِ الصَّرْفِ؟ فَقَالَ: أَيَدًا بِيَدٍ؟ قُلْتُ: نَعَمْ. قَالَ: فَلَا بَأْسَ بِهِ. قَالَ: أَوَ قَالَ ذَلِكَ؟ إِنَّا سَنَكْتُبُ إِلَيْهِ فَلَا يُفْتِيكُمُوهُ. قَالَ:\nفَوَاللَّهِ! لَقَدْ جَاءَ بَعْضُ فِتْيَانِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِتَمْرٍ فَأَنْكَرَهُ. فَقَالَ (كَأَنَّ هَذَا لَيْسَ مِنْ تَمْرِ أَرْضِنَا). قَالَ: كَانَ فِي تَمْرِ أَرْضِنَا (أَوْ فِي تَمْرِنَا)، الْعَامَ، بَعْضُ الشَّيْءِ. فَأَخَذْتُ هَذَا وَزِدْتُ بَعْضَ الزِّيَادَةِ. فَقَالَ (أَضْعَفْتَ. أَرْبَيْتَ. لَا تَقْرَبَنَّ هَذَا. إِذَا رَابَكَ مِنْ تَمْرِكَ شيء فبعه. ثم اشتري الَّذِي تُرِيدُ مِنَ التَّمْرِ).\n\nحَدَّثَنَا إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا عَبْدُ الْأَعْلَى. أخبرنا داود عنأبي نَضْرَةَ. قَالَ: سَأَلْتُ ابْنَ عُمَرَ وَابْنَ عَبَّاسٍ عَنِ الصَّرْفِ؟ فَلَمْ يَرَيَا بِهِ بَأْسًا. فَإِنِّي لَقَاعِدٌ عِنْدَ أَبِي سَعِيدٍ الْخُدْرِيِّ فَسَأَلْتُهُ عَنِ الصَّرْفِ؟ فَقَالَ: مَا زَادَ فَهُوَ رِبًا. فَأَنْكَرْتُ ذَلِكَ، لِقَوْلِهِمَا. فَقَالَ: لَا أُحَدِّثُكَ إِلَّا مَا سمعت من رسول الله صلى الله عليه وَسَلَّمَ.\nجَاءَهُ صَاحِبُ نَخْلِهِ بِصَاعٍ مِنْ تَمْرٍ طَيِّبٍ. وَكَانَ تَمْرُ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ هَذَا اللَّوْنَ. فَقَالَ لَهُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَنَّى لَكَ هَذَا؟) قَالَ: انْطَلَقْتُ بِصَاعَيْنِ فَاشْتَرَيْتُ بِهِ هَذَا الصَّاعَ. فَإِنَّ سِعْرَ هَذَا فِي السُّوقِ كَذَا. وَسِعْرَ هَذَا كَذَا. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (وَيْلَكَ! أَرْبَيْتَ. إِذَا أَرَدْتَ ذَلِكَ فَبِعْ تَمْرَكَ بِسِلْعَةٍ. ثُمَّ اشْتَرِ بِسِلْعَتِكَ أَيَّ تَمْرٍ شِئْتَ).\nقَالَ أَبُو سَعِيدٍ: فَالتَّمْرُ بِالتَّمْرِ أَحَقُّ أَنْ يَكُونَ رِبًا أَمْ الْفِضَّةُ بِالْفِضَّةِ؟ قَالَ: فَأَتَيْتُ ابْنَ عُمَرَ، بَعْدُ، فَنَهَانِي. وَلَمْ آتِ ابْنَ عَبَّاسٍ. قَالَ: فَحَدَّثَنِي أَبُو الصَّهْبَاءِ أَنَّهُ سأل ابن عباس عنه بمكة، فكرهه."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-hPLflrymYdukaBQQ8CGAsA7cwx9Yg7A4DiKaw7XEUo4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٢١٣ — أنتَ بذاكَ يا سلمة؟ | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢٢١٣ من سنن أبي داود، كتاب الطلاق، باب في الظهار. حدَّثنا عثمانُ بنُ أبي شيبةَ ومحمدُ بنُ العلاء - المعنى - قالا: حدَّثنا ابنُ إدريس، عن محمد بنِ إسحاق، عن محمد بنِ عمرو بنِ عطاء، قال ابن العلاء: ابن علقمة بنِ عياش، عن سُليمان بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢٢١٣" data-url="https://sunan.online/abudawud/2213/">انسخ المتن</button>
   <a href="/abudawud/2214/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٢١٣ — أنتَ بذاكَ يا سلمة؟ | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2213,"articleBody":"حدَّثنا عثمانُ بنُ أبي شيبةَ ومحمدُ بنُ العلاء - المعنى - قالا: حدَّثنا ابنُ إدريس، عن محمد بنِ إسحاق، عن محمد بنِ عمرو بنِ عطاء، قال ابن العلاء: ابن علقمة بنِ عياش، عن سُليمان بن يَسار\nعن سلمةَ بنِ صخرٍ - قال ابن العلاء: البياضيّ - قال: كنتُ امرأً أُصِيبُ مِنَ النساءِ ما لا يُصيب غيري، فلما دخَلَ شهرُ رمضانِ، خفتُ أن أُصيب مِن امرأتي شيئاً يُتابع بي، حتى أُصبحَ، فظاهرتُ منها حتى ينسلخَ شهرُ رمضان، فبينا هي تخدِمُني ذاتَ ليلة إذ تكشَّف لي منها شيء, فلم ألبث أن نزوتُ عليها، فلما أصبحتُ خرجتُ إلى قومي، فأخبرتهم الخبرَ، وقلت: امشوا معي إلى رسولِ الله - صلَّى الله عليه وسلم -، قالوا: لا واللهِ، فانطلقتُ إلى النبي - صلَّى الله عليه وسلم - فأخبرتُه، فقال: \"أنتَ بذاكَ يا سلمة؟ \" قلت: أنا بِذَاكَ يا رسول الله، مرتين، وأنا صابرٌ لأمرِ الله عز وجلَّ، فاحكم في ما أراك الله، قال: \"حرِّر رقبةً\"، قلت: والذي بَعَثَكَ بالحق ما أملِكُ رقبةً غيرها، وضربتُ صفحة رقبتي، قال: \"فصُمْ شهرين متتابعين\"، قال: وهل أصبتُ الذي أصبتُ إلا مِن الصيام؟ قال: \"فأطعم وسقاً مِن تمر بين ستين مسكيناً\" قلتُ: والذي بعثكَ بالحق، لقد بتنا وحشينِ، ما لنا طعامٌ، قال: \"فانطلِقْ إلى صاحِب صَدَقةِ بني زُرَيقٍ، فليدفعها إليك، فأطعِم ستينَ مسكيناً وسقاً من تمر، وكل أنت وعيالُك بقيتها\"، فرجعت إلى قومي، فقلت: وجَدتُ عندكم الضيقَ، وسوء الرأي، ووجدتُ عندَ النبي - صلَّى الله عليه وسلم - السعَةَ، وحُسنَ الرأي، وقد أمرني، أو أمَرَ لي بِصَدَقتكم.\nزاد ابنُ العلاء: قال ابنُ إدريبس: وبياضَةُ: بطن من بني زُريق."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

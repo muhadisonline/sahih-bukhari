@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-IOxMiMe0zJoXo2Ni6JCNFRAItiCaWgMcBRfex+1RM40='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٧٧١ — وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالأَرْضَ حَنِيفًا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٧٧١ من صحيح مسلم، كتاب صلاة المسافرين وقصرها، باب الدعاء في صلاة الليل وقيامه. حَدَّثَنَا مُحَمَّدُ بْنُ أَبِي بَكْرٍ الْمُقَدَّمِيُّ. حَدَّثَنَا يُوسُفُ الْمَاجِشُونُ. حَدَّثَنِي أَبِي عَنْ عَبْدِ الرَّحْمَنِ الأَعْرَجِ، عَنْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -70,16 +72,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٧٧١" data-url="https://sunan.online/muslim/771/">انسخ المتن</button>
   <a href="/muslim/772/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -98,35 +91,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٧٧١ — وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالأَرْضَ حَنِيفًا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":771,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ أَبِي بَكْرٍ الْمُقَدَّمِيُّ. حَدَّثَنَا يُوسُفُ الْمَاجِشُونُ. حَدَّثَنِي أَبِي عَنْ عَبْدِ الرَّحْمَنِ الأَعْرَجِ، عَنْ عُبَيْدِ الله ابن أَبِي رَافِعٍ، عَنْ عَلِيِّ بْنِ أَبِي طَالِبٍ، عن رسول الله صلى الله عليه وسلم؛ أَنَّهُ كَانَ إِذَا قَامَ إِلَى الصَّلَاةِ قَالَ:\n\"وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ\nالْمُشْرِكِينَ. إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ لَا شَرِيكَ لَهُ وَبِذَلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِينَ. اللَّهُمَّ! أنت الملك لا إله إِلَّا أَنْتَ. وَاهْدِنِي لِأَحْسَنِ الأَخْلَاقِ. لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ. وَاصْرِفْ عَنِّي سَيِّئَهَا. لَا يَصْرِفُ عَنِّي سَيِّئَهَا إِلَّا أَنْتَ. لَبَّيْكَ! وَسَعْدَيْكَ! وَالْخَيْرُ كُلُّهُ فِي يَدَيْكَ. وَالشَّرُّ لَيْسَ إِلَيْكَ. أَنَا بِكَ وَإِلَيْكَ. تَبَارَكْتَ وَتَعَالَيْتَ. أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ\". وَإِذَا رَكَعَ قَالَ \"اللَّهُمَّ! لَكَ رَكَعْتُ. وَبِكَ آمَنْتُ. وَلَكَ أَسْلَمْتُ. خَشَعَ لَكَ سَمْعِي وَبَصَرِي. وَمُخِّي وَعَظْمِي وَعَصَبِي\". وَإِذَا رَفَعَ قَالَ \"اللَّهُمَّ! رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَاوَاتِ وَمِلْءَ الأَرْضِ وَمِلْءَ مَا بَيْنَهُمَا وَمِلْءَ مَا شِئْتَ مِنْ شَيْءٍ بَعْدُ\". وَإِذَا سَجَدَ قَالَ \"اللَّهُمَّ! لَكَ سَجَدْتُ. وَبِكَ آمَنْتُ. وَلَكَ أَسْلَمْتُ. سَجَدَ وَجْهِي لِلَّذِي خَلَقَهُ وَصَوَّرَهُ، وَشَقَّ سَمْعَهُ وَبَصَرَهُ. تبارك الله أحسن\nالخالقين\" ثم يكون منت آخِرِ مَا يَقُولُ بَيْنَ التَّشَهُّدِ وَالتَّسْلِيمِ \"اللَّهُمَّ! اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ. وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ. وَمَا أَسْرَفْتُ. وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي. أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ. لا إله إلا أنت\".\n\nوحَدَّثَنَاه زُهَيْرُ بْنُ حَرْبٍ. حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ مَهْدِيٍّ. (ح) وحَدَّثَنَا إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا أَبُو النَّضْرِ. قَالَا: حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ بْنِ أَبِي سَلَمَةَ عَنْ عَمِّهِ الْمَاجِشُونِ بْنِ أَبِي سَلَمَةَ، عَنِ الأَعْرَجِ، بِهَذَا الإِسْنَادِ. وَقَالَ:\nكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا اسْتَفْتَحَ الصَّلَاةَ كَبَّرَ ثُمَّ قَالَ \"وَجَّهْتُ وَجْهِي\" وَقَالَ \"وَأَنَا أَوَّلُ الْمُسْلِمِينَ\" وَقَالَ: وَإِذَا رَفَعَ رَأْسَهُ مِنَ الرُّكُوعِ قَالَ \"سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ\" وَقَالَ \"وَصَوَّرَهُ فَأَحْسَنَ صُوَرَهُ\" وَقَالَ: وَإِذَا سَلَّمَ قَالَ \"اللَّهُمَّ! اغْفِرْ لِي مَا قَدَّمْتُ\" إِلَى آخِرِ الْحَدِيثِ وَلَمْ يَقُلْ: بَيْنَ التَّشَهُّدِ والتسليم."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

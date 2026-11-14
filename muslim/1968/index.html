@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-K4QoS8pG1iMsKXNg0H78dc/ob8yYpB3pkqUifeynhrQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٩٦٨ — حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى الْعَنَزِيُّ. حَدَّثَنَا يَحْيَى… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٩٦٨ من صحيح مسلم، كتاب الأضاحي، باب جواز الذبح بكل ما أنهر الدم، إلا السن والظفر وسائر العظام. حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى الْعَنَزِيُّ. حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ عَنْ سُفْيَانَ. حَدَّثَنِي أَبِي عَنْ عَبَايَةَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -76,16 +78,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٩٦٨" data-url="https://sunan.online/muslim/1968/">انسخ المتن</button>
   <a href="/muslim/1969/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -104,35 +97,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٦٨ — حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى الْعَنَزِيُّ. حَدَّثَنَا يَحْيَى… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1968,"articleBody":"حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى الْعَنَزِيُّ. حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ عَنْ سُفْيَانَ. حَدَّثَنِي أَبِي عَنْ عَبَايَةَ بْنِ رِفَاعَةَ بْنِ رَافِعِ بْنِ خَدِيجٍ، عَنْ رَافِعِ بْنِ خَدِيجٍ. قُلْتُ:\nيَا رَسُولَ اللَّهِ! إِنَّا لَاقُو الْعَدُوِّ غَدًا. وَلَيْسَتْ مَعَنَا مُدًى. قَالَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (أَعْجِلْ أَوْ أَرْنِي. مَا أَنْهَرَ الدَّمَ، وَذُكِرَ اسْمُ اللَّهِ فَكُلْ. لَيْسَ السِّنَّ وَالظُّفُرَ. وَسَأُحَدِّثُكَ. أَمَّا السِّنُّ فَعَظْمٌ. وَأَمَّا الظُّفُرُ فَمُدَى الْحَبَشَةِ) قَالَ: وَأَصَبْنَا نَهْبَ إِبِلٍ وَغَنَمٍ. فَنَدَّ مِنْهَا بَعِيرٌ. فَرَمَاهُ رَجُلٌ بِسَهْمٍ فَحَبَسَهُ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (إِنَّ لِهَذِهِ الْإِبِلِ. أَوَابِدَ كَأَوَابِدِ الْوَحْشِ. فَإِذَا غَلَبَكُمْ مِنْهَا شَيْءٌ، فَاصْنَعُوا بِهِ هكذا).\n\nوحدثنا إِسْحَاق بْنُ إِبْرَاهِيمَ. أَخْبَرَنَا وَكِيعٌ. حَدَّثَنَا سُفْيَانُ بْنِ سَعِيدِ بْنِ مَسْرُوقٍ عَنْ أَبِيهِ، عَنْ عَبَايَةَ بْنِ رِفَاعَةَ بْنِ رَافِعِ بْنِ خَدِيجٍ، عَنْ رَافِعِ بْنِ خَدِيجٍ. قَالَ: كُنَّا مع رسول الله صلى الله عليه وسلم\nبِذِي الْحُلَيْفَةِ مِنْ تِهَامَةَ. فَأَصَبْنَا غَنَمًا وَإِبِلًا. فَعَجِلَ الْقَوْمُ. فَأَغْلَوْا بِهَا الْقُدُورَ. فَأَمَرَ بِهَا فَكُفِئَتْ. ثُمَّ عَدَلَ عَشْرًا مِنَ الْغَنَمِ بِجَزُورٍ. وَذَكَرَ بَاقِيَ الْحَدِيثِ كَنَحْوِ حَدِيثِ يَحْيَي بْنِ سعيد.\n\nوحدثنا ابن أبي عمر. حدثنا سفيان عن إِسْمَاعِيلَ بْنِ مُسْلِمٍ، عَنْ سَعِيدِ بْنِ مَسْرُوقٍ، عَنْ عَبَايَةَ، عَنْ جَدِّهِ رَافِعٍ. ثُمَّ حَدَّثَنِيهِ عمر ابن سَعِيدِ بْنِ مَسْرُوقٍ عَنْ أَبِيهِ، عَنْ عَبَايَةَ بن رفاعة بن رافع ابن خَدِيجٍ، عَنْ جَدِّهِ. قَالَ: قُلْنَا:\nيَا رَسُولَ الله! إنا لاقوا الْعَدُوِّ غَدًا. وَلَيْسَ مَعَنَا مُدًى. فَنُذَكِّي بِاللِّيطِ؟ وَذَكَرَ الْحَدِيثَ بِقِصَّتِهِ. وَقَالَ: فَنَدَّ عَلَيْنَا بَعِيرٌ منها. فرميناه بالنبل حتى وهضناه.\n\nوحَدَّثَنِيهِ الْقَاسِمُ بْنُ زَكَرِيَّاءَ. حَدَّثَنَا حُسَيْنُ بْنُ عَلِيٍّ عَنْ زَائِدَةَ، عَنْ سَعِيدِ بْنِ مَسْرُوقٍ، بِهَذَا الْإِسْنَادِ، الْحَدِيثَ إِلَى آخِرِهِ بِتَمَامِهِ. وَقَالَ فِيهِ: وَلَيْسَتْ مَعَنَا مُدًى، أَفَنَذْبَحُ بِالْقَصَبِ.\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ الْوَلِيدِ بْنِ عَبْدِ الْحَمِيدِ. حدثنا محمد بن جعفر. حدثنا شعبة عن سَعِيدِ بْنِ مَسْرُوقٍ، عَنْ عَبَايَةَ بْنِ رِفَاعَةَ بْنِ رَافِعٍ، عَنْ رَافِعِ بْنِ خَدِيجٍ؛ أَنَّهُ قال:\nيا رسول الله! إنا لاقوا الْعَدُوِّ غَدًا. وَلَيْسَ مَعَنَا مُدًى. وَسَاقَ الْحَدِيثَ. وَلَمْ يَذْكُرْ: فَعَجِلَ الْقَوْمُ فَأَغْلَوْا بِهَا الْقُدُورَ فَأَمَرَ بِهَا فَكُفِئَتْ. وَذَكَرَ سَائِرَ الْقِصَّةِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

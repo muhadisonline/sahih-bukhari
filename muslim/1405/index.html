@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-2IxW/+G6uIKUMpP4esCarFnsRP1wC+d3HTyL9+S66QQ='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٠٥ — وحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٤٠٥ من صحيح مسلم، كتاب النكاح، باب نكاح المتعة وبيان أنه أبيح ثم نسخ، ثم أبيح ثم نسخ، واستقر تحريمه إلى يوم القيامة. وحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ عَمْرِو بْنِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -73,16 +75,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٤٠٥" data-url="https://sunan.online/muslim/1405/">انسخ المتن</button>
   <a href="/muslim/1406/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -101,35 +94,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٠٥ — وحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1405,"articleBody":"وحَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ. حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ عَمْرِو بْنِ دِينَارٍ. قَالَ: سَمِعْتُ الْحَسَنَ بْنَ مُحَمَّدٍ يُحَدِّثُ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ وَسَلَمَةَ بْنِ الْأَكْوَعِ، قَالَا:\nخَرَجَ عَلَيْنَا مُنَادِي رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فقَالَ: إِنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَدْ أَذِنَ لَكُمْ أن تستمعوا. يَعْنِي مُتْعَةَ النِّسَاءِ.\n\nوحَدَّثَنِي أُمَيَّةُ بْنُ بِسْطَامَ الْعَيْشِيُّ. حَدَّثَنَا يَزِيدُ (يَعْنِي ابْنَ زُرَيْعٍ). حدثنا رَوْحٌ (يَعْنِي ابْنَ الْقَاسِمِ) عَنْ عَمْرِو بْنِ دِينَارٍ، عَنِ الْحَسَنِ بْنِ مُحَمَّدٍ، عَنْ سَلَمَةَ بْنِ الْأَكْوَعِ وَجَابِرِ بن عبد الله؛ أن رسول الله صلى اللَّهُ عَلَيْهِ وَسَلَّمَ أَتَانَا، فَأَذِنَ لَنَا فِي المتعة.\n\nوحدثنا الْحَسَنُ الْحُلْوَانِيُّ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا ابْنُ جُرَيْجٍ. قَالَ: قَالَ عَطَاء: قَدِمَ جَابِرُ بْنُ عَبْدِ اللَّهِ مُعْتَمِرًا. فَجِئْنَاهُ فِي مَنْزِلِهِ. فَسَأَلَهُ الْقَوْمُ عَنْ أَشْيَاءَ. ثُمَّ ذَكَرُوا الْمُتْعَةَ. فقَالَ: نَعَمِ. اسْتَمْتَعَنْا عَلَى عَهْدِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. وَأَبِي بَكْرٍ وَعُمَرَ.\n\nحَدَّثَنِي مُحَمَّدُ بْنُ رَافِعٍ. حَدَّثَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنا ابْنُ جُرَيْجٍ. أَخْبَرَنِي أَبُو الزُّبَيْرِ. قَالَ: سَمِعْتُ جَابِرَ بْنَ عَبْدِ اللَّهِ يَقُولُ:\nكُنَّا نَسْتَمْتِعُ، بِالْقَبْضَةِ مِنَ التَّمْرِ وَالدَّقِيقِ، الْأَيَّامَ، عَلَى عَهْدِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَأَبِي بَكْرٍ، حَتَّى نَهَى عَنْهُ عُمَرُ، فِي شأن عمرو بن حريث.\n\nحدثنا حامد بن عمرو الْبَكْرَاوِيُّ. حَدَّثَنَا عَبْدُ الْوَاحِدِ (يَعْنِي ابْنَ زِيَادٍ) عَنْ عَاصِمٍ، عَنْ أَبِي نَضْرَةَ، قَالَ: كُنْتُ عِنْدَ جَابِرِ بْنِ عَبْدِ اللَّهِ. فَأَتَاهُ آتٍ فقَالَ: ابْنَ عَبَّاسٍ وَابْنَ الزُّبَيْرِ اخْتَلَفَا فِي الْمُتْعَتَيْنِ. فَقَالَ جَابِرٌ:\nفَعَلْنَاهُمَا مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. ثُمَّ نَهَانَا عَنْهُمَا عُمَرُ. فَلَمْ نَعُدْ لَهُمَا.\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا يُونُسُ بْنُ مُحَمَّدٍ. حدثنا عَبْدُ الْوَاحِدِ بْنُ زِيَادٍ. حدثنا أَبُو عُمَيْسٍ عَنْ إِيَاسِ بْنِ سَلَمَةَ، عَنْ أَبِيهِ، قَالَ:\nرَخَّصَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَامَ أَوْطَاسٍ، فِي المتعة ثلاثا. ثم نهى عنها."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

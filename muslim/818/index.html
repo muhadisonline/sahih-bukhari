@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-c/BH7tir9WFiGtK20rNcRJ5tm50iX9WaVkdtOMx12Pk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٨١٨ — أَرْسِلْهُ. اقرأ الْقِرَاءَةَ الَّتِي سَمِعْتُهُ يَقْرَأُ. فَقَالَ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٨١٨ من صحيح مسلم، كتاب صلاة المسافرين وقصرها، باب بيان أن القرآن على سبعة أحرف. وبيان معناه. حَدَّثَنَا يَحْيَى بْنُ يَحْيَى. قَالَ: قرأت على مالك عن ابن شهاب، عن عُرْوَةَ بْنِ الزُّبَيْرِ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ عَبْدٍ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٨١٨" data-url="https://sunan.online/muslim/818/">انسخ المتن</button>
   <a href="/muslim/819/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,35 +85,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٨١٨ — أَرْسِلْهُ. اقرأ الْقِرَاءَةَ الَّتِي سَمِعْتُهُ يَقْرَأُ. فَقَالَ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":818,"articleBody":"حَدَّثَنَا يَحْيَى بْنُ يَحْيَى. قَالَ: قرأت على مالك عن ابن شهاب، عن عُرْوَةَ بْنِ الزُّبَيْرِ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ عَبْدٍ الْقَارِيِّ؛ قَالَ: سَمِعْتُ عُمَرَ بْنَ الْخَطَّابِ يَقُولُ:\nسَمِعْتُ هِشَامَ بْنَ حَكِيمِ بْنِ حِزَامٍ يَقْرَأُ سُورَةَ الْفُرْقَانِ عَلَى غَيْرِ مَا أَقْرَؤُهَا. وَكَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَقْرَأَنِيهَا. فَكِدْتُ أَنْ أَعْجَلَ عَلَيْهِ. ثُمَّ أَمْهَلْتُهُ حَتَّى انْصَرَفَ. ثُمَّ لَبَّبْتُهُ بِرِدَائِهِ. فَجِئْتُ بِهِ رسول الله صلى الله عليه وسلم. فقلت: يَا رَسُولَ اللَّهِ! إِنِّي سَمِعْتُ هَذَا يَقْرَأُ سُورَةَ الْفُرْقَانِ عَلَى غَيْرِ مَا أَقْرَأْتَنِيهَا. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"أَرْسِلْهُ. اقرأ الْقِرَاءَةَ الَّتِي سَمِعْتُهُ يَقْرَأُ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \"هَكَذَا أُنْزِلَتْ\" ثُمَّ قَالَ لِي \"اقْرَأْ\" فَقَرَأْتُ. فَقَالَ \"هَكَذَا أُنْزِلَتْ. إِنَّ هَذَا الْقُرْآنَ أُنْزِلَ عَلَى سَبْعَةِ أَحْرُفٍ. فاقرؤوا ما تيسر منه\".\n\nوحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ عَنِ ابْنِ شِهَابٍ. أَخْبَرَنِي عُرْوَةُ بن الزبير؛ أن المسور ابن مَخَرَمَةَ وَعَبْدَ الرَّحْمَنِ بْنَ عَبْدٍ الْقَارِيَّ أَخْبَرَاهُ؛ أَنَّهُمَا سَمِعَا عُمَرَ بْنَ الْخَطَّابِ يَقُولُ:\nسَمِعْتُ هِشَامَ بْنَ حَكِيمٍ يَقْرَأُ سُورَةَ الْفُرْقَانِ فِي حَيَاةِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم. وَسَاقَ الْحَدِيثَ. بِمِثْلِهِ. وَزَادَ: فَكِدْتُ أُسَاوِرُهُ فِي الصلاة. فتصبرت حتى سلم.\n\nحدثنا إسحاق بن إبراهيم وعبد بن حميد. قَالَا: أَخْبَرَنَا عَبْدُ الرَّزَّاقِ. أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ. كَرِوَايَةِ يُونُسَ بِإِسْنَادِهِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-evX61r1kLlgXpFbj5OSDT2HBp/lxsT/gYt2ZODxvTi4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٩٣٦ — أخبرنا عليُّ بنُ حُجْرٍ قال: حدَّثنا شَريك، عن طارق عن سعيد بن… | سنن النسائي</title>
 <meta name="description" content="الحديث ٣٩٣٦ من سنن النسائي، كتاب الأيمان والنذور، باب ذكر اختلاف الألفاظ المأثورة في المزارعة. أخبرنا عليُّ بنُ حُجْرٍ قال: حدَّثنا شَريك، عن طارق عن سعيد بن المُسيّبِ قال: لا بأسَ بإِجارَةِ الأرضِ البَيضاء بالذَّهَبِ والفِضَّة. وقال: إذا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -60,16 +62,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٩٣٦" data-url="https://sunan.online/nasai/3936/">انسخ المتن</button>
   <a href="/nasai/3937/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -88,35 +81,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٩٣٦ — أخبرنا عليُّ بنُ حُجْرٍ قال: حدَّثنا شَريك، عن طارق عن سعيد بن… | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3936,"articleBody":"أخبرنا عليُّ بنُ حُجْرٍ قال: حدَّثنا شَريك، عن طارق\nعن سعيد بن المُسيّبِ قال: لا بأسَ بإِجارَةِ الأرضِ البَيضاء بالذَّهَبِ والفِضَّة.\nوقال: إذا دفع رجلٌ إلى رجل مالًا قِرَاضًا، فأراد أن يكتُبَ عليه بذلِكَ كتابًا كتَبَ: هذا كِتابٌ كتَبَه فُلانُ بنُ فُلانٍ طَوْعًا منه في صحَّةٍ منه، وجَوازِ أَمْرِه، لفُلانِ بن فُلانٍ، أَنَّكَ دَفَعْتَ إليَّ مُستَهلَّ شهرٍ كذا، من سَنَةِ كذا، عَشَرة آلافِ دِرْهَمٍ، وُضْحًا جِيادًا، وَزْنَ سبعةٍ قراضًا، على تقوى الله في السِّرِّ والعلانية وأداء الأمانة، على أن أشتري بها ما شِئْتُ منها كُلَّ ما أرى أن أشتَرِيَه، وأن أُصَرِّفَها وما شِئْتُ منها فيما أرى أن أُصَرِّفَها فيه من صُنوف التِّجارات، وأَخْرُجَ بما شِئْتُ منها حيثُ شِئْتُ، وأبيعَ ما أرى أن أبيعه ممَّا أشتريه بنَقْدِ رأيتُ أم بِنَسيئة، وبِعَينٍ رأيتُ أم بِعَرْضِ، على أن أعمل في جميع ذلكَ كُلِّه برأيي، وأُوَكِّل في ذلك مَنْ رأيتُ، وكلُّ ما رزقَ اللهُ في ذلك من فَضْلٍ ورِبْحٍ بعد رأس المال الَّذي دفعته المذكور إليَّ المُسمَّى مَبْلَغُه في هذا الكتاب، فهو بَيني وبينَكَ نِصْفَين، لكَ منه النِّصفُ بحظِّ رأس مالِكَ، ولي منه النّصفُ تامًّا بعملي فيه، وما كان فيه من وضيعةٍ فعلى رأس المال، فقبَضْتُ منكَ هذه العَشَرَةَ آلافِ دِرْهَمٍ الوُضْحَ الجِيادَ، مُستَهَلَّ شهر كذا في سَنَةِ كذا، وصارَتْ لكَ في يدي قراضًا على الشُّروط المُشتَرَطَةِ في هذا الكتاب. أَقَرَّ فُلانٌ وفُلانٌ.\nوإذا أراد أن لا يُطلِقَ له أن يشتري ويبيع بالنَّسيئةِ كَتَبَ: وقد نَهِيتَني أن أشتَرِيَ وأبيعَ بالنَّسيئة."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-YCIG4nbFvVJl/KKHtGFa++Rz2w1M9RQaVMfIB35nYeI='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٥٠٥ — إِذَا كَانَ أَحَدُكُمْ يُصَلِّي فَلَا يَدَعْ أَحَدًا يَمُرُّ بَيْنَ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٥٠٥ من صحيح مسلم، كتاب الصلاة، باب منع المار بين يدي المصلي. حَدَّثَنَا يحيى بن يحيى قال: قرأت على مالك عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ أَبِي سَعِيدٍ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ؛ أن رسول الله صَلَّى…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=18">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٥٠٥" data-url="https://sunan.online/muslim/505/">انسخ المتن</button>
   <a href="/muslim/506/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٠٥ — إِذَا كَانَ أَحَدُكُمْ يُصَلِّي فَلَا يَدَعْ أَحَدًا يَمُرُّ بَيْنَ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":505,"articleBody":"حَدَّثَنَا يحيى بن يحيى قال: قرأت على مالك عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ أَبِي سَعِيدٍ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ؛ أن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ:\n\"إِذَا كَانَ أَحَدُكُمْ يُصَلِّي فَلَا يَدَعْ أَحَدًا يَمُرُّ بَيْنَ يَدَيْهِ. وَلْيَدْرَأْهُ مَا اسْتَطَاعَ. فإن أبى فليقاتله. فإنما هو شيطان\".\n\nحَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا سُلَيْمَانُ بْنُ الْمُغِيرَةِ. حَدَّثَنَا ابْنُ هِلَالٍ (يَعْنِي حُمَيْدًا) قَالَ:\nبَيْنَمَا أَنَا وَصَاحِبٌ لِي نَتَذَاكَرُ حَدِيثًا. إِذْ قَالَ أَبُو صَالِحٍ السَّمَّانُ: أَنَا أُحَدِّثُكَ مَا سَمِعْتُ مِنْ أَبِي سَعِيدٍ، وَرَأَيْتُ مِنْهُ. قَالَ: بَيْنَمَا أَنَا مَعَ أَبِي سَعِيدٍ يُصَلِّي يَوْمَ الْجُمُعَةِ إِلَى شَيْءٍ يَسْتُرُهُ مِنَ النَّاسِ. إِذْ جَاءَ رَجُلٌ شَابٌّ\nمِنْ بَنِي أَبِي مُعَيْطٍ. أَرَادَ أَنْ يَجْتَازَ بَيْنَ يَدَيْهِ. فَدَفَعَ فِي نَحْرِهِ. فَنَظَرَ فَلَمْ يَجِدْ مَسَاغًا إِلَّا بَيْنَ يَدَيْ أَبِي سَعِيدٍ. فَعَادَ. فَدَفَعَ فِي نَحْرِهِ أَشَدَّ مِنَ الدَّفْعَةِ الأُولَى. فَمَثَلَ قَائِمًا. فَنَالَ مِنْ أَبِي سَعِيدٍ. ثُمَّ زَاحَمَ النَّاسَ، فَخَرَجَ. فَدَخَلَ عَلَى مَرْوَانَ. فَشَكَا إِلَيْهِ مَا لَقِيَ. قَالَ وَدَخَلَ أَبُو سَعِيدٍ عَلَى مَرْوَانَ. فَقَالَ له مروان: مالك وَلِابْنِ أَخِيكَ؟ جَاءَ يَشْكُوكَ. فَقَالَ أَبُو سَعِيدٍ: سمعت رسول الله صلى الله عليه وسلم يَقُولُ \"إِذَا صَلَّى أَحَدُكُمْ إِلَى شَيْءٍ يَسْتُرُهُ مِنَ النَّاسِ، فَأَرَادَ أَحَدٌ أَنْ يَجْتَازَ بَيْنَ يَدَيْهِ، فَلْيَدْفَعْ فِي نَحْرِهِ. فَإِنْ أَبَى فَلْيُقَاتِلْهُ. فإنما هو شيطان\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

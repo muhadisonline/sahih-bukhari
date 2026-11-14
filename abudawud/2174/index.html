@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-YFJXpH+6ooK7wVtc3/M9Q0OLzag2PZ5PmBh172+B+bs='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢١٧٤ — مَنْ أحسَّ الفَتَى الدَّوْسيَّ؟ | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢١٧٤ من سنن أبي داود، كتاب النكاح، باب ما يكره من ذكر الرجل ما يكون من إصابته أهله. حدَّثنا مُسدَّدٌ، حدَّثنا بِشرٌ، حدَّثنا الجُريريُّ (ح) وحدثنا مُؤمَّلٌ، حدَّثنا إسماعيل (ح) وحدَّثنا موسى، حدَّثنا حمادٌ كلُهم عن الجُريري، عن أبي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=20">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -62,16 +64,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢١٧٤" data-url="https://sunan.online/abudawud/2174/">انسخ المتن</button>
   <a href="/abudawud/2175/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -90,35 +83,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢١٧٤ — مَنْ أحسَّ الفَتَى الدَّوْسيَّ؟ | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2174,"articleBody":"حدَّثنا مُسدَّدٌ، حدَّثنا بِشرٌ، حدَّثنا الجُريريُّ (ح) وحدثنا مُؤمَّلٌ، حدَّثنا إسماعيل (ح) وحدَّثنا موسى، حدَّثنا حمادٌ كلُهم عن الجُريري، عن أبي نضْرةَ، حدَّثني شيخٌ من طُفَاوةَ، قال: تَثَويتُ أبا هُريرة بالمدينة، فلم أرَ رجلاً مِنْ\nأصحابِ النبيَّ - صلَّى الله عليه وسلم - أشدَّ تشميراً، ولا أقومَ على ضيفٍ منه، فبينما أنا عِنْده يوماً وهو على سَرِيرٍ له، ومعه كِيْسٌ فيه حصى، أو نوى، وأسفل منه جاريةٌ له سَوْدَاءُ وهو يُسبِّح بها، حتى إذا أنفَدَ ما في الكِيس، ألقاه إليها فجمعتْه فأعادتْه في الكِيس، فدفعته إليه، فقال: ألا أحَدِّثُك عنِّي وعن رسول الله - صلَّى الله عليه وسلم -؟ قال: قلت: بلى، قال: بينا أنا أوعَكُ في المسجد، إذ جاء رسولُ الله - صلَّى الله عليه وسلم - حتَى دَخَلَ المسجدَ، فقال: \"مَنْ أحسَّ الفَتَى الدَّوْسيَّ؟ \" ثلاثَ مرَّات، فقال رجل: يا رسول الله هو ذا يوعَكُ في جانِب المَسجِد، فأقبل يمشي حتَّى انتهى إليَّ، فوَضَعَ يدَه علي، فقال لي معروفاً، فنَهَضْتُ، فانطلقَ يمشي حتَّى أتى مقامَه الذي يُصلي فيه، فأقبل عليهم ومعه صَفَّان مِن رجالٍ وصَفٌّ مِن نساءٍ أو صفَّان مِن نساء وصَفٌ مِن رجال، فقال: \" إن نسَّاني الشيطانُ شيئاً مِن صلاتي، فليسبحِ القومُ وليُصفِّق النساء\" قال: فصلى رسولُ الله - صلَّى الله عليه وسلم - ولم يُنَسَّ مِن صلاته شيئاً، فقال: \"مَجالِسَكم مَجالِسَكم\" - زاد موسى ها هنا: ثم حَمِدَ الله تعالى وأثنى عليه، ثم قال: \"أما بعد\" ثم اتفقوا - ثم أقبل على الرِّجال، فقال: \"هَلْ منكم الرجلُ إذا أتى أهله، فأغلَقَ عليه بابَه، وألقى عليه سِتْرَه، واستتر بستر الله؟ \" قالوا: نعم، قال: \"ثم يجلسُ بعد ذلك فيقول: فعلتُ كذا، فعلتُ كذا\" قال: فسكتوا، قال: فأقبلَ على النساء فقال: \"هلْ مِنكن مَنْ تُحدِّث؟ \" فسَكَتْنَ فجثت فتاة - قال مؤمل في حديثه: فتاة كَعَابٌ - على إحدى رُكبتيها، وتطاولَت لرسول الله - صلَّى الله عليه وسلم - ليراها ويَسمَعَ كَلامَها، فقالت: يا رسول الله، إنهم لَيتحَدَّثون، وإنهُنَّ ليتحدَّثْنَه، فقال: \"هل تدرون ما مثل ذلك؟ \" فقال: \"إنما مَثَلُ ذلك مَثَلُ شيطانةٍ لَقِيتْ شيطاناً في السِّكةِ، فقَضَى منها حاجَتَه والناسُ ينظرون\nإليه، ألا وإن طِيبَ الرِّجال ما ظَهَرَ رِيحُه، ولم يَظهر لَونُه، ألا وإنَّ طِيبَ النساءِ ما ظَهَرَ لَونُه ولم يَظهَر ريحُه\".\nقال أبو داود: ومن ها هنا حفظتُه عن مُؤمَّل وموسى \"ألا لا يُفضينَّ رَجلٌ إلى رَجلٍ، ولا امرأةٌ إلى امرأةٍ، إلا إلى ولدٍ أو والدٍ\" وذكر ثالثةً فنُسِّيُتها، وهو في حديث مُسدَّدٌ، ولكني لم أتقنه كما أحبّ، قال موسى: حدَّثنا حماد، عن الجُريري، عن أبي نضرة، عن الطُّفاوي.\nآخر كتاب النكاح"}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-zMNCMn8Nf1jjPdeHRLZQQXgMFGlmosGhuAc3y24PX7M='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٢٦١ — الرُّؤْيَا مِنَ اللَّهِ. وَالْحُلْمُ مِنَ الشَّيْطَانِ. فَإِذَا حَلَمَ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٢٢٦١ من صحيح مسلم، كتاب الرؤيا، . حَدَّثَنَا عَمْرٌو النَّاقِدُ وَإسحاق بْنُ إِبْرَاهِيمَ وَابْنُ أَبِي عُمَرَ. جَمِيعًا عَنْ ابْنِ عُيَيْنَةَ (وَاللَّفْظُ لِابْنِ أَبِي عُمَرَ).حَدَّثَنَا سُفْيَانُ عَنِ الزُّهْرِيِّ، عَنْ أَبِي…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -84,16 +86,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٢٢٦١" data-url="https://sunan.online/muslim/2261/">انسخ المتن</button>
   <a href="/muslim/2262/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -112,35 +105,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٢٦١ — الرُّؤْيَا مِنَ اللَّهِ. وَالْحُلْمُ مِنَ الشَّيْطَانِ. فَإِذَا حَلَمَ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":2261,"articleBody":"حَدَّثَنَا عَمْرٌو النَّاقِدُ وَإسحاق بْنُ إِبْرَاهِيمَ وَابْنُ أَبِي عُمَرَ. جَمِيعًا عَنْ ابْنِ عُيَيْنَةَ (وَاللَّفْظُ لِابْنِ أَبِي عُمَرَ).حَدَّثَنَا سُفْيَانُ عَنِ الزُّهْرِيِّ، عَنْ أَبِي سَلَمَةَ. قَالَ كُنْتُ أَرَى الرُّؤْيَا أُعْرَى مِنْهَا. غَيْرَ أَنِّي لَا أُزَمَّلُ. حَتَّى لَقِيتُ أَبَا قَتَادَةَ. فَذَكَرْتُ ذَلِكَ لَهُ. فَقَالَ:\nسَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ \"الرُّؤْيَا مِنَ اللَّهِ. وَالْحُلْمُ مِنَ الشَّيْطَانِ. فَإِذَا حَلَمَ أَحَدُكُمْ حُلْمًا يَكْرَهُهُ فَلْيَنْفُثْ عَنْ يَسَارِهِ ثَلَاثًا. وَلْيَتَعَوَّذْ بِاللَّهِ مِنْ شرها. فإنها لن تضره\".\n\nوحدثنا ابن أبي عمر. حدثنا سفيان عن مُحَمَّدِ بْنِ عَبْدِ الرَّحْمَنِ، مَوْلَى آلِ طَلْحَةَ، وعبدربه وَيَحْيَي، ابْنَيْ سَعِيدٍ، وَمُحَمَّدِ بْنِ عَمْرِو بْنِ عَلْقَمَةَ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي قَتَادَةَ،\nعَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مِثْلَهُ. وَلَمْ يَذْكُرْ فِي حَدِيثِهِمْ قَوْلَ أَبِي سَلَمَةَ: كُنْتُ أَرَى الرُّؤْيَا أُعْرَى مِنْهَا. غَيْرَ أَنِّي لا أزمل.\n\nوحدثني حرملة بن يحيى. أخبرنا ابن وهب. أَخْبَرَنِي يُونُسُ. (ح) وحَدَّثَنَا إِسْحَاق بْنُ إِبْرَاهِيمَ وعبد بن حميد. قالا أخبرنا عبد الرزاق. أخبرنا معمر. كلاهما عن الزهري، بهذا الإسناد. وَلَيْسَ فِي حَدِيثِهِمَا: أُعْرَى مِنْهَا.\nوَزَادَ فِي حَدِيثِ يُونُسَ \"فَلْيَبْصُقْ عَلَى يَسَارِهِ، حِينَ يَهُبُّ مِنْ نَوْمِهِ، ثَلَاثَ مَرَّاتٍ\".\n\nحَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ بْنِ قَعْنَبٍ. حَدَّثَنَا سُلَيْمَانُ (يَعْنِي ابْنَ بِلَالٍ) عَنْ يَحْيَى بْنِ سَعِيدٍ. قَالَ سَمِعْتُ أَبَا سَلَمَةَ بْنَ عَبْدِ الرَّحْمَنِ يَقُولُ:\nسَمِعْتُ أَبَا قَتَادَةَ يَقُولُ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم\nيَقُولُ\" الرُّؤْيَا مِنَ اللَّهِ. وَالْحُلْمُ مِنَ الشَّيْطَانِ. فَإِذَا رَأَى أَحَدُكُمْ شَيْئًا يَكْرَهُهُ فَلْيَنْفُثْ عَنْ يَسَارِهِ ثَلَاثَ مَرَّاتٍ. وَلْيَتَعَوَّذْ بِاللَّهِ مِنْ شَرِّهَا. فَإِنَّهَا لَنْ تَضُرَّهُ\" فَقَالَ إِنْ كُنْتُ لَأَرَى الرُّؤْيَا أَثْقَلَ عَلَيَّ مِنْ جَبَلٍ. فَمَا هُوَ إِلَّا أَنْ سَمِعْتُ بِهَذَا الْحَدِيثِ، فَمَا أُبَالِيهَا.\n\nوحَدَّثَنَاه قُتَيْبَةُ وَمُحَمَّدُ بْنُ رُمْحٍ عَنِ اللَّيْثِ بْنِ سَعْدٍ. (ح) وحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا عَبْدُ الْوَهَّابِ (يَعْنِي الثَّقَفِيَّ). (ح) وحَدَّثَنَا أبو بكر بن أبي شيبة. حدثنا عبد اللَّهِ بْنُ نُمَيْرٍ. كُلُّهُمْ عَنْ يَحْيَي بْنِ سَعِيدٍ، بِهَذَا الْإِسْنَادِ. وَفِي حَدِيثِ الثَّقَفِيِّ: قَالَ أَبُو سَلَمَةَ: فَإِنْ كُنْتُ لَأَرَى الرُّؤْيَا. وَلَيْسَ فِي حَدِيثِ اللَّيْثِ وَابْنِ نُمَيْرٍ قَوْلُ أَبِي سَلَمَةَ إِلَى آخِرِ الْحَدِيثِ.\nوَزَادَ ابْنُ رُمْحٍ فِي رِوَايَةِ هَذَا الْحَدِيثِ \"وَلْيَتَحَوَّلْ عَنْ جَنْبِهِ الَّذِي كَانَ عَلَيْهِ\".\n\nوحدثني أبو الطاهر. أخبرنا عبد الله بن وهب. أخبرني عمرو بن الحارث عن عبدربه بْنِ سَعِيدٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ\nالرَّحْمَنِ، عَنْ أَبِي قَتَادَةَ،\nعَنِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ؛ أَنَّهُ قَالَ \"الرُّؤْيَا الصَّالِحَةُ مِنَ اللَّهِ. وَالرُّؤْيَا السَّوْءُ مِنَ الشَّيْطَانِ. فَمَنْ رَأَى رُؤْيَا فَكَرِهَ مِنْهَا شَيْئًا فَلْيَنْفُثْ عن يساره، وليتعوذ مِنَ الشَّيْطَانِ، لَا تَضُرُّهُ. وَلَا يُخْبِرْ بِهَا أَحَدًا. فَإِنْ رَأَى رُؤْيَا حَسَنَةً فَلْيُبْشِرْ. وَلَا يُخْبِرْ إِلَّا مَنْ يُحِبُّ\".\n\nحَدَّثَنَا أَبُو بَكْرِ بْنُ خَلَّادٍ الْبَاهِلِيُّ وَأَحْمَدُ بْنُ عَبْدِ اللَّهِ بْنِ الْحَكَمِ. قَالَا حَدَّثَنَا محمد بن جعفر. حدثنا شعبة عن عبدربه بْنِ\nسَعِيدٍ، عَنْ أَبِي سَلَمَةَ قَالَ: إِنْ كُنْتُ لَأَرَى الرُّؤْيَا تُمْرِضُنِي. قَالَ فَلَقِيتُ أَبَا قَتَادَةَ. فَقَالَ: وَأَنَا كُنْتُ لَأَرَى الرُّؤْيَا فَتُمْرِضُنِي.\nحَتَّى سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ \"الرُّؤْيَا الصَّالِحَةُ مِنَ اللَّهِ. فَإِذَا رَأَى أَحَدُكُمْ مَا يُحِبُّ فَلَا يُحَدِّثْ بِهَا إِلَّا مَنْ يُحِبُّ. وَإِنْ رَأَى مَا يَكْرَهُ فليتفل عن يساره ثلاثا، وليتعوذ من شر الشيطان. وَلَا يُحَدِّثْ بِهَا أَحَدًا فَإِنَّهَا لَنْ تَضُرَّهُ\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

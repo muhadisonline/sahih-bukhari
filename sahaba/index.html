@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الصحابة والتابعين</title>
 <meta name="description" content="أسماء الصحابة والتابعين، وطبقتهم وحكم ابن حجر، من تقريب التهذيب.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=15">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -48,7 +50,7 @@
 <nav class="crumbs"><a href="/">الرئيسية</a></nav>
 <h1 class="title">الصحابة والتابعين</h1>
 <p class="meta">796 من الصحابة و2632 من التابعين. الاسم والطبقة وحكم ابن حجر من تقريب التهذيب، دون ترجمة مضافة.</p>
-<form role="search" onsubmit="return false">
+<form role="search">
   <label class="sr" for="rq">بحث عن راو</label>
   <input id="rq" placeholder="اسم الراوي">
 </form>
@@ -3499,61 +3501,7 @@
     <p>المتن بالعربية كما ورد، دون زيادة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() { var n = Number(localStorage.getItem(key) || "0"); return n >= 0 && n <= 3 ? n : 0; }
-  function apply(n) { document.documentElement.setAttribute("data-size", String(n)); localStorage.setItem(key, String(n)); }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  if (!gear || !panel) return;
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () { panel.style.display = "none"; gear.setAttribute("aria-expanded", "false"); });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
-<script>
-(function(){
-  var q=document.getElementById("rq");
-  var box=document.getElementById("people");
-  var items=[].slice.call(box.children);
-  var more=document.getElementById("more");
-  var status=document.getElementById("pstatus");
-  var group="s";
-  var shown=80;
-  function fold(s){return s.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى/g,"ي").replace(/ؤ/g,"و").replace(/ئ/g,"ي").replace(/ة/g,"ه");}
-  function key(s){return fold(s).replace(/ال(?=[\u0621-\u064A])/g,"").replace(/\s+/g,"");}
-  items.forEach(function(el){el.setAttribute("data-k", key(el.getAttribute("data-n")||""));});
-  function paint(){
-    var n=key(q.value);
-    var count=0;
-    items.forEach(function(el){
-      var ok=(group==="all"||el.getAttribute("data-g")===group)&&(!n||(el.getAttribute("data-k")||"").indexOf(n)>=0);
-      if(ok) count++;
-      el.style.display=ok&&count<=shown?"":"none";
-    });
-    status.textContent=count+" اسمًا";
-    more.style.display=count>shown?"":"none";
-  }
-  q.addEventListener("input", function(){shown=80;paint()});
-  more.addEventListener("click", function(){shown+=80;paint()});
-  [].slice.call(document.querySelectorAll(".filters button")).forEach(function(btn){
-    btn.addEventListener("click", function(){
-      group=btn.getAttribute("data-g");
-      shown=80;
-      [].slice.call(document.querySelectorAll(".filters button")).forEach(function(b){b.classList.toggle("on", b===btn)});
-      paint();
-    });
-  });
-  paint();
-})();
-</script>
+<script src="/assets/text-size.js"></script>
+<script src="/assets/sahaba-filter.js"></script>
 </body>
 </html>

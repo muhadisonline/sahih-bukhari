@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب العلم — رياض الصالحين</title>
 <meta name="description" content="كتاب العلم من رياض الصالحين. 17 حديثًا، من 1376 إلى 1392.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب العلم</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">١٧ حديثًا</p>
 <a class="entry" href="/riyad/1376/"><span class="n">١٣٧٦</span><span class="ttl">من يرد الله به خيرًا يفقه في الدين</span></a><a class="entry" href="/riyad/1377/"><span class="n">١٣٧٧</span><span class="ttl">لا حسد إلا في اثنتين: رجل آتاه الله مالا فسلطه على…</span></a><a class="entry" href="/riyad/1378/"><span class="n">١٣٧٨</span><span class="ttl">مثل ما بعثني الله به من الهدى والعلم كمثل غيث أصاب…</span></a><a class="entry" href="/riyad/1379/"><span class="n">١٣٧٩</span><span class="ttl">فوالله لأن يهدي الله بك رجلا واحدا خير من حمر النعم</span></a><a class="entry" href="/riyad/1380/"><span class="n">١٣٨٠</span><span class="ttl">بلغوا عني ولو آية وحدثوا عن بني إسرائيل ولا حرج،…</span></a><a class="entry" href="/riyad/1381/"><span class="n">١٣٨١</span><span class="ttl">ومن سلك طريقًا يلتمس فيه علما سهل الله له به…</span></a><a class="entry" href="/riyad/1382/"><span class="n">١٣٨٢</span><span class="ttl">وعنه أيضًا أن رسول الله قال: &quot;من دعا إلى هدى كان…</span></a><a class="entry" href="/riyad/1383/"><span class="n">١٣٨٣</span><span class="ttl">إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة…</span></a><a class="entry" href="/riyad/1384/"><span class="n">١٣٨٤</span><span class="ttl">الدنيا ملعونة ملعون ما فيها إلا ذكر الله تعالى،…</span></a><a class="entry" href="/riyad/1385/"><span class="n">١٣٨٥</span><span class="ttl">من خرج في طلب العلم، فهو في سبيل الله حتى يرجع</span></a><a class="entry" href="/riyad/1386/"><span class="n">١٣٨٦</span><span class="ttl">لن يشبع مؤمن من خير حتى يكون منتهاه الجنة</span></a><a class="entry" href="/riyad/1387/"><span class="n">١٣٨٧</span><span class="ttl">فضل العالم على العابد كفضلي على أدناكم</span></a><a class="entry" href="/riyad/1388/"><span class="n">١٣٨٨</span><span class="ttl">من سلك طريقًا يبتغي فيه علمًا سهل الله له طريقًا…</span></a><a class="entry" href="/riyad/1389/"><span class="n">١٣٨٩</span><span class="ttl">نضر الله امرءًا سمع منا شيئًا فبلغه كما سمعه فرب…</span></a><a class="entry" href="/riyad/1390/"><span class="n">١٣٩٠</span><span class="ttl">من سئل عن علم فكتمه ألجم يوم القيامة بلجام من نار</span></a><a class="entry" href="/riyad/1391/"><span class="n">١٣٩١</span><span class="ttl">من تعلم علمًا مما يبتغى به وجه الله عز وجل لا…</span></a><a class="entry" href="/riyad/1392/"><span class="n">١٣٩٢</span><span class="ttl">وعن عبد الله بن عمرو بن العاص قال: سمعت رسول الله…</span></a>
@@ -69,35 +71,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

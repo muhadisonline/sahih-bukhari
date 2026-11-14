@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-F/kwoP+W045+A01i2wq+TdYwf9gt9oggQ/rX9TQLma4='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٥٩٣ — لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ. لَهُ الْمُلْكُ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ٥٩٣ من صحيح مسلم، كتاب المساجد ومواضع الصلاة، باب استحباب التعوذ من عذاب القبر. حدثنا إسحاق بن إبراهيم. أخبرنا جرير عن مَنْصُورٍ، عَنِ الْمُسَيَّبِ بْنِ رَافِعٍ، عَنْ وَرَّادٍ مَوْلَى الْمُغِيرَةِ بْنِ شُعْبَةَ؛ قَالَ: كَتَبَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -87,16 +89,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ٥٩٣" data-url="https://sunan.online/muslim/593/">انسخ المتن</button>
   <a href="/muslim/594/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -115,35 +108,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٥٩٣ — لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ. لَهُ الْمُلْكُ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":593,"articleBody":"حدثنا إسحاق بن إبراهيم. أخبرنا جرير عن مَنْصُورٍ، عَنِ الْمُسَيَّبِ بْنِ رَافِعٍ، عَنْ وَرَّادٍ مَوْلَى الْمُغِيرَةِ بْنِ شُعْبَةَ؛ قَالَ:\nكَتَبَ الْمُغِيرَةُ بْنُ شُعْبَةَ إِلَى مُعَاوِيَةَ؛ أَنّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَانَ\nإِذَا فَرَغَ مِنَ الصَّلَاةِ وَسَلَّمَ، قَالَ \"لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ. لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. اللَّهُمَّ! لَا مَانِعَ لِمَا أَعْطَيْتَ. وَلَا مُعْطِيَ لِمَا مَنَعْتَ. وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الجد\".\n\nوحَدَّثَنَاه أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَأَبُو كُرَيْبٍ وَأَحْمَدُ بْنُ سِنَانٍ. قَالُوا: حَدَّثَنَا أَبُو مُعَاوِيَةَ عَنِ الأَعْمَشِ، عَنِ الْمُسَيَّبِ بْنِ رَافِعٍ، عَنْ وَرَّادٍ مَوْلَى الْمُغِيرَةِ بْنِ شُعْبَةَ، عَنِ الْمُغِيرَةِ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، مِثْلَهُ. قَالَ أَبُو بَكْرٍ وَأَبُو كُرَيْبٍ فِي رِوَايَتِهِمَا: قَالَ فَأَمْلَاهَا عَلَيَّ الْمُغِيرَةُ. وَكَتَبْتُ بِهَا إلى معاوية.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حَدَّثَنَا مُحَمَّدُ بْنُ بَكْرٍ. أَخْبَرَنَا ابْنُ جُرَيْجٍ. أَخْبَرَنِي عَبْدَةُ بْنُ أَبِي لُبَابَةَ؛ أَنَّ وَرَّادًا مَوْلَى الْمُغِيرَةِ بْنِ شُعْبَةَ قَالَ:\nكَتَبَ الْمُغِيرَةُ بْنُ شُعْبَةَ إِلَى مُعَاوِيَةَ (كَتَبَ ذَلِكَ الْكِتَابَ لَهُ وَرَّادٌ) إِنِّي سمعت رسول الله صلى الله عليه وسلم يَقُولُ، حِينَ سَلَّمَ، بِمِثْلِ حَدِيثِهِمَا. إِلَّا قَوْلَهُ \"وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\" فَإِنَّهُ لَمْ يذكر.\n\nوحدثنا حامد بن عمر البكراوي. حدثنا بشر (يَعْنِي ابْنَ الْمُفَضَّلِ). (ح) قَالَ وحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنِي أَزْهَرُ. جَمِيعًا عَنِ ابْنِ عَوْنٍ، عَنْ أَبِي سَعِيدٍ، عَنْ وَرَّادٍ، كَاتِبِ الْمُغِيرَةِ بْنِ شُعْبَةَ؛ قَالَ:\nكَتَبَ مُعَاوِيَةُ إِلَى الْمُغِيرَةِ. بِمِثْلِ حَدِيثِ مَنْصُورٍ وَالأَعْمَشِ.\n\nوحَدَّثَنَا ابْنُ أَبِي عُمَرَ الْمَكِّيُّ. حَدَّثَنَا سُفْيَانُ. حَدَّثَنَا عَبْدَةُ بْنُ أَبِي لُبَابَةَ وَعَبْدُ الْمَلِكِ بْنُ عُمَيْرٍ. سَمِعَا وَرَّادًا كَاتِبَ الْمُغِيرَةِ بْنِ شُعْبَةَ يَقُولُ:\nكَتَبَ مُعَاوِيَةُ إِلَى الْمُغِيرَةِ: اكْتُبْ إِلَيَّ بِشَيْءٍ سَمِعْتَهُ مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. قَالَ فَكَتَبَ إِلَيْهِ: سَمِعْتُ رسول الله صلى الله عليه وسلم يقول، إِذَا قَضَى الصَّلَاةَ \"لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ. لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. اللَّهُمَّ! لَا مَانِعَ لِمَا أَعْطَيْتَ. وَلَا مُعْطِيَ لِمَا مَنَعْتَ. وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ\".\n\nوحَدَّثَنَا إِسْحَاقُ بْنُ إِبْرَاهِيمَ الْحَنْظَلِيُّ. أَخْبَرَنَا جَرِيرٌ عن منصور، عن الشعبي، عن وارد مَوْلَى الْمُغِيرَةِ بْنِ شُعْبَةَ عَنْ الْمُغِيرَةِ بْنِ شُعْبَةَ،\nعَنِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ (إِنَّ اللَّهَ عَزَّ وَجَلَّ حَرَّمَ عَلَيْكُمْ عُقُوقَ الْأُمَّهَاتِ. وَوَأْدَ الْبَنَاتِ. وَمَنْعًا وَهَاتِ. وَكَرِهَ لَكُمْ ثَلَاثًا: قِيلَ وَقَالَ. وَكَثْرَةَ السُّؤَالِ. وإضاعة المال).\n\nوحَدَّثَنِي الْقَاسِمُ بْنُ زَكَرِيَّاءَ. حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى عَنْ شَيْبَانَ، عَنْ مَنْصُورٍ، بِهَذَا الْإِسْنَادِ، مِثْلَهُ. غَيْرَ أَنَّهُ قَالَ: وَحَرَّمَ عَلَيْكُمْ رسول الله صلى الله عليه وسلم. ولم يَقُلْ: إِنَّ اللَّهَ حَرَّمَ عَلَيْكُمْ.\n\nحدثنا أبو بكر بن أبي شيبة. حدثنا إِسْمَاعِيلُ بْنُ عُلَيَّةَ عَنْ خَالِدٍ الْحَذَّاءِ. حَدَّثَنِي ابْنُ أَشْوَعَ عَنْ الشَّعْبِيِّ. حَدَّثَنِي كَاتِبِ الْمُغِيرَةِ بْنِ شُعْبَةَ. قَالَ: كَتَبَ مُعَاوِيَةُ إِلَى الْمُغِيرَةِ: اكْتُبْ إِلَيَّ بِشَيْءٍ سَمِعْتَهُ مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَكَتَبَ إِلَيْهِ:\nإِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم يَقُولُ (إِنَّ اللَّهَ كَرِهَ لَكُمْ ثَلَاثًا: قِيلَ وَقَالَ، وَإِضَاعَةَ الْمَالِ، وَكَثْرَةَ السُّؤَالِ).\n\nحَدَّثَنَا ابْنُ أَبِي عُمَرَ. حَدَّثَنَا مَرْوَانُ بْنُ مُعَاوِيَةَ الْفَزَارِيُّ عَنْ مُحَمَّدِ بْنِ سُوقَةَ. أَخْبَرَنَا محمد بن عبيد الله الثقفي عن وارد. قَالَ: كَتَبَ الْمُغِيرَةُ إِلَى مُعَاوِيَةَ: سَلَامٌ عَلَيْكَ. أَمَّا بَعْدُ.\nفَإِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (إِنَّ اللَّهَ حَرَّمَ ثَلَاثًا. وَنَهَى عَنْ ثَلَاثٍ: حَرَّمَ عُقُوقَ الْوَالِدِ. وَوَأْدَ الْبَنَاتِ. وَلَا وَهَاتِ. وَنَهَى عَنْ ثَلَاثٍ: قيل وقال. وكثرة السؤال. وإضاعة المال)."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

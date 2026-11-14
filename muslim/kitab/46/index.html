@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>كتاب البر والصلة والآداب — صحيح مسلم</title>
 <meta name="description" content="كتاب البر والصلة والآداب من صحيح مسلم. 95 حديثًا، من 2548 إلى 2642.">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -47,7 +49,7 @@
 <main class="wrap">
 <nav class="crumbs"><a href="/">سُنَن</a></nav>
 <h1 class="title" style="font-size:1.7rem">كتاب البر والصلة والآداب</h1>
-<form class="page-find" role="search" onsubmit="return false"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
+<form class="page-find" role="search"><input placeholder="ابحث في هذه الصفحة" autocomplete="off" enterkeyhint="search"></form>
 
 <p class="meta">٩٥ حديثًا</p>
 <a class="entry" href="/muslim/2548/"><span class="n">٢٥٤٨</span><span class="ttl">أمك</span></a><a class="entry" href="/muslim/2549/"><span class="n">٢٥٤٩</span><span class="ttl">أحي والداك؟</span></a><a class="entry" href="/muslim/2550/"><span class="n">٢٥٥٠</span><span class="ttl">حَدَّثَنَا شَيْبَانُ بْنُ فَرُّوخَ. حَدَّثَنَا…</span></a><a class="entry" href="/muslim/2551/"><span class="n">٢٥٥١</span><span class="ttl">رغم أنف، ثم رغم أنف، ثم رغم أنف</span></a><a class="entry" href="/muslim/2552/"><span class="n">٢٥٥٢</span><span class="ttl">إن أبر البر صلة الولد أهل ود أبيه</span></a><a class="entry" href="/muslim/2553/"><span class="n">٢٥٥٣</span><span class="ttl">البر حسن الخلق. والإثم ما حاك في صدرك، وكرهت أن…</span></a><a class="entry" href="/muslim/2554/"><span class="n">٢٥٥٤</span><span class="ttl">أن الله خلق الخلق. حتى إذا فرغ منهم قامت الرحم…</span></a><a class="entry" href="/muslim/2555/"><span class="n">٢٥٥٥</span><span class="ttl">الرحم معلقة بالعرش تقول: من وصلني وصله الله. ومن…</span></a><a class="entry" href="/muslim/2556/"><span class="n">٢٥٥٦</span><span class="ttl">لا يدخل الجنة قاطع</span></a><a class="entry" href="/muslim/2557/"><span class="n">٢٥٥٧</span><span class="ttl">مَنْ سَرَّهُ أن يبسط عليه رزقه، أو ينسأ في أثره،…</span></a><a class="entry" href="/muslim/2558/"><span class="n">٢٥٥٨</span><span class="ttl">لئن كنت كما قلت، فكأنما تسفهم المل. ولا يزال معك…</span></a><a class="entry" href="/muslim/2559/"><span class="n">٢٥٥٩</span><span class="ttl">ولا تقاطعوا</span></a><a class="entry" href="/muslim/2560/"><span class="n">٢٥٦٠</span><span class="ttl">لا يحل لمسلم أن يهجر أخاه فوق ثلاث ليال. يلتقيان…</span></a><a class="entry" href="/muslim/2561/"><span class="n">٢٥٦١</span><span class="ttl">لا يحل للمؤمن أن يهجر أخاه فوق ثلاثة أيام</span></a><a class="entry" href="/muslim/2562/"><span class="n">٢٥٦٢</span><span class="ttl">لا هجرة بعد ثلاث</span></a>
@@ -72,35 +74,9 @@
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 
-<script src="/assets/local-find.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/local-find.css">
+<script src="/assets/local-find.js?v=3" defer></script>
 </body>
 </html>

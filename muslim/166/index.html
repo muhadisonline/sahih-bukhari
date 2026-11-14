@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-2k3nKEVPVsdpDsL/UYEpo6ZLLEqIyd0ts3sbRO7M5mY='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٦٦ — أَيُّ وَادٍ هَذَا؟ | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٦٦ من صحيح مسلم، كتاب الإيمان، باب الإسراء برسول الله صلى الله عليه وسلم إلى السماوات، وفرض الصلوات. حَدَّثَنَا أَحْمَدُ بْنُ حَنْبَلٍ وَسُرَيْجُ بْنُ يُونُسَ قَالَا: حَدَّثَنَا هُشَيْمٌ. أَخْبَرَنَا دَاوُدُ بْنُ أَبِي هِنْدٍ عَنْ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -69,16 +71,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٦٦" data-url="https://sunan.online/muslim/166/">انسخ المتن</button>
   <a href="/muslim/167/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -97,35 +90,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٦٦ — أَيُّ وَادٍ هَذَا؟ | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":166,"articleBody":"حَدَّثَنَا أَحْمَدُ بْنُ حَنْبَلٍ وَسُرَيْجُ بْنُ يُونُسَ قَالَا: حَدَّثَنَا هُشَيْمٌ. أَخْبَرَنَا دَاوُدُ بْنُ أَبِي هِنْدٍ عَنْ أَبِي الْعَالِيَةِ، عَنِ ابْنِ عَبَّاسٍ؛\nأن رسول الله صلى الله عليه وسلم مَرَّ بِوَادِي الأَزْرَقِ فَقَالَ \"أَيُّ وَادٍ هَذَا؟ \" فَقَالُوا: هَذَا وَادِي الأَزْرَقِ. قَالَ \"كَأَنِّي أَنْظُرُ إِلَى مُوسَى عَلَيْهِ السَّلَام هَابِطًا مِنَ الثَّنِيَّةِ وَلَهُ جُؤَارٌ إِلَى اللَّهِ بِالتَّلْبِيَةِ\" ثُمَّ أَتَى على ثنية هرشى. فقال \"أي ثنية هذا؟ \" قَالُوا: ثَنِيَّةُ هَرْشَى. قَالَ \"كَأَنِّي أَنْظُرُ إِلَى يُونُسَ بْنِ مَتَّى عَلَيْهِ السَّلَام عَلَى نَاقَةٍ حَمْرَاءَ جَعْدَةٍ عَلَيْهِ جُبَّةٌ مِنْ صُوفٍ. خِطَامُ نَاقَتِهِ خُلْبَةٌ. وَهُوَ يُلَبِّي\". قَالَ ابْنُ حَنْبَلٍ في حديثه: يعني ليفا.\n\nوحَدَّثَنِي مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ عَنْ دَاوُدَ عَنْ أَبِي الْعَالِيَةِ، عَنِ ابْنِ عَبَّاسٍ؛ قَالَ:\nسِرْنَا مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بَيْنَ مَكَّةَ وَالْمَدِينَةِ. فَمَرَرْنَا بِوَادٍ. فَقَالَ \"أَيُّ وَادٍ هَذَا؟ \" فَقَالُوا وَادِي الأَزْرَقِ. فَقَالَ \"كَأَنِّي أَنْظُرُ إِلَى مُوسَى صلى الله عليه وسلم (فَذَكَرَ مِنْ لَوْنِهِ وَشَعَرِهِ شَيْئًا لَمْ يَحْفَظْهُ دَاوُدُ) وَاضِعًا إِصْبَعَيْهِ فِي أُذُنَيْهِ. لَهُ جُؤَارٌ إِلَى اللَّهِ بِالتَّلْبِيَةِ. مَارًّا بِهَذَا الْوَادِي\" قَالَ \"ثُمَّ سِرْنَا حَتَّى أَتَيْنَا\nعَلَى ثَنِيَّةٍ. فَقَالَ \"أَيُّ ثَنِيَّةٍ هَذِهِ؟ \" قَالُوا: هَرْشَى أَوْ لِفْتٌ. فَقَالَ \"كَأَنِّي أَنْظُرُ إِلَى يُونُسَ عَلَى نَاقَةٍ حَمْرَاءَ. عَلَيْهِ جُبَّةُ صُوفٍ. خِطَامُ نَاقَتِهِ لِيفٌ خلبة. مارا بهذا الوادي ملبيا\".\n\nحَدَّثَنِي مُحَمَّدُ بْنُ الْمُثَنَّى. حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ عَنِ ابْنِ عَوْنٍ، عَنْ مُجَاهِدٍ قَالَ:\nكُنَّا عِنْدَ ابْنِ عَبَّاسٍ. فَذَكَرُوا الدَّجَّالَ. فَقَالَ: إِنَّهُ مَكْتُوبٌ بَيْنَ عَيْنَيْهِ كَافِرٌ. قَالَ، فَقَالَ ابْنُ عَبَّاسٍ: لَمْ أَسْمَعْهُ قَالَ ذَاكَ. وَلَكِنَّهُ قَالَ \"أَمَّا إِبْرَاهِيمُ، فَانْظُرُوا إِلَى صَاحِبِكُمْ. وَأَمَّا مُوسَى، فَرَجُلٌ آدَمُ جَعْدٌ عَلَى جَمَلٍ أَحْمَرَ مَخْطُومٍ بِخُلْبَةٍ. كَأَنِّي أَنْظُرُ إِلَيْهِ إِذَا انْحَدَرَ في الوادي يلبي\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-T5V9/M6mfZWqC+CxJ87TJVPKcXzYyrSBXKegP8YRNpA='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٦٣٢ — أَيُّكُمُ الذي سمعتُ صوتَهُ قد ارتفع؟ | سنن النسائي</title>
 <meta name="description" content="الحديث ٦٣٢ من سنن النسائي، كتاب الأذان، خفض الصوت في الترجيع في الأذان. أخبرنا إبراهيمُ بن الحسن ويوسُفُ بنُ سعيد - واللَّفظُ له - قالا: حدَّثنا حجَّاج، عن ابن جُرَيْج قال: حدَّثني عبدُ العزيز بنُ عبدِ الملك بن أبي مَحْذُورة، أنَّ عبدَ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -59,16 +61,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٦٣٢" data-url="https://sunan.online/nasai/632/">انسخ المتن</button>
   <a href="/nasai/633/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -87,35 +80,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٦٣٢ — أَيُّكُمُ الذي سمعتُ صوتَهُ قد ارتفع؟ | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":632,"articleBody":"أخبرنا إبراهيمُ بن الحسن ويوسُفُ بنُ سعيد - واللَّفظُ له - قالا: حدَّثنا حجَّاج، عن ابن جُرَيْج قال: حدَّثني عبدُ العزيز بنُ عبدِ الملك بن أبي مَحْذُورة، أنَّ عبدَ الله بن مُحَيْرِيز أخبره - وكان يتيمًا في حِجْر أبي مَحْذُورةَ حتَّى جهَّزه إلى الشَّام - قال: قلتُ لأبي مَحْذُورة: إنِّي خارجٌ إلى الشَّام، وأَخْشَى أن أُسْأَلَ عن تأذينك\nفأخبرَني أنَّ أبا مَحْذُورَةَ قال له: خرجتُ في نَفَرٍ، فكُنّا ببعض طريق حُنين مَقْفِلَ رسولِ الله صلى الله عليه وسلم من حُنين، فلَقِيْنا رسول الله صلى الله عليه وسلم في بعض الطَّريق، فأذَّنَ مؤذِّنُ رسولِ الله صلى الله عليه وسلم بالصَّلاة عندَ رسولِ صلى الله عليه وسلم، فَسَمِعْنا صوتَ المؤذِّن ونحن عنه مُتَنَكِّبون، فظَلَلْنا نحكيه ونهزأُ به، فسمعَ رسولُ الله صلى الله عليه وسلم الصَّوتَ، فأرسلَ إلينا حتى وقَفْنا بين يديه، فقال رسولُ الله صلى الله عليه وسلم: \"أَيُّكُمُ الذي سمعتُ صوتَهُ قد ارتفع؟ \" فأشارَ القومُ إليَّ، وصَدَقُوا، فأرسلَهم كلَّهم وحَبَسَني، فقال: \"قُمْ فأَذِّنُ بالصَّلاة\". فقمتُ فأَلْقَى عليَّ رسولُ الله صلى الله عليه وسلم التَّأذينَ هو بنفسه؛ قال: \"قُلْ: اللهُ أكبر، اللهُ أكبر، اللهُ أكبر، اللهُ أكبر، أشهدُ أنْ لا إلهَ إلا الله، أشهدُ أنْ لا إله إلا الله، أشهدُ أنَّ محمدًا رسولُ الله، أشهدُ أنَّ محمدًا رسولُ الله\"، ثم قال: \"اِرْجِعْ فامْدُدْ صوتَك\"، ثم قال: \"قُل: أشهدُ أنْ\nلا إلهَ إلا الله، أشهدُ أنْ لا إلهَ إلا الله، أشهدُ أنَّ محمدًا رسولُ الله، أشهدُ أنَّ محمدًا رسولُ الله، حَيَّ على الصَّلاة، حَيَّ على الصَّلاة، حَيَّ على الفَلاح، حَيَّ على الفَلاح، اللهُ أكبر، اللهُ أكبر، لا إلهَ إلا الله\". ثم دعاني حين قضيتُ التَّأذين، فأعطاني صُرَّةً فيها شيءٌ من فضَّة، فقلت: يا رسولَ الله، مُرْني بالتَّأذين بمكَّة، فقال: \"قد أمَرْتُكَ به\"، فقدمتُ على عَتَّاب بن أَسِيد عاملِ رسولِ الله صلى الله عليه وسلم بمكَّة، فأذَّنتُ معه بالصَّلاة عن أَمرِ رسولِ الله صلى الله عليه وسلم."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

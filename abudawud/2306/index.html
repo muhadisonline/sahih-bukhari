@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-st9JAtR6vLqcesSvSN3FX9HhuZxlomhOrPGyTzYPNog='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٣٠٦ — حدَّثنا سليمانُ بنُ داود المَهْريُّ، أخبرنا ابنُ وهب، أخبرني يونسُ، عن… | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢٣٠٦ من سنن أبي داود، كتاب الطلاق، باب في عدة الحامل. حدَّثنا سليمانُ بنُ داود المَهْريُّ، أخبرنا ابنُ وهب، أخبرني يونسُ، عن ابنِ شهاب، حدثني عُبَيدُ اللهِ بنُ عبد الله بنِ عتبة: أن أباه كتب إلى عُمَرَ بنِ عبد الله بن الأرقم الزهري…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢٣٠٦" data-url="https://sunan.online/abudawud/2306/">انسخ المتن</button>
   <a href="/abudawud/2307/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٣٠٦ — حدَّثنا سليمانُ بنُ داود المَهْريُّ، أخبرنا ابنُ وهب، أخبرني يونسُ، عن… | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2306,"articleBody":"حدَّثنا سليمانُ بنُ داود المَهْريُّ، أخبرنا ابنُ وهب، أخبرني يونسُ، عن ابنِ شهاب، حدثني عُبَيدُ اللهِ بنُ عبد الله بنِ عتبة:\nأن أباه كتب إلى عُمَرَ بنِ عبد الله بن الأرقم الزهري يأمره أن يَدخُلَ على سُبيعة بنتِ الحارث الأسلمية فيسألها، عن حديثها وعما قال لها رسولُ الله -صلَّى الله عليه وسلم- حين اسْتَفْتَتْهُ، فكتبَ عُمَرُ بنُ عبد الله إلى عبدِ الله ابن عُتبةَ يخبِرُه أن سُبيعةَ أخبرته: أنَّها كانت تحتَ سَعْدِ بنِ خولَةَ، وهو مِن بني عامر بن لؤي، وهو ممِن شَهِدَ بدراً، فتُوفي عنها في حَجَّة الوداع وهي حامِلٌ، فلم تنْشَبْ أن وضعت حملَها بَعْدَ وفاته، فلما تعَلَّت من نِفاسها تجمّلتْ للخُطَّابِ، فَدَخَل عليها أبو السنابل بنِ بَعكَك -رجلٌ مِن بني عبد الدار- فقال لها: ما لي أراكِ مُتَجَمَّلَة، لَعَلَّكِ ترتجينَ النّكَاحَ؟ إنكِ واللهِ ما أنتِ بِنَاكِحٍ حتى تمر عليكِ أربعةُ أشهر وعشرٌ، قالت سُبيعةُ: فلما قال لي ذلك جمعتُ عليَّ ثيابي حين أمسيتُ، فأتيتُ رَسُولَ الله -صلَّى الله عليه وسلم- فسألتُه عن ذلك، فأفتاني بأني قد حَلَلتُ حِينَ وضعتُ حَملي، وأمرني بالتزويج إن بدا لي، قال ابنُ شهاب: ولا أرى بأساً أن تتزوح حين وضعت وإن كانت في دمها، غيرَ أنه لا يقربُها زوجُها حتى تَطهُرَ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

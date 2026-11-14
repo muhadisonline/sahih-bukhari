@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-HFuYqE9KKEK8b+9xoEFwZT7fncb35vZY2FO+0sM6WcI='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣٤٠٢ — قد نَزَلَ فيك وفي صاحِبَتِكَ، فَاذْهَبْ فَأْتِ بها | سنن النسائي</title>
 <meta name="description" content="الحديث ٣٤٠٢ من سنن النسائي، كتاب الطلاق، باب الرخصة في ذلك. أخبرنا محمدُ بنُ سَلَمَةَ قال: حدَّثنا ابن القاسم، عن مالكٍ قال: حدَّثني ابن شِهاب. أنَّ سَهْلَ بنَ سَعْدٍ السَّاعِدِيَّ، أخبرَه، أَنَّ عُوَيْمِرًا العَجْلانيَّ جاء إلى عاصم بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -64,16 +66,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن النسائي — الحديث ٣٤٠٢" data-url="https://sunan.online/nasai/3402/">انسخ المتن</button>
   <a href="/nasai/3403/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -92,34 +85,7 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣٤٠٢ — قد نَزَلَ فيك وفي صاحِبَتِكَ، فَاذْهَبْ فَأْتِ بها | سنن النسائي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن النسائي","inLanguage":"ar","author":{"@type":"Person","name":"أحمد بن شعيب النسائي"}},"position":3402,"articleBody":"أخبرنا محمدُ بنُ سَلَمَةَ قال: حدَّثنا ابن القاسم، عن مالكٍ قال: حدَّثني ابن شِهاب.\nأنَّ سَهْلَ بنَ سَعْدٍ السَّاعِدِيَّ، أخبرَه، أَنَّ عُوَيْمِرًا العَجْلانيَّ جاء إلى عاصم بن عَدِيٍّ فقال: أرأيتَ يا عاصمُ لو أنَّ رجلًا وَجَدَ مع امرأتِهِ رجلًا، أيَقْتُلُه؟ فيقتُلُونَهُ، أم كيف يفعل؟ سَلْ لي يا عاصمُ رسولَ الله صلى الله عليه وسلم عن ذلك، فسأل عاصمٌ رسولَ الله صلى الله عليه وسلم، فكَرِهَ رسولُ الله صلى الله عليه وسلم المسائلَ وعابَها حتى كَبُرَ على عاصمٍ ما سَمِعَ من رسولِ الله صلى الله عليه وسلم، فلمَّا رَجَعَ عاصمٌ إِلى أَهْلِهِ جاءه عُوَيْمِرٌ فقال يا عاصم، ماذا قالَ لك رسولُ الله صلى الله عليه وسلم؟ فقال عاصمٌ لعُوَيْمِر: لم تأتِني بخير، قد كَرِهَ رسولُ الله صلى الله عليه وسلم المسألةَ التي سألتُ عنها، فقال عُوَيْمِرٌ: واللهِ لا أنتهي حتى أسألَ عنها رسولَ الله صلى الله عليه وسلم.\nفأقبلَ عُوَيْمِرٌ حتى أتَى رسولَ الله صلى الله عليه وسلم ووَسَطَ النَّاس، فقال: يا رسولَ الله، أرأيتَ رجلًا وَجَدَ مع امرأتِهِ رجلًا، أيقتُلُهُ؟ فَتَقْتُلُونَهُ، أم كيف يفعل؟ فقال رسولُ الله صلى الله عليه وسلم: \"قد نَزَلَ فيك وفي صاحِبَتِكَ، فَاذْهَبْ فَأْتِ بها\".\nقال سَهْلٌ: فتَلاعَنَا - وأنا مع النَّاس - عندَ رسولِ الله صلى الله عليه وسلم، فلمَّا فَرَغَ عُوَيْمِرٌ قال: كذبتُ عليها يا رسولَ الله إن أمْسَكْتُها، فَطَلَّقَها ثلاثًا قبلَ أنْ يأمُرَه رسولُ الله صلى الله عليه وسلم."}</script>
 </body>
 </html>

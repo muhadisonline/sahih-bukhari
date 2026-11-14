@@ -224,29 +224,12 @@
     return kept;
   }
 
-  function css() {
-    return ".isnad .rawi{font:inherit;color:inherit;background:none;border:0;padding:0;border-bottom:1px dashed currentColor;cursor:pointer}"
-      + ".rijal-card{position:fixed;z-index:30;width:min(22rem,calc(100vw - 1.5rem));max-height:calc(100vh - 1rem);max-height:calc(100dvh - 1rem);overflow:auto;overscroll-behavior:contain;background:#fffdf9;border:1px solid #e6e1d8;padding:1rem 1rem .85rem;box-shadow:0 12px 40px rgba(22,21,19,.12)}"
-      + ".rijal-card .kind{margin:0;color:#6e675f;font-size:.8rem}"
-      + ".rijal-card h2{margin:.2rem 0 0;font-family:Amiri,serif;font-size:1.55rem;font-weight:400;line-height:1.45}"
-      + ".rijal-card .row{display:grid;grid-template-columns:6.5rem 1fr;gap:.5rem;padding:.45rem 0;border-bottom:1px solid #e6e1d8}"
-      + ".rijal-card dt{color:#6e675f;font-size:.8rem}.rijal-card dd{margin:0;font-family:Amiri,serif;font-size:1.15rem;line-height:1.55}"
-      + ".rijal-card .foot{margin:.7rem 0 0;color:#6e675f;font-size:.78rem;line-height:1.7}"
-      + ".rijal-card .x{position:sticky;top:0;float:left;z-index:1;margin:-.35rem 0 0 -.15rem;border:0;background:#fffdf9;min-width:2.2rem;min-height:2.2rem;color:#6e675f}";
-  }
-
   function mount(doc, rows) {
     var nodes = doc.querySelectorAll(".isnad");
     if (!nodes.length) return;
     var people = prepare(rows);
     var byId = {};
     rows.forEach(function (row) { byId[row.i] = row; });
-    if (!doc.getElementById("rijal-card-css")) {
-      var style = doc.createElement("style");
-      style.id = "rijal-card-css";
-      style.textContent = css();
-      doc.head.appendChild(style);
-    }
     var card = doc.createElement("aside");
     card.className = "rijal-card";
     card.hidden = true;

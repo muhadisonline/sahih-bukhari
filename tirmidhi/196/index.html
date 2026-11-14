@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-CZC/NKJ+MdjC0X8HEgGGCTX93iylLKthtldse5Bw19A='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٩٦ — لا تُثَوِّبَنَّ في شيءٍ مِن الصَّلَواتِ إلَّا في صلاةِ الفجرِ | جامع الترمذي</title>
 <meta name="description" content="الحديث ١٩٦ من جامع الترمذي، أبواب الصلاة عن رسول الله صلى الله عليه وسلم، باب ما جاء في التثويب في الفجر. حَدَّثَنا أحمدُ بن مَنِيعٍ، قَالَ: حَدَّثَنا أبو أحمد الزُّبَيْرِيُّ، قَالَ: حَدَّثَنا أبو إسرائيلَ، عن الحَكَمِ، عن عبد الرحمن بن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -69,16 +71,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ١٩٦" data-url="https://sunan.online/tirmidhi/196/">انسخ المتن</button>
   <a href="/tirmidhi/197/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -97,35 +90,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٩٦ — لا تُثَوِّبَنَّ في شيءٍ مِن الصَّلَواتِ إلَّا في صلاةِ الفجرِ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":196,"articleBody":"حَدَّثَنا أحمدُ بن مَنِيعٍ، قَالَ: حَدَّثَنا أبو أحمد الزُّبَيْرِيُّ، قَالَ: حَدَّثَنا أبو إسرائيلَ، عن الحَكَمِ، عن عبد الرحمن بن أبي ليلى\nعن بلالٍ قال: قال لي رسولُ الله صلى الله عليه وسلم: \"لا تُثَوِّبَنَّ في شيءٍ مِن الصَّلَواتِ إلَّا في صلاةِ الفجرِ\".\nوفي الباب عن أبي مَحْذُورَةَ.\nحديثُ بلالٍ لا نعرفه إلَّا مِن حديث أبي إسرائيلَ المُلائِيِّ، وأبو إسرائيلَ لم يسمعْ هذا الحديثَ مِن الحكم بن عُتَيْبةَ، إنما رواه عن الحسن بن عُمَارة، عن الحكم بن عُتَيْبةَ، وأبو إسرائيلَ: اسمه إسماعيلُ بن أبي إسحاقَ، وليس هو بذاك القويِّ عند أهل الحديثِ.\nوقد اختَلَفَ أهلُ العلم في تفسير التَّثْوِيب:\nفقال بعضهم: التَّثْوِيبُ أن يقولَ في أذان الفجرِ: \"الصلاةُ خيرٌ من النوم\"، وهو قولُ ابنِ المبارك، وأحمد.\nوقال إسحاق في التثويب غيرَ هذا، قال: هو شيءٌ أَحدَثَه الناسُ بعدَ النبيِّ صلى الله عليه وسلم، إذا أذَّنَ المؤذنُ، فاستبطأَ القومَ، قال بين الأذان والإقامة: قد قامتِ الصلاةُ، حَيَّ على الصلاة، حيَّ على الفلاحِ.\nوهذا الذي قال إسحاقُ: هو التثويبُ الذي كَرِهَه أهلُ العلم، والذي أحْدَثُوهُ بعد النبيِّ صلى الله عليه وسلم.\nوالذي فَسَّرَ ابنُ المبارك وأحمدُ: أنَّ التثويب أن يقولَ المؤذنُ في أذانِ الفجر: \"الصلاةُ خيرٌ من النوم\"، فهو قولٌ صحيحٌ، ويقال له: التثويب أيضًا، وهو الذي اختارَهُ أَهلُ العلم ورَأَوْهُ.\nورُويَ عن عبد الله بن عمر أنه كان يقول في صلاةِ الفجر: الصلاةُ خيرٌ من النومِ.\nوَرُويَ عن مُجَاهِدٍ، قال: دخلتُ مع عبد الله بن عُمَرَ مسجدًا وقد أُذِّنَ فيه، ونحن نريدُ أن نصليَ فيه، فَثَوَّبَ المؤذنُ، فخرج\nعبد الله بن عمر من المسجد، وقال: اخْرُجْ بنا من عند هذا المُبْتَدِعِ! ولم يُصَلَّ فيه.\nوإنما كَرِهَ عبد الله بن عمر التثويبَ الذي أحدَثَهُ الناسُ بَعْدُ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

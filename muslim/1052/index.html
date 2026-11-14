@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-GsP/IY6KCh5XffI8aop79k4EpRp1V8k5+ReHSKU/rHw='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٠٥٢ — لَا وَاللَّهِ! مَا أَخْشَى عَلَيْكُمْ، أَيُّهَا النَّاسُ! إِلَّا مَا… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٠٥٢ من صحيح مسلم، كتاب الزكاة، باب تخوف ما يخرج من زهرة الدنيا. وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا اللَّيْثُ بْنُ سَعْدٍ. (ح) وحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ (وَتَقَارَبَا فِي اللَّفْظِ) قَالَ: حَدَّثَنَا لَيْثٌ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -71,16 +73,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٠٥٢" data-url="https://sunan.online/muslim/1052/">انسخ المتن</button>
   <a href="/muslim/1053/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -99,35 +92,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٠٥٢ — لَا وَاللَّهِ! مَا أَخْشَى عَلَيْكُمْ، أَيُّهَا النَّاسُ! إِلَّا مَا… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1052,"articleBody":"وحَدَّثَنَا يَحْيَى بْنُ يَحْيَى. أَخْبَرَنَا اللَّيْثُ بْنُ سَعْدٍ. (ح) وحَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ (وَتَقَارَبَا فِي اللَّفْظِ) قَالَ: حَدَّثَنَا لَيْثٌ عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ عِيَاضِ بْنِ عَبْدِ اللَّهِ بْنِ سَعْدٍ؛ أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ يَقُولُ:\nقَامَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَخَطَبَ النَّاسَ فَقَالَ: \"لَا وَاللَّهِ! مَا أَخْشَى عَلَيْكُمْ، أَيُّهَا النَّاسُ! إِلَّا مَا يُخْرِجُ اللَّهُ لَكُمْ مِنْ زَهْرَةِ الدُّنْيَا: فَقَالَ رَجُلٌ: يَا رَسُولَ اللَّهِ! أَيَأْتِي الْخَيْرُ بِالشَّرِّ؟ فَصَمَتَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ سَاعَةً. ثُمَّ قَالَ \"كَيْفَ قُلْتَ؟ \" قَالَ: قُلْتُ: يَا رَسُولَ اللَّهِ! أَيَأْتِي الْخَيْرُ بِالشَّرِّ؟ فَقَالَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: \"إِنَّ الْخَيْرَ لَا يَأْتِي إِلَّا بِخَيْرٍ. أَوَ خَيْرٌ هُوَ. إِنَّ كُلَّ مَا يُنْبِتُ الرَّبِيعُ يَقْتُلُ حَبَطًا أَوْ يُلِمُّ. إِلَّا آكِلَةَ الْخَضِرِ. أَكَلَتْ. حَتَّى إِذَا امْتَلَأَتْ خَاصِرَتَاهَا اسْتَقْبَلَتِ الشَّمْسَ. ثَلَطَتْ أَوْ بَالَتْ. ثُمَّ اجْتَرَّتْ. فَعَادَتْ. فَأَكَلَتْ. فَمَنْ يَأْخُذْ مَالًا بِحَقِّهِ يُبَارَكْ\nلَهُ فِيهِ. وَمَنْ يَأْخُذْ مَالًا بِغَيْرِ حَقِّهِ فَمَثَلُهُ كمثل الذي يأكل ولا يشبع\".\n\nحَدَّثَنِي أَبُو الطَّاهِرِ. أَخْبَرَنَا عَبْدُ اللَّهِ بْنُ وهب. قال: أخبرني مالك بن أنس عن زيد بن أسلم، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ أَبِي سَعِيدٍ الخدري؛ أن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ\n\" أَخْوَفُ مَا أَخَافُ عَلَيْكُمْ مَا يُخْرِجُ اللَّهُ لَكُمْ مِنْ زَهْرَةِ الدُّنْيَا \" قَالُوا: وَمَا زَهْرَةُ الدُّنْيَا؟ يَا رَسُولَ اللَّهِ! قَالَ \" بَرَكَاتُ الْأَرْضِ \" قَالُوا: يَا رَسُولَ اللَّهِ! وَهَلْ يَأْتِي الْخَيْرُ بِالشَّرِّ؟ قَالَ \" لَا يَأْتِي الْخَيْرُ إِلَّا بِالْخَيْرِ. لَا يَأْتِي الْخَيْرُ إِلَّا بِالْخَيْرِ. لَا يَأْتِي الْخَيْرُ إِلَّا بِالْخَيْرِ. إِنَّ كُلَّ مَا أَنْبَتَ الرَّبِيعُ يَقْتُلُ أَوْ يُلِمُّ. إِلَّا آكِلَةَ الْخَضِرِ. فَإِنَّهَا تَأْكُلُ. حَتَّى إِذَا امْتَدَّتْ خَاصِرَتَاهَا اسْتَقْبَلَتِ الشَّمْسَ. ثُمَّ اجْتَرَّتْ وَبَالَتْ وَثَلَطَتْ. ثُمَّ عَادَتْ فَأَكَلَتْ. إِنَّ هَذَا الْمَالَ خَضِرَةٌ حُلْوَةٌ. فَمَنْ أَخَذَهُ بِحَقِّهِ، وَوَضَعَهُ فِي حَقِّهِ، فَنِعْمَ الْمَعُونَةُ هُوَ. وَمَنْ أَخَذَهُ بِغَيْرِ حَقِّهِ، كَانَ كَالَّذِي يَأْكُلُ وَلَا يشبع \".\n\nحَدَّثَنِي عَلِيُّ بْنُ حُجْرٍ. أَخْبَرَنَا إِسْمَاعِيلُ بْنُ إِبْرَاهِيمَ عَنْ هِشَامٍ صَاحِبِ الدَّسْتَوَائِيِّ، عَنْ يَحْيَى بن أبي كثير، عن هلال ابن أَبِي مَيْمُونَةَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ. قَالَ:\nجَلَسَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى الْمِنْبَرِ. وَجَلَسْنَا حَوْلَهُ. فَقَالَ \" إِنَّ مِمَّا أَخَافُ عَلَيْكُمْ بَعْدِي، مَا يُفْتَحُ عَلَيْكُمْ مِنْ زَهْرَةِ الدُّنْيَا وَزِينَتِهَا \" فَقَالَ رَجُلٌ: أَوَ يَأْتِي الْخَيْرُ بِالشَّرِّ؟ يَا رَسُولَ اللَّهِ! قَالَ: فَسَكَتَ عَنْهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. فَقِيلَ لَهُ: مَا شَأْنُكَ؟ تُكَلِّمُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَلَا يُكَلِّمُكَ؟ قَالَ: وَرَأَيْنَا أَنَّهُ يُنْزَلُ عَلَيْهِ. فَأَفَاقَ يَمْسَحُ عَنْهُ الرُّحَضَاءَ. وَقَالَ \" إِنَّ هَذَا السَّائِلَ \" (وَكَأَنَّهُ حَمِدَهُ) فَقَالَ \" إِنَّهُ لَا يَأْتِي الْخَيْرُ بِالشَّرِّ. وَإِنَّ مِمَّا يُنْبِتُ الرَّبِيعُ يَقْتُلُ أَوْ يُلِمُّ. إِلَّا آكِلَةَ الْخَضِرِ. فَإِنَّهَا أَكَلَتْ. حَتَّى إِذَا امْتَلَأَتْ خَاصِرَتَاهَا اسْتَقْبَلَتْ عَيْنَ الشَّمْسِ فَثَلَطَتْ وَبَالَتْ. ثُمَّ رَتَعَتْ. وَإِنَّ هَذَا الْمَالَ خَضِرٌ حُلْوٌ. وَنِعْمَ صَاحِبُ الْمُسْلِمِ هُوَ لِمَنْ أَعْطَى مِنْهُ الْمِسْكِينَ وَالْيَتِيمَ وَابْنَ السَّبِيلَ (أَوْ كَمَا قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عليه وسلم) وإنه من يأخذه بغيرحقه كَانَ كَالَّذِي يَأْكُلُ وَلَا يَشْبَعُ. وَيَكُونُ عَلَيْهِ شهيدا يوم القيامة \"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

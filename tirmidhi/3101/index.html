@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-kcyi2NcHvNtr9G8Sw3BU4ik0LdqtWJrlcZKVeNIHQoA='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٣١٠١ — يأتي القُرآنُ وأهلُهُ الّذِينَ يَعْملُونَ بهِ في الدُّنيا تَقْدُمُه… | جامع الترمذي</title>
 <meta name="description" content="الحديث ٣١٠١ من جامع الترمذي، أبواب فضائل القرآن عن رسول الله صلى الله عليه وسلم، باب ما جاء في سورة آل عمران. حدَّثنا محمدُ بن إسماعيلَ، قال حدَّثنا هِشامُ بن إسماعيلَ أبو عبد الملكِ العَطَّارُ، قال: حدَّثنا محمدُ بن شُعَيبٍ، قال: حدَّثنا…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -63,16 +65,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٣١٠١" data-url="https://sunan.online/tirmidhi/3101/">انسخ المتن</button>
   <a href="/tirmidhi/3102/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -91,35 +84,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٣١٠١ — يأتي القُرآنُ وأهلُهُ الّذِينَ يَعْملُونَ بهِ في الدُّنيا تَقْدُمُه… | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":3101,"articleBody":"حدَّثنا محمدُ بن إسماعيلَ، قال حدَّثنا هِشامُ بن إسماعيلَ أبو عبد الملكِ العَطَّارُ، قال: حدَّثنا محمدُ بن شُعَيبٍ، قال: حدَّثنا إبراهيم بن سليمانَ، عن الوليدِ بن عبد الرحمن أنَّهُ حدَّثَهُم، عن جُبَيْرِ بن نُفَيْرٍ\nعن نَوَّاسِ بنِ سَمْعانَ، عن النّبيِّ صلى الله عليه وسلم، قال: \"يأتي القُرآنُ وأهلُهُ الّذِينَ يَعْملُونَ بهِ في الدُّنيا تَقْدُمُه سورةُ البَقرَةِ وآلُ عِمْرانَ\". قال نَوَّاسٌ: وضَربَ لهما رسول اللهِ صلى الله عليه وسلم ثلاثةَ أمثالٍ ما نَسِيتُهنَّ\nبعدُ قال: \"تأتيانِ كأنَّهُما غَيايتانِ وبينهُما شَرْقٌ أو كأنَّهُما غَمامتانِ سَوْداوانِ، أو كأنَّهُما ظُلّةٌ من طَيْرٍ صَوافَّ تُجادِلانِ عن صاحِبِهما\".\nوفي البابِ عن بُريْدةَ، وأبي أمامةَ.\nهذا حديثٌ حسنٌ غريبٌ من هذا الوجه.\nومعنى هذا الحديثِ عند أهلِ العلمِ أنّهُ يَجيءُ ثَوابُ قِرءَاتِه، كذا فَسَّرَ بعضُ أهلِ العلمِ هذا الحديث وما يُشْبهُ هذا من الأحاديثِ أنَّهُ يجيءُ ثَوَابُ قراءَةِ القُرآنِ. وفي حديثِ نوّاسِ بن سَمعان عن النّبيِّ صلى الله عليه وسلم ما يَدُلُّ على ما فَسَّرُوا، إذ قال النّبيُّ صلى الله عليه وسلم: \"وأهلُه الّذِين يعملُونَ به في الدُّنيا\" ففي هذا دلالةٌ أنَّهُ يَجيءُ ثَوابُ\nالعملِ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

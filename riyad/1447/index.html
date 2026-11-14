@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-i+4L0JXEBuPaVGbEH8cL29AvfWITbDKPz+ZgHGzgbdk='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٤٤٧ — إن لله تعالى ملائكة يطوفون في الطرق يلتمسون أهل الذكر، فإذا وجدوا… | رياض الصالحين</title>
 <meta name="description" content="الحديث ١٤٤٧ من رياض الصالحين، كتاب الأذكار، . وعن أبي هريرة رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم &quot;إن لله تعالى ملائكة يطوفون في الطرق يلتمسون أهل الذكر، فإذا وجدوا قومًا يذكرون الله عز وجل، تنادوا: هلموا إلى حاجتكم، فيحفونهم…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -58,16 +60,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="رياض الصالحين — الحديث ١٤٤٧" data-url="https://sunan.online/riyad/1447/">انسخ المتن</button>
   <a href="/riyad/1448/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -86,35 +79,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٤٤٧ — إن لله تعالى ملائكة يطوفون في الطرق يلتمسون أهل الذكر، فإذا وجدوا… | رياض الصالحين","inLanguage":"ar","isPartOf":{"@type":"Book","name":"رياض الصالحين","inLanguage":"ar","author":{"@type":"Person","name":"يحيى بن شرف النووي"}},"position":1447,"articleBody":"وعن أبي هريرة رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم \"إن لله تعالى ملائكة يطوفون في الطرق يلتمسون أهل الذكر، فإذا وجدوا قومًا يذكرون الله عز وجل، تنادوا: هلموا إلى حاجتكم، فيحفونهم بأجنحتهم إلى السماء الدنيا، فيسألهم ربهم - وهو أعلم: ما يقول عبادي؟ قال: يقولون: يسبحونك، ويكبرونك، ويحمدونك، ويمجدونك، فيقول: هل رأوني؟ فيقولون: لا لا والله ما رأوك، فيقول: كيف لو رأوني؟! قال: يقولون: لو رأوك كانوا أشد لك عبادة، وأشد لك تمجيدًا، وأكثر لك تسبيحًا فيقول: فماذا يسألون؟ قال: يقولون: يسألونك الجنة. قال: يقول: وهل رأوها؟ قال: يقولون: لا والله يا رب ما رأوها. قال: يقول: فكيف لو رأوها؟! قال: يقولون: لو أنهم رأوها كانوا أشد عليها حرصًا، وأشد لها طلبًا، وأعظم فيها رغبة. قال: فمم يتعوذون؟ قال يقولون: يتعوذون من النار، قال: فيقول: وهل رأوها؟ قال: يقولون: ولا والله ما رأوها. فيقول: كيف لو رأوها؟! قال: يقولون: لو رأوها كانوا أشد فرارًا، وأشد لها مخافة. قال: يقول: فأشهدكم أني قد غفرت لهم، قال: يقول ملك من الملائكة: فيهم فلان ليس منهم، إنما جاء لحاجة، قال: هم الجلساء لا يشقى بهم جليسهم\" ((متفق عليه)). \nوفي رواية لمسلم عن أبي هريرة رضي الله عنه عن النبي صلى الله عليه وسلم قال: \"إن لله ملائكة سيارة فضلا يتتبعون مجالس الذكر، فإذا وجدوا مجلسًا فيه ذكر، قعدوا معهم، وحف بعضهم بعضًا بأجنحتهم حتى يملئوا ما بينهم وما بين السماء الدنيا، فإذا تفرقوا عرجوا وصعدوا إلى السماء، فيسألهم الله عز وجل - وهو أعلم: من أين جئتم؟ فيقولون: جئنا من عند عباد لك في الأرض: يسبحونك، ويكبرونك، ويهللونك، ويحمدونك، ويسألونك. قال: وماذا يسألوني؟ قالوا: يسألونك جنتك. قال: وهل رأوا جنتي؟ قالوا: لا، أي رب. قال: فكيف لو رأوا جنتي؟! قالوا: ويستجيرونك. قال: ومم يستجيروني؟ قالوا: من نارك يا رب. قال: وهل رأوا ناري؟ قالوا: لا، قال: فكيف لو رأوا ناري؟ قالوا: ويستغفرونك، فيقول: قد غفرت لهم، وأعطيتهم ما سألوا، وأجرتهم ما استجاروا. قال: فيقولون: رب فيهم فلان عبد خطاء إنما مر، فجلس معهم، فيقول: وله غفرت، هم القوم لا يشقى بهم جليسهم\"."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

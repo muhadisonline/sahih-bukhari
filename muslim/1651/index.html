@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-PbIJt+4cNuYFNdBgjUUpY7/IpI0sJVuQgNczRAN+wK0='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ١٦٥١ — حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا جَرِيرٌ عَنْ عَبْدِ… | صحيح مسلم</title>
 <meta name="description" content="الحديث ١٦٥١ من صحيح مسلم، كتاب الأيمان، باب نذر من حلف يمينا، فرأى غيرها خيرا منها، أن يأتي الذي هو خير، ويكفر عن يمينه. حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا جَرِيرٌ عَنْ عَبْدِ الْعَزِيزِ (يَعْنِي ابْنَ رُفَيْعٍ) عَنْ تَمِيمِ…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -73,16 +75,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="صحيح مسلم — الحديث ١٦٥١" data-url="https://sunan.online/muslim/1651/">انسخ المتن</button>
   <a href="/muslim/1652/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -101,35 +94,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ١٦٥١ — حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا جَرِيرٌ عَنْ عَبْدِ… | صحيح مسلم","inLanguage":"ar","isPartOf":{"@type":"Book","name":"صحيح مسلم","inLanguage":"ar","author":{"@type":"Person","name":"مسلم بن الحجاج"}},"position":1651,"articleBody":"حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ. حَدَّثَنَا جَرِيرٌ عَنْ عَبْدِ الْعَزِيزِ (يَعْنِي ابْنَ رُفَيْعٍ) عَنْ تَمِيمِ بْنِ طَرَفَةَ. قَالَ:\nجَاءَ سَائِلٌ إِلَى عَدِيِّ بْنِ حَاتِمٍ. فَسَأَلَهُ نَفَقَةً فِي ثَمَنِ خَادِمٍ أَوْ فِي بَعْضِ ثَمَنِ خَادِمٍ. فَقَالَ: لَيْسَ عِنْدِي مَا أُعْطِيكَ إِلَّا دِرْعِي وَمِغْفَرِي. فَأَكْتُبُ إِلَى أَهْلِي أَنْ يُعْطُوكَهَا. قَالَ: فَلَمْ يَرْضَ. فَغَضِبَ عَدِيٌّ. فَقَالَ: أَمَا وَاللَّهِ! لَا أُعْطِيكَ شَيْئًا. ثُمَّ إِنَّ الرَّجُلَ رَضِيَ. فَقَالَ: أَمَا وَاللَّهِ! لَوْلَا إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (مَنْ حَلَفَ عَلَى يَمِينٍ ثُمَّ رَأَى أَتْقَى لِلَّهِ مِنْهَا، فَلْيَأْتِ التقوى). ما حنثت يميني.\n\nوحَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ. حَدَّثَنَا أَبِي. حَدَّثَنَا شُعْبَةُ عَنْ عَبْدِ الْعَزِيزِ بْنِ رُفَيْعٍ، عَنْ تَمِيمِ بْنِ طَرَفَةَ، عَنْ عَدِيِّ بْنِ حَاتِمٍ. قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (مَنْ حَلَفَ عَلَى يَمِينٍ، فَرَأَى غَيْرَهَا خَيْرًا مِنْهَا، فَلْيَأْتِ الَّذِي هُوَ خَيْرٌ، وليترك يمينه).\n\nحَدَّثَنِي مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ وَمُحَمَّدُ بْنُ طريف البجلي (واللفظ لابن طريف) قَالَا: حَدَّثَنَا مُحَمَّدُ بْنُ فُضَيْلٍ عَنْ الْأَعْمَشِ، عَنْ عَبْدِ الْعَزِيزِ بْنِ رُفَيْعٍ، عَنْ تَمِيمِ الطَّائِيِّ، عَنْ عَدِيٍّ. قَالَ:\nقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ (إِذَا حَلَفَ أَحَدُكُمْ عَلَى الْيَمِينِ، فَرَأَى خَيْرًا مِنْهَا، فَلْيُكَفِّرْهَا، وَلْيَأْتِ الَّذِي هُوَ خَيْرٌ).\n\nوحَدَّثَنَا مُحَمَّدُ بْنُ طَرِيفٍ. حَدَّثَنَا مُحَمَّدُ بْنُ فُضَيْلٍ عَنْ الشَّيْبَانِيِّ، عَنْ عَبْدِ الْعَزِيزِ بْنِ رُفَيْعٍ، عَنْ تَمِيمِ الطَّائِيِّ، عَنْ عَدِيِّ بْنِ حَاتِمٍ؛ أَنَّهُ سَمِعَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ ذَلِكَ.\n\nحَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى وَابْنُ بَشَّارٍ. قَالَا: حدثنا محمد بن جَعْفَرٍ. حَدَّثَنَا شُعْبَةُ عَنْ سِمَاكِ بْنِ حَرْبٍ، عَنْ تَمِيمِ بْنِ طَرَفَةَ. قَالَ:\nسَمِعْتُ عَدِيَّ بْنَ حَاتِمٍ، وَأَتَاهُ رَجُلٌ يَسْأَلُهُ مِائَةَ دِرْهَمٍ، فَقَالَ: تَسْأَلُنِي مِائَةَ دِرْهَمٍ. وَأَنَا ابْنُ حَاتِمٍ؟ والله! لا أعطيك. ثم قال: لو إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ (مَنْ حَلَفَ عَلَى يَمِينٍ ثُمَّ رَأَى خَيْرًا مِنْهَا، فَلْيَأْتِ الَّذِي هُوَ خَيْرٌ).\n\nحَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ. حَدَّثَنَا بَهْزٌ. حَدَّثَنَا شُعْبَةُ. حَدَّثَنَا سِمَاكُ ابن حَرْبٍ. قَالَ: سَمِعْتُ تَمِيمَ بْنَ طَرَفَةَ قَالَ: سَمِعْتُ عَدِيَّ بْنَ حَاتِمٍ؛ أَنَّ رَجُلًا سَأَلَهُ فَذَكَرَ مِثْلَهُ. وَزَادَ: وَلَكَ أَرْبَعمِائَة فِي عَطَائِي."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

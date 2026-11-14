@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-3AUuFDI7gvirzlVAfFTOpPnvkYJRtHgjBPWXaB9Sq1w='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٩٤٦ — حُجَّي عَنْهُ | جامع الترمذي</title>
 <meta name="description" content="الحديث ٩٤٦ من جامع الترمذي، أبواب الحج عن رسول الله صلى الله عليه وسلم، باب ما جاء في الحج عن الشيخ الكبير والميت. حدَّثنا أحمدُ بن مَنِيعٍ، قال: حدَّثنا رَوْحُ بن عُبادةَ، قال: حدَّثنا ابن جُرَيْجٍ، قال: أخبرني ابن شِهابٍ، قال: حدَّثني…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=13">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -68,16 +70,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="جامع الترمذي — الحديث ٩٤٦" data-url="https://sunan.online/tirmidhi/946/">انسخ المتن</button>
   <a href="/tirmidhi/947/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -96,35 +89,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٩٤٦ — حُجَّي عَنْهُ | جامع الترمذي","inLanguage":"ar","isPartOf":{"@type":"Book","name":"جامع الترمذي","inLanguage":"ar","author":{"@type":"Person","name":"محمد بن عيسى الترمذي"}},"position":946,"articleBody":"حدَّثنا أحمدُ بن مَنِيعٍ، قال: حدَّثنا رَوْحُ بن عُبادةَ، قال: حدَّثنا ابن جُرَيْجٍ، قال: أخبرني ابن شِهابٍ، قال: حدَّثني سُلَيمانُ بن يَسَارٍ، عن عبد اللهِ بن عبَّاسٍ، عن الفَضْلِ بن عبَّاسٍ\nأنَّ امرأةً من خَثْعَمٍ، قالت: يا رسولَ اللهِ إنَّ أبي أدْرَكَتْهُ فَرِيضَةُ اللهِ في الحَجَّ، وهو شيخٌ كبيرٌ لا يستطيعُ أن يَسْتَويَ على ظَهْرِ البَعيرِ. قال: \"حُجَّي عَنْهُ\".\nوفي البابِ عن عليًّ، وبُريْدةَ، وحُصَيْنِ بن عوفٍ، وأبي رَزِينٍ العُقَيْليَّ، وسَوْدَةَ بِنْت زَمْعةَ، وابن عبَّاسٍ.\nحديثُ الفضلِ بن عبَّاسٍ حديثٌ حسنٌ صحيحٌ.\nوَرُوِي عن ابن عَبَّاسٍ، عن حُصَيْنِ بن عَوْفٍ المدني، عن النبيَّ صلى الله عليه وسلم.\nوَرُوِي عن ابن عَبَّاسٍ أيْضًا، عن سِنَانِ بن عَبد اللهِ الجُهَنيَّ، عن عَمَّتهِ، عن النبيِّ صلى الله عليه وسلم.\nوَرُوِي عن ابن عَبَّاسٍ، عن النبيِّ صلى الله عليه وسلم.\nوسألْتُ محمدًا عن هذه الرَّوَاياتِ، فقال: أصَحُّ شَيْءٍ في هذا البابِ مَا رَوَى ابنُ عَبَّاسٍ، عن الفَضْلِ بن عَبَّاسٍ، عن النبيِّ صلى الله عليه وسلم، قال محمدٌ: وَيُحْتَملُ أن يكُونَ ابنُ عَبَّاسٍ سَمِعهُ من الفَضْلِ وَغَيْرِهِ، عن النبيِّ صلى الله عليه وسلم، ثمَّ رَوَى هذا عن النبيِّ صلى الله عليه وسلم فأرسله، ولم يَذْكُرِ الّذِي سَمِعهُ مِنْهُ.\nوقد صَحَّ عن النبيِّ صلى الله عليه وسلم في هذا البابِ غيرُ حديثٍ.\nوالعملُ على هذا عند أهلِ العلم من أصحاب النبيِّ صلى الله عليه وسلم وغيرِهِم، وبه يقولُ الثَّوريُّ، وابنُ المُبَاركِ، والشَّافعيُّ، وأحمدُ، وإسحاقُ، يَروْنَ أن يَحُجَّ عن المَيَّتِ.\nوقال مالكٌ: إذا أوْصَى أن يُحَجَّ عنه، حُجَّ عنه.\nوقد رَخَّصَ بعضُهم أن يُحَجَّ عن الحَيَّ إذا كان كبيرًا، أو بحال لا يَقْدِرُ أن يَحُجَّ، وهو قولُ ابن المُباركِ، والشَّافعِيَّ."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

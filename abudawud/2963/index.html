@@ -2,6 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-LhZdP+G4b6/xal9Jw3XTXGzpKfb1leF6QFfvtkOOGCI='; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://vjkyjcbefekflqpnqnen.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الحديث ٢٩٦٣ — لا نُورَثُ، ما تركنا صدقةٌ | سنن أبي داود</title>
 <meta name="description" content="الحديث ٢٩٦٣ من سنن أبي داود، كتاب الخراج والفيء والإمارة، باب في صفايا رسول الله - صلى الله عليه وسلم - من الأموال. حدَّثنا الحسنُ بن علي ومحمدُ بن يحيى بن فارس -المعنى- قالا: حدَّثنا بِشْر بن عُمر الزَّهرانيُّ، حدثني مالكُ بن أنس، عن ابن…">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=22">
-<script>try{var n=localStorage.getItem("bukhari-size");if(n)document.documentElement.setAttribute("data-size",n)}catch(e){}</script>
+<script src="/assets/text-size-boot.js"></script>
 <script src="/assets/stats.js?v=1" defer></script></head>
 <body>
 <header>
@@ -66,16 +68,7 @@
   <button class="btn ghost" type="button" id="copy" data-cite="سنن أبي داود — الحديث ٢٩٦٣" data-url="https://sunan.online/abudawud/2963/">انسخ المتن</button>
   <a href="/abudawud/2964/">التالي</a>
 </nav>
-<script>
-document.getElementById("copy").addEventListener("click", function () {
-  var btn = this;
-  var text = btn.getAttribute("data-cite") + "\n" + btn.getAttribute("data-url") + "\n\n" + document.getElementById("matn").innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    btn.textContent = "تم النسخ";
-    setTimeout(function () { btn.textContent = "انسخ المتن"; }, 1600);
-  });
-});
-</script>
+<script src="/assets/copy-cite.js"></script>
 </main>
 <footer>
   <div class="wrap foot">
@@ -94,35 +87,9 @@ document.getElementById("copy").addEventListener("click", function () {
     <p>المتن بالعربية كما ورد في طبعاته، دون ترجمة.</p>
   </div>
 </footer>
-<script>
-(function () {
-  var key = "bukhari-size";
-  function get() {
-    var n = Number(localStorage.getItem(key) || "0");
-    return n >= 0 && n <= 3 ? n : 0;
-  }
-  function apply(n) {
-    document.documentElement.setAttribute("data-size", String(n));
-    localStorage.setItem(key, String(n));
-  }
-  var gear = document.getElementById("gear");
-  var panel = document.getElementById("set-panel");
-  gear.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = panel.style.display === "none";
-    panel.style.display = open ? "flex" : "none";
-    gear.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function () {
-    panel.style.display = "none";
-    gear.setAttribute("aria-expanded", "false");
-  });
-  panel.addEventListener("click", function (e) { e.stopPropagation(); });
-  document.getElementById("size-down").addEventListener("click", function () { apply(Math.max(0, get() - 1)); });
-  document.getElementById("size-up").addEventListener("click", function () { apply(Math.min(3, get() + 1)); });
-})();
-</script>
+<script src="/assets/text-size.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"الحديث ٢٩٦٣ — لا نُورَثُ، ما تركنا صدقةٌ | سنن أبي داود","inLanguage":"ar","isPartOf":{"@type":"Book","name":"سنن أبي داود","inLanguage":"ar","author":{"@type":"Person","name":"أبو داود السجستاني"}},"position":2963,"articleBody":"حدَّثنا الحسنُ بن علي ومحمدُ بن يحيى بن فارس -المعنى- قالا: حدَّثنا بِشْر بن عُمر الزَّهرانيُّ، حدثني مالكُ بن أنس، عن ابن شهاب\nعن مالكِ بن أوْسِ بن الحَدَثانِ، قال: أرسل إليَّ عمر حين تَعالَى النهارُ، فجئتُه، فوجدتُه جالساً على سرير مُفْضياً إلى رُمَالِه، فقال حين دخلتُ عليه: يا مالُ، إنه قد دَفَّ اْهلُ أبياتٍ من قَومك، وقد أمَرْتُ فيهم بشيءٍ، فاقْسِمْ فيهم، قلتُ: لو أمَرْتَ غيري بذلك، فقال: خُذْه، فجاءه يَرْفأُ، فقال: يا أميرَ المؤمنين، هل لك في عثمانَ ابن عفانَ، وعبد الرحمن بن عَوف، والزبيرِ بن العَوّام، وسعْد بن أبي وَقَّاصٍ؟ قال: نعم، فأذِنَ لهم فدخلوا، ثم جاءه يَرْفأُ، فقال: يا أميرَ المؤمنين هل لك في العباسِ وعليٍّ؟ قال: نعم، فأذِن لهم، فدخَلوا، فقال العباسُ: يا أميرَ المؤمنين، اقْضِ بيني وبين هذا -يعني علياً-\nفقال بعضُهم: أجَلْ يا أميرَ المؤمنين، اقضِ بينَهما وأرِحْهُما. قال مالكُ بن أوسٍ: خُيِّلَ إليَ أنهما قَدَّمَا أولئك النفرَ لذلك، فقال عمرُ: اتَّئِدا، ثم أقبلَ على أولئك الرَّهطِ، فقال: أُنشِدُكم باللهِ الذي بإذنهِ تقومُ السَّماء والأرض، هل تعلمون أن رسول الله - صلَّى الله عليه وسلم - قال: \"لا نُورَثُ، ما تركنا صدقةٌ\"؟ قالوا: نعم، ثم أقبل على عليٍّ والعباسِ، فقال: أُنشِدُكُما بالله الذي بإذنِه تقومُ السماءُ والأرض، هل تعلَمانِ أن رسولَ الله - صلَّى الله عليه وسلم - قال: \"لا نُورَثُ، ما تركنا صدقةٌ \" فقالا: نعم، قال: فإن الله عز وجل خصَّ رسولَه - صلَّى الله عليه وسلم - بخَاصّةٍ لم يَخُصَّ بها أحداً من الناس، فقال الله تعالى:  {وَمَا أَفَاءَ اللَّهُ عَلَى رَسُولِهِ مِنْهُمْ فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ وَلَكِنَّ اللَّهَ يُسَلِّطُ رُسُلَهُ عَلَى مَنْ يَشَاءُ وَاللَّهُ عَلَى كُلِّ شَيْءٍ قَدِيرٌ} [الحشر: ٦] فكانَ اللهُ أفاءَ على رسوله بني النَّضير، فوالله ما استأثَر بها عليكم ولا أخذَها دونكم، فكانَ رسولُ الله - صلَّى الله عليه وسلم - يأخذُ منها نفقةَ سنةٍ، أو نفقتَه ونفقةَ أهلِه سنةً، ويجعلُ ما بقي أُسوةَ المالِ، ثم أقبلَ على أولئك الرَّهْط، فقال: أُنشدِكم بالله الذي بإذنِه تقومُ السماء والأرض، هل تعلمون ذلك؟ قالوا: نعم، ثم أقبل على العباسِ، وعليٍّ فقال: أُنشدكما بالله الذي بإذنه تقوم السماء والأرض، هل تعلمان ذلك؟ قالا: نعم، فلما توفي رسولُ الله - صلَّى الله عليه وسلم - قال أبو بكر: أنا وليُّ رسولِ الله - صلَّى الله عليه وسلم - , فجئت أنتَ وهذا إلى أبىِ بكر تطلبُ أنتَ ميراثَك من ابن أخيكَ، ويطلبُ هذا ميراثَ امرأتِه من أبيها، فقال أبو بكر: قال رسولُ الله - صلَّى الله عليه وسلم -: \"لا نُورَثُ، ما تركنا صدقةٌ\" والله يعلمُ إنه لصادقٌ بارٌّ راشدٌ تابعٌ للحقِّ، فوليَها أبو بكر، فلما توفي قلتُ: أنا وليُّ رسول الله - صلَّى الله عليه وسلم - ووليُّ أبي\nبكر، فوَليتُها ما شاءَ اللهُ أن ألِيَها، فجئتَ أنتَ وهذا، وأنتما جميعٌ وأمركما واحدٌ، فسألتُمانيها فقلت: إن شئتُما أن أدفعها إليكُما على أنَّ عليكما عهدَ الله أن تَلِيَاهَا بالذي كانَ رسولُ الله - صلَّى الله عليه وسلم - يلِيْها، فأخذتُماها منِّي على ذلك، ثم جئتُماني لأقضِي بينكما بغير ذلك، والله لا أقضي بينكما بغير ذلك حتى تقومَ الساعةُ، فإن عَجَزْتما عنها، فرُدَّاها إليَّ.\n..........................\nقال أبو داود: إنما سألاه أن يكونَ يُصَيّرُه نصفَين بينَهما، لا أنهما جَهِلا أن النبيَّ - صلَّى الله عليه وسلم - قال: \"لا نُورَثُ ما تركنا صدقةٌ\"، فإنهما كانا لا يَطلُبان إلا الصوابَ، فقال عمرُ: لا أُوقع عليه اسمَ القَسْمِ، أَدَعُه على ما هو."}</script>
-<script src="/assets/rijal-card.js?v=5"></script>
+<link rel="stylesheet" href="/assets/rijal-card.css">
+<script src="/assets/rijal-card.js?v=6"></script>
 </body>
 </html>

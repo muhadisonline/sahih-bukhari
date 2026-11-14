@@ -1,6 +1,10 @@
 var AR = "٠١٢٣٤٥٦٧٨٩";
 function ar(n) { return String(n).replace(/\d/g, function (d) { return AR[d]; }); }
-function escHtml(s) { return String(s).replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">"); }
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
 function west(s) { return String(s).replace(/[٠-٩]/g, function (d) { return AR.indexOf(d); }).replace(/[۰-۹]/g, function (d) { return "۰۱۲۳۴۵۶۷۸۹".indexOf(d); }); }
 function norm(s) {
   return String(s).replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, "").replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ؤ/g, "و").replace(/ئ/g, "ي").replace(/ة/g, "ه").replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
@@ -8,6 +12,7 @@ function norm(s) {
 var BASE = "";
 var BOOKS = {"buxari": "صحيح البخاري", "muslim": "صحيح مسلم", "abudawud": "سنن أبي داود", "tirmidhi": "جامع الترمذي", "nasai": "سنن النسائي", "ibnmajah": "سنن ابن ماجه", "malik": "موطأ مالك", "darimi": "سنن الدارمي", "adab": "الأدب المفرد", "riyad": "رياض الصالحين"};
 var ORDER = ["muslim", "abudawud", "tirmidhi", "nasai", "ibnmajah", "malik", "darimi", "adab", "riyad", "buxari"];
+function isBook(slug) { return Object.prototype.hasOwnProperty.call(BOOKS, slug); }
 var cache = {};
 var box = document.getElementById("results");
 var status = document.getElementById("status");
@@ -22,6 +27,8 @@ function address() {
   return "?q=" + encodeURIComponent(q) + (slug ? "&book=" + encodeURIComponent(slug) : "");
 }
 function hrefOf(slug, no) {
+  no = String(no);
+  if (!isBook(slug) || !/^\d+$/.test(no)) return "#";
   if (slug === "buxari") return "https://buxari.sunan.online/" + no + "/";
   return (BASE || "") + "/" + slug + "/" + no + "/";
 }
@@ -47,7 +54,7 @@ function render(q) {
   var numeric = /^\d+$/.test(q) ? Number(q) : 0;
   var nq = numeric ? "" : norm(q);
   if (!numeric && nq.length < 2) { status.textContent = "اكتب حرفين على الأقل"; return; }
-  var books = bookSel.value ? [bookSel.value] : ORDER.slice();
+  var books = (bookSel.value && isBook(bookSel.value)) ? [bookSel.value] : ORDER.slice();
   var bi = 0;
   var ri = 0;
   var shown = 0;
@@ -95,7 +102,7 @@ function render(q) {
   step();
 }
 var params = new URLSearchParams(location.search);
-if (params.get("book")) bookSel.value = params.get("book");
+if (params.get("book") && isBook(params.get("book"))) bookSel.value = params.get("book");
 if (params.get("q")) { input.value = params.get("q"); render(params.get("q")); }
 document.getElementById("sform").addEventListener("submit", function (e) {
   e.preventDefault();
