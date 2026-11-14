@@ -26,3 +26,11 @@
 - [فهرس البحث](https://sunan.online/search-index.json): صفوف `[slug, number, excerpt, unvocalized, kitab]`.
 - [وصف الكتب](https://sunan.online/catalog.json): بيانات الآلة للكتب والعناوين.
 - [خريطة الموقع](https://sunan.online/sitemap.xml): كل الصفحات.
+
+## نطاقات أخرى
+
+لكل نطاق ملفه. لا تخلط عنوانه بعنوان الكتب العشرة.
+
+- [صحيح البخاري](https://buxari.sunan.online/llms.txt): الحديث https://buxari.sunan.online/{number}/ والكتاب https://buxari.sunan.online/kitab/{id}/
+- [الرواة](https://ruwat.sunan.online/llms.txt): تقريب التهذيب، كل راو في صفحة https://ruwat.sunan.online/n/{qism}/{raqam}/
+- [الشمائل وبلوغ المرام والمشكاة والأربعون](https://hadis.sunan.online/llms.txt): ليست من الكتب العشرة
